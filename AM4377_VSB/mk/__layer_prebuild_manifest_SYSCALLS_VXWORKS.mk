@@ -1,0 +1,1 @@
+__FILES_COPIED_SYSCALLS_VXWORKS = C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/syscallXPNum.def C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/syscallApi.def C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/syscallXPApi.def C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/syscallNum.def

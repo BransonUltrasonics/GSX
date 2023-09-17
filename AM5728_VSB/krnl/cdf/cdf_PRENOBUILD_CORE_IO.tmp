@@ -1,0 +1,16 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/core/io-1.2.6.0/cdf/00core_io.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/core/io-1.2.6.0/cdf/10core_io_cert.cdf>
+
+Layer Layer::CORE_IO {
+	NAME CORE_IO
+}

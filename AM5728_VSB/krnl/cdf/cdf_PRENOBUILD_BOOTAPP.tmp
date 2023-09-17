@@ -1,0 +1,16 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/utils/bootapp-1.0.5.6/cdf/01profile_bootapp.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/utils/bootapp-1.0.5.6/cdf/20comp_bootApp.cdf>
+
+Layer Layer::BOOTAPP {
+	NAME BOOTAPP
+}

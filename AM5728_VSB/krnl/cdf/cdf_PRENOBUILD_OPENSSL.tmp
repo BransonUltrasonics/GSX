@@ -1,0 +1,18 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/security/openSSL-1.1.1.0/cdf/00folder_openssl_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/security/openSSL-1.1.1.0/cdf/00init_usropenssl_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/security/openSSL-1.1.1.0/cdf/01comp_crypto.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/security/openSSL-1.1.1.0/cdf/01comp_ssl.cdf>
+
+Layer Layer::OPENSSL {
+	NAME OPENSSL
+}

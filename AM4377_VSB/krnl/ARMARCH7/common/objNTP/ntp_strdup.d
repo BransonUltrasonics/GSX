@@ -1,0 +1,32 @@
+C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/ARMARCH7/common/objNTP/ntp_strdup.o: \
+  ntp_strdup.c \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/ipntp_config.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/ipcom_config.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/ipcom_pconfig.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/vsbConfig.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/h/config/vsbConfig.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/h/config/autoconf.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/ipcom_pautoconf.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/ipcom_clibmap.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/ipcom_autoconf.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/types/vxCpu.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/types/vxArch.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/arch/arm/archArm.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/arch/arm/arm.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/arch/arm/archArmCommon.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/ntp_assert.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/isc/assertions.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/isc/lang.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/isc/platform.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/ntp_malloc.h \
+  C:/WindRiverSR500/compilers/diab-5.9.6.1/include/diab/stddef.h \
+  C:/WindRiverSR500/compilers/diab-5.9.6.1/include/diab/xmacros.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/string.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/types/vxANSI.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/stdint.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/types/vxParams.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/types/vxTypesBase.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/base/b_swab.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/base/b_rsize_t.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/base/b_errno_t.h
+

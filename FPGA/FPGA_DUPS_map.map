@@ -1,0 +1,98 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Map Application Log File for Design 'FPGA_DUPS'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s1400a-ft256-4 -cm area -ir off -pr off
+-c 100 -o FPGA_DUPS_map.ncd FPGA_DUPS.ngd FPGA_DUPS.pcf 
+Target Device  : xc3s1400a
+Target Package : ft256
+Target Speed   : -4
+Mapper Version : spartan3a -- $Revision: 1.55 $
+Mapped Date    : Sat Jul 17 11:42:46 2021
+
+Mapping design into LUTs...
+WARNING:MapLib:701 - Signal I_DSPI_CLK connected to top level port I_DSPI_CLK
+   has been removed.
+WARNING:MapLib:701 - Signal I_DSPI_RXD connected to top level port I_DSPI_RXD
+   has been removed.
+WARNING:MapLib:701 - Signal I_DSPI_TXD connected to top level port I_DSPI_TXD
+   has been removed.
+WARNING:MapLib:701 - Signal I_DSPI_CS_ADC connected to top level port
+   I_DSPI_CS_ADC has been removed.
+WARNING:LIT:176 - Clock buffer is designated to drive clock loads. BUFGMUX
+   symbol
+   "physical_group_XLXI_33/Clock_Manager_FXOUT/XLXI_33/XLXI_103/CLKFX_BUFG_INST"
+   (output signal=XLXI_33/Clock_Manager_FXOUT) has a mix of clock and non-clock
+   loads. The non-clock loads are:
+   Pin D of XLXI_33/XLXI_9
+WARNING:LIT:176 - Clock buffer is designated to drive clock loads. BUFGMUX
+   symbol "physical_group_XLXN_176/XLXI_33/XLXI_98/CLK0_BUFG_INST" (output
+   signal=XLXN_176) has a mix of clock and non-clock loads. The non-clock loads
+   are:
+   Pin D of XLXI_47/XLXI_137/CLK_25MHZ_LAST_1
+Running directed packing...
+Running delay-based LUT packing...
+Running related packing...
+Updating timing models...
+WARNING:PhysDesignRules:372 - Gated clock. Clock net XLXI_47/XLXI_63/XLXN_28 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:367 - The signal <HW_VERS_BD<0>_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      0
+Number of warnings:    8
+Logic Utilization:
+  Total Number Slice Registers:         709 out of  22,528    3%
+    Number used as Flip Flops:          692
+    Number used as Latches:              17
+  Number of 4 input LUTs:               661 out of  22,528    2%
+Logic Distribution:
+  Number of occupied Slices:            668 out of  11,264    5%
+    Number of Slices containing only related logic:     668 out of     668 100%
+    Number of Slices containing unrelated logic:          0 out of     668   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:         766 out of  22,528    3%
+    Number used as logic:               660
+    Number used as a route-thru:        105
+    Number used as Shift registers:       1
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 34 out of     161   21%
+  Number of BUFGMUXs:                     7 out of      24   29%
+  Number of DCMs:                         5 out of       8   62%
+  Number of MULT18X18SIOs:                4 out of      32   12%
+
+Average Fanout of Non-Clock Nets:                3.04
+
+Peak Memory Usage:  4455 MB
+Total REAL time to MAP completion:  6 secs 
+Total CPU time to MAP completion:   5 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Mapping completed.
+See MAP report file "FPGA_DUPS_map.mrp" for details.

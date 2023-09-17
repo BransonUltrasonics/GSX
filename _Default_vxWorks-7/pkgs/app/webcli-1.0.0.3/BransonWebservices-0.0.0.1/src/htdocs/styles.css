@@ -1,0 +1,15 @@
+
+div.content{ position:absolute; padding-top:30px; padding-bottom:30px;
+	         top:90px; left:122px; width:475px;
+	         font-family: verdana, arial, helvetica, sans-serif;}
+div.top_box{ position:absolute; background-color: #FFFFFF;
+			 layer-background-color: #FFFFFF;
+			 top:0px; left:0px; width:750px; height:60px; }
+.url       { color:blue; font: bold, 10pt, monospace; }
+.fixed     { color:black; font-weight: bold; font-size: 10pt; font-family:monospace;}
+.wr_red { margin-left:8px; color:#cc0000; font-weight:bold; font-size:14px;}
+.body_t    { margin-left:8px; color:#000000; font-size:12px;}
+.bold      { font-weight:bold;}
+.italic    { font-style:italic;}
+.indent    { margin-left:18px; color:#000000; font-size:12px;}
+p          { margin-left:8px; color:#000000; font-size:12px;}

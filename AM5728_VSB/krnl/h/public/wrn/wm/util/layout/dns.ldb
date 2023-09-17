@@ -1,0 +1,187 @@
+; $Header: /usr/cvsroot/target/h/wrn/wm/util/layout/dns.ldb,v 1.1.1.1 2001/11/05 17:47:20 tneale Exp $
+; Layout information for DNS
+
+;****************************************************************************
+;
+;  *** Restricted Rights Legend ***
+;
+;  The programs and information contained herein are licensed only
+;  pursuant to a license agreement that contains use, reverse
+;  engineering, disclosure, and other restrictions; accordingly, it
+;  is "Unpublished--all rights reserved under the applicable
+;  copyright laws".
+;
+;  Use duplication, or disclosure by the Government is subject to
+;  restrictions as set forth in subparagraph (c)(1)(ii) of the Rights
+;  in Technical Data and Computer Licensed Programs clause of DFARS
+;  52.227 7013.
+;
+;  Copyright 2000-2001 Wind River Systems, Inc.
+;  Copyright 1996-1997 Epilogue Technology Corporation.
+;  Copyright 1998 Integrated Systems, Inc.
+;  All rights reserved.
+;
+;  *** Government Use ***
+;
+;  The Licensed Programs and their documentation were developed at
+;  private expense and no part of them is in the public domain.
+;
+;  The Licensed Programs are "Restricted Computer Software" as that
+;  term is defined in Clause 52.227-19 of the Federal Acquisition
+;  Regulations (FAR) and are "Commercial Computer Software" as that
+;  term is defined in Subpart 227.401 of the Department of Defense
+;  Federal Acquisition Regulation Supplement (DFARS).
+;
+;  (i) If the licensed Programs are supplied to the Department of
+;      Defense (DoD), the Licensed Programs are classified as
+;      "Commercial Computer Software" and the Government is acquiring
+;      only "restricted rights" in the Licensed Programs and their
+;      documentation as that term is defined in Clause 52.227
+;      7013(c)(1) of the DFARS, and
+;
+;  (ii) If the Licensed Programs are supplied to any unit or agency
+;      of the United States Government other than DoD, the
+;      Government's rights in the Licensed Programs and their
+;      documentation will be as defined in Clause 52.227-19(c)(2) of
+;      the FAR.
+;****************************************************************************
+
+;  $Log: dns.ldb,v $
+;  Revision 1.1.1.1  2001/11/05 17:47:20  tneale
+;  Tornado shuffle
+;
+;  Revision 1.8  2001/01/19 22:22:32  paul
+;  Update copyright.
+;
+;  Revision 1.7  1998/02/25 15:21:40  sra
+;  Finish moving types.h, bug.h, and bugdef.h to common/h/.
+;
+;  Revision 1.6  1998/02/25 04:53:54  sra
+;  Update copyrights.
+;
+;  Revision 1.5  1997/09/26 20:21:14  alan
+;  Use features of new layout compiler: `use-layouts' and `C-include'.
+;
+;  Revision 1.4  1997/06/04 05:46:23  alan
+;  Fix RCS keywords.
+;
+;  Revision 1.3  1997/06/03 22:59:32  alan
+;  Use `define-rcs-info'.
+;
+;  Revision 1.2  1997/04/22 00:18:31  alan
+;  Fix copyright.
+;
+;  Revision 1.1  1997/04/19 04:12:13  alan
+;  Move all .ldb files into the `layout' directory.
+;
+;  Revision 1.2  1996/12/03 07:51:11  alan
+;  Add AAAA type.
+;
+;  Revision 1.1  1996/06/06  01:54:35  alan
+;  Added the file `dns.ldb'.
+
+(define-rcs-info "$Id: dns.ldb,v 1.1.1.1 2001/11/05 17:47:20 tneale Exp $")
+
+(C-include EPILOGUE_INSTALL_H <install.h>)
+(C-include EPILOGUE_TYPES_H <common/h/types.h>)
+(C-include EPILOGUE_LAYOUT_LDBGLUE_H <layout/ldbglue.h>)
+
+(define-layout DNS_TYPE
+  (enum (type (opaque 16))
+	(value A 1)
+	(value NS 2)
+	(value MD 3)
+	(value MF 4)
+	(value CNAME 5)
+	(value SOA 6)
+	(value MB 7)
+	(value MG 8)
+	(value MR 9)
+	(value NULL 10)
+	(value WKS 11)
+	(value PTR 12)
+	(value HINFO 13)
+	(value MINFO 14)
+	(value MX 15)
+	(value TXT 16)
+	(value AAAA 28)
+	;; Following types can only be used in queries:
+	(value AXFR 252)
+	(value MAILB 253)
+	(value MAILA 254)
+	(value WILD 255)	; aka "*"
+	))
+
+(define-layout DNS_CLASS
+  (enum (type (opaque 16))
+	(value IN 1)
+	(value CS 2)
+	(value CH 3)
+	(value HS 4)
+	;; Following types can only be used in queries:
+	(value WILD 255)	; aka "*"
+	))
+
+(define-layout DNS_HEADER
+  (struct (size (* 6 16))
+	  (field ID (opaque 16))
+	  (struct (size 16)
+		  (align 1)
+		  (field QR (boolean 1))
+		  (field OPCODE (enum (type (unsigned 4))
+				      (value QUERY 0)
+				      (value IQUERY 1)
+				      (value STATUS 2)))
+		  (field AA (boolean 1))
+		  (field TC (boolean 1))
+		  (field RD (boolean 1))
+		  (field RA (boolean 1))
+		  (fill 3)	; MBZ
+		  (field RCODE (enum (type (unsigned 4))
+				     (value NO_ERROR 0)
+				     (value FORMAT_ERROR 1)
+				     (value SERVER_FAILURE 2)
+				     (value NAME_ERROR 3)
+				     (value NOT_IMPLEMENTED 4)
+				     (value REFUSED 5)
+				     ))
+		  )
+	  (field QDCOUNT (unsigned 16))
+	  (field ANCOUNT (unsigned 16))
+	  (field NSCOUNT (unsigned 16))
+	  (field ARCOUNT (unsigned 16))
+	  ))
+
+;; *NOTE*  Some of the time fields here might actually want to be -signed-
+;; quantities.  RFC1035 is sometimes unclear about this.  Fortunately, we are
+;; saved from having to worry about this here by the fact that the `layout'
+;; tool doesn't support the signed types completely...
+
+(define-layout DNS_RR
+  (struct (size (* 5 16))
+	  ;; First comes NAME (a domain-name)
+	  ;; and then these fixed fields:
+	  (field TYPE DNS_TYPE)
+	  (field CLASS DNS_CLASS)
+	  ;; A Question would end here.
+	  (field TTL (unsigned 32))
+	  (field RDLENGTH (unsigned 16))
+	  (field RDATA (array (count 0)
+			      (type (unsigned 8))))
+	  ))
+
+(define-layout DNS_SOA
+  (struct (size (* 5 32))
+	  ;; First comes MNAME (a domain-name)
+	  ;; and RNAME (a domain-name)
+	  ;; and then these fixed fields:
+	  (field SERIAL (unsigned 32))
+	  (field REFRESH (unsigned 32))
+	  (field RETRY (unsigned 32))
+	  (field EXPIRE (unsigned 32))
+	  (field MINIMUM (unsigned 32))
+	  ))
+
+; Local Variables:
+; mode: Scheme
+; End:

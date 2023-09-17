@@ -1,0 +1,6012 @@
+
+libIPCOM.a:
+
+ipcom_access.o:
+00000000 T ipcom_access
+00000008 T ipcom_umask
+0000000c T ipcom_chmod
+
+ipcom_array.o:
+00000000 T ipcom_qsort
+         U qsort
+00000004 T ipcom_bsearch
+         U bsearch
+
+ipcom_atomic.o:
+00000000 T ipcom_atomic_get
+         U vxAtomic32Get
+00000004 T ipcom_atomic_set
+         U vxAtomic32Set
+00000008 T ipcom_atomic_ptr_cas
+         U vxAtomicCas
+0000000c T ipcom_atomic_cas
+         U vxAtomic32Cas
+00000010 T ipcom_atomic_add
+         U vxAtomic32Add
+00000014 T ipcom_atomic_add_and_return
+0000002c T ipcom_atomic_inc
+         U vxAtomic32Inc
+00000030 T ipcom_atomic_dec
+         U vxAtomic32Dec
+00000034 T ipcom_atomic_sub
+         U vxAtomic32Sub
+00000038 T ipcom_atomic_sub_and_return
+00000050 T ipcom_atomic_get_and_or
+         U vxAtomic32Or
+00000054 T ipcom_atomic_or
+00000058 T ipcom_atomic_get_and_and
+         U vxAtomic32And
+0000005c T ipcom_atomic_and
+
+ipcom_auth_login.o:
+00000000 T ipcom_auth_ctx_login
+         U memset
+00000068 T ipcom_auth_login
+00000090 T ipcom_auth_logout
+
+ipcom_auth_chap.o:
+00000000 T ipcom_auth_chap_login
+
+ipcom_bitarray.o:
+00000098 t ipcom_bitarray_mod_private
+00000170 t ipcom_bitarray_mod
+00000000 T ipcom_bitarray_new
+         U malloc
+         U free
+         U memset
+00000064 T ipcom_bitarray_free
+00000080 T ipcom_bitarray_reset
+         U __urem32
+000001f4 T ipcom_bitarray_set
+00000234 T ipcom_bitarray_isset
+0000028c T ipcom_bitarray_clear
+000002cc T ipcom_bitarray_shiftL
+0000033c T ipcom_bitarray_shiftR
+000003a0 T ipcom_bitarray_dump
+         U printf
+
+ipcom_buffer.o:
+00000000 T ipcom_buffer_init
+         U malloc
+0000002c T ipcom_buffer_new
+         U free
+00000084 T ipcom_buffer_free
+000000a0 T ipcom_buffer_reset
+000000b0 T ipcom_buffer_append_space
+         U memmove
+         U realloc
+00000168 T ipcom_buffer_put
+         U memcpy
+000001ac T ipcom_buffer_put_char
+000001d8 T ipcom_buffer_put_int
+00000204 T ipcom_buffer_get
+00000254 T ipcom_buffer_get_int
+0000025c T ipcom_buffer_get_uint
+00000264 T ipcom_buffer_get_char
+0000026c T ipcom_buffer_len
+0000027c T ipcom_buffer_capacity
+0000028c T ipcom_buffer_consume
+000002bc T ipcom_buffer_consume_end
+000002ec T ipcom_buffer_start_ptr
+000002fc T ipcom_buffer_end_ptr
+0000030c T ipcom_buffer_decr_cap
+0000033c T ipcom_buffer_trim
+0000039c T ipcom_buffer_start_pos
+000003a4 T ipcom_buffer_end_pos
+000003ac T ipcom_buffer_ptr2pos
+000003c0 T ipcom_buffer_dump_len
+         U ipcom_debug_printf
+00000434 T ipcom_buffer_dump
+
+ipcom_cache.o:
+00000000 t ipcom_cache_obj_order
+00000028 t ipcom_cache_obj_index
+00000040 t ipcom_cache_alloc_obj
+         U ipcom_random
+         U __urem32
+         U memmove
+000000dc T ipcom_cache_delete
+         U free
+000000e0 T ipcom_cache_flush
+         U memset
+00000164 T ipcom_cache_new_with_bucket_count
+         U __udiv32
+         U ipcom_cache_line_size
+         U calloc
+         U ipcom_syslog
+00000264 T ipcom_cache_new_with_memory_limit
+00000324 T ipcom_cache_insert_with_index
+         U memcpy
+00000404 T ipcom_cache_insert
+00000444 T ipcom_cache_lookup
+
+ipcom_ccivalidate.o:
+
+ipcom_checksum.o:
+00000000 T ipcom_in_checksum_update
+000000e4 T ipcom_in_checksum_finish
+00000108 T ipcom_in_checksum
+00000140 T ipcom_in_checksum_update_pkt
+0000019c T ipcom_in_checksum_pkt
+000001bc T ipcom_in_checksum_memcpy
+
+ipcom_cmd.o:
+00000000 t ipcom_cmd_link_ntop
+000000a8 t ipcom_cmd_addr_to_str
+         U snprintf
+         U ipcom_inet_ntop
+         U ipcom_getsockaddrbyaddr
+         U ipcom_getnameinfo
+00000124 T ipcom_cmd_sockaddr_to_str
+         U ipcom_if_indextoname
+         U strlen
+         U strncat
+         U sprintf
+000002a0 T ipcom_cmd_if_flags_to_str
+000003f0 T ipcom_cmd_if_caps_to_str
+00000490 T ipcom_cmd_key_to_str
+000004fc T ipcom_cmd_str_to_key2
+         U ipcom_strcasecmp
+0000055c T ipcom_cmd_str_to_key
+
+ipcom_cmd_cpu.o:
+00000000 t ipcom_cmd_cpu_getpid
+         U strtoul
+0000002c T ipcom_cmd_cpu
+         U strcmp
+         U ipcom_num_online_cpus
+         U ipcom_num_configured_cpus
+         U printf
+         U memset
+         U ipcom_proc_cpu_affinity_get
+         U strtol
+         U ipcom_proc_cpu_affinity_set_all
+         U ipcom_proc_cpu_affinity_set
+
+ipcom_cmd_echo.o:
+00000000 t ipcom_cmd_echo_server_print_usage
+00000044 t ipcom_cmd_echo_error_msg
+0000006c t ipcom_cmd_echo_client_do
+00000764 t ipcom_cmd_echo_client_print_usage
+000008bc t ipcom_cmd_echo_server_error
+00000908 t ipcom_cmd_echo_server_daemon
+00000f1c t ipcom_cmd_echo_server_do
+0000113c t ipcom_cmd_echo_parse_arguments
+00000050 d ipcom_cmd_echo_domain_map
+00000000 d ipcom_cmd_echo_type_map
+00000028 d ipcom_cmd_echo_proto_map
+         U printf
+         U ipcom_errno_get
+         U strerror
+         U malloc
+         U __rem32
+         U ipcom_socket_usr
+         U ipcom_setsockopt_usr
+         U ipcom_cmd_sockaddr_to_str
+         U ipcom_inet_ntop
+         U ipcom_if_indextoname
+         U memset
+         U ipcom_bind_usr
+         U ipcom_getsockname_usr
+         U ipcom_connect_usr
+         U ipcom_getpeername_usr
+         U ipcom_times
+         U ipcom_send_usr
+         U ipcom_sendto_usr
+         U ipcom_recv_usr
+         U ipcom_perror
+         U __div32
+         U free
+         U ipcom_socketclose_usr
+         U ipcom_ipc_malloc
+         U ipcom_ipc_send
+         U ipcom_ipc_free
+         U ipcom_ipc_close
+         U ipcom_proc_init
+         U ipcom_ipc_install
+         U ipcom_ipc_receive
+         U ipcom_listen_usr
+         U ipcom_socketselect_usr
+         U ipcom_accept_usr
+         U ipcom_recvfrom_usr
+         U memmove
+         U ipcom_debug_printf
+         U ipcom_getsockopt_usr
+         U ipcom_ipc_isopen
+         U ipcom_ipc_uninstall
+         U ipcom_proc_exit
+         U ipcom_ipc_open
+         U ipcom_proc_acreate
+         U memcpy
+         U ipcom_getopt_clear_r
+         U ipcom_getopt_r
+         U ipcom_cmd_str_to_key
+         U atoi
+         U strlen
+         U strcpy
+         U strtoul
+         U ipcom_getsockaddrbyaddrname
+         U ipcom_if_nametoindex
+         U ipcom_socketioctl_usr
+00001690 T ipcom_cmd_echoserver
+000016c4 T ipcom_cmd_echoclient
+
+ipcom_cmd_errno.o:
+00000000 d ipcom_errtbl
+00000000 T ipcom_cmd_errno
+         U strerror_r
+         U printf
+
+ipcom_cmd_fwctrl.o:
+00000004 C ipcom_cmd_fwctr_empty_file
+
+ipcom_cmd_ipd.o:
+00000000 d ipcom_cmd_ipd_messages
+00000000 T ipcom_cmd_ipd
+         U ipcom_stderr
+         U fprintf
+         U ipcom_getopt_clear_r
+         U ipcom_getopt_r
+         U printf
+         U strcmp
+         U ipcom_ipd_products
+         U ipcom_strcasecmp
+         U ipcom_ipd_send
+         U isdigit
+         U atoi
+         U strlen
+         U calloc
+         U memcpy
+         U ipcom_ipd_sendmsg
+         U free
+         U ipcom_err_string
+
+ipcom_cmd_mib2.o:
+00000000 t ipcom_cmd_mib2_print_usage
+00000190 t ipcom_cmd_mib2_tcp_group
+00000230 t ipcom_cmd_mib2_udp_group
+00000288 t ipcom_cmd_mib2_ip_general_group
+000002c4 t ipcom_cmd_mib2_ip_group
+000003b4 t ipcom_cmd_mib2_icmp_group
+00000504 t ipcom_cmd_mib2_ipv6_general_group
+00000530 t ipcom_cmd_mib2_ipv4InterfaceTableCb
+0000058c t ipcom_cmd_mib2_ipv6InterfaceTableCb
+00000638 t ipcom_cmd_mib2_ipAddrTableCb
+00000778 t ipcom_cmd_mib2_ipSystemStatsTableCb
+00000c08 t ipcom_cmd_mib2_ipIfStatsTableCb
+00001158 t ipcom_cmd_mib2_ipAddressPrefixTableCb
+000013ac t ipcom_cmd_mib2_ipAddressTableCb
+00001638 t ipcom_cmd_mib2_ipNetToPhysicalTableCb
+00001814 t ipcom_cmd_mib2_ipv6ScopeZoneIndexTableCb
+00001a14 t ipcom_cmd_mib2_ipDefaultRouterTableCb
+00001b14 t ipcom_cmd_mib2_ipv6RouterAdvertTableCb
+00001cb4 t ipcom_cmd_mib2_icmpStatsTableCb
+00001d18 t ipcom_cmd_mib2_icmpMsgStatsTableCb
+00001d74 t ipcom_cmd_mib2_tcpConnectionTableCb
+00002008 t ipcom_cmd_mib2_tcpListenerTableCb
+00002164 t ipcom_cmd_mib2_udpEndpointTableCb
+00002418 t ipcom_cmd_mib2_inetCidrRouteTableCb
+         U printf
+         U ipcom_mib2_get_tcp_group
+         U ipcom_mib2_get_udp_group
+         U ipcom_mib2_get_ip_general_group
+         U ipcom_mib2_get_ip_group
+         U ipcom_mib2_get_icmp_group
+         U ipcom_mib2_get_ipv6_general_group
+         U snprintf
+         U ipcom_inet_ntop
+         U strcpy
+         U strlen
+         U sprintf
+00002744 T ipcom_cmd_mib2
+         U strcmp
+         U ipcom_mib2_clear
+         U malloc
+         U ipcom_mib2_get_ipv4InterfaceTableLastChange
+         U ipcom_mib2_iterate_ipv4InterfaceTable
+         U ipcom_mib2_get_ipv6InterfaceTableLastChange
+         U ipcom_mib2_iterate_ipv6InterfaceTable
+         U ipcom_mib2_iterate_ipAddrTable
+         U ipcom_mib2_iterate_ipSystemStatsTable
+         U ipcom_mib2_get_ipIfStatsTableLastChange
+         U ipcom_mib2_iterate_ipIfStatsTable
+         U ipcom_mib2_iterate_icmpStatsTable
+         U ipcom_mib2_iterate_icmpMsgStatsTable
+         U ipcom_mib2_iterate_ipAddressPrefixTable
+         U ipcom_mib2_get_ipAddressSpinLock
+         U ipcom_mib2_iterate_ipAddressTable
+         U ipcom_mib2_iterate_ipNetToPhysicalTable
+         U ipcom_mib2_iterate_ipv6ScopeZoneIndexTable
+         U ipcom_mib2_iterate_ipDefaultRouterTable
+         U ipcom_mib2_get_ipv6RouterAdvertSpinLock
+         U ipcom_mib2_iterate_ipv6RouterAdvertTable
+         U ipcom_mib2_iterate_tcpConnectionTable
+         U ipcom_mib2_iterate_tcpListenerTable
+         U ipcom_mib2_iterate_udpEndpointTable
+         U ipcom_mib2_get_inetCidrRouteNumber
+         U ipcom_mib2_get_inetCidrRouteDiscards
+         U ipcom_mib2_iterate_inetCidrRouteTable
+         U atoi
+         U ipcom_mib2_set_ipAddressSpinLock
+         U ipcom_inet_pton
+         U ipcom_mib2_set_tcpConnectionState
+         U ipcom_mib2_set_ipForwarding
+         U ipcom_mib2_set_ipDefaultTTL
+         U ipcom_mib2_set_ipv4InterfaceEnableStatus
+         U ipcom_mib2_set_ipv6IpForwarding
+         U ipcom_mib2_set_ipv6IpDefaultHopLimit
+         U ipcom_mib2_set_ipv6InterfaceEnableStatus
+         U ipcom_mib2_set_ipv6InterfaceForwarding
+         U ipcom_mib2_set_ipv6RouterAdvertSpinLock
+         U free
+
+ipcom_cmd_netsmp.o:
+00000000 T ipcom_cmd_netsmp
+         U strcmp
+         U netDaemonsCount
+         U vxCpuConfiguredGet
+         U printf
+         U vxCpuEnabledGet
+         U vxCpuReservedGet
+         U strtol
+         U netDaemonQ
+         U jobQueueTask
+         U taskCpuAffinityGet
+
+ipcom_cmd_shellcmds.o:
+00000000 T ipcom_cmd_mkdir
+         U printf
+         U ipcom_mkdir
+         U ipcom_errno_get
+         U strerror
+00000064 T ipcom_cmd_cd
+         U ipcom_chdir
+000000c4 T ipcom_cmd_cat
+         U ipcom_fopen
+         U malloc
+         U ipcom_fread
+         U ipcom_stdout
+         U ipcom_fwrite
+         U free
+         U ipcom_fclose
+00000194 T ipcom_cmd_uuencode
+000002ac T ipcom_cmd_cp
+000003c4 T ipcom_cmd_pwd
+         U ipcom_getcwd
+00000448 T ipcom_cmd_rm
+         U ipcom_unlink
+000004a8 T ipcom_cmd_rmdir
+         U ipcom_rmdir
+00000504 T ipcom_cmd_mv
+         U ipcom_rename
+00000578 T ipcom_cmd_ls
+         U ipcom_getopt_clear_r
+         U ipcom_getopt_r
+         U ipcom_opendir
+         U ipcom_readdir
+         U strlen
+         U strcpy
+         U strcat
+         U ipcom_stat
+         U ctime
+         U strncpy
+         U __rem32
+         U ipcom_closedir
+00000778 T ipcom_cmd_date
+         U ipcom_gettimeofday
+         U localtime
+         U memcpy
+         U ipcom_asctime_r_vxworks
+         U strchr
+         U strrchr
+         U atol
+         U mktime
+         U ipcom_settimeofday
+000008c8 T ipcom_cmd_time
+00000a04 T ipcom_cmd_getenv
+         U ipcom_getenv
+00000a58 T ipcom_cmd_setenv
+         U ipcom_setenv
+
+ipcom_cmd_smptest.o:
+00000004 C ipcom_cmd_smptest_empty_file
+
+ipcom_cmd_sockperf.o:
+00000000 t ipcom_cmd_sockperf_tv_to_msec
+0000006c t ipcom_cmd_sockperf_echo_buf
+00000114 t ipcom_cmd_sockperf_run
+00000820 t ipcom_cmd_sockperf_connect
+00000978 t ipcom_cmd_sockperf_accept
+         U __div32
+         U printf
+         U memcpy
+         U __rem32
+         U ipcom_setsockopt_usr
+         U memset
+         U ipcom_microtime
+         U __urem32
+         U sprintf
+         U ipcom_send_usr
+         U ipcom_errno_get
+         U ipcom_sleep
+         U strerror
+         U ipcom_shutdown_usr
+         U ipcom_socketselect_usr
+         U ipcom_recv_usr
+         U atoi
+         U __udiv32
+         U ipcom_socket_usr
+         U ipcom_connect_usr
+         U ipcom_socketclose_usr
+         U ipcom_bind_usr
+         U ipcom_listen_usr
+         U ipcom_accept_usr
+00000bbc T ipcom_cmd_sockperf
+         U ipcom_getopt_clear_r
+         U ipcom_getopt_r
+         U calloc
+         U ipcom_getaddrinfo
+         U malloc
+         U free
+         U ipcom_freeaddrinfo
+
+ipcom_cmd_socktest.o:
+00000000 t ipcom_socktest_init
+00000004 b ipcom_socktest_flood_list
+00000000 b ipcom_socktest_flood_lock
+00000028 t ipcom_cmd_socktest_fd_find
+00000074 t ipcom_cmd_socktest_param_parse
+000000cc t ipcom_cmd_socktest_param_to_int
+00000104 t ipcom_cmd_socktest_param_list_print
+00000138 t ipcom_cmd_socktest_sockopt_list_print
+00000178 t ipcom_cmd_socktest_ioctl_list_print
+000001b8 t ipcom_cmd_socktest_parse_int
+00000200 t ipcom_cmd_socktest_format_int
+00000240 t ipcom_cmd_socktest_parse_u8
+00000288 t ipcom_cmd_socktest_format_u8
+000002c8 t ipcom_cmd_socktest_parse_inaddr
+00000334 t ipcom_cmd_socktest_format_inaddr
+0000037c t ipcom_cmd_socktest_ptos
+000003fc t ipcom_cmd_socktest_parse_group_req
+000004c0 t ipcom_cmd_socktest_parse_group_source_req
+0000059c t ipcom_cmd_socktest_str_to_in_pktinfo
+00000674 t ipcom_cmd_socktest_format_in_pktinfo
+000006c4 t ipcom_cmd_socktest_str_to_in6_pktinfo
+0000079c t ipcom_cmd_socktest_format_in6_pktinfo
+000007ec t ipcom_cmd_socktest_parse_mreq
+000008c8 t ipcom_cmd_socktest_format_mreq
+00000958 t ipcom_cmd_socktest_parse_mreq6
+00000a34 t ipcom_cmd_socktest_format_mreq6
+00000ac4 t ipcom_cmd_socktest_parse_icmp6_filter
+00000c38 t ipcom_cmd_socktest_format_icmp6_filter
+00000cf0 t ipcom_cmd_socktest_parse_ifreq_addr
+00000d7c t ipcom_cmd_socktest_format_ifreq_addr
+00000dc8 t ipcom_cmd_socktest_parse_ifreq_int
+00000e44 t ipcom_cmd_socktest_format_ifreq_int
+00000e4c t ipcom_cmd_socktest_parse_ifreq_u16
+00000ec8 t ipcom_cmd_socktest_format_ifreq_u16
+00000f08 t ipcom_cmd_socktest_parse_ifreq_flags
+00000f90 t ipcom_cmd_socktest_format_ifreq_flags
+00000fd4 t ipcom_cmd_socktest_parse_timeval
+00001040 t ipcom_cmd_socktest_format_timeval
+00001098 t ipcom_cmd_socktest_parse_linger
+00001110 t ipcom_cmd_socktest_format_linger
+00001170 t ipcom_cmd_socktest_parse_md5key
+000011bc t ipcom_cmd_socktest_format_md5key
+00001220 t ipcom_cmd_socktest_parse_ifname
+0000126c t ipcom_cmd_socktest_format_ifname
+000012bc t ipcom_cmd_socktest_parse_packet_mreq
+000013c4 t ipcom_cmd_socktest_format_packet_mreq
+00001478 t ipcom_cmd_socktest_parse_ifaliasreq_addr
+000015d8 t ipcom_cmd_socktest_parse_arpreq
+000016e8 t ipcom_cmd_socktest_format_arpreq
+00001774 t ipcom_cmd_socktest_parse_ip_opts
+00001814 t ipcom_cmd_socktest_format_ip_opts
+00001888 t ipcom_cmd_socktest_parse_sovlan
+0000198c t ipcom_cmd_socktest_format_sovlan
+000019e8 t ipcom_cmd_socktest_parse_stat
+000019fc t ipcom_cmd_socktest_format_stat
+00001a78 t ipcom_cmd_socktest_format_dst_opt
+00001a80 t ipcom_cmd_socktest_parse_dst_opt
+00001b28 t ipcom_cmd_socktest_format_hop_opt
+00001b30 t ipcom_cmd_socktest_parse_hop_opt
+00001c04 t ipcom_cmd_socktest_format_rthdr_opt
+00001c0c t ipcom_cmd_socktest_parse_rthdr_opt
+00001d00 t ipcom_cmd_socktest_parse_vifctl
+00001e08 t ipcom_cmd_socktest_parse_mfcctl
+00001f88 t ipcom_cmd_socktest_parse_vifreq
+00001fc0 t ipcom_cmd_socktest_format_vifreq
+00002024 t ipcom_cmd_socktest_parse_sgreq
+000020a8 t ipcom_cmd_socktest_format_sgreq
+000020f0 t ipcom_cmd_socktest_parse_mif6ctl
+0000215c t ipcom_cmd_socktest_parse_mf6cctl
+000022f8 t ipcom_cmd_socktest_parse_mifreq6
+00002340 t ipcom_cmd_socktest_format_mifreq6
+00002398 t ipcom_cmd_socktest_parse_sgreq6
+0000241c t ipcom_cmd_socktest_format_sgreq6
+0000247c t ipcom_cmd_socktest_parse_ifconf
+000024a8 t ipcom_cmd_socktest_format_ifconf
+00002560 t ipcom_cmd_socktest_parse_gre_key
+000025c8 t ipcom_cmd_socktest_format_gre_key
+00002620 t ipcom_cmd_socktest_parse_tcpao_mkt_inst
+00002844 t ipcom_cmd_socktest_format_tcpao_mkt_inst
+00002980 t ipcom_cmd_socktest_set_optlen
+00000e88 d socktest_sock_level
+00002a00 t ipcom_cmd_socktest_parse_tcpao_rcv_keyids
+00002aa0 t ipcom_cmd_socktest_format_tcpao_rcv_keyids
+00002b94 t ipcom_cmd_socktest_portinfo_add
+00002c04 t ipcom_cmd_socktest_print_eth
+00002cac t ipcom_cmd_socktest_print_ip
+00002e14 t ipcom_cmd_socktest_print_ip6
+00003028 t ipcom_cmd_socktest_print_tcp
+0000315c t ipcom_cmd_socktest_print_udp
+000031f8 t ipcom_cmd_socktest_rec_type_to_str
+00003388 t ipcom_cmd_socktest_print_icmp
+000035e8 t ipcom_cmd_socktest_print_igmp
+000038c4 t ipcom_cmd_socktest_print_icmp6
+00003c58 t ipcom_cmd_socktest_print_formatted
+00001138 d socktest_prot_format
+00003dc0 t ipcom_cmd_socktest_print_usage
+00003ee0 t ipcom_cmd_socktest_handle_console
+00000750 d socktest_cmd_cb
+000040e0 t ipcom_cmd_socktest_handle_exit
+000040f0 t ipcom_cmd_socktest_get_sockno
+00004128 t ipcom_cmd_socktest_handle_open
+00000830 d socktest_domain
+00000868 d socktest_type
+00000890 d socktest_proto
+0000438c t ipcom_cmd_socktest_handle_close
+0000454c t ipcom_cmd_socktest_flood_closesocket_impl
+000045ec t ipcom_cmd_socktest_handle_flush
+00004674 t ipcom_cmd_socktest_handle_bind
+00004898 t ipcom_cmd_socktest_handle_setopt
+00004b44 t ipcom_cmd_socktest_handle_getopt
+00004ec4 t ipcom_cmd_socktest_handle_ioctl
+00000f08 d socktest_ioctl
+00005134 t ipcom_cmd_socktest_handle_connect
+000053e4 t ipcom_cmd_socktest_handle_listen
+0000552c t ipcom_cmd_socktest_handle_accept
+00005744 t ipcom_cmd_socktest_handle_getname
+00005900 t ipcom_cmd_socktest_handle_getsockname
+00005920 t ipcom_cmd_socktest_handle_getpeername
+00005940 t ipcom_cmd_socktest_handle_select
+00005c78 t ipcom_cmd_socktest_handle_shutdown
+00005df0 t ipcom_cmd_socktest_print_ancillary_data
+00000928 d socktest_ancillary_data
+00005f04 t ipcom_cmd_socktest_print_all_ancillary_data
+00005f64 t ipcom_cmd_socktest_recv_impl
+000066ac t ipcom_cmd_socktest_flood_shutdown_impl
+0000683c t ipcom_cmd_socktest_flood_acquire
+00006898 t ipcom_cmd_socktest_flood_proc_impl
+00006bbc t ipcom_cmd_socktest_flood_impl
+00006f64 t ipcom_cmd_socktest_handle_flood
+00006f68 t ipcom_cmd_socktest_handle_receive
+00006f88 t ipcom_cmd_socktest_handle_zerocopy_recv
+00006fa8 t ipcom_cmd_socktest_zbuf_buf_free
+00006fac t ipcom_cmd_socktest_send_impl
+000077b0 t ipcom_cmd_socktest_handle_attach
+000079fc t ipcom_cmd_socktest_handle_if_nametoindex
+00007a50 t ipcom_cmd_socktest_socket_eventcb
+000002d0 d socktest_fd
+00007aac t ipcom_cmd_socktest_handle_soevent_monitor
+00007dfc t ipcom_cmd_socktest_handle_gethostbyname
+00007f10 t ipcom_cmd_socktest_handle_gethostbyaddr
+00008058 t ipcom_cmd_socktest_handle_send
+00008078 t ipcom_cmd_socktest_handle_zerocopy_send
+000012a0 d once.2365
+00000000 d socktest_data_types
+000009a8 d socktest_sol_opt
+00000ab0 d socktest_ip_opt
+00000c30 d socktest_ipv6_opt
+00000da4 d socktest_icmpv6_opt
+00000db0 d socktest_udp_opt
+00000dbc d socktest_udplite_opt
+00000dc8 d socktest_tcp_opt
+00000e70 d socktest_packet_opt
+         U ipcom_list_init
+         U ipcom_mutex_create
+         U strcmp
+         U atoi
+         U printf
+         U malloc
+         U sprintf
+         U ipcom_inet_pton
+         U free
+         U ipcom_inet_ntop
+         U memset
+         U strdup
+         U strtok_r
+         U ipcom_if_nametoindex
+         U realloc
+         U strlen
+         U strchr
+         U strcpy
+         U strcat
+         U ipcom_if_indextoname
+         U strstr
+         U sscanf
+         U calloc
+         U ipcom_getsockaddrbyaddr
+         U ipcom_cmd_sockaddr_to_str
+         U strtoul
+         U ipcom_cmd_if_flags_to_str
+         U atol
+         U __div32
+         U __rem32
+         U strncpy
+         U memcpy
+         U snprintf
+         U ipcom_socket_usr
+         U ipcom_socketclose_usr
+         U ipcom_socketioctl_usr
+         U ipcom_getline_init
+         U ipcom_stdout
+         U ipcom_fflush
+         U ipcom_getline
+         U ipcom_parse_argstr
+         U ipcom_errno_get
+         U strerror
+         U ipcom_getline_exit
+         U ipcom_sysvar_get_as_int
+         U ipcom_getopt_clear_r
+         U ipcom_getopt_r
+         U ipcom_sysvar_set
+         U ipcom_sleep
+         U ipcom_sem_wait
+         U ipcom_sem_delete
+         U ipcom_bind_usr
+         U ipcom_setsockopt_usr
+         U ipcom_getsockopt_usr
+         U ipcom_connect_usr
+         U ipcom_listen_usr
+         U ipcom_accept_usr
+         U ipcom_getpeername_usr
+         U ipcom_getsockname_usr
+         U ipcom_socketselect_usr
+         U ipcom_shutdown_usr
+         U ipcom_cmsg_nxthdr
+         U ipcom_recvfrom_usr
+         U ipcom_recvmsg_usr
+         U zbufSockRecvfrom
+         U _zbuf_getseg_nolock
+         U zbufDelete
+         U ipcom_recv_usr
+         U ipcom_mutex_lock
+         U ipcom_list_first
+         U ipcom_list_remove
+         U ipcom_mutex_unlock
+         U ipcom_sem_post
+         U ipcom_proc_init
+         U ipcom_send_usr
+         U ipcom_proc_exit
+         U ipcom_strcasecmp
+         U ipcom_list_insert_first
+         U ipcom_sem_create
+         U ipcom_proc_create
+         U ipcom_in_checksum
+         U ipcom_sendmsg_usr
+         U zbufSockBufSendto
+         U ipcom_list_insert_last
+         U ipcom_mutex_delete
+         U ipcom_gethostbyname_r
+         U ipcom_gethostbyname
+         U ipcom_inet_ntoa
+         U ipcom_gethostbyaddr_r
+         U ipcom_gethostbyaddr
+00008098 T ipcom_cmd_socktest
+         U ipcom_once
+
+ipcom_cmd_svlanfwd.o:
+00000004 C ipcom_cmd_svlanfwd_empty_file
+
+ipcom_cmd_syslog.o:
+00000000 t ipcom_cmd_syslog_facility
+00000044 t ipcom_cmd_syslog_priority
+         U ipcom_syslog_facility_names
+         U strcmp
+         U ipcom_syslog_priority_names
+         U ipcom_strcasecmp
+00000088 T ipcom_cmd_syslog
+         U ipcom_stderr
+         U fprintf
+         U ipcom_getopt_clear_r
+         U ipcom_getopt_r
+         U printf
+         U ipcom_getlogmask_on
+         U ipcom_setlogmask_on
+         U ipcom_setlogfile
+         U ipcom_syslog
+
+ipcom_cmd_sysvar.o:
+00000000 t ipcom_cmd_sysvar_for_each_cb
+         U printf
+0000002c T ipcom_cmd_sysvar
+         U ipcom_stderr
+         U fprintf
+         U ipcom_getopt_clear_r
+         U ipcom_getopt_r
+         U atol
+         U strcmp
+         U malloc
+         U ipcom_sysvar_get
+         U free
+         U ipcom_sysvar_set
+         U ipcom_err_string
+         U ipcom_sysvar_unset
+         U ipcom_sysvar_for_each
+
+ipcom_cmd_tracert.o:
+00000000 t ipcom_cmd_tracert_tv_to_msec
+00000040 t ipcom_cmd_tracert_icmp4
+0000017c t ipcom_cmd_tracert_icmp6
+00000278 t ipcom_cmd_tracert_ntop
+000002dc t ipcom_cmd_tracert_send_recv
+000007d8 t ipcom_cmd_tracert_icmp_send_recv
+00000000 d data.229
+         U __div32
+         U ipcom_recv_usr
+         U memcpy
+         U ipcom_getpid
+         U ipcom_recvfrom_usr
+         U ipcom_inet_ntop
+         U ipcom_setsockopt_usr
+         U memset
+         U __rem32
+         U printf
+         U ipcom_microtime
+         U ipcom_sendto_usr
+         U ipcom_socketselect_usr
+         U ipcom_errno_get
+         U ipcom_getnameinfo
+         U strcat
+         U strlen
+         U sprintf
+00000c24 T ipcom_cmd_tracert
+         U ipcom_proc_vr_get
+         U ipcom_getopt_clear_r
+         U ipcom_getopt_r
+         U atoi
+         U ipcom_getaddrinfo
+         U ipcom_socket_usr
+         U ipcom_connect_usr
+         U ipcom_getsockname_usr
+         U ipcom_socketclose_usr
+         U ipcom_bind_usr
+         U __urem32
+         U ipcom_in_checksum
+         U strerror
+         U ipcom_freeaddrinfo
+
+ipcom_cmd_ttcp.o:
+00000000 t softbreak
+0000004c t mes
+00000080 t pattern
+000000c8 t mread
+00000144 t Nread
+0000022c t Nwrite
+         U ipcom_errno_get
+         U sprintf
+         U ipcom_perror
+         U ipcom_stdout
+         U fprintf
+         U isprint
+         U ipcom_socketread_usr
+         U ipcom_recvfrom_usr
+         U ipcom_sendto_usr
+         U ipcom_proc_yield
+         U ipcom_socketwrite_usr
+00000300 T ipcom_cmd_ttcp
+         U ipcom_proc_self
+         U memset
+         U ipcom_getopt_clear
+         U ipcom_getopt_data
+         U atoi
+         U ipcom_getopt
+         U ipcom_stderr
+         U ipcom_proc_cpu_affinity_set
+         U ipcom_getsockaddrbyaddrname
+         U malloc
+         U __div32
+         U __rem32
+         U ipcom_socket_usr
+         U ipcom_setsockopt_usr
+         U ipcom_bind_usr
+         U ipcom_connect_usr
+         U ipcom_listen_usr
+         U ipcom_accept_usr
+         U ipcom_socketclose_usr
+         U ipcom_getpeername_usr
+         U ipcom_inet_ntop
+         U ipcom_times
+         U ipcom_millisleep
+         U __udiv64
+         U __mul64
+         U __udiv32
+         U ipcom_proc_cpu_affinity_clr
+         U free
+
+ipcom_cmd_version.o:
+00000000 T ipcom_cmd_version
+         U ipcom_version
+         U printf
+         U ipcom_ipd_products
+
+ipcom_cmd_vxshell.o:
+00000004 C ipcom_cmd_vxshell_empty_file
+
+ipcom_ctime.o:
+
+ipcom_ctype.o:
+00000000 T ipcom_isascii
+
+ipcom_debug.o:
+00000000 T ipcom_debug_printf
+         U malloc
+         U printf
+         U vsprintf
+         U taskIdSelf
+         U taskName
+         U taskSuspend
+         U free
+000000a0 T ipcom_assert
+
+ipcom_dmalloc.o:
+00000000 t ipcom_dmalloc_init
+00000198 d ipcom_mem_initialized
+00000000 b ipcom_mem
+000000c8 d long_options.65
+00000000 d ipcom_dmalloc_product
+         U ipcom_interrupt_disable
+         U ipcom_interrupt_enable
+         U memset
+         U ipcom_times
+         U time
+00000088 T ipcom_dmalloc
+         U strlen
+         U malloc
+         U strcpy
+0000022c T ipcom_dmalloc_ptr
+0000023c T ipcom_dcalloc
+00000294 T ipcom_dfree
+         U free
+0000030c T ipcom_drealloc
+         U memcpy
+000003a0 T ipcom_dstrdup
+000003f8 T ipcom_bufcheck
+000003fc T ipcom_cmd_mem
+         U printf
+         U ipcom_stderr
+         U fprintf
+         U ipcom_getopt_clear_r
+         U ipcom_getopt_r
+         U atol
+         U strcmp
+         U snprintf
+         U strstr
+         U strncmp
+
+ipcom_dns.o:
+00000000 D ipcom_dns_init_ok
+00000004 C ipcom_dns
+
+ipcom_drv_eth_filter.o:
+00000000 t ipcom_drv_eth_filter_hash_key
+0000000c t ipcom_drv_eth_filter_hash_obj
+0000002c t ipcom_drv_eth_filter_hash_cmp
+         U ipcom_hash_update
+         U memcmp
+00000054 T ipcom_drv_eth_filter_init
+         U memset
+         U ipcom_hash_new
+00000084 T ipcom_drv_eth_filter_exit
+         U ipcom_hash_delete
+0000008c T ipcom_drv_eth_filter_add_mcast_addr
+         U ipcom_hash_get
+         U calloc
+         U memcpy
+         U ipcom_hash_add
+         U free
+00000110 T ipcom_drv_eth_filter_remove_mcast_addr
+         U ipcom_hash_remove
+
+ipcom_drv_eth.o:
+00000000 t ipnet_drv_eth_sync_with_end_flags
+000000b0 t ipcom_drv_eth_bind
+00000048 t ipcom_drv_eth_output
+000014ac t ipcom_drv_eth_shutdown_end2
+00000024 t ipcom_drv_eth_restart_end2
+00000e50 t ipcom_drv_eth_ioctl
+00000000 t ipcom_drv_eth_recv_end2
+00001534 t ipcom_drv_eth_error_end2
+000006d0 t ipcom_drv_eth_bind_to_dev
+00000760 t ipcom_drv_eth_bind_to_dev_errno_adapter
+000007b4 t ipcom_vxworks_boot_devname_init
+00000000 b devname.97
+00000000 d ipcom_vxworks_boot_devname_once
+00000a20 t ipcom_drv_eth_bind_to_devs
+00000bd8 t ipcom_drv_eth_free_out_native_pkt
+00000c30 t ipcom_drv_eth_unbind
+00000ca4 t ipcom_unregister_dev_name_mapping
+000013c4 t ipcom_drv_eth_detach
+         U muxIoctl
+         U mux2Bind
+         U ipcom_errno_get
+         U ipcom_syslog
+00000134 T ipcom_register_dev_name_mapping
+         U ipcom_port
+         U strdup
+         U free
+000001e0 T ipcom_get_ip_if_name
+         U strcmp
+0000022c T ipcom_drv_eth_init
+         U endFindByName
+         U printf
+         U strlen
+         U snprintf
+         U ipcom_if_nametoindex
+         U ipcom_if_malloc
+         U strncpy
+         U calloc
+         U ipcom_drv_eth_filter_init
+         U memset
+         U ipcom_if_attach
+         U ipcom_if_free
+         U atoi
+         U sysBootLine
+         U bootStringToStruct
+         U __ctype
+         U strncmp
+         U sscanf
+         U _func_printErr
+000009d4 T ipcom_vxworks_boot_devname
+         U ipcom_once
+         U ipnet_conf_interfaces
+         U strstr
+         U memcpy
+         U strcpy
+         U ipcom_stack_index
+         U ipcom_netif_from_softix
+         U ipcom_pkt_free
+         U ipcom_pkt_output_done_stack
+         U ipcom_pkt_tx_done
+         U muxUnbind
+00000d10 T ipcom_drv_eth_exit
+         U ipcom_drv_eth_filter_exit
+         U ipcom_drv_eth_filter_add_mcast_addr
+         U muxMCastAddrAdd
+         U ipcom_drv_eth_filter_remove_mcast_addr
+         U muxMCastAddrDel
+         U strtok_r
+         U ipcom_inet_pton
+         U bootNetmaskExtract
+00001390 T ipcom_vxworks_pkt_pool_hdr_ctor
+         U ipcom_pkt_input
+         U ipcom_socket
+         U ipcom_if_indextoname
+         U ipcom_socketioctl
+         U strerror
+         U ipcom_socketclose
+         U vxAtomic32Set
+         U taskSpawn
+         U ipcom_pkt_output_done
+         U memmove
+         U mux2Send
+000016e8 T ipcom_drv_eth_ip_attach
+0000172c T ipcom_drv_eth_create
+         U ipnet_register_if_attach_handler
+         U _func_end2VxBusConnect
+00001784 T ipcom_get_mux_dev_name
+
+ipcom_drv_mux.o:
+
+ipcom_drv_ppp.o:
+0000013c t ipcom_drv_ppp_exit_task
+00000174 t ipcom_drv_ppp_open
+000001f0 t ipcom_drv_ppp_init
+00000420 t ipcom_drv_ppp_ioctl
+000009ac t ipcom_drv_ppp_output
+00000c64 t ipcom_drv_ppp_create_cb
+00000000 T ipcom_socketpair_udp
+         U memset
+         U getaddrinfo
+         U socket
+         U bind
+         U getsockname
+         U connect
+         U freeaddrinfo
+         U close
+         U write
+         U ipcom_syslog
+         U open
+         U ioctl
+         U __errno
+         U ipcom_proc_attr_init
+         U ipcom_priority_map
+         U ipcom_sysvar_get_as_int
+         U sprintf
+00000a48 T ipcom_drv_ppp_outputd
+         U ipcom_proc_acreate_v1
+         U ipcom_ipc_open
+0000061c T ipcom_drv_ppp_inputd
+         U ipcom_ipc_malloc
+         U ipcom_ipc_send
+         U ipcom_ipc_close
+00000354 T ipcom_drv_ppp_exit
+         U taskSpawn
+         U ipcom_if_detach
+         U free
+         U ipcom_if_free
+         U ipcom_proc_init
+         U ipcom_ipc_install
+         U ipcom_proc_exit
+         U ipcom_ipc_receive
+         U strncpy
+         U ipcom_ipc_free
+         U bzero
+         U select
+         U read
+         U ipcom_pkt_malloc
+         U ipcom_conf_max_link_hdr_size
+         U ipcom_pkt_input_queue
+         U memcmp
+         U strcpy
+         U ipcom_pkt_free
+         U ipcom_pkt_output_done
+00000b38 T ipcom_drv_ppp_if_init
+         U ipcom_if_malloc
+         U malloc
+         U ipcom_sysvar_get_conf
+         U strdup
+         U ipcom_sysvar_get_conf_as_int
+         U ipcom_if_attach
+         U strstr
+         U strchr
+00000cc8 T ipcom_drv_ppp_create
+         U ipcom_sysvar_for_each
+
+ipcom_err_string.o:
+00000000 b errname.2
+00000000 T ipcom_err_string
+         U sprintf
+
+ipcom_errno.o:
+00000000 T ipcom_errno_set
+         U __errno
+0000001c T ipcom_errno_get
+
+ipcom_exit.o:
+00000000 T ipcom_abort
+         U abort
+00000004 T ipcom_exit
+         U ipcom_proc_exit
+
+ipcom_ffs.o:
+00000000 T ipcom_ffs
+
+ipcom_file.o:
+00000004 C ipcom_file_empty_file
+
+ipcom_flow_fingerprint.o:
+00000000 T ipcom_flow_fingerprint
+         U ipcom_hash_update
+
+ipcom_func.o:
+00000000 T ipcom_proc_malloc
+         U calloc
+00000050 T ipcom_proc_free
+         U ipcom_pipe_free
+         U free
+00000000 D ipcom_priority_map
+
+ipcom_generic_llpipe.o:
+00000000 t ipcom_lockless_pipe_dtor_helper
+0000001c t ipcom_lockless_pipe_dtor
+00000024 t ipcom_lockless_pipe_new_fifo
+00000098 t ipcom_lockless_pipe_poll_send
+00000110 t ipcom_lockless_pipe_send
+00000118 t ipcom_lockless_pipe_try_send
+00000120 t ipcom_lockless_pipe_poll_recv
+000001a4 t ipcom_lockless_pipe_recv
+000001c4 t ipcom_lockless_pipe_recv_with_tmo
+00000000 d ipcom_generic_llpipe_ops.63
+         U free
+         U calloc
+         U ipcom_atomic_set
+         U ipcom_atomic_get
+         U ipcom_proc_yield
+         U ipcom_wmb
+         U ipcom_rmb
+         U ipcom_microtime
+000002bc T ipcom_pipe_lockless_create
+
+ipcom_generic_pipe.o:
+00000000 t ipcom_generic_pipe_try_recv_locked
+00000080 t ipcom_generic_pipe_try_send_locked
+000000d8 t ipcom_generic_pipe_dtor_helper
+0000012c t ipcom_generic_pipe_dtor
+00000134 t ipcom_generic_pipe_new_fifo
+000001cc t ipcom_generic_pipe_send
+00000248 t ipcom_generic_pipe_try_send
+000002a4 t ipcom_generic_pipe_recv_with_tmo
+00000380 t ipcom_generic_pipe_recv
+00000000 d ipcom_generic_pipe_ops.75
+         U ipcom_spinlock_delete
+         U ipcom_block_delete
+         U ipcom_sem_delete
+         U free
+         U calloc
+         U ipcom_spinlock_create
+         U ipcom_getpid
+         U ipcom_block_create
+         U ipcom_sem_create
+         U ipcom_spinlock_lock
+         U ipcom_spinlock_unlock
+         U ipcom_sem_wait
+         U ipcom_block_post
+         U __div32
+         U ipcom_block_wait
+         U ipcom_sem_post
+000003b4 T ipcom_pipe_generic_create
+
+ipcom_generic_slab.o:
+00000000 t ipcom_memory_pool_free
+00000050 t ipcom_memory_pool_alloc
+000000f0 t ipcom_slab_get_size
+000001c0 t ipcom_slab_dtor_objs
+00000274 t ipcom_slab_garbage_collect
+000002c8 t ipcom_memory_pool_garbage_collect
+00000318 t ipcom_cmd_slab
+000004ac t ipcom_slab_init
+         U ipcom_sys_free
+         U free
+         U ipcom_atomic_add
+         U ipcom_atomic_sub_and_return
+         U ipcom_sys_malloc
+         U memset
+         U calloc
+         U __udiv32
+0000020c T ipcom_slab_gc_empties
+         U ipcom_spinlock_lock
+         U ipcom_list_init
+         U ipcom_spinlock_unlock
+         U ipcom_list_first
+         U ipcom_list_next
+         U ipcom_getopt_clear_r
+         U ipcom_getopt_r
+00000004 C ipcom_slab_memory_pool_list
+         U ipcom_atomic_get
+         U printf
+         U ipcom_shell_add_cmd
+000004e8 T ipcom_memory_pool_new
+00000000 D ipcom_slab_once
+         U ipcom_once
+         U strlen
+         U malloc
+         U strcpy
+         U ipcom_atomic_set
+         U ipcom_list_insert_last
+00000570 T ipcom_slab_new
+         U ipcom_spinlock_create
+00000634 T ipcom_slab_add
+00000770 T ipcom_slab_alloc_try
+         U ipcom_list_remove
+00000898 T ipcom_slab_alloc_from
+00000928 T ipcom_slab_free_nogc
+         U ipcom_list_insert_first
+00000a28 T ipcom_slab_free
+00000a4c T ipcom_slab_extract_empties
+00000aac T ipcom_slab_get_objects_per_slab
+
+ipcom_getenv.o:
+00000000 T ipcom_getenv
+         U getenv
+00000004 T ipcom_setenv
+         U snprintf
+         U putenv
+0000004c T ipcom_unsetenv
+0000008c T ipcom_clearenv
+00000094 T ipcom_getenv_as_int
+         U atoi
+000000bc T ipcom_setenv_as_int
+         U sprintf
+
+ipcom_gethostby.o:
+00000000 t ipcom_gethostip
+00000120 t ipcom_gethost_static
+00000000 b ipcom_he_result
+00000014 b ipcom_he_buffer
+         U ipcom_if_nameindex
+         U ipcom_socket
+         U strncpy
+         U ipcom_socketioctl
+         U strcmp
+         U ipcom_socketclose
+         U ipcom_if_freenameindex
+         U memcpy
+         U strlen
+         U ipcom_errno_set
+         U strcpy
+000001f0 T ipcom_gethostbynamelocal
+         U hostTblInit
+         U getlhostbyname
+         U hostentFree
+00000288 T ipcom_gethostbyname_r
+         U gethostname
+         U ipcom_dns_init_ok
+         U ipcom_dns
+00000388 T ipcom_gethostbyname
+00000004 C ipcom_h_errno
+00000470 T ipcom_gethostbyaddrlocal
+         U getlhostbyaddr
+000004ec T ipcom_gethostbyaddr_r
+000005a8 T ipcom_gethostbyaddr
+
+ipcom_getinaddrprefixbyaddr.o:
+00000000 T ipcom_getinaddrprefixbyaddr
+         U strdup
+         U ipcom_inet_pton
+         U atoi
+         U free
+         U ipcom_errno_set
+000000dc T ipcom_getinaddrprefixbyaddr2
+
+ipcom_getinfo.o:
+00000000 T ipcom_getnameinfo
+         U ipcom_getnameinfo2
+00000030 T ipcom_getaddrinfo
+         U ipcom_getaddrinfo2
+00000034 T ipcom_freeaddrinfo
+         U ipcom_freeaddrinfo2
+
+ipcom_getinfo2.o:
+00000000 t ipcom_getaddrinfo_alloc
+         U malloc
+         U memset
+         U free
+00000060 T ipcom_getnameinfo2
+         U ipcom_gethostbyaddrlocal
+         U ipcom_dns_init_ok
+         U ipcom_dns
+         U strlen
+         U strcpy
+         U ipcom_inet_ntop
+         U sprintf
+         U strcat
+         U ipcom_getservbyport
+         U snprintf
+0000044c T ipcom_freeaddrinfo2
+0000049c T ipcom_getaddrinfo2
+         U memcpy
+         U ipcom_getsockaddrbyaddr
+         U ipcom_inet_pton
+         U ipcom_gethostbynamelocal
+         U strchr
+         U strdup
+         U ipcom_getservbyname
+         U strtol
+         U strcmp
+
+ipcom_getline.o:
+00000000 t ipcom_getline_getone
+00000054 t ipcom_getline_putraw
+000000c8 t ipcom_getline_putone
+0000018c t ipcom_getline_putbuf
+000001e4 t ipcom_getline_left_arrow
+000002c8 t ipcom_getline_right_arrow
+00000384 t ipcom_getline_cursor_home
+000003d0 t ipcom_getline_cursor_end
+00000424 t ipcom_getline_backspace
+00000534 t ipcom_getline_ctrl_d
+000005a0 t ipcom_getline_paste_clipboard
+000006d0 t ipcom_getline_right_kill
+000007d0 t ipcom_getline_window_resize
+00000a60 t ipcom_getline_up_arrow
+00000b44 t ipcom_getline_down_arrow
+00000c10 t ipcom_getline_add_history
+00000ce0 t ipcom_getline_restore_history
+00000d6c t ipcom_getline_save_history
+         U getchar
+         U ipcom_socketread_usr
+         U printf
+         U ipcom_socketwrite_usr
+         U __rem32
+0000000f D lf
+0000000d D cr
+         U __div32
+00000000 D up_arrow
+00000006 D right_arrow
+00000009 D left_arrow
+         U memmove
+0000000c D space
+         U strlen
+         U memcpy
+         U free
+         U malloc
+00000003 D down_arrow
+         U ipcom_list_first
+         U ipcom_list_next
+         U ipcom_list_last
+         U strcpy
+         U ipcom_list_prev
+         U strcmp
+         U ipcom_list_remove
+         U ipcom_list_insert_first
+         U ipcom_fopen
+         U fgetc
+         U ipcom_fclose
+         U fprintf
+00000ddc T ipcom_getline_init
+         U memset
+         U ipcom_list_init
+00000e3c T ipcom_getline_exit
+00000ea4 T ipcom_getline
+         U ipcom_stdio_get_line_opts
+         U ipcom_stdio_set_opt_line
+         U ipcom_stdio_set_echo
+         U ipcom_stdio_set_line_opts
+
+ipcom_getopt.o:
+00000000 t ipcom_getopt_longopt
+         U strncmp
+         U strlen
+000000a4 T ipcom_getopt_clear_r
+000000d8 T ipcom_getopt_clear
+00000004 C ipcom_getopt_data
+000000e0 T ipcom_getopt_r
+         U ipcom_stderr
+         U fprintf
+         U strchr
+00000480 T ipcom_getopt
+
+ipcom_getput.o:
+
+ipcom_getservby.o:
+00000000 t ipcom_find_service_byname
+00000000 d services
+000000a8 t ipcom_find_service_byport
+00000000 b se.34
+00000000 d s_aliases.35
+00000010 b se.42
+0000000c d s_aliases.43
+         U strcmp
+00000110 T ipcom_getservbyname
+00000180 T ipcom_getservbyport
+
+ipcom_getsockaddrbyaddr.o:
+00000000 T ipcom_getsockaddrbyaddr
+         U memset
+         U ipcom_inet_pton
+         U strchr
+         U ipcom_if_nametoindex
+         U isdigit
+         U strtoul
+         U strtol
+000002e4 T ipcom_getsockaddrbyaddrname
+         U ipcom_getaddrinfo
+         U memcpy
+         U ipcom_freeaddrinfo
+         U ipcom_errno_get
+
+ipcom_getuid.o:
+00000000 T ipcom_getuid
+
+ipcom_gmtime.o:
+00000000 T ipcom_tzset
+
+ipcom_hash.o:
+000000c4 t ipcom_hash_resize
+00000174 t ipcom_hash_can_move_obj
+00000000 T ipcom_hash_add
+         U __urem32
+         U calloc
+         U ipcom_syslog
+         U free
+00000194 T ipcom_hash_new
+         U malloc
+00000204 T ipcom_hash_delete
+00000230 T ipcom_hash_remove
+00000000 T ipcom_hash_get
+00000350 T ipcom_hash_for_each
+000003e0 T ipcom_hash_update
+
+ipcom_heap_sort.o:
+00000000 t ipcom_heap_sort_downheap
+         U memcpy
+000000c4 T ipcom_heap_sort
+
+ipcom_hostname.o:
+
+ipcom_ifaddrs.o:
+00000000 t ipcom_ifaddrs_free
+00000054 t ipcom_create_ifaddrs_entry
+00000124 t ipcom_create_ifaddrs_inet
+000001c8 t ipcom_create_ifaddrs_inet6
+         U free
+         U calloc
+         U strdup
+         U malloc
+         U memcpy
+         U ipnet_cmd_init_addrs
+         U memset
+         U ipcom_socketioctl_usr
+000002bc T ipcom_getifaddrs
+         U ipcom_sysctl
+         U ipcom_errno_get
+         U ipcom_syslog
+         U ipcom_socket_usr
+         U ipcom_socketclose_usr
+000004b8 T ipcom_freeifaddrs
+
+ipcom_inet.o:
+00000000 b ipprot.8
+00000000 T ipcom_ipproto_name
+         U sprintf
+00000164 T ipcom_cmsg_nxthdr
+00000000 D ip_inaddr_any
+
+ipcom_inet_ntop.o:
+00000000 T ipcom_inet_ntop
+         U inet_ntop
+
+ipcom_inet_pton.o:
+00000000 T ipcom_inet_pton
+         U memset
+         U sscanf
+         U inet_pton
+000000d0 T ipcom_inet_aton
+         U inet_aton
+
+ipcom_inet6.o:
+00000000 T ipcom_inet6_rth_space
+00000020 T ipcom_inet6_rth_init
+         U memset
+0000007c T ipcom_inet6_rth_add
+         U memcpy
+000000d0 T ipcom_inet6_rth_segments
+000000ec T ipcom_inet6_rth_getaddr
+00000130 T ipcom_inet6_rth_reverse
+         U __div32
+00000220 T ipcom_inet6_opt_init
+00000270 T ipcom_inet6_opt_append
+00000338 T ipcom_inet6_opt_finish
+0000038c T ipcom_inet6_opt_set_val
+000003bc T ipcom_inet6_opt_next
+0000046c T ipcom_inet6_opt_find
+000004c4 T ipcom_inet6_opt_get_val
+00000000 D ip_in6addr_any
+00000010 D ip_in6addr_loopback
+
+ipcom_init.o:
+00000000 t ipcom_create_ipproduct
+         U memset
+         U ipcom_ipd_products
+         U ipcom_syslog
+         U ipcom_openlog
+         U ipcom_ipd_start
+000001a4 T ipcom_start
+         U ipcom_usr_create
+         U ipcom_configure
+         U ipcom_random_init
+
+ipcom_ipd.o:
+00000000 t ipcom_ipd_socket_clear
+00000034 t ipcom_ipd_socket
+000001b8 t ipcom_ipd_isstarted
+         U ipcom_getsockopt_usr
+         U ipcom_socket_usr
+         U ipcom_sleep
+         U ipcom_ipd_products
+         U memset
+         U ipcom_bind_usr
+         U ipcom_errno_get
+         U ipcom_socketclose_usr
+         U strerror
+         U ipcom_syslog
+         U ipcom_connect_usr
+         U ipcom_socketwrite_usr
+         U __rem32
+         U ipcom_socketselect_usr
+         U ipcom_socketread_usr
+0000030c T ipcom_ipd_init
+         U strcmp
+000004e8 T ipcom_ipd_exit
+00000564 T ipcom_ipd_input_process
+000005d0 T ipcom_ipd_input
+00000610 T ipcom_ipd_start
+000007a4 T ipcom_ipd_read
+000007f0 T ipcom_ipd_sendmsg
+00000a18 T ipcom_ipd_datamsg
+00000c5c T ipcom_ipd_send
+00000c84 T ipcom_ipd_kill
+00000c8c T ipcom_ipd_reconfigure
+
+ipcom_job_queue.o:
+00000000 t ipcom_job_action_auto_clean
+00000000 b ipcom_job_slab
+0000002c t ipcom_singleton_job_action
+0000005c t ipcom_job_queue_prio_to_vxjob_prio
+00000004 b ipcom_system_ticks_per_sec
+00000008 b ipcom_max_delay
+         U ipcom_slab_free
+         U vxAtomic32Set
+00000098 T ipcom_job_queue_init
+         U sysClkRateGet
+         U __div32
+         U ipcom_cache_line_size
+         U ipcom_slab_new
+00000110 T ipcom_job_queue_singleton_new
+         U ipcom_slab_alloc_try
+00000178 T ipcom_job_queue_singleton_delete
+         U wdDelete
+000001a4 T ipcom_job_queue_schedule_singleton
+         U netDaemonQ
+         U jobQueuePost
+000001ec T ipcom_job_queue_schedule_singleton_delayed
+         U wdCreate
+         U __mul64
+         U __div64
+         U wdStart
+000002c0 T ipcom_job_queue_schedule
+
+ipcom_job_queue_pipe.o:
+00000000 t ipcom_job_queue_pipe_try_recv_locked
+00000080 t ipcom_job_queue_pipe_try_send_locked
+000000d8 t ipcom_job_queue_pipe_dtor_helper
+0000013c t ipcom_job_queue_pipe_dtor
+00000144 t ipcom_job_queue_pipe_new
+00000214 t ipcom_job_queue_pipe_send
+00000288 t ipcom_job_queue_pipe_try_send
+000002d8 t ipcom_job_queue_pipe_try_recv
+00000338 t ipcom_job_queue_pipe_recv
+00000000 d ipcom_job_queue_pipe_ops.65
+         U ipcom_job_queue_singleton_delete
+         U ipcom_spinlock_delete
+         U ipcom_sem_delete
+         U free
+         U calloc
+         U ipcom_spinlock_create
+         U ipcom_sem_create
+         U ipcom_job_queue_singleton_new
+         U ipcom_getpid
+         U ipcom_spinlock_lock
+         U ipcom_spinlock_unlock
+         U ipcom_sem_wait
+         U ipcom_job_queue_schedule_singleton
+         U ipcom_sem_post
+00000340 T ipcom_pipe_job_queue_create
+00000384 T ipcom_job_queue_pipe_schedule
+
+ipcom_list.o:
+00000000 T ipcom_list_init
+00000018 T ipcom_list_first
+00000030 T ipcom_list_last
+00000048 T ipcom_list_next
+00000060 T ipcom_list_prev
+00000078 T ipcom_list_insert_first
+000000a4 T ipcom_list_insert_last
+000000cc T ipcom_list_insert_before
+000000fc T ipcom_list_insert_after
+0000012c T ipcom_list_remove
+0000015c T ipcom_list_unlink_head
+
+ipcom_malloc.o:
+00000000 T ipcom_free
+         U free
+00000020 T ipcom_calloc
+         U calloc
+00000024 T ipcom_realloc
+         U realloc
+00000028 T ipcom_malloc
+         U malloc
+00000040 T ipcom_cache_line_size
+         U cacheArchAlignSize
+
+ipcom_mask.o:
+00000000 T ipcom_mask_to_prefixlen
+0000005c T ipcom_sockaddr_to_prefixlen
+
+ipcom_mcmd_ifconfig.o:
+00000000 t ipcom_mcmd_ifconfig_create_mask
+00000070 t ipnet_ifconfig_if_change_state
+00000134 t ipnet_ifconfig_if_change_dhcp
+000001bc t ipnet_ifconfig_ipv4_add_delete
+000002e4 t ipnet_ifconfig_ipv6_add
+00000430 t ipcom_mcmd_ifconfig_parse_arg
+00000020 d ipnet_af_map
+00000000 d ipnet_cmd_map
+00000038 d ipnet_option_map
+00000018 d ipnet_switch_map
+         U __div32
+         U __rem32
+         U memset
+         U ipcom_if_indextoname
+         U ipcom_socketioctl_usr
+         U ipcom_errno_get
+         U strerror
+         U printf
+         U time
+         U ipcom_cmd_str_to_key
+         U ipcom_inet_pton
+         U strstr
+         U strlen
+         U atoi
+000008d4 T ipcom_mcmd_ifconfig
+         U strcmp
+         U ipcom_socket_usr
+         U ipcom_if_nametoindex
+         U ipcom_socketclose_usr
+
+ipcom_mcmd_route.o:
+00000000 t ipnet_cmd_route_create_mask
+00000070 t ipnet_cmd_route_set_mask_from_prefixlen
+000000f0 t ipnet_cmd_route_issue_request
+0000030c t ipnet_cmd_route_parse_arg
+00000b48 t ipcom_mcmd_route_add
+         U __div32
+         U __rem32
+         U atoi
+         U printf
+         U malloc
+         U ipcom_getpid
+         U ipcom_random
+         U memset
+         U memcpy
+         U ipcom_send_usr
+         U ipcom_recv_usr
+         U ipcom_errno_get
+         U strcmp
+         U ipcom_if_nametoindex
+         U ipcom_getsockaddrbyaddrname
+         U strstr
+         U strlen
+         U ipcom_cmd_sockaddr_to_str
+         U free
+00000c40 T ipcom_mcmd_route
+         U ipcom_socket_usr
+         U ipcom_setsockopt_usr
+         U strerror
+         U ipcom_socketclose_usr
+
+ipcom_mktime.o:
+00000004 C ipcom_mktime_empty_file
+
+ipcom_mshell.o:
+00000004 C ipcom_mshell_empty_file
+
+ipcom_mutex.o:
+00000000 T ipcom_mutex_create
+         U semMCreate
+         U kernelId
+         U objOwnerSet
+         U semDelete
+0000004c T ipcom_mutex_delete
+00000000 T ipcom_mutex_lock
+         U semTake
+00000008 T ipcom_mutex_unlock
+         U semGive
+
+ipcom_netlink.o:
+00000000 t ipcom_netlink_rtnl_translate_ifflags
+00000228 t ipcom_netlink_rtnl_translate_family
+00000270 t ipcom_netlink_rtnl_translate_route
+000002e8 t ipcom_netlink_rtnl_translate_link
+00000330 t ipcom_netlink_rtnl_translate_neigh
+00000370 T ipcom_netlink_rtnl_translate
+00000420 T ipcom_netlink_addattr_l
+         U memcpy
+00000498 T ipcom_netlink_rta_addattr_l
+00000524 T ipcom_netlink_addattr_l_begin
+0000056c T ipcom_netlink_addattr_l_end
+00000590 T ipcom_netlink_nlmsghdr_init
+         U memset
+
+ipcom_normpath.o:
+00000000 T ipcom_normpath
+         U strdup
+         U strlen
+         U calloc
+         U free
+         U ipcom_errno_set
+         U strtok_r
+         U strcpy
+         U strcmp
+         U strcat
+
+ipcom_observer.o:
+00000000 T ipcom_observer_notify
+         U ipcom_list_first
+         U ipcom_list_next
+
+ipcom_once.o:
+00000000 T ipcom_once
+00000004 C ipcom_once_mutex
+         U ipcom_mutex_lock
+         U ipcom_sem_create
+         U ipcom_mutex_unlock
+         U ipcom_sem_wait
+         U ipcom_sem_delete
+         U ipcom_sem_post
+
+ipcom_os.o:
+00000000 t millisec2tick
+0000003c t find_open_q
+000001ec t delete_open_q
+000002a0 t delete_open_q_2
+000002b8 t ipcom_ipc_free_inqueue_msgs
+00000000 b loop.197
+         U sysClkRateGet
+         U __div32
+         U ipcom_port
+         U ipcom_list_first
+         U strcmp
+         U ipcom_list_next
+00000098 T ipcom_block_delete
+         U semDelete
+000000cc T ipcom_block_wait
+         U semTake
+         U __div64
+         U __errno
+         U errnoSet
+         U ipcom_list_remove
+         U semGive
+         U ipcom_sem_wait
+         U ipcom_errno_get
+         U ipcom_syslog
+         U ipcom_sem_delete
+         U free
+000002f4 T ipcom_sleep
+         U taskDelay
+0000030c T ipcom_millisleep
+         U __mul64
+         U __udiv64
+00000350 T ipcom_getpid
+         U taskIdSelf
+00000354 T ipcom_is_pid_valid
+         U taskIdVerify
+00000000 T ipcom_interrupt_disable
+         U intLock
+00000004 T ipcom_interrupt_enable
+         U intUnlock
+00000008 T ipcom_preempt_disable
+0000001c T ipcom_preempt_enable
+00000378 T ipcom_block_create
+         U semBCreate
+         U kernelId
+         U objOwnerSet
+000003c8 T ipcom_block_reader_create
+         U taskTcb
+00000448 T ipcom_block_post
+0000044c T ipcom_proc_getprio
+         U taskPriorityGet
+         U ipcom_priority_map
+00000494 T ipcom_cpu_is_online
+         U vxCpuEnabledGet
+000004bc T ipcom_proc_cpu_affinity_set
+         U taskCpuAffinitySet
+0000054c T ipcom_proc_acreate
+         U memcpy
+         U memset
+         U taskStackSizeGet
+         U taskCreate
+         U taskActivate
+00000678 T ipcom_proc_acreate_v1
+         U netTaskPriority
+000007d8 T ipcom_proc_attr_init
+000007f4 T ipcom_proc_create
+00000840 T ipcom_vxworks_proc_free
+         U ipcom_mutex_lock
+         U ipcom_proc_free
+         U ipcom_mutex_unlock
+00000898 T ipcom_proc_exit
+         U taskDelete
+000008f0 T ipcom_proc_find
+0000090c T ipcom_proc_self
+         U ipcom_proc_malloc
+         U ipcom_sem_create
+         U ipcom_list_init
+00000988 T ipcom_proc_init
+0000098c T ipcom_proc_yield
+000009bc T ipcom_vxworks_task_del_hook
+         U ipcom_rtp_tcb_index_get_fd
+         U taskReservedFieldGet
+         U ipnet_conf_max_sockets_offset
+         U ipnet_shared_data
+         U ipnet_release_sock
+00000a30 T ipcom_proc_setprio
+         U taskPrioritySet
+00000a70 T ipcom_get_cpuid
+         U vxCpuIndexGet
+00000a74 T ipcom_get_true_cpuid
+         U vxCpuIdGet
+00000a78 T ipcom_num_configured_cpus
+         U vxCpuConfiguredGet
+00000a7c T ipcom_num_online_cpus
+00000ac4 T ipcom_cpu_reserved_alloc
+00000acc T ipcom_cpu_reserved_free
+00000ad4 T ipcom_proc_cpu_affinity_clr
+00000b04 T ipcom_proc_cpu_affinity_get
+         U taskCpuAffinityGet
+00000b90 T ipcom_proc_cpu_affinity_set_all
+         U malloc
+         U taskIdListGet
+         U taskIdListSort
+         U taskInfoGet
+         U strlen
+         U strncmp
+00000c54 T ipcom_mb
+00000c58 T ipcom_rmb
+00000c5c T ipcom_wmb
+00000c60 T ipcom_ipc_install
+         U taskName
+00000cd8 T ipcom_ipc_uninstall
+00000d58 T ipcom_ipc_open
+         U taskNameToId
+         U strcpy
+         U ipcom_list_insert_last
+         U ipcom_sem_post
+00000eac T ipcom_ipc_close
+00000ec0 T ipcom_ipc_isopen
+00000ed8 T ipcom_ipc_malloc
+00000f10 T ipcom_ipc_free
+00000f44 T ipcom_ipc_size
+00000f58 T ipcom_ipc_send
+00001008 T ipcom_ipc_receive
+000010d8 T ipcom_mipc_addr2offset
+000010dc T ipcom_mipc_offset2addr
+000010e0 T ipcom_stack_suspend
+         U netDaemonsSuspend
+000010fc T ipcom_stack_resume
+         U netDaemonsResume
+00001100 T ipcom_stack_exclusive
+         U netDaemonsExclusive
+
+ipcom_perror.o:
+00000000 T ipcom_perror
+         U perror
+
+ipcom_pfile.o:
+00000000 T ipcom_fileclose
+         U close
+00000004 T ipcom_fileread
+         U read
+00000008 T ipcom_fileopen
+         U open
+0000000c T ipcom_fopen
+         U fopen
+00000010 T ipcom_fclose
+         U fclose
+00000014 T ipcom_fwrite
+         U fwrite
+00000018 T ipcom_fread
+         U fread
+0000001c T ipcom_fileno
+00000048 T ipcom_unlink
+         U unlink
+0000004c T ipcom_ferror
+00000080 T ipcom_feof
+000000b4 T ipcom_fseek
+         U fseek
+000000b8 T ipcom_ftell
+         U ftell
+000000bc T ipcom_lseek
+         U lseek
+000000c0 T ipcom_rename
+         U rename
+000000c4 T ipcom_fdopen
+         U fdopen
+000000c8 T ipcom_getcwd
+         U getcwd
+000000cc T ipcom_mkdir
+0000010c T ipcom_fflush
+         U fflush
+00000110 T ipcom_filewrite
+         U write
+00000114 T ipcom_rewind
+00000120 T ipcom_shell_fread
+00000124 T ipcom_shell_fwrite
+
+ipcom_pipe.o:
+00000000 t ipcom_pipe_register_type_int
+00000000 b ipcom_pipe_mutex
+00000004 b ipcom_pipe_types
+000000a4 t ipcom_pipe_init
+00000000 d ipcom_pipe_once
+         U ipcom_mutex_lock
+         U ipcom_mutex_unlock
+         U ipcom_mutex_create
+         U memset
+         U ipcom_pipe_generic_create
+         U ipcom_pipe_lockless_create
+         U ipcom_pipe_job_queue_create
+         U ipnet_pipe_create
+00000124 T ipcom_pipe_attr_init
+00000130 T ipcom_pipe_new
+         U ipcom_once
+         U malloc
+         U ipcom_getpid
+         U memcpy
+         U free
+000001f8 T ipcom_pipe_free
+00000228 T ipcom_pipe_register_type
+0000000c D ipcom_pipe_tv_zero
+
+ipcom_pkt.o:
+00000000 T ipcom_pkt_buffer_malloc
+         U malloc
+00000004 T ipcom_pkt_buffer_free
+         U free
+
+ipcom_pkt_util.o:
+00000000 t ipcom_pkt_copy
+00000000 d zero.44
+00000478 t ipcom_pkt_trim_tail_helper
+         U memcpy
+00000068 T ipcom_pkt_alloc_info
+000000c8 T ipcom_pkt_get_info_and_size
+00000128 T ipcom_pkt_set_info
+         U memmove
+00000174 T ipcom_pkt_create_info
+000001c4 T ipcom_pkt_get_info
+000001cc T ipcom_pkt_get_info_safe
+000001ec T ipcom_pkt_copy_info
+00000250 T ipcom_pkt_sg_get_data
+00000280 T ipcom_pkt_make_linear
+         U ipcom_pkt_malloc
+         U ipcom_pkt_free
+00000350 T ipcom_pkt_trim_head
+000004f8 T ipcom_pkt_trim_tail
+
+ipcom_pqueue.o:
+00000000 t ipcom_pqueue_upheap
+0000009c t ipcom_pqueue_downheap
+0000016c T ipcom_pqueue_new
+         U calloc
+         U malloc
+         U free
+000001cc T ipcom_pqueue_delete
+000001e8 T ipcom_pqueue_insert
+         U realloc
+00000268 T ipcom_pqueue_remove
+00000304 T ipcom_pqueue_remove_next
+00000000 T ipcom_pqueue_get
+0000030c T ipcom_pqueue_get_next
+00000328 T ipcom_pqueue_for_each
+0000037c T ipcom_pqueue_size
+00000384 T ipcom_pqueue_nop_store_index
+
+ipcom_printf.o:
+
+ipcom_prof.o:
+00000000 b ipcom_prof_data
+00000030 t ipcom_prof_init
+00000000 d once.11
+00000000 T ipcom_prof_clear
+         U memset
+00000c6c T ipcom_cmd_prof
+         U ipcom_shell_add_cmd
+0000007c T ipcom_prof_stopped
+00000090 T ipcom_prof_enter
+         U ipcom_once
+         U ipcom_microtime
+00000184 T ipcom_prof_push
+000001dc T ipcom_prof_pop
+000001f0 T ipcom_prof_dump
+         U printf
+000002e8 T ipcom_prof_summary
+         U ipcom_list_init
+         U ipcom_list_first
+         U ipcom_list_next
+         U malloc
+         U ipcom_list_insert_first
+         U ipcom_list_remove
+         U ipcom_list_insert_before
+         U __udiv32
+         U free
+0000064c T ipcom_prof_sequence
+         U ipcom_list_insert_last
+00000c64 T ipcom_prof_void
+         U ipcom_getopt_clear_r
+         U ipcom_getopt_r
+         U atoi
+         U strcmp
+
+ipcom_pshell.o:
+00000000 t ipcom_pshell_spawn_proxy
+000003ec t ipcom_pshell_stdio_proxy
+000000ec t ipcom_pshell_proxy_data
+00000264 t ipcom_pshell_create_pty
+000007b0 t ipcom_vxshell_login_task
+000007a8 t ipcom_vxworks_shell_logout_cb
+         U ipcom_syslog
+         U ipcom_shell_ctx_copy
+         U taskIdSelf
+         U snprintf
+         U taskPriorityGet
+         U taskSpawn
+         U ipcom_errno_get
+         U strerror
+         U read
+         U write
+         U tyBackspaceChar
+         U ioctl
+         U bzero
+         U select
+         U ptyDevCreate
+         U open
+         U ptyDevRemove
+         U close
+         U malloc
+         U ipcom_getpid
+         U ipcom_sem_create
+         U __errno
+         U sysClkRateGet
+         U __div32
+         U taskDelay
+         U tyEOFGet
+         U shutdown
+         U ipcom_sem_wait
+         U ipcom_sem_delete
+         U free
+         U ipcom_sem_post
+         U ipcom_shell_ctx_get_user
+         U shellParserControl
+         U ipcom_shell_ctx_free
+0000085c T ipcom_start_shell_native
+         U memset
+         U ipcom_getaddrinfo
+         U socket
+         U bind
+         U listen
+         U getsockname
+         U connect
+         U accept
+         U setsockopt
+         U tyAbortFuncGet
+         U ipcom_freeaddrinfo
+00000b44 T ipcom_stdio_get_line_opts
+00000b84 T ipcom_stdio_set_line_opts
+00000b9c T ipcom_stdio_set_opt_line
+00000be8 T ipcom_stdio_set_echo
+
+ipcom_psock.o:
+00000000 t ipcom_psock_ipoptname_to_optname
+000000c8 T ipcom_socket_usr
+         U socket
+000000cc T ipcom_socketclose_usr
+         U close
+000000f8 T ipcom_shutdown_usr
+         U shutdown
+00000110 T ipcom_bind_usr
+         U bind
+00000128 T ipcom_connect_usr
+         U connect
+0000012c T ipcom_listen_usr
+         U listen
+00000130 T ipcom_accept_usr
+         U accept
+00000148 T ipcom_setsockopt_usr
+         U setsockopt
+000001a0 T ipcom_getsockopt_usr
+         U getsockopt
+000001f8 T ipcom_getsockname_usr
+         U getsockname
+000001fc T ipcom_getpeername_usr
+         U getpeername
+00000200 T ipcom_send_usr
+         U send
+0000022c T ipcom_socketwrite_usr
+00000234 T ipcom_socketwritev_usr
+         U writev
+00000238 T ipcom_sendto_usr
+         U sendto
+00000258 T ipcom_socketread_usr
+         U recv
+00000260 T ipcom_recv_usr
+00000264 T ipcom_recvfrom_usr
+         U recvfrom
+00000284 T ipcom_recvmsg_usr
+         U recvmsg
+00000288 T ipcom_sendmsg_usr
+         U sendmsg
+0000028c T ipcom_socketselect_usr
+         U select
+000002ac T ipcom_socketioctl_usr
+         U ipcom_getpid
+         U ioctl
+
+ipcom_ramdisk.o:
+00000000 T vxfs_ramdisk_init
+         U strlcpy
+         U strlen
+         U xbdRamDiskDevCreate
+         U dosFsVolFormat
+
+ipcom_random.o:
+00000000 T ipcom_random_init
+         U ipcom_gettimeofday
+         U ipcom_getpid
+         U ipcom_hash_update
+         U randAdd
+00000068 T ipcom_random
+         U randPseudoBytes
+00000088 T ipcom_srandom
+000000b8 T ipcom_rand
+         U __urem32
+000000f4 T ipcom_srand
+00000118 T ipcom_random_seed_state
+         U randStatus
+
+ipcom_route.o:
+00000000 t ipcom_patricia_search
+00000088 t ipcom_route_walk_subtree
+00000164 t ipcom_route_init_subtree_mask2
+00000500 t ipcom_route_init_subtree_mask_cb
+000002c4 t ipcom_patricia_insert
+00000558 t ipcom_route_free_subtree_cb
+0000018c T ipcom_route_key_cmp
+         U malloc
+         U memset
+         U free
+0000059c T ipcom_route_next_entry
+00000600 T ipcom_route_first_entry
+00000648 T ipcom_route_lookup
+         U ipcom_set_new
+         U ipcom_set_contains
+         U ipcom_set_add
+         U ipcom_set_delete
+000007e0 T ipcom_route_new_table
+         U __div32
+000008d4 T ipcom_route_free_table
+00000908 T ipcom_route_add
+0000095c T ipcom_route_remove
+00000a88 T ipcom_route_walk_tree
+00000b1c T ipcom_route_walk_tree_backwards
+00000cf0 T ipcom_route_init_subtree_mask
+
+ipcom_rwsem.o:
+00000000 T ipcom_rwsem_create
+         U semRWCreate
+00000038 T ipcom_rwsem_delete
+         U semDelete
+00000080 T ipcom_rwsem_lock_mode
+         U vxAtomic32Get
+00000000 T ipcom_rwsem_wait_rd
+         U vxAtomic32Cas
+         U semRMinTakeHard
+00000058 T ipcom_rwsem_wait_wr
+         U semWMinTakeHard
+000000b0 T ipcom_rwsem_post_rd
+         U semRMinGiveHard
+00000108 T ipcom_rwsem_post_wr
+         U semWMinGiveHard
+
+ipcom_sem.o:
+00000000 T ipcom_sem_create
+         U semCCreate
+         U kernelId
+         U objOwnerSet
+         U semDelete
+0000004c T ipcom_sem_delete
+00000000 T ipcom_sem_wait
+         U semTake
+00000008 T ipcom_sem_post
+         U semGive
+0000000c T ipcom_sem_interrupt_post
+00000010 T ipcom_sem_flush
+         U semFlush
+00000014 T ipcom_sem_interrupt_flush
+0000007c T ipcom_sem_getvalue
+         U semInfoGet
+
+ipcom_set.o:
+00000000 t ipcom_set_index
+         U memcmp
+00000054 T ipcom_set_new
+         U malloc
+00000090 T ipcom_set_delete
+         U free
+000000b4 T ipcom_set_clone
+         U memcpy
+00000154 T ipcom_set_contains
+00000178 T ipcom_set_add
+         U realloc
+00000208 T ipcom_set_remove
+000002b0 T ipcom_set_remove_all
+000002d8 T ipcom_set_equal
+00000354 T ipcom_set_subtract
+0000039c T ipcom_set_union
+00000404 T ipcom_set_intersection
+00000470 T ipcom_set_for_each
+
+ipcom_setvbuf.o:
+00000000 T ipcom_setvbuf
+         U setvbuf
+
+ipcom_shell.o:
+00000004 C ipcom_shell_empty_file
+
+ipcom_shell_start.o:
+00000000 T ipcom_start_shell
+00000000 D ipcom_start_shell_ptr
+00000038 T ipcom_set_start_shell_ptr
+00000044 T ipcom_get_start_shell_ptr
+
+ipcom_shellalias.o:
+00000004 C ipcom_shellalias_empty_file
+
+ipcom_shellcmd.o:
+00000000 t ipcom_shellcmd_init
+00000000 d once.17
+00000004 C ipcom_shell_cmd_head
+         U ipcom_list_init
+00000020 T ipcom_shell_find_cmd
+         U ipcom_list_first
+         U strcmp
+         U ipcom_list_next
+00000074 T ipcom_shell_add_cmd
+         U ipcom_once
+         U malloc
+         U memset
+         U strncpy
+         U ipcom_getpid
+         U ipcom_proc_getprio
+         U ipcom_list_insert_last
+         U ipcom_vxshell_add_cmd
+0000017c T ipcom_shell_remove_cmd
+         U ipcom_list_remove
+         U free
+
+ipcom_shellcmd_vxworks.o:
+00000000 T ipcom_vxshell_add_cmd
+         U ipcom_vxshell_add_cmd_hook
+         U ipcom_syslog
+         U malloc
+
+ipcom_shellctx.o:
+00000000 T ipcom_shell_ctx_get
+         U malloc
+         U memcpy
+00000144 T ipcom_shell_ctx_add
+         U free
+000002a4 T ipcom_shell_ctx_new
+         U memset
+00000304 T ipcom_shell_ctx_free
+00000320 T ipcom_shell_ctx_get_user
+00000358 T ipcom_shell_ctx_add_user
+         U strlen
+0000038c T ipcom_shell_ctx_get_clt_addr
+000003d8 T ipcom_shell_ctx_add_local_addr
+000003e8 T ipcom_shell_ctx_get_peer_addr
+00000434 T ipcom_shell_ctx_add_peer_addr
+00000444 T ipcom_shell_ctx_get_int
+00000488 T ipcom_shell_ctx_add_int
+000004b4 T ipcom_shell_ctx_copy
+
+ipcom_shellfile.o:
+00000004 C ipcom_shellfile_empty_file
+
+ipcom_shellio.o:
+00000004 C ipcom_shellio_empty_file
+
+ipcom_signal.o:
+00000000 T ipcom_signal
+
+ipcom_snprintf.o:
+
+ipcom_sock2.o:
+00000000 b cp.8
+00000000 T ipcom_inet_ntoa
+         U ipcom_inet_ntop
+0000003c T ipcom_inet_addr
+         U ipcom_inet_aton
+00000060 T ipcom_getprotobyname
+00000068 T ipcom_getprotobynumber
+
+ipcom_spinlock.o:
+00000000 T ipcom_spinlock_create
+         U malloc
+         U vxAtomicSet
+         U semMCreate
+         U free
+00000070 T ipcom_spinlock_delete
+         U semDelete
+00000000 T ipcom_spinlock_lock
+         U semTake
+00000010 T ipcom_spinlock_unlock
+         U semGive
+000000b0 T ipcom_spinlock_restricted_create
+000000c0 T ipcom_spinlock_restricted_delete
+0000001c T ipcom_spinlock_restricted_lock
+00000030 T ipcom_spinlock_restricted_unlock
+
+ipcom_stdio.o:
+00000000 T ipcom_stdout
+         U __stdout
+0000001c T ipcom_stderr
+         U __stderr
+00000038 T ipcom_stdin
+         U __stdin
+
+ipcom_stdio_syslog.o:
+00000000 t ipcom_stdio_format
+         U malloc
+         U vsnprintf
+00000068 T ipcom_printf_syslog
+         U strlen
+         U free
+000000e8 T ipcom_fprintf_syslog
+         U ipcom_stdout
+         U ipcom_stderr
+         U fputs
+000001a4 T ipcom_fputs_syslog
+00000218 T ipcom_perror_syslog
+00000244 T ipcom_fputc_syslog
+         U fputc
+00000298 T ipcom_putc_syslog
+0000029c T ipcom_putchar_syslog
+000002b8 T ipcom_fwrite_syslog
+         U memcpy
+         U ipcom_fwrite
+00000348 T ipcom_fflush_syslog
+         U ipcom_fflush
+00000380 T ipcom_feof_syslog
+         U ipcom_feof
+000003b8 T ipcom_ferror_syslog
+         U ipcom_ferror
+000003f0 T ipcom_exit_syslog
+         U ipcom_syslog
+         U ipcom_sleep
+
+ipcom_strcasecmp.o:
+00000000 T ipcom_strcasecmp
+         U toupper
+00000074 T ipcom_strncasecmp
+
+ipcom_strdup.o:
+00000004 C ipcom_strdup_empty_file
+
+ipcom_strerror.o:
+00000000 T ipcom_strerror_r
+         U memset
+         U strerror_r
+         U strlen
+         U strcpy
+
+ipcom_strftime.o:
+00000004 C ipcom_strftime_empty_file
+
+ipcom_string_mem.o:
+
+ipcom_strl.o:
+00000004 C ipcom_strlcat_empty_file
+00000004 C ipcom_strlcpy_empty_file
+
+ipcom_strlib.o:
+00000000 T ipcom_parse_argstr
+         U strlen
+         U malloc
+         U memset
+         U realloc
+         U ipcom_syslog
+         U free
+00000194 T ipcom_str_in_list
+         U strstr
+         U strcspn
+         U strncmp
+
+ipcom_strsep.o:
+00000004 C ipcom_strsep_empty_file
+
+ipcom_strto.o:
+
+ipcom_strtok_r.o:
+00000004 C ipcom_strtok_r_empty_file
+
+ipcom_syslog_data.o:
+00000000 D ipcom_syslog_facility_names
+00000100 D ipcom_syslog_priority_names
+
+ipcom_syslogd.o:
+00000000 d ipcom_syslogd_once
+00000000 b ipcom_logd
+000000e4 t ipcom_checklog
+000001ec t ipcom_adjustlog
+00000220 t ipcom_syslogd_log
+00000340 t ipcom_syslogd
+00000124 b buf.114
+00000000 T ipcom_openlog
+000007c8 T ipcom_syslogd_init
+         U ipcom_once
+         U ipcom_interrupt_disable
+         U ipcom_interrupt_enable
+         U malloc
+         U memset
+         U ipcom_sysvar_get_as_int
+         U ipcom_syslog_facility_names
+         U strncpy
+         U strlen
+         U __div32
+         U snprintf
+         U ipcom_unlink
+         U ipcom_rename
+         U ipcom_fopen
+         U ipcom_millisleep
+         U free
+         U fprintf
+         U ipcom_fflush
+         U ipcom_fclose
+         U ipcom_proc_init
+         U ipcom_ipc_install
+         U sprintf
+         U strcpy
+         U ipcom_syslog_priority_names
+         U memcpy
+         U time
+         U ipcom_ctime_r_vxworks
+         U ipcom_ipc_free
+0000055c T ipcom_closelog
+00000560 T ipcom_setlogmask_on
+000005a4 T ipcom_getlogmask_on
+000005e4 T ipcom_setlogfile
+         U strdup
+00000670 T ipcom_setlogudp
+00000678 T ipcom_vsyslog
+         U vsnprintf
+         U ipcom_ipc_malloc
+         U ipcom_getpid
+         U ipcom_ipc_isopen
+         U _func_syslogMsgSendFromIpcom
+000007a0 T ipcom_syslog
+         U _func_ipcom_syslogd
+         U ipcom_ipc_open
+
+ipcom_sysvar.o:
+00000000 t ipcom_sysvar_hash_key
+00000020 t ipcom_sysvar_hash_obj
+00000028 t ipcom_sysvar_hash_cmp
+00000050 t ipcom_sysvar_pqueue_cmp
+00000060 t ipcom_sysvar_pqueue_insert_cb
+0000007c t ipcom_sysvar_tree_get
+00000000 b ipcom_sysvar
+000000d8 t ipcom_sysvar_tree_done
+000000ec t ipcom_sysvar_init
+00000018 b ipcom_sysvar_observers
+00000118 t ipcom_sysvar_release
+00000000 d ipcom_sysvar_once
+00000318 t ipcom_sysvar_getvr_internal
+000007b8 t ipcom_sysvar_unset_cb
+         U strlen
+         U ipcom_hash_update
+         U strcmp
+         U ipcom_pqueue_insert
+         U ipcom_hash_new
+         U memset
+         U ipcom_list_init
+         U ipcom_mutex_create
+         U ipcom_hash_remove
+         U free
+0000014c T ipcom_sysvar_set_tree
+         U ipcom_hash_get
+         U malloc
+         U memcpy
+         U ipcom_hash_add
+         U ipcom_observer_notify
+0000028c T ipcom_sysvar_setvr
+         U ipcom_once
+         U ipcom_mutex_lock
+         U ipcom_mutex_unlock
+         U strdup
+000003e0 T ipcom_sysvar_add_observer
+         U ipcom_list_insert_last
+00000424 T ipcom_sysvar_remove_observer
+         U ipcom_list_remove
+00000454 T ipcom_sysvar_getvr
+00000474 T ipcom_sysvar_get
+0000047c T ipcom_sysvar_get0
+00000484 T ipcom_sysvar_get_descriptive_int0
+         U ipcom_cmd_str_to_key2
+         U atoi
+000004fc T ipcom_sysvar_get_as_int0
+0000051c T ipcom_sysvar_get_descriptive_int_vr
+00000598 T ipcom_sysvar_set
+000005a0 T ipcom_sysvar_set0
+000005a8 T ipcom_sysvar_for_each
+         U ipcom_pqueue_nop_store_index
+         U ipcom_pqueue_new
+         U ipcom_pqueue_delete
+         U ipcom_hash_for_each
+         U strncmp
+         U ipcom_pqueue_remove_next
+000006dc T ipcom_sysvar_unset
+
+ipcom_sysvar_conf.o:
+00000000 T ipcom_sysvar_get_conf
+         U snprintf
+         U ipcom_sysvar_get
+0000011c T ipcom_sysvar_set_conf
+         U ipcom_sysvar_set
+000001ac T ipcom_sysvar_get_conf_as_int
+         U atoi
+
+ipcom_sysvar2.o:
+00000000 T ipcom_sysvar_setv
+         U ipcom_sysvar_set
+00000074 T ipcom_sysvar_get_as_int
+         U ipcom_sysvar_get
+         U atoi
+000000b4 T ipcom_sysvar_get_as_int_vr
+         U ipcom_sysvar_getvr
+000000f8 T ipcom_sysvar_ext_setv
+         U calloc
+         U strchr
+         U strlen
+         U free
+         U memset
+         U strcpy
+         U strtok_r
+         U strcat
+
+ipcom_telnet.o:
+00000000 t ipcom_telnet_createmutex
+00000010 d ipcom_telnet_mutex
+00000030 t ipcom_telnetd_spawn
+0000000c d ipcom_telnet_session_count
+00000000 d ipcom_telnet_max_session_msg
+00000154 t ipcom_telnet_write
+00000278 t ipcom_telnet_negotiate
+000002dc t ipcom_telnet_set_option
+000003ec t ipcom_telnet_respond_option
+000004b4 t ipcom_telnet_input_option
+000005b0 t ipcom_telnet_read
+0000078c t ipcom_telnet_getline
+0000087c t ipcom_telnet_login
+00000000 d ipcom_telnet_mutex_once
+00000f80 t ipcom_telnet_transfer_from_shell_to_client
+         U ipcom_mutex_create
+         U ipcom_sysvar_get_as_int
+         U strlen
+         U ipcom_socketwrite_usr
+         U ipcom_syslog
+         U ipcom_socketclose_usr
+         U ipcom_setsockopt_usr
+         U ipcom_proc_attr_init
+00001018 T ipcom_telnetspawn
+         U ipcom_proc_acreate
+         U ipcom_mutex_lock
+         U ipcom_mutex_unlock
+         U ipcom_ipc_receive
+         U ipcom_ipc_send
+         U __udiv32
+         U malloc
+         U free
+         U ipcom_socketread_usr
+         U memmove
+         U memcpy
+         U ipcom_vxworks_loginStringGet
+         U ipcom_auth_ctx_login
+         U ipcom_sleep
+00000a24 T ipcom_telnetd
+         U ipcom_proc_init
+         U ipcom_once
+         U iptelnets_configure
+         U ipcom_ipc_install
+         U ipcom_socket_usr
+         U ipcom_errno_get
+         U strerror
+         U memset
+         U ipcom_bind_usr
+         U ipcom_listen_usr
+         U ipcom_ipd_init
+         U __rem32
+         U ipcom_socketselect_usr
+         U ipcom_ipd_input
+         U ipcom_accept_usr
+         U ipcom_ipc_uninstall
+         U ipcom_ipd_exit
+         U ipcom_proc_exit
+         U ipcom_ipc_open
+         U ipcom_ipc_malloc
+         U ipcom_ipc_free
+         U ipcom_ipc_close
+         U ipcom_getpid
+         U ipcom_socketioctl_usr
+         U calloc
+         U systemSecurityIsEnabled
+         U ipcom_shell_ctx_new
+         U ipcom_shell_ctx_add_user
+         U ipcom_getsockname_usr
+         U ipcom_shell_ctx_free
+         U ipcom_shell_ctx_add_local_addr
+         U ipcom_shell_ctx_add_int
+         U ipcom_start_shell
+         U ipcom_getsockopt_usr
+         U __div32
+         U ipcom_auth_logout
+         U memset_s
+0000163c T iptelnets_start
+         U ipcom_priority_map
+         U ipcom_proc_acreate_v1
+000016a4 T iptelnets_version
+000016ac T iptelnets_create
+
+ipcom_termios.o:
+00000000 T ipcom_tcgetattr
+         U memset
+00000028 T ipcom_tcsetattr
+
+ipcom_time.o:
+00000000 T ipcom_microtime
+         U clock_gettime
+         U __div32
+00000038 T ipcom_gettimeofday
+00000094 T ipcom_settimeofday
+         U clock_settime
+000000e4 T ipcom_adjtime
+         U clock_adjtime
+00000180 T ipcom_asctime_r_vxworks
+         U asctime_r
+000001a8 T ipcom_ctime_r_vxworks
+         U ctime_r
+
+ipcom_times.o:
+00000000 d start.2
+00000000 T ipcom_times
+         U ipcom_microtime
+         U __div32
+
+ipcom_tmo.o:
+00000000 t ipcom_tickd
+00000000 b ipcom_tmo
+000000ac t ipcom_tmo_init
+00000000 d ipcom_tmo_once
+         U ipcom_proc_init
+         U ipcom_mutex_lock
+         U ipcom_tmo2_get
+         U ipcom_pqueue_remove_next
+         U ipcom_mutex_unlock
+         U ipcom_tmo2_request_timeval
+         U ipcom_pqueue_get_next
+         U ipcom_block_wait
+         U ipcom_block_create
+         U ipcom_mutex_create
+         U ipcom_tmo2_new
+         U ipcom_proc_attr_init
+         U ipcom_proc_acreate
+000000fc T ipcom_tmo_request
+         U ipcom_once
+         U ipcom_tmo2_request
+         U ipcom_block_post
+00000174 T ipcom_tmo_cancel
+         U ipcom_tmo2_cancel
+000001d8 T ipcom_tmo_reset
+         U ipcom_tmo2_reset
+00000224 T ipcom_tmo_get
+
+ipcom_tmo2.o:
+00000000 t ipcom_tmo2_pqueue_cmp_func
+00000094 t ipcom_tmo2_pqueue_store_index
+0000009c T ipcom_tmo2_new
+         U ipcom_pqueue_new
+000000a8 T ipcom_tmo2_delete
+         U ipcom_pqueue_delete
+000000ac T ipcom_tmo2_request_timeval
+         U ipcom_microtime
+         U ipcom_pqueue_insert
+00000148 T ipcom_tmo2_request
+         U __udiv32
+         U __urem32
+000001b4 T ipcom_tmo2_cancel
+         U ipcom_pqueue_remove
+000001ec T ipcom_tmo2_reset
+00000244 T ipcom_tmo2_get
+         U __div32
+000002f8 T ipcom_tmo2_select
+         U memset
+         U ipcom_pqueue_remove_next
+         U ipcom_pqueue_get_next
+         U ipcom_socketselect_usr
+         U ipcom_errno_get
+
+ipcom_uname.o:
+00000000 T ipcom_uname
+         U memset
+
+ipcom_usr_init.o:
+00000004 d ipcom_usr_created
+00000000 T ipcom_usr_create
+         U ipcom_once_mutex
+         U ipcom_mutex_create
+00000000 D ipcom_version
+
+ipcom_vr.o:
+00000000 T ipcom_proc_vr_get
+         U ipcom_getenv_as_int
+0000000c T ipcom_proc_vr_set
+         U ipcom_setenv_as_int
+
+ipcom_vxworks.o:
+00000000 t ipcom_vxworks_rtp_del_hook
+00000004 d initialized.20
+00000004 b ipcom_vxworks_need_funcs.21
+00000000 b ipcom_rtp_tcb_index
+         U taskIdSelf
+         U taskTcb
+         U ipcom_vxworks_task_del_hook
+0000001c T ipcom_initd
+         U ipcom_proc_init
+         U ipcom_init_config_vars
+         U vxfs_ramdisk_init_hook
+         U ipcom_start
+00000000 D ipcom_port
+         U semGive
+         U zbufLibInit
+         U zbufSockLibInit
+         U ipcom_proc_exit
+00000074 T ipcom_create
+         U ipcom_getaddrinfo
+         U ipcom_freeaddrinfo
+         U ipcom_getservbyname
+         U memset
+         U ipcom_list_init
+         U semMCreate
+         U semCCreate
+00000000 D ipcom_null_pool_create
+         U ipcom_port_pkt_hdr_extra_size
+         U ipcom_vxworks_pkt_pool_hdr_ctor
+         U ipnet_pkt_pool_hdr_ctor_func
+         U ipcom_proc_attr_init
+         U ipcom_proc_acreate
+         U semTake
+         U semDelete
+         U taskDeleteHookAdd
+         U ipcom_vxworks_rtp_del_hook_add
+         U taskReservedNumAllot
+00000198 T ipcom_rtp_tcb_index_get_fd
+000001a4 T ipcom_run_cmd
+         U ipcom_shell_find_cmd_hook
+         U strdup
+         U printf
+         U ipcom_parse_argstr
+         U free
+00000284 T ipcom_is_stack_task
+000002c4 T ipcom_stack_index
+000002f0 T ipcom_stack_index_of_vxtask
+00000324 T ipcom_ima_stack_task
+         U ipcom_proc_self
+00000350 T ipcom_vxworks_loginStringGet
+         U strlen
+         U strcpy
+00000390 T ipcom_syslog_printf
+         U ipcom_syslog_priority_names
+         U ipcom_syslog_facility_names
+         U sprintf
+         U vsnprintf
+
+ipcom_waitif.o:
+00000000 t ipcom_waitif_gifaddr
+         U memset
+         U ipcom_if_indextoname
+         U ipcom_socketioctl_usr
+         U ipcom_errno_get
+         U ipcom_syslog
+         U malloc
+         U ip_in6addr_any
+         U strchr
+         U strcmp
+         U memcmp
+         U free
+000001b8 T ipcom_waitif
+         U ipcom_socket_usr
+         U ipcom_microtime
+         U ipcom_errno_set
+         U ipcom_setsockopt_usr
+         U ipcom_recv_usr
+         U ipcom_socketclose_usr
+00000370 T ipcom_waitif_address
+         U ipcom_if_nameindex
+         U strncpy
+         U ipcom_if_nametoindex
+         U ipcom_if_freenameindex
+
+ipcom_windnet_compat.o:
+00000000 t ipcom_windnet_socketclose
+00000030 t ipcom_windnet_socketwrite
+0000003c t ipcom_windnet_socketread
+00000048 t ipcom_windnet_select_poll
+000000e0 t ipcom_windnet_select_add_node
+000008f4 t ipcom_windnet_socket_eventcb
+00000164 t ipcom_windnet_select_remove_node
+000001c4 t ipcom_windnet_socketioctl
+00000460 t ipcom_windnet_socket
+000004bc t ipcom_windnet_accept
+00000528 t ipcom_windnet_bind
+00000530 t ipcom_windnet_connect
+00000538 t ipcom_windnet_connect_with_timeout
+0000069c t ipcom_windnet_getpeername
+000006a4 t ipcom_windnet_getsockname
+000006ac t ipcom_windnet_getsockopt
+000006d0 t ipcom_windnet_setsockopt
+0000071c t ipcom_windnet_listen
+00000724 t ipcom_windnet_recv
+00000740 t ipcom_windnet_recvfrom
+00000764 t ipcom_windnet_recvmsg
+00000780 t ipcom_windnet_send
+0000079c t ipcom_windnet_sendto
+000007c0 t ipcom_windnet_sendmsg
+000007dc t ipcom_windnet_shutdown
+000007e4 t ipcom_windnet_socklib_init_cb
+         U ipcom_socketclose
+         U free
+         U ipcom_send
+         U ipcom_recv
+         U semTake
+         U ipnet_is_sock_readable
+         U ipnet_is_sock_writable
+         U ipnet_is_sock_exceptional
+         U selWakeupAll
+         U semGive
+         U ipnet_get_sock
+         U selNodeAdd
+         U ipcom_mb
+         U selWakeupType
+         U ipnet_release_sock
+         U selNodeDelete
+         U selWakeupListLen
+         U pSockIoctlMemVal
+         U memset
+         U ipcom_socketioctl
+         U _func_mux
+         U ipcom_errno_set
+         U ipcom_socket
+         U calloc
+         U ipcom_accept
+         U ipcom_bind
+         U ipcom_connect
+         U ipcom_errno_get
+         U __rem32
+         U ipcom_socketselect
+         U ipcom_getsockopt
+         U ipcom_getpeername
+         U ipcom_getsockname
+         U ipcom_setsockopt
+         U ipcom_listen
+         U ipcom_recvfrom
+         U ipcom_recvmsg
+         U ipcom_sendto
+         U ipcom_sendmsg
+         U ipcom_shutdown
+00000000 D ipcom_windnet_sockfuncs
+000007ec T ipcom_windnet_socklib_init
+         U sockLibAdd
+         U ipcom_syslog
+000008b0 T ipcom_windnet_socketwritev
+         U sendmsg
+00000990 T ipcom_windnet_socklib_sock_size
+00000998 T ipcom_windnet_socklib_socket_init
+         U ipnet_sock_alloc_private_data
+         U selWakeupListInit
+000009c8 T ipcom_windnet_socklib_socket_free
+         U selWakeupListTerm
+00000000 D in6addr_any
+00000010 D in6addr_loopback
+
+ipcom_windview.o:
+00000000 T ipcom_wv_marker_1
+         U evtAction
+         U pWvNetEvtMap
+         U eventPointSwHandle
+000000b0 T ipcom_wv_marker_2
+00000164 T ipcom_wv_event_2
+
+ipcom_xtime.o:
+
+ipcom_xtoyz.o:
+00000000 T ipcom_htons
+00000018 T ipcom_ntohs
+00000030 T ipcom_htonl
+00000044 T ipcom_ntohl
+
+zbufLib.o:
+00000000 t _zsegFreeReturnNext
+00000008 b _zbuf_mutex
+00000004 b _zbuf_data
+00000000 b _num_zbuf
+00000380 t _zbufSegFind_nolock
+00000674 t _zbufSegPrev_nolock
+000006e4 t _zbufSegFindPrev
+         U ipcom_pkt_free
+00000034 T _zbufDeleteEmpty
+         U ipcom_mutex_lock
+         U ipcom_mutex_unlock
+00000084 T ZBUF_GETSEG
+000000c0 T _zbuf_getseg_nolock
+000000d0 T _zbuf_getsegptr_nolock
+000000e0 T _zbufSetSeg
+00000110 T zbuf_free
+00000114 T zbufLibInit
+         U calloc
+         U ipcom_mutex_create
+         U free
+000001b0 T _zbufCreate_nolock
+         U malloc
+         U errnoSet
+         U memset
+         U memcpy
+000002b8 T zbufCreate
+000002ec T zbufDelete
+00000520 T zbufSegFind
+0000056c T zbufDup
+         U ipnet_pkt_clone
+000008c8 T zbufInsert
+00000a0c T zbufSegPrev
+00000a48 T zbufInsertBuf64
+         U ipcom_pkt_malloc
+         U ipcom_pkt_create
+00000b94 T zbufInsertBuf
+00000bc4 T zbufInsertCopy
+         U bcopy
+00000ce0 T zbufExtractCopy
+00000d94 T zbufCut
+00000f50 T zbufSplit
+00001060 T zbufLength
+000010a4 T zbufSegNext
+00001110 T zbufSegData
+00001164 T zbufSegLength
+
+zbufSockLib.o:
+00000440 t simple_free
+00000000 T zbufSockLibInit
+00000008 T zbufSockSendto
+         U ZBUF_GETSEG
+         U sendto
+         U errnoGet
+         U _zbufDeleteEmpty
+00000084 T zbufSockSend
+000000a8 T zbufSockBufSendto
+         U zbufCreate
+         U errnoSet
+         U zbufInsertBuf
+         U zbufDelete
+00000190 T zbufSockBufSend
+000001bc T zbufSockBufSendto64
+         U zbufInsertBuf64
+000002a4 T zbufSockBufSend64
+000002d0 T zbufSockRecvfrom
+         U getsockopt
+         U recvfrom
+         U _zbufSetSeg
+         U malloc
+         U free
+00000420 T zbufSockRecv
+
+ipcom_cfgfile.o:
+00000000 t lskip
+0000003c t find_char_or_comment
+00000088 t strncpy0
+000000b4 t chomp
+000000f8 t setRecordType
+00000214 t initCfgParser
+00000270 t getNextParam
+000003e8 t closeCfgParser
+         U __ctype
+         U strncpy
+         U strlen
+         U __errno
+         U strtod
+         U fopen
+         U fgets
+         U strtok
+         U strchr
+         U fclose
+0000040c T ipcom_cfgfile_parse
+         U printf
+         U strcmp
+         U strcasecmp
+         U ipcom_sysvar_set
+         U strstr
+
+libIPCOM.a:
+
+ipcom_access.o:
+00000000 T ipcom_access
+00000008 T ipcom_umask
+0000000c T ipcom_chmod
+
+ipcom_array.o:
+00000000 T ipcom_qsort
+         U qsort
+00000004 T ipcom_bsearch
+         U bsearch
+
+ipcom_atomic.o:
+00000000 T ipcom_atomic_get
+         U vxAtomic32Get
+00000004 T ipcom_atomic_set
+         U vxAtomic32Set
+00000008 T ipcom_atomic_ptr_cas
+         U vxAtomicCas
+0000000c T ipcom_atomic_cas
+         U vxAtomic32Cas
+00000010 T ipcom_atomic_add
+         U vxAtomic32Add
+00000014 T ipcom_atomic_add_and_return
+0000002c T ipcom_atomic_inc
+         U vxAtomic32Inc
+00000030 T ipcom_atomic_dec
+         U vxAtomic32Dec
+00000034 T ipcom_atomic_sub
+         U vxAtomic32Sub
+00000038 T ipcom_atomic_sub_and_return
+00000050 T ipcom_atomic_get_and_or
+         U vxAtomic32Or
+00000054 T ipcom_atomic_or
+00000058 T ipcom_atomic_get_and_and
+         U vxAtomic32And
+0000005c T ipcom_atomic_and
+
+ipcom_auth_login.o:
+00000000 T ipcom_auth_ctx_login
+         U memset
+00000068 T ipcom_auth_login
+00000090 T ipcom_auth_logout
+
+ipcom_auth_chap.o:
+00000000 T ipcom_auth_chap_login
+
+ipcom_bitarray.o:
+00000098 t ipcom_bitarray_mod_private
+00000170 t ipcom_bitarray_mod
+00000000 T ipcom_bitarray_new
+         U malloc
+         U free
+         U memset
+00000064 T ipcom_bitarray_free
+00000080 T ipcom_bitarray_reset
+         U __urem32
+000001f4 T ipcom_bitarray_set
+00000234 T ipcom_bitarray_isset
+0000028c T ipcom_bitarray_clear
+000002cc T ipcom_bitarray_shiftL
+0000033c T ipcom_bitarray_shiftR
+000003a0 T ipcom_bitarray_dump
+         U printf
+
+ipcom_buffer.o:
+00000000 T ipcom_buffer_init
+         U malloc
+0000002c T ipcom_buffer_new
+         U free
+00000084 T ipcom_buffer_free
+000000a0 T ipcom_buffer_reset
+000000b0 T ipcom_buffer_append_space
+         U memmove
+         U realloc
+00000168 T ipcom_buffer_put
+         U memcpy
+000001ac T ipcom_buffer_put_char
+000001d8 T ipcom_buffer_put_int
+00000204 T ipcom_buffer_get
+00000254 T ipcom_buffer_get_int
+0000025c T ipcom_buffer_get_uint
+00000264 T ipcom_buffer_get_char
+0000026c T ipcom_buffer_len
+0000027c T ipcom_buffer_capacity
+0000028c T ipcom_buffer_consume
+000002bc T ipcom_buffer_consume_end
+000002ec T ipcom_buffer_start_ptr
+000002fc T ipcom_buffer_end_ptr
+0000030c T ipcom_buffer_decr_cap
+0000033c T ipcom_buffer_trim
+0000039c T ipcom_buffer_start_pos
+000003a4 T ipcom_buffer_end_pos
+000003ac T ipcom_buffer_ptr2pos
+000003c0 T ipcom_buffer_dump_len
+         U ipcom_debug_printf
+00000434 T ipcom_buffer_dump
+
+ipcom_cache.o:
+00000000 t ipcom_cache_obj_order
+00000028 t ipcom_cache_obj_index
+00000040 t ipcom_cache_alloc_obj
+         U ipcom_random
+         U __urem32
+         U memmove
+000000dc T ipcom_cache_delete
+         U free
+000000e0 T ipcom_cache_flush
+         U memset
+00000164 T ipcom_cache_new_with_bucket_count
+         U __udiv32
+         U ipcom_cache_line_size
+         U calloc
+         U ipcom_syslog
+00000264 T ipcom_cache_new_with_memory_limit
+00000324 T ipcom_cache_insert_with_index
+         U memcpy
+00000404 T ipcom_cache_insert
+00000444 T ipcom_cache_lookup
+
+ipcom_ccivalidate.o:
+
+ipcom_checksum.o:
+00000000 T ipcom_in_checksum_update
+000000e4 T ipcom_in_checksum_finish
+00000108 T ipcom_in_checksum
+00000140 T ipcom_in_checksum_update_pkt
+0000019c T ipcom_in_checksum_pkt
+000001bc T ipcom_in_checksum_memcpy
+
+ipcom_cmd.o:
+00000000 t ipcom_cmd_link_ntop
+000000a8 t ipcom_cmd_addr_to_str
+         U snprintf
+         U ipcom_inet_ntop
+         U ipcom_getsockaddrbyaddr
+         U ipcom_getnameinfo
+00000124 T ipcom_cmd_sockaddr_to_str
+         U ipcom_if_indextoname
+         U strlen
+         U strncat
+         U sprintf
+000002a0 T ipcom_cmd_if_flags_to_str
+000003f0 T ipcom_cmd_if_caps_to_str
+00000490 T ipcom_cmd_key_to_str
+000004fc T ipcom_cmd_str_to_key2
+         U ipcom_strcasecmp
+0000055c T ipcom_cmd_str_to_key
+
+ipcom_cmd_cpu.o:
+00000000 t ipcom_cmd_cpu_getpid
+         U strtoul
+0000002c T ipcom_cmd_cpu
+         U strcmp
+         U ipcom_num_online_cpus
+         U ipcom_num_configured_cpus
+         U printf
+         U memset
+         U ipcom_proc_cpu_affinity_get
+         U strtol
+         U ipcom_proc_cpu_affinity_set_all
+         U ipcom_proc_cpu_affinity_set
+
+ipcom_cmd_echo.o:
+00000000 t ipcom_cmd_echo_server_print_usage
+00000044 t ipcom_cmd_echo_error_msg
+0000006c t ipcom_cmd_echo_client_do
+00000764 t ipcom_cmd_echo_client_print_usage
+000008bc t ipcom_cmd_echo_server_error
+00000908 t ipcom_cmd_echo_server_daemon
+00000f1c t ipcom_cmd_echo_server_do
+0000113c t ipcom_cmd_echo_parse_arguments
+00000050 d ipcom_cmd_echo_domain_map
+00000000 d ipcom_cmd_echo_type_map
+00000028 d ipcom_cmd_echo_proto_map
+         U printf
+         U ipcom_errno_get
+         U strerror
+         U malloc
+         U __rem32
+         U ipcom_socket_usr
+         U ipcom_setsockopt_usr
+         U ipcom_cmd_sockaddr_to_str
+         U ipcom_inet_ntop
+         U ipcom_if_indextoname
+         U memset
+         U ipcom_bind_usr
+         U ipcom_getsockname_usr
+         U ipcom_connect_usr
+         U ipcom_getpeername_usr
+         U ipcom_times
+         U ipcom_send_usr
+         U ipcom_sendto_usr
+         U ipcom_recv_usr
+         U ipcom_perror
+         U __div32
+         U free
+         U ipcom_socketclose_usr
+         U ipcom_ipc_malloc
+         U ipcom_ipc_send
+         U ipcom_ipc_free
+         U ipcom_ipc_close
+         U ipcom_proc_init
+         U ipcom_ipc_install
+         U ipcom_ipc_receive
+         U ipcom_listen_usr
+         U ipcom_socketselect_usr
+         U ipcom_accept_usr
+         U ipcom_recvfrom_usr
+         U memmove
+         U ipcom_debug_printf
+         U ipcom_getsockopt_usr
+         U ipcom_ipc_isopen
+         U ipcom_ipc_uninstall
+         U ipcom_proc_exit
+         U ipcom_ipc_open
+         U ipcom_proc_acreate
+         U memcpy
+         U ipcom_getopt_clear_r
+         U ipcom_getopt_r
+         U ipcom_cmd_str_to_key
+         U atoi
+         U strlen
+         U strcpy
+         U strtoul
+         U ipcom_getsockaddrbyaddrname
+         U ipcom_if_nametoindex
+         U ipcom_socketioctl_usr
+00001690 T ipcom_cmd_echoserver
+000016c4 T ipcom_cmd_echoclient
+
+ipcom_cmd_errno.o:
+00000000 d ipcom_errtbl
+00000000 T ipcom_cmd_errno
+         U strerror_r
+         U printf
+
+ipcom_cmd_fwctrl.o:
+00000004 C ipcom_cmd_fwctr_empty_file
+
+ipcom_cmd_ipd.o:
+00000000 d ipcom_cmd_ipd_messages
+00000000 T ipcom_cmd_ipd
+         U ipcom_stderr
+         U fprintf
+         U ipcom_getopt_clear_r
+         U ipcom_getopt_r
+         U printf
+         U strcmp
+         U ipcom_ipd_products
+         U ipcom_strcasecmp
+         U ipcom_ipd_send
+         U isdigit
+         U atoi
+         U strlen
+         U calloc
+         U memcpy
+         U ipcom_ipd_sendmsg
+         U free
+         U ipcom_err_string
+
+ipcom_cmd_mib2.o:
+00000000 t ipcom_cmd_mib2_print_usage
+00000190 t ipcom_cmd_mib2_tcp_group
+00000230 t ipcom_cmd_mib2_udp_group
+00000288 t ipcom_cmd_mib2_ip_general_group
+000002c4 t ipcom_cmd_mib2_ip_group
+000003b4 t ipcom_cmd_mib2_icmp_group
+00000504 t ipcom_cmd_mib2_ipv6_general_group
+00000530 t ipcom_cmd_mib2_ipv4InterfaceTableCb
+0000058c t ipcom_cmd_mib2_ipv6InterfaceTableCb
+00000638 t ipcom_cmd_mib2_ipAddrTableCb
+00000778 t ipcom_cmd_mib2_ipSystemStatsTableCb
+00000c08 t ipcom_cmd_mib2_ipIfStatsTableCb
+00001158 t ipcom_cmd_mib2_ipAddressPrefixTableCb
+000013ac t ipcom_cmd_mib2_ipAddressTableCb
+00001638 t ipcom_cmd_mib2_ipNetToPhysicalTableCb
+00001814 t ipcom_cmd_mib2_ipv6ScopeZoneIndexTableCb
+00001a14 t ipcom_cmd_mib2_ipDefaultRouterTableCb
+00001b14 t ipcom_cmd_mib2_ipv6RouterAdvertTableCb
+00001cb4 t ipcom_cmd_mib2_icmpStatsTableCb
+00001d18 t ipcom_cmd_mib2_icmpMsgStatsTableCb
+00001d74 t ipcom_cmd_mib2_tcpConnectionTableCb
+00002008 t ipcom_cmd_mib2_tcpListenerTableCb
+00002164 t ipcom_cmd_mib2_udpEndpointTableCb
+00002418 t ipcom_cmd_mib2_inetCidrRouteTableCb
+         U printf
+         U ipcom_mib2_get_tcp_group
+         U ipcom_mib2_get_udp_group
+         U ipcom_mib2_get_ip_general_group
+         U ipcom_mib2_get_ip_group
+         U ipcom_mib2_get_icmp_group
+         U ipcom_mib2_get_ipv6_general_group
+         U snprintf
+         U ipcom_inet_ntop
+         U strcpy
+         U strlen
+         U sprintf
+00002744 T ipcom_cmd_mib2
+         U strcmp
+         U ipcom_mib2_clear
+         U malloc
+         U ipcom_mib2_get_ipv4InterfaceTableLastChange
+         U ipcom_mib2_iterate_ipv4InterfaceTable
+         U ipcom_mib2_get_ipv6InterfaceTableLastChange
+         U ipcom_mib2_iterate_ipv6InterfaceTable
+         U ipcom_mib2_iterate_ipAddrTable
+         U ipcom_mib2_iterate_ipSystemStatsTable
+         U ipcom_mib2_get_ipIfStatsTableLastChange
+         U ipcom_mib2_iterate_ipIfStatsTable
+         U ipcom_mib2_iterate_icmpStatsTable
+         U ipcom_mib2_iterate_icmpMsgStatsTable
+         U ipcom_mib2_iterate_ipAddressPrefixTable
+         U ipcom_mib2_get_ipAddressSpinLock
+         U ipcom_mib2_iterate_ipAddressTable
+         U ipcom_mib2_iterate_ipNetToPhysicalTable
+         U ipcom_mib2_iterate_ipv6ScopeZoneIndexTable
+         U ipcom_mib2_iterate_ipDefaultRouterTable
+         U ipcom_mib2_get_ipv6RouterAdvertSpinLock
+         U ipcom_mib2_iterate_ipv6RouterAdvertTable
+         U ipcom_mib2_iterate_tcpConnectionTable
+         U ipcom_mib2_iterate_tcpListenerTable
+         U ipcom_mib2_iterate_udpEndpointTable
+         U ipcom_mib2_get_inetCidrRouteNumber
+         U ipcom_mib2_get_inetCidrRouteDiscards
+         U ipcom_mib2_iterate_inetCidrRouteTable
+         U atoi
+         U ipcom_mib2_set_ipAddressSpinLock
+         U ipcom_inet_pton
+         U ipcom_mib2_set_tcpConnectionState
+         U ipcom_mib2_set_ipForwarding
+         U ipcom_mib2_set_ipDefaultTTL
+         U ipcom_mib2_set_ipv4InterfaceEnableStatus
+         U ipcom_mib2_set_ipv6IpForwarding
+         U ipcom_mib2_set_ipv6IpDefaultHopLimit
+         U ipcom_mib2_set_ipv6InterfaceEnableStatus
+         U ipcom_mib2_set_ipv6InterfaceForwarding
+         U ipcom_mib2_set_ipv6RouterAdvertSpinLock
+         U free
+
+ipcom_cmd_netsmp.o:
+00000000 T ipcom_cmd_netsmp
+         U strcmp
+         U netDaemonsCount
+         U vxCpuConfiguredGet
+         U printf
+         U vxCpuEnabledGet
+         U vxCpuReservedGet
+         U strtol
+         U netDaemonQ
+         U jobQueueTask
+         U taskCpuAffinityGet
+
+ipcom_cmd_shellcmds.o:
+00000000 T ipcom_cmd_mkdir
+         U printf
+         U ipcom_mkdir
+         U ipcom_errno_get
+         U strerror
+00000064 T ipcom_cmd_cd
+         U ipcom_chdir
+000000c4 T ipcom_cmd_cat
+         U ipcom_fopen
+         U malloc
+         U ipcom_fread
+         U ipcom_stdout
+         U ipcom_fwrite
+         U free
+         U ipcom_fclose
+00000194 T ipcom_cmd_uuencode
+000002ac T ipcom_cmd_cp
+000003c4 T ipcom_cmd_pwd
+         U ipcom_getcwd
+00000448 T ipcom_cmd_rm
+         U ipcom_unlink
+000004a8 T ipcom_cmd_rmdir
+         U ipcom_rmdir
+00000504 T ipcom_cmd_mv
+         U ipcom_rename
+00000578 T ipcom_cmd_ls
+         U ipcom_getopt_clear_r
+         U ipcom_getopt_r
+         U ipcom_opendir
+         U ipcom_readdir
+         U strlen
+         U strcpy
+         U strcat
+         U ipcom_stat
+         U ctime
+         U strncpy
+         U __rem32
+         U ipcom_closedir
+00000778 T ipcom_cmd_date
+         U ipcom_gettimeofday
+         U localtime
+         U memcpy
+         U ipcom_asctime_r_vxworks
+         U strchr
+         U strrchr
+         U atol
+         U mktime
+         U ipcom_settimeofday
+000008c8 T ipcom_cmd_time
+00000a04 T ipcom_cmd_getenv
+         U ipcom_getenv
+00000a58 T ipcom_cmd_setenv
+         U ipcom_setenv
+
+ipcom_cmd_smptest.o:
+00000004 C ipcom_cmd_smptest_empty_file
+
+ipcom_cmd_sockperf.o:
+00000000 t ipcom_cmd_sockperf_tv_to_msec
+0000006c t ipcom_cmd_sockperf_echo_buf
+00000114 t ipcom_cmd_sockperf_run
+00000820 t ipcom_cmd_sockperf_connect
+00000978 t ipcom_cmd_sockperf_accept
+         U __div32
+         U printf
+         U memcpy
+         U __rem32
+         U ipcom_setsockopt_usr
+         U memset
+         U ipcom_microtime
+         U __urem32
+         U sprintf
+         U ipcom_send_usr
+         U ipcom_errno_get
+         U ipcom_sleep
+         U strerror
+         U ipcom_shutdown_usr
+         U ipcom_socketselect_usr
+         U ipcom_recv_usr
+         U atoi
+         U __udiv32
+         U ipcom_socket_usr
+         U ipcom_connect_usr
+         U ipcom_socketclose_usr
+         U ipcom_bind_usr
+         U ipcom_listen_usr
+         U ipcom_accept_usr
+00000bbc T ipcom_cmd_sockperf
+         U ipcom_getopt_clear_r
+         U ipcom_getopt_r
+         U calloc
+         U ipcom_getaddrinfo
+         U malloc
+         U free
+         U ipcom_freeaddrinfo
+
+ipcom_cmd_socktest.o:
+00000000 t ipcom_socktest_init
+00000004 b ipcom_socktest_flood_list
+00000000 b ipcom_socktest_flood_lock
+00000028 t ipcom_cmd_socktest_fd_find
+00000074 t ipcom_cmd_socktest_param_parse
+000000cc t ipcom_cmd_socktest_param_to_int
+00000104 t ipcom_cmd_socktest_param_list_print
+00000138 t ipcom_cmd_socktest_sockopt_list_print
+00000178 t ipcom_cmd_socktest_ioctl_list_print
+000001b8 t ipcom_cmd_socktest_parse_int
+00000200 t ipcom_cmd_socktest_format_int
+00000240 t ipcom_cmd_socktest_parse_u8
+00000288 t ipcom_cmd_socktest_format_u8
+000002c8 t ipcom_cmd_socktest_parse_inaddr
+00000334 t ipcom_cmd_socktest_format_inaddr
+0000037c t ipcom_cmd_socktest_ptos
+000003fc t ipcom_cmd_socktest_parse_group_req
+000004c0 t ipcom_cmd_socktest_parse_group_source_req
+0000059c t ipcom_cmd_socktest_str_to_in_pktinfo
+00000674 t ipcom_cmd_socktest_format_in_pktinfo
+000006c4 t ipcom_cmd_socktest_str_to_in6_pktinfo
+0000079c t ipcom_cmd_socktest_format_in6_pktinfo
+000007ec t ipcom_cmd_socktest_parse_mreq
+000008c8 t ipcom_cmd_socktest_format_mreq
+00000958 t ipcom_cmd_socktest_parse_mreq6
+00000a34 t ipcom_cmd_socktest_format_mreq6
+00000ac4 t ipcom_cmd_socktest_parse_icmp6_filter
+00000c38 t ipcom_cmd_socktest_format_icmp6_filter
+00000cf0 t ipcom_cmd_socktest_parse_ifreq_addr
+00000d7c t ipcom_cmd_socktest_format_ifreq_addr
+00000dc8 t ipcom_cmd_socktest_parse_ifreq_int
+00000e44 t ipcom_cmd_socktest_format_ifreq_int
+00000e4c t ipcom_cmd_socktest_parse_ifreq_u16
+00000ec8 t ipcom_cmd_socktest_format_ifreq_u16
+00000f08 t ipcom_cmd_socktest_parse_ifreq_flags
+00000f90 t ipcom_cmd_socktest_format_ifreq_flags
+00000fd4 t ipcom_cmd_socktest_parse_timeval
+00001040 t ipcom_cmd_socktest_format_timeval
+00001098 t ipcom_cmd_socktest_parse_linger
+00001110 t ipcom_cmd_socktest_format_linger
+00001170 t ipcom_cmd_socktest_parse_md5key
+000011bc t ipcom_cmd_socktest_format_md5key
+00001220 t ipcom_cmd_socktest_parse_ifname
+0000126c t ipcom_cmd_socktest_format_ifname
+000012bc t ipcom_cmd_socktest_parse_packet_mreq
+000013c4 t ipcom_cmd_socktest_format_packet_mreq
+00001478 t ipcom_cmd_socktest_parse_ifaliasreq_addr
+000015d8 t ipcom_cmd_socktest_parse_arpreq
+000016e8 t ipcom_cmd_socktest_format_arpreq
+00001774 t ipcom_cmd_socktest_parse_ip_opts
+00001814 t ipcom_cmd_socktest_format_ip_opts
+00001888 t ipcom_cmd_socktest_parse_sovlan
+0000198c t ipcom_cmd_socktest_format_sovlan
+000019e8 t ipcom_cmd_socktest_parse_stat
+000019fc t ipcom_cmd_socktest_format_stat
+00001a78 t ipcom_cmd_socktest_format_dst_opt
+00001a80 t ipcom_cmd_socktest_parse_dst_opt
+00001b28 t ipcom_cmd_socktest_format_hop_opt
+00001b30 t ipcom_cmd_socktest_parse_hop_opt
+00001c04 t ipcom_cmd_socktest_format_rthdr_opt
+00001c0c t ipcom_cmd_socktest_parse_rthdr_opt
+00001d00 t ipcom_cmd_socktest_parse_vifctl
+00001e08 t ipcom_cmd_socktest_parse_mfcctl
+00001f88 t ipcom_cmd_socktest_parse_vifreq
+00001fc0 t ipcom_cmd_socktest_format_vifreq
+00002024 t ipcom_cmd_socktest_parse_sgreq
+000020a8 t ipcom_cmd_socktest_format_sgreq
+000020f0 t ipcom_cmd_socktest_parse_mif6ctl
+0000215c t ipcom_cmd_socktest_parse_mf6cctl
+000022f8 t ipcom_cmd_socktest_parse_mifreq6
+00002340 t ipcom_cmd_socktest_format_mifreq6
+00002398 t ipcom_cmd_socktest_parse_sgreq6
+0000241c t ipcom_cmd_socktest_format_sgreq6
+0000247c t ipcom_cmd_socktest_parse_ifconf
+000024a8 t ipcom_cmd_socktest_format_ifconf
+00002560 t ipcom_cmd_socktest_parse_gre_key
+000025c8 t ipcom_cmd_socktest_format_gre_key
+00002620 t ipcom_cmd_socktest_parse_tcpao_mkt_inst
+00002844 t ipcom_cmd_socktest_format_tcpao_mkt_inst
+00002980 t ipcom_cmd_socktest_set_optlen
+00000e88 d socktest_sock_level
+00002a00 t ipcom_cmd_socktest_parse_tcpao_rcv_keyids
+00002aa0 t ipcom_cmd_socktest_format_tcpao_rcv_keyids
+00002b94 t ipcom_cmd_socktest_portinfo_add
+00002c04 t ipcom_cmd_socktest_print_eth
+00002cac t ipcom_cmd_socktest_print_ip
+00002e14 t ipcom_cmd_socktest_print_ip6
+00003028 t ipcom_cmd_socktest_print_tcp
+0000315c t ipcom_cmd_socktest_print_udp
+000031f8 t ipcom_cmd_socktest_rec_type_to_str
+00003388 t ipcom_cmd_socktest_print_icmp
+000035e8 t ipcom_cmd_socktest_print_igmp
+000038c4 t ipcom_cmd_socktest_print_icmp6
+00003c58 t ipcom_cmd_socktest_print_formatted
+00001138 d socktest_prot_format
+00003dc0 t ipcom_cmd_socktest_print_usage
+00003ee0 t ipcom_cmd_socktest_handle_console
+00000750 d socktest_cmd_cb
+000040e0 t ipcom_cmd_socktest_handle_exit
+000040f0 t ipcom_cmd_socktest_get_sockno
+00004128 t ipcom_cmd_socktest_handle_open
+00000830 d socktest_domain
+00000868 d socktest_type
+00000890 d socktest_proto
+0000438c t ipcom_cmd_socktest_handle_close
+0000454c t ipcom_cmd_socktest_flood_closesocket_impl
+000045ec t ipcom_cmd_socktest_handle_flush
+00004674 t ipcom_cmd_socktest_handle_bind
+00004898 t ipcom_cmd_socktest_handle_setopt
+00004b44 t ipcom_cmd_socktest_handle_getopt
+00004ec4 t ipcom_cmd_socktest_handle_ioctl
+00000f08 d socktest_ioctl
+00005134 t ipcom_cmd_socktest_handle_connect
+000053e4 t ipcom_cmd_socktest_handle_listen
+0000552c t ipcom_cmd_socktest_handle_accept
+00005744 t ipcom_cmd_socktest_handle_getname
+00005900 t ipcom_cmd_socktest_handle_getsockname
+00005920 t ipcom_cmd_socktest_handle_getpeername
+00005940 t ipcom_cmd_socktest_handle_select
+00005c78 t ipcom_cmd_socktest_handle_shutdown
+00005df0 t ipcom_cmd_socktest_print_ancillary_data
+00000928 d socktest_ancillary_data
+00005f04 t ipcom_cmd_socktest_print_all_ancillary_data
+00005f64 t ipcom_cmd_socktest_recv_impl
+000066ac t ipcom_cmd_socktest_flood_shutdown_impl
+0000683c t ipcom_cmd_socktest_flood_acquire
+00006898 t ipcom_cmd_socktest_flood_proc_impl
+00006bbc t ipcom_cmd_socktest_flood_impl
+00006f64 t ipcom_cmd_socktest_handle_flood
+00006f68 t ipcom_cmd_socktest_handle_receive
+00006f88 t ipcom_cmd_socktest_handle_zerocopy_recv
+00006fa8 t ipcom_cmd_socktest_zbuf_buf_free
+00006fac t ipcom_cmd_socktest_send_impl
+000077b0 t ipcom_cmd_socktest_handle_attach
+000079fc t ipcom_cmd_socktest_handle_if_nametoindex
+00007a50 t ipcom_cmd_socktest_socket_eventcb
+000002d0 d socktest_fd
+00007aac t ipcom_cmd_socktest_handle_soevent_monitor
+00007dfc t ipcom_cmd_socktest_handle_gethostbyname
+00007f10 t ipcom_cmd_socktest_handle_gethostbyaddr
+00008058 t ipcom_cmd_socktest_handle_send
+00008078 t ipcom_cmd_socktest_handle_zerocopy_send
+000012a0 d once.2365
+00000000 d socktest_data_types
+000009a8 d socktest_sol_opt
+00000ab0 d socktest_ip_opt
+00000c30 d socktest_ipv6_opt
+00000da4 d socktest_icmpv6_opt
+00000db0 d socktest_udp_opt
+00000dbc d socktest_udplite_opt
+00000dc8 d socktest_tcp_opt
+00000e70 d socktest_packet_opt
+         U ipcom_list_init
+         U ipcom_mutex_create
+         U strcmp
+         U atoi
+         U printf
+         U malloc
+         U sprintf
+         U ipcom_inet_pton
+         U free
+         U ipcom_inet_ntop
+         U memset
+         U strdup
+         U strtok_r
+         U ipcom_if_nametoindex
+         U realloc
+         U strlen
+         U strchr
+         U strcpy
+         U strcat
+         U ipcom_if_indextoname
+         U strstr
+         U sscanf
+         U calloc
+         U ipcom_getsockaddrbyaddr
+         U ipcom_cmd_sockaddr_to_str
+         U strtoul
+         U ipcom_cmd_if_flags_to_str
+         U atol
+         U __div32
+         U __rem32
+         U strncpy
+         U memcpy
+         U snprintf
+         U ipcom_socket_usr
+         U ipcom_socketclose_usr
+         U ipcom_socketioctl_usr
+         U ipcom_getline_init
+         U ipcom_stdout
+         U ipcom_fflush
+         U ipcom_getline
+         U ipcom_parse_argstr
+         U ipcom_errno_get
+         U strerror
+         U ipcom_getline_exit
+         U ipcom_sysvar_get_as_int
+         U ipcom_getopt_clear_r
+         U ipcom_getopt_r
+         U ipcom_sysvar_set
+         U ipcom_sleep
+         U ipcom_sem_wait
+         U ipcom_sem_delete
+         U ipcom_bind_usr
+         U ipcom_setsockopt_usr
+         U ipcom_getsockopt_usr
+         U ipcom_connect_usr
+         U ipcom_listen_usr
+         U ipcom_accept_usr
+         U ipcom_getpeername_usr
+         U ipcom_getsockname_usr
+         U ipcom_socketselect_usr
+         U ipcom_shutdown_usr
+         U ipcom_cmsg_nxthdr
+         U ipcom_recvfrom_usr
+         U ipcom_recvmsg_usr
+         U zbufSockRecvfrom
+         U _zbuf_getseg_nolock
+         U zbufDelete
+         U ipcom_recv_usr
+         U ipcom_mutex_lock
+         U ipcom_list_first
+         U ipcom_list_remove
+         U ipcom_mutex_unlock
+         U ipcom_sem_post
+         U ipcom_proc_init
+         U ipcom_send_usr
+         U ipcom_proc_exit
+         U ipcom_strcasecmp
+         U ipcom_list_insert_first
+         U ipcom_sem_create
+         U ipcom_proc_create
+         U ipcom_in_checksum
+         U ipcom_sendmsg_usr
+         U zbufSockBufSendto
+         U ipcom_list_insert_last
+         U ipcom_mutex_delete
+         U ipcom_gethostbyname_r
+         U ipcom_gethostbyname
+         U ipcom_inet_ntoa
+         U ipcom_gethostbyaddr_r
+         U ipcom_gethostbyaddr
+00008098 T ipcom_cmd_socktest
+         U ipcom_once
+
+ipcom_cmd_svlanfwd.o:
+00000004 C ipcom_cmd_svlanfwd_empty_file
+
+ipcom_cmd_syslog.o:
+00000000 t ipcom_cmd_syslog_facility
+00000044 t ipcom_cmd_syslog_priority
+         U ipcom_syslog_facility_names
+         U strcmp
+         U ipcom_syslog_priority_names
+         U ipcom_strcasecmp
+00000088 T ipcom_cmd_syslog
+         U ipcom_stderr
+         U fprintf
+         U ipcom_getopt_clear_r
+         U ipcom_getopt_r
+         U printf
+         U ipcom_getlogmask_on
+         U ipcom_setlogmask_on
+         U ipcom_setlogfile
+         U ipcom_syslog
+
+ipcom_cmd_sysvar.o:
+00000000 t ipcom_cmd_sysvar_for_each_cb
+         U printf
+0000002c T ipcom_cmd_sysvar
+         U ipcom_stderr
+         U fprintf
+         U ipcom_getopt_clear_r
+         U ipcom_getopt_r
+         U atol
+         U strcmp
+         U malloc
+         U ipcom_sysvar_get
+         U free
+         U ipcom_sysvar_set
+         U ipcom_err_string
+         U ipcom_sysvar_unset
+         U ipcom_sysvar_for_each
+
+ipcom_cmd_tracert.o:
+00000000 t ipcom_cmd_tracert_tv_to_msec
+00000040 t ipcom_cmd_tracert_icmp4
+0000017c t ipcom_cmd_tracert_icmp6
+00000278 t ipcom_cmd_tracert_ntop
+000002dc t ipcom_cmd_tracert_send_recv
+000007d8 t ipcom_cmd_tracert_icmp_send_recv
+00000000 d data.229
+         U __div32
+         U ipcom_recv_usr
+         U memcpy
+         U ipcom_getpid
+         U ipcom_recvfrom_usr
+         U ipcom_inet_ntop
+         U ipcom_setsockopt_usr
+         U memset
+         U __rem32
+         U printf
+         U ipcom_microtime
+         U ipcom_sendto_usr
+         U ipcom_socketselect_usr
+         U ipcom_errno_get
+         U ipcom_getnameinfo
+         U strcat
+         U strlen
+         U sprintf
+00000c24 T ipcom_cmd_tracert
+         U ipcom_proc_vr_get
+         U ipcom_getopt_clear_r
+         U ipcom_getopt_r
+         U atoi
+         U ipcom_getaddrinfo
+         U ipcom_socket_usr
+         U ipcom_connect_usr
+         U ipcom_getsockname_usr
+         U ipcom_socketclose_usr
+         U ipcom_bind_usr
+         U __urem32
+         U ipcom_in_checksum
+         U strerror
+         U ipcom_freeaddrinfo
+
+ipcom_cmd_ttcp.o:
+00000000 t softbreak
+0000004c t mes
+00000080 t pattern
+000000c8 t mread
+00000144 t Nread
+0000022c t Nwrite
+         U ipcom_errno_get
+         U sprintf
+         U ipcom_perror
+         U ipcom_stdout
+         U fprintf
+         U isprint
+         U ipcom_socketread_usr
+         U ipcom_recvfrom_usr
+         U ipcom_sendto_usr
+         U ipcom_proc_yield
+         U ipcom_socketwrite_usr
+00000300 T ipcom_cmd_ttcp
+         U ipcom_proc_self
+         U memset
+         U ipcom_getopt_clear
+         U ipcom_getopt_data
+         U atoi
+         U ipcom_getopt
+         U ipcom_stderr
+         U ipcom_proc_cpu_affinity_set
+         U ipcom_getsockaddrbyaddrname
+         U malloc
+         U __div32
+         U __rem32
+         U ipcom_socket_usr
+         U ipcom_setsockopt_usr
+         U ipcom_bind_usr
+         U ipcom_connect_usr
+         U ipcom_listen_usr
+         U ipcom_accept_usr
+         U ipcom_socketclose_usr
+         U ipcom_getpeername_usr
+         U ipcom_inet_ntop
+         U ipcom_times
+         U ipcom_millisleep
+         U __udiv64
+         U __mul64
+         U __udiv32
+         U ipcom_proc_cpu_affinity_clr
+         U free
+
+ipcom_cmd_version.o:
+00000000 T ipcom_cmd_version
+         U ipcom_version
+         U printf
+         U ipcom_ipd_products
+
+ipcom_cmd_vxshell.o:
+00000004 C ipcom_cmd_vxshell_empty_file
+
+ipcom_ctime.o:
+
+ipcom_ctype.o:
+00000000 T ipcom_isascii
+
+ipcom_debug.o:
+00000000 T ipcom_debug_printf
+         U malloc
+         U printf
+         U vsprintf
+         U taskIdSelf
+         U taskName
+         U taskSuspend
+         U free
+000000a0 T ipcom_assert
+
+ipcom_dmalloc.o:
+00000000 t ipcom_dmalloc_init
+00000198 d ipcom_mem_initialized
+00000000 b ipcom_mem
+000000c8 d long_options.65
+00000000 d ipcom_dmalloc_product
+         U ipcom_interrupt_disable
+         U ipcom_interrupt_enable
+         U memset
+         U ipcom_times
+         U time
+00000088 T ipcom_dmalloc
+         U strlen
+         U malloc
+         U strcpy
+0000022c T ipcom_dmalloc_ptr
+0000023c T ipcom_dcalloc
+00000294 T ipcom_dfree
+         U free
+0000030c T ipcom_drealloc
+         U memcpy
+000003a0 T ipcom_dstrdup
+000003f8 T ipcom_bufcheck
+000003fc T ipcom_cmd_mem
+         U printf
+         U ipcom_stderr
+         U fprintf
+         U ipcom_getopt_clear_r
+         U ipcom_getopt_r
+         U atol
+         U strcmp
+         U snprintf
+         U strstr
+         U strncmp
+
+ipcom_dns.o:
+00000000 D ipcom_dns_init_ok
+00000004 C ipcom_dns
+
+ipcom_drv_eth_filter.o:
+00000000 t ipcom_drv_eth_filter_hash_key
+0000000c t ipcom_drv_eth_filter_hash_obj
+0000002c t ipcom_drv_eth_filter_hash_cmp
+         U ipcom_hash_update
+         U memcmp
+00000054 T ipcom_drv_eth_filter_init
+         U memset
+         U ipcom_hash_new
+00000084 T ipcom_drv_eth_filter_exit
+         U ipcom_hash_delete
+0000008c T ipcom_drv_eth_filter_add_mcast_addr
+         U ipcom_hash_get
+         U calloc
+         U memcpy
+         U ipcom_hash_add
+         U free
+00000110 T ipcom_drv_eth_filter_remove_mcast_addr
+         U ipcom_hash_remove
+
+ipcom_drv_eth.o:
+00000000 t ipnet_drv_eth_sync_with_end_flags
+000000b0 t ipcom_drv_eth_bind
+00000048 t ipcom_drv_eth_output
+000014ac t ipcom_drv_eth_shutdown_end2
+00000024 t ipcom_drv_eth_restart_end2
+00000e50 t ipcom_drv_eth_ioctl
+00000000 t ipcom_drv_eth_recv_end2
+00001534 t ipcom_drv_eth_error_end2
+000006d0 t ipcom_drv_eth_bind_to_dev
+00000760 t ipcom_drv_eth_bind_to_dev_errno_adapter
+000007b4 t ipcom_vxworks_boot_devname_init
+00000000 b devname.97
+00000000 d ipcom_vxworks_boot_devname_once
+00000a20 t ipcom_drv_eth_bind_to_devs
+00000bd8 t ipcom_drv_eth_free_out_native_pkt
+00000c30 t ipcom_drv_eth_unbind
+00000ca4 t ipcom_unregister_dev_name_mapping
+000013c4 t ipcom_drv_eth_detach
+         U muxIoctl
+         U mux2Bind
+         U ipcom_errno_get
+         U ipcom_syslog
+00000134 T ipcom_register_dev_name_mapping
+         U ipcom_port
+         U strdup
+         U free
+000001e0 T ipcom_get_ip_if_name
+         U strcmp
+0000022c T ipcom_drv_eth_init
+         U endFindByName
+         U printf
+         U strlen
+         U snprintf
+         U ipcom_if_nametoindex
+         U ipcom_if_malloc
+         U strncpy
+         U calloc
+         U ipcom_drv_eth_filter_init
+         U memset
+         U ipcom_if_attach
+         U ipcom_if_free
+         U atoi
+         U sysBootLine
+         U bootStringToStruct
+         U __ctype
+         U strncmp
+         U sscanf
+         U _func_printErr
+000009d4 T ipcom_vxworks_boot_devname
+         U ipcom_once
+         U ipnet_conf_interfaces
+         U strstr
+         U memcpy
+         U strcpy
+         U ipcom_stack_index
+         U ipcom_netif_from_softix
+         U ipcom_pkt_free
+         U ipcom_pkt_output_done_stack
+         U ipcom_pkt_tx_done
+         U muxUnbind
+00000d10 T ipcom_drv_eth_exit
+         U ipcom_drv_eth_filter_exit
+         U ipcom_drv_eth_filter_add_mcast_addr
+         U muxMCastAddrAdd
+         U ipcom_drv_eth_filter_remove_mcast_addr
+         U muxMCastAddrDel
+         U strtok_r
+         U ipcom_inet_pton
+         U bootNetmaskExtract
+00001390 T ipcom_vxworks_pkt_pool_hdr_ctor
+         U ipcom_pkt_input
+         U ipcom_socket
+         U ipcom_if_indextoname
+         U ipcom_socketioctl
+         U strerror
+         U ipcom_socketclose
+         U vxAtomic32Set
+         U taskSpawn
+         U ipcom_pkt_output_done
+         U memmove
+         U mux2Send
+000016e8 T ipcom_drv_eth_ip_attach
+0000172c T ipcom_drv_eth_create
+         U ipnet_register_if_attach_handler
+         U _func_end2VxBusConnect
+00001784 T ipcom_get_mux_dev_name
+
+ipcom_drv_mux.o:
+
+ipcom_drv_ppp.o:
+0000013c t ipcom_drv_ppp_exit_task
+00000174 t ipcom_drv_ppp_open
+000001f0 t ipcom_drv_ppp_init
+00000420 t ipcom_drv_ppp_ioctl
+000009ac t ipcom_drv_ppp_output
+00000c64 t ipcom_drv_ppp_create_cb
+00000000 T ipcom_socketpair_udp
+         U memset
+         U getaddrinfo
+         U socket
+         U bind
+         U getsockname
+         U connect
+         U freeaddrinfo
+         U close
+         U write
+         U ipcom_syslog
+         U open
+         U ioctl
+         U __errno
+         U ipcom_proc_attr_init
+         U ipcom_priority_map
+         U ipcom_sysvar_get_as_int
+         U sprintf
+00000a48 T ipcom_drv_ppp_outputd
+         U ipcom_proc_acreate_v1
+         U ipcom_ipc_open
+0000061c T ipcom_drv_ppp_inputd
+         U ipcom_ipc_malloc
+         U ipcom_ipc_send
+         U ipcom_ipc_close
+00000354 T ipcom_drv_ppp_exit
+         U taskSpawn
+         U ipcom_if_detach
+         U free
+         U ipcom_if_free
+         U ipcom_proc_init
+         U ipcom_ipc_install
+         U ipcom_proc_exit
+         U ipcom_ipc_receive
+         U strncpy
+         U ipcom_ipc_free
+         U bzero
+         U select
+         U read
+         U ipcom_pkt_malloc
+         U ipcom_conf_max_link_hdr_size
+         U ipcom_pkt_input_queue
+         U memcmp
+         U strcpy
+         U ipcom_pkt_free
+         U ipcom_pkt_output_done
+00000b38 T ipcom_drv_ppp_if_init
+         U ipcom_if_malloc
+         U malloc
+         U ipcom_sysvar_get_conf
+         U strdup
+         U ipcom_sysvar_get_conf_as_int
+         U ipcom_if_attach
+         U strstr
+         U strchr
+00000cc8 T ipcom_drv_ppp_create
+         U ipcom_sysvar_for_each
+
+ipcom_err_string.o:
+00000000 b errname.2
+00000000 T ipcom_err_string
+         U sprintf
+
+ipcom_errno.o:
+00000000 T ipcom_errno_set
+         U __errno
+0000001c T ipcom_errno_get
+
+ipcom_exit.o:
+00000000 T ipcom_abort
+         U abort
+00000004 T ipcom_exit
+         U ipcom_proc_exit
+
+ipcom_ffs.o:
+00000000 T ipcom_ffs
+
+ipcom_file.o:
+00000004 C ipcom_file_empty_file
+
+ipcom_flow_fingerprint.o:
+00000000 T ipcom_flow_fingerprint
+         U ipcom_hash_update
+
+ipcom_func.o:
+00000000 T ipcom_proc_malloc
+         U calloc
+00000050 T ipcom_proc_free
+         U ipcom_pipe_free
+         U free
+00000000 D ipcom_priority_map
+
+ipcom_generic_llpipe.o:
+00000000 t ipcom_lockless_pipe_dtor_helper
+0000001c t ipcom_lockless_pipe_dtor
+00000024 t ipcom_lockless_pipe_new_fifo
+00000098 t ipcom_lockless_pipe_poll_send
+00000110 t ipcom_lockless_pipe_send
+00000118 t ipcom_lockless_pipe_try_send
+00000120 t ipcom_lockless_pipe_poll_recv
+000001a4 t ipcom_lockless_pipe_recv
+000001c4 t ipcom_lockless_pipe_recv_with_tmo
+00000000 d ipcom_generic_llpipe_ops.63
+         U free
+         U calloc
+         U ipcom_atomic_set
+         U ipcom_atomic_get
+         U ipcom_proc_yield
+         U ipcom_wmb
+         U ipcom_rmb
+         U ipcom_microtime
+000002bc T ipcom_pipe_lockless_create
+
+ipcom_generic_pipe.o:
+00000000 t ipcom_generic_pipe_try_recv_locked
+00000080 t ipcom_generic_pipe_try_send_locked
+000000d8 t ipcom_generic_pipe_dtor_helper
+0000012c t ipcom_generic_pipe_dtor
+00000134 t ipcom_generic_pipe_new_fifo
+000001cc t ipcom_generic_pipe_send
+00000248 t ipcom_generic_pipe_try_send
+000002a4 t ipcom_generic_pipe_recv_with_tmo
+00000380 t ipcom_generic_pipe_recv
+00000000 d ipcom_generic_pipe_ops.75
+         U ipcom_spinlock_delete
+         U ipcom_block_delete
+         U ipcom_sem_delete
+         U free
+         U calloc
+         U ipcom_spinlock_create
+         U ipcom_getpid
+         U ipcom_block_create
+         U ipcom_sem_create
+         U ipcom_spinlock_lock
+         U ipcom_spinlock_unlock
+         U ipcom_sem_wait
+         U ipcom_block_post
+         U __div32
+         U ipcom_block_wait
+         U ipcom_sem_post
+000003b4 T ipcom_pipe_generic_create
+
+ipcom_generic_slab.o:
+00000000 t ipcom_memory_pool_free
+00000050 t ipcom_memory_pool_alloc
+000000f0 t ipcom_slab_get_size
+000001c0 t ipcom_slab_dtor_objs
+00000274 t ipcom_slab_garbage_collect
+000002c8 t ipcom_memory_pool_garbage_collect
+00000318 t ipcom_cmd_slab
+000004ac t ipcom_slab_init
+         U ipcom_sys_free
+         U free
+         U ipcom_atomic_add
+         U ipcom_atomic_sub_and_return
+         U ipcom_sys_malloc
+         U memset
+         U calloc
+         U __udiv32
+0000020c T ipcom_slab_gc_empties
+         U ipcom_spinlock_lock
+         U ipcom_list_init
+         U ipcom_spinlock_unlock
+         U ipcom_list_first
+         U ipcom_list_next
+         U ipcom_getopt_clear_r
+         U ipcom_getopt_r
+00000004 C ipcom_slab_memory_pool_list
+         U ipcom_atomic_get
+         U printf
+         U ipcom_shell_add_cmd
+000004e8 T ipcom_memory_pool_new
+00000000 D ipcom_slab_once
+         U ipcom_once
+         U strlen
+         U malloc
+         U strcpy
+         U ipcom_atomic_set
+         U ipcom_list_insert_last
+00000570 T ipcom_slab_new
+         U ipcom_spinlock_create
+00000634 T ipcom_slab_add
+00000770 T ipcom_slab_alloc_try
+         U ipcom_list_remove
+00000898 T ipcom_slab_alloc_from
+00000928 T ipcom_slab_free_nogc
+         U ipcom_list_insert_first
+00000a28 T ipcom_slab_free
+00000a4c T ipcom_slab_extract_empties
+00000aac T ipcom_slab_get_objects_per_slab
+
+ipcom_getenv.o:
+00000000 T ipcom_getenv
+         U getenv
+00000004 T ipcom_setenv
+         U snprintf
+         U putenv
+0000004c T ipcom_unsetenv
+0000008c T ipcom_clearenv
+00000094 T ipcom_getenv_as_int
+         U atoi
+000000bc T ipcom_setenv_as_int
+         U sprintf
+
+ipcom_gethostby.o:
+00000000 t ipcom_gethostip
+00000120 t ipcom_gethost_static
+00000000 b ipcom_he_result
+00000014 b ipcom_he_buffer
+         U ipcom_if_nameindex
+         U ipcom_socket
+         U strncpy
+         U ipcom_socketioctl
+         U strcmp
+         U ipcom_socketclose
+         U ipcom_if_freenameindex
+         U memcpy
+         U strlen
+         U ipcom_errno_set
+         U strcpy
+000001f0 T ipcom_gethostbynamelocal
+         U hostTblInit
+         U getlhostbyname
+         U hostentFree
+00000288 T ipcom_gethostbyname_r
+         U gethostname
+         U ipcom_dns_init_ok
+         U ipcom_dns
+00000388 T ipcom_gethostbyname
+00000004 C ipcom_h_errno
+00000470 T ipcom_gethostbyaddrlocal
+         U getlhostbyaddr
+000004ec T ipcom_gethostbyaddr_r
+000005a8 T ipcom_gethostbyaddr
+
+ipcom_getinaddrprefixbyaddr.o:
+00000000 T ipcom_getinaddrprefixbyaddr
+         U strdup
+         U ipcom_inet_pton
+         U atoi
+         U free
+         U ipcom_errno_set
+000000dc T ipcom_getinaddrprefixbyaddr2
+
+ipcom_getinfo.o:
+00000000 T ipcom_getnameinfo
+         U ipcom_getnameinfo2
+00000030 T ipcom_getaddrinfo
+         U ipcom_getaddrinfo2
+00000034 T ipcom_freeaddrinfo
+         U ipcom_freeaddrinfo2
+
+ipcom_getinfo2.o:
+00000000 t ipcom_getaddrinfo_alloc
+         U malloc
+         U memset
+         U free
+00000060 T ipcom_getnameinfo2
+         U ipcom_gethostbyaddrlocal
+         U ipcom_dns_init_ok
+         U ipcom_dns
+         U strlen
+         U strcpy
+         U ipcom_inet_ntop
+         U sprintf
+         U strcat
+         U ipcom_getservbyport
+         U snprintf
+0000044c T ipcom_freeaddrinfo2
+0000049c T ipcom_getaddrinfo2
+         U memcpy
+         U ipcom_getsockaddrbyaddr
+         U ipcom_inet_pton
+         U ipcom_gethostbynamelocal
+         U strchr
+         U strdup
+         U ipcom_getservbyname
+         U strtol
+         U strcmp
+
+ipcom_getline.o:
+00000000 t ipcom_getline_getone
+00000054 t ipcom_getline_putraw
+000000c8 t ipcom_getline_putone
+0000018c t ipcom_getline_putbuf
+000001e4 t ipcom_getline_left_arrow
+000002c8 t ipcom_getline_right_arrow
+00000384 t ipcom_getline_cursor_home
+000003d0 t ipcom_getline_cursor_end
+00000424 t ipcom_getline_backspace
+00000534 t ipcom_getline_ctrl_d
+000005a0 t ipcom_getline_paste_clipboard
+000006d0 t ipcom_getline_right_kill
+000007d0 t ipcom_getline_window_resize
+00000a60 t ipcom_getline_up_arrow
+00000b44 t ipcom_getline_down_arrow
+00000c10 t ipcom_getline_add_history
+00000ce0 t ipcom_getline_restore_history
+00000d6c t ipcom_getline_save_history
+         U getchar
+         U ipcom_socketread_usr
+         U printf
+         U ipcom_socketwrite_usr
+         U __rem32
+0000000f D lf
+0000000d D cr
+         U __div32
+00000000 D up_arrow
+00000006 D right_arrow
+00000009 D left_arrow
+         U memmove
+0000000c D space
+         U strlen
+         U memcpy
+         U free
+         U malloc
+00000003 D down_arrow
+         U ipcom_list_first
+         U ipcom_list_next
+         U ipcom_list_last
+         U strcpy
+         U ipcom_list_prev
+         U strcmp
+         U ipcom_list_remove
+         U ipcom_list_insert_first
+         U ipcom_fopen
+         U fgetc
+         U ipcom_fclose
+         U fprintf
+00000ddc T ipcom_getline_init
+         U memset
+         U ipcom_list_init
+00000e3c T ipcom_getline_exit
+00000ea4 T ipcom_getline
+         U ipcom_stdio_get_line_opts
+         U ipcom_stdio_set_opt_line
+         U ipcom_stdio_set_echo
+         U ipcom_stdio_set_line_opts
+
+ipcom_getopt.o:
+00000000 t ipcom_getopt_longopt
+         U strncmp
+         U strlen
+000000a4 T ipcom_getopt_clear_r
+000000d8 T ipcom_getopt_clear
+00000004 C ipcom_getopt_data
+000000e0 T ipcom_getopt_r
+         U ipcom_stderr
+         U fprintf
+         U strchr
+00000480 T ipcom_getopt
+
+ipcom_getput.o:
+
+ipcom_getservby.o:
+00000000 t ipcom_find_service_byname
+00000000 d services
+000000a8 t ipcom_find_service_byport
+00000000 b se.34
+00000000 d s_aliases.35
+00000010 b se.42
+0000000c d s_aliases.43
+         U strcmp
+00000110 T ipcom_getservbyname
+00000180 T ipcom_getservbyport
+
+ipcom_getsockaddrbyaddr.o:
+00000000 T ipcom_getsockaddrbyaddr
+         U memset
+         U ipcom_inet_pton
+         U strchr
+         U ipcom_if_nametoindex
+         U isdigit
+         U strtoul
+         U strtol
+000002e4 T ipcom_getsockaddrbyaddrname
+         U ipcom_getaddrinfo
+         U memcpy
+         U ipcom_freeaddrinfo
+         U ipcom_errno_get
+
+ipcom_getuid.o:
+00000000 T ipcom_getuid
+
+ipcom_gmtime.o:
+00000000 T ipcom_tzset
+
+ipcom_hash.o:
+000000c4 t ipcom_hash_resize
+00000174 t ipcom_hash_can_move_obj
+00000000 T ipcom_hash_add
+         U __urem32
+         U calloc
+         U ipcom_syslog
+         U free
+00000194 T ipcom_hash_new
+         U malloc
+00000204 T ipcom_hash_delete
+00000230 T ipcom_hash_remove
+00000000 T ipcom_hash_get
+00000350 T ipcom_hash_for_each
+000003e0 T ipcom_hash_update
+
+ipcom_heap_sort.o:
+00000000 t ipcom_heap_sort_downheap
+         U memcpy
+000000c4 T ipcom_heap_sort
+
+ipcom_hostname.o:
+
+ipcom_ifaddrs.o:
+00000000 t ipcom_ifaddrs_free
+00000054 t ipcom_create_ifaddrs_entry
+00000124 t ipcom_create_ifaddrs_inet
+000001c8 t ipcom_create_ifaddrs_inet6
+         U free
+         U calloc
+         U strdup
+         U malloc
+         U memcpy
+         U ipnet_cmd_init_addrs
+         U memset
+         U ipcom_socketioctl_usr
+000002bc T ipcom_getifaddrs
+         U ipcom_sysctl
+         U ipcom_errno_get
+         U ipcom_syslog
+         U ipcom_socket_usr
+         U ipcom_socketclose_usr
+000004b8 T ipcom_freeifaddrs
+
+ipcom_inet.o:
+00000000 b ipprot.8
+00000000 T ipcom_ipproto_name
+         U sprintf
+00000164 T ipcom_cmsg_nxthdr
+00000000 D ip_inaddr_any
+
+ipcom_inet_ntop.o:
+00000000 T ipcom_inet_ntop
+         U inet_ntop
+
+ipcom_inet_pton.o:
+00000000 T ipcom_inet_pton
+         U memset
+         U sscanf
+         U inet_pton
+000000d0 T ipcom_inet_aton
+         U inet_aton
+
+ipcom_inet6.o:
+00000000 T ipcom_inet6_rth_space
+00000020 T ipcom_inet6_rth_init
+         U memset
+0000007c T ipcom_inet6_rth_add
+         U memcpy
+000000d0 T ipcom_inet6_rth_segments
+000000ec T ipcom_inet6_rth_getaddr
+00000130 T ipcom_inet6_rth_reverse
+         U __div32
+00000220 T ipcom_inet6_opt_init
+00000270 T ipcom_inet6_opt_append
+00000338 T ipcom_inet6_opt_finish
+0000038c T ipcom_inet6_opt_set_val
+000003bc T ipcom_inet6_opt_next
+0000046c T ipcom_inet6_opt_find
+000004c4 T ipcom_inet6_opt_get_val
+00000000 D ip_in6addr_any
+00000010 D ip_in6addr_loopback
+
+ipcom_init.o:
+00000000 t ipcom_create_ipproduct
+         U memset
+         U ipcom_ipd_products
+         U ipcom_syslog
+         U ipcom_openlog
+         U ipcom_ipd_start
+000001a4 T ipcom_start
+         U ipcom_usr_create
+         U ipcom_configure
+         U ipcom_random_init
+
+ipcom_ipd.o:
+00000000 t ipcom_ipd_socket_clear
+00000034 t ipcom_ipd_socket
+000001b8 t ipcom_ipd_isstarted
+         U ipcom_getsockopt_usr
+         U ipcom_socket_usr
+         U ipcom_sleep
+         U ipcom_ipd_products
+         U memset
+         U ipcom_bind_usr
+         U ipcom_errno_get
+         U ipcom_socketclose_usr
+         U strerror
+         U ipcom_syslog
+         U ipcom_connect_usr
+         U ipcom_socketwrite_usr
+         U __rem32
+         U ipcom_socketselect_usr
+         U ipcom_socketread_usr
+0000030c T ipcom_ipd_init
+         U strcmp
+000004e8 T ipcom_ipd_exit
+00000564 T ipcom_ipd_input_process
+000005d0 T ipcom_ipd_input
+00000610 T ipcom_ipd_start
+000007a4 T ipcom_ipd_read
+000007f0 T ipcom_ipd_sendmsg
+00000a18 T ipcom_ipd_datamsg
+00000c5c T ipcom_ipd_send
+00000c84 T ipcom_ipd_kill
+00000c8c T ipcom_ipd_reconfigure
+
+ipcom_job_queue.o:
+00000000 t ipcom_job_action_auto_clean
+00000000 b ipcom_job_slab
+0000002c t ipcom_singleton_job_action
+0000005c t ipcom_job_queue_prio_to_vxjob_prio
+00000004 b ipcom_system_ticks_per_sec
+00000008 b ipcom_max_delay
+         U ipcom_slab_free
+         U vxAtomic32Set
+00000098 T ipcom_job_queue_init
+         U sysClkRateGet
+         U __div32
+         U ipcom_cache_line_size
+         U ipcom_slab_new
+00000110 T ipcom_job_queue_singleton_new
+         U ipcom_slab_alloc_try
+00000178 T ipcom_job_queue_singleton_delete
+         U wdDelete
+000001a4 T ipcom_job_queue_schedule_singleton
+         U netDaemonQ
+         U jobQueuePost
+000001ec T ipcom_job_queue_schedule_singleton_delayed
+         U wdCreate
+         U __mul64
+         U __div64
+         U wdStart
+000002c0 T ipcom_job_queue_schedule
+
+ipcom_job_queue_pipe.o:
+00000000 t ipcom_job_queue_pipe_try_recv_locked
+00000080 t ipcom_job_queue_pipe_try_send_locked
+000000d8 t ipcom_job_queue_pipe_dtor_helper
+0000013c t ipcom_job_queue_pipe_dtor
+00000144 t ipcom_job_queue_pipe_new
+00000214 t ipcom_job_queue_pipe_send
+00000288 t ipcom_job_queue_pipe_try_send
+000002d8 t ipcom_job_queue_pipe_try_recv
+00000338 t ipcom_job_queue_pipe_recv
+00000000 d ipcom_job_queue_pipe_ops.65
+         U ipcom_job_queue_singleton_delete
+         U ipcom_spinlock_delete
+         U ipcom_sem_delete
+         U free
+         U calloc
+         U ipcom_spinlock_create
+         U ipcom_sem_create
+         U ipcom_job_queue_singleton_new
+         U ipcom_getpid
+         U ipcom_spinlock_lock
+         U ipcom_spinlock_unlock
+         U ipcom_sem_wait
+         U ipcom_job_queue_schedule_singleton
+         U ipcom_sem_post
+00000340 T ipcom_pipe_job_queue_create
+00000384 T ipcom_job_queue_pipe_schedule
+
+ipcom_list.o:
+00000000 T ipcom_list_init
+00000018 T ipcom_list_first
+00000030 T ipcom_list_last
+00000048 T ipcom_list_next
+00000060 T ipcom_list_prev
+00000078 T ipcom_list_insert_first
+000000a4 T ipcom_list_insert_last
+000000cc T ipcom_list_insert_before
+000000fc T ipcom_list_insert_after
+0000012c T ipcom_list_remove
+0000015c T ipcom_list_unlink_head
+
+ipcom_malloc.o:
+00000000 T ipcom_free
+         U free
+00000020 T ipcom_calloc
+         U calloc
+00000024 T ipcom_realloc
+         U realloc
+00000028 T ipcom_malloc
+         U malloc
+00000040 T ipcom_cache_line_size
+         U cacheArchAlignSize
+
+ipcom_mask.o:
+00000000 T ipcom_mask_to_prefixlen
+0000005c T ipcom_sockaddr_to_prefixlen
+
+ipcom_mcmd_ifconfig.o:
+00000000 t ipcom_mcmd_ifconfig_create_mask
+00000070 t ipnet_ifconfig_if_change_state
+00000134 t ipnet_ifconfig_if_change_dhcp
+000001bc t ipnet_ifconfig_ipv4_add_delete
+000002e4 t ipnet_ifconfig_ipv6_add
+00000430 t ipcom_mcmd_ifconfig_parse_arg
+00000020 d ipnet_af_map
+00000000 d ipnet_cmd_map
+00000038 d ipnet_option_map
+00000018 d ipnet_switch_map
+         U __div32
+         U __rem32
+         U memset
+         U ipcom_if_indextoname
+         U ipcom_socketioctl_usr
+         U ipcom_errno_get
+         U strerror
+         U printf
+         U time
+         U ipcom_cmd_str_to_key
+         U ipcom_inet_pton
+         U strstr
+         U strlen
+         U atoi
+000008d4 T ipcom_mcmd_ifconfig
+         U strcmp
+         U ipcom_socket_usr
+         U ipcom_if_nametoindex
+         U ipcom_socketclose_usr
+
+ipcom_mcmd_route.o:
+00000000 t ipnet_cmd_route_create_mask
+00000070 t ipnet_cmd_route_set_mask_from_prefixlen
+000000f0 t ipnet_cmd_route_issue_request
+0000030c t ipnet_cmd_route_parse_arg
+00000b48 t ipcom_mcmd_route_add
+         U __div32
+         U __rem32
+         U atoi
+         U printf
+         U malloc
+         U ipcom_getpid
+         U ipcom_random
+         U memset
+         U memcpy
+         U ipcom_send_usr
+         U ipcom_recv_usr
+         U ipcom_errno_get
+         U strcmp
+         U ipcom_if_nametoindex
+         U ipcom_getsockaddrbyaddrname
+         U strstr
+         U strlen
+         U ipcom_cmd_sockaddr_to_str
+         U free
+00000c40 T ipcom_mcmd_route
+         U ipcom_socket_usr
+         U ipcom_setsockopt_usr
+         U strerror
+         U ipcom_socketclose_usr
+
+ipcom_mktime.o:
+00000004 C ipcom_mktime_empty_file
+
+ipcom_mshell.o:
+00000004 C ipcom_mshell_empty_file
+
+ipcom_mutex.o:
+00000000 T ipcom_mutex_create
+         U semMCreate
+         U kernelId
+         U objOwnerSet
+         U semDelete
+0000004c T ipcom_mutex_delete
+00000000 T ipcom_mutex_lock
+         U semTake
+00000008 T ipcom_mutex_unlock
+         U semGive
+
+ipcom_netlink.o:
+00000000 t ipcom_netlink_rtnl_translate_ifflags
+00000228 t ipcom_netlink_rtnl_translate_family
+00000270 t ipcom_netlink_rtnl_translate_route
+000002e8 t ipcom_netlink_rtnl_translate_link
+00000330 t ipcom_netlink_rtnl_translate_neigh
+00000370 T ipcom_netlink_rtnl_translate
+00000420 T ipcom_netlink_addattr_l
+         U memcpy
+00000498 T ipcom_netlink_rta_addattr_l
+00000524 T ipcom_netlink_addattr_l_begin
+0000056c T ipcom_netlink_addattr_l_end
+00000590 T ipcom_netlink_nlmsghdr_init
+         U memset
+
+ipcom_normpath.o:
+00000000 T ipcom_normpath
+         U strdup
+         U strlen
+         U calloc
+         U free
+         U ipcom_errno_set
+         U strtok_r
+         U strcpy
+         U strcmp
+         U strcat
+
+ipcom_observer.o:
+00000000 T ipcom_observer_notify
+         U ipcom_list_first
+         U ipcom_list_next
+
+ipcom_once.o:
+00000000 T ipcom_once
+00000004 C ipcom_once_mutex
+         U ipcom_mutex_lock
+         U ipcom_sem_create
+         U ipcom_mutex_unlock
+         U ipcom_sem_wait
+         U ipcom_sem_delete
+         U ipcom_sem_post
+
+ipcom_os.o:
+00000000 t millisec2tick
+0000003c t find_open_q
+000001ec t delete_open_q
+000002a0 t delete_open_q_2
+000002b8 t ipcom_ipc_free_inqueue_msgs
+00000000 b loop.197
+         U sysClkRateGet
+         U __div32
+         U ipcom_port
+         U ipcom_list_first
+         U strcmp
+         U ipcom_list_next
+00000098 T ipcom_block_delete
+         U semDelete
+000000cc T ipcom_block_wait
+         U semTake
+         U __div64
+         U __errno
+         U errnoSet
+         U ipcom_list_remove
+         U semGive
+         U ipcom_sem_wait
+         U ipcom_errno_get
+         U ipcom_syslog
+         U ipcom_sem_delete
+         U free
+000002f4 T ipcom_sleep
+         U taskDelay
+0000030c T ipcom_millisleep
+         U __mul64
+         U __udiv64
+00000350 T ipcom_getpid
+         U taskIdSelf
+00000354 T ipcom_is_pid_valid
+         U taskIdVerify
+00000000 T ipcom_interrupt_disable
+         U intLock
+00000004 T ipcom_interrupt_enable
+         U intUnlock
+00000008 T ipcom_preempt_disable
+0000001c T ipcom_preempt_enable
+00000378 T ipcom_block_create
+         U semBCreate
+         U kernelId
+         U objOwnerSet
+000003c8 T ipcom_block_reader_create
+         U taskTcb
+00000448 T ipcom_block_post
+0000044c T ipcom_proc_getprio
+         U taskPriorityGet
+         U ipcom_priority_map
+00000494 T ipcom_cpu_is_online
+         U vxCpuEnabledGet
+000004bc T ipcom_proc_cpu_affinity_set
+         U taskCpuAffinitySet
+0000054c T ipcom_proc_acreate
+         U memcpy
+         U memset
+         U taskStackSizeGet
+         U taskCreate
+         U taskActivate
+00000678 T ipcom_proc_acreate_v1
+         U netTaskPriority
+000007d8 T ipcom_proc_attr_init
+000007f4 T ipcom_proc_create
+00000840 T ipcom_vxworks_proc_free
+         U ipcom_mutex_lock
+         U ipcom_proc_free
+         U ipcom_mutex_unlock
+00000898 T ipcom_proc_exit
+         U taskDelete
+000008f0 T ipcom_proc_find
+0000090c T ipcom_proc_self
+         U ipcom_proc_malloc
+         U ipcom_sem_create
+         U ipcom_list_init
+00000988 T ipcom_proc_init
+0000098c T ipcom_proc_yield
+000009bc T ipcom_vxworks_task_del_hook
+         U ipcom_rtp_tcb_index_get_fd
+         U taskReservedFieldGet
+         U ipnet_conf_max_sockets_offset
+         U ipnet_shared_data
+         U ipnet_release_sock
+00000a30 T ipcom_proc_setprio
+         U taskPrioritySet
+00000a70 T ipcom_get_cpuid
+         U vxCpuIndexGet
+00000a74 T ipcom_get_true_cpuid
+         U vxCpuIdGet
+00000a78 T ipcom_num_configured_cpus
+         U vxCpuConfiguredGet
+00000a7c T ipcom_num_online_cpus
+00000ac4 T ipcom_cpu_reserved_alloc
+00000acc T ipcom_cpu_reserved_free
+00000ad4 T ipcom_proc_cpu_affinity_clr
+00000b04 T ipcom_proc_cpu_affinity_get
+         U taskCpuAffinityGet
+00000b90 T ipcom_proc_cpu_affinity_set_all
+         U malloc
+         U taskIdListGet
+         U taskIdListSort
+         U taskInfoGet
+         U strlen
+         U strncmp
+00000c54 T ipcom_mb
+00000c58 T ipcom_rmb
+00000c5c T ipcom_wmb
+00000c60 T ipcom_ipc_install
+         U taskName
+00000cd8 T ipcom_ipc_uninstall
+00000d58 T ipcom_ipc_open
+         U taskNameToId
+         U strcpy
+         U ipcom_list_insert_last
+         U ipcom_sem_post
+00000eac T ipcom_ipc_close
+00000ec0 T ipcom_ipc_isopen
+00000ed8 T ipcom_ipc_malloc
+00000f10 T ipcom_ipc_free
+00000f44 T ipcom_ipc_size
+00000f58 T ipcom_ipc_send
+00001008 T ipcom_ipc_receive
+000010d8 T ipcom_mipc_addr2offset
+000010dc T ipcom_mipc_offset2addr
+000010e0 T ipcom_stack_suspend
+         U netDaemonsSuspend
+000010fc T ipcom_stack_resume
+         U netDaemonsResume
+00001100 T ipcom_stack_exclusive
+         U netDaemonsExclusive
+
+ipcom_perror.o:
+00000000 T ipcom_perror
+         U perror
+
+ipcom_pfile.o:
+00000000 T ipcom_fileclose
+         U close
+00000004 T ipcom_fileread
+         U read
+00000008 T ipcom_fileopen
+         U open
+0000000c T ipcom_fopen
+         U fopen
+00000010 T ipcom_fclose
+         U fclose
+00000014 T ipcom_fwrite
+         U fwrite
+00000018 T ipcom_fread
+         U fread
+0000001c T ipcom_fileno
+00000048 T ipcom_unlink
+         U unlink
+0000004c T ipcom_ferror
+00000080 T ipcom_feof
+000000b4 T ipcom_fseek
+         U fseek
+000000b8 T ipcom_ftell
+         U ftell
+000000bc T ipcom_lseek
+         U lseek
+000000c0 T ipcom_rename
+         U rename
+000000c4 T ipcom_fdopen
+         U fdopen
+000000c8 T ipcom_getcwd
+         U getcwd
+000000cc T ipcom_mkdir
+0000010c T ipcom_fflush
+         U fflush
+00000110 T ipcom_filewrite
+         U write
+00000114 T ipcom_rewind
+00000120 T ipcom_shell_fread
+00000124 T ipcom_shell_fwrite
+
+ipcom_pipe.o:
+00000000 t ipcom_pipe_register_type_int
+00000000 b ipcom_pipe_mutex
+00000004 b ipcom_pipe_types
+000000a4 t ipcom_pipe_init
+00000000 d ipcom_pipe_once
+         U ipcom_mutex_lock
+         U ipcom_mutex_unlock
+         U ipcom_mutex_create
+         U memset
+         U ipcom_pipe_generic_create
+         U ipcom_pipe_lockless_create
+         U ipcom_pipe_job_queue_create
+         U ipnet_pipe_create
+00000124 T ipcom_pipe_attr_init
+00000130 T ipcom_pipe_new
+         U ipcom_once
+         U malloc
+         U ipcom_getpid
+         U memcpy
+         U free
+000001f8 T ipcom_pipe_free
+00000228 T ipcom_pipe_register_type
+0000000c D ipcom_pipe_tv_zero
+
+ipcom_pkt.o:
+00000000 T ipcom_pkt_buffer_malloc
+         U malloc
+00000004 T ipcom_pkt_buffer_free
+         U free
+
+ipcom_pkt_util.o:
+00000000 t ipcom_pkt_copy
+00000000 d zero.44
+00000478 t ipcom_pkt_trim_tail_helper
+         U memcpy
+00000068 T ipcom_pkt_alloc_info
+000000c8 T ipcom_pkt_get_info_and_size
+00000128 T ipcom_pkt_set_info
+         U memmove
+00000174 T ipcom_pkt_create_info
+000001c4 T ipcom_pkt_get_info
+000001cc T ipcom_pkt_get_info_safe
+000001ec T ipcom_pkt_copy_info
+00000250 T ipcom_pkt_sg_get_data
+00000280 T ipcom_pkt_make_linear
+         U ipcom_pkt_malloc
+         U ipcom_pkt_free
+00000350 T ipcom_pkt_trim_head
+000004f8 T ipcom_pkt_trim_tail
+
+ipcom_pqueue.o:
+00000000 t ipcom_pqueue_upheap
+0000009c t ipcom_pqueue_downheap
+0000016c T ipcom_pqueue_new
+         U calloc
+         U malloc
+         U free
+000001cc T ipcom_pqueue_delete
+000001e8 T ipcom_pqueue_insert
+         U realloc
+00000268 T ipcom_pqueue_remove
+00000304 T ipcom_pqueue_remove_next
+00000000 T ipcom_pqueue_get
+0000030c T ipcom_pqueue_get_next
+00000328 T ipcom_pqueue_for_each
+0000037c T ipcom_pqueue_size
+00000384 T ipcom_pqueue_nop_store_index
+
+ipcom_printf.o:
+
+ipcom_prof.o:
+00000000 b ipcom_prof_data
+00000030 t ipcom_prof_init
+00000000 d once.11
+00000000 T ipcom_prof_clear
+         U memset
+00000c6c T ipcom_cmd_prof
+         U ipcom_shell_add_cmd
+0000007c T ipcom_prof_stopped
+00000090 T ipcom_prof_enter
+         U ipcom_once
+         U ipcom_microtime
+00000184 T ipcom_prof_push
+000001dc T ipcom_prof_pop
+000001f0 T ipcom_prof_dump
+         U printf
+000002e8 T ipcom_prof_summary
+         U ipcom_list_init
+         U ipcom_list_first
+         U ipcom_list_next
+         U malloc
+         U ipcom_list_insert_first
+         U ipcom_list_remove
+         U ipcom_list_insert_before
+         U __udiv32
+         U free
+0000064c T ipcom_prof_sequence
+         U ipcom_list_insert_last
+00000c64 T ipcom_prof_void
+         U ipcom_getopt_clear_r
+         U ipcom_getopt_r
+         U atoi
+         U strcmp
+
+ipcom_pshell.o:
+00000000 t ipcom_pshell_spawn_proxy
+000003ec t ipcom_pshell_stdio_proxy
+000000ec t ipcom_pshell_proxy_data
+00000264 t ipcom_pshell_create_pty
+000007b0 t ipcom_vxshell_login_task
+000007a8 t ipcom_vxworks_shell_logout_cb
+         U ipcom_syslog
+         U ipcom_shell_ctx_copy
+         U taskIdSelf
+         U snprintf
+         U taskPriorityGet
+         U taskSpawn
+         U ipcom_errno_get
+         U strerror
+         U read
+         U write
+         U tyBackspaceChar
+         U ioctl
+         U bzero
+         U select
+         U ptyDevCreate
+         U open
+         U ptyDevRemove
+         U close
+         U malloc
+         U ipcom_getpid
+         U ipcom_sem_create
+         U __errno
+         U sysClkRateGet
+         U __div32
+         U taskDelay
+         U tyEOFGet
+         U shutdown
+         U ipcom_sem_wait
+         U ipcom_sem_delete
+         U free
+         U ipcom_sem_post
+         U ipcom_shell_ctx_get_user
+         U shellParserControl
+         U ipcom_shell_ctx_free
+0000085c T ipcom_start_shell_native
+         U memset
+         U ipcom_getaddrinfo
+         U socket
+         U bind
+         U listen
+         U getsockname
+         U connect
+         U accept
+         U setsockopt
+         U tyAbortFuncGet
+         U ipcom_freeaddrinfo
+00000b44 T ipcom_stdio_get_line_opts
+00000b84 T ipcom_stdio_set_line_opts
+00000b9c T ipcom_stdio_set_opt_line
+00000be8 T ipcom_stdio_set_echo
+
+ipcom_psock.o:
+00000000 t ipcom_psock_ipoptname_to_optname
+000000c8 T ipcom_socket_usr
+         U socket
+000000cc T ipcom_socketclose_usr
+         U close
+000000f8 T ipcom_shutdown_usr
+         U shutdown
+00000110 T ipcom_bind_usr
+         U bind
+00000128 T ipcom_connect_usr
+         U connect
+0000012c T ipcom_listen_usr
+         U listen
+00000130 T ipcom_accept_usr
+         U accept
+00000148 T ipcom_setsockopt_usr
+         U setsockopt
+000001a0 T ipcom_getsockopt_usr
+         U getsockopt
+000001f8 T ipcom_getsockname_usr
+         U getsockname
+000001fc T ipcom_getpeername_usr
+         U getpeername
+00000200 T ipcom_send_usr
+         U send
+0000022c T ipcom_socketwrite_usr
+00000234 T ipcom_socketwritev_usr
+         U writev
+00000238 T ipcom_sendto_usr
+         U sendto
+00000258 T ipcom_socketread_usr
+         U recv
+00000260 T ipcom_recv_usr
+00000264 T ipcom_recvfrom_usr
+         U recvfrom
+00000284 T ipcom_recvmsg_usr
+         U recvmsg
+00000288 T ipcom_sendmsg_usr
+         U sendmsg
+0000028c T ipcom_socketselect_usr
+         U select
+000002ac T ipcom_socketioctl_usr
+         U ipcom_getpid
+         U ioctl
+
+ipcom_ramdisk.o:
+00000000 T vxfs_ramdisk_init
+         U strlcpy
+         U strlen
+         U xbdRamDiskDevCreate
+         U dosFsVolFormat
+
+ipcom_random.o:
+00000000 T ipcom_random_init
+         U ipcom_gettimeofday
+         U ipcom_getpid
+         U ipcom_hash_update
+         U randAdd
+00000068 T ipcom_random
+         U randPseudoBytes
+00000088 T ipcom_srandom
+000000b8 T ipcom_rand
+         U __urem32
+000000f4 T ipcom_srand
+00000118 T ipcom_random_seed_state
+         U randStatus
+
+ipcom_route.o:
+00000000 t ipcom_patricia_search
+00000088 t ipcom_route_walk_subtree
+00000164 t ipcom_route_init_subtree_mask2
+00000500 t ipcom_route_init_subtree_mask_cb
+000002c4 t ipcom_patricia_insert
+00000558 t ipcom_route_free_subtree_cb
+0000018c T ipcom_route_key_cmp
+         U malloc
+         U memset
+         U free
+0000059c T ipcom_route_next_entry
+00000600 T ipcom_route_first_entry
+00000648 T ipcom_route_lookup
+         U ipcom_set_new
+         U ipcom_set_contains
+         U ipcom_set_add
+         U ipcom_set_delete
+000007e0 T ipcom_route_new_table
+         U __div32
+000008d4 T ipcom_route_free_table
+00000908 T ipcom_route_add
+0000095c T ipcom_route_remove
+00000a88 T ipcom_route_walk_tree
+00000b1c T ipcom_route_walk_tree_backwards
+00000cf0 T ipcom_route_init_subtree_mask
+
+ipcom_rwsem.o:
+00000000 T ipcom_rwsem_create
+         U semRWCreate
+00000038 T ipcom_rwsem_delete
+         U semDelete
+00000080 T ipcom_rwsem_lock_mode
+         U vxAtomic32Get
+00000000 T ipcom_rwsem_wait_rd
+         U vxAtomic32Cas
+         U semRMinTakeHard
+00000058 T ipcom_rwsem_wait_wr
+         U semWMinTakeHard
+000000b0 T ipcom_rwsem_post_rd
+         U semRMinGiveHard
+00000108 T ipcom_rwsem_post_wr
+         U semWMinGiveHard
+
+ipcom_sem.o:
+00000000 T ipcom_sem_create
+         U semCCreate
+         U kernelId
+         U objOwnerSet
+         U semDelete
+0000004c T ipcom_sem_delete
+00000000 T ipcom_sem_wait
+         U semTake
+00000008 T ipcom_sem_post
+         U semGive
+0000000c T ipcom_sem_interrupt_post
+00000010 T ipcom_sem_flush
+         U semFlush
+00000014 T ipcom_sem_interrupt_flush
+0000007c T ipcom_sem_getvalue
+         U semInfoGet
+
+ipcom_set.o:
+00000000 t ipcom_set_index
+         U memcmp
+00000054 T ipcom_set_new
+         U malloc
+00000090 T ipcom_set_delete
+         U free
+000000b4 T ipcom_set_clone
+         U memcpy
+00000154 T ipcom_set_contains
+00000178 T ipcom_set_add
+         U realloc
+00000208 T ipcom_set_remove
+000002b0 T ipcom_set_remove_all
+000002d8 T ipcom_set_equal
+00000354 T ipcom_set_subtract
+0000039c T ipcom_set_union
+00000404 T ipcom_set_intersection
+00000470 T ipcom_set_for_each
+
+ipcom_setvbuf.o:
+00000000 T ipcom_setvbuf
+         U setvbuf
+
+ipcom_shell.o:
+00000004 C ipcom_shell_empty_file
+
+ipcom_shell_start.o:
+00000000 T ipcom_start_shell
+00000000 D ipcom_start_shell_ptr
+00000038 T ipcom_set_start_shell_ptr
+00000044 T ipcom_get_start_shell_ptr
+
+ipcom_shellalias.o:
+00000004 C ipcom_shellalias_empty_file
+
+ipcom_shellcmd.o:
+00000000 t ipcom_shellcmd_init
+00000000 d once.17
+00000004 C ipcom_shell_cmd_head
+         U ipcom_list_init
+00000020 T ipcom_shell_find_cmd
+         U ipcom_list_first
+         U strcmp
+         U ipcom_list_next
+00000074 T ipcom_shell_add_cmd
+         U ipcom_once
+         U malloc
+         U memset
+         U strncpy
+         U ipcom_getpid
+         U ipcom_proc_getprio
+         U ipcom_list_insert_last
+         U ipcom_vxshell_add_cmd
+0000017c T ipcom_shell_remove_cmd
+         U ipcom_list_remove
+         U free
+
+ipcom_shellcmd_vxworks.o:
+00000000 T ipcom_vxshell_add_cmd
+         U ipcom_vxshell_add_cmd_hook
+         U ipcom_syslog
+         U malloc
+
+ipcom_shellctx.o:
+00000000 T ipcom_shell_ctx_get
+         U malloc
+         U memcpy
+00000144 T ipcom_shell_ctx_add
+         U free
+000002a4 T ipcom_shell_ctx_new
+         U memset
+00000304 T ipcom_shell_ctx_free
+00000320 T ipcom_shell_ctx_get_user
+00000358 T ipcom_shell_ctx_add_user
+         U strlen
+0000038c T ipcom_shell_ctx_get_clt_addr
+000003d8 T ipcom_shell_ctx_add_local_addr
+000003e8 T ipcom_shell_ctx_get_peer_addr
+00000434 T ipcom_shell_ctx_add_peer_addr
+00000444 T ipcom_shell_ctx_get_int
+00000488 T ipcom_shell_ctx_add_int
+000004b4 T ipcom_shell_ctx_copy
+
+ipcom_shellfile.o:
+00000004 C ipcom_shellfile_empty_file
+
+ipcom_shellio.o:
+00000004 C ipcom_shellio_empty_file
+
+ipcom_signal.o:
+00000000 T ipcom_signal
+
+ipcom_snprintf.o:
+
+ipcom_sock2.o:
+00000000 b cp.8
+00000000 T ipcom_inet_ntoa
+         U ipcom_inet_ntop
+0000003c T ipcom_inet_addr
+         U ipcom_inet_aton
+00000060 T ipcom_getprotobyname
+00000068 T ipcom_getprotobynumber
+
+ipcom_spinlock.o:
+00000000 T ipcom_spinlock_create
+         U malloc
+         U vxAtomicSet
+         U semMCreate
+         U free
+00000070 T ipcom_spinlock_delete
+         U semDelete
+00000000 T ipcom_spinlock_lock
+         U semTake
+00000010 T ipcom_spinlock_unlock
+         U semGive
+000000b0 T ipcom_spinlock_restricted_create
+000000c0 T ipcom_spinlock_restricted_delete
+0000001c T ipcom_spinlock_restricted_lock
+00000030 T ipcom_spinlock_restricted_unlock
+
+ipcom_stdio.o:
+00000000 T ipcom_stdout
+         U __stdout
+0000001c T ipcom_stderr
+         U __stderr
+00000038 T ipcom_stdin
+         U __stdin
+
+ipcom_stdio_syslog.o:
+00000000 t ipcom_stdio_format
+         U malloc
+         U vsnprintf
+00000068 T ipcom_printf_syslog
+         U strlen
+         U free
+000000e8 T ipcom_fprintf_syslog
+         U ipcom_stdout
+         U ipcom_stderr
+         U fputs
+000001a4 T ipcom_fputs_syslog
+00000218 T ipcom_perror_syslog
+00000244 T ipcom_fputc_syslog
+         U fputc
+00000298 T ipcom_putc_syslog
+0000029c T ipcom_putchar_syslog
+000002b8 T ipcom_fwrite_syslog
+         U memcpy
+         U ipcom_fwrite
+00000348 T ipcom_fflush_syslog
+         U ipcom_fflush
+00000380 T ipcom_feof_syslog
+         U ipcom_feof
+000003b8 T ipcom_ferror_syslog
+         U ipcom_ferror
+000003f0 T ipcom_exit_syslog
+         U ipcom_syslog
+         U ipcom_sleep
+
+ipcom_strcasecmp.o:
+00000000 T ipcom_strcasecmp
+         U toupper
+00000074 T ipcom_strncasecmp
+
+ipcom_strdup.o:
+00000004 C ipcom_strdup_empty_file
+
+ipcom_strerror.o:
+00000000 T ipcom_strerror_r
+         U memset
+         U strerror_r
+         U strlen
+         U strcpy
+
+ipcom_strftime.o:
+00000004 C ipcom_strftime_empty_file
+
+ipcom_string_mem.o:
+
+ipcom_strl.o:
+00000004 C ipcom_strlcat_empty_file
+00000004 C ipcom_strlcpy_empty_file
+
+ipcom_strlib.o:
+00000000 T ipcom_parse_argstr
+         U strlen
+         U malloc
+         U memset
+         U realloc
+         U ipcom_syslog
+         U free
+00000194 T ipcom_str_in_list
+         U strstr
+         U strcspn
+         U strncmp
+
+ipcom_strsep.o:
+00000004 C ipcom_strsep_empty_file
+
+ipcom_strto.o:
+
+ipcom_strtok_r.o:
+00000004 C ipcom_strtok_r_empty_file
+
+ipcom_syslog_data.o:
+00000000 D ipcom_syslog_facility_names
+00000100 D ipcom_syslog_priority_names
+
+ipcom_syslogd.o:
+00000000 d ipcom_syslogd_once
+00000000 b ipcom_logd
+000000e4 t ipcom_checklog
+000001ec t ipcom_adjustlog
+00000220 t ipcom_syslogd_log
+00000340 t ipcom_syslogd
+00000124 b buf.114
+00000000 T ipcom_openlog
+000007c8 T ipcom_syslogd_init
+         U ipcom_once
+         U ipcom_interrupt_disable
+         U ipcom_interrupt_enable
+         U malloc
+         U memset
+         U ipcom_sysvar_get_as_int
+         U ipcom_syslog_facility_names
+         U strncpy
+         U strlen
+         U __div32
+         U snprintf
+         U ipcom_unlink
+         U ipcom_rename
+         U ipcom_fopen
+         U ipcom_millisleep
+         U free
+         U fprintf
+         U ipcom_fflush
+         U ipcom_fclose
+         U ipcom_proc_init
+         U ipcom_ipc_install
+         U sprintf
+         U strcpy
+         U ipcom_syslog_priority_names
+         U memcpy
+         U time
+         U ipcom_ctime_r_vxworks
+         U ipcom_ipc_free
+0000055c T ipcom_closelog
+00000560 T ipcom_setlogmask_on
+000005a4 T ipcom_getlogmask_on
+000005e4 T ipcom_setlogfile
+         U strdup
+00000670 T ipcom_setlogudp
+00000678 T ipcom_vsyslog
+         U vsnprintf
+         U ipcom_ipc_malloc
+         U ipcom_getpid
+         U ipcom_ipc_isopen
+         U _func_syslogMsgSendFromIpcom
+000007a0 T ipcom_syslog
+         U _func_ipcom_syslogd
+         U ipcom_ipc_open
+
+ipcom_sysvar.o:
+00000000 t ipcom_sysvar_hash_key
+00000020 t ipcom_sysvar_hash_obj
+00000028 t ipcom_sysvar_hash_cmp
+00000050 t ipcom_sysvar_pqueue_cmp
+00000060 t ipcom_sysvar_pqueue_insert_cb
+0000007c t ipcom_sysvar_tree_get
+00000000 b ipcom_sysvar
+000000d8 t ipcom_sysvar_tree_done
+000000ec t ipcom_sysvar_init
+00000018 b ipcom_sysvar_observers
+00000118 t ipcom_sysvar_release
+00000000 d ipcom_sysvar_once
+00000318 t ipcom_sysvar_getvr_internal
+000007b8 t ipcom_sysvar_unset_cb
+         U strlen
+         U ipcom_hash_update
+         U strcmp
+         U ipcom_pqueue_insert
+         U ipcom_hash_new
+         U memset
+         U ipcom_list_init
+         U ipcom_mutex_create
+         U ipcom_hash_remove
+         U free
+0000014c T ipcom_sysvar_set_tree
+         U ipcom_hash_get
+         U malloc
+         U memcpy
+         U ipcom_hash_add
+         U ipcom_observer_notify
+0000028c T ipcom_sysvar_setvr
+         U ipcom_once
+         U ipcom_mutex_lock
+         U ipcom_mutex_unlock
+         U strdup
+000003e0 T ipcom_sysvar_add_observer
+         U ipcom_list_insert_last
+00000424 T ipcom_sysvar_remove_observer
+         U ipcom_list_remove
+00000454 T ipcom_sysvar_getvr
+00000474 T ipcom_sysvar_get
+0000047c T ipcom_sysvar_get0
+00000484 T ipcom_sysvar_get_descriptive_int0
+         U ipcom_cmd_str_to_key2
+         U atoi
+000004fc T ipcom_sysvar_get_as_int0
+0000051c T ipcom_sysvar_get_descriptive_int_vr
+00000598 T ipcom_sysvar_set
+000005a0 T ipcom_sysvar_set0
+000005a8 T ipcom_sysvar_for_each
+         U ipcom_pqueue_nop_store_index
+         U ipcom_pqueue_new
+         U ipcom_pqueue_delete
+         U ipcom_hash_for_each
+         U strncmp
+         U ipcom_pqueue_remove_next
+000006dc T ipcom_sysvar_unset
+
+ipcom_sysvar_conf.o:
+00000000 T ipcom_sysvar_get_conf
+         U snprintf
+         U ipcom_sysvar_get
+0000011c T ipcom_sysvar_set_conf
+         U ipcom_sysvar_set
+000001ac T ipcom_sysvar_get_conf_as_int
+         U atoi
+
+ipcom_sysvar2.o:
+00000000 T ipcom_sysvar_setv
+         U ipcom_sysvar_set
+00000074 T ipcom_sysvar_get_as_int
+         U ipcom_sysvar_get
+         U atoi
+000000b4 T ipcom_sysvar_get_as_int_vr
+         U ipcom_sysvar_getvr
+000000f8 T ipcom_sysvar_ext_setv
+         U calloc
+         U strchr
+         U strlen
+         U free
+         U memset
+         U strcpy
+         U strtok_r
+         U strcat
+
+ipcom_telnet.o:
+00000000 t ipcom_telnet_createmutex
+00000010 d ipcom_telnet_mutex
+00000030 t ipcom_telnetd_spawn
+0000000c d ipcom_telnet_session_count
+00000000 d ipcom_telnet_max_session_msg
+00000154 t ipcom_telnet_write
+00000278 t ipcom_telnet_negotiate
+000002dc t ipcom_telnet_set_option
+000003ec t ipcom_telnet_respond_option
+000004b4 t ipcom_telnet_input_option
+000005b0 t ipcom_telnet_read
+0000078c t ipcom_telnet_getline
+0000087c t ipcom_telnet_login
+00000000 d ipcom_telnet_mutex_once
+00000f80 t ipcom_telnet_transfer_from_shell_to_client
+         U ipcom_mutex_create
+         U ipcom_sysvar_get_as_int
+         U strlen
+         U ipcom_socketwrite_usr
+         U ipcom_syslog
+         U ipcom_socketclose_usr
+         U ipcom_setsockopt_usr
+         U ipcom_proc_attr_init
+00001018 T ipcom_telnetspawn
+         U ipcom_proc_acreate
+         U ipcom_mutex_lock
+         U ipcom_mutex_unlock
+         U ipcom_ipc_receive
+         U ipcom_ipc_send
+         U __udiv32
+         U malloc
+         U free
+         U ipcom_socketread_usr
+         U memmove
+         U memcpy
+         U ipcom_vxworks_loginStringGet
+         U ipcom_auth_ctx_login
+         U ipcom_sleep
+00000a24 T ipcom_telnetd
+         U ipcom_proc_init
+         U ipcom_once
+         U iptelnets_configure
+         U ipcom_ipc_install
+         U ipcom_socket_usr
+         U ipcom_errno_get
+         U strerror
+         U memset
+         U ipcom_bind_usr
+         U ipcom_listen_usr
+         U ipcom_ipd_init
+         U __rem32
+         U ipcom_socketselect_usr
+         U ipcom_ipd_input
+         U ipcom_accept_usr
+         U ipcom_ipc_uninstall
+         U ipcom_ipd_exit
+         U ipcom_proc_exit
+         U ipcom_ipc_open
+         U ipcom_ipc_malloc
+         U ipcom_ipc_free
+         U ipcom_ipc_close
+         U ipcom_getpid
+         U ipcom_socketioctl_usr
+         U calloc
+         U systemSecurityIsEnabled
+         U ipcom_shell_ctx_new
+         U ipcom_shell_ctx_add_user
+         U ipcom_getsockname_usr
+         U ipcom_shell_ctx_free
+         U ipcom_shell_ctx_add_local_addr
+         U ipcom_shell_ctx_add_int
+         U ipcom_start_shell
+         U ipcom_getsockopt_usr
+         U __div32
+         U ipcom_auth_logout
+         U memset_s
+0000163c T iptelnets_start
+         U ipcom_priority_map
+         U ipcom_proc_acreate_v1
+000016a4 T iptelnets_version
+000016ac T iptelnets_create
+
+ipcom_termios.o:
+00000000 T ipcom_tcgetattr
+         U memset
+00000028 T ipcom_tcsetattr
+
+ipcom_time.o:
+00000000 T ipcom_microtime
+         U clock_gettime
+         U __div32
+00000038 T ipcom_gettimeofday
+00000094 T ipcom_settimeofday
+         U clock_settime
+000000e4 T ipcom_adjtime
+         U clock_adjtime
+00000180 T ipcom_asctime_r_vxworks
+         U asctime_r
+000001a8 T ipcom_ctime_r_vxworks
+         U ctime_r
+
+ipcom_times.o:
+00000000 d start.2
+00000000 T ipcom_times
+         U ipcom_microtime
+         U __div32
+
+ipcom_tmo.o:
+00000000 t ipcom_tickd
+00000000 b ipcom_tmo
+000000ac t ipcom_tmo_init
+00000000 d ipcom_tmo_once
+         U ipcom_proc_init
+         U ipcom_mutex_lock
+         U ipcom_tmo2_get
+         U ipcom_pqueue_remove_next
+         U ipcom_mutex_unlock
+         U ipcom_tmo2_request_timeval
+         U ipcom_pqueue_get_next
+         U ipcom_block_wait
+         U ipcom_block_create
+         U ipcom_mutex_create
+         U ipcom_tmo2_new
+         U ipcom_proc_attr_init
+         U ipcom_proc_acreate
+000000fc T ipcom_tmo_request
+         U ipcom_once
+         U ipcom_tmo2_request
+         U ipcom_block_post
+00000174 T ipcom_tmo_cancel
+         U ipcom_tmo2_cancel
+000001d8 T ipcom_tmo_reset
+         U ipcom_tmo2_reset
+00000224 T ipcom_tmo_get
+
+ipcom_tmo2.o:
+00000000 t ipcom_tmo2_pqueue_cmp_func
+00000094 t ipcom_tmo2_pqueue_store_index
+0000009c T ipcom_tmo2_new
+         U ipcom_pqueue_new
+000000a8 T ipcom_tmo2_delete
+         U ipcom_pqueue_delete
+000000ac T ipcom_tmo2_request_timeval
+         U ipcom_microtime
+         U ipcom_pqueue_insert
+00000148 T ipcom_tmo2_request
+         U __udiv32
+         U __urem32
+000001b4 T ipcom_tmo2_cancel
+         U ipcom_pqueue_remove
+000001ec T ipcom_tmo2_reset
+00000244 T ipcom_tmo2_get
+         U __div32
+000002f8 T ipcom_tmo2_select
+         U memset
+         U ipcom_pqueue_remove_next
+         U ipcom_pqueue_get_next
+         U ipcom_socketselect_usr
+         U ipcom_errno_get
+
+ipcom_uname.o:
+00000000 T ipcom_uname
+         U memset
+
+ipcom_usr_init.o:
+00000004 d ipcom_usr_created
+00000000 T ipcom_usr_create
+         U ipcom_once_mutex
+         U ipcom_mutex_create
+00000000 D ipcom_version
+
+ipcom_vr.o:
+00000000 T ipcom_proc_vr_get
+         U ipcom_getenv_as_int
+0000000c T ipcom_proc_vr_set
+         U ipcom_setenv_as_int
+
+ipcom_vxworks.o:
+00000000 t ipcom_vxworks_rtp_del_hook
+00000004 d initialized.20
+00000004 b ipcom_vxworks_need_funcs.21
+00000000 b ipcom_rtp_tcb_index
+         U taskIdSelf
+         U taskTcb
+         U ipcom_vxworks_task_del_hook
+0000001c T ipcom_initd
+         U ipcom_proc_init
+         U ipcom_init_config_vars
+         U vxfs_ramdisk_init_hook
+         U ipcom_start
+00000000 D ipcom_port
+         U semGive
+         U zbufLibInit
+         U zbufSockLibInit
+         U ipcom_proc_exit
+00000074 T ipcom_create
+         U ipcom_getaddrinfo
+         U ipcom_freeaddrinfo
+         U ipcom_getservbyname
+         U memset
+         U ipcom_list_init
+         U semMCreate
+         U semCCreate
+00000000 D ipcom_null_pool_create
+         U ipcom_port_pkt_hdr_extra_size
+         U ipcom_vxworks_pkt_pool_hdr_ctor
+         U ipnet_pkt_pool_hdr_ctor_func
+         U ipcom_proc_attr_init
+         U ipcom_proc_acreate
+         U semTake
+         U semDelete
+         U taskDeleteHookAdd
+         U ipcom_vxworks_rtp_del_hook_add
+         U taskReservedNumAllot
+00000198 T ipcom_rtp_tcb_index_get_fd
+000001a4 T ipcom_run_cmd
+         U ipcom_shell_find_cmd_hook
+         U strdup
+         U printf
+         U ipcom_parse_argstr
+         U free
+00000284 T ipcom_is_stack_task
+000002c4 T ipcom_stack_index
+000002f0 T ipcom_stack_index_of_vxtask
+00000324 T ipcom_ima_stack_task
+         U ipcom_proc_self
+00000350 T ipcom_vxworks_loginStringGet
+         U strlen
+         U strcpy
+00000390 T ipcom_syslog_printf
+         U ipcom_syslog_priority_names
+         U ipcom_syslog_facility_names
+         U sprintf
+         U vsnprintf
+
+ipcom_waitif.o:
+00000000 t ipcom_waitif_gifaddr
+         U memset
+         U ipcom_if_indextoname
+         U ipcom_socketioctl_usr
+         U ipcom_errno_get
+         U ipcom_syslog
+         U malloc
+         U ip_in6addr_any
+         U strchr
+         U strcmp
+         U memcmp
+         U free
+000001b8 T ipcom_waitif
+         U ipcom_socket_usr
+         U ipcom_microtime
+         U ipcom_errno_set
+         U ipcom_setsockopt_usr
+         U ipcom_recv_usr
+         U ipcom_socketclose_usr
+00000370 T ipcom_waitif_address
+         U ipcom_if_nameindex
+         U strncpy
+         U ipcom_if_nametoindex
+         U ipcom_if_freenameindex
+
+ipcom_windnet_compat.o:
+00000000 t ipcom_windnet_socketclose
+00000030 t ipcom_windnet_socketwrite
+0000003c t ipcom_windnet_socketread
+00000048 t ipcom_windnet_select_poll
+000000e0 t ipcom_windnet_select_add_node
+000008f4 t ipcom_windnet_socket_eventcb
+00000164 t ipcom_windnet_select_remove_node
+000001c4 t ipcom_windnet_socketioctl
+00000460 t ipcom_windnet_socket
+000004bc t ipcom_windnet_accept
+00000528 t ipcom_windnet_bind
+00000530 t ipcom_windnet_connect
+00000538 t ipcom_windnet_connect_with_timeout
+0000069c t ipcom_windnet_getpeername
+000006a4 t ipcom_windnet_getsockname
+000006ac t ipcom_windnet_getsockopt
+000006d0 t ipcom_windnet_setsockopt
+0000071c t ipcom_windnet_listen
+00000724 t ipcom_windnet_recv
+00000740 t ipcom_windnet_recvfrom
+00000764 t ipcom_windnet_recvmsg
+00000780 t ipcom_windnet_send
+0000079c t ipcom_windnet_sendto
+000007c0 t ipcom_windnet_sendmsg
+000007dc t ipcom_windnet_shutdown
+000007e4 t ipcom_windnet_socklib_init_cb
+         U ipcom_socketclose
+         U free
+         U ipcom_send
+         U ipcom_recv
+         U semTake
+         U ipnet_is_sock_readable
+         U ipnet_is_sock_writable
+         U ipnet_is_sock_exceptional
+         U selWakeupAll
+         U semGive
+         U ipnet_get_sock
+         U selNodeAdd
+         U ipcom_mb
+         U selWakeupType
+         U ipnet_release_sock
+         U selNodeDelete
+         U selWakeupListLen
+         U pSockIoctlMemVal
+         U memset
+         U ipcom_socketioctl
+         U _func_mux
+         U ipcom_errno_set
+         U ipcom_socket
+         U calloc
+         U ipcom_accept
+         U ipcom_bind
+         U ipcom_connect
+         U ipcom_errno_get
+         U __rem32
+         U ipcom_socketselect
+         U ipcom_getsockopt
+         U ipcom_getpeername
+         U ipcom_getsockname
+         U ipcom_setsockopt
+         U ipcom_listen
+         U ipcom_recvfrom
+         U ipcom_recvmsg
+         U ipcom_sendto
+         U ipcom_sendmsg
+         U ipcom_shutdown
+00000000 D ipcom_windnet_sockfuncs
+000007ec T ipcom_windnet_socklib_init
+         U sockLibAdd
+         U ipcom_syslog
+000008b0 T ipcom_windnet_socketwritev
+         U sendmsg
+00000990 T ipcom_windnet_socklib_sock_size
+00000998 T ipcom_windnet_socklib_socket_init
+         U ipnet_sock_alloc_private_data
+         U selWakeupListInit
+000009c8 T ipcom_windnet_socklib_socket_free
+         U selWakeupListTerm
+00000000 D in6addr_any
+00000010 D in6addr_loopback
+
+ipcom_windview.o:
+00000000 T ipcom_wv_marker_1
+         U evtAction
+         U pWvNetEvtMap
+         U eventPointSwHandle
+000000b0 T ipcom_wv_marker_2
+00000164 T ipcom_wv_event_2
+
+ipcom_xtime.o:
+
+ipcom_xtoyz.o:
+00000000 T ipcom_htons
+00000018 T ipcom_ntohs
+00000030 T ipcom_htonl
+00000044 T ipcom_ntohl
+
+zbufLib.o:
+00000000 t _zsegFreeReturnNext
+00000008 b _zbuf_mutex
+00000004 b _zbuf_data
+00000000 b _num_zbuf
+00000380 t _zbufSegFind_nolock
+00000674 t _zbufSegPrev_nolock
+000006e4 t _zbufSegFindPrev
+         U ipcom_pkt_free
+00000034 T _zbufDeleteEmpty
+         U ipcom_mutex_lock
+         U ipcom_mutex_unlock
+00000084 T ZBUF_GETSEG
+000000c0 T _zbuf_getseg_nolock
+000000d0 T _zbuf_getsegptr_nolock
+000000e0 T _zbufSetSeg
+00000110 T zbuf_free
+00000114 T zbufLibInit
+         U calloc
+         U ipcom_mutex_create
+         U free
+000001b0 T _zbufCreate_nolock
+         U malloc
+         U errnoSet
+         U memset
+         U memcpy
+000002b8 T zbufCreate
+000002ec T zbufDelete
+00000520 T zbufSegFind
+0000056c T zbufDup
+         U ipnet_pkt_clone
+000008c8 T zbufInsert
+00000a0c T zbufSegPrev
+00000a48 T zbufInsertBuf64
+         U ipcom_pkt_malloc
+         U ipcom_pkt_create
+00000b94 T zbufInsertBuf
+00000bc4 T zbufInsertCopy
+         U bcopy
+00000ce0 T zbufExtractCopy
+00000d94 T zbufCut
+00000f50 T zbufSplit
+00001060 T zbufLength
+000010a4 T zbufSegNext
+00001110 T zbufSegData
+00001164 T zbufSegLength
+
+zbufSockLib.o:
+00000440 t simple_free
+00000000 T zbufSockLibInit
+00000008 T zbufSockSendto
+         U ZBUF_GETSEG
+         U sendto
+         U errnoGet
+         U _zbufDeleteEmpty
+00000084 T zbufSockSend
+000000a8 T zbufSockBufSendto
+         U zbufCreate
+         U errnoSet
+         U zbufInsertBuf
+         U zbufDelete
+00000190 T zbufSockBufSend
+000001bc T zbufSockBufSendto64
+         U zbufInsertBuf64
+000002a4 T zbufSockBufSend64
+000002d0 T zbufSockRecvfrom
+         U getsockopt
+         U recvfrom
+         U _zbufSetSeg
+         U malloc
+         U free
+00000420 T zbufSockRecv
+
+ipcom_cfgfile.o:
+00000000 t lskip
+0000003c t find_char_or_comment
+00000088 t strncpy0
+000000b4 t chomp
+000000f8 t setRecordType
+00000214 t initCfgParser
+00000270 t getNextParam
+000003e8 t closeCfgParser
+         U __ctype
+         U strncpy
+         U strlen
+         U __errno
+         U strtod
+         U fopen
+         U fgets
+         U strtok
+         U strchr
+         U fclose
+0000040c T ipcom_cfgfile_parse
+         U printf
+         U strcmp
+         U strcasecmp
+         U ipcom_sysvar_set
+         U strstr

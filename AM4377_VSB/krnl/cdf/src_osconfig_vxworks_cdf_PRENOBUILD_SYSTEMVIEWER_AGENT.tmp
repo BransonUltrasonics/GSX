@@ -1,0 +1,15 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/rttools/systemviewer-1.0.0.10/src/osconfig/vxworks/cdf/02comp_systemviewer_agent.cdf>
+
+Layer Layer::SYSTEMVIEWER_AGENT {
+	NAME SYSTEMVIEWER_AGENT
+}

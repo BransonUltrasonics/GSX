@@ -1,0 +1,4 @@
+xaw2spl {-intstyle ise} C:/Users/76053/Documents/Entrenamientos/VHDL_FPGA/GSX_FPGA/ipcore_dir/CLOCK_MANAGER.xaw 
+spl2sym -intstyle ise -family spartan3a CLOCK_MANAGER.spl C:/Users/76053/Documents/Entrenamientos/VHDL_FPGA/GSX_FPGA/CLOCK_MANAGER.sym 
+xaw2spl {-intstyle ise} C:/Users/76053/Documents/Entrenamientos/VHDL_FPGA/GSX_FPGA/ipcore_dir/CLOCK_MANAGER.xaw 
+spl2sym -intstyle ise -family spartan3a CLOCK_MANAGER.spl C:/Users/76053/Documents/Entrenamientos/VHDL_FPGA/GSX_FPGA/CLOCK_MANAGER.sym 

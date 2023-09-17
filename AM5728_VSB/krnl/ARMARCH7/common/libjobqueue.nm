@@ -1,0 +1,94 @@
+
+libjobqueue.a:
+
+jobQueueLib.o:
+00000000 T jobQueueLibInit
+00000000 T jobQueuePost
+         U spinLockIsrTake
+         U spinLockIsrGive
+         U semBGiveScalable
+000000d8 T jobQueueStdPost
+000001d4 T jobQueueProcess
+         U taskIdSelf
+         U semBTakeScalable
+         U ffs32Msb
+00000000 T jobQueuePriorityMask
+00000074 T jobQueueInit
+         U memset
+         U spinLockIsrInit
+         U semBInitialize
+00000108 T jobQueueCreate
+         U cacheArchAlignSize
+         U memalign
+         U free
+00000164 T jobQueueTask
+00000178 T jobQueueStdPoolInit
+0000019c T jobQueueStdJobsAlloc
+00000004 C _func_netDaemonIxToQId
+00000004 C _func_netDaemonQIdToIx
+00000000 D jobQueueProcessFunc
+
+jobQueueUtilLib.o:
+000000bc t jobQuitHandler
+00000000 T jobQueueUtilInit
+00000128 T jobQueueProcessWrapper
+         U jobQueueProcessFunc
+00000010 T jobQueueQuit
+         U spinLockIsrTake
+         U spinLockIsrGive
+         U jobQueuePost
+         U longjmp
+         U setjmp
+         U jobQueueProcess
+00000178 T jobQueueTerminate
+         U semTerminate
+0000023c T jobQueueDelete
+         U free
+00000288 T jobQueueStdPoolJobsFree
+
+libjobqueue.a:
+
+jobQueueLib.o:
+00000000 T jobQueueLibInit
+00000000 T jobQueuePost
+         U spinLockIsrTake
+         U spinLockIsrGive
+         U semBGiveScalable
+000000d8 T jobQueueStdPost
+000001d4 T jobQueueProcess
+         U taskIdSelf
+         U semBTakeScalable
+         U ffs32Msb
+00000000 T jobQueuePriorityMask
+00000074 T jobQueueInit
+         U memset
+         U spinLockIsrInit
+         U semBInitialize
+00000108 T jobQueueCreate
+         U cacheArchAlignSize
+         U memalign
+         U free
+00000164 T jobQueueTask
+00000178 T jobQueueStdPoolInit
+0000019c T jobQueueStdJobsAlloc
+00000004 C _func_netDaemonIxToQId
+00000004 C _func_netDaemonQIdToIx
+00000000 D jobQueueProcessFunc
+
+jobQueueUtilLib.o:
+000000bc t jobQuitHandler
+00000000 T jobQueueUtilInit
+00000128 T jobQueueProcessWrapper
+         U jobQueueProcessFunc
+00000010 T jobQueueQuit
+         U spinLockIsrTake
+         U spinLockIsrGive
+         U jobQueuePost
+         U longjmp
+         U setjmp
+         U jobQueueProcess
+00000178 T jobQueueTerminate
+         U semTerminate
+0000023c T jobQueueDelete
+         U free
+00000288 T jobQueueStdPoolJobsFree

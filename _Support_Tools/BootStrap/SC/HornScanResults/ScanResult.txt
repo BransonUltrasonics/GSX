@@ -1,0 +1,6 @@
+MainParallelFrequency 29990 0
+SecondaryParallelFrequency 30150 0
+TertiaryParallelFrequency 29750 0
+FirstSeriesFrequency 29400 0
+SecondarySeriesFrequency 30550 0
+TertiarySeriesFrequency 30650 0

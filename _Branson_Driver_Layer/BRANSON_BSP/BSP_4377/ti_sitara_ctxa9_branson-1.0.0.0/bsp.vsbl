@@ -1,0 +1,12 @@
+/*C:\NewWorkspaces\NextGen\AM5728_VIP\ti_sitara_ctxa15_branson_1_0_0_0\am572x_idk_ca15.dts*/
+
+Layer ti_sitara_ctxa9_branson
+    {
+    SYNOPSIS            TI CortexA9 Sitara Family BSP
+    VERSION             1.0.0.0
+    VENDOR              Wind River
+    LAYER_REQUIRES      FDT TI_SITARA
+    FEATURE_REQUIRES    {VXBUS_DRV  TI_EDMA3}               \
+                        {BOARDLIB   WARM_BOOT}              \
+                        {ARM_ARMV7A TRUSTZONE}
+    }

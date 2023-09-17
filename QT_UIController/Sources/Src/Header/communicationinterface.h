@@ -1,0 +1,600 @@
+/**************************************************************************
+
+      Copyright (c) Branson Ultrasonics Corporation, 1996-2018
+
+     This program is the property of Branson Ultrasonics Corporation
+     Copying of this software is expressly forbidden, without the prior
+     written consent of Branson Ultrasonics Corporation.
+
+
+---------------------------- MODULE DESCRIPTION ----------------------------
+
+Communication Interface
+
+***************************************************************************/
+#ifndef COMMUNICATIONINTERFACE_H
+#define COMMUNICATIONINTERFACE_H
+
+#include <QThread>
+#include <QMap>
+#include <QQueue>
+#include "Header/clientsocket.h"
+#include "Header/message.h"
+#include "Header/horndown.h"
+enum requestIdentities
+{
+    // SC Cases
+    SCBL_SYS_READY_IND = 1,
+    SCBL_SYSCONFIG_READ_REQ = 2,
+    UIC_SYSCONFIG_READ_RES = 3,
+
+    SCBL_SYSCONFIG_WRITE_REQ = 4,
+    UIC_SYSCONFIG_WRITE_RES = 5,
+
+    SCBL_WELDRECIPE_REQ_SC = 7,
+    SCBL_WELDRECIPE_REQ_PC_AC = 8,
+    SCBL_WELD_FINISH_IND = 18,
+    SCBL_WELDRECIPE_RES = 25,
+    UIC_WELD_DATA_DELETE_IND = 26,
+
+    REQ_SAVE_HORN_RECIPE = 31,
+    RES_SAVE_HORN_RECIPE = 32,
+
+    REQ_START_HORN_SCAN = 33,
+    RES_START_HORN_SCAN = 35,
+
+    REQ_ABORT_HORN_SCAN = 37,
+    RES_ABORT_HORN_SCAN = 38,
+
+    REQ_PROGRESS_HORN_SCAN = 50,
+	
+    //SCBL_FACTORY_RESET_REQ occupies 64
+	
+    SCBL_SEEK_RECIPE_REQ = 65,
+    UIC_SEEK_RECIPE_RES = 66,
+
+    SCBL_SEEK_CMD_REQ = 67,
+    UIC_SEEK_CMD_RES = 68,
+
+    SCBL_SETUP_READ_REQ = 69,
+    SCBL_SETUP_RES = 70,
+
+    UIC_ALARM_DATA_INDICATION = 71,
+
+    SCBL_ALARM_RESET_REQ = 72,
+    UIC_ALARM_REST_RES = 73,
+
+    UIC_CLEAR_NON_RESET_ALARMS = 74,
+
+    SCBL_FW_VERSION_REQ = 75,
+    UIC_FW_VERSION_RES = 76,
+
+    SCBL_ALARM_RESET_ALL_REQ = 77,
+    UIC_ALARM_REST_ALL_RES = 78,
+
+    SCBL_SC_STATE_REQ = 81,
+    UIC_SC_STATE_RES = 82,
+
+    SCBL_ACTIVE_ALARM_REQ = 83,
+    UIC_ACTIVE_ALARM_RES = 84,
+
+    SCBL_FEATURERUN_READ_REQ = 85,
+    UIC_FEATURERUN_READ_RES = 86,
+
+    SCBL_IP_CONFIGURATION_READ_REQ = 87,
+    UIC_IP_CONFIGURATION_READ_RES = 88,
+
+    SCBL_IP_CONFIGURATION_WRITE_REQ = 89,
+    UIC_IP_CONFIGURATION_WRITE_RES = 90,
+
+    SCBL_SET_NEXT_OPERATION_REQ = 92,
+
+    SCBL_TEST_RECIPE_REQ = 93,
+    UIC_TEST_RECIPE_RES = 94,
+
+    SCBL_TEST_CMD_REQ = 95,
+    UIC_TEST_CMD_RES  = 96,
+
+    SCBL_TEST_ABORT_CMD_REQ = 97,
+    UIC_TEST_ABORT_CMD_RES = 98,
+
+    UIC_TEST_PROGRESS_IND = 99,
+
+    UIC_WELD_PROGRESS_IND = 100,
+
+    SCBL_CALIBRATION_READ_REQ = 101,
+    UIC_CALIBRATION_READ_RES = 102,
+
+    SCBL_FW_UPGRADE_REQ = 104,
+    UIC_FW_UPGRADE_RES = 105,
+
+    SCBL_FW_UPGRADE_CMD_REQ = 106,
+    UIC_FW_UPGRADE_CMD_RES = 107,
+
+    UIC_FW_UPGRADE_PROGRESS_IND = 108,
+
+    UIC_FW_UPGRADE_ETHER_IND = 109,
+
+	SCBL_FW_UPGRADE_ETHER_REQ = 110,
+
+    SCBL_SYS_DATETIME_READ_REQ = 111,
+    UIC_SYS_DATETIME_READ_RES  = 112,
+
+    SCBL_SYS_DATETIME_WRITE_REQ = 113,
+    UIC_SYS_DATETIME_WRITE_RES = 114,
+
+    UIC_EMERGENCY_STOP_ACTIVE_IND = 115,
+    UIC_EMERGENCY_STOP_RESET_IND = 116,
+
+    UIC_EMERGENCY_STOP_HORN_HOME_REQ = 117,
+    UIC_EMERGENCY_STOP_HORN_HOME_RES = 118,
+
+    SCBL_DEFAULT_ALARM_CONFIG_REQ = 120,
+    UIC_DEFAULT_ALARM_CONFIG_RSP = 121,
+
+    SCBL_ALARM_CONFIG_READ_REQ = 122,
+    UIC_ALARM_CONFIG_READ_RSP = 123,
+
+    SCBL_ALARM_CONFIG_SAVE_REQ = 124,
+    UIC_ALARM_CONFIG_SAVE_RSP = 125,
+
+    SCBL_RESET_BATCH_COUNTER_REQ = 126,
+    UIC_RESET_BATCH_COUNTER_RSP = 127,
+
+    SCBL_USERIO_READ_REQ = 128,
+    SCBL_USERIO_READ_RES = 129,
+
+    SCBL_SETUP_JOG_HORN_POSITION_IND_REQ = 130,
+    SCBL_SETUP_JOG_HORN_POSITION_IND_RES = 131,
+
+    SCBL_CLEAR_MEM_OFFSET_REQ = 133,
+    UIC_CLEAR_MEM_OFFSET_RSP  = 134,
+	
+    //SCBL_FEATURERUN_WRITE_REQ occupies 148
+
+    SCBL_CHANGE_STACK_REQ        = 158,
+    UIC_CHANGE_STACK_RSP         = 159,
+
+    SCBL_GEN_SINGLE_REPORT_REQ = 160,
+    SCBL_GEN_SINGLE_REPORT_RSP = 161,
+
+    SCBL_GEN_REPORT_ACTION_IND =  162,
+    UIC_GEN_DB_REPORT_REMIND_LATER_REQ = 163,
+
+    SCBL_GEN_REPORT_REMIND_LATER_RSP = 164,
+
+    SCBL_CHANGE_STACK_CANCEL_REQ = 165,
+    UIC_CHANGE_STACK_CANCEL_RSP  = 166,
+    UIC_STACK_CHANGE_IND         = 167,
+
+    SCBL_PRIVATE_KEY_REQ	=	168,
+    UIC_PRIVATE_KEY_RES		=	169,
+
+    SCBL_PRIVATE_KEY_UPLOAD_REQ	=	170,
+    UIC_PRIVATE_KEY_UPLOAD_RES	=	171,
+
+    SCBL_WS_LOGIN_PERMISSION_RES = 172,
+
+    UIC_BARCODE_RECIPE_RECALL_AUTHENTICATION_CHECK_REQ = 174,
+    SCBL_BARCODE_RECIPE_RECALL_AUTHENTICATION_CHECK_RES = 175,
+
+    UIC_BARCODE_RECIPE_RECALL_REQ = 177,
+    SCBL_BARCODE_RECIPE_RECALL_RES = 178,
+
+    UIC_BARCODE_RECIPE_RECALL_FAIL_IND = 179,
+
+    //SCBL_FEATURERUN_WRITE_REQ occupies 182
+
+	UIC_BARCODE_PART_ID_IND = 183,
+    UIC_BARCODE_SCANNER_STATUS_IND = 184,
+	UIC_WEBSERVICE_USER_LOGGED_INFO = 185,
+    UIC_WEBSERVICE_REFRESH_SCREEN = 186,
+
+    SCBL_STACK_RECIPE_REQ = 191,
+    UIC_STACK_RECIPE_RES = 192,
+
+    REQ_COPY_DB = 193,
+    RES_COPY_DB = 194,
+
+    REQ_DELETE_DB = 195,
+    RES_DELETE_DB = 196,
+
+    SCBL_FEATURERUN_WRITE_REQ = 148,
+    UIC_FEATURERUN_WRITE_RES  = 182,
+
+    SCBL_BRANSON_KEY_REQ = 197,
+    UIC_BRANSON_KEY_RES = 198,	
+	
+	SCBL_FACTORY_RESET_REQ  =   64,
+	UIC_FACTORY_RESET_RSP   =   200,
+	
+	// UI Cases
+    REQ_WELD_RECIPE_LIST = 201,
+    RES_WELD_RECIPE_LIST,
+
+    REQ_GET_WELD_RECIPE_PARAM,
+    RES_GET_WELD_RECIPE_PARAM,
+
+    REQ_SET_WELD_RECIPE_PARAM,
+    RES_SET_WELD_RECIPE_PARAM,
+
+    REQ_GET_ACTIVE_RECIPE,
+    RES_GET_ACTIVE_RECIPE,
+
+    REQ_GET_PRODUCTION_WELD_RESULT,
+    RES_GET_PRODUCTION_WELD_RESULT,
+
+    REQ_GET_LAST_WELD_RESULT,
+    RES_GET_LAST_WELD_RESULT,
+
+    REQ_GET_LAST_WELD_PEAKPOWER,
+    RES_GET_LAST_WELD_PEAKPOWER,
+
+    REQ_GET_ALARM_LOG,
+    RES_GET_ALARM_LOG,
+
+    REQ_GET_DEFAULT_HORN_RECIPE,
+    RES_GET_DEFAULT_HORN_RECIPE,
+
+    REQ_GET_HORN_SIGNATURE_DATA,
+    RES_GET_HORN_SIGNATURE_DATA,
+
+    REQ_GET_HORN_SCAN_RESULTS,
+    RES_GET_HORN_SCAN_RESULTS,
+
+    REQ_GET_HORN_SCAN_HISTORY,
+    RES_GET_HORN_SCAN_HISTORY,
+
+    REQ_SET_HORN_SCAN_ID,
+    RES_SET_HORN_SCAN_ID,
+
+    REQ_GET_RECIPE_INFO,
+    RES_GET_RECIPE_INFO,
+
+    REQ_GET_RECIPE_SETUP_INFO,
+    RES_GET_RECIPE_SETUP_INFO,
+
+    REQ_SET_RECIPE_SETUP_INFO,
+    RES_SET_RECIPE_SETUP_INFO,
+
+    REQ_SET_WELD_RECIPE_SETUP_INFO,
+    RES_SET_WELD_RECIPE_SETUP_INFO,
+
+    REQ_USER_LOGIN,
+    RES_USER_LOGIN,
+
+    REQ_GET_ALL_USERS,
+    RES_GET_ALL_USERS,
+
+    REQ_SET_USER_INFO,
+    RES_SET_USER_INFO,
+
+    REQ_SET_ACTIVE_RECIPE,
+    RES_SET_ACTIVE_RECIPE,
+
+    REQ_GET_EVENTS_LOG,
+    RES_GET_EVENTS_LOG,
+
+    REQ_SET_EVENT_LOG,
+    RES_SET_EVENT_LOG,
+
+    REQ_GET_WELD_SIGNATURE_DATA, //247
+    RES_GET_WELD_SIGNATURE_DATA, //248
+
+    REQ_GET_WELD_TWH_DATA, //249
+    RES_GET_WELD_TWH_DATA, //250
+
+    REQ_GET_WELD_HISTORY_DATA,
+    RES_GET_WELD_HISTORY_DATA,
+
+    REQ_GET_LAST_WELD_HISTORY_DATA,
+    RES_GET_LAST_WELD_HISTORY_DATA,
+
+    REQ_GET_NEXT_WELD_HISTORY_DATA,
+    RES_GET_NEXT_WELD_HISTORY_DATA,
+
+    REQ_UPDATE_WELD_HISTORY_ID,
+    RES_UPDATE_WELD_HISTORY_ID,
+
+    REQ_GET_ALL_AUTHORITY_LEVEL,
+    RES_GET_ALL_AUTHORITY_LEVEL,
+
+    REQ_UPDATE_ALL_AUTHORITY_LEVEL,
+    RES_UPDATE_ALL_AUTHORITY_LEVEL,
+
+    REQ_GET_USER_PASSWORD,
+    RES_GET_USER_PASSWORD,
+
+    REQ_SET_USER_PASSWORD,
+    RES_SET_USER_PASSWORD,
+
+    REQ_GET_USER_DETAILS,
+    RES_GET_USER_DETAILS,
+
+    REQ_SET_GLOBAL_SETTINGS,
+    RES_SET_GLOBAL_SETTINGS,
+
+    REQ_GET_GLOBAL_SETTINGS,
+    RES_GET_GLOBAL_SETTINGS,
+
+    REQ_SET_HORN_RECIPE_DATA,
+    RES_SET_HORN_RECIPE_DATA,
+
+    REQ_SET_SEEK_SCAN_ID,
+    RES_SET_SEEK_SCAN_ID,
+
+    REQ_GET_SEEK_SCAN_HISTORY,
+    RES_GET_SEEK_SCAN_HISTORY,
+
+    REQ_GET_DEFAULT_SEEK_RECIPE,
+    RES_GET_DEFAULT_SEEK_RECIPE,
+
+    REQ_SET_SEEK_RECIPE_DATA,
+    RES_SET_SEEK_RECIPE_DATA,
+
+    REQ_GET_SEEK_SCAN_RESULTS,
+    RES_GET_SEEK_SCAN_RESULTS,
+
+    REQ_GET_SEEK_SIGNATURE_DATA,
+    RES_GET_SEEK_SIGNATURE_DATA,
+
+    REQ_SET_SUSPECT_REJECT_LIMITS_INFO,
+    RES_SET_SUSPECT_REJECT_LIMITS_INFO,
+
+    REQ_GET_SUSPECT_REJECT_LIMITS_INFO,
+    RES_GET_SUSPECT_REJECT_LIMITS_INFO,
+   
+ 	REQ_GET_TEST_MODE_DATA,
+    RES_GET_TEST_MODE_DATA,
+
+    REQ_GET_TEST_RECIPE_DATA,
+    RES_GET_TEST_RECIPE_DATA,
+
+    REQ_SET_TEST_RECIPE_DATA,
+    RES_SET_TEST_RECIPE_DATA,
+
+    REQ_GET_TEST_PROGRESS_INFO,
+    RES_GET_TEST_PROGRESS_INFO,
+
+    REQ_GET_DB_VERSION,
+    RES_GET_DB_VERSION,
+
+	REQ_GET_ADD_RECIPENUMBER,
+    RES_SET_ADD_RECIPENUMBER,
+
+	REQ_GET_COPY_RECIPENUMBER,
+    RES_SET_COPY_RECIPENUMBER,
+
+    REQ_SET_WELD_RECIPE_PARAM_FOR_NEW_RECIPE,
+    RES_SET_WELD_RECIPE_PARAM_FOR_NEW_RECIPE,
+
+    REQ_RESONANT_FREQUENCY,
+    RES_RESONANT_FREQUENCY,
+
+    REQ_SET_SUSPECT_REJECT_LIMITS_INFO_FOR_UPDATED,
+    RES_SET_SUSPECT_REJECT_LIMITS_INFO_FOR_UPDATED,
+
+    REQ_SET_RECIPE_SETUP_INFO_FOR_UPDATED,
+    RES_SET_RECIPE_SETUP_INFO_FOR_UPDATED,
+
+    REQ_GET_ACTUATOR_SETUP_PARAMS,
+    RES_GET_ACTUATOR_SETUP_PARAMS,
+
+    REQ_SET_ACTUATOR_SETUP_PARAMS,
+    RES_SET_ACTUATOR_SETUP_PARAMS,
+
+    REQ_GET_ANALYTICS_ALARM,
+    RES_GET_ANALYTICS_ALARM,
+
+    REQ_SET_ANALYTICS_ALARM,
+    RES_SET_ANALYTICS_ALARM,
+
+    REQ_GET_STACK_RECIPE_DATA,
+    RES_GET_STACK_RECIPE_DATA,
+
+    REQ_SET_STACK_RECIPE_DATA,
+    RES_SET_STACK_RECIPE_DATA,
+
+    REQ_SET_BRANSONONLY_PARAMS,
+    RES_SET_BRANSONONLY_PARAMS,
+
+    REQ_GET_BRANSONONLY_PARAMS,
+    RES_GET_BRANSONONLY_PARAMS,
+
+    REQ_SET_BRANSONONLY_PARAMS_UPDATED,
+    RES_SET_BRANSONONLY_PARAMS_UPDATED,
+
+    REQ_GET_ACTIVE_RECIPE_NUMBER,
+    RES_GET_ACTIVE_RECIPE_NUMBER,
+
+    REQ_GET_BATCH_COUNT,
+    RES_GET_BATCH_COUNT,
+
+    REQ_RESET_BATCH_COUNTER,
+    RES_RESET_BATCH_COUNTER,
+
+    REQ_GET_ALL_WELD_RESULT_DATA,
+    RES_GET_ALL_WELD_RESULT_DATA,
+
+    REQ_GET_LAST_ALL_WELD_RESULT_DATA,
+    RES_GET_LAST_ALL_WELD_RESULT_DATA,
+
+    REQ_GET_TRENDSGRAPH_SIGNATURE_DATA,
+    RES_GET_TRENDSGRAPH_SIGNATURE_DATA,
+
+    REQ_GET_SUSPECT_REJECT_LIMITS_TRENDSGRAPH,
+    RES_GET_SUSPECT_REJECT_LIMITS_TRENDSGRAPH,
+
+    REQ_SET_PRODUCT_DATE_PARAM,
+    RES_SET_PRODUCT_DATE_PARAM,
+
+    REQ_GET_USERIO_DATA,
+    RES_GET_USERIO_DATA,
+
+    REQ_SET_USERIO_DATA,
+    RES_SET_USERIO_DATA,
+
+    REQ_GET_SETUP_LIMITS,
+    RES_GET_SETUP_LIMITS,
+
+    REQ_SET_SETUP_LIMITS,
+    RES_SET_SETUP_LIMITS,
+
+    REQ_GET_ACTIVE_RECIPE_FOR_ACTUATOR,
+    RES_GET_ACTIVE_RECIPE_FOR_ACTUATOR,
+
+    REQ_SET_RECIPE_VALIDATE,
+    RES_SET_RECIPE_VALIDATE,
+
+    REQ_SET_RECIPE_BLOB,
+    RES_SET_RECIPE_BLOB,
+
+    REQ_GET_RECIPE_BLOB,
+    RES_GET_RECIPE_BLOB,
+
+    REQ_SET_WELDFORCE_FOR_ACTUATOR,
+    RES_SET_WELDFORCE_FOR_ACTUATOR,
+
+    REQ_SET_RECIPE_UNVALIDATE,
+    RES_SET_RECIPE_UNVALIDATE,
+
+    REQ_FACTORY_RESET,
+    RES_FACTORY_RESET,
+
+    REQ_UPDATE_SYSTEM_DATA,
+    RES_UPDATE_SYSTEM_DATA,
+
+    REQ_UPDATE_USER_LOGIN,
+    RES_UPDATE_USER_LOGIN,
+
+    SCBL_EMMC_WARE_LEVEL_REQ,
+    UIC_EMMC_WARE_LEVEL_RESP,
+
+    REQ_STOP_COLLECT_GRAPH_DATA,
+    RES_STOP_COLLECT_GRAPH_DATA,
+
+    SCBL_OPTIMIZE_DATABASE_REQ = 377,
+    UIC_OPTIMIZE_DATABASE_RESP = 378,
+	
+	REQ_SAVE_WEBSERVICES_DATA,
+    RES_SAVE_WEBSERVICES_DATA,
+
+    REQ_GET_WEBSERVICES_DATA,
+    RES_GET_WEBSERVICES_DATA,
+
+    REQ_GET_WEBSERVICES_USER_AND_LEVEL,
+    RES_GET_WEBSERVICES_USER_AND_LEVEL,
+
+    REQ_DELETE_RECIPE = 385,
+    RES_DELETE_RECIPE = 386,
+    DUMMY,
+	
+	SCBL_WEBSERVICES_LOGIN_REQ         =   600,
+	UIC_WEBSERVICES_LOGIN_RES          =   601,
+	SCBL_SET_HMI_LOGIN_REQ             =   602,
+	SCBL_WEBSERVICE_UI_VERSION_RES 	   =   603,
+	UIC_WEBSERVICE_UI_VERSION_REQ	   =   604,
+		
+	SCBL_DEFAULT_FEATURERUN_REQ = 608,
+	UIC_DEFAULT_FEATURERUN_RES  = 609,
+};
+
+struct RecivedMsg
+{
+    bool isBuffReceived;
+    int dwBuffLen;
+    char* pchBuff;
+    RecivedMsg()
+    {
+        isBuffReceived=false;
+        dwBuffLen = 0;
+        pchBuff = NULL;
+    }
+};
+
+class HeartBeatUIBL: public QThread
+{
+    Q_OBJECT
+public:
+    HeartBeatUIBL();
+    ~HeartBeatUIBL();
+
+    void stratHeartBeat();
+    void stopHeartBeat();
+    void run();
+
+};
+
+class PartsPerMin: public QThread
+{
+    Q_OBJECT
+public:
+    PartsPerMin();
+    ~PartsPerMin();
+
+    void startPartsPerMin();
+    void run();
+};
+
+class CommunicationInterface: public QThread
+{
+    Q_OBJECT
+public:
+    CommunicationInterface();
+    ~CommunicationInterface();
+    void run();
+
+    SasSocket m_socket;
+    bool m_isConnected;
+
+    QQueue<int> queueWelds;
+    int dwWeldCounter;
+
+    int sendMessage(int reqMessageID,int resMessageID, QString Message);
+    int sendMessage(int reqMessageID,int resMessageID, char* Message, int length);
+    bool recivedMessage(int MessageID, QString &Message);
+    bool recivedMessage(int MessageID, char *Message, int length);
+    void raiseEmergencyStop();
+
+signals:
+    void hornScanMsgData(int reqId , QByteArray msgData);
+    void seekScanMsgData(int reqId , QByteArray msgData);
+    void dashboardUpdate(int reqId);
+    void productionUpdate();
+    void productionPowerUpdate(QString reqBuffer);
+    void updateWeldHistory();
+    void systemStatusData(QString reqBuffer);
+    void dBStorageStatusRes(QString resData);
+    void weldDataDeleteInd(QString resData);
+    void upgradeProgress(QString reqBuffer);
+    void upgradeResponse(QString reqBuffer);
+    void alarmRaised(QString msgData);
+    void clearNonResetAlarms();
+    void setupIndication(QString a_PartContactDistance);
+    void generateReportRes(QString a_generateRes);
+    void vacummReportRes(QString a_generateRes);
+    void emergencyPopupStart();
+    void emergencyPopupStop();
+    void overLoadIndication(QString overLoadInd);
+    void setProgressData(QString a_ProgressData);
+    void barcodeRecipeRecall(QString sRecipeBarCode);
+    void barcodeRecipeRecallAuthCheck(QString sBarcodeAuthCheck);
+    void barcodescannerconnectionstatus(QString sBarcodescannerconnectcheck);
+    void partidstatus(QString sPartIdStatus);
+    void barcodeProcessStatus(QString qstrProcessStatus);
+    void changeStackInd(QString qstrSmartStack);
+    void memoryCleared(QString qstrMemoryCleared);
+    void copyDBRes(QString response);
+	void firmwareUpgradeOverEthernet(QString reqBuffer);
+    void webserviceVersionRequest(QString reqBuffer);
+    void webserviceUserLoggedInfo(QString reqBuffer);
+    void ChangeFromWSSignal(QString reqBuffer);
+
+private:
+    QMap<int,RecivedMsg> RecvBuffMap;
+
+    HeartBeatUIBL heartBeatObj;
+    PartsPerMin partsPerMinObj;
+};
+
+#endif // COMMUNICATIONINTERFACE_H

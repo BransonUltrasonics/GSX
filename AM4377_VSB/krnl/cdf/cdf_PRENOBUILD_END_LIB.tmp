@@ -1,0 +1,16 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/end-1.2.5.0/lib/cdf/00comp_net_mux.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/end-1.2.5.0/lib/cdf/01comp_net_end_vx.cdf>
+
+Layer Layer::END_LIB {
+	NAME END_LIB
+}

@@ -1,0 +1,24 @@
+
+ifndef __HEADER_ACCESS_SNMP_INCLUDED
+__HEADER_ACCESS_SNMP_INCLUDED = TRUE
+
+
+
+
+
+__SUBSCRIBE_ACCESS_SNMP = 
+
+
+
+ifneq ($(wildcard $(VSB_KERNEL_PROTECTED_INCLUDE_DIR)/SNMP),)
+
+ifneq ($(VSBL_NAME),)
+ifeq ($(VSBL_NAME),$(filter $(VSBL_NAME), SNMP))
+VSBL_LKH += $(OPTION_INCLUDE_DIR)$(VSB_KERNEL_PROTECTED_INCLUDE_DIR)/SNMP
+endif
+endif
+
+endif
+
+endif
+

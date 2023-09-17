@@ -1,0 +1,1 @@
+__FILES_COPIED_AUDIO_DEMO = C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/cdf/40audioDemoPlayback.cdf C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/cdf/30audioDemo.cdf C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/cdf/40audioDemoRecord.cdf

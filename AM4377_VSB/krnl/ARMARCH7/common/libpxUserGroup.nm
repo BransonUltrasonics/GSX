@@ -1,0 +1,98 @@
+
+libpxUserGroup.a:
+
+pxUserGroupLib.o:
+00000000 T pxUserGroupLibInit
+00000008 T setuid
+         U taskIdCurrent
+         U kernelId
+         U semTake
+         U semGive
+         U __errno
+000000fc T getuid
+0000011c T setgid
+00000228 T getgid
+00000248 T seteuid
+00000334 T geteuid
+00000354 T setegid
+0000044c T getegid
+0000046c T getgroups
+000004b4 T taskCredentialsInherit
+00000528 T rtpCredentialsInherit
+000005b4 T taskCredentialsGet
+00000650 T taskCredentialsSet
+
+getlogin.o:
+00000000 T getlogin
+00000008 T getlogin_r
+00000018 T loginUserIdSet
+         U taskIdCurrent
+         U taskCredentialsGet
+         U taskCredentialsSet
+
+pxUserGroupScLib.o:
+00000000 T pxUserGroupScLibInit
+00000008 T _setuidSc
+         U taskIdCurrent
+         U semTake
+         U semGive
+         U __errno
+000000b4 T _getuidSc
+000000cc T _setgidSc
+0000017c T _getgidSc
+00000194 T _seteuidSc
+0000022c T _geteuidSc
+00000244 T _setegidSc
+000002e0 T _getegidSc
+000002f8 T getlogin_rSc
+         U scMemValidate
+         U getlogin_r
+
+libpxUserGroup.a:
+
+pxUserGroupLib.o:
+00000000 T pxUserGroupLibInit
+00000008 T setuid
+         U taskIdCurrent
+         U kernelId
+         U semTake
+         U semGive
+         U __errno
+000000fc T getuid
+0000011c T setgid
+00000228 T getgid
+00000248 T seteuid
+00000334 T geteuid
+00000354 T setegid
+0000044c T getegid
+0000046c T getgroups
+000004b4 T taskCredentialsInherit
+00000528 T rtpCredentialsInherit
+000005b4 T taskCredentialsGet
+00000650 T taskCredentialsSet
+
+getlogin.o:
+00000000 T getlogin
+00000008 T getlogin_r
+00000018 T loginUserIdSet
+         U taskIdCurrent
+         U taskCredentialsGet
+         U taskCredentialsSet
+
+pxUserGroupScLib.o:
+00000000 T pxUserGroupScLibInit
+00000008 T _setuidSc
+         U taskIdCurrent
+         U semTake
+         U semGive
+         U __errno
+000000b4 T _getuidSc
+000000cc T _setgidSc
+0000017c T _getgidSc
+00000194 T _seteuidSc
+0000022c T _geteuidSc
+00000244 T _setegidSc
+000002e0 T _getegidSc
+000002f8 T getlogin_rSc
+         U scMemValidate
+         U getlogin_r

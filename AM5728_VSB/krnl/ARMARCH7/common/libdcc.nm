@@ -1,0 +1,706 @@
+
+libdcc.a:
+
+_x_diab_sfpddtoll.o:
+00000000 D ___x_diab_sfpddtoll_o
+00000000 T _d_dtoll
+         U __lsl64
+         U __asr64
+000000e0 T __dtoll
+00000000 T __aeabi_d2lz
+00000000 T __fixdfdi
+
+_x_diab_sfpddtoull.o:
+00000000 D ___x_diab_sfpddtoull_o
+00000000 T _d_dtoull
+         U __lsl64
+         U __lsr64
+000000c8 T __dtoull
+00000000 T __aeabi_d2ulz
+00000000 T __fixunsdfdi
+
+_x_diab_sfpdlltod.o:
+00000000 D ___x_diab_sfpdlltod_o
+00000000 T _d_lltod
+         U sfpDoubleNormalize
+00000070 T __lltod
+00000000 T __aeabi_l2d
+
+_x_diab_sfpdulltod.o:
+00000000 D ___x_diab_sfpdulltod_o
+00000000 T _d_ulltod
+         U sfpDoubleNormalize
+0000003c T __ulltod
+00000000 T __aeabi_ul2d
+00000000 T __floatundidf
+
+_x_diab_sfpfftoll.o:
+00000000 D ___x_diab_sfpfftoll_o
+00000000 T _f_ftoll
+         U __lsl64
+         U __asr64
+000000cc T __ftoll
+00000000 T __aeabi_f2lz
+00000000 T __fixsfdi
+
+_x_diab_sfpfftoull.o:
+00000000 D ___x_diab_sfpfftoull_o
+00000000 T _f_ftoull
+         U __lsl64
+         U __lsr64
+000000b4 T __ftoull
+00000000 T __aeabi_f2ulz
+00000000 T __fixunssfdi
+
+_x_diab_sfpflltof.o:
+00000000 D ___x_diab_sfpflltof_o
+00000000 T _f_lltof
+         U sfpFloatNormalize
+00000078 T __lltof
+00000000 T __aeabi_l2f
+
+_x_diab_sfpround.o:
+00000000 D ___x_diab_sfpround_o
+00000000 T _fp_round
+00000004 C __sfpRoundMode
+
+_x_diab_sfpdpol.o:
+00000000 D ___x_diab_sfpdpol_o
+00000000 T __POL
+         U __mul64
+         U __lsl64
+         U __lsr64
+         U __ff1ll
+         U sfpDoubleNormalize2
+
+_x_diab_sfpfulltof.o:
+00000000 D ___x_diab_sfpfulltof_o
+00000000 T _f_ulltof
+         U sfpFloatNormalize
+0000004c T __ulltof
+00000000 T __aeabi_ul2f
+
+_x_diab_sfpdnorm.o:
+00000000 D ___x_diab_sfpdnorm_o
+00000000 T sfpDoubleNormalize
+         U __ff1ll
+         U __lsl64
+         U __lsr64
+         U __sfpRoundMode
+0000023c T sfpDoubleNormalize2
+
+_x_diab_sfpfnorm.o:
+00000000 D ___x_diab_sfpfnorm_o
+00000000 T sfpFloatNormalize
+         U __ff1l
+         U __sfpRoundMode
+
+_x_diab_rd_pk_db.o:
+00000000 D ___x_diab_rd_pk_db_o
+00000000 T __DIAB_rd_pk_db
+
+_x_diab_rd_pk_fl.o:
+00000000 D ___x_diab_rd_pk_fl_o
+00000000 T __DIAB_rd_pk_fl
+
+_x_diab_rd_pk_ld.o:
+00000000 D ___x_diab_rd_pk_ld_o
+00000000 T __DIAB_rd_pk_ld
+
+_x_diab_rd_sw_db.o:
+00000000 D ___x_diab_rd_sw_db_o
+00000000 T __DIAB_rd_sw_db
+
+_x_diab_rd_sw_fl.o:
+00000000 D ___x_diab_rd_sw_fl_o
+00000000 T __DIAB_rd_sw_fl
+
+_x_diab_rd_sw_ld.o:
+00000000 D ___x_diab_rd_sw_ld_o
+00000000 T __DIAB_rd_sw_ld
+
+_x_diab_wr_pk_db.o:
+00000000 D ___x_diab_wr_pk_db_o
+00000000 T __DIAB_wr_pk_db
+
+_x_diab_wr_pk_fl.o:
+00000000 D ___x_diab_wr_pk_fl_o
+00000000 T __DIAB_wr_pk_fl
+
+_x_diab_wr_pk_ld.o:
+00000000 D ___x_diab_wr_pk_ld_o
+00000000 T __DIAB_wr_pk_ld
+
+_x_diab_wr_sw_db.o:
+00000000 D ___x_diab_wr_sw_db_o
+00000000 T __DIAB_wr_sw_db
+
+_x_diab_wr_sw_fl.o:
+00000000 D ___x_diab_wr_sw_fl_o
+00000000 T __DIAB_wr_sw_fl
+
+_x_diab_wr_sw_ld.o:
+00000000 D ___x_diab_wr_sw_ld_o
+00000000 T __DIAB_wr_sw_ld
+
+_x_diab_wrc_matp.o:
+00000000 D ___x_diab_wrc_matp_o
+00000000 T __wrc_matp_i4i4i4_888
+00000138 T __wrc_matp_i4i1i4_888
+
+__diab_intrinsics_impfp.o:
+00000000 d __diab_intrinsics_impfp
+00000000 T __diab_intrinsics_impfpInit
+         U ___x_diab_sfpddtoll_o
+         U ___x_diab_sfpddtoull_o
+         U ___x_diab_sfpdlltod_o
+         U ___x_diab_sfpdulltod_o
+         U ___x_diab_sfpfftoll_o
+         U ___x_diab_sfpfftoull_o
+         U ___x_diab_sfpflltof_o
+         U ___x_diab_sfpround_o
+         U ___x_diab_sfpdpol_o
+         U ___x_diab_sfpfulltof_o
+         U ___x_diab_sfpdnorm_o
+         U ___x_diab_sfpfnorm_o
+         U ___x_diab_rd_pk_db_o
+         U ___x_diab_rd_pk_fl_o
+         U ___x_diab_rd_pk_ld_o
+         U ___x_diab_rd_sw_db_o
+         U ___x_diab_rd_sw_fl_o
+         U ___x_diab_rd_sw_ld_o
+         U ___x_diab_wr_pk_db_o
+         U ___x_diab_wr_pk_fl_o
+         U ___x_diab_wr_pk_ld_o
+         U ___x_diab_wr_sw_db_o
+         U ___x_diab_wr_sw_fl_o
+         U ___x_diab_wr_sw_ld_o
+         U ___x_diab_wrc_matp_o
+
+_x_diab_sxprem32.o:
+00000000 t rem32
+00000000 D ___x_diab_sxprem32_o
+000000e8 T __rem32
+0000014c T __urem32
+
+_x_diab_sxpdiv64.o:
+00000000 t div64
+00000000 D ___x_diab_sxpdiv64_o
+         U __udiv32
+000001f0 T __div64
+00000288 T __udiv64
+
+_x_diab_sxprem64.o:
+00000000 t rem64
+00000000 D ___x_diab_sxprem64_o
+         U __urem32
+00000174 T __rem64
+00000208 T __urem64
+
+_x_diab_sxpmul64.o:
+00000000 D ___x_diab_sxpmul64_o
+00000000 T __mul64
+
+_x_diab_sxplsl64.o:
+00000000 D ___x_diab_sxplsl64_o
+00000000 T __lsl64
+
+_x_diab_sxpasr64.o:
+00000000 D ___x_diab_sxpasr64_o
+00000000 T __asr64
+
+_x_diab_sxplsr64.o:
+00000000 D ___x_diab_sxplsr64_o
+00000000 T __lsr64
+
+_x_diab_sxpadd64.o:
+00000000 D ___x_diab_sxpadd64_o
+00000000 T __add64
+0000000c T __sub64
+
+_x_diab_sxpcmp64.o:
+00000000 D ___x_diab_sxpcmp64_o
+00000000 T __eq64
+00000014 T __ne64
+00000028 T __ge64
+0000006c T __gt64
+000000b0 T __le64
+000000f4 T __lt64
+00000138 T __uge64
+0000017c T __ugt64
+000001c0 T __ule64
+00000204 T __ult64
+
+_x_diab_arm_div.o:
+00000000 D ___x_diab_arm_div_o
+00000000 T div32
+000000a0 T __div32
+000000f8 T __udiv32
+
+_x_diab_sxpm6432.o:
+00000000 D ___x_diab_sxpm6432_o
+00000000 T __mul6432
+
+_x_diab_ff1.o:
+00000000 D ___x_diab_ff1_o
+00000000 T __ff1l
+00000050 T __ff1
+00000054 T __ff1ll
+
+_x_diab_crtlibso.o:
+00000000 D ___x_diab_crtlibso_o
+00000000 T __init
+         U __exec_ctors
+00000000 T __fini
+         U __exec_dtors
+
+_x_diab_ctordtor.o:
+00000000 d __CTOR_END__
+00000000 d __CTOR_LIST__
+00000000 d __DTOR_LIST__
+00000000 d __DTOR_END__
+00000000 D ___x_diab_ctordtor_o
+00000000 T __exec_ctors
+00000040 T __exec_dtors
+00000004 D __exec_xtor_table
+
+_x_diab_copytable.o:
+00000000 D ___x_diab_copytable_o
+00000000 T __copy
+         U memset
+         U memcpy
+00000058 T __copy_multiple
+
+_x_diab_dmemcpy.o:
+00000000 D ___x_diab_dmemcpy_o
+00000000 T __diab_memcpy
+
+_x_diab_dmemset.o:
+00000000 D ___x_diab_dmemset_o
+00000000 T __diab_memset
+
+__diab_intrinsics_impl.o:
+00000000 d __diab_intrinsics_impl
+00000000 T __diab_intrinsics_implInit
+         U ___x_diab_sxprem32_o
+         U ___x_diab_sxpdiv64_o
+         U ___x_diab_sxprem64_o
+         U ___x_diab_sxpmul64_o
+         U ___x_diab_sxplsl64_o
+         U ___x_diab_sxpasr64_o
+         U ___x_diab_sxplsr64_o
+         U ___x_diab_sxpadd64_o
+         U ___x_diab_sxpcmp64_o
+         U ___x_diab_arm_div_o
+         U ___x_diab_sxpm6432_o
+         U ___x_diab_ff1_o
+         U ___x_diab_crtlibso_o
+         U ___x_diab_ctordtor_o
+         U ___x_diab_copytable_o
+         U ___x_diab_dmemcpy_o
+         U ___x_diab_dmemset_o
+
+_x_diab_torn_syncatomic.o:
+00000000 b __diab_atomic_lock
+00000000 D ___x_diab_torn_syncatomic_o
+00000000 T _STI__07__diab_atomic_init
+         U __diab_alloc_mutex
+00000020 T __diab_atomic_enter
+         U __diab_lock_mutex
+00000044 T __diab_atomic_restore
+         U __diab_unlock_mutex
+
+_x_diab_torn_syncmutex.o:
+00000000 D ___x_diab_torn_syncmutex_o
+00000000 T __diab_alloc_mutex
+         U semMCreate
+0000001c T __diab_free_mutex
+         U semDelete
+00000020 T __diab_lock_mutex
+         U semTake
+00000028 T __diab_trylock_mutex
+00000030 T __diab_unlock_mutex
+         U semGive
+
+_x_diab_torn_syncsem.o:
+00000000 D ___x_diab_torn_syncsem_o
+00000000 T __diab_alloc_semaphore
+         U semMCreate
+0000001c T __diab_free_semaphore
+         U semDelete
+00000020 T __diab_lock_semaphore
+         U semTake
+00000028 T __diab_trylock_semaphore
+00000030 T __diab_unlock_semaphore
+         U semGive
+
+_x_diab_comljmp.o:
+00000000 D ___x_diab_comljmp_o
+00000000 T __common_long_jmp
+
+_x_diab_libg.o:
+00000000 D ___x_diab_libg_o
+00000000 D __cie
+00000014 D __cieThumb
+
+__diab_intrinsics_torn.o:
+00000000 d __diab_intrinsics_torn
+00000000 T __diab_intrinsics_tornInit
+         U ___x_diab_torn_syncatomic_o
+         U ___x_diab_torn_syncmutex_o
+         U ___x_diab_torn_syncsem_o
+         U ___x_diab_comljmp_o
+         U ___x_diab_libg_o
+
+libdcc.a:
+
+_x_diab_sfpddtoll.o:
+00000000 D ___x_diab_sfpddtoll_o
+00000000 T _d_dtoll
+         U __lsl64
+         U __asr64
+000000e0 T __dtoll
+00000000 T __aeabi_d2lz
+00000000 T __fixdfdi
+
+_x_diab_sfpddtoull.o:
+00000000 D ___x_diab_sfpddtoull_o
+00000000 T _d_dtoull
+         U __lsl64
+         U __lsr64
+000000c8 T __dtoull
+00000000 T __aeabi_d2ulz
+00000000 T __fixunsdfdi
+
+_x_diab_sfpdlltod.o:
+00000000 D ___x_diab_sfpdlltod_o
+00000000 T _d_lltod
+         U sfpDoubleNormalize
+00000070 T __lltod
+00000000 T __aeabi_l2d
+
+_x_diab_sfpdulltod.o:
+00000000 D ___x_diab_sfpdulltod_o
+00000000 T _d_ulltod
+         U sfpDoubleNormalize
+0000003c T __ulltod
+00000000 T __aeabi_ul2d
+00000000 T __floatundidf
+
+_x_diab_sfpfftoll.o:
+00000000 D ___x_diab_sfpfftoll_o
+00000000 T _f_ftoll
+         U __lsl64
+         U __asr64
+000000cc T __ftoll
+00000000 T __aeabi_f2lz
+00000000 T __fixsfdi
+
+_x_diab_sfpfftoull.o:
+00000000 D ___x_diab_sfpfftoull_o
+00000000 T _f_ftoull
+         U __lsl64
+         U __lsr64
+000000b4 T __ftoull
+00000000 T __aeabi_f2ulz
+00000000 T __fixunssfdi
+
+_x_diab_sfpflltof.o:
+00000000 D ___x_diab_sfpflltof_o
+00000000 T _f_lltof
+         U sfpFloatNormalize
+00000078 T __lltof
+00000000 T __aeabi_l2f
+
+_x_diab_sfpround.o:
+00000000 D ___x_diab_sfpround_o
+00000000 T _fp_round
+00000004 C __sfpRoundMode
+
+_x_diab_sfpdpol.o:
+00000000 D ___x_diab_sfpdpol_o
+00000000 T __POL
+         U __mul64
+         U __lsl64
+         U __lsr64
+         U __ff1ll
+         U sfpDoubleNormalize2
+
+_x_diab_sfpfulltof.o:
+00000000 D ___x_diab_sfpfulltof_o
+00000000 T _f_ulltof
+         U sfpFloatNormalize
+0000004c T __ulltof
+00000000 T __aeabi_ul2f
+
+_x_diab_sfpdnorm.o:
+00000000 D ___x_diab_sfpdnorm_o
+00000000 T sfpDoubleNormalize
+         U __ff1ll
+         U __lsl64
+         U __lsr64
+         U __sfpRoundMode
+0000023c T sfpDoubleNormalize2
+
+_x_diab_sfpfnorm.o:
+00000000 D ___x_diab_sfpfnorm_o
+00000000 T sfpFloatNormalize
+         U __ff1l
+         U __sfpRoundMode
+
+_x_diab_rd_pk_db.o:
+00000000 D ___x_diab_rd_pk_db_o
+00000000 T __DIAB_rd_pk_db
+
+_x_diab_rd_pk_fl.o:
+00000000 D ___x_diab_rd_pk_fl_o
+00000000 T __DIAB_rd_pk_fl
+
+_x_diab_rd_pk_ld.o:
+00000000 D ___x_diab_rd_pk_ld_o
+00000000 T __DIAB_rd_pk_ld
+
+_x_diab_rd_sw_db.o:
+00000000 D ___x_diab_rd_sw_db_o
+00000000 T __DIAB_rd_sw_db
+
+_x_diab_rd_sw_fl.o:
+00000000 D ___x_diab_rd_sw_fl_o
+00000000 T __DIAB_rd_sw_fl
+
+_x_diab_rd_sw_ld.o:
+00000000 D ___x_diab_rd_sw_ld_o
+00000000 T __DIAB_rd_sw_ld
+
+_x_diab_wr_pk_db.o:
+00000000 D ___x_diab_wr_pk_db_o
+00000000 T __DIAB_wr_pk_db
+
+_x_diab_wr_pk_fl.o:
+00000000 D ___x_diab_wr_pk_fl_o
+00000000 T __DIAB_wr_pk_fl
+
+_x_diab_wr_pk_ld.o:
+00000000 D ___x_diab_wr_pk_ld_o
+00000000 T __DIAB_wr_pk_ld
+
+_x_diab_wr_sw_db.o:
+00000000 D ___x_diab_wr_sw_db_o
+00000000 T __DIAB_wr_sw_db
+
+_x_diab_wr_sw_fl.o:
+00000000 D ___x_diab_wr_sw_fl_o
+00000000 T __DIAB_wr_sw_fl
+
+_x_diab_wr_sw_ld.o:
+00000000 D ___x_diab_wr_sw_ld_o
+00000000 T __DIAB_wr_sw_ld
+
+_x_diab_wrc_matp.o:
+00000000 D ___x_diab_wrc_matp_o
+00000000 T __wrc_matp_i4i4i4_888
+00000138 T __wrc_matp_i4i1i4_888
+
+__diab_intrinsics_impfp.o:
+00000000 d __diab_intrinsics_impfp
+00000000 T __diab_intrinsics_impfpInit
+         U ___x_diab_sfpddtoll_o
+         U ___x_diab_sfpddtoull_o
+         U ___x_diab_sfpdlltod_o
+         U ___x_diab_sfpdulltod_o
+         U ___x_diab_sfpfftoll_o
+         U ___x_diab_sfpfftoull_o
+         U ___x_diab_sfpflltof_o
+         U ___x_diab_sfpround_o
+         U ___x_diab_sfpdpol_o
+         U ___x_diab_sfpfulltof_o
+         U ___x_diab_sfpdnorm_o
+         U ___x_diab_sfpfnorm_o
+         U ___x_diab_rd_pk_db_o
+         U ___x_diab_rd_pk_fl_o
+         U ___x_diab_rd_pk_ld_o
+         U ___x_diab_rd_sw_db_o
+         U ___x_diab_rd_sw_fl_o
+         U ___x_diab_rd_sw_ld_o
+         U ___x_diab_wr_pk_db_o
+         U ___x_diab_wr_pk_fl_o
+         U ___x_diab_wr_pk_ld_o
+         U ___x_diab_wr_sw_db_o
+         U ___x_diab_wr_sw_fl_o
+         U ___x_diab_wr_sw_ld_o
+         U ___x_diab_wrc_matp_o
+
+_x_diab_sxprem32.o:
+00000000 t rem32
+00000000 D ___x_diab_sxprem32_o
+000000e8 T __rem32
+0000014c T __urem32
+
+_x_diab_sxpdiv64.o:
+00000000 t div64
+00000000 D ___x_diab_sxpdiv64_o
+         U __udiv32
+000001f0 T __div64
+00000288 T __udiv64
+
+_x_diab_sxprem64.o:
+00000000 t rem64
+00000000 D ___x_diab_sxprem64_o
+         U __urem32
+00000174 T __rem64
+00000208 T __urem64
+
+_x_diab_sxpmul64.o:
+00000000 D ___x_diab_sxpmul64_o
+00000000 T __mul64
+
+_x_diab_sxplsl64.o:
+00000000 D ___x_diab_sxplsl64_o
+00000000 T __lsl64
+
+_x_diab_sxpasr64.o:
+00000000 D ___x_diab_sxpasr64_o
+00000000 T __asr64
+
+_x_diab_sxplsr64.o:
+00000000 D ___x_diab_sxplsr64_o
+00000000 T __lsr64
+
+_x_diab_sxpadd64.o:
+00000000 D ___x_diab_sxpadd64_o
+00000000 T __add64
+0000000c T __sub64
+
+_x_diab_sxpcmp64.o:
+00000000 D ___x_diab_sxpcmp64_o
+00000000 T __eq64
+00000014 T __ne64
+00000028 T __ge64
+0000006c T __gt64
+000000b0 T __le64
+000000f4 T __lt64
+00000138 T __uge64
+0000017c T __ugt64
+000001c0 T __ule64
+00000204 T __ult64
+
+_x_diab_arm_div.o:
+00000000 D ___x_diab_arm_div_o
+00000000 T div32
+000000a0 T __div32
+000000f8 T __udiv32
+
+_x_diab_sxpm6432.o:
+00000000 D ___x_diab_sxpm6432_o
+00000000 T __mul6432
+
+_x_diab_ff1.o:
+00000000 D ___x_diab_ff1_o
+00000000 T __ff1l
+00000050 T __ff1
+00000054 T __ff1ll
+
+_x_diab_crtlibso.o:
+00000000 D ___x_diab_crtlibso_o
+00000000 T __init
+         U __exec_ctors
+00000000 T __fini
+         U __exec_dtors
+
+_x_diab_ctordtor.o:
+00000000 d __CTOR_END__
+00000000 d __CTOR_LIST__
+00000000 d __DTOR_LIST__
+00000000 d __DTOR_END__
+00000000 D ___x_diab_ctordtor_o
+00000000 T __exec_ctors
+00000040 T __exec_dtors
+00000004 D __exec_xtor_table
+
+_x_diab_copytable.o:
+00000000 D ___x_diab_copytable_o
+00000000 T __copy
+         U memset
+         U memcpy
+00000058 T __copy_multiple
+
+_x_diab_dmemcpy.o:
+00000000 D ___x_diab_dmemcpy_o
+00000000 T __diab_memcpy
+
+_x_diab_dmemset.o:
+00000000 D ___x_diab_dmemset_o
+00000000 T __diab_memset
+
+__diab_intrinsics_impl.o:
+00000000 d __diab_intrinsics_impl
+00000000 T __diab_intrinsics_implInit
+         U ___x_diab_sxprem32_o
+         U ___x_diab_sxpdiv64_o
+         U ___x_diab_sxprem64_o
+         U ___x_diab_sxpmul64_o
+         U ___x_diab_sxplsl64_o
+         U ___x_diab_sxpasr64_o
+         U ___x_diab_sxplsr64_o
+         U ___x_diab_sxpadd64_o
+         U ___x_diab_sxpcmp64_o
+         U ___x_diab_arm_div_o
+         U ___x_diab_sxpm6432_o
+         U ___x_diab_ff1_o
+         U ___x_diab_crtlibso_o
+         U ___x_diab_ctordtor_o
+         U ___x_diab_copytable_o
+         U ___x_diab_dmemcpy_o
+         U ___x_diab_dmemset_o
+
+_x_diab_torn_syncatomic.o:
+00000000 b __diab_atomic_lock
+00000000 D ___x_diab_torn_syncatomic_o
+00000000 T _STI__07__diab_atomic_init
+         U __diab_alloc_mutex
+00000020 T __diab_atomic_enter
+         U __diab_lock_mutex
+00000044 T __diab_atomic_restore
+         U __diab_unlock_mutex
+
+_x_diab_torn_syncmutex.o:
+00000000 D ___x_diab_torn_syncmutex_o
+00000000 T __diab_alloc_mutex
+         U semMCreate
+0000001c T __diab_free_mutex
+         U semDelete
+00000020 T __diab_lock_mutex
+         U semTake
+00000028 T __diab_trylock_mutex
+00000030 T __diab_unlock_mutex
+         U semGive
+
+_x_diab_torn_syncsem.o:
+00000000 D ___x_diab_torn_syncsem_o
+00000000 T __diab_alloc_semaphore
+         U semMCreate
+0000001c T __diab_free_semaphore
+         U semDelete
+00000020 T __diab_lock_semaphore
+         U semTake
+00000028 T __diab_trylock_semaphore
+00000030 T __diab_unlock_semaphore
+         U semGive
+
+_x_diab_comljmp.o:
+00000000 D ___x_diab_comljmp_o
+00000000 T __common_long_jmp
+
+_x_diab_libg.o:
+00000000 D ___x_diab_libg_o
+00000000 D __cie
+00000014 D __cieThumb
+
+__diab_intrinsics_torn.o:
+00000000 d __diab_intrinsics_torn
+00000000 T __diab_intrinsics_tornInit
+         U ___x_diab_torn_syncatomic_o
+         U ___x_diab_torn_syncmutex_o
+         U ___x_diab_torn_syncsem_o
+         U ___x_diab_comljmp_o
+         U ___x_diab_libg_o

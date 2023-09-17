@@ -1,0 +1,138 @@
+; $Header: /usr/cvsroot/target/h/wrn/wm/util/layout/arp.ldb,v 1.1.1.1 2001/11/05 17:47:19 tneale Exp $
+; Layout information for ARP
+
+;****************************************************************************
+;
+;  *** Restricted Rights Legend ***
+;
+;  The programs and information contained herein are licensed only
+;  pursuant to a license agreement that contains use, reverse
+;  engineering, disclosure, and other restrictions; accordingly, it
+;  is "Unpublished--all rights reserved under the applicable
+;  copyright laws".
+;
+;  Use duplication, or disclosure by the Government is subject to
+;  restrictions as set forth in subparagraph (c)(1)(ii) of the Rights
+;  in Technical Data and Computer Licensed Programs clause of DFARS
+;  52.227 7013.
+;
+;  Copyright 2000-2001 Wind River Systems, Inc.
+;  Copyright 1995-1997 Epilogue Technology Corporation.
+;  Copyright 1998 Integrated Systems, Inc.
+;  All rights reserved.
+;
+;  *** Government Use ***
+;
+;  The Licensed Programs and their documentation were developed at
+;  private expense and no part of them is in the public domain.
+;
+;  The Licensed Programs are "Restricted Computer Software" as that
+;  term is defined in Clause 52.227-19 of the Federal Acquisition
+;  Regulations (FAR) and are "Commercial Computer Software" as that
+;  term is defined in Subpart 227.401 of the Department of Defense
+;  Federal Acquisition Regulation Supplement (DFARS).
+;
+;  (i) If the licensed Programs are supplied to the Department of
+;      Defense (DoD), the Licensed Programs are classified as
+;      "Commercial Computer Software" and the Government is acquiring
+;      only "restricted rights" in the Licensed Programs and their
+;      documentation as that term is defined in Clause 52.227
+;      7013(c)(1) of the DFARS, and
+;
+;  (ii) If the Licensed Programs are supplied to any unit or agency
+;      of the United States Government other than DoD, the
+;      Government's rights in the Licensed Programs and their
+;      documentation will be as defined in Clause 52.227-19(c)(2) of
+;      the FAR.
+;****************************************************************************
+
+;  $Log: arp.ldb,v $
+;  Revision 1.1.1.1  2001/11/05 17:47:19  tneale
+;  Tornado shuffle
+;
+;  Revision 1.11  2001/01/19 22:22:32  paul
+;  Update copyright.
+;
+;  Revision 1.10  1998/02/25 15:21:38  sra
+;  Finish moving types.h, bug.h, and bugdef.h to common/h/.
+;
+;  Revision 1.9  1998/02/25 04:53:47  sra
+;  Update copyrights.
+;
+;  Revision 1.8  1998/02/20 04:02:36  sra
+;  Fix too-long layout macro names.
+;
+;  Revision 1.7  1997/09/26 20:21:13  alan
+;  Use features of new layout compiler: `use-layouts' and `C-include'.
+;
+;  Revision 1.6  1997/09/23 18:17:44  sra
+;  Comment out 3MB Ethernet to avoid breaking BCC 4.0.
+;
+;  Revision 1.5  1997/06/04 05:46:17  alan
+;  Fix RCS keywords.
+;
+;  Revision 1.4  1997/06/03 22:59:29  alan
+;  Use `define-rcs-info'.
+;
+;  Revision 1.3  1997/05/19 21:18:44  alan
+;  Add more HARDWARE_TYPE values.
+;
+;  Revision 1.2  1997/04/22 00:18:30  alan
+;  Fix copyright.
+;
+;  Revision 1.1  1997/04/19 04:12:12  alan
+;  Move all .ldb files into the `layout' directory.
+;
+;  Revision 1.2  1995/06/26 06:25:29  alan
+;  Comment on Apple protocols
+;
+;  Revision 1.1  1995/05/23  07:16:45  alan
+;  Basic network layouts.
+
+(define-rcs-info "$Id: arp.ldb,v 1.1.1.1 2001/11/05 17:47:19 tneale Exp $")
+
+(C-include EPILOGUE_INSTALL_H <install.h>)
+(C-include EPILOGUE_TYPES_H <common/h/types.h>)
+(C-include EPILOGUE_LAYOUT_LDBGLUE_H <layout/ldbglue.h>)
+
+; This same layout is used for RARP and several other related protocols...
+; It also -almost- works for AppleTalk ARP (AARP), see below...
+
+(define-layout ARP_HEADER
+  (struct (field HARDWARE_TYPE (enum (type (opaque 16))
+				     (value ETHERNET 1)
+;				     (value ETHERNET3MB 2)
+				     (value AX25 3)
+				     (value PRONET 4)
+				     (value CHAOS 5)
+				     (value IEEE802 6)
+				     (value ARCNET 7)
+				     (value HYPERCHANNEL 8)
+				     (value LANSTAR 9)
+				     (value AUTONET 10)
+;				     (value LOCALTALK 11)
+;				     (value LOCALNET 12)
+				     (value SMDS 14)
+				     ))
+	  (field PROTOCOL_TYPE (opaque 16))	; same values as ETHERNET_TYPE
+	  (field HARDWARE_LENGTH (unsigned 8))
+	  (field PROTOCOL_LENGTH (unsigned 8))
+	  (field OPCODE (enum (type (opaque 16))
+			      (value REQUEST 1)
+			      (value REPLY 2)
+;			      (value REVERSE_REQUEST 3)
+			      ;; Give 16-bits worth of opcode, why the
+			      ;; hell did Apple choose 3 for this?
+			      ;; (value APPLETALK_ARP_PROBE 3)
+;			      (value REVERSE_REPLY 4)
+			      ))
+	  ;; After the header comes:
+	  ;; sender's hardware address
+	  ;; sender's protocol address
+	  ;; target's hardware address
+	  ;; target's protocol address
+	  ))
+
+; Local Variables:
+; mode: Scheme
+; End:

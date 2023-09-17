@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="CLK_GEN">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2021-4-1T16:13:5</timestamp>
+    <pin polarity="Output" x="736" y="-480" name="CLK_M" />
+    <pin polarity="Output" x="736" y="-448" name="CLK_DDS" />
+    <pin polarity="Output" x="736" y="-416" name="CLK_4" />
+    <pin polarity="Output" x="736" y="-384" name="CLK_8" />
+    <pin polarity="Output" x="736" y="-352" name="CLK_1ms" />
+    <pin polarity="Output" x="736" y="-320" name="CLK_FADC" />
+    <pin polarity="Output" x="736" y="-240" name="ALIVE" />
+    <pin polarity="Output" x="736" y="-208" name="SUD_LOCKED" />
+    <pin polarity="Input" x="0" y="-208" name="RST" />
+    <pin polarity="Input" x="0" y="-464" name="CLK_25MHZ" />
+    <graph>
+        <rect width="608" x="64" y="-512" height="344" />
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="192" y="-520" type="symbol" />
+        <line x2="736" y1="-480" y2="-480" x1="672" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="664" y="-480" type="pin CLK_M" />
+        <line x2="736" y1="-448" y2="-448" x1="672" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="664" y="-448" type="pin CLK_DDS" />
+        <line x2="736" y1="-416" y2="-416" x1="672" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="664" y="-416" type="pin CLK_4" />
+        <line x2="736" y1="-384" y2="-384" x1="672" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="664" y="-384" type="pin CLK_8" />
+        <line x2="736" y1="-352" y2="-352" x1="672" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="664" y="-352" type="pin CLK_1ms" />
+        <line x2="736" y1="-320" y2="-320" x1="672" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="664" y="-320" type="pin CLK_FADC" />
+        <line x2="736" y1="-240" y2="-240" x1="672" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="664" y="-240" type="pin ALIVE" />
+        <line x2="736" y1="-208" y2="-208" x1="672" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="664" y="-208" type="pin SUD_LOCKED" />
+        <line x2="0" y1="-208" y2="-208" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-208" type="pin RST" />
+        <line x2="0" y1="-464" y2="-464" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-464" type="pin CLK_25MHZ" />
+    </graph>
+</symbol>

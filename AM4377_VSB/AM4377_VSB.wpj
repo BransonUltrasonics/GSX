@@ -1,0 +1,106 @@
+Document file - DO NOT EDIT
+
+<BEGIN> CORE_INFO_TYPE
+::prj_vsb
+<END>
+
+<BEGIN> CORE_INFO_VERSION
+4.2
+<END>
+
+<BEGIN> VSB_ARCH
+arm
+<END>
+
+<BEGIN> VSB_Bsp
+ti_sitara_ctxa9_branson_1_0_0_0
+<END>
+
+<BEGIN> VSB_BspDir
+C:/ScriptGSX2-3/GSX2-3Stream/_Branson_Driver_Layer/BRANSON_BSP/BSP_4377/ti_sitara_ctxa9_branson-1.0.0.0
+<END>
+
+<BEGIN> VSB_CFG
+
+<END>
+
+<BEGIN> VSB_COMPAT69
+0
+<END>
+
+<BEGIN> VSB_DEBUG
+0
+<END>
+
+<BEGIN> VSB_DEBUGOPT
+0
+<END>
+
+<BEGIN> VSB_DEFAULTFlag
+0
+<END>
+
+<BEGIN> VSB_FPFlag
+vector
+<END>
+
+<BEGIN> VSB_GPPFlag
+0
+<END>
+
+<BEGIN> VSB_INETFlag
+2
+<END>
+
+<BEGIN> VSB_PRIONLY
+0
+<END>
+
+<BEGIN> VSB_PRI_DEFAULT
+
+<END>
+
+<BEGIN> VSB_PSL
+
+<END>
+
+<BEGIN> VSB_RPM_VERSION
+1.2.0.8
+<END>
+
+<BEGIN> VSB_SEC_DEFAULT
+
+<END>
+
+<BEGIN> VSB_SITNBFlag
+0
+<END>
+
+<BEGIN> VSB_SMPFlag
+0
+<END>
+
+<BEGIN> VSB_SPEED
+0
+<END>
+
+<BEGIN> VSB_TYPE
+0
+<END>
+
+<BEGIN> VSB_VERSION
+1
+<END>
+
+<BEGIN> VSB_cpu_name
+ARMARCH7
+<END>
+
+<BEGIN> VSB_lp64Flag
+0
+<END>
+
+<BEGIN> VSB_possible_cpus
+ARMARCH7
+<END>
+

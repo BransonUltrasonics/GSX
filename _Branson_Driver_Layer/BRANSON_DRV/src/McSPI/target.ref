@@ -1,0 +1,848 @@
+\" ti_sitara_ctxa9/target.ref - TI Sitara series target-specific documentation
+\"
+\" Copyright (c) 2014-2016 Wind River Systems, Inc.
+\"
+\" The right to copy, distribute, modify or otherwise make use
+\" of this software may be licensed only pursuant to the terms
+\" of an applicable Wind River license agreement.
+\"
+\" modification history
+\" --------------------
+\" 17may16,sye  use GTC as timestamp by default (V7PRO-3079)
+\" 05jan16,m_w  replace DRV_VXBEND_TI_CPSW with DRV_END_FDT_TI_CPSW (V7PRO-2729)
+\" 11nov15,cfm  changed PSL name from TI_AM3XXX_CTXA9 to TI_SITARA (US69494)
+\" 10oct15,sye  updated hardware features support with component name
+\"              (V7PRO-2514)
+\" 10mar15,sye  removed NAME section. (V7PRO-1818)
+\" 22oct14,swu  added section for bootable SD card. (V7PRO-1398)
+\" 16oct14,m_w  make mutex between TI_AM3XXX_CTXA8 and TI_AM3XXX_CTXA9. (V7PRO-1378)
+\" 14oct14,sye  added dts file usage description. (V7PRO-1224)
+\" 28sep14,m_w  add description for layer TI_AM3XXX_CTXA9. (V7PRO-1273)
+\" 18sep14,swu  fixed document error. (V7PRO-1259)
+\" 01jul14,swu  created (US40646)
+\"
+\TITLE ti_sitara_ctxa9 - TI SITARA CORTEX-A9
+
+EXTERNAL DEPENDENCIES
+None
+
+INTRODUCTION
+
+This section includes getting-started information, including subsections
+detailing ROM installation, boot ROM instructions, and jumper settings
+for VxWorks operation.
+
+\sh Supported Boards
+
+The current release of this BSP only supports below boards:
+
+\cs
+TI AM437x General Purpose EVM
+\ce
+
+For TI AM437x GP EVM, before using the board with VxWorks, verify that the board
+runs in the factory configuration using vendor-supplied ROMs and switch settings
+and checking the RS-232 connection.
+
+\sh Jumpers & Switches
+
+Default Switch Settings:
+
+For TI AM437x GP EVM, two switches(SW11 ,SW12) on board must be set correctly.
+Their functions are described as following:
+
+ Switch SW11 Function (SYSBOOT[0,4], Boot mode select) (on - 1, off - 0)
+\ts
+-----------------------------------------------------------------------
+     BOOT MODE      | Setting  [1  2  3  4  5]
+--------------------|---------|----------------------------------------
+   SD Card boot     |         | 1  1  1  1  1
+-----------------------------------------------------------------------
+\te
+
+Switch SW12 Function (SYSBOOT[5,6,9,12,13], Boot mode select) (on - 1, off - 0)
+\ts
+-----------------------------------------------------------------------
+  profile selection |  Setting  [1  2  3  4  5]
+--------------------|--------- ----------------------------------------
+    profile 0       |            1  1  1  1  1
+-----------------------------------------------------------------------
+\te
+
+\sh Getting the board running VxWorks
+This section will guide you how to run VxWorks on the TI AM437x GP EVM board.
+
+1. Creating VxWorks image
+
+    1.1 Create and config a VSB (VxWorks Source Build)
+
+    A VSB must be created before a VIP could be used, and it could be created
+    based on the BSP: ti_sitara_ctxa9_1_0_0_0.
+
+        1.1.1 Create a VSB
+
+        In the step of "Project Setup" in WorkBench, select
+        ti_sitara_ctxa9_1_0_0_0 BSP.
+
+        Or just use following commands in the VxWorks7 Development
+        Shell:
+
+\cs
+        vxprj vsb create -bsp ti_sitara_ctxa9_1_0_0_0 -S ~/myVsb
+        vxprj vsb create -cpu ARMARCH7 -S ~/myVsb
+\ce
+
+        The BSP version number "1_0_0_0" may be changed as the BSP updated,
+        you may need to choose in the WorkBench or check which version you
+        want by below command in the VxWorks 7 Development Shell:
+
+\cs
+        vxprj vsb listBsps
+\ce
+
+        If only the newest BSP version installed needs to be used to create 
+        the VSB by using the vxprj tool, below command can be used: 
+
+        \cs 
+        vxprj vsb create -bsp ti_sitara_ctxa9 -S ~/myVsb
+        \ce 
+
+        This allows for newest version auto check
+
+        1.1.2 Configure the VSB
+
+        For CPU based VSB, the following layers need to be enabled in the Source
+        Build Configuration Editor of WorkBench:
+
+\cs
+        FDT
+        BOARDLIB
+        TI_SITARA
+\ce
+
+        Or just use below command to add all the layers needed:
+
+\cs
+        vxprj vsb add TI_SITARA
+\ce
+
+        1.1.3 Build the VSB
+
+        Build the VSB in the WorkBench or use below command in the
+        VxWorks7 Development Shell:
+
+\cs
+        vxprj build
+\ce
+
+    1.2 Create a VIP based on the new VSB
+
+        Please note: Both WorkBench and the VxWorks7 Development Shell can
+        be used for VIP creating and configuring. All below sections will only
+        use the VxWorks7 Development Shell command as an example, and the
+        corresponding operation in WorkBench is quite straight forward.
+
+        1.2.1 Create a VIP based on the new VSB 
+
+        In the same directory of the new VSB, use below command to create a VIP 
+        for BSP version "1_0_0_0": 
+
+\cs 
+        vxprj vip create -vsb myVsb ti_sitara_ctxa9_1_0_0_0 diab myVip 
+\ce 
+
+        Or use below command to create a VIP for the newest BSP version 
+        installed: 
+
+\cs 
+        vxprj vip create -vsb myVsb ti_sitara_ctxa9 diab myVip 
+\ce
+
+        1.2.2 Configure and build the VIP
+
+            1.2.2.1 Configure the device tree blob (DTB) loading method
+
+            The VxWorks 7 ARM BSP uses device tree nodes to describe device
+            specific information, and there are two methods to load the device
+            tree blob:
+                - Embedded:     the device tree blob is embedded in the VxWorks
+                                image.
+                - Independent:  an independent file is created for the device
+                                tree blob. And the independent method is used
+                                by default.
+
+            Note: when kernel is running in the embedded DTB mode, the kernel
+            bootline is retrieved directly from the Device Tree Source file
+            'chosen' node. It is not from U-Boot 'bootargs' environment
+            variable.
+            
+            To use the embedded method, use below command in the VIP directory:
+
+\cs
+            vxprj component add INCLUDE_STANDALONE_DTB
+\ce
+
+            This BSP supports booting from U-Boot (v2016.01). 
+
+            The U-Boot can boot up two kinds of VxWorks images: uVxWorks and raw
+            bin file vxWorks.bin. The uVxWorks is used for U-Boot "bootm"
+            command, and needs an independent DTB file. The vxWorks.bin is used
+            for U-Boot "go" command and needs embedded DTB.
+
+            Use one of the below commands to create different VxWorks image:
+
+\cs
+            vxprj build uVxWorks
+            vxprj build vxWorks.bin
+\ce
+
+            After building passed, the related independent DTB files
+            (with .dtb suffix) are also created in the "default" subdirectory
+            of the VIP. For this BSP, "am437x-evm.dtb" will be created.
+
+2. Running VxWorks on U-Boot
+
+    2.1 Updating the U-Boot image (v2016.01)
+
+        The pre-flashed U-Boot images supplied by the vendor cannot be used to
+        boot up the VxWorks image. And the Wind River supplied U-Boot images
+        can be found under the "_bootloader" subdirectory of the BSP. 
+
+        For AM437x GP EVM board, please rename AM437x_MLO to MLO and rename
+        AM437x_u-boot.img to u-boot.img under "_bootloader" subdirectory.
+
+        To update your U-Boot loader, simply pull the SD card and copy these two
+        files (u-boot.img, MLO) from "_bootloader" directory into SD card root
+        directory.
+        Note: The SD card needs to be FAT32 format and bootable (partition as 
+        boot active), refer to secion 'Creating an active partition on a SD 
+        card from Windows' to create a bootable SD card.
+
+    2.2 Compile U-BOOT image
+    
+        This is optional step to generate MLO and u-boot.img.
+        
+        2.2.1 Getting U-Boot source
+
+        The U-Boot released sources can be found on git repository, or on the 
+        DENX official ftp site:
+        ftp://ftp.denx.de/pub/u-boot/, use following commands to get it,
+
+        wget ftp://ftp.denx.de/pub/u-boot/u-boot-2016.01.tar.bz2
+        tar jxvf u-boot-2016.01.tar.bz2
+        cd u-boot-2016.01
+        
+        And then get the patch:
+        wget -c  https://raw.githubusercontent.com/eewiki/u-boot-patches/master/v2016.01/0001-am335x_evm-uEnv.txt-bootz-n-fixes.patch
+        
+        Apply the patch:
+        patch -p1 < 0001-am335x_evm-uEnv.txt-bootz-n-fixes.patch
+
+        2.2.2 Compiling U-Boot source
+
+        Generic U-Boot documentation can be found on the official site:
+        http://www.denx.de/wiki/DULG/Manual.
+
+        To compile U-Boot source for AM437x GP EVM board boards, a cross compile 
+        tool chain needs to be installed. You may use whatever you prefer, but
+        below is used for the pre-built images:
+        gcc-linaro-arm-linux-gnueabihf-4.8-2014.03_linux.tar.xz from:
+        http://releases.linaro.org/14.03/components/toolchain/binaries/
+
+        Use below commands to compile the "AM437x" suffix U-Boot images to burn
+        into the SD card.
+
+\cs
+        export ARCH=arm
+        export CROSS_COMPILE=arm-linux-gnueabihf-
+        make distclean
+        make am437x_gp_evm_defconfig
+        make
+\ce
+
+        The built MLO and u-boot.img can be found at the U-Boot root directory.
+
+        For TI AM437x EVM board use u-boot-dtb.img instead of u-boot.img,
+
+\cs
+        mv u-boot-dtb.img u-boot.img
+\ce
+
+        Below are pre-built U-Boot images in "_bootloader" subdirectory,
+
+\ts
+File name          | Description                    | Usage
+--------------------------------------------------------------------------------
+AM437x_MLO         | U-Boot MLO for AM437x GP EVM   | refer to 2.1
+AM437x_u-boot.img  | U-Boot image for AM437x GP EVM | refer to 2.1
+\te
+
+    2.3 Downloading the VxWorks image
+
+        2.3.1 Start a TFTP server
+
+        Open a TFTP server on your host. Make sure the root directory is your
+        project directory of the VIP which contains the VxWorks image.
+
+        2.3.2 Configure the U-Boot environment
+
+        When board boots up, the U-Boot will prompt you to enter U-Boot shell,
+        press any key then to get into U-Boot shell before count down finished.
+        Type the following commands to setup the U-Boot environment. 
+
+\cs
+        setenv ipaddr 192.168.1.100
+        setenv netmask 255.255.255.0
+        setenv serverip 192.168.1.1
+        saveenv
+\ce
+
+        And then type the following command to update the VxWorks Bootline:
+
+\cs
+        setenv bootargs 'cpsw(0,0)host:vxWorks h=192.168.1.1
+                e=192.168.1.100:ffffff00 u=target pw=vxTarget f=0x0'
+        saveenv
+\ce
+
+        Note:
+        1)  This is just an example, you must change the network parameters
+            according to your actual situation.
+
+        2)  Wrong setting of the "bootargs" parameter may cause the network
+            failed to work. And if you do not want to set the "bootargs" in
+            U-Boot, use below command to delete the parameter in U-Boot will
+            make VxWorks using the default setting in the BSP's device tree
+            file.
+
+\cs
+        setenv bootargs
+        saveenv
+\ce
+
+        2.3.3 Download and run the uVxWorks image for U-Boot
+
+        2.3.3.1 Download uVxWorks image for U-Boot
+
+        The uVxWorks image is used along with an independent DTB file, and
+        the downloading address must not destroy the spaces used by VxWorks.
+        Below is an example for this BSP:
+
+        In the U-Boot shell, type the following command to download uVxWorks:
+
+\cs
+        tftp 0x82000000 uVxWorks
+\ce
+
+        type the following command to download DTB:
+
+\cs
+        tftp 0x80005000 $DTB_FILE
+\ce
+
+        Note: the DTB_FILE varies is showed below,
+
+\ts
+Board                   | DTB_FILE
+-------------------------------------------------------
+TI AM437x GP EVM        | am437x-evm.dtb
+\te
+
+        2.3.3.2. Running the uVxWorks image on U-Boot
+
+        Use "bootm <image address> - <DTB address>" command to load and run
+        uVxWorks image as below:
+
+\cs
+        bootm 0x82000000 - 0x80005000
+\ce
+
+        2.3.4 Download and run the vxWorks.bin image for U-Boot
+
+        2.3.4.1 Download vxWorks.bin image for U-Boot
+
+        The vxWorks.bin image is used for U-Boot "go" command, so the
+        downloading address must be the same as "KERNEL_LOAD_ADRS".
+        For this BSP, it's 0x80100000. Also, it is used along with the
+        embedded DTB, so component INCLUDE_STANDALONE_DTB is needed for the
+        vxWorks.bin building.
+
+        Use below command to download the vxWorks.bin image for U-Boot:
+
+\cs
+        tftp 0x80100000 vxWorks.bin
+\ce
+
+        2.3.4.2. Running the vxWorks.bin image on U-Boot
+
+        Use "go <image running address>" to run the vxWorks.bin image as below:
+
+\cs
+        go 0x80100000
+\ce
+
+3. Summary
+
+    Below is a summary about configuring and running VxWorks 7:
+
+\ts
+                | uVxWorks      | vxWorks.bin           
+--------------------------------------------------------------------------------
+Boot Loader     | U-Boot        | U-Boot                
+DTB Mode        | independent   | embedded              
+Component Needed|               | INCLUDE_STANDALONE_DTB
+Boot Method     | bootm         | go                    
+\te
+
+DEVICE TREE
+This BSP uses device tree nodes to describe the device specific information
+on the board. The supported drivers will get configuration data from
+the device tree source files (with suffix .dts) under the BSP directory.
+For the structure of the device tree source file, please refer to the
+ePAPR specification here:
+http://www.power.org/technology-introduction/standards-specifications/
+
+The supported boards and the corresponding device tree source files of this BSP
+are mapped as below:
+
+\ts
+Board                   | Device Tree Source
+-----------------------------------------------
+TI AM437x GP EVM        | am437x-evm.dts
+\te
+
+Based on the device tree blob (DTB) loading methods below, this dts file is
+used in different ways:
+
+- Embedded:     A VIP parameter DTS_FILE designates which dts file is used for
+                current VIP, and the default value is set as the above table to
+                support the correct board.
+
+- Independent:  The corresponding dtb file (with suffix .dtb) will be created
+                in the "default" subdirectory of the VIP after building passed,
+                and the dtb file is used by U-Boot "bootm" command.
+
+FEATURES
+
+This section describes all features of the board, supported or not.
+It documents all configurations of the board and the interaction between
+features and configuration items.
+
+\sh List of Hardware Features (TI AM437x GP EVM)
+
+\ts
+Hardware Interface  | Controller  | Driver/Component               | Status
+------------------------------------------------------------------------------
+UART:0              | on-chip     | DRV_SIO_TI_AM3                 | SUPPORTED
+INTC                | on-chip     | DRV_INTCTLR_FDT_OMAP3          | SUPPORTED
+TIMER               | on-chip     | DRV_TIMER_FDT_OMAP3            | SUPPORTED
+ARM Global Timer    | on-chip     | DRV_TIMER_FDT_ARM_GTC          | SUPPORTED
+GPIO                | on-chip     | DRV_GPIO_FDT_OMAP              | SUPPORTED
+I2C                 | on-chip     | DRV_AM38XX_I2C                 | SUPPORTED
+EDMA                | on-chip     | DRV_TI_EDMA3                   | SUPPORTED
+1000MB-ETHERNET     | on-chip     | DRV_END_FDT_TI_CPSW            | SUPPORTED
+EEPROM              | on-chip     | DRV_I2C_EEPROM                 | SUPPORTED
+RTC                 | on-chip     | DRV_FDT_RTC_AM3                | SUPPORTED
+McASP               | on-chip     | DRV_AUDIO_TI_MCASP             | SUPPORTED
+CLOCK               | on-chip     | DRV_CLK_FDT_AM4                | SUPPORTED
+PINMUX              | on-chip     | DRV_PINMUX_FDT_AM3             | SUPPORTED
+SPI:0               | on-chip     | N/A                            | UNSUPPORTED
+WDT                 | on-chip     | N/A                            | UNSUPPORTED
+USB0                | on-chip     | N/A                            | UNSUPPORTED
+USB1                | on-chip     | N/A                            | UNSUPPORTED
+NAND FLASH          | on-chip     | N/A                            | UNSUPPORTED
+SD/MMC0             | on-chip     | N/A                            | UNSUPPORTED
+DCAN:1              | on-chip     | N/A                            | UNSUPPORTED
+LCD                 | on-chip     | N/A                            | UNSUPPORTED
+MAILBOX             | on-chip     | N/A                            | UNSUPPORTED
+SPINLOCK            | on-chip     | N/A                            | UNSUPPORTED
+SGX                 | on-chip     | N/A                            | UNSUPPORTED
+HDMI                | on-chip     | N/A                            | UNSUPPORTED
+McBSP               | on-chip     | N/A                            | UNSUPPORTED
+\te
+
+\sh List of features
+
+\ts
+Module          | Status
+------------------------------
+FPU(VFPv3)      | SUPPORTED
+L2 cache        | SUPPORTED
+\te
+
+\sh Feature Interactions
+
+Refer to the board vendor's documentation.
+
+HARDWARE DETAILS
+
+This section documents the details of the device drivers and board
+hardware elements.
+
+\sh Verified Hardware
+
+This BSP has been verified on below boards:
+
+\ts
+Board                   | Type and Revision
+------------------------------------------------------------------
+TI AM437x GP EVM        | AM437x Evaluation Module Rev 1.2A
+\te
+
+\sh Serial Configuration
+
+The universal asynchronous receiver/transmitter serial interface is
+compatible with the industry standard TL16C550/15C750. It is supported
+by component DRV_SIO_TI_AM3
+
+UART 0 is used as serial console
+
+No special configuration needed.
+The default configuration is:
+    Baud Rate: 115200
+    Data: 8 bit
+    Parity: None
+    Stop: 1 bit
+    Flow Control: None
+
+\sh Ethernet Controller
+
+The TI AM437x board embeds with a 3-port gigabit switch controller(CPSW), but
+only one RJ45 port was deployed on board.
+
+To enable Ethernet Controller (CPSW) in VxWorks, there are 2 methods:
+1. Use profile PROFILE_DEVELOPMENT when creating VIP, the related components
+   will be added and the network will be configured automatically.
+2. When creating the VIP with the default profile, add the following component
+   to the kernel configuration manually.
+
+\cs
+    vxprj component add INCLUDE_END
+\ce
+
+The Ethernet Address (also known as the MAC address or Station address) of the 
+on-chip network controller is configured from CTRL_MAC_ID. 
+To change it, open the device tree source file, find the following property and 
+modify it,
+
+\cs
+    local-mac-address = [ 00 40 47 E0 A8 32 ];
+\ce
+
+Then remove following property,
+
+\cs
+    reg = <0x44E10630 0x4>,    /@ 630h CTRL_MAC_ID0_LO @/
+          <0x44E10634 0x4>;    /@ 634h CTRL_MAC_ID0_HI @/
+\ce
+
+\sh Network Configuration
+The port allows 10/100/1000M connection. The driver will auto-negotiate
+and configure the port accordingly.
+
+\sh GPIO
+
+General purpose input/output is supported in this release of BSP.
+To use GPIO, add the following component for the VIP:
+
+\cs
+    vxprj component add INCLUDE_GPIO_SYS
+\ce
+
+The client user should then use VxBus GPIO APIs to access the GPIO function.
+
+\sh Timers
+
+For AM437x, there are 1 ARM Global Timer and 11 full featured general purpose 
+timers (DMTIMER[1 - 11]) with modes to free-run, count up and reload. 
+The supported timers can be read or written on-the-fly without stopping the 
+count.
+
+DMTIMER2 is used as system clock by default.
+ARM Global Timer is used as delay timer and timestamp by default.
+
+To use DMTIMER, add the following component for the VIP:
+
+\cs
+    vxprj component add DRV_TIMER_FDT_OMAP3
+\ce
+
+To use ARM Global Timer, add the following component for the VIP:
+
+\cs
+    vxprj component add DRV_TIMER_FDT_ARM_GTC
+\ce
+
+\sh RTC
+
+This release of BSP supports an on-chip Real-Time Clock.
+
+To use RTC, add the following component for the VIP:
+
+\cs
+    vxprj component add DRV_FDT_RTC_AM3
+\ce
+
+\sh EDMA
+
+EDMA is supported in this release of BSP.
+To use EDMA, add the following component for the VIP:
+
+\cs
+    vxprj component add INCLUDE_DMA_SYS
+\ce
+
+The client user should then use VxBus DMA APIs to access the DMA function.
+
+\sh I2C
+
+I2C is supported in this release of BSP.
+To use I2C, add the following component for the VIP:
+
+\cs
+    vxprj component add DRV_AM38XX_I2C
+\ce
+
+The client user should then use VxBus I2C APIs to access the I2C function.
+
+\sh EEPROM
+
+The AM437x GP EVM has a dedicated I2C EEPROM (CAT24C256WI-G), which contains 
+specific identity and configuration information for that board. 
+
+The first 66 bytes are reserved and the remaining 32702 bytes are available for 
+other non-volatile codes and data.
+
+\sh Clock
+
+Clock control module manages the gating (that is, switching off) and enabling
+of the clocks to the device modules on chip. Each module in the device may also 
+have specific clock requirements. Certain module clocks must be active when 
+operating in specific modes, or may be gated otherwise. Globally, the activation
+and gating of the module clocks are managed by the clock module. Hence, the
+clock module must be aware of when to activate and when to gate the module 
+clocks. Normally, a clock to a device was gated in default unless explicitly 
+open it in DTS file. For example, to activate the clock to module cpsw_ma, these 
+lines need to be added into cpsw_ma in am437x-evm.dts:
+
+\cs
+    cpsw_ma: ethernet@4A100000          /@ ethernet system @/
+        {
+        ...
+        clocks = <&cpsw_125mhz_gclk>,   /@ clock name in am437x-clocks.dtsi @/
+                 <&cpsw_cpts_rft_clk>;  /@ clock name in am437x-clocks.dtsi @/
+        clock-names = "fck", "cpts";
+        ...
+        };            
+\ce
+
+The cpsw_ma driver will call vxbClkEnableAll() to acative two clocks
+cpsw_125mhz_gclk and cpsw_cpts_rft_clk, clock control module will take 
+responsibility of vxbClkEnableAll() to complete all the job to activate these
+two clocks. All the supported clock and ID mappings can be found in 
+am437x-clocks.dtsi or by running function vxbClkLibShow() when in flight.
+
+For detail information of clock, please reference "AM437x ARM Cortex-A9 
+Processors Technical Reference Manual" chapter six "Power, Reset, and Clock 
+Management (PRCM)".
+
+To use clock module, add the following component for the VIP:
+
+\cs
+    vxprj component add DRV_CLK_FDT_AM4
+\ce
+
+Clock module is a basic component for this BSP and is added into BSP by default,
+remove this component will lead module do not work because the clock to module
+was not activated.
+
+\sh PinMux
+
+The SCM module which supplies PinMux management functionality is supported in
+this release of BSP and must be enabled by default. It is supported by
+component DRV_PINMUX_FDT_AM3.
+
+The PinMux module provides several groups of PinMux setting values in the SCM
+device tree nodes, each group includes the whole PinMux setting of a specified
+device. The device driver that needs PinMux function should find a supported
+group handle to write its device tree source node.
+
+The UART is an example which referenced the PinMux group handle of uart1:
+
+\cs
+    serial0: serial@44e09000
+        {
+        compatible = "ti,am3-uart", "arm,ns16550";
+        ...
+        pinmux-0 = <&uart0_pads>;
+        };
+\ce
+
+The client user could enable the PinMux setting in the probe or attach
+function.
+
+\cs
+    vxbPinMuxEnable (pDev);
+\ce
+
+\sh McASP
+
+McASP is supported in this release. To use McASP, add the following component
+for the VIP:
+
+\cs
+    vxprj component add DRV_AUDIO_TI_MCASP
+\ce
+
+\sh Creating an active partition on a SD card from Windows
+
+This section describes how to create an active partition on a SD card from 
+Windows by using DISKPART utility on Windows 7.
+
+The DISKPART utility will be used to correct disks that do not have a partition 
+set to active and format them with a FAT or FAT32 file-system.
+
+   a. Insert a SD card to host and find the SD card name.
+
+   b. In a DOS command shell run the following commands to ensure SD card is
+      Configured with an active partition.
+
+      Execute 'diskpart.exe' as administrator, and then list the disks.
+
+      'NOTE': Commands below are indicated after the `DISKPART>" prompt.
+
+\cs
+      DISKPART> list disk
+
+        Disk ###  Status         Size     Free     Dyn  Gpt
+        --------  -------------  -------  -------  ---  ---
+        Disk 0    Online          465 GB  1024 KB
+        Disk 1    Online         1907 MB      0 B
+\ce
+
+      Observe SD card number in the displayed list (SD card is Disk 1) and 
+      select disk 1
+
+\cs
+      DISKPART> select disk 1
+
+      Disk 1 is now the selected disk.
+\ce
+
+      List disks again to make sure you have the correct drive selected, 
+      indicated by the "*" character.
+
+\cs
+      DISKPART> list disk
+
+        Disk ###  Status         Size     Free     Dyn  Gpt
+        --------  -------------  -------  -------  ---  ---
+        Disk 0    Online          465 GB  1024 KB
+      * Disk 1    Online         1907 MB      0 B
+\ce
+
+      Clean the disk, create primary partition and make it active as indicated 
+      below.
+
+\cs
+      DISKPART> clean
+
+      DiskPart succeeded in cleaning the disk.
+
+      DISKPART> create partition primary
+
+      DiskPart succeeded in creating the specified partition.
+
+      DISKPART> select partition 1
+
+      Partition 1 is now the selected partition.
+
+      DISKPART> active
+
+      DiskPart marked the current partition as active.
+\ce
+
+      Now format the disk as fat or fat32. It will take about 2 minutes, 
+      depending on the disk size.
+
+      `when FAT16 file-system is desired':
+\cs
+      DISKPART> format fs=fat
+
+        100 percent completed
+
+      Diskpart successfully formatted the volume.
+\ce
+
+      `when FAT32 file-system is desired':
+\cs
+      DISKPART> format fs=fat32
+
+        100 percent completed
+
+      Diskpart successfully formatted the volume.
+\ce
+
+      Assign a drive letter and exit.
+
+\cs
+      DISKPART> assign
+
+      DiskPart successfully assigned the drive letter or mount point.
+
+      DISKPART> exit
+\ce
+
+      Note the drive letter that is assigned to the SD card.
+      
+BOARD LAYOUT
+
+\bs                                  
++---------------------------------------------+-------+-----------------------+
++-----+                                       |       |SW1 +--+ +------------+|
+|RJ45 | Ethernet #1                           +-------+    +--+ +------------+|
+|     |                                         HDMI   SW2 +--+    PCI-E      |
++-----+                                                    +--+               |
++-+ Headerphone Out (J13)                                                     |
++-+                                                                           |
++-+ Line In (J14)                                                             |
++-+                                                                           |
++-----+                                                                       |
+|     |  USB #1 (J24)                                                         |
++-----+                                                                       |
++-+ USB #0 (J22)                                                              |
++-+                                                                           |
+|                                                                             |
++-----+                                                                       |
+|     |                                                                       |
+|     | RS232 #0 (J10)                                                        |
+|     |                                                                SD/MMC |
+|     |                                                                +------+
++-----+                                                       P        |      |
+|+----+                                                       O I      |      |
+||    |                                                       W N      |      |
+||    |                                                       E        +------+
+||    | JTAG(J30)       (J18)          (J11)        (J5)      R     SW4  SW14 |
+||    |                Camara #1                               +--+           |
+||    |                +--------+     +-----------+            |  | +---+ +-+ |
+|+----+                +--------+     |           |  +-------+ |  | |   | +-+ |
++-------------------------------------+-----------+--+-------+-+--+-+---+-----+
+                                     
+\be
+
+BIBLIOGRAPHY
+
+\ts
+\tb ARM Architecture Reference Manual
+\tb Cortex-A9 Technical Reference Manual
+\tb AM437x ARM Cortex-A9 Processors Technical Reference Manual
+\tb AM437x GP EVM Hardware User's Guide
+\te
+
+SEE ALSO
+
+\tb Workbench User's Guide
+\tb VxWorks 7 Programmer's Guide
+\tb VxWorks 7 Configuration and Build Guide
+\tb VxWorks 7 Architecture Supplement
+\tb VxWorks 7 BSP and Driver Guide

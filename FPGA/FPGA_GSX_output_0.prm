@@ -1,0 +1,17 @@
+PROMGEN: Xilinx Prom Generator P.20131013
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o "C:\Users\76053\Documents\Branson\Proyectos\Next Generation\FPGA\GSX_FPGA//FPGA_GSX_output" -x xcf04s xcf08p -u 00000000 "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/fpga_dups.bit" 
+
+PROM C:\Users\76053\Documents\Branson\Proyectos\Next Generation\FPGA\GSX_FPGA\FPGA_GSX_output_0.prm map: Tue Jun 29 12:15:33 2021
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          512K
+PROM start    0000:0000
+PROM end      0007:ffff
+PROM checksum 00198185
+
+        Addr1        Addr2                     Date File(s)
+    0000:0000    0007:ffff     Jun 29 12:08:16 2021 C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/fpga_dups.bit

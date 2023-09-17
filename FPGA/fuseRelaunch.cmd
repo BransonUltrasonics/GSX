@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/PWMAdv_isim_beh.exe" -prj "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/PWMAdv_beh.prj" "work.PWMAdv" 

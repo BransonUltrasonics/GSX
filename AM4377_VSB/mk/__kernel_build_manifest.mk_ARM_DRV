@@ -1,0 +1,13 @@
+
+# this file is generated
+
+# layers that have been built in the VSB
+__BUILT_LAYERS += ARM_DRV
+
+__OBJS_BUILT_ARM_DRV = C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/ARMARCH7/common/objarch/vxbFdtPl310L2Cache.o  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/ARMARCH7/common/objarch/vxbFdtArmGenIntCtlr.o  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/ARMARCH7/common/objarch/vxbFdtPl330Dma.o  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/ARMARCH7/common/objarch/vxbFdtArmMpCoreTimer.o  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/ARMARCH7/common/objarch/vxbFdtArmGlobalTimer.o  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/ARMARCH7/common/objarch/vxbFdtArmGenTimer.o  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/ARMARCH7/common/objarch/vxbFdtPl310L2Cache.d C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/ARMARCH7/common/objarch/vxbFdtArmGenIntCtlr.d C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/ARMARCH7/common/objarch/vxbFdtPl330Dma.d C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/ARMARCH7/common/objarch/vxbFdtArmMpCoreTimer.d C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/ARMARCH7/common/objarch/vxbFdtArmGlobalTimer.d C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/ARMARCH7/common/objarch/vxbFdtArmGenTimer.d
+
+
+# built libraries
+__BUILT_LIBRARIES += 
+
+

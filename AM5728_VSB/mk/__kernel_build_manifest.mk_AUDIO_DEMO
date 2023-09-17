@@ -1,0 +1,15 @@
+
+# this file is generated
+
+# layers that have been built in the VSB
+__BUILT_LAYERS += AUDIO_DEMO
+
+__OBJS_BUILT_AUDIO_DEMO = C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objaudioDemoPlayback/audioDemoPlayback.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objaudioDemoPlayback/audioDemoPlayback.d C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objaudioDemoRecord/audioDemoRecord.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objaudioDemoRecord/audioDemoRecord.d
+
+
+# built libraries
+__BUILT_LIBRARIES += krnl_ARMARCH7_common_audioDemoPlayback krnl_ARMARCH7_common_audioDemoRecord
+
+
+__OBJS_BUILT_krnl_ARMARCH7_common_audioDemoPlayback = C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objaudioDemoPlayback/audioDemoPlayback.o  
+__OBJS_BUILT_krnl_ARMARCH7_common_audioDemoRecord = C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objaudioDemoRecord/audioDemoRecord.o 

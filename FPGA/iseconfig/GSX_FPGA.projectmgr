@@ -1,0 +1,243 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--This is an ISE project configuration file.-->
+<!--It holds project specific layout data for the projectmgr plugin.-->
+<!--Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.-->
+<Project version="2" owner="projectmgr" name="GSX_FPGA" >
+   <!--This is an ISE project configuration file.-->
+   <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/CLK_GEN C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|CLK_GEN.sch</ClosedNode>
+         <ClosedNode>/DDS C:|Users|76053|Documents|Branson|Proyectos|Next Generation|FPGA|GSX_FPGA|DDS.sch</ClosedNode>
+         <ClosedNode>/DDS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|DDS.sch/XLXI_2 - DDS_FGEN</ClosedNode>
+         <ClosedNode>/DDS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|DDS.sch/XLXI_3 - DDS_FGEN</ClosedNode>
+         <ClosedNode>/DDS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|DDS.sch/XLXI_4 - DDS_FGEN/XLXI_1 - DDS_FGEN_PH_ACC</ClosedNode>
+         <ClosedNode>/DDS_FGEN C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|DDS_FGEN.sch</ClosedNode>
+         <ClosedNode>/DDS_FGEN_PH_ACC C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|DDS_FGEN_PH_ACC.sch</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Branson|Proyectos|Next Generation|FPGA|GSX_FPGA|FPGA_DUPS.sch</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Branson|Proyectos|Next Generation|FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_33 - CLK_GEN</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Branson|Proyectos|Next Generation|FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_47 - FPGA_DUPS_Main/XLXI_128 - PWMAdv</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Branson|Proyectos|Next Generation|FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_47 - FPGA_DUPS_Main/XLXI_131 - PWMAdv</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Branson|Proyectos|Next Generation|FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_47 - FPGA_DUPS_Main/XLXI_132 - PWMAdv</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Branson|Proyectos|Next Generation|FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_47 - FPGA_DUPS_Main/XLXI_63 - ERRSTAT</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Branson|Proyectos|Next Generation|FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_47 - FPGA_DUPS_Main/XLXI_98 - PWMAdv</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Branson|Proyectos|Next Generation|FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_47 - FPGA_DUPS_Main/XLXI_99 - DDS</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_1 - FPGA_DUPS_Main/XLXI_1 - PWMAdv</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_1 - FPGA_DUPS_Main/XLXI_2 - DDS/XLXI_4 - DDS_FGEN</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_1 - FPGA_DUPS_Main/XLXI_3 - uP_SPI_IF</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_1 - FPGA_DUPS_Main/XLXI_63 - ERRSTAT</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_21 - CLK_GEN</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_24 - FPGA_DUPS_Main</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_25 - FPGA_DUPS_Main</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_25 - FPGA_DUPS_Main/XLXI_2 - DDS</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_25 - FPGA_DUPS_Main/XLXI_2 - DDS/XLXI_4 - DDS_FGEN/XLXI_1 - DDS_FGEN_PH_ACC</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_25 - FPGA_DUPS_Main/XLXI_63 - ERRSTAT</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_25 - FPGA_DUPS_Main/XLXI_86 - uP_SPI_IF</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_25 - FPGA_DUPS_Main/XLXI_87 - PWMAdv</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_25 - FPGA_DUPS_Main/XLXI_97 - DDS/XLXI_4 - DDS_FGEN/XLXI_1 - DDS_FGEN_PH_ACC</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_25 - FPGA_DUPS_Main/XLXI_99 - DDS</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_26 - CLK_GEN</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_28 - FPGA_DUPS_Main/XLXI_1 - PWMAdv</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_28 - FPGA_DUPS_Main/XLXI_2 - DDS</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_28 - FPGA_DUPS_Main/XLXI_3 - uP_SPI_IF</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_28 - FPGA_DUPS_Main/XLXI_63 - ERRSTAT</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_30 - FPGA_DUPS_Main/XLXI_1 - PWMAdv</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_30 - FPGA_DUPS_Main/XLXI_2 - DDS/XLXI_4 - DDS_FGEN</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_31 - CLK_GEN</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_32 - FPGA_DUPS_Main/XLXI_86 - uP_SPI_IF</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_32 - FPGA_DUPS_Main/XLXI_98 - PWMAdv</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_32 - FPGA_DUPS_Main/XLXI_99 - DDS</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_33 - CLK_GEN</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_47 - FPGA_DUPS_Main/XLXI_104 - uP_SPI_IF</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_47 - FPGA_DUPS_Main/XLXI_63 - ERRSTAT</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_47 - FPGA_DUPS_Main/XLXI_86 - uP_SPI_IF</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_47 - FPGA_DUPS_Main/XLXI_98 - PWMAdv</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_47 - FPGA_DUPS_Main/XLXI_99 - DDS</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_47 - FPGA_DUPS_Main/XLXI_99 - DDS/XLXI_4 - DDS_FGEN/XLXI_1 - DDS_FGEN_PH_ACC</ClosedNode>
+         <ClosedNode>/FPGA_DUPS_Main C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS_Main.sch</ClosedNode>
+         <ClosedNode>/FPGA_DUPS_Main C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS_Main.sch/XLXI_1 - PWMAdv</ClosedNode>
+         <ClosedNode>/FPGA_DUPS_Main C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS_Main.sch/XLXI_2 - DDS</ClosedNode>
+         <ClosedNode>/FPGA_DUPS_Main C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS_Main.sch/XLXI_3 - uP_SPI_IF</ClosedNode>
+         <ClosedNode>/FPGA_DUPS_Main C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|FPGA_DUPS_Main.sch/XLXI_63 - ERRSTAT</ClosedNode>
+         <ClosedNode>/PWMAdv C:|Users|76053|Documents|Branson|Proyectos|Next Generation|FPGA|GSX_FPGA|PWMAdv.sch</ClosedNode>
+         <ClosedNode>/PWMAdv C:|Users|76053|Documents|Entrenamientos|VHDL_FPGA|GSX_FPGA|PWMAdv.sch</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>XLXI_22 - FBIF_SPIIF - Structure (C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_Versions/FPGA_DCXstdWithLatches/GSX_FPGA/FBIF_SPIIF.vhd)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >21</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001b8000000020000000000000000000000000200000064ffffffff000000810000000300000002000001b80000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>XLXI_22 - FBIF_SPIIF - Structure (C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_Versions/FPGA_DCXstdWithLatches/GSX_FPGA/FBIF_SPIIF.vhd)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f1000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f10000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView guiview="File" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000027d000000040101000100000000000000000000000064ffffffff000000810000000000000004000000ac0000000100000000000000240000000100000000000000660000000100000000000001470000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>acc32.vhd</CurrentItem>
+   </ItemView>
+   <ItemView guiview="Library" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>add32.vhd</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000000f8000000010001000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>add32.vhd</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_SCHEMATIC" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Implement Design/Map</ClosedNode>
+         <ClosedNode>Implement Design/Map/Generate Post-Map Static Timing</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route/Back-annotate Pin Locations</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route/Generate IBIS Model</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route/Generate Post-Place &amp; Route Static Timing</ClosedNode>
+         <ClosedNode>Implement Design/Translate</ClosedNode>
+         <ClosedNode>Synthesize - XST</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Generate Programming File</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000011b000000010000000100000000000000000000000064ffffffff0000008100000000000000010000011b0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Generate Programming File</CurrentItem>
+   </ItemView>
+   <SourceProcessView>000000ff0000000000000002000000cb000000e601000000050100000002</SourceProcessView>
+   <CurrentView>Implementation</CurrentView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000103000000010000000100000000000000000000000064ffffffff000000810000000000000001000001030000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_XAW" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>View HDL Source</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000128000000010000000100000000000000000000000064ffffffff000000810000000000000001000001280000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>View HDL Source</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_XCO" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e2000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e20000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="ManualCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>counter16.xco (C:/Users/76053/Documents/Entrenamientos/VHDL_FPGA/GSX_FPGA/ipcore_dir/counter16.xco)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000148000000020000000000000000000000000000000064ffffffff000000810000000000000002000000d80000000100000000000000700000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>counter16.xco (C:/Users/76053/Documents/Entrenamientos/VHDL_FPGA/GSX_FPGA/ipcore_dir/counter16.xco)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000d2000000010000000100000000000000000000000064ffffffff000000810000000000000001000000d20000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Branson|Proyectos|Next Generation|FPGA|GSX_FPGA|FPGA_DUPS.sch</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Branson|Proyectos|Next Generation|FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_33 - CLK_GEN</ClosedNode>
+         <ClosedNode>/FPGA_DUPS C:|Users|76053|Documents|Branson|Proyectos|Next Generation|FPGA|GSX_FPGA|FPGA_DUPS.sch/XLXI_47 - FPGA_DUPS_Main</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>FPGA_DUPS (C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.sch)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000000e2000000020000000000000000000000000200000064ffffffff000000810000000300000002000000e20000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>FPGA_DUPS (C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.sch)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001b6000000010000000100000000000000000000000064ffffffff000000810000000000000001000001b60000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="DESUT_SCHEMATIC" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Simulate Behavioral Model</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000d2000000010000000100000000000000000000000064ffffffff000000810000000000000001000000d20000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Simulate Behavioral Model</CurrentItem>
+   </ItemView>
+</Project>

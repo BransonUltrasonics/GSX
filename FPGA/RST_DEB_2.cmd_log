@@ -1,0 +1,2 @@
+vhdtdtfi -lib work RST_DEB_2.vhd -prj GSX_FPGA -o RST_DEB_2.spl -module RST_DEB_2 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3a RST_DEB_2.spl C:/Users/76053/Documents/Entrenamientos/VHDL_FPGA/GSX_FPGA/RST_DEB_2.sym 

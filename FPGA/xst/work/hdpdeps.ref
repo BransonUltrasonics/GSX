@@ -1,0 +1,268 @@
+V3 136
+FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLKMAN_1.vhd" 2021/07/17.11:41:16 P.20131013
+EN work/CLKMAN_1 1626540101 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLKMAN_1.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/CLKMAN_1/BEHAVIORAL 1626540102 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLKMAN_1.vhd" \
+      EN work/CLKMAN_1 1626540101 CP BUFG CP DCM_SP
+FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLKMAN_2.vhd" 2021/07/17.11:41:18 P.20131013
+EN work/CLKMAN_2 1626540103 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLKMAN_2.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/CLKMAN_2/BEHAVIORAL 1626540104 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLKMAN_2.vhd" \
+      EN work/CLKMAN_2 1626540103 CP BUFG CP DCM_SP
+FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLKMAN_3.vhd" 2021/07/17.11:41:22 P.20131013
+EN work/CLKMAN_3 1626540105 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLKMAN_3.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/CLKMAN_3/BEHAVIORAL 1626540106 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLKMAN_3.vhd" \
+      EN work/CLKMAN_3 1626540105 CP BUFG CP DCM_SP
+FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLKMAN_4.vhd" 2021/07/17.11:41:20 P.20131013
+EN work/CLKMAN_4 1626540107 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLKMAN_4.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/CLKMAN_4/BEHAVIORAL 1626540108 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLKMAN_4.vhd" \
+      EN work/CLKMAN_4 1626540107 CP BUFG CP DCM_SP
+FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLK_GEN.vhf" 2021/07/17.11:41:08 P.20131013
+EN work/CC16CE_HXILINX_CLK_GEN 1626540135 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLK_GEN.vhf" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/CC16CE_HXILINX_CLK_GEN/Behavioral 1626540136 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLK_GEN.vhf" \
+      EN work/CC16CE_HXILINX_CLK_GEN 1626540135
+EN work/FTC_HXILINX_CLK_GEN 1626540137 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLK_GEN.vhf" \
+      PB ieee/std_logic_1164 1381692176
+AR work/FTC_HXILINX_CLK_GEN/Behavioral 1626540138 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLK_GEN.vhf" \
+      EN work/FTC_HXILINX_CLK_GEN 1626540137
+EN work/COMPM16_HXILINX_CLK_GEN 1626540139 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLK_GEN.vhf" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/COMPM16_HXILINX_CLK_GEN/COMPM16_HXILINX_CLK_GEN_V 1626540140 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLK_GEN.vhf" \
+      EN work/COMPM16_HXILINX_CLK_GEN 1626540139
+EN work/AND7_HXILINX_CLK_GEN 1626540141 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLK_GEN.vhf" \
+      PB ieee/std_logic_1164 1381692176
+AR work/AND7_HXILINX_CLK_GEN/AND7_HXILINX_CLK_GEN_V 1626540142 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLK_GEN.vhf" \
+      EN work/AND7_HXILINX_CLK_GEN 1626540141
+EN work/CLK_GEN 1626540143 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLK_GEN.vhf" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/CLK_GEN/BEHAVIORAL 1626540144 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLK_GEN.vhf" \
+      EN work/CLK_GEN 1626540143 CP INV CP counter3cr CP VCC CP LDC CP FDC CP AND2B1 \
+      CP FDCE CP CC16CE_HXILINX_CLK_GEN CP COMPM16_HXILINX_CLK_GEN CP OR2 \
+      CP FTC_HXILINX_CLK_GEN CP AND3 CP counter23 CP AND7_HXILINX_CLK_GEN CP GND \
+      CP CLKMAN_1 CP CLKMAN_2 CP CLKMAN_3 CP CLKMAN_4 CP CLOCK_MANAGER CP BUF CP AND2
+FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLOCK_MANAGER.vhd" 2021/07/17.11:41:14 P.20131013
+EN work/CLOCK_MANAGER 1626540109 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLOCK_MANAGER.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/CLOCK_MANAGER/BEHAVIORAL 1626540110 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLOCK_MANAGER.vhd" \
+      EN work/CLOCK_MANAGER 1626540109 CP BUFG CP DCM_SP
+FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/copy_of_and2.vhd" 2021/03/26.17:27:32 P.20131013
+EN work/copy_of_and2 1626540153 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/copy_of_and2.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/copy_of_and2/BEHAVIORAL 1626540154 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/copy_of_and2.vhd" \
+      EN work/copy_of_and2 1626540153
+FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/counter23.vhd" 2021/03/30.11:53:40 P.20131013
+EN work/counter23 1626540099 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/counter23.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179 LB UNISIM PH unisim/VCOMPONENTS 1381692182
+AR work/counter23/BEHAVIORAL 1626540100 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/counter23.vhd" \
+      EN work/counter23 1626540099
+FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/ERRSTAT.vhf" 2021/07/17.11:41:11 P.20131013
+EN work/ERRSTAT 1626540155 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/ERRSTAT.vhf" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/ERRSTAT/BEHAVIORAL 1626540156 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/ERRSTAT.vhf" \
+      EN work/ERRSTAT 1626540155 CP AND3B3 CP AND3B2 CP OR2 CP FDC CP VCC CP OR2B1 \
+      CP BUF CP fd2c CP INV CP GND
+FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FBIF_SPIIF.vhd" 2021/07/15.10:06:28 P.20131013
+EN work/FBIF_SPIIF 1626540089 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FBIF_SPIIF.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/FBIF_SPIIF/Structure 1626540090 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FBIF_SPIIF.vhd" \
+      EN work/FBIF_SPIIF 1626540089
+FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/fd2c.vhd" 2021/03/30.14:55:43 P.20131013
+EN work/fd2c 1626540091 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/fd2c.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/fd2c/BEHAVIORAL 1626540092 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/fd2c.vhd" \
+      EN work/fd2c 1626540091
+FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" 2021/07/17.11:41:10 P.20131013
+EN work/CC16CE_HXILINX_FPGA_DUPS 1626540115 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/CC16CE_HXILINX_FPGA_DUPS/Behavioral 1626540116 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" \
+      EN work/CC16CE_HXILINX_FPGA_DUPS 1626540115
+EN work/FTC_HXILINX_FPGA_DUPS 1626540117 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" \
+      PB ieee/std_logic_1164 1381692176
+AR work/FTC_HXILINX_FPGA_DUPS/Behavioral 1626540118 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" \
+      EN work/FTC_HXILINX_FPGA_DUPS 1626540117
+EN work/COMPM16_HXILINX_FPGA_DUPS 1626540119 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/COMPM16_HXILINX_FPGA_DUPS/COMPM16_HXILINX_FPGA_DUPS_V 1626540120 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" \
+      EN work/COMPM16_HXILINX_FPGA_DUPS 1626540119
+EN work/M2_1_HXILINX_FPGA_DUPS 1626540121 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" \
+      PB ieee/std_logic_1164 1381692176
+AR work/M2_1_HXILINX_FPGA_DUPS/M2_1_HXILINX_FPGA_DUPS_V 1626540122 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" \
+      EN work/M2_1_HXILINX_FPGA_DUPS 1626540121
+EN work/AND7_HXILINX_FPGA_DUPS 1626540123 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" \
+      PB ieee/std_logic_1164 1381692176
+AR work/AND7_HXILINX_FPGA_DUPS/AND7_HXILINX_FPGA_DUPS_V 1626540124 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" \
+      EN work/AND7_HXILINX_FPGA_DUPS 1626540123
+EN work/uP_SPI_IF_MUSER_FPGA_DUPS 1626540125 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/uP_SPI_IF_MUSER_FPGA_DUPS/BEHAVIORAL 1626540126 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" \
+      EN work/uP_SPI_IF_MUSER_FPGA_DUPS 1626540125 CP FBIF_SPIIF
+EN work/ERRSTAT_MUSER_FPGA_DUPS 1626540127 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/ERRSTAT_MUSER_FPGA_DUPS/BEHAVIORAL 1626540128 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" \
+      EN work/ERRSTAT_MUSER_FPGA_DUPS 1626540127 CP AND3B3 CP AND3B2 CP OR2 CP FDC \
+      CP VCC CP OR2B1 CP BUF CP fd2c CP INV CP GND
+EN work/FPGA_DUPS_Main_MUSER_FPGA_DUPS 1626540129 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/FPGA_DUPS_Main_MUSER_FPGA_DUPS/BEHAVIORAL 1626540130 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" \
+      EN work/FPGA_DUPS_Main_MUSER_FPGA_DUPS 1626540129 CP INV CP GND CP BUF \
+      CP ERRSTAT_MUSER_FPGA_DUPS CP M2_1_HXILINX_FPGA_DUPS CP AND2 CP or2clk \
+      CP uP_SPI_IF_MUSER_FPGA_DUPS CP PWM_DDS
+EN work/CLK_GEN_MUSER_FPGA_DUPS 1626540131 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/CLK_GEN_MUSER_FPGA_DUPS/BEHAVIORAL 1626540132 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" \
+      EN work/CLK_GEN_MUSER_FPGA_DUPS 1626540131 CP INV CP counter3cr CP VCC CP LDC \
+      CP FDC CP AND2B1 CP FDCE CP CC16CE_HXILINX_FPGA_DUPS \
+      CP COMPM16_HXILINX_FPGA_DUPS CP OR2 CP FTC_HXILINX_FPGA_DUPS CP AND3 \
+      CP counter23 CP AND7_HXILINX_FPGA_DUPS CP GND CP CLKMAN_1 CP CLKMAN_2 \
+      CP CLKMAN_3 CP CLKMAN_4 CP CLOCK_MANAGER CP BUF CP AND2
+EN work/FPGA_DUPS 1626540133 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/FPGA_DUPS/BEHAVIORAL 1626540134 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" \
+      EN work/FPGA_DUPS 1626540133 CP RST_DEB_1 CP RST_DEB_2 CP AND2 CP BUF CP INV \
+      CP CLK_GEN_MUSER_FPGA_DUPS CP IBUF CP FPGA_DUPS_Main_MUSER_FPGA_DUPS
+FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS_Main.vhf" 2021/07/17.11:41:07 P.20131013
+EN work/M2_1_HXILINX_FPGA_DUPS_Main 1626540145 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS_Main.vhf" \
+      PB ieee/std_logic_1164 1381692176
+AR work/M2_1_HXILINX_FPGA_DUPS_Main/M2_1_HXILINX_FPGA_DUPS_Main_V 1626540146 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS_Main.vhf" \
+      EN work/M2_1_HXILINX_FPGA_DUPS_Main 1626540145
+EN work/uP_SPI_IF_MUSER_FPGA_DUPS_Main 1626540147 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS_Main.vhf" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/uP_SPI_IF_MUSER_FPGA_DUPS_Main/BEHAVIORAL 1626540148 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS_Main.vhf" \
+      EN work/uP_SPI_IF_MUSER_FPGA_DUPS_Main 1626540147 CP FBIF_SPIIF
+EN work/ERRSTAT_MUSER_FPGA_DUPS_Main 1626540149 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS_Main.vhf" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/ERRSTAT_MUSER_FPGA_DUPS_Main/BEHAVIORAL 1626540150 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS_Main.vhf" \
+      EN work/ERRSTAT_MUSER_FPGA_DUPS_Main 1626540149 CP AND3B3 CP AND3B2 CP OR2 \
+      CP FDC CP VCC CP OR2B1 CP BUF CP fd2c CP INV CP GND
+EN work/FPGA_DUPS_Main 1626540151 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS_Main.vhf" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/FPGA_DUPS_Main/BEHAVIORAL 1626540152 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS_Main.vhf" \
+      EN work/FPGA_DUPS_Main 1626540151 CP INV CP GND CP BUF \
+      CP ERRSTAT_MUSER_FPGA_DUPS_Main CP M2_1_HXILINX_FPGA_DUPS_Main CP AND2 \
+      CP or2clk CP uP_SPI_IF_MUSER_FPGA_DUPS_Main CP PWM_DDS
+FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/ipcore_dir/counter3cr.vhd" 2021/03/25.15:27:27 P.20131013
+EN work/counter3cr 1626540097 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/ipcore_dir/counter3cr.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/counter3cr/counter3cr_a 1626540098 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/ipcore_dir/counter3cr.vhd" \
+      EN work/counter3cr 1626540097
+FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/or2clk.vhd" 2021/03/30.16:48:45 P.20131013
+EN work/or2clk 1626540093 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/or2clk.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/or2clk/BEHAVIORAL 1626540094 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/or2clk.vhd" \
+      EN work/or2clk 1626540093
+FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/PWM_DDS.vhd" 2021/07/17.11:40:35 P.20131013
+EN work/PWM_DDS 1626540095 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/PWM_DDS.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/PWM_DDS/Behavioral 1626540096 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/PWM_DDS.vhd" \
+      EN work/PWM_DDS 1626540095
+FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/RST_DEB_1.vhd" 2021/03/24.16:05:28 P.20131013
+EN work/RST_DEB_1 1626540111 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/RST_DEB_1.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/RST_DEB_1/Structure 1626540112 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/RST_DEB_1.vhd" \
+      EN work/RST_DEB_1 1626540111
+FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/RST_DEB_2.vhd" 2021/03/24.16:10:22 P.20131013
+EN work/RST_DEB_2 1626540113 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/RST_DEB_2.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/RST_DEB_2/Structure 1626540114 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/RST_DEB_2.vhd" \
+      EN work/RST_DEB_2 1626540113
+FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/uP_SPI_IF.vhf" 2021/07/17.11:41:11 P.20131013
+EN work/uP_SPI_IF 1626540157 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/uP_SPI_IF.vhf" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/uP_SPI_IF/BEHAVIORAL 1626540158 \
+      FL "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/uP_SPI_IF.vhf" \
+      EN work/uP_SPI_IF 1626540157 CP FBIF_SPIIF

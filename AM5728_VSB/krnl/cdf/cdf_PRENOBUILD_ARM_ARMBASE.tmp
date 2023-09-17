@@ -1,0 +1,18 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/arch/arm-1.1.9.1/kernel/armbase/cdf/20bsp.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/arch/arm-1.1.9.1/kernel/armbase/cdf/20vxWorks.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/arch/arm-1.1.9.1/kernel/armbase/cdf/21shell.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/arch/arm-1.1.9.1/kernel/armbase/cdf/arch.cdf>
+
+Layer Layer::ARM_ARMBASE {
+	NAME ARM_ARMBASE
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<RCC>
+    <qresource prefix="/">
+        <file alias="Fonts/OpenSans-Bold.ttf">Fonts/OpenSans-Bold.ttf</file>
+        <file alias="Fonts/OpenSans-Light.ttf">Fonts/OpenSans-Light.ttf</file>
+        <file alias="Fonts/OpenSans-Regular.ttf">Fonts/OpenSans-Regular.ttf</file>
+        <file alias="Fonts/OpenSans-Semibold.ttf">Fonts/OpenSans-Semibold.ttf</file>
+        <file alias="Fonts/OpenSans-SemiboldItalic.ttf">Fonts/OpenSans-SemiboldItalic.ttf</file>
+        <file alias="Fonts/OpenSans-BoldItalic.ttf">Fonts/OpenSans-BoldItalic.ttf</file>
+        <file alias="Fonts/OpenSans-ExtraBold.ttf">Fonts/OpenSans-ExtraBold.ttf</file>
+        <file alias="Fonts/OpenSans-ExtraBoldItalic.ttf">Fonts/OpenSans-ExtraBoldItalic.ttf</file>
+        <file alias="Fonts/OpenSans-Italic.ttf">Fonts/OpenSans-Italic.ttf</file>
+        <file alias="Fonts/OpenSans-LightItalic.ttf">Fonts/OpenSans-LightItalic.ttf</file>
+        <file alias="QmlSource/keyboard_us.xml">QmlSource/keyboard_us.xml</file>
+        <file alias="QmlSource/keyboard_num.xml">QmlSource/keyboard_num.xml</file>
+    </qresource>
+</RCC>

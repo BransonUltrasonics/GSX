@@ -1,0 +1,21 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/subsystem-1.0.10.0/cdf/10devclk.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/subsystem-1.0.10.0/cdf/10dma.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/subsystem-1.0.10.0/cdf/10flash.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/subsystem-1.0.10.0/cdf/10gpio.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/subsystem-1.0.10.0/cdf/10interrupt.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/subsystem-1.0.10.0/cdf/10pinmux.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/subsystem-1.0.10.0/cdf/10subsystem.cdf>
+
+Layer Layer::VXBUS_SUBSYSTEM {
+	NAME VXBUS_SUBSYSTEM
+}

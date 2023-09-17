@@ -1,0 +1,1 @@
+sch2hdl -sympath {C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/ipcore_dir} -intstyle ise -family spartan3a -flat -suppress -vhdl PWMAdv.vhf -w {C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/PWMAdv.sch} 

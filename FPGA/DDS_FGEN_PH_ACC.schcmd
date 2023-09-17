@@ -1,0 +1,12 @@
+select figure at 1108 2688 8 -branches -sn=1
+select figure at 4825 1014 8 -branches -sn=1
+select figure at 5022 459 8 -branches -sn=1
+select figure at 5105 477 8 -branches -sn=1
+select figure at 2581 218 8 -branches -sn=1
+select figure at 3149 641 8 -branches -sn=1
+select figure at 2677 687 8 -branches -sn=1
+select figure at 2594 864 8 -branches -sn=1
+select figure at 2545 781 8 -branches -sn=1
+select figure at 153 763 8 -branches -sn=1
+select figure at 2638 835 8 -wires -sn=1
+select figure at 589 114 8 -wires -sn=1

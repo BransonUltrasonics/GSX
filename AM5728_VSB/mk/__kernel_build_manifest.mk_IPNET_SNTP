@@ -1,0 +1,14 @@
+
+# this file is generated
+
+# layers that have been built in the VSB
+__BUILT_LAYERS += IPNET_SNTP
+
+__OBJS_BUILT_IPNET_SNTP = C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objSNTP/ipsntp.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objSNTP/ipsntp_cmd_sntp.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objSNTP/ipsntp_time.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objSNTP/ipsntp.d C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objSNTP/ipsntp_cmd_sntp.d C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objSNTP/ipsntp_time.d
+
+
+# built libraries
+__BUILT_LIBRARIES += krnl_ARMARCH7_common_SNTP
+
+
+__OBJS_BUILT_krnl_ARMARCH7_common_SNTP = C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objSNTP/ipsntp.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objSNTP/ipsntp_cmd_sntp.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objSNTP/ipsntp_time.o 

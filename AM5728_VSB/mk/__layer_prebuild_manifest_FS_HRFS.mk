@@ -1,0 +1,1 @@
+__FILES_COPIED_FS_HRFS = C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/h/public/hrFsLib.h C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/h/public/private/tree.h C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/h/public/private/hrFsLibP.h C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/cdf/20comp_hrfs.cdf C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/configlette/usrHrfs.c

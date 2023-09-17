@@ -1,0 +1,130 @@
+
+libboard.a:
+
+boardLib.o:
+00000000 t boardProbe
+00000000 d gpBoardFuncTbl
+000001ac t boardSwUsDelay
+00000004 d gpBoardDesc
+00000264 t sysCpuDisable
+00000008 d rebootInitator.62
+00000058 T boardLibInit
+         U datasetIterate
+000000c0 T boardInit
+000000f8 T boardReset
+00000134 T boardInfoShow
+0000016c T boardFlagCheck
+00000204 T sysUsDelay
+00000234 T sysMsDelay
+0000025c T sysDelay
+000002a8 T sysToMonitor
+         U intContext
+         U kernelLockOwnedByMe
+         U taskCpuLock
+         U vxCpuIndexGet
+         U vxCpuEnabledGet
+         U cpcInvoke
+000003a0 T sysProcNumGet
+         U sysProcNum
+000003ac T sysProcNumSet
+000003b8 T sysModel
+00000410 T sysMemSizeGet
+         U sysMemDescGet
+00000474 T sysCpuEnable
+000004b8 T sysCpuAvailableGet
+00000004 C sysWarmBootLibInit
+00000004 C sysWarmBootFunc
+00000004 C sysWarmBootSlaveDisable
+00000004 C sysWarmBootSlaveEnable
+
+warmBootLib.o:
+00000000 d lCrcTab32
+00000000 b spinTbl
+00000000 T warmBootLibInit
+00000224 T warmBootStart
+         U sysWarmBootFunc
+00000298 T warmBootSlaveDisable
+         U sysWarmBootSlaveDisable
+000002b0 T warmBootSlaveEnable
+         U sysWarmBootSlaveEnable
+00000034 T warmBootDataEndGet
+         U warmBootDataAlign
+         U wrs_kernel_bss_end
+00000068 T warmBootCRC
+000000a0 T warmBootBackup
+         U wrs_kernel_data_start
+         U wrs_kernel_data_end
+         U bcopy
+         U wrs_kernel_text_start
+         U wrs_kernel_text_end
+00000138 T warmBootCheck
+000001d8 T warmBootRestore
+         U vmTranslate
+         U vxCpuIndexGet
+         U vxFdtDtbAddressGet
+         U vxCpuIdGet
+
+libboard.a:
+
+boardLib.o:
+00000000 t boardProbe
+00000000 d gpBoardFuncTbl
+000001ac t boardSwUsDelay
+00000004 d gpBoardDesc
+00000264 t sysCpuDisable
+00000008 d rebootInitator.62
+00000058 T boardLibInit
+         U datasetIterate
+000000c0 T boardInit
+000000f8 T boardReset
+00000134 T boardInfoShow
+0000016c T boardFlagCheck
+00000204 T sysUsDelay
+00000234 T sysMsDelay
+0000025c T sysDelay
+000002a8 T sysToMonitor
+         U intContext
+         U kernelLockOwnedByMe
+         U taskCpuLock
+         U vxCpuIndexGet
+         U vxCpuEnabledGet
+         U cpcInvoke
+000003a0 T sysProcNumGet
+         U sysProcNum
+000003ac T sysProcNumSet
+000003b8 T sysModel
+00000410 T sysMemSizeGet
+         U sysMemDescGet
+00000474 T sysCpuEnable
+000004b8 T sysCpuAvailableGet
+00000004 C sysWarmBootLibInit
+00000004 C sysWarmBootFunc
+00000004 C sysWarmBootSlaveDisable
+00000004 C sysWarmBootSlaveEnable
+
+warmBootLib.o:
+00000000 d lCrcTab32
+00000000 b spinTbl
+00000000 T warmBootLibInit
+00000224 T warmBootStart
+         U sysWarmBootFunc
+00000298 T warmBootSlaveDisable
+         U sysWarmBootSlaveDisable
+000002b0 T warmBootSlaveEnable
+         U sysWarmBootSlaveEnable
+00000034 T warmBootDataEndGet
+         U warmBootDataAlign
+         U wrs_kernel_bss_end
+00000068 T warmBootCRC
+000000a0 T warmBootBackup
+         U wrs_kernel_data_start
+         U wrs_kernel_data_end
+         U bcopy
+         U wrs_kernel_text_start
+         U wrs_kernel_text_end
+00000138 T warmBootCheck
+000001d8 T warmBootRestore
+         U vmTranslate
+         U vxCpuIndexGet
+         U vxFdtDtbAddressGet
+         U vxCpuIdGet

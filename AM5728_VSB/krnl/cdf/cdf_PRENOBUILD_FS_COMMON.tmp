@@ -1,0 +1,17 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/storage/fs-1.0.0.2/core/common-1.1.2.1/cdf/01comp_fs_core.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/storage/fs-1.0.0.2/core/common-1.1.2.1/cdf/01comp_fs_funcs.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/storage/fs-1.0.0.2/core/common-1.1.2.1/cdf/01comp_fsbind.cdf>
+
+Layer Layer::FS_COMMON {
+	NAME FS_COMMON
+}

@@ -1,0 +1,19 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/utils/ostools-1.0.2.7/cdf/01rtpdebug.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/utils/ostools-1.0.2.7/cdf/01spy.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/utils/ostools-1.0.2.7/cdf/01symbols.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/utils/ostools-1.0.2.7/cdf/01timex.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/utils/ostools-1.0.2.7/cdf/01tip.cdf>
+
+Layer Layer::OSTOOLS {
+	NAME OSTOOLS
+}

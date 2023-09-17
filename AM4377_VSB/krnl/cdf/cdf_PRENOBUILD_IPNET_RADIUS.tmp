@@ -1,0 +1,16 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/aaa-1.0.1.8/radius/cdf/01folder_ipnet_radius.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/aaa-1.0.1.8/radius/cdf/02comp_ipnet_radius.cdf>
+
+Layer Layer::IPNET_RADIUS {
+	NAME IPNET_RADIUS
+}

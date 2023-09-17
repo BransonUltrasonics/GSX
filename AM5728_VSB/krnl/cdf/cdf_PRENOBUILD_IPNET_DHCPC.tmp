@@ -1,0 +1,15 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.3/app/dhcpc-1.0.1.9/cdf/00comp_ipnet_appl_dhcp.cdf>
+
+Layer Layer::IPNET_DHCPC {
+	NAME IPNET_DHCPC
+}

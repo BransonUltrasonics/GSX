@@ -1,0 +1,5 @@
+ld<emllCPSW.out
+
+ld<SupervisoryController_DKM_StateMachine.out
+
+sp scMain, "-f /sd0:1/ScPcAcLtEni.xml -t 4000 -auxclk 250 -cpsw 1or2 1 1 m am572x-idk -v 3"

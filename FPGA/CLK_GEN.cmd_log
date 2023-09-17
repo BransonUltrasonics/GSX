@@ -1,0 +1,3 @@
+sch2sym -intstyle ise -family spartan3a -refsym CLK_GEN C:/Users/76053/Documents/Entrenamientos/VHDL_FPGA/GSX_FPGA/CLK_GEN.sch C:/Users/76053/Documents/Entrenamientos/VHDL_FPGA/GSX_FPGA/CLK_GEN.sym 
+sch2hdl -sympath C:/Users/76053/Documents/Entrenamientos/VHDL_FPGA/GSX_FPGA/ipcore_dir -intstyle ise -family spartan3a -flat -suppress -vhdl CLK_GEN_drc.vhf -w C:/Users/76053/Documents/Entrenamientos/VHDL_FPGA/GSX_FPGA/CLK_GEN.sch 
+sch2hdl -sympath C:/Users/76053/Documents/Entrenamientos/VHDL_FPGA/GSX_FPGA/ipcore_dir -intstyle ise -family spartan3a -flat -suppress -vhdl CLK_GEN.vhf -w C:/Users/76053/Documents/Entrenamientos/VHDL_FPGA/GSX_FPGA/CLK_GEN.sch 

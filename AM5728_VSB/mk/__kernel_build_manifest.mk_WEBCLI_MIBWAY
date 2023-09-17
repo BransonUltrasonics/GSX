@@ -1,0 +1,14 @@
+
+# this file is generated
+
+# layers that have been built in the VSB
+__BUILT_LAYERS += WEBCLI_MIBWAY
+
+__OBJS_BUILT_WEBCLI_MIBWAY = C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objwmmibway/rcm_envoy.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objwmmibway/rcm_snmp.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objwmmibway/wmmErrorLog.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objwmmibway/wmmEnvoy.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objwmmibway/rcm_envoy.d C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objwmmibway/rcm_snmp.d C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objwmmibway/wmmErrorLog.d C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objwmmibway/wmmEnvoy.d
+
+
+# built libraries
+__BUILT_LIBRARIES += krnl_ARMARCH7_common_wmmibway
+
+
+__OBJS_BUILT_krnl_ARMARCH7_common_wmmibway = C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objwmmibway/rcm_envoy.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objwmmibway/rcm_snmp.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objwmmibway/wmmErrorLog.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objwmmibway/wmmEnvoy.o 

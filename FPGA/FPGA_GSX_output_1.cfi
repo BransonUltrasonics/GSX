@@ -1,0 +1,11 @@
+# PROMGEN: Xilinx Prom Generator P.20131013
+# Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+SOFTWARE_VERSION P.20131013
+DATE            06/29/2021 - 12:15
+SOURCE          C:\Users\76053\Documents\Branson\Proyectos\Next Generation\FPGA\GSX_FPGA\FPGA_GSX_output_1.mcs
+DEVICE          XCF08P
+DATA_WIDTH      8
+FILL_DATA       0xFF
+SIGNATURE       0x0EDFCB80
+START_ADDRESS   0x00080000 END_ADDRESS 0x00091211 DIRECTION_UP   "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/fpga_dups.bit" 3s1400aft256

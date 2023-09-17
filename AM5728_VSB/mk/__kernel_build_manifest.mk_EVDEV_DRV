@@ -1,0 +1,13 @@
+
+# this file is generated
+
+# layers that have been built in the VSB
+__BUILT_LAYERS += EVDEV_DRV
+
+__OBJS_BUILT_EVDEV_DRV = 
+
+
+# built libraries
+__BUILT_LIBRARIES += 
+
+

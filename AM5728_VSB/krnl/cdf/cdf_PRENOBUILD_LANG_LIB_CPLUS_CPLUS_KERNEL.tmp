@@ -1,0 +1,15 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/lang-lib/cplus-1.0.0.1/cplus-kernel-1.0.0.5/cdf/00cplus.cdf>
+
+Layer Layer::LANG_LIB_CPLUS_CPLUS_KERNEL {
+	NAME LANG_LIB_CPLUS_CPLUS_KERNEL
+}

@@ -1,0 +1,107 @@
+# common.vxconfig - configuration file for ti_sitara_ctxa15 BSP
+#
+# Copyright (c) 2016 Wind River Systems, Inc.
+#
+# The right to copy, distribute, modify or otherwise make use
+# of this software may be licensed only pursuant to the terms
+# of an applicable Wind River license agreement.
+#
+#
+
+# modification history
+# --------------------
+# 15mar16,jnl  created (US75898)
+
+menu "TI AM572X specific features"
+
+config BOARD_SPECIFIC_OPTIONS
+	def_bool y
+	select ARCH_ARM
+	select ARCH_ARMv7
+	select SHELL
+    select GEN_FS
+	select FAT
+	select OMAP_MMC_57XX
+	select NS16550_SIO
+    select LIBFDT
+    select FS_UTIL
+
+config ARCH_ARM
+	bool
+	default y
+
+config ARCH_ARMv7
+	bool
+	default y
+
+choice BOARD_TYPE
+	prompt "Select a specific board type for ti_sitara_ctxa15"
+	default ti_am572x_idk
+
+config ti_am572x_idk
+	bool "ti_am572x IDK"
+
+endchoice
+
+menu "BSP parameters"
+
+config LINK_ADDR
+    hex "image linking address"
+    default 0x402FFFF8
+
+config ROM_TEXT_ADRS
+    hex "rom text address"
+    default 0x40300000
+
+config LOCAL_MEM_ADRS
+	hex "local memory starting address"
+	default 0x80000000
+
+config LOCAL_MEM_SIZE
+	hex "local memory size"
+	default 0x20000000
+
+config NVRAM_SIZE
+    int "NVRAM size"
+    default 1024
+	help
+	  Select this option sets the size of NVRAM area (in bytes)
+
+config ENV_SIZE
+	int "the buffer size of enviromental variable"
+    default 512
+	help
+	  Select this option to set the maximum buffer size of the environmental variable.
+
+config DEFAULT_ENV
+    string "pre-defined environmental variables"
+    default "bootargs=cpsw(0,0)host:/WindRiver/target/config/ti_am572x/vxWorks h=90.0.0.3 e=90.0.0.50:ffffff00 u=target tn=targetname$bootscript=load /fat0/uVxWorks 0x90000000; load /fat0/am572x_idk_ca15.dtb 0x92c00000; boot 0x90000000 - 0x92c00000"
+	help
+		This is the pre-defined environmental variables.
+
+config ROOT_DEV
+	string "root device of the board"
+    default "mmc0"
+	help
+	    This is the root device of this board. 
+
+config SIO_BASE
+	hex "The base address of the system console"
+	default 0x48020000 
+	help
+		The base address of the system console.
+
+config SIO_REG_INTERVAL
+	hex "The register internal of the system console"
+	default 4
+	help
+		The register internal of the system console.
+
+config SIO_BAUDRATE
+	int "console baud rate"
+	default 115200
+	help
+	    The baud rate of system console
+endmenu
+
+endmenu

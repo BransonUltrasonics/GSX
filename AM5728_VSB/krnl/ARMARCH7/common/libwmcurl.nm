@@ -1,0 +1,4608 @@
+
+libwmcurl.a:
+
+easy.o:
+00000000 t sigpipe_ignore
+0000007c t sigpipe_restore
+000000ac t global_init
+00000000 b initialized
+00000004 b init_flags
+000002d4 t easy_transfer
+000003f8 t easy_perform
+00000848 t easy_connection
+         U memset
+         U sigaction
+         U malloc
+00000000 D Curl_cmalloc
+         U free
+00000004 D Curl_cfree
+         U realloc
+00000008 D Curl_crealloc
+         U strdup
+0000000c D Curl_cstrdup
+         U calloc
+00000010 D Curl_ccalloc
+         U Curl_ssl_init
+         U Curl_ipv6works
+         U Curl_ack_eintr
+         U Curl_version_init
+0000015c T curl_global_init
+00000164 T curl_global_init_mem
+000001f8 T curl_global_cleanup
+         U Curl_global_host_cache_dtor
+         U Curl_ssl_cleanup
+00000248 T curl_easy_init
+         U Curl_open
+00000298 T curl_easy_setopt
+         U Curl_setopt
+         U curlx_tvnow
+         U curl_multi_wait
+         U curlx_tvdiff
+         U Curl_wait_ms
+         U curl_multi_perform
+         U curl_multi_info_read
+         U Curl_failf
+         U Curl_multi_handle
+         U curl_multi_setopt
+         U curl_multi_add_handle
+         U curl_multi_cleanup
+         U curl_multi_remove_handle
+000004e4 T curl_easy_perform
+000004ec T curl_easy_cleanup
+         U Curl_close
+00000520 T curl_easy_getinfo
+         U Curl_getinfo
+00000548 T curl_easy_duphandle
+         U Curl_dupset
+         U Curl_cookie_init
+         U Curl_slist_duplicate
+         U curl_slist_free_all
+         U Curl_freeset
+000006fc T curl_easy_reset
+         U Curl_free_request_state
+         U Curl_init_userdefined
+00000798 T curl_easy_pause
+         U Curl_client_chop_write
+         U Curl_expire
+         U Curl_getconnectinfo
+000008b0 T curl_easy_recv
+         U Curl_read
+0000091c T curl_easy_send
+         U Curl_write
+
+http.o:
+0000024c t http_output_basic
+0000033c t pickoneauth
+000003cc t http_perhapsrewind
+00000520 t http_should_fail
+000007a0 t output_auth_headers
+00000b10 t readmoredata
+00001124 t https_connecting
+000011d4 t http_getsock_do
+000011e4 t https_getsock
+000013ac t use_http_1_1plus
+0000140c t expect100
+00003290 t checkhttpprefix
+00003318 t checkrtspprefix
+00003348 t checkprotoprefix
+00003398 t header_append
+00003478 t print_http_error
+00000000 T Curl_http_setup_conn
+         U Curl_ccalloc
+00000044 T Curl_checkheaders
+         U strlen
+         U Curl_raw_nequal
+000000a0 T Curl_checkProxyheaders
+00000120 T Curl_copy_header_value
+         U __ctype
+         U strchr
+         U Curl_cmalloc
+         U memcpy
+         U curl_msnprintf
+         U Curl_base64_encode
+         U Curl_cfree
+         U curl_maprintf
+         U Curl_conncontrol
+         U Curl_readrewind
+00000594 T Curl_http_auth_act
+         U Curl_cstrdup
+         U Curl_failf
+         U Curl_infof
+000008a0 T Curl_http_output_auth
+         U Curl_raw_equal
+000009f4 T Curl_http_input_auth
+00000c18 T Curl_add_buffer_init
+00000c44 T Curl_add_buffer_free
+00000c84 T Curl_add_buffer_send
+         U Curl_write
+         U Curl_debug
+         U Curl_pipeline_leave_write
+00000e74 T Curl_add_buffer
+         U Curl_crealloc
+00000f94 T Curl_add_bufferf
+         U curl_mvaprintf
+00001028 T Curl_compareheader
+         U Curl_ssl_connect_nonblocking
+00001160 T Curl_http_connect
+         U Curl_proxy_connect
+00001250 T Curl_http_done
+         U Curl_unencode_cleanup
+         U Curl_formclean
+         U fclose
+0000148c T Curl_add_custom_headers
+000016f4 T Curl_add_timecondition
+         U Curl_gmtime
+         U Curl_month
+         U Curl_wkday
+00001834 T Curl_http
+         U memmove
+         U strcmp
+         U strstr
+         U Curl_raw_toupper
+         U Curl_getformdata
+         U curlx_sotouz
+         U Curl_share_lock
+         U Curl_cookie_getlist
+         U Curl_share_unlock
+         U Curl_cookie_freelist
+         U Curl_pgrsSetUploadSize
+         U Curl_setup_transfer
+         U Curl_FormInit
+         U Curl_FormReader
+         U Curl_formpostheader
+         U Curl_pgrsSetUploadCounter
+         U Curl_pgrsUpdate
+         U strncmp
+00003528 T Curl_http_readwrite_headers
+         U memchr
+         U Curl_client_write
+         U Curl_pgrsSetDownloadSize
+         U sscanf
+         U Curl_pipeline_site_blacklisted
+         U curlx_strtoll
+         U Curl_pipeline_server_blacklisted
+         U Curl_httpchunk_init
+         U Curl_cookie_add
+         U time
+         U curl_getdate
+         U Curl_rtsp_parseheader
+00000000 D Curl_handler_http
+00000044 D Curl_handler_https
+
+curl_ntlm_core.o:
+
+llist.o:
+00000000 t llist_init
+00000018 T Curl_llist_alloc
+         U Curl_cmalloc
+00000060 T Curl_llist_insert_next
+0000010c T Curl_llist_remove
+         U Curl_cfree
+000001d4 T Curl_llist_destroy
+00000228 T Curl_llist_count
+00000230 T Curl_llist_move
+
+if2ip.o:
+00000000 T Curl_ipv6_scope
+000000ec T Curl_if2ip
+         U strlen
+         U socket
+         U memset
+         U memcpy
+         U ioctl
+         U Curl_inet_ntop
+         U close
+000001c8 T Curl_if_is_interface_name
+
+hostsyn.o:
+00000000 T Curl_set_dns_servers
+00000008 T Curl_set_dns_interface
+00000010 T Curl_set_dns_local_ip4
+00000018 T Curl_set_dns_local_ip6
+
+gopher.o:
+00000000 t gopher_do
+         U strlen
+         U curl_easy_unescape
+         U curlx_uztosz
+         U Curl_write
+         U Curl_client_write
+         U Curl_cfree
+         U Curl_sendf
+         U Curl_failf
+         U Curl_socket_check
+         U Curl_setup_transfer
+00000000 D Curl_handler_gopher
+
+idn_win32.o:
+
+asyn-ares.o:
+
+curl_addrinfo.o:
+00000000 T Curl_freeaddrinfo
+         U Curl_cfree
+00000054 T Curl_getaddrinfo_ex
+         U getaddrinfo
+         U Curl_cmalloc
+         U memcpy
+         U Curl_cstrdup
+         U freeaddrinfo
+00000208 T Curl_he2ai
+         U Curl_ccalloc
+00000390 T Curl_ip2addr
+000004b4 T Curl_str2addr
+         U Curl_inet_pton
+
+openldap.o:
+
+hostip6.o:
+00000000 d ipv6_works.2
+00000000 T Curl_ipv6works
+         U socket
+         U Curl_closesocket
+00000060 T Curl_ipvalid
+0000008c T Curl_getaddrinfo
+         U memset
+         U Curl_inet_pton
+         U curl_msnprintf
+         U Curl_getaddrinfo_ex
+         U Curl_infof
+
+http_ntlm.o:
+
+pingpong.o:
+00000000 T Curl_pp_state_timeout
+         U curlx_tvnow
+         U curlx_tvdiff
+0000008c T Curl_pp_moredata
+000000c8 T Curl_pp_statemach
+         U Curl_failf
+         U Curl_ssl_data_pending
+         U Curl_socket_check
+         U Curl_pgrsUpdate
+         U Curl_speedcheck
+00000210 T Curl_pp_init
+0000023c T Curl_pp_vsendf
+         U curl_maprintf
+         U curl_mvaprintf
+         U Curl_cfree
+         U strlen
+         U Curl_write
+         U Curl_debug
+00000368 T Curl_pp_sendf
+00000390 T Curl_pp_readresp
+         U memcpy
+         U Curl_read
+         U Curl_client_write
+         U memmove
+         U Curl_infof
+         U Curl_cmalloc
+000006a0 T Curl_pp_getsock
+000006d8 T Curl_pp_flushsend
+0000076c T Curl_pp_disconnect
+
+base64.o:
+00000000 t decodeQuantum
+00000000 d base64
+00000208 t base64_encode
+00000041 d base64url
+         U curlx_ultouc
+000000d8 T Curl_base64_decode
+         U strlen
+         U Curl_cmalloc
+         U Curl_cfree
+         U __udiv32
+         U curl_msnprintf
+000003b8 T Curl_base64_encode
+000003f0 T Curl_base64url_encode
+
+curl_ntlm_wb.o:
+
+slist.o:
+00000000 t slist_get_last
+00000034 T Curl_slist_append_nodup
+         U Curl_cmalloc
+00000090 T curl_slist_append
+         U Curl_cstrdup
+         U Curl_cfree
+000000f8 T curl_slist_free_all
+00000144 T Curl_slist_duplicate
+
+warnless.o:
+00000000 T curlx_ultous
+00000008 T curlx_ultouc
+00000010 T curlx_ultosi
+00000018 T curlx_uztoso
+00000020 T curlx_uztosi
+00000028 T curlx_uztoul
+0000002c T curlx_uztoui
+00000030 T curlx_sltosi
+00000038 T curlx_sltoui
+0000003c T curlx_sltous
+00000044 T curlx_uztosz
+0000004c T curlx_sotouz
+00000050 T curlx_sztosi
+00000058 T curlx_uitous
+00000060 T curlx_uitouc
+00000068 T curlx_uitosi
+00000070 T curlx_sitouz
+
+http2.o:
+00000000 T curl_pushheader_bynum
+00000008 T curl_pushheader_byname
+
+http_chunks.o:
+00000000 t Curl_isxdigit
+00000038 T Curl_httpchunk_init
+0000004c T Curl_httpchunk_read
+         U Curl_client_write
+         U curlx_strtoll
+         U __errno
+         U curlx_sotouz
+         U Curl_unencode_deflate_write
+         U Curl_unencode_gzip_write
+         U Curl_failf
+         U Curl_crealloc
+         U Curl_cmalloc
+00000590 T Curl_chunked_strerror
+
+telnet.o:
+
+asyn-thread.o:
+
+curl_fnmatch.o:
+00000000 t parsekeyword
+00000210 t setcharset
+000005c8 t loop
+         U __ctype
+         U strcmp
+         U memset
+000008b0 T Curl_fnmatch
+
+ssh.o:
+
+cookie.o:
+00000000 t freecookie
+000000ac t tailmatch
+00000124 t pathmatch
+00000230 t sanitize_cookie_path
+00000304 t strstore
+0000034c t remove_expired
+000003dc t isip
+0000134c t cookie_sort
+0000171c t get_netscape_format
+000017dc t cookie_output
+         U Curl_cfree
+         U strlen
+         U Curl_raw_equal
+         U Curl_cstrdup
+         U strchr
+         U strncmp
+         U memmove
+         U time
+         U Curl_inet_pton
+0000042c T Curl_cookie_add
+         U Curl_ccalloc
+         U Curl_cmalloc
+         U sscanf
+         U strcmp
+         U Curl_infof
+         U curlx_strtoll
+         U curl_getdate
+         U strrchr
+         U Curl_memrchr
+         U memcpy
+         U strtok_r
+00001008 T Curl_cookie_freelist
+00001054 T Curl_cookie_cleanup
+000010a0 T Curl_cookie_init
+         U curl_strequal
+         U __stdin
+         U fopen
+         U fgets
+         U Curl_raw_nequal
+         U fclose
+000012c4 T Curl_cookie_loadfiles
+         U Curl_share_lock
+         U curl_slist_free_all
+         U Curl_share_unlock
+00001418 T Curl_cookie_getlist
+         U qsort
+00001664 T Curl_cookie_clearall
+00001690 T Curl_cookie_clearsess
+         U curl_maprintf
+         U __stdout
+         U fputs
+         U curl_mfprintf
+000018e8 T Curl_cookie_list
+         U Curl_slist_append_nodup
+00001988 T Curl_flush_cookies
+
+security.o:
+
+nwlib.o:
+
+getinfo.o:
+000000ac t getinfo_char
+00000190 t getinfo_long
+000003ec t getinfo_longpp
+000005b4 t getinfo_slist
+000006b4 t getinfo_socket
+00000000 T Curl_initinfo
+         U Curl_cfree
+         U Curl_getconnectinfo
+         U Curl_ssl_engines_list
+         U Curl_cookie_list
+         U Curl_ssl_backend
+000006e8 T Curl_getinfo
+
+hostasyn.o:
+
+memdebug.o:
+
+amigaos.o:
+
+http_negotiate.o:
+
+http_digest.o:
+
+transfer.o:
+000002c4 t data_pending
+00000304 t read_rewind
+00000388 t readwrite_data
+00000d68 t done_sending
+00000da4 t readwrite_upload
+000017d8 t strlen_url
+00001854 t strcpy_url
+000018f8 t is_absolute_url
+00001924 t concat_url
+00000000 T Curl_fillreadbuffer
+         U Curl_failf
+         U curl_msnprintf
+         U memcpy
+         U strlen
+000001a8 T Curl_readrewind
+         U Curl_infof
+         U fread
+         U fseek
+         U Curl_ssl_data_pending
+0000031c T Curl_meets_timecondition
+         U Curl_read
+         U Curl_pgrsTime
+         U curlx_tvnow
+         U Curl_http_readwrite_headers
+         U Curl_pipeline_wanted
+         U Curl_conncontrol
+         U Curl_debug
+         U Curl_httpchunk_read
+         U Curl_chunked_strerror
+         U Curl_pgrsSetDownloadCounter
+         U Curl_client_write
+         U Curl_pop3_write
+         U Curl_unencode_deflate_write
+         U Curl_unencode_gzip_write
+         U Curl_expire
+         U Curl_cmalloc
+         U Curl_smtp_escape_eob
+         U Curl_write
+         U Curl_pgrsSetUploadCounter
+0000114c T Curl_readwrite
+         U Curl_socket_check
+         U curlx_tvdiff
+         U Curl_pgrsUpdate
+         U Curl_speedcheck
+         U Curl_timeleft
+000014e4 T Curl_single_getsock
+00001584 T Curl_init_CONNECT
+000015a0 T Curl_pretransfer
+         U Curl_ssl_initsessions
+         U Curl_cfree
+         U Curl_cookie_loadfiles
+         U Curl_loadhostpairs
+         U signal
+         U Curl_initinfo
+         U Curl_pgrsResetTimesSizes
+         U Curl_pgrsStartNow
+         U Curl_wildcard_init
+000017a0 T Curl_posttransfer
+         U sscanf
+         U Curl_cstrdup
+         U strstr
+         U strchr
+         U strrchr
+00001b98 T Curl_follow
+00001e3c T Curl_retry_request
+00001f44 T Curl_setup_transfer
+         U Curl_pgrsSetDownloadSize
+
+socks.o:
+00000000 T Curl_blockread_all
+         U Curl_timeleft
+         U Curl_socket_check
+         U Curl_read_plain
+000000c0 T Curl_SOCKS4
+         U Curl_failf
+         U curlx_nonblock
+         U Curl_infof
+         U Curl_resolv
+         U Curl_printable_address
+         U Curl_resolv_unlock
+         U strlen
+         U memcpy
+         U strcpy
+         U Curl_write_plain
+0000046c T Curl_SOCKS5
+
+ftp.o:
+
+hash.o:
+00000000 t hash_element_dtor
+00000178 t mk_hash_element
+         U Curl_cfree
+00000068 T Curl_hash_init
+         U Curl_cmalloc
+         U Curl_llist_alloc
+         U Curl_llist_destroy
+         U memcpy
+00000200 T Curl_hash_add
+         U Curl_llist_remove
+         U Curl_llist_insert_next
+0000030c T Curl_hash_delete
+000003a8 T Curl_hash_pick
+0000042c T Curl_hash_destroy
+000004a4 T Curl_hash_clean_with_criterium
+00000540 T Curl_hash_clean
+0000054c T Curl_hash_str
+         U __udiv32
+0000059c T Curl_str_key_compare
+         U memcmp
+000005dc T Curl_hash_start_iterate
+000005f0 T Curl_hash_next_element
+
+content_encoding.o:
+00000000 t zalloc_cb
+0000002c t zfree_cb
+00000054 t process_zlib_error
+00000090 t inflate_stream
+000002e0 t check_gzip_header
+         U Curl_ccalloc
+         U Curl_cfree
+         U Curl_failf
+         U Curl_cmalloc
+         U inflateEnd
+         U inflate
+         U Curl_client_write
+         U inflateInit2_
+00000250 T Curl_unencode_deflate_write
+         U memset
+         U inflateInit_
+0000042c T Curl_unencode_gzip_write
+         U zlibVersion
+         U strcmp
+         U memcpy
+         U Curl_crealloc
+000006c4 T Curl_unencode_cleanup
+
+hostip.o:
+00000018 b host_cache_initialized
+00000610 t freednsentry
+00000000 b hostname_cache
+00000114 t create_hostcache_id
+00000180 t hostcache_timestamp_remove
+000001b0 t hostcache_prune
+00000248 t fetch_addr
+00000000 T Curl_global_host_cache_init
+         U Curl_hash_str
+         U Curl_str_key_compare
+         U Curl_hash_init
+00000060 T Curl_global_host_cache_dtor
+         U Curl_hash_destroy
+0000008c T Curl_num_addresses
+000000ac T Curl_printable_address
+         U Curl_inet_ntop
+         U curl_maprintf
+         U __ctype_tolower
+         U Curl_hash_clean_with_criterium
+000001d4 T Curl_hostcache_prune
+         U Curl_share_lock
+         U time
+         U Curl_share_unlock
+         U strlen
+         U Curl_hash_pick
+         U Curl_infof
+         U Curl_hash_delete
+         U Curl_cfree
+000002fc T Curl_fetch_addr
+00000374 T Curl_cache_addr
+         U Curl_ccalloc
+         U Curl_hash_add
+00000454 T Curl_resolv
+         U Curl_ipvalid
+         U Curl_getaddrinfo
+         U Curl_freeaddrinfo
+000005ac T Curl_resolv_timeout
+00000648 T Curl_resolv_unlock
+000006ac T Curl_mk_dnscache
+000006d8 T Curl_hostcache_clean
+         U Curl_hash_clean
+0000073c T Curl_loadhostpairs
+         U sscanf
+         U Curl_str2addr
+
+nonblock.o:
+00000000 T curlx_nonblock
+         U fcntl
+
+non-ascii.o:
+
+fileinfo.o:
+00000000 T Curl_fileinfo_alloc
+         U Curl_cmalloc
+         U memset
+0000003c T Curl_fileinfo_dtor
+         U Curl_cfree
+
+nwos.o:
+
+dotdot.o:
+00000000 T Curl_dedotdotify
+         U strlen
+         U Curl_cmalloc
+         U Curl_cstrdup
+         U Curl_cfree
+         U strchr
+         U strncmp
+         U strcmp
+         U memcpy
+
+strequal.o:
+00000000 T curl_strequal
+         U strcasecmp
+00000024 T curl_strnequal
+         U strncasecmp
+
+md4.o:
+
+sendf.o:
+00000000 t convert_lineends
+00000160 t showit
+00000000 d s_infotype.196
+000006e8 t pausewrite
+         U memmove
+         U memchr
+         U memcmp
+         U fwrite
+000001e4 T Curl_debug
+         U curl_msnprintf
+         U strlen
+000002c8 T Curl_infof
+         U curl_mvsnprintf
+00000338 T Curl_failf
+000003fc T Curl_write
+00000484 T Curl_sendf
+         U curl_mvaprintf
+         U Curl_cfree
+00000550 T Curl_send_plain
+         U send
+         U __errno
+         U Curl_strerror
+00000604 T Curl_write_plain
+00000640 T Curl_recv_plain
+         U recv
+         U Curl_cmalloc
+         U memcpy
+0000075c T Curl_client_chop_write
+         U Curl_crealloc
+0000093c T Curl_client_write
+000009b8 T Curl_read_plain
+00000a14 T Curl_read
+         U Curl_pipeline_wanted
+
+strdup.o:
+00000000 T Curl_memdup
+         U Curl_cmalloc
+         U memcpy
+
+connect.o:
+00000000 t tcpkeepalive
+000001b0 t bindlocal
+00000000 d if_prefix.53
+000006c4 t verifyconnect
+00000740 t getaddressinfo
+000009c0 t singleipconnect
+00000c68 t trynextip
+0000137c t conn_is_conn
+00000004 d host_prefix.54
+         U setsockopt
+         U curlx_sltosi
+         U Curl_infof
+000000cc T Curl_timeleft
+         U curlx_tvnow
+         U curlx_tvdiff
+         U memset
+         U strlen
+         U strncmp
+         U Curl_if2ip
+         U __errno
+         U Curl_strerror
+         U Curl_resolv
+         U Curl_printable_address
+         U Curl_resolv_unlock
+         U strchr
+         U Curl_inet_pton
+         U atoi
+         U Curl_failf
+         U bind
+         U getsockname
+         U getsockopt
+         U Curl_inet_ntop
+         U curl_msnprintf
+000007e8 T Curl_tcpnodelay
+0000085c T Curl_closesocket
+         U Curl_multi_closed
+         U close
+000008e8 T Curl_socket
+         U memcpy
+         U socket
+         U Curl_ipv6_scope
+         U curlx_nonblock
+         U Curl_expire_latest
+         U connect
+00000d58 T Curl_persistconninfo
+00000db4 T Curl_updateconninfo
+         U getpeername
+00000ed0 T Curl_is_connected
+         U Curl_socket_check
+         U Curl_connected_proxy
+         U Curl_pgrsTime
+         U Curl_verboseconnect
+         U __div32
+00001254 T Curl_connecthost
+         U Curl_num_addresses
+         U Curl_expire
+000013a0 T Curl_getconnectinfo
+         U Curl_conncache_foreach
+         U Curl_ssl_check_cxn
+         U recv
+00001490 T Curl_conncontrol
+
+curl_sasl.o:
+00000000 T Curl_sasl_cleanup
+00000004 T Curl_sasl_decode_mech
+00000000 D mechtable
+         U memcmp
+         U __ctype
+000000ac T Curl_sasl_parse_url_auth_option
+         U curl_strnequal
+00000144 T Curl_sasl_init
+00000174 T Curl_sasl_can_authenticate
+0000019c T Curl_sasl_start
+         U Curl_auth_create_external_message
+         U Curl_auth_create_oauth_bearer_message
+         U Curl_auth_create_login_message
+         U Curl_auth_create_plain_message
+         U strlen
+         U Curl_cfree
+0000044c T Curl_sasl_continue
+         U Curl_cstrdup
+         U Curl_failf
+
+getenv.o:
+00000000 t GetEnv
+         U getenv
+         U Curl_cstrdup
+00000044 T curl_getenv
+
+rtsp.o:
+00000000 t rtsp_getsock_do
+00000010 t rtsp_setup_connection
+000000c8 t rtsp_connect
+00000120 t rtsp_disconnect
+0000014c t rtsp_done
+000001e0 t rtsp_do
+00000a64 t rtp_client_write
+00000ae8 t rtsp_rtp_readwrite
+         U Curl_ccalloc
+00000054 T Curl_rtsp_connisdead
+         U Curl_socket_check
+         U Curl_getconnectinfo
+         U Curl_http_connect
+         U Curl_cfree
+         U Curl_http_done
+         U Curl_failf
+         U Curl_infof
+         U Curl_setup_transfer
+         U Curl_checkheaders
+         U curl_maprintf
+         U Curl_http_output_auth
+         U Curl_add_buffer_init
+         U Curl_add_bufferf
+         U Curl_add_timecondition
+         U Curl_add_custom_headers
+         U strlen
+         U Curl_add_buffer
+         U Curl_add_buffer_send
+         U Curl_pgrsSetUploadCounter
+         U Curl_pgrsUpdate
+         U Curl_crealloc
+         U memcpy
+         U Curl_cmalloc
+00000d34 T Curl_rtsp_parseheader
+         U Curl_raw_nequal
+         U sscanf
+         U __ctype
+         U strncmp
+00000000 D Curl_handler_rtsp
+
+system_win32.o:
+
+curl_sspi.o:
+
+select.o:
+00000000 T Curl_wait_ms
+         U __errno
+         U curlx_tvnow
+         U __div32
+         U __rem32
+         U select
+00000000 D Curl_ack_eintr
+         U curlx_tvdiff
+00000100 T Curl_socket_check
+         U bzero
+00000468 T Curl_poll
+
+timeval.o:
+00000000 T curlx_tvnow
+         U time
+0000002c T curlx_tvdiff
+         U __div32
+00000088 T curlx_tvdiff_secs
+000000f4 T Curl_tvlong
+
+imap.o:
+00000000 t imap_to_imaps
+00000014 t imap_matchresp
+000000e4 t imap_endofresp
+00000414 t imap_get_message
+000004a8 t state
+000004b8 t imap_sendf
+00000568 t imap_perform_capability
+000005b8 t imap_perform_starttls
+000005f0 t imap_perform_upgrade_tls
+00000658 t imap_atom
+00000810 t imap_perform_login
+000008bc t imap_perform_authenticate
+000008f0 t imap_continue_authenticate
+00000904 t imap_perform_authentication
+000009b4 t imap_perform_list
+00000a6c t imap_perform_select
+00000b28 t imap_perform_fetch
+00000bb8 t imap_perform_append
+00000c98 t imap_perform_search
+00000cf8 t imap_perform_logout
+00000d30 t imap_state_servergreet_resp
+00000d68 t imap_state_capability_resp
+00000f6c t imap_state_starttls_resp
+00000fbc t imap_state_auth_resp
+00001068 t imap_state_login_resp
+000010ac t imap_state_listsearch_resp
+00001144 t imap_state_select_resp
+00001298 t imap_state_fetch_resp
+000014f8 t imap_state_fetch_final_resp
+00001528 t imap_state_append_resp
+00001598 t imap_state_append_final_resp
+000015d0 t imap_statemach_act
+00001884 t imap_multi_statemach
+00001908 t imap_block_statemach
+0000194c t imap_init
+0000198c t imap_getsock
+00001998 t imap_parse_url_options
+00001a94 t imap_connect
+00000110 d saslimap
+00001b28 t imap_done
+00001c98 t imap_perform
+00001e1c t imap_dophase_done
+00001e68 t imap_regular_transfer
+00001f08 t imap_parse_url_path
+00002c1c t imap_parse_custom_request
+00002cd4 t imap_do
+00002d20 t imap_disconnect
+00002db0 t imap_doing
+00002df0 t imap_setup_connection
+00000088 d Curl_handler_imap_proxy
+000000cc d Curl_handler_imaps_proxy
+00000044 D Curl_handler_imaps
+         U strlen
+         U __ctype
+         U Curl_raw_nequal
+         U memcmp
+         U strcmp
+         U Curl_failf
+         U __rem32
+         U curlx_sltosi
+         U curl_msnprintf
+         U curl_maprintf
+         U Curl_pp_vsendf
+         U Curl_cfree
+         U Curl_ssl_connect_nonblocking
+         U Curl_cstrdup
+         U Curl_cmalloc
+         U Curl_pp_sendf
+         U Curl_sasl_can_authenticate
+         U Curl_sasl_start
+         U Curl_infof
+         U Curl_sasl_decode_mech
+         U Curl_sasl_continue
+         U Curl_client_write
+         U sscanf
+         U Curl_pgrsSetDownloadSize
+         U curlx_strtoll
+         U memmove
+         U Curl_setup_transfer
+         U Curl_pgrsSetUploadSize
+         U Curl_pp_flushsend
+         U Curl_pp_readresp
+         U Curl_pp_moredata
+         U Curl_pp_statemach
+         U Curl_ccalloc
+         U Curl_pp_getsock
+         U curl_strnequal
+         U Curl_sasl_parse_url_auth_option
+         U Curl_conncontrol
+         U Curl_sasl_init
+         U Curl_pp_init
+         U strcpy
+         U Curl_pgrsSetUploadCounter
+         U Curl_pgrsSetDownloadCounter
+         U Curl_urldecode
+         U Curl_raw_equal
+         U Curl_pp_disconnect
+         U Curl_sasl_cleanup
+00000000 D Curl_handler_imap
+         U Curl_http_setup_conn
+         U Curl_http
+         U Curl_http_done
+
+curl_rtmp.o:
+
+conncache.o:
+00000000 t conn_llist_dtor
+0000000c t bundle_create
+00000090 t bundle_destroy
+000000d4 t bundle_add_conn
+00000124 t bundle_remove_conn
+00000184 t free_bundle_hash_entry
+000001d0 t hashkey
+00000254 t conncache_add_bundle
+00000290 t conncache_remove_bundle
+         U Curl_cmalloc
+         U Curl_llist_alloc
+         U Curl_cfree
+         U Curl_llist_destroy
+         U Curl_llist_insert_next
+         U Curl_llist_remove
+00000188 T Curl_conncache_init
+         U Curl_hash_str
+         U Curl_str_key_compare
+         U Curl_hash_init
+000001b0 T Curl_conncache_destroy
+         U Curl_hash_destroy
+         U curl_maprintf
+00000200 T Curl_conncache_find_bundle
+         U strlen
+         U Curl_hash_pick
+         U Curl_hash_add
+         U Curl_hash_start_iterate
+         U Curl_hash_delete
+         U Curl_hash_next_element
+000002ec T Curl_conncache_add_conn
+000003d8 T Curl_conncache_remove_conn
+00000428 T Curl_conncache_foreach
+000004a0 T Curl_conncache_find_first_connection
+
+smtp.o:
+00000000 t smtp_to_smtps
+00000014 t smtp_endofresp
+000000e0 t smtp_get_message
+00000174 t state
+00000184 t smtp_perform_ehlo
+000001dc t smtp_perform_helo
+00000228 t smtp_perform_starttls
+0000026c t smtp_perform_upgrade_tls
+000002d4 t smtp_perform_auth
+00000310 t smtp_continue_auth
+00000324 t smtp_perform_authentication
+000003b8 t smtp_perform_command
+00000458 t smtp_perform_mail
+0000065c t smtp_perform_rcpt_to
+000006b4 t smtp_perform_quit
+000006f8 t smtp_state_servergreet_resp
+00000744 t smtp_state_starttls_resp
+00000794 t smtp_state_ehlo_resp
+000009d4 t smtp_state_helo_resp
+00000a28 t smtp_state_auth_resp
+00000aa0 t smtp_state_command_resp
+00000bc8 t smtp_state_mail_resp
+00000c14 t smtp_state_rcpt_resp
+00000cb4 t smtp_state_data_resp
+00000d38 t smtp_state_postdata_resp
+00000d60 t smtp_statemach_act
+00001018 t smtp_multi_statemach
+0000109c t smtp_block_statemach
+000010e0 t smtp_init
+00001120 t smtp_getsock
+0000112c t smtp_parse_url_options
+000011f8 t smtp_parse_url_path
+00001268 t smtp_connect
+00000110 d saslsmtp
+000012f8 t smtp_done
+00001498 t smtp_perform
+00001524 t smtp_dophase_done
+00001570 t smtp_regular_transfer
+00001610 t smtp_parse_custom_request
+00001658 t smtp_do
+00001694 t smtp_disconnect
+00001718 t smtp_doing
+00001758 t smtp_setup_connection
+00000088 d Curl_handler_smtp_proxy
+000000cc d Curl_handler_smtps_proxy
+00000044 D Curl_handler_smtps
+         U __ctype
+         U strtol
+         U curlx_sltosi
+         U strlen
+         U Curl_pp_sendf
+         U Curl_ssl_connect_nonblocking
+         U Curl_sasl_can_authenticate
+         U Curl_sasl_start
+         U Curl_infof
+         U Curl_cstrdup
+         U curl_maprintf
+         U Curl_cfree
+         U __div32
+         U Curl_failf
+         U memcmp
+         U Curl_sasl_decode_mech
+         U Curl_sasl_continue
+         U Curl_client_write
+         U Curl_pgrsSetUploadSize
+         U Curl_setup_transfer
+         U Curl_pp_flushsend
+         U Curl_pp_readresp
+         U Curl_pp_moredata
+         U Curl_pp_statemach
+         U Curl_ccalloc
+         U Curl_pp_getsock
+         U curl_strnequal
+         U Curl_sasl_parse_url_auth_option
+         U Curl_gethostname
+         U Curl_urldecode
+         U Curl_conncontrol
+         U Curl_sasl_init
+         U Curl_pp_init
+         U Curl_write
+         U curlx_tvnow
+         U Curl_pgrsSetUploadCounter
+         U Curl_pgrsSetDownloadCounter
+         U Curl_pgrsSetDownloadSize
+         U Curl_pp_disconnect
+         U Curl_sasl_cleanup
+00000000 D Curl_handler_smtp
+000017dc T Curl_smtp_escape_eob
+         U Curl_cmalloc
+         U memcpy
+         U Curl_http_setup_conn
+         U Curl_http
+         U Curl_http_done
+
+wildcard.o:
+00000000 T Curl_wildcard_init
+         U Curl_fileinfo_dtor
+         U Curl_llist_alloc
+00000030 T Curl_wildcard_dtor
+         U Curl_llist_destroy
+         U Curl_cfree
+
+splay.o:
+00000000 d KEY_NOTUSED.66
+00000008 d KEY_NOTUSED.156
+00000000 T Curl_splay
+00000164 T Curl_splayinsert
+000002a4 T Curl_splaygetbest
+000003dc T Curl_splayremovebyaddr
+
+md5.o:
+
+http_proxy.o:
+00000000 T Curl_proxyCONNECT
+         U Curl_infof
+         U Curl_cfree
+         U Curl_add_buffer_init
+         U curl_maprintf
+         U Curl_http_output_auth
+         U strchr
+         U Curl_checkProxyheaders
+         U Curl_add_buffer_free
+         U Curl_add_bufferf
+         U Curl_add_custom_headers
+         U Curl_add_buffer_send
+         U Curl_failf
+         U Curl_timeleft
+         U Curl_socket_check
+         U Curl_read
+         U Curl_httpchunk_read
+         U Curl_debug
+         U Curl_client_write
+         U strlen
+         U Curl_raw_nequal
+         U Curl_copy_header_value
+         U Curl_http_input_auth
+         U curlx_strtoll
+         U Curl_compareheader
+         U Curl_httpchunk_init
+         U sscanf
+         U Curl_pgrsUpdate
+         U Curl_http_auth_act
+         U Curl_closesocket
+         U Curl_conncontrol
+00000b40 T Curl_proxy_connect
+         U memset
+
+inet_ntop.o:
+00000000 t inet_ntop4
+0000008c t inet_ntop6
+         U curl_msnprintf
+         U strlen
+         U __errno
+         U strcpy
+         U memset
+         U __div32
+         U __rem32
+000002e0 T Curl_inet_ntop
+
+inet_pton.o:
+00000000 t inet_pton4
+00000000 d digits.11
+00000100 t inet_pton6
+0000000b d xdigits_l.39
+0000001c d xdigits_u.40
+         U strchr
+         U memcpy
+         U memset
+000002d4 T Curl_inet_pton
+         U __errno
+
+hostcheck.o:
+00000000 t hostmatch
+         U strlen
+         U strchr
+         U Curl_inet_pton
+         U Curl_raw_nequal
+         U Curl_raw_equal
+00000194 T Curl_cert_hostcheck
+         U Curl_cstrdup
+         U Curl_cfree
+
+netrc.o:
+00000000 T Curl_parsenetrc
+         U curl_getenv
+         U curl_maprintf
+         U Curl_cfree
+         U fopen
+         U fgets
+         U strtok_r
+         U Curl_raw_equal
+         U Curl_cstrdup
+         U fclose
+
+dict.o:
+
+file.o:
+
+x509asn1.o:
+
+share.o:
+00000000 T curl_share_init
+         U Curl_ccalloc
+         U Curl_mk_dnscache
+         U Curl_cfree
+00000068 T curl_share_setopt
+         U Curl_cookie_init
+         U Curl_cookie_cleanup
+0000021c T curl_share_cleanup
+         U Curl_hash_destroy
+         U Curl_ssl_kill_session
+00000328 T Curl_share_lock
+00000378 T Curl_share_unlock
+
+url.o:
+00000094 t setstropt
+00000100 t parse_login_details
+000003f4 t setstropt_userpwd
+00002570 t conn_free
+00002800 t signalPipeClose
+0000296c t SocketIsDead
+00002994 t IsPipeliningPossible
+00002a80 t gethandleathead
+00002bec t find_oldest_idle_connection_in_bundle
+00002c6c t disconnect_if_dead
+00002d14 t call_disconnect_if_dead
+00002d30 t prune_dead_connections
+00002d8c t max_pipeline_length
+00002dac t get_protocol_family
+00002f84 t ConnectionExists
+00003978 t is_ASCII_name
+000039a4 t fix_hostname
+00003a0c t llist_dtor
+00003a10 t allocate_conn
+0000002c d Curl_handler_dummy
+00003c58 t findprotocol
+00000000 d protocols
+00003cf0 t parse_url_login
+00003e70 t parseurlandfillconn
+000044cc t setup_range
+000045c4 t setup_connection_internals
+00004644 t check_noproxy
+00004798 t detect_proxy
+000048a0 t parse_proxy
+00004d50 t parse_proxy_auth
+00004e48 t parse_remote_port
+00005134 t override_login
+0000529c t set_login
+000053a4 t parse_connect_to_host_port
+00005608 t parse_connect_to_string
+000057a4 t parse_connect_to_slist
+000058f0 t resolve_server
+00005a2c t reuse_conn
+00005d2c t create_conn
+00000000 T Curl_freeset
+         U Curl_cfree
+         U Curl_cstrdup
+         U strchr
+         U Curl_cmalloc
+         U memcpy
+         U strlen
+00000500 T Curl_dupset
+         U memset
+         U curlx_sotouz
+         U Curl_memdup
+000005b8 T Curl_free_request_state
+000005f8 T Curl_close
+         U Curl_expire_clear
+         U curl_multi_remove_handle
+         U curl_multi_cleanup
+         U Curl_llist_destroy
+         U Curl_ssl_close_all
+         U Curl_ssl_free_certinfo
+         U Curl_flush_cookies
+         U Curl_share_lock
+         U Curl_share_unlock
+         U Curl_wildcard_dtor
+00000818 T Curl_init_userdefined
+         U __stdout
+         U __stdin
+         U __stderr
+         U fwrite
+         U fread
+00000938 T Curl_open
+         U Curl_ccalloc
+00000a34 T Curl_setopt
+         U curlx_sltosi
+         U curl_slist_append
+         U curl_slist_free_all
+         U Curl_cookie_init
+         U Curl_raw_equal
+         U Curl_cookie_clearall
+         U Curl_cookie_clearsess
+         U Curl_cookie_loadfiles
+         U Curl_raw_nequal
+         U Curl_cookie_add
+         U Curl_ssl_set_engine
+         U Curl_ssl_set_engine_default
+         U curlx_sltous
+         U Curl_failf
+         U Curl_ssl_cert_status_request
+         U Curl_ssl_false_start
+         U Curl_cookie_cleanup
+         U curlx_sltoui
+         U Curl_set_dns_servers
+         U Curl_set_dns_interface
+         U Curl_set_dns_local_ip4
+         U Curl_set_dns_local_ip6
+         U Curl_ssl_close
+         U Curl_closesocket
+         U Curl_free_ssl_config
+         U Curl_multi_handlePipeBreak
+         U Curl_llist_remove
+00002864 T Curl_disconnect
+         U Curl_resolv_unlock
+         U Curl_hostcache_prune
+         U Curl_infof
+         U Curl_conncache_remove_conn
+         U Curl_pipeline_wanted
+         U Curl_socket_check
+00002a28 T Curl_removeHandleFromPipeline
+00002a9c T Curl_getoff_all_pipelines
+         U Curl_recvpipe_head
+         U Curl_sendpipe_head
+         U Curl_pipeline_leave_read
+         U Curl_pipeline_leave_write
+00002b50 T Curl_oldest_idle_connection
+         U curlx_tvnow
+         U Curl_hash_start_iterate
+         U Curl_hash_next_element
+         U curlx_tvdiff
+         U Curl_rtsp_connisdead
+         U Curl_conncache_foreach
+         U Curl_pipeline_site_blacklisted
+         U Curl_conncache_find_bundle
+         U strcmp
+         U curl_strequal
+         U Curl_ssl_config_matches
+         U Curl_pipeline_penalized
+00003638 T Curl_connected_proxy
+         U Curl_SOCKS5
+         U Curl_SOCKS4
+00003730 T Curl_verboseconnect
+00003780 T Curl_protocol_getsock
+000037b4 T Curl_doing_getsock
+000037f0 T Curl_protocol_connecting
+00003844 T Curl_protocol_doing
+00003894 T Curl_protocol_connect
+         U Curl_proxy_connect
+         U Curl_conncontrol
+         U Curl_llist_alloc
+         U curl_easy_unescape
+         U strpbrk
+         U sscanf
+         U memmove
+         U curl_maprintf
+         U strcpy
+         U Curl_dedotdotify
+         U strncmp
+         U strtoul
+         U curl_getenv
+         U __ctype_tolower
+         U Curl_strntoupper
+         U strstr
+         U __ctype
+         U strtol
+         U strncpy
+         U Curl_inet_pton
+         U strrchr
+         U curl_msnprintf
+         U curlx_ultous
+         U Curl_parsenetrc
+         U curl_strnequal
+         U Curl_timeleft
+         U Curl_resolv_timeout
+         U Curl_persistconninfo
+00005c4c T Curl_init_do
+         U Curl_speedinit
+         U Curl_pgrsSetUploadCounter
+         U Curl_pgrsSetDownloadCounter
+         U Curl_multi_max_host_connections
+         U Curl_multi_max_total_connections
+         U Curl_handler_http
+         U Curl_recv_plain
+         U Curl_send_plain
+         U Curl_clone_ssl_config
+         U Curl_conncache_add_conn
+0000668c T Curl_setup_conn
+         U Curl_pgrsTime
+         U Curl_connecthost
+         U Curl_updateconninfo
+000067b4 T Curl_connect
+         U Curl_handler_https
+         U Curl_handler_imap
+         U Curl_handler_imaps
+         U Curl_handler_pop3
+         U Curl_handler_pop3s
+         U Curl_handler_smtp
+         U Curl_handler_smtps
+         U Curl_handler_rtsp
+         U Curl_handler_gopher
+
+curl_multibyte.o:
+
+ftplistparser.o:
+
+speedcheck.o:
+00000000 T Curl_speedinit
+         U memset
+00000010 T Curl_speedcheck
+         U Curl_tvlong
+         U curlx_tvdiff
+         U Curl_failf
+         U Curl_expire_latest
+
+pipeline.o:
+00000000 t site_blacklist_llist_dtor
+00000044 t server_blacklist_llist_dtor
+00000190 t addHandleToPipeline
+000005c8 t pipe_head
+         U Curl_cfree
+0000006c T Curl_pipeline_penalized
+         U Curl_multi_content_length_penalty_size
+         U Curl_multi_chunk_length_penalty_size
+         U Curl_infof
+         U Curl_llist_insert_next
+000001c8 T Curl_add_handle_to_pipeline
+         U Curl_expire
+00000220 T Curl_move_handle_from_send_to_recv_pipe
+         U Curl_llist_move
+00000288 T Curl_pipeline_site_blacklisted
+         U Curl_multi_pipelining_site_bl
+         U Curl_raw_equal
+00000314 T Curl_pipeline_set_site_blacklist
+         U Curl_llist_alloc
+         U Curl_cstrdup
+         U Curl_cmalloc
+         U strchr
+         U strtol
+         U Curl_llist_destroy
+00000450 T Curl_pipeline_server_blacklisted
+         U Curl_multi_pipelining_server_bl
+         U strlen
+         U Curl_raw_nequal
+000004e0 T Curl_pipeline_set_server_blacklist
+000005f8 T Curl_recvpipe_head
+00000600 T Curl_sendpipe_head
+00000608 T Curl_pipeline_checkget_write
+0000065c T Curl_pipeline_checkget_read
+000006b0 T Curl_pipeline_leave_write
+000006bc T Curl_pipeline_leave_read
+
+krb5.o:
+
+multi.o:
+00000000 t sigpipe_ignore
+0000007c t sigpipe_restore
+000000ac t mstate
+00000000 d finit.8
+000000f8 t sh_getentry
+00000138 t sh_addentry
+000001dc t sh_freeentry
+00000200 t fd_key_compare
+00000218 t hash_fd
+00000248 t sh_init
+00000270 t multi_addmsg
+000002a8 t multi_freeamsg
+000003e0 t multi_timeout
+00000000 d tv_zero.914
+0000048c t update_timer
+0000004c d none.950
+00000580 t multi_addtimeout
+000032cc t multi_freetimeout
+000008b4 t ConnectionDone
+00000940 t multi_done
+00000b34 t waitconnect_getsock
+00000b90 t waitproxyconnect_getsock
+00000bc0 t domore_getsock
+00000bfc t multi_getsock
+00000d68 t singlesocket
+000017e0 t multi_ischanged
+0000184c t multi_reconnect_request
+000018ec t do_complete
+0000192c t multi_do
+000019dc t multi_do_more
+00001a30 t multi_runsingle
+00002980 t add_next_timeout
+00002b44 t close_all_connections
+00002dbc t multi_socket
+         U memset
+         U sigaction
+         U Curl_hash_pick
+         U Curl_ccalloc
+         U Curl_hash_add
+         U Curl_cfree
+         U __udiv32
+         U Curl_hash_init
+         U Curl_llist_insert_next
+000002ac T Curl_multi_handle
+         U Curl_mk_dnscache
+         U Curl_conncache_init
+         U Curl_llist_alloc
+         U curl_easy_init
+         U Curl_hash_destroy
+         U Curl_conncache_destroy
+         U Curl_close
+         U Curl_llist_destroy
+000003d4 T curl_multi_init
+         U curlx_tvnow
+         U Curl_splay
+         U curlx_tvdiff
+         U Curl_cmalloc
+         U memcpy
+         U Curl_llist_count
+00000634 T Curl_expire
+         U __div32
+         U __rem32
+         U Curl_splayremovebyaddr
+         U Curl_infof
+         U Curl_splayinsert
+0000075c T curl_multi_add_handle
+         U Curl_global_host_cache_init
+         U Curl_oldest_idle_connection
+         U Curl_disconnect
+         U Curl_getoff_all_pipelines
+         U Curl_pgrsDone
+         U Curl_resolv_unlock
+         U Curl_free_request_state
+         U Curl_protocol_getsock
+         U Curl_doing_getsock
+         U Curl_single_getsock
+         U Curl_recvpipe_head
+         U Curl_sendpipe_head
+         U Curl_hash_delete
+00000fe4 T Curl_expire_clear
+         U Curl_llist_remove
+0000107c T Curl_expire_latest
+00001130 T Curl_multi_process_pending_handles
+0000119c T curl_multi_remove_handle
+         U Curl_conncontrol
+         U Curl_wildcard_dtor
+000013a8 T Curl_pipeline_wanted
+000013cc T Curl_multi_handlePipeBreak
+000013d8 T curl_multi_fdset
+000014f8 T curl_multi_wait
+         U Curl_poll
+000017d4 T Curl_multi_connchanged
+00001800 T Curl_multi_add_perform
+         U Curl_init_do
+         U Curl_connect
+         U Curl_pgrsTime
+         U Curl_failf
+         U Curl_timeleft
+         U Curl_pretransfer
+         U Curl_add_handle_to_pipeline
+         U Curl_fetch_addr
+         U Curl_http_connect
+         U Curl_is_connected
+         U Curl_protocol_connect
+         U Curl_protocol_connecting
+         U Curl_pipeline_checkget_write
+         U Curl_retry_request
+         U Curl_posttransfer
+         U Curl_follow
+         U Curl_protocol_doing
+         U Curl_move_handle_from_send_to_recv_pipe
+         U Curl_pipeline_checkget_read
+         U Curl_pgrsUpdate
+         U Curl_speedcheck
+         U Curl_pgrsLimitWaitTime
+         U Curl_readwrite
+         U Curl_pipeline_leave_read
+         U Curl_pipeline_leave_write
+         U Curl_removeHandleFromPipeline
+00002a54 T curl_multi_perform
+         U Curl_splaygetbest
+         U Curl_conncache_find_first_connection
+00002bac T curl_multi_cleanup
+         U Curl_hostcache_clean
+         U Curl_pipeline_set_site_blacklist
+         U Curl_pipeline_set_server_blacklist
+00002cd0 T curl_multi_info_read
+         U curlx_uztosi
+00002d40 T Curl_multi_closed
+00003010 T curl_multi_setopt
+000031cc T curl_multi_socket
+00003208 T curl_multi_socket_action
+00003248 T curl_multi_socket_all
+00003288 T curl_multi_timeout
+000032f4 T curl_multi_assign
+00003324 T Curl_multi_max_host_connections
+0000333c T Curl_multi_max_total_connections
+00003354 T Curl_multi_content_length_penalty_size
+00003374 T Curl_multi_chunk_length_penalty_size
+00003394 T Curl_multi_pipelining_site_bl
+0000339c T Curl_multi_pipelining_server_bl
+         U Curl_init_CONNECT
+
+curl_memrchr.o:
+00000000 T Curl_memrchr
+
+strtoofft.o:
+00000000 t get_char
+00000058 T curlx_strtoll
+         U __ctype
+         U __mul64
+         U __errno
+
+curl_endian.o:
+00000000 T Curl_read16_le
+00000014 T Curl_read32_le
+00000034 T Curl_read64_le
+000000a8 T Curl_read16_be
+000000bc T Curl_read32_be
+000000e0 T Curl_read64_be
+0000015c T Curl_write16_le
+0000016c T Curl_write32_le
+0000018c T Curl_write64_le
+
+curl_gssapi.o:
+
+curl_des.o:
+
+socks_sspi.o:
+
+tftp.o:
+
+socks_gssapi.o:
+
+progress.o:
+00000000 t time2str
+0000018c t max5data
+00000000 d FLOAT_TEMP.236
+         U strcpy
+         U __div64
+         U __mul64
+         U curl_msnprintf
+         U __rem64
+000003d4 T Curl_pgrsUpdate
+         U __rem32
+         U curlx_tvnow
+         U curlx_tvdiff
+         U _d_lltod
+         U _d_dtoll
+         U Curl_failf
+         U curl_mfprintf
+         U fflush
+00000be8 T Curl_pgrsDone
+00000c38 T Curl_pgrsSetDownloadSize
+00000c80 T Curl_pgrsSetUploadSize
+00000cd8 T Curl_pgrsResetTimesSizes
+00000d2c T Curl_pgrsTime
+         U curlx_tvdiff_secs
+00000ed4 T Curl_pgrsStartNow
+00000f18 T Curl_pgrsLimitWaitTime
+00000fb8 T Curl_pgrsSetDownloadCounter
+00001060 T Curl_pgrsSetUploadCounter
+
+hmac.o:
+
+version.o:
+00000000 b initialized.3
+00000004 b version.4
+000000cc b initialized.12
+00000000 d version_info
+000000d0 b ssl_buffer.13
+00000000 d protocols
+00000000 T curl_version
+         U strcpy
+         U strlen
+         U Curl_ssl_version
+         U zlibVersion
+         U curl_msnprintf
+00000094 T curl_version_info
+000000dc T Curl_version_init
+
+escape.o:
+00000000 T curl_easy_escape
+         U strlen
+         U Curl_cmalloc
+         U Curl_crealloc
+         U curl_msnprintf
+         U Curl_cfree
+00000258 T curl_escape
+00000268 T Curl_urldecode
+         U __ctype
+         U strtoul
+         U curlx_ultouc
+0000039c T curl_easy_unescape
+         U curlx_uztosi
+000003fc T curl_unescape
+00000410 T curl_free
+
+ldap.o:
+
+formdata.o:
+00000000 t AddHttpPost
+00000134 t AddFormInfo
+000001a0 t ContentTypeForFilename
+00000000 d ctts.33
+00000230 t FormAdd
+00000b48 t AddFormData
+00000d58 t AddFormDataf
+00000e24 t Curl_basename
+00000e8c t strippath
+00000ee0 t formdata_add_filename
+0000101c t formboundary
+00001560 t readfromfile
+         U Curl_ccalloc
+         U strlen
+         U curl_strequal
+         U Curl_cstrdup
+         U Curl_cfree
+         U Curl_memdup
+00000b20 T curl_formadd
+         U Curl_cmalloc
+         U memcpy
+         U stat
+         U curl_mvsnprintf
+00000dbc T Curl_formclean
+         U strrchr
+         U strchr
+         U Curl_rand
+         U curl_maprintf
+00001050 T Curl_getformdata
+         U __stdin
+         U fopen
+         U fclose
+         U fread
+         U Curl_failf
+00001538 T Curl_FormInit
+00001624 T curl_formget
+00001740 T curl_formfree
+000017d4 T Curl_FormReader
+000018b8 T Curl_formpostheader
+
+pop3.o:
+00000000 t pop3_to_pop3s
+00000014 t pop3_endofresp
+00000110 t pop3_get_message
+000001a4 t state
+000001b4 t pop3_perform_capa
+00000208 t pop3_perform_starttls
+0000024c t pop3_perform_upgrade_tls
+000002b4 t pop3_perform_user
+00000314 t pop3_perform_auth
+00000350 t pop3_continue_auth
+00000364 t pop3_perform_authentication
+00000440 t pop3_perform_command
+00000524 t pop3_perform_quit
+00000568 t pop3_state_servergreet_resp
+00000660 t pop3_state_capa_resp
+00000854 t pop3_state_starttls_resp
+000008a4 t pop3_state_auth_resp
+00000940 t pop3_state_user_resp
+000009a8 t pop3_state_pass_resp
+00000bdc t pop3_state_command_resp
+00000cb0 t pop3_statemach_act
+00000ec8 t pop3_multi_statemach
+00000f4c t pop3_block_statemach
+00000f8c t pop3_init
+00000fcc t pop3_getsock
+00000fd8 t pop3_parse_url_options
+00001114 t pop3_connect
+00000110 d saslpop3
+0000119c t pop3_done
+00001214 t pop3_perform
+00001274 t pop3_regular_transfer
+0000130c t pop3_parse_url_path
+00001340 t pop3_parse_custom_request
+00001388 t pop3_do
+000013d4 t pop3_disconnect
+00001458 t pop3_doing
+00001484 t pop3_setup_connection
+00000088 d Curl_handler_pop3_proxy
+000000cc d Curl_handler_pop3s_proxy
+00000044 D Curl_handler_pop3s
+         U memcmp
+         U strlen
+         U Curl_pp_sendf
+         U Curl_ssl_connect_nonblocking
+         U Curl_sasl_can_authenticate
+         U Curl_sasl_start
+         U Curl_infof
+         U Curl_failf
+         U Curl_ccalloc
+         U memcpy
+         U Curl_sasl_decode_mech
+         U Curl_sasl_continue
+000009ec T Curl_pop3_write
+         U Curl_client_write
+         U Curl_setup_transfer
+         U Curl_cfree
+         U Curl_pp_flushsend
+         U Curl_pp_readresp
+         U Curl_pp_moredata
+         U Curl_pp_statemach
+         U Curl_pp_getsock
+         U curl_strnequal
+         U Curl_sasl_parse_url_auth_option
+         U Curl_conncontrol
+         U Curl_sasl_init
+         U Curl_pp_init
+         U Curl_pgrsSetUploadCounter
+         U Curl_pgrsSetDownloadCounter
+         U Curl_pgrsSetUploadSize
+         U Curl_pgrsSetDownloadSize
+         U Curl_urldecode
+         U Curl_pp_disconnect
+         U Curl_sasl_cleanup
+00000000 D Curl_handler_pop3
+         U Curl_http_setup_conn
+         U Curl_http
+         U Curl_http_done
+
+parsedate.o:
+00000000 t checkday
+0000001c d weekday
+0000004c t checkmonth
+00000094 t checktz
+00000068 d tz
+000000e0 t skip
+00000124 t my_timegm
+00000398 d month_days_cumulative.53
+00000248 t parsedate
+00000000 D Curl_wkday
+         U Curl_raw_equal
+00000038 D Curl_month
+         U __ctype
+         U __div32
+         U __rem32
+         U sscanf
+         U strlen
+         U __errno
+         U strtol
+         U curlx_sltosi
+00000740 T curl_getdate
+00000778 T Curl_gmtime
+         U gmtime_r
+
+curl_threads.o:
+
+strerror.o:
+00000000 T curl_easy_strerror
+00000434 T curl_multi_strerror
+0000061c T curl_share_strerror
+000006ac T Curl_strerror
+         U __errno
+         U strerror_r
+         U strncpy
+         U curl_msnprintf
+         U strrchr
+
+curl_gethostname.o:
+00000000 T Curl_gethostname
+         U gethostname
+         U strchr
+
+mprintf.o:
+00000000 t dprintf_DollarString
+00000074 t dprintf_Pass1
+000009e8 t dprintf_formatf
+00000000 d lower_digits
+00000025 d upper_digits
+0000004a d null.324
+00000050 d strnil.359
+000012e0 t addbyter
+000013a0 t alloc_addbyter
+000015bc t storebuffer
+         U __ctype
+         U strtol
+         U __urem64
+         U __udiv64
+         U strlen
+00001320 T curl_mvsnprintf
+00001378 T curl_msnprintf
+         U Curl_cmalloc
+         U Curl_crealloc
+00001460 T curl_maprintf
+         U Curl_cfree
+         U Curl_cstrdup
+00001514 T curl_mvaprintf
+000015d8 T curl_msprintf
+00001614 T curl_mprintf
+         U __stdout
+         U fputc
+00001648 T curl_mfprintf
+00001674 T curl_mvsprintf
+000016b8 T curl_mvprintf
+000016e8 T curl_mvfprintf
+
+hostip4.o:
+
+smb.o:
+
+rawstr.o:
+00000000 T Curl_raw_toupper
+0000001c T Curl_raw_equal
+000000a4 T Curl_raw_nequal
+00000144 T Curl_strntoupper
+
+strtok.o:
+
+spnego_sspi.o:
+
+krb5_sspi.o:
+
+digest.o:
+
+digest_sspi.o:
+
+spnego_gssapi.o:
+
+krb5_gssapi.o:
+
+vauth.o:
+00000000 T Curl_auth_build_spn
+         U curl_maprintf
+00000070 T Curl_auth_user_contains_domain
+         U strpbrk
+         U strlen
+
+ntlm.o:
+
+ntlm_sspi.o:
+
+cleartext.o:
+00000000 T Curl_auth_create_plain_message
+         U strlen
+         U Curl_cmalloc
+         U memcpy
+         U Curl_base64_encode
+         U Curl_cfree
+000000f0 T Curl_auth_create_login_message
+         U Curl_cstrdup
+00000178 T Curl_auth_create_external_message
+
+cram.o:
+
+oauth2.o:
+00000000 T Curl_auth_create_oauth_bearer_message
+         U curl_maprintf
+         U strlen
+         U Curl_base64_encode
+         U Curl_cfree
+
+vtls.o:
+00000000 t safe_strequal
+00000000 d init_ssl
+00000000 b randseed.59
+0000043c t ssl_prefs_check
+00000d50 t pubkey_pem_to_der
+00000004 d seeded.60
+         U Curl_raw_equal
+00000048 T Curl_ssl_config_matches
+000000f0 T Curl_clone_ssl_config
+         U Curl_cstrdup
+00000288 T Curl_free_ssl_config
+         U Curl_cfree
+00000318 T Curl_rand
+         U Curl_ossl_random
+         U curlx_tvnow
+         U Curl_infof
+000003d4 T Curl_ssl_backend
+000003dc T Curl_ssl_init
+         U Curl_ossl_init
+00000414 T Curl_ssl_cleanup
+         U Curl_ossl_cleanup
+         U Curl_failf
+00000470 T Curl_ssl_connect
+         U Curl_ossl_connect
+         U Curl_pgrsTime
+000004dc T Curl_ssl_connect_nonblocking
+         U Curl_ossl_connect_nonblocking
+00000554 T Curl_ssl_sessionid_lock
+         U Curl_share_lock
+00000590 T Curl_ssl_sessionid_unlock
+         U Curl_share_unlock
+000005c8 T Curl_ssl_getsessionid
+00000758 T Curl_ssl_kill_session
+         U Curl_ossl_session_free
+000007b8 T Curl_ssl_delsessionid
+00000810 T Curl_ssl_addsessionid
+000009ec T Curl_ssl_close_all
+         U Curl_ossl_close_all
+00000a7c T Curl_ssl_close
+         U Curl_ossl_close
+00000a80 T Curl_ssl_shutdown
+         U Curl_ossl_shutdown
+         U Curl_recv_plain
+         U Curl_send_plain
+00000ad8 T Curl_ssl_set_engine
+         U Curl_ossl_set_engine
+00000adc T Curl_ssl_set_engine_default
+         U Curl_ossl_set_engine_default
+00000ae0 T Curl_ssl_engines_list
+         U Curl_ossl_engines_list
+00000ae4 T Curl_ssl_initsessions
+         U Curl_ccalloc
+00000b48 T Curl_ssl_version
+         U Curl_ossl_version
+00000b4c T Curl_ssl_check_cxn
+         U Curl_ossl_check_cxn
+00000b50 T Curl_ssl_data_pending
+         U Curl_ossl_data_pending
+00000b54 T Curl_ssl_free_certinfo
+         U curl_slist_free_all
+00000bd0 T Curl_ssl_init_certinfo
+00000c28 T Curl_ssl_push_certinfo_len
+         U strlen
+         U Curl_cmalloc
+         U curl_msnprintf
+         U memcpy
+         U Curl_slist_append_nodup
+00000d08 T Curl_ssl_push_certinfo
+00000d4c T Curl_ssl_random
+         U strstr
+         U Curl_base64_decode
+00000e48 T Curl_pin_peer_pubkey
+         U strncmp
+         U Curl_ossl_sha256sum
+         U Curl_base64_encode
+         U memcmp
+         U fopen
+         U fseek
+         U ftell
+         U curlx_sotouz
+         U fread
+         U fclose
+00001168 T Curl_ssl_cert_status_request
+         U Curl_ossl_cert_status_request
+0000116c T Curl_ssl_false_start
+
+gskit.o:
+
+gtls.o:
+
+darwinssl.o:
+
+axtls.o:
+
+mbedtls.o:
+
+openssl.o:
+00000000 t passwd_callback
+0000005c t rand_enough
+0000007c t ossl_seed
+00000100 d FLOAT_TEMP.1107
+0000016c t Curl_ossl_seed
+00000000 d ssl_seeded.37
+000001b4 t do_file_type
+00000250 t ssl_ui_reader
+000002d0 t ssl_ui_writer
+00000348 t cert_stuff
+000008f0 t x509_name_oneline
+00000ea8 t verifyhost
+00001288 t verifystatus
+000014b0 t ssl_msg_type
+000016e4 t tls_rt_type
+00001748 t ssl_tls_trace
+000018dc t select_next_protocol
+00001964 t select_next_proto_cb
+000019d4 t get_ssl_version_txt
+00001a68 t ossl_connect_step1
+00002098 t ossl_connect_step2
+00002284 t asn1_object_dump
+000022b0 t pubkey_show
+0000233c t X509V3_ext
+000024c0 t get_cert_chain
+00002cbc t pkp_pin_peer_pubkey
+00002d8c t servercert
+000031bc t ossl_connect_step3
+000032e4 t ossl_connect_common
+00003680 t ossl_recv
+00003588 t ossl_send
+         U strlen
+         U curlx_uztosi
+         U memcpy
+         U RAND_status
+         U RAND_load_file
+         U RAND_egd
+         U RAND_bytes
+         U RAND_add
+         U RAND_file_name
+         U Curl_infof
+         U Curl_raw_equal
+         U UI_get_string_type
+         U UI_get0_user_data
+         U UI_get_input_flags
+         U UI_set_result
+         U UI_OpenSSL
+         U UI_method_get_reader
+         U UI_method_get_writer
+         U SSL_CTX_set_default_passwd_cb_userdata
+         U SSL_CTX_set_default_passwd_cb
+         U SSL_CTX_use_certificate_chain_file
+         U SSL_CTX_use_certificate_file
+         U ERR_get_error
+         U ERR_error_string
+         U Curl_failf
+         U ENGINE_ctrl
+         U ENGINE_ctrl_cmd
+         U SSL_CTX_use_certificate
+         U X509_free
+         U fopen
+         U d2i_PKCS12_fp
+         U fclose
+         U PKCS12_PBE_add
+         U PKCS12_parse
+         U PKCS12_free
+         U SSL_CTX_use_PrivateKey
+         U SSL_CTX_check_private_key
+         U sk_num
+         U sk_pop
+         U SSL_CTX_ctrl
+         U SSL_CTX_add_client_CA
+         U EVP_PKEY_free
+         U sk_pop_free
+         U SSL_CTX_use_PrivateKey_file
+         U UI_create_method
+         U UI_method_get_opener
+         U UI_method_set_opener
+         U UI_method_get_closer
+         U UI_method_set_closer
+         U UI_method_set_reader
+         U UI_method_set_writer
+         U ENGINE_load_private_key
+         U UI_destroy_method
+         U SSL_new
+         U SSL_get_certificate
+         U X509_get_pubkey
+         U SSL_get_privatekey
+         U EVP_PKEY_copy_parameters
+         U SSL_free
+         U BIO_s_mem
+         U BIO_new
+         U X509_NAME_print_ex
+         U BIO_ctrl
+         U BIO_free
+00000994 T Curl_ossl_init
+         U OPENSSL_load_builtin_modules
+         U ENGINE_load_builtin_engines
+         U CONF_modules_load_file
+         U SSL_load_error_strings
+         U SSL_library_init
+         U OPENSSL_add_all_algorithms_noconf
+000009dc T Curl_ossl_cleanup
+         U EVP_cleanup
+         U CRYPTO_cleanup_all_ex_data
+         U ERR_free_strings
+         U ERR_remove_thread_state
+         U CONF_modules_free
+         U SSL_COMP_free_compression_methods
+00000a08 T Curl_ossl_check_cxn
+         U recv
+         U __errno
+00000abc T Curl_ossl_set_engine
+         U ENGINE_by_id
+         U ENGINE_finish
+         U ENGINE_free
+         U ENGINE_init
+         U ERR_error_string_n
+00000b6c T Curl_ossl_set_engine_default
+         U ENGINE_set_default
+         U ENGINE_get_id
+00000be0 T Curl_ossl_engines_list
+         U ENGINE_get_first
+         U curl_slist_append
+         U curl_slist_free_all
+         U ENGINE_get_next
+00000c4c T Curl_ossl_close
+         U SSL_shutdown
+         U SSL_set_connect_state
+         U SSL_CTX_free
+00000cb4 T Curl_ossl_shutdown
+         U Curl_socket_check
+         U ERR_clear_error
+         U SSL_read
+         U SSL_get_error
+         U SSL_get_shutdown
+00000e68 T Curl_ossl_session_free
+         U SSL_SESSION_free
+00000e6c T Curl_ossl_close_all
+         U Curl_inet_pton
+         U X509_get_ext_d2i
+         U sk_value
+         U ASN1_STRING_data
+         U ASN1_STRING_length
+         U Curl_cert_hostcheck
+         U memcmp
+         U GENERAL_NAMES_free
+         U X509_get_subject_name
+         U X509_NAME_get_index_by_NID
+         U X509_NAME_get_entry
+         U X509_NAME_ENTRY_get_data
+         U ASN1_STRING_type
+         U CRYPTO_malloc
+         U ASN1_STRING_to_UTF8
+         U CRYPTO_free
+         U SSL_ctrl
+         U d2i_OCSP_RESPONSE
+         U OCSP_response_status
+         U OCSP_response_status_str
+         U OCSP_response_get1_basic
+         U SSL_get_peer_cert_chain
+         U SSL_CTX_get_cert_store
+         U OCSP_basic_verify
+         U OCSP_resp_count
+         U OCSP_resp_get0
+         U OCSP_single_get0_status
+         U OCSP_check_validity
+         U OCSP_cert_status_str
+         U OCSP_crl_reason_str
+         U OCSP_BASICRESP_free
+         U OCSP_RESPONSE_free
+         U curl_msnprintf
+         U Curl_debug
+         U SSL_version
+         U SSLv23_client_method
+         U SSLv3_client_method
+         U SSL_CTX_new
+         U ERR_peek_error
+         U SSL_CTX_set_msg_callback
+         U SSL_CTX_set_next_proto_select_cb
+         U SSL_CTX_set_alpn_protos
+         U SSL_CTX_set_cipher_list
+         U SSL_CTX_load_verify_locations
+         U X509_LOOKUP_file
+         U X509_STORE_add_lookup
+         U X509_load_crl_file
+         U X509_STORE_set_flags
+         U SSL_CTX_set_verify
+         U Curl_ssl_sessionid_lock
+         U Curl_ssl_getsessionid
+         U SSL_set_session
+         U Curl_ssl_sessionid_unlock
+         U SSL_set_fd
+         U SSL_connect
+         U SSL_get_verify_result
+         U X509_verify_cert_error_string
+         U strcpy
+         U SSL_get_current_cipher
+         U SSL_CIPHER_get_name
+         U SSL_get0_alpn_selected
+         U i2t_ASN1_OBJECT
+         U BN_print
+         U Curl_ssl_push_certinfo_len
+         U X509_EXTENSION_get_object
+         U X509V3_EXT_print
+         U X509_EXTENSION_get_data
+         U ASN1_STRING_print
+         U Curl_ssl_push_certinfo
+         U Curl_ssl_init_certinfo
+         U X509_get_issuer_name
+         U ASN1_INTEGER_get
+         U BIO_printf
+         U X509_get_serialNumber
+         U BIO_puts
+         U i2a_ASN1_OBJECT
+         U ASN1_TIME_print
+         U BN_num_bits
+         U PEM_write_bio_X509
+         U i2d_X509_PUBKEY
+         U Curl_cmalloc
+         U Curl_pin_peer_pubkey
+         U Curl_cfree
+         U SSL_get_peer_certificate
+         U PEM_read_X509
+         U X509_check_issued
+         U SSL_get1_session
+         U Curl_ssl_delsessionid
+         U Curl_ssl_addsessionid
+         U Curl_timeleft
+000034fc T Curl_ossl_connect_nonblocking
+0000351c T Curl_ossl_connect
+00003548 T Curl_ossl_data_pending
+         U SSL_pending
+         U SSL_write
+0000377c T Curl_ossl_version
+         U SSLeay
+         U __rem32
+00003858 T Curl_ossl_random
+00003898 T Curl_ossl_md5sum
+         U MD5_Init
+         U MD5_Update
+         U MD5_Final
+000038f4 T Curl_ossl_sha256sum
+         U SHA256_Init
+         U SHA256_Update
+         U SHA256_Final
+00003934 T Curl_ossl_cert_status_request
+
+polarssl.o:
+
+nss.o:
+
+cyassl.o:
+
+polarssl_threadlock.o:
+
+schannel.o:
+
+libwmcurl.a:
+
+easy.o:
+00000000 t sigpipe_ignore
+0000007c t sigpipe_restore
+000000ac t global_init
+00000000 b initialized
+00000004 b init_flags
+000002d4 t easy_transfer
+000003f8 t easy_perform
+00000848 t easy_connection
+         U memset
+         U sigaction
+         U malloc
+00000000 D Curl_cmalloc
+         U free
+00000004 D Curl_cfree
+         U realloc
+00000008 D Curl_crealloc
+         U strdup
+0000000c D Curl_cstrdup
+         U calloc
+00000010 D Curl_ccalloc
+         U Curl_ssl_init
+         U Curl_ipv6works
+         U Curl_ack_eintr
+         U Curl_version_init
+0000015c T curl_global_init
+00000164 T curl_global_init_mem
+000001f8 T curl_global_cleanup
+         U Curl_global_host_cache_dtor
+         U Curl_ssl_cleanup
+00000248 T curl_easy_init
+         U Curl_open
+00000298 T curl_easy_setopt
+         U Curl_setopt
+         U curlx_tvnow
+         U curl_multi_wait
+         U curlx_tvdiff
+         U Curl_wait_ms
+         U curl_multi_perform
+         U curl_multi_info_read
+         U Curl_failf
+         U Curl_multi_handle
+         U curl_multi_setopt
+         U curl_multi_add_handle
+         U curl_multi_cleanup
+         U curl_multi_remove_handle
+000004e4 T curl_easy_perform
+000004ec T curl_easy_cleanup
+         U Curl_close
+00000520 T curl_easy_getinfo
+         U Curl_getinfo
+00000548 T curl_easy_duphandle
+         U Curl_dupset
+         U Curl_cookie_init
+         U Curl_slist_duplicate
+         U curl_slist_free_all
+         U Curl_freeset
+000006fc T curl_easy_reset
+         U Curl_free_request_state
+         U Curl_init_userdefined
+00000798 T curl_easy_pause
+         U Curl_client_chop_write
+         U Curl_expire
+         U Curl_getconnectinfo
+000008b0 T curl_easy_recv
+         U Curl_read
+0000091c T curl_easy_send
+         U Curl_write
+
+http.o:
+0000024c t http_output_basic
+0000033c t pickoneauth
+000003cc t http_perhapsrewind
+00000520 t http_should_fail
+000007a0 t output_auth_headers
+00000b10 t readmoredata
+00001124 t https_connecting
+000011d4 t http_getsock_do
+000011e4 t https_getsock
+000013ac t use_http_1_1plus
+0000140c t expect100
+00003290 t checkhttpprefix
+00003318 t checkrtspprefix
+00003348 t checkprotoprefix
+00003398 t header_append
+00003478 t print_http_error
+00000000 T Curl_http_setup_conn
+         U Curl_ccalloc
+00000044 T Curl_checkheaders
+         U strlen
+         U Curl_raw_nequal
+000000a0 T Curl_checkProxyheaders
+00000120 T Curl_copy_header_value
+         U __ctype
+         U strchr
+         U Curl_cmalloc
+         U memcpy
+         U curl_msnprintf
+         U Curl_base64_encode
+         U Curl_cfree
+         U curl_maprintf
+         U Curl_conncontrol
+         U Curl_readrewind
+00000594 T Curl_http_auth_act
+         U Curl_cstrdup
+         U Curl_failf
+         U Curl_infof
+000008a0 T Curl_http_output_auth
+         U Curl_raw_equal
+000009f4 T Curl_http_input_auth
+00000c18 T Curl_add_buffer_init
+00000c44 T Curl_add_buffer_free
+00000c84 T Curl_add_buffer_send
+         U Curl_write
+         U Curl_debug
+         U Curl_pipeline_leave_write
+00000e74 T Curl_add_buffer
+         U Curl_crealloc
+00000f94 T Curl_add_bufferf
+         U curl_mvaprintf
+00001028 T Curl_compareheader
+         U Curl_ssl_connect_nonblocking
+00001160 T Curl_http_connect
+         U Curl_proxy_connect
+00001250 T Curl_http_done
+         U Curl_unencode_cleanup
+         U Curl_formclean
+         U fclose
+0000148c T Curl_add_custom_headers
+000016f4 T Curl_add_timecondition
+         U Curl_gmtime
+         U Curl_month
+         U Curl_wkday
+00001834 T Curl_http
+         U memmove
+         U strcmp
+         U strstr
+         U Curl_raw_toupper
+         U Curl_getformdata
+         U curlx_sotouz
+         U Curl_share_lock
+         U Curl_cookie_getlist
+         U Curl_share_unlock
+         U Curl_cookie_freelist
+         U Curl_pgrsSetUploadSize
+         U Curl_setup_transfer
+         U Curl_FormInit
+         U Curl_FormReader
+         U Curl_formpostheader
+         U Curl_pgrsSetUploadCounter
+         U Curl_pgrsUpdate
+         U strncmp
+00003528 T Curl_http_readwrite_headers
+         U memchr
+         U Curl_client_write
+         U Curl_pgrsSetDownloadSize
+         U sscanf
+         U Curl_pipeline_site_blacklisted
+         U curlx_strtoll
+         U Curl_pipeline_server_blacklisted
+         U Curl_httpchunk_init
+         U Curl_cookie_add
+         U time
+         U curl_getdate
+         U Curl_rtsp_parseheader
+00000000 D Curl_handler_http
+00000044 D Curl_handler_https
+
+curl_ntlm_core.o:
+
+llist.o:
+00000000 t llist_init
+00000018 T Curl_llist_alloc
+         U Curl_cmalloc
+00000060 T Curl_llist_insert_next
+0000010c T Curl_llist_remove
+         U Curl_cfree
+000001d4 T Curl_llist_destroy
+00000228 T Curl_llist_count
+00000230 T Curl_llist_move
+
+if2ip.o:
+00000000 T Curl_ipv6_scope
+000000ec T Curl_if2ip
+         U strlen
+         U socket
+         U memset
+         U memcpy
+         U ioctl
+         U Curl_inet_ntop
+         U close
+000001c8 T Curl_if_is_interface_name
+
+hostsyn.o:
+00000000 T Curl_set_dns_servers
+00000008 T Curl_set_dns_interface
+00000010 T Curl_set_dns_local_ip4
+00000018 T Curl_set_dns_local_ip6
+
+gopher.o:
+00000000 t gopher_do
+         U strlen
+         U curl_easy_unescape
+         U curlx_uztosz
+         U Curl_write
+         U Curl_client_write
+         U Curl_cfree
+         U Curl_sendf
+         U Curl_failf
+         U Curl_socket_check
+         U Curl_setup_transfer
+00000000 D Curl_handler_gopher
+
+idn_win32.o:
+
+asyn-ares.o:
+
+curl_addrinfo.o:
+00000000 T Curl_freeaddrinfo
+         U Curl_cfree
+00000054 T Curl_getaddrinfo_ex
+         U getaddrinfo
+         U Curl_cmalloc
+         U memcpy
+         U Curl_cstrdup
+         U freeaddrinfo
+00000208 T Curl_he2ai
+         U Curl_ccalloc
+00000390 T Curl_ip2addr
+000004b4 T Curl_str2addr
+         U Curl_inet_pton
+
+openldap.o:
+
+hostip6.o:
+00000000 d ipv6_works.2
+00000000 T Curl_ipv6works
+         U socket
+         U Curl_closesocket
+00000060 T Curl_ipvalid
+0000008c T Curl_getaddrinfo
+         U memset
+         U Curl_inet_pton
+         U curl_msnprintf
+         U Curl_getaddrinfo_ex
+         U Curl_infof
+
+http_ntlm.o:
+
+pingpong.o:
+00000000 T Curl_pp_state_timeout
+         U curlx_tvnow
+         U curlx_tvdiff
+0000008c T Curl_pp_moredata
+000000c8 T Curl_pp_statemach
+         U Curl_failf
+         U Curl_ssl_data_pending
+         U Curl_socket_check
+         U Curl_pgrsUpdate
+         U Curl_speedcheck
+00000210 T Curl_pp_init
+0000023c T Curl_pp_vsendf
+         U curl_maprintf
+         U curl_mvaprintf
+         U Curl_cfree
+         U strlen
+         U Curl_write
+         U Curl_debug
+00000368 T Curl_pp_sendf
+00000390 T Curl_pp_readresp
+         U memcpy
+         U Curl_read
+         U Curl_client_write
+         U memmove
+         U Curl_infof
+         U Curl_cmalloc
+000006a0 T Curl_pp_getsock
+000006d8 T Curl_pp_flushsend
+0000076c T Curl_pp_disconnect
+
+base64.o:
+00000000 t decodeQuantum
+00000000 d base64
+00000208 t base64_encode
+00000041 d base64url
+         U curlx_ultouc
+000000d8 T Curl_base64_decode
+         U strlen
+         U Curl_cmalloc
+         U Curl_cfree
+         U __udiv32
+         U curl_msnprintf
+000003b8 T Curl_base64_encode
+000003f0 T Curl_base64url_encode
+
+curl_ntlm_wb.o:
+
+slist.o:
+00000000 t slist_get_last
+00000034 T Curl_slist_append_nodup
+         U Curl_cmalloc
+00000090 T curl_slist_append
+         U Curl_cstrdup
+         U Curl_cfree
+000000f8 T curl_slist_free_all
+00000144 T Curl_slist_duplicate
+
+warnless.o:
+00000000 T curlx_ultous
+00000008 T curlx_ultouc
+00000010 T curlx_ultosi
+00000018 T curlx_uztoso
+00000020 T curlx_uztosi
+00000028 T curlx_uztoul
+0000002c T curlx_uztoui
+00000030 T curlx_sltosi
+00000038 T curlx_sltoui
+0000003c T curlx_sltous
+00000044 T curlx_uztosz
+0000004c T curlx_sotouz
+00000050 T curlx_sztosi
+00000058 T curlx_uitous
+00000060 T curlx_uitouc
+00000068 T curlx_uitosi
+00000070 T curlx_sitouz
+
+http2.o:
+00000000 T curl_pushheader_bynum
+00000008 T curl_pushheader_byname
+
+http_chunks.o:
+00000000 t Curl_isxdigit
+00000038 T Curl_httpchunk_init
+0000004c T Curl_httpchunk_read
+         U Curl_client_write
+         U curlx_strtoll
+         U __errno
+         U curlx_sotouz
+         U Curl_unencode_deflate_write
+         U Curl_unencode_gzip_write
+         U Curl_failf
+         U Curl_crealloc
+         U Curl_cmalloc
+00000590 T Curl_chunked_strerror
+
+telnet.o:
+
+asyn-thread.o:
+
+curl_fnmatch.o:
+00000000 t parsekeyword
+00000210 t setcharset
+000005c8 t loop
+         U __ctype
+         U strcmp
+         U memset
+000008b0 T Curl_fnmatch
+
+ssh.o:
+
+cookie.o:
+00000000 t freecookie
+000000ac t tailmatch
+00000124 t pathmatch
+00000230 t sanitize_cookie_path
+00000304 t strstore
+0000034c t remove_expired
+000003dc t isip
+0000134c t cookie_sort
+0000171c t get_netscape_format
+000017dc t cookie_output
+         U Curl_cfree
+         U strlen
+         U Curl_raw_equal
+         U Curl_cstrdup
+         U strchr
+         U strncmp
+         U memmove
+         U time
+         U Curl_inet_pton
+0000042c T Curl_cookie_add
+         U Curl_ccalloc
+         U Curl_cmalloc
+         U sscanf
+         U strcmp
+         U Curl_infof
+         U curlx_strtoll
+         U curl_getdate
+         U strrchr
+         U Curl_memrchr
+         U memcpy
+         U strtok_r
+00001008 T Curl_cookie_freelist
+00001054 T Curl_cookie_cleanup
+000010a0 T Curl_cookie_init
+         U curl_strequal
+         U __stdin
+         U fopen
+         U fgets
+         U Curl_raw_nequal
+         U fclose
+000012c4 T Curl_cookie_loadfiles
+         U Curl_share_lock
+         U curl_slist_free_all
+         U Curl_share_unlock
+00001418 T Curl_cookie_getlist
+         U qsort
+00001664 T Curl_cookie_clearall
+00001690 T Curl_cookie_clearsess
+         U curl_maprintf
+         U __stdout
+         U fputs
+         U curl_mfprintf
+000018e8 T Curl_cookie_list
+         U Curl_slist_append_nodup
+00001988 T Curl_flush_cookies
+
+security.o:
+
+nwlib.o:
+
+getinfo.o:
+000000ac t getinfo_char
+00000190 t getinfo_long
+000003ec t getinfo_longpp
+000005b4 t getinfo_slist
+000006b4 t getinfo_socket
+00000000 T Curl_initinfo
+         U Curl_cfree
+         U Curl_getconnectinfo
+         U Curl_ssl_engines_list
+         U Curl_cookie_list
+         U Curl_ssl_backend
+000006e8 T Curl_getinfo
+
+hostasyn.o:
+
+memdebug.o:
+
+amigaos.o:
+
+http_negotiate.o:
+
+http_digest.o:
+
+transfer.o:
+000002c4 t data_pending
+00000304 t read_rewind
+00000388 t readwrite_data
+00000d68 t done_sending
+00000da4 t readwrite_upload
+000017d8 t strlen_url
+00001854 t strcpy_url
+000018f8 t is_absolute_url
+00001924 t concat_url
+00000000 T Curl_fillreadbuffer
+         U Curl_failf
+         U curl_msnprintf
+         U memcpy
+         U strlen
+000001a8 T Curl_readrewind
+         U Curl_infof
+         U fread
+         U fseek
+         U Curl_ssl_data_pending
+0000031c T Curl_meets_timecondition
+         U Curl_read
+         U Curl_pgrsTime
+         U curlx_tvnow
+         U Curl_http_readwrite_headers
+         U Curl_pipeline_wanted
+         U Curl_conncontrol
+         U Curl_debug
+         U Curl_httpchunk_read
+         U Curl_chunked_strerror
+         U Curl_pgrsSetDownloadCounter
+         U Curl_client_write
+         U Curl_pop3_write
+         U Curl_unencode_deflate_write
+         U Curl_unencode_gzip_write
+         U Curl_expire
+         U Curl_cmalloc
+         U Curl_smtp_escape_eob
+         U Curl_write
+         U Curl_pgrsSetUploadCounter
+0000114c T Curl_readwrite
+         U Curl_socket_check
+         U curlx_tvdiff
+         U Curl_pgrsUpdate
+         U Curl_speedcheck
+         U Curl_timeleft
+000014e4 T Curl_single_getsock
+00001584 T Curl_init_CONNECT
+000015a0 T Curl_pretransfer
+         U Curl_ssl_initsessions
+         U Curl_cfree
+         U Curl_cookie_loadfiles
+         U Curl_loadhostpairs
+         U signal
+         U Curl_initinfo
+         U Curl_pgrsResetTimesSizes
+         U Curl_pgrsStartNow
+         U Curl_wildcard_init
+000017a0 T Curl_posttransfer
+         U sscanf
+         U Curl_cstrdup
+         U strstr
+         U strchr
+         U strrchr
+00001b98 T Curl_follow
+00001e3c T Curl_retry_request
+00001f44 T Curl_setup_transfer
+         U Curl_pgrsSetDownloadSize
+
+socks.o:
+00000000 T Curl_blockread_all
+         U Curl_timeleft
+         U Curl_socket_check
+         U Curl_read_plain
+000000c0 T Curl_SOCKS4
+         U Curl_failf
+         U curlx_nonblock
+         U Curl_infof
+         U Curl_resolv
+         U Curl_printable_address
+         U Curl_resolv_unlock
+         U strlen
+         U memcpy
+         U strcpy
+         U Curl_write_plain
+0000046c T Curl_SOCKS5
+
+ftp.o:
+
+hash.o:
+00000000 t hash_element_dtor
+00000178 t mk_hash_element
+         U Curl_cfree
+00000068 T Curl_hash_init
+         U Curl_cmalloc
+         U Curl_llist_alloc
+         U Curl_llist_destroy
+         U memcpy
+00000200 T Curl_hash_add
+         U Curl_llist_remove
+         U Curl_llist_insert_next
+0000030c T Curl_hash_delete
+000003a8 T Curl_hash_pick
+0000042c T Curl_hash_destroy
+000004a4 T Curl_hash_clean_with_criterium
+00000540 T Curl_hash_clean
+0000054c T Curl_hash_str
+         U __udiv32
+0000059c T Curl_str_key_compare
+         U memcmp
+000005dc T Curl_hash_start_iterate
+000005f0 T Curl_hash_next_element
+
+content_encoding.o:
+00000000 t zalloc_cb
+0000002c t zfree_cb
+00000054 t process_zlib_error
+00000090 t inflate_stream
+000002e0 t check_gzip_header
+         U Curl_ccalloc
+         U Curl_cfree
+         U Curl_failf
+         U Curl_cmalloc
+         U inflateEnd
+         U inflate
+         U Curl_client_write
+         U inflateInit2_
+00000250 T Curl_unencode_deflate_write
+         U memset
+         U inflateInit_
+0000042c T Curl_unencode_gzip_write
+         U zlibVersion
+         U strcmp
+         U memcpy
+         U Curl_crealloc
+000006c4 T Curl_unencode_cleanup
+
+hostip.o:
+00000018 b host_cache_initialized
+00000610 t freednsentry
+00000000 b hostname_cache
+00000114 t create_hostcache_id
+00000180 t hostcache_timestamp_remove
+000001b0 t hostcache_prune
+00000248 t fetch_addr
+00000000 T Curl_global_host_cache_init
+         U Curl_hash_str
+         U Curl_str_key_compare
+         U Curl_hash_init
+00000060 T Curl_global_host_cache_dtor
+         U Curl_hash_destroy
+0000008c T Curl_num_addresses
+000000ac T Curl_printable_address
+         U Curl_inet_ntop
+         U curl_maprintf
+         U __ctype_tolower
+         U Curl_hash_clean_with_criterium
+000001d4 T Curl_hostcache_prune
+         U Curl_share_lock
+         U time
+         U Curl_share_unlock
+         U strlen
+         U Curl_hash_pick
+         U Curl_infof
+         U Curl_hash_delete
+         U Curl_cfree
+000002fc T Curl_fetch_addr
+00000374 T Curl_cache_addr
+         U Curl_ccalloc
+         U Curl_hash_add
+00000454 T Curl_resolv
+         U Curl_ipvalid
+         U Curl_getaddrinfo
+         U Curl_freeaddrinfo
+000005ac T Curl_resolv_timeout
+00000648 T Curl_resolv_unlock
+000006ac T Curl_mk_dnscache
+000006d8 T Curl_hostcache_clean
+         U Curl_hash_clean
+0000073c T Curl_loadhostpairs
+         U sscanf
+         U Curl_str2addr
+
+nonblock.o:
+00000000 T curlx_nonblock
+         U fcntl
+
+non-ascii.o:
+
+fileinfo.o:
+00000000 T Curl_fileinfo_alloc
+         U Curl_cmalloc
+         U memset
+0000003c T Curl_fileinfo_dtor
+         U Curl_cfree
+
+nwos.o:
+
+dotdot.o:
+00000000 T Curl_dedotdotify
+         U strlen
+         U Curl_cmalloc
+         U Curl_cstrdup
+         U Curl_cfree
+         U strchr
+         U strncmp
+         U strcmp
+         U memcpy
+
+strequal.o:
+00000000 T curl_strequal
+         U strcasecmp
+00000024 T curl_strnequal
+         U strncasecmp
+
+md4.o:
+
+sendf.o:
+00000000 t convert_lineends
+00000160 t showit
+00000000 d s_infotype.196
+000006e8 t pausewrite
+         U memmove
+         U memchr
+         U memcmp
+         U fwrite
+000001e4 T Curl_debug
+         U curl_msnprintf
+         U strlen
+000002c8 T Curl_infof
+         U curl_mvsnprintf
+00000338 T Curl_failf
+000003fc T Curl_write
+00000484 T Curl_sendf
+         U curl_mvaprintf
+         U Curl_cfree
+00000550 T Curl_send_plain
+         U send
+         U __errno
+         U Curl_strerror
+00000604 T Curl_write_plain
+00000640 T Curl_recv_plain
+         U recv
+         U Curl_cmalloc
+         U memcpy
+0000075c T Curl_client_chop_write
+         U Curl_crealloc
+0000093c T Curl_client_write
+000009b8 T Curl_read_plain
+00000a14 T Curl_read
+         U Curl_pipeline_wanted
+
+strdup.o:
+00000000 T Curl_memdup
+         U Curl_cmalloc
+         U memcpy
+
+connect.o:
+00000000 t tcpkeepalive
+000001b0 t bindlocal
+00000000 d if_prefix.53
+000006c4 t verifyconnect
+00000740 t getaddressinfo
+000009c0 t singleipconnect
+00000c68 t trynextip
+0000137c t conn_is_conn
+00000004 d host_prefix.54
+         U setsockopt
+         U curlx_sltosi
+         U Curl_infof
+000000cc T Curl_timeleft
+         U curlx_tvnow
+         U curlx_tvdiff
+         U memset
+         U strlen
+         U strncmp
+         U Curl_if2ip
+         U __errno
+         U Curl_strerror
+         U Curl_resolv
+         U Curl_printable_address
+         U Curl_resolv_unlock
+         U strchr
+         U Curl_inet_pton
+         U atoi
+         U Curl_failf
+         U bind
+         U getsockname
+         U getsockopt
+         U Curl_inet_ntop
+         U curl_msnprintf
+000007e8 T Curl_tcpnodelay
+0000085c T Curl_closesocket
+         U Curl_multi_closed
+         U close
+000008e8 T Curl_socket
+         U memcpy
+         U socket
+         U Curl_ipv6_scope
+         U curlx_nonblock
+         U Curl_expire_latest
+         U connect
+00000d58 T Curl_persistconninfo
+00000db4 T Curl_updateconninfo
+         U getpeername
+00000ed0 T Curl_is_connected
+         U Curl_socket_check
+         U Curl_connected_proxy
+         U Curl_pgrsTime
+         U Curl_verboseconnect
+         U __div32
+00001254 T Curl_connecthost
+         U Curl_num_addresses
+         U Curl_expire
+000013a0 T Curl_getconnectinfo
+         U Curl_conncache_foreach
+         U Curl_ssl_check_cxn
+         U recv
+00001490 T Curl_conncontrol
+
+curl_sasl.o:
+00000000 T Curl_sasl_cleanup
+00000004 T Curl_sasl_decode_mech
+00000000 D mechtable
+         U memcmp
+         U __ctype
+000000ac T Curl_sasl_parse_url_auth_option
+         U curl_strnequal
+00000144 T Curl_sasl_init
+00000174 T Curl_sasl_can_authenticate
+0000019c T Curl_sasl_start
+         U Curl_auth_create_external_message
+         U Curl_auth_create_oauth_bearer_message
+         U Curl_auth_create_login_message
+         U Curl_auth_create_plain_message
+         U strlen
+         U Curl_cfree
+0000044c T Curl_sasl_continue
+         U Curl_cstrdup
+         U Curl_failf
+
+getenv.o:
+00000000 t GetEnv
+         U getenv
+         U Curl_cstrdup
+00000044 T curl_getenv
+
+rtsp.o:
+00000000 t rtsp_getsock_do
+00000010 t rtsp_setup_connection
+000000c8 t rtsp_connect
+00000120 t rtsp_disconnect
+0000014c t rtsp_done
+000001e0 t rtsp_do
+00000a64 t rtp_client_write
+00000ae8 t rtsp_rtp_readwrite
+         U Curl_ccalloc
+00000054 T Curl_rtsp_connisdead
+         U Curl_socket_check
+         U Curl_getconnectinfo
+         U Curl_http_connect
+         U Curl_cfree
+         U Curl_http_done
+         U Curl_failf
+         U Curl_infof
+         U Curl_setup_transfer
+         U Curl_checkheaders
+         U curl_maprintf
+         U Curl_http_output_auth
+         U Curl_add_buffer_init
+         U Curl_add_bufferf
+         U Curl_add_timecondition
+         U Curl_add_custom_headers
+         U strlen
+         U Curl_add_buffer
+         U Curl_add_buffer_send
+         U Curl_pgrsSetUploadCounter
+         U Curl_pgrsUpdate
+         U Curl_crealloc
+         U memcpy
+         U Curl_cmalloc
+00000d34 T Curl_rtsp_parseheader
+         U Curl_raw_nequal
+         U sscanf
+         U __ctype
+         U strncmp
+00000000 D Curl_handler_rtsp
+
+system_win32.o:
+
+curl_sspi.o:
+
+select.o:
+00000000 T Curl_wait_ms
+         U __errno
+         U curlx_tvnow
+         U __div32
+         U __rem32
+         U select
+00000000 D Curl_ack_eintr
+         U curlx_tvdiff
+00000100 T Curl_socket_check
+         U bzero
+00000468 T Curl_poll
+
+timeval.o:
+00000000 T curlx_tvnow
+         U time
+0000002c T curlx_tvdiff
+         U __div32
+00000088 T curlx_tvdiff_secs
+000000f4 T Curl_tvlong
+
+imap.o:
+00000000 t imap_to_imaps
+00000014 t imap_matchresp
+000000e4 t imap_endofresp
+00000414 t imap_get_message
+000004a8 t state
+000004b8 t imap_sendf
+00000568 t imap_perform_capability
+000005b8 t imap_perform_starttls
+000005f0 t imap_perform_upgrade_tls
+00000658 t imap_atom
+00000810 t imap_perform_login
+000008bc t imap_perform_authenticate
+000008f0 t imap_continue_authenticate
+00000904 t imap_perform_authentication
+000009b4 t imap_perform_list
+00000a6c t imap_perform_select
+00000b28 t imap_perform_fetch
+00000bb8 t imap_perform_append
+00000c98 t imap_perform_search
+00000cf8 t imap_perform_logout
+00000d30 t imap_state_servergreet_resp
+00000d68 t imap_state_capability_resp
+00000f6c t imap_state_starttls_resp
+00000fbc t imap_state_auth_resp
+00001068 t imap_state_login_resp
+000010ac t imap_state_listsearch_resp
+00001144 t imap_state_select_resp
+00001298 t imap_state_fetch_resp
+000014f8 t imap_state_fetch_final_resp
+00001528 t imap_state_append_resp
+00001598 t imap_state_append_final_resp
+000015d0 t imap_statemach_act
+00001884 t imap_multi_statemach
+00001908 t imap_block_statemach
+0000194c t imap_init
+0000198c t imap_getsock
+00001998 t imap_parse_url_options
+00001a94 t imap_connect
+00000110 d saslimap
+00001b28 t imap_done
+00001c98 t imap_perform
+00001e1c t imap_dophase_done
+00001e68 t imap_regular_transfer
+00001f08 t imap_parse_url_path
+00002c1c t imap_parse_custom_request
+00002cd4 t imap_do
+00002d20 t imap_disconnect
+00002db0 t imap_doing
+00002df0 t imap_setup_connection
+00000088 d Curl_handler_imap_proxy
+000000cc d Curl_handler_imaps_proxy
+00000044 D Curl_handler_imaps
+         U strlen
+         U __ctype
+         U Curl_raw_nequal
+         U memcmp
+         U strcmp
+         U Curl_failf
+         U __rem32
+         U curlx_sltosi
+         U curl_msnprintf
+         U curl_maprintf
+         U Curl_pp_vsendf
+         U Curl_cfree
+         U Curl_ssl_connect_nonblocking
+         U Curl_cstrdup
+         U Curl_cmalloc
+         U Curl_pp_sendf
+         U Curl_sasl_can_authenticate
+         U Curl_sasl_start
+         U Curl_infof
+         U Curl_sasl_decode_mech
+         U Curl_sasl_continue
+         U Curl_client_write
+         U sscanf
+         U Curl_pgrsSetDownloadSize
+         U curlx_strtoll
+         U memmove
+         U Curl_setup_transfer
+         U Curl_pgrsSetUploadSize
+         U Curl_pp_flushsend
+         U Curl_pp_readresp
+         U Curl_pp_moredata
+         U Curl_pp_statemach
+         U Curl_ccalloc
+         U Curl_pp_getsock
+         U curl_strnequal
+         U Curl_sasl_parse_url_auth_option
+         U Curl_conncontrol
+         U Curl_sasl_init
+         U Curl_pp_init
+         U strcpy
+         U Curl_pgrsSetUploadCounter
+         U Curl_pgrsSetDownloadCounter
+         U Curl_urldecode
+         U Curl_raw_equal
+         U Curl_pp_disconnect
+         U Curl_sasl_cleanup
+00000000 D Curl_handler_imap
+         U Curl_http_setup_conn
+         U Curl_http
+         U Curl_http_done
+
+curl_rtmp.o:
+
+conncache.o:
+00000000 t conn_llist_dtor
+0000000c t bundle_create
+00000090 t bundle_destroy
+000000d4 t bundle_add_conn
+00000124 t bundle_remove_conn
+00000184 t free_bundle_hash_entry
+000001d0 t hashkey
+00000254 t conncache_add_bundle
+00000290 t conncache_remove_bundle
+         U Curl_cmalloc
+         U Curl_llist_alloc
+         U Curl_cfree
+         U Curl_llist_destroy
+         U Curl_llist_insert_next
+         U Curl_llist_remove
+00000188 T Curl_conncache_init
+         U Curl_hash_str
+         U Curl_str_key_compare
+         U Curl_hash_init
+000001b0 T Curl_conncache_destroy
+         U Curl_hash_destroy
+         U curl_maprintf
+00000200 T Curl_conncache_find_bundle
+         U strlen
+         U Curl_hash_pick
+         U Curl_hash_add
+         U Curl_hash_start_iterate
+         U Curl_hash_delete
+         U Curl_hash_next_element
+000002ec T Curl_conncache_add_conn
+000003d8 T Curl_conncache_remove_conn
+00000428 T Curl_conncache_foreach
+000004a0 T Curl_conncache_find_first_connection
+
+smtp.o:
+00000000 t smtp_to_smtps
+00000014 t smtp_endofresp
+000000e0 t smtp_get_message
+00000174 t state
+00000184 t smtp_perform_ehlo
+000001dc t smtp_perform_helo
+00000228 t smtp_perform_starttls
+0000026c t smtp_perform_upgrade_tls
+000002d4 t smtp_perform_auth
+00000310 t smtp_continue_auth
+00000324 t smtp_perform_authentication
+000003b8 t smtp_perform_command
+00000458 t smtp_perform_mail
+0000065c t smtp_perform_rcpt_to
+000006b4 t smtp_perform_quit
+000006f8 t smtp_state_servergreet_resp
+00000744 t smtp_state_starttls_resp
+00000794 t smtp_state_ehlo_resp
+000009d4 t smtp_state_helo_resp
+00000a28 t smtp_state_auth_resp
+00000aa0 t smtp_state_command_resp
+00000bc8 t smtp_state_mail_resp
+00000c14 t smtp_state_rcpt_resp
+00000cb4 t smtp_state_data_resp
+00000d38 t smtp_state_postdata_resp
+00000d60 t smtp_statemach_act
+00001018 t smtp_multi_statemach
+0000109c t smtp_block_statemach
+000010e0 t smtp_init
+00001120 t smtp_getsock
+0000112c t smtp_parse_url_options
+000011f8 t smtp_parse_url_path
+00001268 t smtp_connect
+00000110 d saslsmtp
+000012f8 t smtp_done
+00001498 t smtp_perform
+00001524 t smtp_dophase_done
+00001570 t smtp_regular_transfer
+00001610 t smtp_parse_custom_request
+00001658 t smtp_do
+00001694 t smtp_disconnect
+00001718 t smtp_doing
+00001758 t smtp_setup_connection
+00000088 d Curl_handler_smtp_proxy
+000000cc d Curl_handler_smtps_proxy
+00000044 D Curl_handler_smtps
+         U __ctype
+         U strtol
+         U curlx_sltosi
+         U strlen
+         U Curl_pp_sendf
+         U Curl_ssl_connect_nonblocking
+         U Curl_sasl_can_authenticate
+         U Curl_sasl_start
+         U Curl_infof
+         U Curl_cstrdup
+         U curl_maprintf
+         U Curl_cfree
+         U __div32
+         U Curl_failf
+         U memcmp
+         U Curl_sasl_decode_mech
+         U Curl_sasl_continue
+         U Curl_client_write
+         U Curl_pgrsSetUploadSize
+         U Curl_setup_transfer
+         U Curl_pp_flushsend
+         U Curl_pp_readresp
+         U Curl_pp_moredata
+         U Curl_pp_statemach
+         U Curl_ccalloc
+         U Curl_pp_getsock
+         U curl_strnequal
+         U Curl_sasl_parse_url_auth_option
+         U Curl_gethostname
+         U Curl_urldecode
+         U Curl_conncontrol
+         U Curl_sasl_init
+         U Curl_pp_init
+         U Curl_write
+         U curlx_tvnow
+         U Curl_pgrsSetUploadCounter
+         U Curl_pgrsSetDownloadCounter
+         U Curl_pgrsSetDownloadSize
+         U Curl_pp_disconnect
+         U Curl_sasl_cleanup
+00000000 D Curl_handler_smtp
+000017dc T Curl_smtp_escape_eob
+         U Curl_cmalloc
+         U memcpy
+         U Curl_http_setup_conn
+         U Curl_http
+         U Curl_http_done
+
+wildcard.o:
+00000000 T Curl_wildcard_init
+         U Curl_fileinfo_dtor
+         U Curl_llist_alloc
+00000030 T Curl_wildcard_dtor
+         U Curl_llist_destroy
+         U Curl_cfree
+
+splay.o:
+00000000 d KEY_NOTUSED.66
+00000008 d KEY_NOTUSED.156
+00000000 T Curl_splay
+00000164 T Curl_splayinsert
+000002a4 T Curl_splaygetbest
+000003dc T Curl_splayremovebyaddr
+
+md5.o:
+
+http_proxy.o:
+00000000 T Curl_proxyCONNECT
+         U Curl_infof
+         U Curl_cfree
+         U Curl_add_buffer_init
+         U curl_maprintf
+         U Curl_http_output_auth
+         U strchr
+         U Curl_checkProxyheaders
+         U Curl_add_buffer_free
+         U Curl_add_bufferf
+         U Curl_add_custom_headers
+         U Curl_add_buffer_send
+         U Curl_failf
+         U Curl_timeleft
+         U Curl_socket_check
+         U Curl_read
+         U Curl_httpchunk_read
+         U Curl_debug
+         U Curl_client_write
+         U strlen
+         U Curl_raw_nequal
+         U Curl_copy_header_value
+         U Curl_http_input_auth
+         U curlx_strtoll
+         U Curl_compareheader
+         U Curl_httpchunk_init
+         U sscanf
+         U Curl_pgrsUpdate
+         U Curl_http_auth_act
+         U Curl_closesocket
+         U Curl_conncontrol
+00000b40 T Curl_proxy_connect
+         U memset
+
+inet_ntop.o:
+00000000 t inet_ntop4
+0000008c t inet_ntop6
+         U curl_msnprintf
+         U strlen
+         U __errno
+         U strcpy
+         U memset
+         U __div32
+         U __rem32
+000002e0 T Curl_inet_ntop
+
+inet_pton.o:
+00000000 t inet_pton4
+00000000 d digits.11
+00000100 t inet_pton6
+0000000b d xdigits_l.39
+0000001c d xdigits_u.40
+         U strchr
+         U memcpy
+         U memset
+000002d4 T Curl_inet_pton
+         U __errno
+
+hostcheck.o:
+00000000 t hostmatch
+         U strlen
+         U strchr
+         U Curl_inet_pton
+         U Curl_raw_nequal
+         U Curl_raw_equal
+00000194 T Curl_cert_hostcheck
+         U Curl_cstrdup
+         U Curl_cfree
+
+netrc.o:
+00000000 T Curl_parsenetrc
+         U curl_getenv
+         U curl_maprintf
+         U Curl_cfree
+         U fopen
+         U fgets
+         U strtok_r
+         U Curl_raw_equal
+         U Curl_cstrdup
+         U fclose
+
+dict.o:
+
+file.o:
+
+x509asn1.o:
+
+share.o:
+00000000 T curl_share_init
+         U Curl_ccalloc
+         U Curl_mk_dnscache
+         U Curl_cfree
+00000068 T curl_share_setopt
+         U Curl_cookie_init
+         U Curl_cookie_cleanup
+0000021c T curl_share_cleanup
+         U Curl_hash_destroy
+         U Curl_ssl_kill_session
+00000328 T Curl_share_lock
+00000378 T Curl_share_unlock
+
+url.o:
+00000094 t setstropt
+00000100 t parse_login_details
+000003f4 t setstropt_userpwd
+00002570 t conn_free
+00002800 t signalPipeClose
+0000296c t SocketIsDead
+00002994 t IsPipeliningPossible
+00002a80 t gethandleathead
+00002bec t find_oldest_idle_connection_in_bundle
+00002c6c t disconnect_if_dead
+00002d14 t call_disconnect_if_dead
+00002d30 t prune_dead_connections
+00002d8c t max_pipeline_length
+00002dac t get_protocol_family
+00002f84 t ConnectionExists
+00003978 t is_ASCII_name
+000039a4 t fix_hostname
+00003a0c t llist_dtor
+00003a10 t allocate_conn
+0000002c d Curl_handler_dummy
+00003c58 t findprotocol
+00000000 d protocols
+00003cf0 t parse_url_login
+00003e70 t parseurlandfillconn
+000044cc t setup_range
+000045c4 t setup_connection_internals
+00004644 t check_noproxy
+00004798 t detect_proxy
+000048a0 t parse_proxy
+00004d50 t parse_proxy_auth
+00004e48 t parse_remote_port
+00005134 t override_login
+0000529c t set_login
+000053a4 t parse_connect_to_host_port
+00005608 t parse_connect_to_string
+000057a4 t parse_connect_to_slist
+000058f0 t resolve_server
+00005a2c t reuse_conn
+00005d2c t create_conn
+00000000 T Curl_freeset
+         U Curl_cfree
+         U Curl_cstrdup
+         U strchr
+         U Curl_cmalloc
+         U memcpy
+         U strlen
+00000500 T Curl_dupset
+         U memset
+         U curlx_sotouz
+         U Curl_memdup
+000005b8 T Curl_free_request_state
+000005f8 T Curl_close
+         U Curl_expire_clear
+         U curl_multi_remove_handle
+         U curl_multi_cleanup
+         U Curl_llist_destroy
+         U Curl_ssl_close_all
+         U Curl_ssl_free_certinfo
+         U Curl_flush_cookies
+         U Curl_share_lock
+         U Curl_share_unlock
+         U Curl_wildcard_dtor
+00000818 T Curl_init_userdefined
+         U __stdout
+         U __stdin
+         U __stderr
+         U fwrite
+         U fread
+00000938 T Curl_open
+         U Curl_ccalloc
+00000a34 T Curl_setopt
+         U curlx_sltosi
+         U curl_slist_append
+         U curl_slist_free_all
+         U Curl_cookie_init
+         U Curl_raw_equal
+         U Curl_cookie_clearall
+         U Curl_cookie_clearsess
+         U Curl_cookie_loadfiles
+         U Curl_raw_nequal
+         U Curl_cookie_add
+         U Curl_ssl_set_engine
+         U Curl_ssl_set_engine_default
+         U curlx_sltous
+         U Curl_failf
+         U Curl_ssl_cert_status_request
+         U Curl_ssl_false_start
+         U Curl_cookie_cleanup
+         U curlx_sltoui
+         U Curl_set_dns_servers
+         U Curl_set_dns_interface
+         U Curl_set_dns_local_ip4
+         U Curl_set_dns_local_ip6
+         U Curl_ssl_close
+         U Curl_closesocket
+         U Curl_free_ssl_config
+         U Curl_multi_handlePipeBreak
+         U Curl_llist_remove
+00002864 T Curl_disconnect
+         U Curl_resolv_unlock
+         U Curl_hostcache_prune
+         U Curl_infof
+         U Curl_conncache_remove_conn
+         U Curl_pipeline_wanted
+         U Curl_socket_check
+00002a28 T Curl_removeHandleFromPipeline
+00002a9c T Curl_getoff_all_pipelines
+         U Curl_recvpipe_head
+         U Curl_sendpipe_head
+         U Curl_pipeline_leave_read
+         U Curl_pipeline_leave_write
+00002b50 T Curl_oldest_idle_connection
+         U curlx_tvnow
+         U Curl_hash_start_iterate
+         U Curl_hash_next_element
+         U curlx_tvdiff
+         U Curl_rtsp_connisdead
+         U Curl_conncache_foreach
+         U Curl_pipeline_site_blacklisted
+         U Curl_conncache_find_bundle
+         U strcmp
+         U curl_strequal
+         U Curl_ssl_config_matches
+         U Curl_pipeline_penalized
+00003638 T Curl_connected_proxy
+         U Curl_SOCKS5
+         U Curl_SOCKS4
+00003730 T Curl_verboseconnect
+00003780 T Curl_protocol_getsock
+000037b4 T Curl_doing_getsock
+000037f0 T Curl_protocol_connecting
+00003844 T Curl_protocol_doing
+00003894 T Curl_protocol_connect
+         U Curl_proxy_connect
+         U Curl_conncontrol
+         U Curl_llist_alloc
+         U curl_easy_unescape
+         U strpbrk
+         U sscanf
+         U memmove
+         U curl_maprintf
+         U strcpy
+         U Curl_dedotdotify
+         U strncmp
+         U strtoul
+         U curl_getenv
+         U __ctype_tolower
+         U Curl_strntoupper
+         U strstr
+         U __ctype
+         U strtol
+         U strncpy
+         U Curl_inet_pton
+         U strrchr
+         U curl_msnprintf
+         U curlx_ultous
+         U Curl_parsenetrc
+         U curl_strnequal
+         U Curl_timeleft
+         U Curl_resolv_timeout
+         U Curl_persistconninfo
+00005c4c T Curl_init_do
+         U Curl_speedinit
+         U Curl_pgrsSetUploadCounter
+         U Curl_pgrsSetDownloadCounter
+         U Curl_multi_max_host_connections
+         U Curl_multi_max_total_connections
+         U Curl_handler_http
+         U Curl_recv_plain
+         U Curl_send_plain
+         U Curl_clone_ssl_config
+         U Curl_conncache_add_conn
+0000668c T Curl_setup_conn
+         U Curl_pgrsTime
+         U Curl_connecthost
+         U Curl_updateconninfo
+000067b4 T Curl_connect
+         U Curl_handler_https
+         U Curl_handler_imap
+         U Curl_handler_imaps
+         U Curl_handler_pop3
+         U Curl_handler_pop3s
+         U Curl_handler_smtp
+         U Curl_handler_smtps
+         U Curl_handler_rtsp
+         U Curl_handler_gopher
+
+curl_multibyte.o:
+
+ftplistparser.o:
+
+speedcheck.o:
+00000000 T Curl_speedinit
+         U memset
+00000010 T Curl_speedcheck
+         U Curl_tvlong
+         U curlx_tvdiff
+         U Curl_failf
+         U Curl_expire_latest
+
+pipeline.o:
+00000000 t site_blacklist_llist_dtor
+00000044 t server_blacklist_llist_dtor
+00000190 t addHandleToPipeline
+000005c8 t pipe_head
+         U Curl_cfree
+0000006c T Curl_pipeline_penalized
+         U Curl_multi_content_length_penalty_size
+         U Curl_multi_chunk_length_penalty_size
+         U Curl_infof
+         U Curl_llist_insert_next
+000001c8 T Curl_add_handle_to_pipeline
+         U Curl_expire
+00000220 T Curl_move_handle_from_send_to_recv_pipe
+         U Curl_llist_move
+00000288 T Curl_pipeline_site_blacklisted
+         U Curl_multi_pipelining_site_bl
+         U Curl_raw_equal
+00000314 T Curl_pipeline_set_site_blacklist
+         U Curl_llist_alloc
+         U Curl_cstrdup
+         U Curl_cmalloc
+         U strchr
+         U strtol
+         U Curl_llist_destroy
+00000450 T Curl_pipeline_server_blacklisted
+         U Curl_multi_pipelining_server_bl
+         U strlen
+         U Curl_raw_nequal
+000004e0 T Curl_pipeline_set_server_blacklist
+000005f8 T Curl_recvpipe_head
+00000600 T Curl_sendpipe_head
+00000608 T Curl_pipeline_checkget_write
+0000065c T Curl_pipeline_checkget_read
+000006b0 T Curl_pipeline_leave_write
+000006bc T Curl_pipeline_leave_read
+
+krb5.o:
+
+multi.o:
+00000000 t sigpipe_ignore
+0000007c t sigpipe_restore
+000000ac t mstate
+00000000 d finit.8
+000000f8 t sh_getentry
+00000138 t sh_addentry
+000001dc t sh_freeentry
+00000200 t fd_key_compare
+00000218 t hash_fd
+00000248 t sh_init
+00000270 t multi_addmsg
+000002a8 t multi_freeamsg
+000003e0 t multi_timeout
+00000000 d tv_zero.914
+0000048c t update_timer
+0000004c d none.950
+00000580 t multi_addtimeout
+000032cc t multi_freetimeout
+000008b4 t ConnectionDone
+00000940 t multi_done
+00000b34 t waitconnect_getsock
+00000b90 t waitproxyconnect_getsock
+00000bc0 t domore_getsock
+00000bfc t multi_getsock
+00000d68 t singlesocket
+000017e0 t multi_ischanged
+0000184c t multi_reconnect_request
+000018ec t do_complete
+0000192c t multi_do
+000019dc t multi_do_more
+00001a30 t multi_runsingle
+00002980 t add_next_timeout
+00002b44 t close_all_connections
+00002dbc t multi_socket
+         U memset
+         U sigaction
+         U Curl_hash_pick
+         U Curl_ccalloc
+         U Curl_hash_add
+         U Curl_cfree
+         U __udiv32
+         U Curl_hash_init
+         U Curl_llist_insert_next
+000002ac T Curl_multi_handle
+         U Curl_mk_dnscache
+         U Curl_conncache_init
+         U Curl_llist_alloc
+         U curl_easy_init
+         U Curl_hash_destroy
+         U Curl_conncache_destroy
+         U Curl_close
+         U Curl_llist_destroy
+000003d4 T curl_multi_init
+         U curlx_tvnow
+         U Curl_splay
+         U curlx_tvdiff
+         U Curl_cmalloc
+         U memcpy
+         U Curl_llist_count
+00000634 T Curl_expire
+         U __div32
+         U __rem32
+         U Curl_splayremovebyaddr
+         U Curl_infof
+         U Curl_splayinsert
+0000075c T curl_multi_add_handle
+         U Curl_global_host_cache_init
+         U Curl_oldest_idle_connection
+         U Curl_disconnect
+         U Curl_getoff_all_pipelines
+         U Curl_pgrsDone
+         U Curl_resolv_unlock
+         U Curl_free_request_state
+         U Curl_protocol_getsock
+         U Curl_doing_getsock
+         U Curl_single_getsock
+         U Curl_recvpipe_head
+         U Curl_sendpipe_head
+         U Curl_hash_delete
+00000fe4 T Curl_expire_clear
+         U Curl_llist_remove
+0000107c T Curl_expire_latest
+00001130 T Curl_multi_process_pending_handles
+0000119c T curl_multi_remove_handle
+         U Curl_conncontrol
+         U Curl_wildcard_dtor
+000013a8 T Curl_pipeline_wanted
+000013cc T Curl_multi_handlePipeBreak
+000013d8 T curl_multi_fdset
+000014f8 T curl_multi_wait
+         U Curl_poll
+000017d4 T Curl_multi_connchanged
+00001800 T Curl_multi_add_perform
+         U Curl_init_do
+         U Curl_connect
+         U Curl_pgrsTime
+         U Curl_failf
+         U Curl_timeleft
+         U Curl_pretransfer
+         U Curl_add_handle_to_pipeline
+         U Curl_fetch_addr
+         U Curl_http_connect
+         U Curl_is_connected
+         U Curl_protocol_connect
+         U Curl_protocol_connecting
+         U Curl_pipeline_checkget_write
+         U Curl_retry_request
+         U Curl_posttransfer
+         U Curl_follow
+         U Curl_protocol_doing
+         U Curl_move_handle_from_send_to_recv_pipe
+         U Curl_pipeline_checkget_read
+         U Curl_pgrsUpdate
+         U Curl_speedcheck
+         U Curl_pgrsLimitWaitTime
+         U Curl_readwrite
+         U Curl_pipeline_leave_read
+         U Curl_pipeline_leave_write
+         U Curl_removeHandleFromPipeline
+00002a54 T curl_multi_perform
+         U Curl_splaygetbest
+         U Curl_conncache_find_first_connection
+00002bac T curl_multi_cleanup
+         U Curl_hostcache_clean
+         U Curl_pipeline_set_site_blacklist
+         U Curl_pipeline_set_server_blacklist
+00002cd0 T curl_multi_info_read
+         U curlx_uztosi
+00002d40 T Curl_multi_closed
+00003010 T curl_multi_setopt
+000031cc T curl_multi_socket
+00003208 T curl_multi_socket_action
+00003248 T curl_multi_socket_all
+00003288 T curl_multi_timeout
+000032f4 T curl_multi_assign
+00003324 T Curl_multi_max_host_connections
+0000333c T Curl_multi_max_total_connections
+00003354 T Curl_multi_content_length_penalty_size
+00003374 T Curl_multi_chunk_length_penalty_size
+00003394 T Curl_multi_pipelining_site_bl
+0000339c T Curl_multi_pipelining_server_bl
+         U Curl_init_CONNECT
+
+curl_memrchr.o:
+00000000 T Curl_memrchr
+
+strtoofft.o:
+00000000 t get_char
+00000058 T curlx_strtoll
+         U __ctype
+         U __mul64
+         U __errno
+
+curl_endian.o:
+00000000 T Curl_read16_le
+00000014 T Curl_read32_le
+00000034 T Curl_read64_le
+000000a8 T Curl_read16_be
+000000bc T Curl_read32_be
+000000e0 T Curl_read64_be
+0000015c T Curl_write16_le
+0000016c T Curl_write32_le
+0000018c T Curl_write64_le
+
+curl_gssapi.o:
+
+curl_des.o:
+
+socks_sspi.o:
+
+tftp.o:
+
+socks_gssapi.o:
+
+progress.o:
+00000000 t time2str
+0000018c t max5data
+00000000 d FLOAT_TEMP.236
+         U strcpy
+         U __div64
+         U __mul64
+         U curl_msnprintf
+         U __rem64
+000003d4 T Curl_pgrsUpdate
+         U __rem32
+         U curlx_tvnow
+         U curlx_tvdiff
+         U _d_lltod
+         U _d_dtoll
+         U Curl_failf
+         U curl_mfprintf
+         U fflush
+00000be8 T Curl_pgrsDone
+00000c38 T Curl_pgrsSetDownloadSize
+00000c80 T Curl_pgrsSetUploadSize
+00000cd8 T Curl_pgrsResetTimesSizes
+00000d2c T Curl_pgrsTime
+         U curlx_tvdiff_secs
+00000ed4 T Curl_pgrsStartNow
+00000f18 T Curl_pgrsLimitWaitTime
+00000fb8 T Curl_pgrsSetDownloadCounter
+00001060 T Curl_pgrsSetUploadCounter
+
+hmac.o:
+
+version.o:
+00000000 b initialized.3
+00000004 b version.4
+000000cc b initialized.12
+00000000 d version_info
+000000d0 b ssl_buffer.13
+00000000 d protocols
+00000000 T curl_version
+         U strcpy
+         U strlen
+         U Curl_ssl_version
+         U zlibVersion
+         U curl_msnprintf
+00000094 T curl_version_info
+000000dc T Curl_version_init
+
+escape.o:
+00000000 T curl_easy_escape
+         U strlen
+         U Curl_cmalloc
+         U Curl_crealloc
+         U curl_msnprintf
+         U Curl_cfree
+00000258 T curl_escape
+00000268 T Curl_urldecode
+         U __ctype
+         U strtoul
+         U curlx_ultouc
+0000039c T curl_easy_unescape
+         U curlx_uztosi
+000003fc T curl_unescape
+00000410 T curl_free
+
+ldap.o:
+
+formdata.o:
+00000000 t AddHttpPost
+00000134 t AddFormInfo
+000001a0 t ContentTypeForFilename
+00000000 d ctts.33
+00000230 t FormAdd
+00000b48 t AddFormData
+00000d58 t AddFormDataf
+00000e24 t Curl_basename
+00000e8c t strippath
+00000ee0 t formdata_add_filename
+0000101c t formboundary
+00001560 t readfromfile
+         U Curl_ccalloc
+         U strlen
+         U curl_strequal
+         U Curl_cstrdup
+         U Curl_cfree
+         U Curl_memdup
+00000b20 T curl_formadd
+         U Curl_cmalloc
+         U memcpy
+         U stat
+         U curl_mvsnprintf
+00000dbc T Curl_formclean
+         U strrchr
+         U strchr
+         U Curl_rand
+         U curl_maprintf
+00001050 T Curl_getformdata
+         U __stdin
+         U fopen
+         U fclose
+         U fread
+         U Curl_failf
+00001538 T Curl_FormInit
+00001624 T curl_formget
+00001740 T curl_formfree
+000017d4 T Curl_FormReader
+000018b8 T Curl_formpostheader
+
+pop3.o:
+00000000 t pop3_to_pop3s
+00000014 t pop3_endofresp
+00000110 t pop3_get_message
+000001a4 t state
+000001b4 t pop3_perform_capa
+00000208 t pop3_perform_starttls
+0000024c t pop3_perform_upgrade_tls
+000002b4 t pop3_perform_user
+00000314 t pop3_perform_auth
+00000350 t pop3_continue_auth
+00000364 t pop3_perform_authentication
+00000440 t pop3_perform_command
+00000524 t pop3_perform_quit
+00000568 t pop3_state_servergreet_resp
+00000660 t pop3_state_capa_resp
+00000854 t pop3_state_starttls_resp
+000008a4 t pop3_state_auth_resp
+00000940 t pop3_state_user_resp
+000009a8 t pop3_state_pass_resp
+00000bdc t pop3_state_command_resp
+00000cb0 t pop3_statemach_act
+00000ec8 t pop3_multi_statemach
+00000f4c t pop3_block_statemach
+00000f8c t pop3_init
+00000fcc t pop3_getsock
+00000fd8 t pop3_parse_url_options
+00001114 t pop3_connect
+00000110 d saslpop3
+0000119c t pop3_done
+00001214 t pop3_perform
+00001274 t pop3_regular_transfer
+0000130c t pop3_parse_url_path
+00001340 t pop3_parse_custom_request
+00001388 t pop3_do
+000013d4 t pop3_disconnect
+00001458 t pop3_doing
+00001484 t pop3_setup_connection
+00000088 d Curl_handler_pop3_proxy
+000000cc d Curl_handler_pop3s_proxy
+00000044 D Curl_handler_pop3s
+         U memcmp
+         U strlen
+         U Curl_pp_sendf
+         U Curl_ssl_connect_nonblocking
+         U Curl_sasl_can_authenticate
+         U Curl_sasl_start
+         U Curl_infof
+         U Curl_failf
+         U Curl_ccalloc
+         U memcpy
+         U Curl_sasl_decode_mech
+         U Curl_sasl_continue
+000009ec T Curl_pop3_write
+         U Curl_client_write
+         U Curl_setup_transfer
+         U Curl_cfree
+         U Curl_pp_flushsend
+         U Curl_pp_readresp
+         U Curl_pp_moredata
+         U Curl_pp_statemach
+         U Curl_pp_getsock
+         U curl_strnequal
+         U Curl_sasl_parse_url_auth_option
+         U Curl_conncontrol
+         U Curl_sasl_init
+         U Curl_pp_init
+         U Curl_pgrsSetUploadCounter
+         U Curl_pgrsSetDownloadCounter
+         U Curl_pgrsSetUploadSize
+         U Curl_pgrsSetDownloadSize
+         U Curl_urldecode
+         U Curl_pp_disconnect
+         U Curl_sasl_cleanup
+00000000 D Curl_handler_pop3
+         U Curl_http_setup_conn
+         U Curl_http
+         U Curl_http_done
+
+parsedate.o:
+00000000 t checkday
+0000001c d weekday
+0000004c t checkmonth
+00000094 t checktz
+00000068 d tz
+000000e0 t skip
+00000124 t my_timegm
+00000398 d month_days_cumulative.53
+00000248 t parsedate
+00000000 D Curl_wkday
+         U Curl_raw_equal
+00000038 D Curl_month
+         U __ctype
+         U __div32
+         U __rem32
+         U sscanf
+         U strlen
+         U __errno
+         U strtol
+         U curlx_sltosi
+00000740 T curl_getdate
+00000778 T Curl_gmtime
+         U gmtime_r
+
+curl_threads.o:
+
+strerror.o:
+00000000 T curl_easy_strerror
+00000434 T curl_multi_strerror
+0000061c T curl_share_strerror
+000006ac T Curl_strerror
+         U __errno
+         U strerror_r
+         U strncpy
+         U curl_msnprintf
+         U strrchr
+
+curl_gethostname.o:
+00000000 T Curl_gethostname
+         U gethostname
+         U strchr
+
+mprintf.o:
+00000000 t dprintf_DollarString
+00000074 t dprintf_Pass1
+000009e8 t dprintf_formatf
+00000000 d lower_digits
+00000025 d upper_digits
+0000004a d null.324
+00000050 d strnil.359
+000012e0 t addbyter
+000013a0 t alloc_addbyter
+000015bc t storebuffer
+         U __ctype
+         U strtol
+         U __urem64
+         U __udiv64
+         U strlen
+00001320 T curl_mvsnprintf
+00001378 T curl_msnprintf
+         U Curl_cmalloc
+         U Curl_crealloc
+00001460 T curl_maprintf
+         U Curl_cfree
+         U Curl_cstrdup
+00001514 T curl_mvaprintf
+000015d8 T curl_msprintf
+00001614 T curl_mprintf
+         U __stdout
+         U fputc
+00001648 T curl_mfprintf
+00001674 T curl_mvsprintf
+000016b8 T curl_mvprintf
+000016e8 T curl_mvfprintf
+
+hostip4.o:
+
+smb.o:
+
+rawstr.o:
+00000000 T Curl_raw_toupper
+0000001c T Curl_raw_equal
+000000a4 T Curl_raw_nequal
+00000144 T Curl_strntoupper
+
+strtok.o:
+
+spnego_sspi.o:
+
+krb5_sspi.o:
+
+digest.o:
+
+digest_sspi.o:
+
+spnego_gssapi.o:
+
+krb5_gssapi.o:
+
+vauth.o:
+00000000 T Curl_auth_build_spn
+         U curl_maprintf
+00000070 T Curl_auth_user_contains_domain
+         U strpbrk
+         U strlen
+
+ntlm.o:
+
+ntlm_sspi.o:
+
+cleartext.o:
+00000000 T Curl_auth_create_plain_message
+         U strlen
+         U Curl_cmalloc
+         U memcpy
+         U Curl_base64_encode
+         U Curl_cfree
+000000f0 T Curl_auth_create_login_message
+         U Curl_cstrdup
+00000178 T Curl_auth_create_external_message
+
+cram.o:
+
+oauth2.o:
+00000000 T Curl_auth_create_oauth_bearer_message
+         U curl_maprintf
+         U strlen
+         U Curl_base64_encode
+         U Curl_cfree
+
+vtls.o:
+00000000 t safe_strequal
+00000000 d init_ssl
+00000000 b randseed.59
+0000043c t ssl_prefs_check
+00000d50 t pubkey_pem_to_der
+00000004 d seeded.60
+         U Curl_raw_equal
+00000048 T Curl_ssl_config_matches
+000000f0 T Curl_clone_ssl_config
+         U Curl_cstrdup
+00000288 T Curl_free_ssl_config
+         U Curl_cfree
+00000318 T Curl_rand
+         U Curl_ossl_random
+         U curlx_tvnow
+         U Curl_infof
+000003d4 T Curl_ssl_backend
+000003dc T Curl_ssl_init
+         U Curl_ossl_init
+00000414 T Curl_ssl_cleanup
+         U Curl_ossl_cleanup
+         U Curl_failf
+00000470 T Curl_ssl_connect
+         U Curl_ossl_connect
+         U Curl_pgrsTime
+000004dc T Curl_ssl_connect_nonblocking
+         U Curl_ossl_connect_nonblocking
+00000554 T Curl_ssl_sessionid_lock
+         U Curl_share_lock
+00000590 T Curl_ssl_sessionid_unlock
+         U Curl_share_unlock
+000005c8 T Curl_ssl_getsessionid
+00000758 T Curl_ssl_kill_session
+         U Curl_ossl_session_free
+000007b8 T Curl_ssl_delsessionid
+00000810 T Curl_ssl_addsessionid
+000009ec T Curl_ssl_close_all
+         U Curl_ossl_close_all
+00000a7c T Curl_ssl_close
+         U Curl_ossl_close
+00000a80 T Curl_ssl_shutdown
+         U Curl_ossl_shutdown
+         U Curl_recv_plain
+         U Curl_send_plain
+00000ad8 T Curl_ssl_set_engine
+         U Curl_ossl_set_engine
+00000adc T Curl_ssl_set_engine_default
+         U Curl_ossl_set_engine_default
+00000ae0 T Curl_ssl_engines_list
+         U Curl_ossl_engines_list
+00000ae4 T Curl_ssl_initsessions
+         U Curl_ccalloc
+00000b48 T Curl_ssl_version
+         U Curl_ossl_version
+00000b4c T Curl_ssl_check_cxn
+         U Curl_ossl_check_cxn
+00000b50 T Curl_ssl_data_pending
+         U Curl_ossl_data_pending
+00000b54 T Curl_ssl_free_certinfo
+         U curl_slist_free_all
+00000bd0 T Curl_ssl_init_certinfo
+00000c28 T Curl_ssl_push_certinfo_len
+         U strlen
+         U Curl_cmalloc
+         U curl_msnprintf
+         U memcpy
+         U Curl_slist_append_nodup
+00000d08 T Curl_ssl_push_certinfo
+00000d4c T Curl_ssl_random
+         U strstr
+         U Curl_base64_decode
+00000e48 T Curl_pin_peer_pubkey
+         U strncmp
+         U Curl_ossl_sha256sum
+         U Curl_base64_encode
+         U memcmp
+         U fopen
+         U fseek
+         U ftell
+         U curlx_sotouz
+         U fread
+         U fclose
+00001168 T Curl_ssl_cert_status_request
+         U Curl_ossl_cert_status_request
+0000116c T Curl_ssl_false_start
+
+gskit.o:
+
+gtls.o:
+
+darwinssl.o:
+
+axtls.o:
+
+mbedtls.o:
+
+openssl.o:
+00000000 t passwd_callback
+0000005c t rand_enough
+0000007c t ossl_seed
+00000100 d FLOAT_TEMP.1107
+0000016c t Curl_ossl_seed
+00000000 d ssl_seeded.37
+000001b4 t do_file_type
+00000250 t ssl_ui_reader
+000002d0 t ssl_ui_writer
+00000348 t cert_stuff
+000008f0 t x509_name_oneline
+00000ea8 t verifyhost
+00001288 t verifystatus
+000014b0 t ssl_msg_type
+000016e4 t tls_rt_type
+00001748 t ssl_tls_trace
+000018dc t select_next_protocol
+00001964 t select_next_proto_cb
+000019d4 t get_ssl_version_txt
+00001a68 t ossl_connect_step1
+00002098 t ossl_connect_step2
+00002284 t asn1_object_dump
+000022b0 t pubkey_show
+0000233c t X509V3_ext
+000024c0 t get_cert_chain
+00002cbc t pkp_pin_peer_pubkey
+00002d8c t servercert
+000031bc t ossl_connect_step3
+000032e4 t ossl_connect_common
+00003680 t ossl_recv
+00003588 t ossl_send
+         U strlen
+         U curlx_uztosi
+         U memcpy
+         U RAND_status
+         U RAND_load_file
+         U RAND_egd
+         U RAND_bytes
+         U RAND_add
+         U RAND_file_name
+         U Curl_infof
+         U Curl_raw_equal
+         U UI_get_string_type
+         U UI_get0_user_data
+         U UI_get_input_flags
+         U UI_set_result
+         U UI_OpenSSL
+         U UI_method_get_reader
+         U UI_method_get_writer
+         U SSL_CTX_set_default_passwd_cb_userdata
+         U SSL_CTX_set_default_passwd_cb
+         U SSL_CTX_use_certificate_chain_file
+         U SSL_CTX_use_certificate_file
+         U ERR_get_error
+         U ERR_error_string
+         U Curl_failf
+         U ENGINE_ctrl
+         U ENGINE_ctrl_cmd
+         U SSL_CTX_use_certificate
+         U X509_free
+         U fopen
+         U d2i_PKCS12_fp
+         U fclose
+         U PKCS12_PBE_add
+         U PKCS12_parse
+         U PKCS12_free
+         U SSL_CTX_use_PrivateKey
+         U SSL_CTX_check_private_key
+         U sk_num
+         U sk_pop
+         U SSL_CTX_ctrl
+         U SSL_CTX_add_client_CA
+         U EVP_PKEY_free
+         U sk_pop_free
+         U SSL_CTX_use_PrivateKey_file
+         U UI_create_method
+         U UI_method_get_opener
+         U UI_method_set_opener
+         U UI_method_get_closer
+         U UI_method_set_closer
+         U UI_method_set_reader
+         U UI_method_set_writer
+         U ENGINE_load_private_key
+         U UI_destroy_method
+         U SSL_new
+         U SSL_get_certificate
+         U X509_get_pubkey
+         U SSL_get_privatekey
+         U EVP_PKEY_copy_parameters
+         U SSL_free
+         U BIO_s_mem
+         U BIO_new
+         U X509_NAME_print_ex
+         U BIO_ctrl
+         U BIO_free
+00000994 T Curl_ossl_init
+         U OPENSSL_load_builtin_modules
+         U ENGINE_load_builtin_engines
+         U CONF_modules_load_file
+         U SSL_load_error_strings
+         U SSL_library_init
+         U OPENSSL_add_all_algorithms_noconf
+000009dc T Curl_ossl_cleanup
+         U EVP_cleanup
+         U CRYPTO_cleanup_all_ex_data
+         U ERR_free_strings
+         U ERR_remove_thread_state
+         U CONF_modules_free
+         U SSL_COMP_free_compression_methods
+00000a08 T Curl_ossl_check_cxn
+         U recv
+         U __errno
+00000abc T Curl_ossl_set_engine
+         U ENGINE_by_id
+         U ENGINE_finish
+         U ENGINE_free
+         U ENGINE_init
+         U ERR_error_string_n
+00000b6c T Curl_ossl_set_engine_default
+         U ENGINE_set_default
+         U ENGINE_get_id
+00000be0 T Curl_ossl_engines_list
+         U ENGINE_get_first
+         U curl_slist_append
+         U curl_slist_free_all
+         U ENGINE_get_next
+00000c4c T Curl_ossl_close
+         U SSL_shutdown
+         U SSL_set_connect_state
+         U SSL_CTX_free
+00000cb4 T Curl_ossl_shutdown
+         U Curl_socket_check
+         U ERR_clear_error
+         U SSL_read
+         U SSL_get_error
+         U SSL_get_shutdown
+00000e68 T Curl_ossl_session_free
+         U SSL_SESSION_free
+00000e6c T Curl_ossl_close_all
+         U Curl_inet_pton
+         U X509_get_ext_d2i
+         U sk_value
+         U ASN1_STRING_data
+         U ASN1_STRING_length
+         U Curl_cert_hostcheck
+         U memcmp
+         U GENERAL_NAMES_free
+         U X509_get_subject_name
+         U X509_NAME_get_index_by_NID
+         U X509_NAME_get_entry
+         U X509_NAME_ENTRY_get_data
+         U ASN1_STRING_type
+         U CRYPTO_malloc
+         U ASN1_STRING_to_UTF8
+         U CRYPTO_free
+         U SSL_ctrl
+         U d2i_OCSP_RESPONSE
+         U OCSP_response_status
+         U OCSP_response_status_str
+         U OCSP_response_get1_basic
+         U SSL_get_peer_cert_chain
+         U SSL_CTX_get_cert_store
+         U OCSP_basic_verify
+         U OCSP_resp_count
+         U OCSP_resp_get0
+         U OCSP_single_get0_status
+         U OCSP_check_validity
+         U OCSP_cert_status_str
+         U OCSP_crl_reason_str
+         U OCSP_BASICRESP_free
+         U OCSP_RESPONSE_free
+         U curl_msnprintf
+         U Curl_debug
+         U SSL_version
+         U SSLv23_client_method
+         U SSLv3_client_method
+         U SSL_CTX_new
+         U ERR_peek_error
+         U SSL_CTX_set_msg_callback
+         U SSL_CTX_set_next_proto_select_cb
+         U SSL_CTX_set_alpn_protos
+         U SSL_CTX_set_cipher_list
+         U SSL_CTX_load_verify_locations
+         U X509_LOOKUP_file
+         U X509_STORE_add_lookup
+         U X509_load_crl_file
+         U X509_STORE_set_flags
+         U SSL_CTX_set_verify
+         U Curl_ssl_sessionid_lock
+         U Curl_ssl_getsessionid
+         U SSL_set_session
+         U Curl_ssl_sessionid_unlock
+         U SSL_set_fd
+         U SSL_connect
+         U SSL_get_verify_result
+         U X509_verify_cert_error_string
+         U strcpy
+         U SSL_get_current_cipher
+         U SSL_CIPHER_get_name
+         U SSL_get0_alpn_selected
+         U i2t_ASN1_OBJECT
+         U BN_print
+         U Curl_ssl_push_certinfo_len
+         U X509_EXTENSION_get_object
+         U X509V3_EXT_print
+         U X509_EXTENSION_get_data
+         U ASN1_STRING_print
+         U Curl_ssl_push_certinfo
+         U Curl_ssl_init_certinfo
+         U X509_get_issuer_name
+         U ASN1_INTEGER_get
+         U BIO_printf
+         U X509_get_serialNumber
+         U BIO_puts
+         U i2a_ASN1_OBJECT
+         U ASN1_TIME_print
+         U BN_num_bits
+         U PEM_write_bio_X509
+         U i2d_X509_PUBKEY
+         U Curl_cmalloc
+         U Curl_pin_peer_pubkey
+         U Curl_cfree
+         U SSL_get_peer_certificate
+         U PEM_read_X509
+         U X509_check_issued
+         U SSL_get1_session
+         U Curl_ssl_delsessionid
+         U Curl_ssl_addsessionid
+         U Curl_timeleft
+000034fc T Curl_ossl_connect_nonblocking
+0000351c T Curl_ossl_connect
+00003548 T Curl_ossl_data_pending
+         U SSL_pending
+         U SSL_write
+0000377c T Curl_ossl_version
+         U SSLeay
+         U __rem32
+00003858 T Curl_ossl_random
+00003898 T Curl_ossl_md5sum
+         U MD5_Init
+         U MD5_Update
+         U MD5_Final
+000038f4 T Curl_ossl_sha256sum
+         U SHA256_Init
+         U SHA256_Update
+         U SHA256_Final
+00003934 T Curl_ossl_cert_status_request
+
+polarssl.o:
+
+nss.o:
+
+cyassl.o:
+
+polarssl_threadlock.o:
+
+schannel.o:

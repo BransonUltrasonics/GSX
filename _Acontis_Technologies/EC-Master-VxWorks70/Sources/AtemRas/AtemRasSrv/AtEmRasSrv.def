@@ -1,0 +1,17 @@
+LIBRARY AtEmRasSrv.dll
+
+EXPORTS
+
+; -----------
+; Meta Data
+; -----------
+    emRasSrvGetVersion              @501
+    emRasSrvStart                   @502
+    emRasSrvStop                    @503
+    emRasErrorText                  @504
+    emRasEventText                  @505
+
+    emRasSrvTraceEnable             @508
+
+    emRasSrvModifyAccessLevel       @509
+    emRasSrvConfigAccessLevel       @510

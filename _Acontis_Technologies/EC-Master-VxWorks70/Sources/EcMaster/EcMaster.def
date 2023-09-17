@@ -1,0 +1,344 @@
+;LIBRARY     EcMaster.dll
+
+EXPORTS
+
+; ----------------------------------------------------
+; Interface layer				        
+; ----------------------------------------------------
+    ecatSetTraceMask                    @15
+    ecatSetMemTraceMask                 @16
+    ecatGetTraceMask                    @23
+    ecatGetMemTraceMask                 @24
+    ecatGetText                         @33
+    ; continue at @250			        
+								        
+; ----------------------------------------------------
+; OS layer						        
+; ----------------------------------------------------
+;   OsMemset                            @53
+;   OsMemcpy                            @54
+;   OsMemcmp                            @55
+;   OsMemmove                           @56
+;   OsStrlen                            @57
+;   OsStrcpy                            @58
+;   OsStrncpy                           @59
+;   OsStrcmp                            @60
+;   OsStrtok                            @61
+;   OsAtoi                              @62
+    OsQueryMsecCount                    @63
+;   OsSleep                             @64
+    OsDbgMsg                            @65
+    OsCreateLock                        @66
+    OsDeleteLock                        @67
+    OsLock                              @68
+    OsUnlock                            @69
+    OsCreateLockTyped                   @70
+;   OsDeleteTimer                       @71
+    OsCreateEvent                       @72
+    OsDeleteEvent                       @73
+    OsWaitForEvent                      @74
+;   OsSetEvent                          @75
+;   OsResetEvent                        @76
+    OsAddDbgMsgHook                     @77
+    OsCreateThread                      @78
+    OsSetThreadPriority                 @79
+    OsInit                              @80
+    OsDeinit                            @81
+;   OsDbgAssert                         @82
+;   OsVsnprintf                         @83
+    OsDeleteThreadHandle                @84
+;   OsGetSystemTime                     @85
+    OsSetThreadAffinity                 @86
+    OsSystemTimeGet                     @87
+    OsAuxClkInitialCountGet             @88
+    OsAuxClkInputFrequencyGet           @89
+    OsAuxClkOutputFrequencyGet          @90
+    OsAuxClkCorrectionSet               @91
+    OsAuxClkTickSinceInterrupt          @92
+    							        
+    OsGetDbgMsgHook                     @94
+    OsGetLinkLayerRegFunc               @95
+    OsAuxClkInit                        @96
+    OsAuxClkDeinit                      @97
+								        
+    OsForceThreadPrioNormal             @99
+    ; continue at @160			        
+								        
+; ----------------------------------------------------
+; Link layer					        
+; ----------------------------------------------------
+;   EcLinkOpen                          @100
+;   EcLinkClose                         @101
+;   EcLinkSendFrame                     @102
+;   EcLinkSendAndFreeFrame              @103
+;   EcLinkRecvFrame                     @104
+;   EcLinkAllocSendFrame                @105
+;   EcLinkFreeSendFrame                 @106
+;   EcLinkFreeRecvFrame                 @107
+;   EcLinkGetEthernetAddress            @108
+;   EcLinkGetStatus                     @109
+;   EcLinkGetSpeed                      @110
+;   EcLinkGetMode                       @111
+;   EcLinkIoctl                         @112
+								        
+; ----------------------------------------------------
+; Printf						        
+; ----------------------------------------------------
+    EcSnprintf                          @150
+    EcVsnprintf                         @151
+								        
+; ----------------------------------------------------
+; OS layer (continue)			        
+; ----------------------------------------------------
+    OsSocketDeInit                      @160
+    OsSocketInit                        @161
+    OsReleaseLinkLayerRegFunc           @162
+                                        
+; ----------------------------------------------------
+; Performance measurement		                
+; ----------------------------------------------------
+    ecatPerfMeasInit                    @170
+    ecatPerfMeasDeinit                  @171
+    ecatPerfMeasEnable                  @172
+    ecatPerfMeasDisable                 @173
+    ecatPerfMeasStart                   @174
+    ecatPerfMeasEnd                     @175
+    ecatPerfMeasReset                   @176
+    ecatPerfMeasShow                    @177
+    OsMeasCalibrate                     @178
+    OsMeasGet100kHzFrequency            @179
+    OsMeasGetCounterTicks               @180
+    emGetMemoryUsage                    @181
+    ecatPerfMeasSetIrqCtlEnabled        @182
+                                        
+; ----------------------------------------------------
+; Interface layer for multi inst        ance
+; ----------------------------------------------------
+    emInitMaster                        @201
+    emDeinitMaster                      @202
+    emStart                             @203
+    emStop                              @204
+    emIoControl                         @205
+                                        
+    emGetSlaveId                        @207
+    emMbxTferCreate                     @208
+    emMbxTferDelete                     @209
+    emCoeSdoDownloadReq                 @210
+    emCoeSdoUploadReq                   @211
+    emCoeGetODList                      @212
+    emCoeGetObjectDesc                  @213
+    emCoeGetEntryDesc                   @214
+    emFastModeInit=emFastModeInitNotSupported                      @215
+    emFastSendAllCycFrames=emFastSendAllCycFramesNotSupported      @216
+    emFastProcessAllRxFrames=emFastProcessAllRxFramesNotSupported  @217
+    emGetSlaveProp                      @218
+    emGetSlaveState                     @219
+    emSetSlaveState                     @220
+    emTferSingleRawCmd                  @221
+                                        
+;   emGetTraceMask                      @223
+;   emGetMemTraceMask                   @224
+    emGetSlaveIdAtPosition              @225
+    emGetNumConfiguredSlaves            @226
+    emConfigureMaster                   @227
+    emSetMasterState                    @228
+    emQueueRawCmd                       @229
+    emCoeRxPdoTfer                      @230
+    emExecJob                           @231
+                                        
+    emGetProcessData                    @234
+    emSetProcessData                    @235
+    emGetMasterState                    @236
+    emFoeFileUpload                     @237
+    emFoeFileDownload                   @238
+    emFoeUploadReq                      @239
+    emFoeDownloadReq                    @240
+    emCoeSdoDownload                    @241
+    emCoeSdoUpload                      @242
+    emGetNumConnectedSlaves             @243
+    emReadSlaveEEPRom                   @244
+    emWriteSlaveEEPRom                  @245
+    emAssignSlaveEEPRom                 @246
+    emActiveSlaveEEPRom                 @247
+    emEoeRegisterEndpoint               @248
+    emEoeUnregisterEndpoint             @249
+                                        
+; ----------------------------------------------------
+; Interface layer (continue)	                
+; ----------------------------------------------------
+    emSlaveSerializeMbxTfers            @250
+    emSlaveParallelMbxTfers             @251
+    emClntQueueRawCmd                   @255
+    emGetSlaveInpVarInfoNumOf           @257
+    emGetSlaveOutpVarInfoNumOf          @259
+    emGetSlaveInpVarInfo                @261
+    emGetSlaveOutpVarInfo               @263
+    emFindOutpVarByName                 @265
+    emFindInpVarByName                  @267
+    emPassThroughSrvStart               @269
+    emPassThroughSrvEnable              @271
+    emPassThroughSrvDisable             @273
+    emPassThroughSrvGetStatus           @275
+    emReadSlaveRegister                 @277
+    emWriteSlaveRegister                @279
+    emSetProcessDataBits                @281
+    emGetProcessDataBits                @283
+    emGetProcessImageInputPtr           @285
+    emGetProcessImageOutputPtr          @287
+    emVoeRead                           @289
+    emVoeWrite                          @291
+    emVoeWriteReq                       @293
+    emGetNumConnectedSlavesMain         @295
+    emGetNumConnectedSlavesRed          @297
+    ; continue at @406                  
+                                        
+; ----------------------------------------------------
+; Interface layer				                
+; ----------------------------------------------------
+    emRegisterClient                    @400
+    emUnregisterClient                  @401
+    emDcEnable                          @402
+    emDcDisable                         @403
+    emDcConfigure                       @404
+    emEthDbgMsg                         @405
+    emDcIsEnabled                       @406
+                                        
+; ----------------------------------------------------
+; Interface layer (continue)	                
+; ----------------------------------------------------
+    emAoeRead                           @407
+    emAoeWrite                          @409
+    emAoeWriteControl                   @410
+    emAoeReadReq                        @411
+    emAoeWriteReq                       @413
+    emAoeGetSlaveNetId                  @415
+    emDcmConfigure                      @417
+                                        
+    emDcmGetStatus                      @421
+    emDcmGetLog                         @423
+    emDcmShowStatus                     @425
+    emDcmResetStatus                    @427
+    emDcmGetBusShiftConfigured          @428
+    emDcmGetAdjust                      @429
+                                        
+    emConfigLoad                        @431
+    emConfigExcludeSlave                @433
+    emConfigIncludeSlave                @435
+    emConfigApply                       @437
+    emGetSlaveFixedAddr                 @439
+    emGetSlavePortState                 @441
+    emPassThroughSrvStop                @443
+    emSoeRead                           @445
+    emSoeWrite                          @447
+    emSoeAbortProcCmd                   @449
+    emDcContDelayCompEnable             @451
+    emDcContDelayCompDisable            @453
+                                        
+    ecatGetNotifyText                   @455
+    emNotifyApp                         @457
+    emLogFrameEnable                    @459
+    emLogFrameDisable                   @461
+    emGetSrcMacAddress                  @463
+    emAoeReadWrite                      @465
+    emGetMasterProperties               @467
+    emGetCfgSlaveInfo                   @469
+    emGetBusSlaveInfo                   @471
+    emGetSlaveInpVarInfoEx              @472
+    emGetSlaveOutpVarInfoEx             @473
+    emFindOutpVarByNameEx               @474
+    emFindInpVarByNameEx                @475
+    emMbxTferAbort                      @477
+    emSoeReadReq                        @479
+    emSoeWriteReq                       @481
+    emSetLicenseKey                     @491
+    emAdsAdapterStart                   @493
+    emAdsAdapterStop                    @495
+    emGetVersion                        @497
+    emConfigSetPreviousPort             @499
+    ; continue at @701                  
+                                        
+; ----------------------------------------------------
+; Remote control API (up to @599)
+; ----------------------------------------------------
+;   emRasClntGetVersion                 @501
+;   emRasClntInit                       @502
+;   emRasClntClose                      @503
+;   emRasErrorText                      @504
+;   emRasEventText                      @505
+;   emRasClntAddConnection              @506
+;   emRasClntRemoveConnection           @507
+;   emRasClntTraceEnable                @508
+;   emRasGetConnectionInfo              @509 (V3.0)
+                                        
+; ----------------------------------------------------
+; Hot connect API (up to @699)          
+; ----------------------------------------------------
+    emHCAcceptTopoChange                @651
+    emSetSlavePortState                 @652
+    emHCGetNumGroupMembers              @653
+    emHCGetSlaveIdsOfGroup              @654
+    emBlockNode                         @655
+    emOpenBlockedPorts                  @656
+    emForceTopologyChange               @657
+    emReloadSlaveEEPRom                 @658
+    emResetSlaveController              @659
+    emGetSlaveInfo                      @660
+    emIsSlavePresent                    @661
+    emIsTopologyChangeDetected          @662
+                                        
+; ----------------------------------------------------
+; Interface layer (continue)            
+; ----------------------------------------------------
+    emScanBus                           @702
+    emClntSendRawMbx                    @704
+    emTraceDataConfig                   @705
+    emTraceDataGetInfo                  @706
+    emFoeSegmentedDownloadReq           @707
+    emFoeSegmentedUploadReq             @708
+    emForceProcessDataBits              @710
+    emReleaseProcessDataBits            @711
+    emReleaseAllProcessDataBits         @712
+    emGetMasterParms                    @713
+    emSetMasterParms                    @714
+    emGetDiagnosisImagePtr              @715
+    emReadSlaveIdentification           @716
+;   emSetMasterRedStateReq              @717 (V3.0)
+;   emGetMasterRedState                 @718 (V3.0)
+    emSetSlaveDisabled                  @719
+    emDcxGetStatus                      @720
+    emSetSlaveDisconnected              @721
+    emRescueScan                        @722
+    emConfigExtend                      @723
+    emGetMasterInfo                     @724
+;   emGetMasterRedProcessImageInputPtr  @725 (V3.0)
+;   emGetMasterRedProcessImageOutputPtr @726 (V3.0)
+;   emGetSlaveStatistics                @727 (V3.0)
+;   emClearSlaveStatistics              @728 (V3.0)
+    ecatConvertEcErrorToAdsError        @729
+    ecatConvertEcErrorToFoeError        @730
+    ecatConvertEcErrorToSoeError        @731
+    ecatConvertEcErrorToCoeError        @732
+;   emConfigAddJunctionRedundancyConnection     @733 (V3.0)
+;   emSetSlavesDisabled                 @734 (V3.0)
+;   emSetSlavesDisconnected             @735 (V3.0)
+;   emGetMasterSyncUnitInfoNumOf        @736 (V3.0)
+;   emGetMasterSyncUnitInfo             @737 (V3.0)
+;   emReadSlaveRegisterReq              @738 (V3.0)
+;   emWriteSlaveRegisterReq             @739 (V3.0)
+;   emActiveSlaveEEPRomReq              @740 (V3.0)
+;   emAssignSlaveEEPRomReq              @741 (V3.0)
+;   emReadSlaveEEPRomReq                @742 (V3.0)
+;   emWriteSlaveEEPRomReq               @743 (V3.0)
+;   emSetSlavePortStateReq              @744 (V3.0)
+;   emReadSlaveIdentificationReq        @745 (V3.0)
+;   emIsTopologyKnown                   @746 (V3.0)
+;   emReloadSlaveEEPRomReq              @747 (V3.0)
+;   emGetBusTime                        @748 (V3.0)
+;   emGetMasterDump                     @749 (V3.0)
+
+; --- See also AtemRasClnt API and other branches! ---
+
+; ----------------------------------------------------
+; C++ EXPORTS
+; ----------------------------------------------------
+

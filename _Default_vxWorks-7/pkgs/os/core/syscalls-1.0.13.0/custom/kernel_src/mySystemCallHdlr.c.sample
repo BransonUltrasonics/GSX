@@ -1,0 +1,58 @@
+/*
+This source file holds an example of custom system call handler that will
+provide back to the caller the VxWorks version and the creation date of the
+VxWorks image.
+*/
+
+#include <vxWorks.h>
+#include <string.h>
+#include <errno.h>
+#include <syscallArgs.h>
+#include <scMemVal.h>
+#include <mySystemCallHdlr.h>
+
+int check_vxworks_versionSc
+    (
+    struct check_vxworks_versionScArgs * pArgs /* struct holding sys call's args */
+    )
+    {
+    vxWorksVersionInfo * pStruct = pArgs->pStruct;
+    char * pBuf = (char *)pArgs->buf;
+
+    /*
+     * Validate that the output parameters are within the RTP's context and can
+     * be written into.
+     */
+
+     if (scMemValidate ((void *)pArgs->pStruct, sizeof (vxWorksVersionInfo),
+			SC_PROT_WRITE) == ERROR)
+	{
+	errno = EINVAL;		/* structure address is not valid */
+	return ERROR;
+	}
+
+     if (scMemValidate ((void *)pArgs->buf, (size_t)pArgs->size,
+			SC_PROT_WRITE) == ERROR)
+	{
+	errno = EINVAL;		/* buffer address and/or size is not valid */
+	return ERROR;
+	}
+
+    /*
+     * Copy the VxWorks version information in the output parameters.
+     */
+
+    pStruct->major = vxWorksVersionMajor;
+    pStruct->minor = vxWorksVersionMinor;
+    pStruct->maint = vxWorksVersionMaint;
+
+    if ((strlen (creationDate) + 1) > pArgs->size)
+	{
+	errno = EMSGSIZE;	/* not enough room in provided buffer */
+	return ERROR;
+	}
+
+    (void)strncpy (pBuf, creationDate, pArgs->size);
+
+    return OK;
+    }

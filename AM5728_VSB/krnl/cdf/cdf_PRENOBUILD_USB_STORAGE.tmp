@@ -1,0 +1,15 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/connectivity/usb-1.1.0.6/host/class/storage-1.0.0.10/cdf/40usb_host_class_msc.cdf>
+
+Layer Layer::USB_STORAGE {
+	NAME USB_STORAGE
+}

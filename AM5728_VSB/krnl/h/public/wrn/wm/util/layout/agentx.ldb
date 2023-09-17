@@ -1,0 +1,338 @@
+; $Header: /usr/cvsroot/target/h/wrn/wm/util/layout/agentx.ldb,v 1.1.1.1 2001/11/05 17:47:19 tneale Exp $
+; Layout information for AgentX
+
+;****************************************************************************
+;
+;  *** Restricted Rights Legend ***
+;
+;  The programs and information contained herein are licensed only
+;  pursuant to a license agreement that contains use, reverse
+;  engineering, disclosure, and other restrictions; accordingly, it
+;  is "Unpublished--all rights reserved under the applicable
+;  copyright laws".
+;
+;  Use duplication, or disclosure by the Government is subject to
+;  restrictions as set forth in subparagraph (c)(1)(ii) of the Rights
+;  in Technical Data and Computer Licensed Programs clause of DFARS
+;  52.227 7013.
+;
+;  Copyright 2000-2001 Wind River Systems, Inc.
+;  Copyright 1997 Epilogue Technology Corporation.
+;  Copyright 1998 Integrated Systems, Inc.
+;  All rights reserved.
+;
+;  *** Government Use ***
+;
+;  The Licensed Programs and their documentation were developed at
+;  private expense and no part of them is in the public domain.
+;
+;  The Licensed Programs are "Restricted Computer Software" as that
+;  term is defined in Clause 52.227-19 of the Federal Acquisition
+;  Regulations (FAR) and are "Commercial Computer Software" as that
+;  term is defined in Subpart 227.401 of the Department of Defense
+;  Federal Acquisition Regulation Supplement (DFARS).
+;
+;  (i) If the licensed Programs are supplied to the Department of
+;      Defense (DoD), the Licensed Programs are classified as
+;      "Commercial Computer Software" and the Government is acquiring
+;      only "restricted rights" in the Licensed Programs and their
+;      documentation as that term is defined in Clause 52.227
+;      7013(c)(1) of the DFARS, and
+;
+;  (ii) If the Licensed Programs are supplied to any unit or agency
+;      of the United States Government other than DoD, the
+;      Government's rights in the Licensed Programs and their
+;      documentation will be as defined in Clause 52.227-19(c)(2) of
+;      the FAR.
+;****************************************************************************
+
+;  $Log: agentx.ldb,v $
+;  Revision 1.1.1.1  2001/11/05 17:47:19  tneale
+;  Tornado shuffle
+;
+;  Revision 1.11  2001/01/19 22:22:31  paul
+;  Update copyright.
+;
+;  Revision 1.10  1998/02/25 15:21:38  sra
+;  Finish moving types.h, bug.h, and bugdef.h to common/h/.
+;
+;  Revision 1.9  1998/02/25 04:53:42  sra
+;  Update copyrights.
+;
+;  Revision 1.8  1997/09/26 20:21:12  alan
+;  Use features of new layout compiler: `use-layouts' and `C-include'.
+;
+;  Revision 1.7  1997/06/12 00:09:53  alan
+;  Turn all the filler into named fields to make them easier to set to zero.
+;
+;  Revision 1.6  1997/06/04 05:46:06  alan
+;  Fix RCS keywords.
+;
+;  Revision 1.5  1997/06/03 22:59:27  alan
+;  Use `define-rcs-info'.
+;
+;  Revision 1.4  1997/06/03 20:58:42  alan
+;  Stopt trying to have a description for each type of PDU.
+;  Instead, just define the layouts for those PDUs that have
+;  a fixed part beyond the header.  (I.e. for OPEN, CLOSE,
+;  RESP, REG, UNREG and BULK).
+;
+;  Revision 1.3  1997/06/03 19:08:48  alan
+;  Make some names shorter...
+;
+;  Revision 1.2  1997/06/03 02:23:24  alan
+;  Add FLAGS field to AGENTX_PDU layout.
+;
+;  Revision 1.1  1997/06/01 00:46:14  alan
+;  Initial version
+
+(define-rcs-info "$Id: agentx.ldb,v 1.1.1.1 2001/11/05 17:47:19 tneale Exp $")
+
+(C-include EPILOGUE_INSTALL_H <install.h>)
+(C-include EPILOGUE_TYPES_H <common/h/types.h>)
+(C-include EPILOGUE_LAYOUT_LDBGLUE_H <layout/ldbglue.h>)
+
+(define-layout-macro (big-or-little integer)	; (big-or-little <size>)
+  (lambda (form)
+    `(union (field B (unsigned ,(cadr form)))
+	    (field L (unsigned-8bit-little ,(cadr form))))))
+
+(define-layout AGENTX_UNSIGNED16
+  (big-or-little 16))
+
+(define-layout AGENTX_UNSIGNED32
+  (big-or-little 32))
+
+(define-layout AGENTX_UNSIGNED64
+  (big-or-little 64))
+
+(define-layout AGENTX_OID
+  (struct (field N_SUBID (unsigned 8))
+	  (field PREFIX (unsigned 8))
+	  (field INCLUDE (unsigned 8))
+	  (field FILL0 (opaque 8))
+	  (field SUBIDS (array (count 0)
+			       (type (big-or-little 32))))))
+
+(define-layout AGENTX_OCT_STR
+  (struct (field LEN (big-or-little 32))
+	  (field OCTETS (array (count 0)
+			       (type (unsigned 8))))))
+
+(define-layout AGENTX_TYPE_CODE
+  ;; This is the type code -after- you've decoded the big-or-little encoding.
+  (enum (type (unsigned 16))
+	(value INTEGER 2)
+	(value OCT_STR 4)
+	(value NULL 5)
+	(value OID 6)
+	(value IP_ADDRESS 64)
+	(value COUNTER32 65)
+	(value GAUGE32 66)
+	(value TIME_TICKS 67)
+	(value OPAQUE 68)
+	(value COUNTER64 70)
+	(value NO_SUCH_OBJECT 128)
+	(value NO_SUCH_INSTANCE 129)
+	(value END_OF_MIB_VIEW 130)))
+
+(define-layout AGENTX_VARBIND
+  (struct (field TYPE (big-or-little 16))	; an AGENTX_TYPE_CODE
+	  (field FILL0 (opaque 16))
+	  (field NAME AGENTX_OID)
+	  ;; Followed by any data...
+	  ))
+
+(define-layout AGENTX_PDU
+  (struct (size (* 5 32))	; error check
+	  (field VERSION (unsigned 8))
+	  (field TYPE (enum (type (unsigned 8))
+			    (value OPEN 1)
+			    (value CLOSE 2)
+			    (value REG 3)
+			    (value UNREG 4)
+			    (value GET 5)
+			    (value NEXT 6)
+			    (value BULK 7)
+			    (value TEST_SET 8)
+			    (value COMMIT_SET 9)
+			    (value UNDO_SET 10)
+			    (value CLEANUP_SET 11)
+			    (value NOTIFY 12)
+			    (value PING 13)
+			    (value INDEX_ALLOCATE 14)
+			    (value INDEX_DEALLOCATE 15)
+			    (value ADD_AGENT_CAPS 16)
+			    (value REMOVE_AGENT_CAPS 17)
+			    (value RESP 18)))
+	  (union (field FLAGS (enum (type (unsigned 8))
+				    (value NETWORK_BYTE_ORDER #x10)
+				    (value NON_DEFAULT_CONTEXT #x08)
+				    (value ANY_INDEX #x04)
+				    (value NEW_INDEX #x02)
+				    (value INSTANCE_REGISTRATION #x01)
+				    ))
+		 (struct (size 8)	; error check
+			 (align 1)
+			 (field FILL0 (unsigned 3))
+			 (field NETWORK_BYTE_ORDER (boolean 1))
+			 (field NON_DEFAULT_CONTEXT (boolean 1))
+			 (field ANY_INDEX (boolean 1))
+			 (field NEW_INDEX (boolean 1))
+			 (field INSTANCE_REGISTRATION (boolean 1))))
+	  (field FILL1 (opaque 8))
+	  (field SESSION_ID (big-or-little 32))
+	  (field TRANS_ID (big-or-little 32))
+	  (field PACKET_ID (big-or-little 32))
+	  (field PAYLOAD_LEN (big-or-little 32))
+	  ))
+
+(define-layout AGENTX_PDU_WITH_CONTEXT
+  (struct (fill (sizeof AGENTX_PDU))
+	  (field CONTEXT AGENTX_OCT_STR)))
+
+;(old)	(define-layout AGENTX_OPEN
+;(old)	  (struct (fill (sizeof AGENTX_PDU))
+;(old)		  ))
+(define-layout AGENTX_OPEN
+  (struct (field TIMEOUT (unsigned 8))
+	  (field FILL0 (opaque 8))
+	  (field FILL1 (opaque 16))
+	  (field OID AGENTX_OID)
+	  ;; Followed by an AGENTX_OCT_STR description
+	  ))
+
+;(old)	(define-layout AGENTX_CLOSE
+;(old)	  (struct (fill (sizeof AGENTX_PDU))
+;(old)		  ))
+(define-layout AGENTX_CLOSE
+  (struct (field REASON (enum (type (unsigned 8))
+			      (value OTHER 1)
+			      (value PARSE_ERROR 2)
+			      (value PROTOCOL_ERROR 3)
+			      (value TIMEOUTS 4)
+			      (value SHUTDOWN 5)
+			      (value BY_MANAGER 6)))
+	  (field FILL0 (opaque 8))
+	  (field FILL1 (opaque 16))
+	  ))
+
+;(old)	(define-layout AGENTX_REG
+;(old)	  (struct (fill (sizeof AGENTX_PDU))
+;(old)		  ;; Optional context (AGENTX_OCT_STR)
+;(old)		  ))
+(define-layout AGENTX_REG
+  (struct (field TIMEOUT (unsigned 8))
+	  (field PRIORITY (unsigned 8))
+	  (field RANGE_SUBID (unsigned 8))
+	  (field FILL0 (opaque 8))
+	  (field REGION AGENTX_OID)
+	  ;; Followed by an additional upper bound SUBID
+	  ))
+
+;(old)	(define-layout AGENTX_UNREG
+;(old)	  (struct (fill (sizeof AGENTX_PDU))
+;(old)		  ;; Optional context (AGENTX_OCT_STR)
+;(old)		  ))
+(define-layout AGENTX_UNREG
+  (struct (field FILL0 (opaque 16))
+	  (field RANGE_SUBID (unsigned 8))
+	  (field FILL1 (opaque 8))
+	  (field REGION AGENTX_OID)
+	  ;; Followed by an additional upper bound SUBID
+	  ))
+
+;(old)	(define-layout AGENTX_GET
+;(old)	  (struct (fill (sizeof AGENTX_PDU))
+;(old)		  ;; Optional context (AGENTX_OCT_STR)
+;(old)		  ;; Followed by a series of ranges (pairs of AGENTX_OIDs)
+;(old)		  ))
+
+;(old)	(define-layout AGENTX_NEXT
+;(old)	  (struct (fill (sizeof AGENTX_PDU))
+;(old)		  ;; Optional context (AGENTX_OCT_STR)
+;(old)		  ;; Followed by a series of ranges (pairs of AGENTX_OIDs)
+;(old)		  ))
+
+;(old)	(define-layout AGENTX_BULK
+;(old)	  (struct (fill (sizeof AGENTX_PDU))
+;(old)		  ;; Optional context (AGENTX_OCT_STR)
+;(old)		  ))
+(define-layout AGENTX_BULK
+  (struct (field NON_REP (big-or-little 16))
+	  (field MAX_REP (big-or-little 16))
+	  ;; Followed by a series of ranges (pairs of AGENTX_OIDs)
+	  ))
+
+;(old)	(define-layout AGENTX_TEST_SET
+;(old)	  (struct (fill (sizeof AGENTX_PDU))
+;(old)		  ;; Optional context (AGENTX_OCT_STR)
+;(old)		  ;; Followed by a series of AGENTX_VARBINDs
+;(old)		  ))
+
+;
+; COMMIT_SET, UNDO_SET and CLEANUP_SET have only the header.
+;
+
+;(old)	(define-layout AGENTX_NOTIFY
+;(old)	  (struct (fill (sizeof AGENTX_PDU))
+;(old)		  ;; Optional context (AGENTX_OCT_STR)
+;(old)		  ;; Followed by a series of AGENTX_VARBINDs
+;(old)		  ))
+
+;
+; PING has only the header, perhaps with context
+;
+
+;(old)	(define-layout AGENTX_INDEX_ALLOCATE
+;(old)	  (struct (fill (sizeof AGENTX_PDU))
+;(old)		  ;; Optional context (AGENTX_OCT_STR)
+;(old)		  ;; Followed by a series of AGENTX_VARBINDs
+;(old)		  ))
+
+;(old)	(define-layout AGENTX_INDEX_DEALLOCATE
+;(old)	  (struct (fill (sizeof AGENTX_PDU))
+;(old)		  ;; Optional context (AGENTX_OCT_STR)
+;(old)		  ;; Followed by a series of AGENTX_VARBINDs
+;(old)		  ))
+
+;(old)	(define-layout AGENTX_ADD_AGENT_CAPS
+;(old)	  (struct (fill (sizeof AGENTX_PDU))
+;(old)		  ;; Optional context (AGENTX_OCT_STR)
+;(old)		  ;; Followed an AGENTX_OID
+;(old)		  ;; Followed an AGENTX_OCT_STR
+;(old)		  ))
+
+;(old)	(define-layout AGENTX_REMOVE_AGENT_CAPS
+;(old)	  (struct (fill (sizeof AGENTX_PDU))
+;(old)		  ;; Optional context (AGENTX_OCT_STR)
+;(old)		  ;; Followed an AGENTX_OID
+;(old)		  ))
+
+(define-layout AGENTX_ERROR_CODE
+  ;; This is the error code -after- you've decoded the big-or-little encoding.
+  (enum (type (unsigned 16))
+	(value OPEN_FAILED 256)
+	(value NOT_OPEN 257)
+	(value INDEX_WRONG_TYPE 258)
+	(value INDEX_ALREADY_ALLOCATED 259)
+	(value INDEX_NONE_AVAILABLE 260)
+	(value INDEX_NOT_ALLOCATED 261)
+	(value UNSUPPORTED_CONTEXT 262)
+	(value DUPLICATE_REGISTRATION 263)
+	(value UNKNOWN_REGISTRATION 264)
+	(value UNKNOWN_AGENT_CAPS 265)))
+
+;(old)	(define-layout AGENTX_RESP
+;(old)	  (struct (fill (sizeof AGENTX_PDU))
+;(old)		  ))
+(define-layout AGENTX_RESP
+  (struct (field SYS_UPTIME (big-or-little 32))
+	  (field ERROR (big-or-little 16))	; an AGENTX_ERROR_CODE
+	  (field INDEX (big-or-little 16))
+	  ;; Followed by any data...
+	  ))
+
+; Local Variables:
+; mode: Scheme
+; End:

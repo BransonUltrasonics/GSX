@@ -1,0 +1,178 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Tue Apr 06 08:34:54 2021
+# Process ID: 11512
+# Log file: C:/Users/76053/Documents/Entrenamientos/VHDL_FPGA/GSX_FPGA/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/76053/Documents/Entrenamientos/VHDL_FPGA/GSX_FPGA/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/76053/Documents/Entrenamientos/VHDL_FPGA/GSX_FPGA/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin K15 [get_ports I_CLK_25MHZ]
+endgroup
+set_property package_pin "" [get_ports [list  I_DSPI_CS_ADC]]
+set_property is_loc_fixed false [get_ports [list  I_CLK_25MHZ]]
+set_property iostandard LVCMOS33 [get_ports [list I_CLK_25MHZ]]
+startgroup
+set_property package_pin R9 [get_ports I_N_RESET]
+endgroup
+set_property is_loc_fixed false [get_ports [list  I_N_RESET]]
+set_property iostandard LVCMOS33 [get_ports [list I_N_RESET]]
+startgroup
+set_property package_pin T9 [get_ports I_N_RESET_UP_OUT]
+endgroup
+set_property is_loc_fixed false [get_ports [list  I_N_RESET_UP_OUT]]
+set_property iostandard LVCMOS33 [get_ports [list I_N_RESET_UP_OUT]]
+startgroup
+set_property package_pin F13 [get_ports {HW_VERS_BD[0]}]
+endgroup
+set_property is_loc_fixed false [get_ports [list  {HW_VERS_BD[0]}]]
+startgroup
+set_property package_pin E14 [get_ports {HW_VERS_BD[1]}]
+endgroup
+set_property is_loc_fixed false [get_ports [list  {HW_VERS_BD[1]}]]
+startgroup
+set_property package_pin D15 [get_ports {HW_VERS_BD[2]}]
+endgroup
+startgroup
+set_property package_pin D16 [get_ports {HW_VERS_BD[3]}]
+endgroup
+set_property package_pin "" [get_ports [list  {HW_VERS_BD[4]}]]
+startgroup
+set_property package_pin D14 [get_ports {HW_VERS_BD[4]}]
+endgroup
+startgroup
+set_property package_pin E13 [get_ports {HW_VERS_BD[5]}]
+endgroup
+startgroup
+set_property package_pin C15 [get_ports {HW_VERS_BD[6]}]
+endgroup
+startgroup
+set_property package_pin C16 [get_ports {HW_VERS_BD[7]}]
+endgroup
+set_property is_loc_fixed true [get_ports [list  {HW_VERS_BD[1]}]]
+set_property is_loc_fixed true [get_ports [list  {HW_VERS_BD[0]}]]
+set_property is_loc_fixed false [get_ports [list  {HW_VERS_BD[0]}]]
+set_property is_loc_fixed true [get_ports [list  {HW_VERS_BD[0]}]]
+set_property iostandard LVCMOS33 [get_ports [list {HW_VERS_BD[0]}]]
+set_property iostandard LVCMOS25 [get_ports [list {HW_VERS_BD[2]}]]
+set_property iostandard LVCMOS33 [get_ports [list {HW_VERS_BD[1]}]]
+set_property iostandard LVCMOS33 [get_ports [list {HW_VERS_BD[2]}]]
+set_property iostandard LVCMOS33 [get_ports [list {HW_VERS_BD[3]}]]
+set_property iostandard LVCMOS33 [get_ports [list {HW_VERS_BD[4]}]]
+set_property iostandard LVCMOS33 [get_ports [list {HW_VERS_BD[5]}]]
+set_property iostandard LVCMOS33 [get_ports [list {HW_VERS_BD[6]}]]
+set_property iostandard LVCMOS33 [get_ports [list {HW_VERS_BD[7]}]]
+set_property package_pin "" [get_ports [list  I_DSPI_CLK]]
+startgroup
+set_property package_pin H1 [get_ports I_SPI_CLK]
+endgroup
+startgroup
+set_property package_pin M4 [get_ports I_SPI_MOSI]
+endgroup
+startgroup
+set_property package_pin G2 [get_ports I_SPI_N_CS]
+endgroup
+startgroup
+set_property package_pin R1 [get_ports O_SPI_MISO]
+endgroup
+set_property is_loc_fixed true [get_ports [list  I_N_RESET_UP_OUT]]
+set_property is_loc_fixed true [get_ports [list  I_N_RESET]]
+set_property slew FAST [get_ports [list O_SPI_MISO]]
+set_property iostandard LVCMOS33 [get_ports [list I_SPI_N_CS]]
+set_property iostandard LVCMOS33 [get_ports [list I_SPI_MOSI]]
+set_property iostandard LVCMOS33 [get_ports [list I_SPI_CLK]]
+set_property iostandard LVCMOS33 [get_ports [list O_SPI_MISO]]
+startgroup
+set_property package_pin R7 [get_ports I_DSPI_CLK]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list I_DSPI_CLK]]
+startgroup
+set_property package_pin T7 [get_ports I_DSPI_CS_ADC]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list I_DSPI_CS_ADC]]
+startgroup
+set_property package_pin N8 [get_ports I_DSPI_RXD]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list I_DSPI_RXD]]
+startgroup
+set_property package_pin P7 [get_ports I_DSPI_TXD]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list I_DSPI_TXD]]
+set_property is_loc_fixed true [get_ports [list  I_CLK_25MHZ]]
+startgroup
+set_property package_pin R5 [get_ports I_PHASE_SIGN]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list I_PHASE_SIGN]]
+startgroup
+set_property package_pin P10 [get_ports OL_CURRENT]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list OL_CURRENT]]
+startgroup
+set_property package_pin M7 [get_ports OL_POWER]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list OL_POWER]]
+startgroup
+set_property package_pin P12 [get_ports OL_VOLTAGE]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list OL_VOLTAGE]]
+startgroup
+set_property package_pin T11 [get_ports OVL_FUNCTION]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list OVL_FUNCTION]]
+startgroup
+set_property package_pin M11 [get_ports GPI_OL_TEMP]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list GPI_OL_TEMP]]
+startgroup
+set_property package_pin N12 [get_ports GPO_OL_RESET]
+endgroup
+set_property slew FAST [get_ports [list GPO_OL_RESET]]
+set_property iostandard LVCMOS33 [get_ports [list GPO_OL_RESET]]
+startgroup
+set_property package_pin P13 [get_ports GPO_DDS_STOP]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list GPO_DDS_STOP]]
+set_property slew FAST [get_ports [list GPO_DDS_STOP]]
+startgroup
+set_property package_pin N16 [get_ports FMOT]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list FMOT]]
+set_property slew FAST [get_ports [list FMOT]]
+startgroup
+set_property package_pin J13 [get_ports FQUAD]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list FQUAD]]
+set_property slew FAST [get_ports [list FQUAD]]
+startgroup
+set_property package_pin P15 [get_ports PWMA]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list PWMA]]
+set_property slew FAST [get_ports [list PWMA]]
+startgroup
+set_property package_pin N13 [get_ports PWMB]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list PWMB]]
+set_property slew FAST [get_ports [list PWMB]]
+startgroup
+set_property package_pin A6 [get_ports O_N_LED5]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list O_N_LED5]]
+set_property slew FAST [get_ports [list O_N_LED5]]
+startgroup
+set_property package_pin D13 [get_ports O_N_LED6]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list O_N_LED6]]
+set_property slew FAST [get_ports [list O_N_LED6]]
+startgroup
+set_property package_pin D12 [get_ports O_N_LED7]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list O_N_LED7]]
+set_property slew FAST [get_ports [list O_N_LED7]]
+save_constraints
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+refresh_design

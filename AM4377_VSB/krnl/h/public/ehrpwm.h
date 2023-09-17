@@ -1,0 +1,166 @@
+
+#ifndef _EHRPWM_H_
+#define _EHRPWM_H_
+
+#include "hw_ehrpwm.h"
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/* TB Period load */
+#define EHRPWM_PRD_LOAD_SHADOW_MASK		EHRPWM_TBCTL_PRDLD
+
+/* Counter mode */
+#define EHRPWM_COUNTER_MODE_MASK		EHRPWM_TBCTL_CTRMODE 
+#define EHRPWM_COUNT_UP				(EHRPWM_TBCTL_CTRMODE_UP << \
+	       						EHRPWM_TBCTL_CTRMODE_SHIFT)
+#define EHRPWM_COUNT_DOWN			(EHRPWM_TBCTL_CTRMODE_DOWN << \
+							EHRPWM_TBCTL_CTRMODE_SHIFT)
+#define EHRPWM_COUNT_UP_DOWN			(EHRPWM_TBCTL_CTRMODE_UPDOWN << \
+							EHRPWM_TBCTL_CTRMODE_SHIFT)
+#define EHRPWM_COUNT_STOP			(EHRPWM_TBCTL_CTRMODE_STOPFREEZE << \
+							EHRPWM_TBCTL_CTRMODE_SHIFT)
+/* Synchronization */
+#define EHRPWM_SYNC_ENABLE			EHRPWM_TBCTL_PHSEN
+//#define EHRPWM_SW_FORCED_SYNC			0x1
+
+#define EHRPWM_SYNCOUT_MASK			EHRPWM_TBCTL_SYNCOSEL   
+#define EHRPWM_SYNCOUT_SYNCIN			(EHRPWM_TBCTL_SYNCOSEL_EPWMXSYNCI << \
+							EHRPWM_TBCTL_SYNCOSEL_SHIFT)
+#define EHRPWM_SYNCOUT_COUNTER_EQUAL_ZERO	(EHRPWM_TBCTL_SYNCOSEL_TBCTRZERO << \
+							EHRPWM_TBCTL_SYNCOSEL_SHIFT)
+#define EHRPWM_SYNCOUT_COUNTER_EQUAL_COMPAREB	(EHRPWM_TBCTL_SYNCOSEL_TBCTRCMPB << \
+							EHRPWM_TBCTL_SYNCOSEL_SHIFT)
+#define EHRPWM_SYNCOUT_DISABLE			(EHRPWM_TBCTL_SYNCOSEL_DISABLE << \
+							EHRPWM_TBCTL_SYNCOSEL_SHIFT)
+
+/* Shadow */
+#define EHRPWM_SHADOW_WRITE_ENABLE		0x0
+#define EHRPWM_SHADOW_WRITE_DISABLE		0x1
+
+/* Emulation mode */
+#define EHRPWM_STOP_AFTER_NEXT_TB_INCREMENT	(0x0 << EHRPWM_TBCTL_FREE_SOFT_SHIFT)
+#define EHRPWM_STOP_AFTER_A_COMPLETE_CYCLE	(0x1 << EHRPWM_TBCTL_FREE_SOFT_SHIFT)
+#define	EHRPWM_FREE_RUN				(0x2 << EHRPWM_TBCTL_FREE_SOFT_SHIFT)
+
+/* Time base clock */
+#define EHRPWM_TBCTL_CLKDIV_1   		(0x0001u)
+#define EHRPWM_TBCTL_CLKDIV_2   		(0x0002u)
+#define EHRPWM_TBCTL_CLKDIV_4   		(0x0004u)
+#define EHRPWM_TBCTL_CLKDIV_8   		(0x0008u)
+#define EHRPWM_TBCTL_CLKDIV_16  		(0x0010u)
+#define EHRPWM_TBCTL_CLKDIV_32  		(0x0020u)
+#define EHRPWM_TBCTL_CLKDIV_64  		(0x0040u)
+#define EHRPWM_TBCTL_CLKDIV_128 		(0x0080u)
+
+#define EHRPWM_TBCTL_HSPCLKDIV_1 		(0x0001u)
+#define EHRPWM_TBCTL_HSPCLKDIV_2 		(0x0002u)
+#define EHRPWM_TBCTL_HSPCLKDIV_4		(0x0004u)
+#define EHRPWM_TBCTL_HSPCLKDIV_6 		(0x0006u)
+#define EHRPWM_TBCTL_HSPCLKDIV_8 		(0x0008u)
+#define EHRPWM_TBCTL_HSPCLKDIV_10 		(0x000Au)
+#define EHRPWM_TBCTL_HSPCLKDIV_12 		(0x000Cu)
+#define EHRPWM_TBCTL_HSPCLKDIV_14 		(0x000Eu)
+
+/* Count direction after sync */
+#define EHRPWM_COUNT_DOWN_AFTER_SYNC		0x0
+#define EHRPWM_COUNT_UP_AFTER_SYNC		0x1
+
+
+/* Counter Compare */
+#define EHRPWM_SHADOW_A_EMPTY			(0x0 << EHRPWM_CMPCTL_SHDWAFULL_SHIFT)
+#define EHRPWM_SHADOW_A_FULL			(EHRPWM_CMPCTL_SHDWAFULL)
+#define EHRPWM_SHADOW_B_EMPTY			(0x0 << EHRPWM_CMPCTL_SHDWBFULL_SHIFT)
+#define EHRPWM_SHADOW_B_FULL			(EHRPWM_CMPCTL_SHDWBFULL)
+
+#define EHRPWM_CMPCTL_NOT_OVERWR_SH_FL		0x0
+#define EHRPWM_CMPCTL_OVERWR_SH_FL		0x1
+
+/* Compare register load */
+#define EHRPWM_COMPB_LOAD_MASK			EHRPWM_CMPCTL_LOADBMODE
+#define EHRPWM_COMPB_LOAD_COUNT_EQUAL_ZERO	(EHRPWM_CMPCTL_LOADBMODE_TBCTRZERO << \
+							EHRPWM_CMPCTL_LOADBMODE_SHIFT)
+#define EHRPWM_COMPB_LOAD_COUNT_EQUAL_PERIOD	(EHRPWM_CMPCTL_LOADBMODE_TBCTRPRD << \
+							EHRPWM_CMPCTL_LOADBMODE_SHIFT)
+#define EHRPWM_COMPB_LOAD_COUNT_EQUAL_ZERO_OR_PERIOD \
+						(EHRPWM_CMPCTL_LOADBMODE_ZEROORPRD << \
+						 	EHRPWM_CMPCTL_LOADBMODE_SHIFT)
+#define EHRPWM_COMPB_NO_LOAD			(EHRPWM_CMPCTL_LOADBMODE_FREEZE << \
+							EHRPWM_CMPCTL_LOADBMODE_SHIFT)
+
+
+#define EHRPWM_COMPA_LOAD_MASK			EHRPWM_CMPCTL_LOADAMODE
+#define EHRPWM_COMPA_LOAD_COUNT_EQUAL_ZERO	(EHRPWM_CMPCTL_LOADAMODE_TBCTRZERO << \
+							EHRPWM_CMPCTL_LOADAMODE_SHIFT)
+#define EHRPWM_COMPA_LOAD_COUNT_EQUAL_PERIOD	(EHRPWM_CMPCTL_LOADAMODE_TBCTRPRD << \
+							EHRPWM_CMPCTL_LOADAMODE_SHIFT)
+#define EHRPWM_COMPA_LOAD_COUNT_EQUAL_ZERO_OR_PERIOD \
+						(EHRPWM_CMPCTL_LOADAMODE_ZEROORPRD << \
+							EHRPWM_CMPCTL_LOADAMODE_SHIFT)						 
+#define EHRPWM_COMPA_NO_LOAD			(EHRPWM_CMPCTL_LOADAMODE_FREEZE << \
+							EHRPWM_CMPCTL_LOADAMODE_SHIFT)
+
+
+/* Chopper */
+#define EHRPWM_CHP_DUTY_12_5_PER		EHRPWM_PCCTL_CHPDUTY_1DIV8
+#define EHRPWM_CHP_DUTY_25_PER			EHRPWM_PCCTL_CHPDUTY_2DIV8
+#define EHRPWM_CHP_DUTY_37_5_PER		EHRPWM_PCCTL_CHPDUTY_3DIV8
+#define EHRPWM_CHP_DUTY_50_PER			EHRPWM_PCCTL_CHPDUTY_4DIV8
+#define EHRPWM_CHP_DUTY_62_5_PER		EHRPWM_PCCTL_CHPDUTY_5DIV8
+#define EHRPWM_CHP_DUTY_75_PER			EHRPWM_PCCTL_CHPDUTY_6DIV8
+#define EHRPWM_CHP_DUTY_87_5_PER		EHRPWM_PCCTL_CHPDUTY_7DIV8
+
+/* TZ */
+#define EHRPWM_TZ_ONESHOT			0x0
+#define EHRPWM_TZ_CYCLEBYCYCLE			0x1
+#define EHRPWM_TZ_ONESHOT_CLEAR			(EHRPWM_TZCLR_OST | EHRPWM_TZCLR_INT)
+#define EHRPWM_TZ_CYCLEBYCYCLE_CLEAR		(EHRPWM_TZCLR_CBC | EHRPWM_TZCLR_INT)
+
+#define AM38XX_EHRPWM_BAR(p)       (((EHRPWMGEN *)vxbDevSoftcGet(p))->regBase)
+#define AM38XX_EHRPWM_HANDLE(p)    ((EHRPWMGEN *)vxbDevSoftcGet(p))->regHandle
+
+#undef CSR_READ_4
+#define CSR_READ_4(pDev, addr)                          \
+   vxbRead32 (AM38XX_EHRPWM_HANDLE(pDev),                 \
+       (unsigned int *)((char *)AM38XX_EHRPWM_BAR(pDev) + addr))
+
+#undef CSR_WRITE_4
+#define CSR_WRITE_4(pDev, addr, data)                   \
+   vxbWrite32 (AM38XX_EHRPWM_HANDLE(pDev),                \
+       (unsigned int *)((char *)AM38XX_EHRPWM_BAR(pDev) + addr), data)
+
+#undef CSR_READ_2
+#define CSR_READ_2(pDev, addr)                                  \
+    vxbRead16 (AM38XX_EHRPWM_HANDLE(pDev),                            \
+        (UINT16 *)((char *)AM38XX_EHRPWM_BAR(pDev) + addr))
+
+#undef CSR_WRITE_2
+#define CSR_WRITE_2(pDev, addr, data)                           \
+    vxbWrite16 (AM38XX_EHRPWM_HANDLE(pDev),                           \
+        (UINT16 *)((char *)AM38XX_EHRPWM_BAR(pDev) + addr), data)
+
+
+#define FREQ_KHZ                   (1000U)
+/** Frequency in mega-hertz */
+#define FREQ_MHZ                   (1000U * FREQ_KHZ)
+/** \brief Functional clock to the PWMSS. */
+#define SOC_EHRPWM_2_MODULE_FREQ      (100U * FREQ_MHZ)
+#define SOC_EHRPWM_TB_FREQ      (10U * FREQ_MHZ)
+/** \brief Time base clock high speed clock divider value 14. */
+#define EPWM_TBCTL_HSPCLKDIV_14       (0x000EU)
+#define EPWM_FREQ 					(90U * FREQ_KHZ)
+
+#define CSR_SET_FIELD(regVal, REG_FIELD, fieldVal)                              \
+    ((regVal) = ((regVal) & (uint32_t) (~(uint32_t) REG_FIELD##_MASK)) |       \
+                    ((((uint32_t) fieldVal) << (uint32_t) REG_FIELD##_SHIFT) & \
+                    (uint32_t) REG_FIELD##_MASK))
+
+#define CSR_GET_FIELD(regVal, REG_FIELD)                                        \
+    (((regVal) & (uint32_t) REG_FIELD##_MASK) >> (uint32_t) REG_FIELD##_SHIFT)
+
+#ifdef __cplusplus
+}
+#endif
+#endif
+
+

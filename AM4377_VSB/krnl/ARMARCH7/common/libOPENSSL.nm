@@ -1,0 +1,36 @@
+
+libOPENSSL.a:
+
+wp_dgst.o:
+00000000 b m.82
+00000000 T WHIRLPOOL_Init
+         U memset
+00000024 T WHIRLPOOL_BitUpdate
+         U whirlpool_block
+         U memcpy
+000002c0 T WHIRLPOOL_Update
+00000318 T WHIRLPOOL_Final
+00000440 T WHIRLPOOL
+
+wp_block.o:
+00000000 d Cx
+00000000 T whirlpool_block
+         U memcpy
+
+libOPENSSL.a:
+
+wp_dgst.o:
+00000000 b m.82
+00000000 T WHIRLPOOL_Init
+         U memset
+00000024 T WHIRLPOOL_BitUpdate
+         U whirlpool_block
+         U memcpy
+000002c0 T WHIRLPOOL_Update
+00000318 T WHIRLPOOL_Final
+00000440 T WHIRLPOOL
+
+wp_block.o:
+00000000 d Cx
+00000000 T whirlpool_block
+         U memcpy

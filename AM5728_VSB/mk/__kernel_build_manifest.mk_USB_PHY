@@ -1,0 +1,14 @@
+
+# this file is generated
+
+# layers that have been built in the VSB
+__BUILT_LAYERS += USB_PHY
+
+__OBJS_BUILT_USB_PHY = C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objusbphy/vxbUsbPhyLib.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objusbphy/vxbFdtUsbPhyLib.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objusbphy/vxbFdtUsbPhyUlpiViewPort.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objusbphy/vxbFdtUsbPhyFslOnChip.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objusbphy/vxbFdtUsbPhyAltSocGen5.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objusbphy/vxbFdtUsbPhyAm335x.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objusbphy/vxbUsbPhyLib.d C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objusbphy/vxbFdtUsbPhyLib.d C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objusbphy/vxbFdtUsbPhyUlpiViewPort.d C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objusbphy/vxbFdtUsbPhyFslOnChip.d C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objusbphy/vxbFdtUsbPhyAltSocGen5.d C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objusbphy/vxbFdtUsbPhyAm335x.d
+
+
+# built libraries
+__BUILT_LIBRARIES += krnl_ARMARCH7_common_usbphy
+
+
+__OBJS_BUILT_krnl_ARMARCH7_common_usbphy = C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objusbphy/vxbUsbPhyLib.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objusbphy/vxbFdtUsbPhyLib.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objusbphy/vxbFdtUsbPhyUlpiViewPort.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objusbphy/vxbFdtUsbPhyFslOnChip.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objusbphy/vxbFdtUsbPhyAltSocGen5.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objusbphy/vxbFdtUsbPhyAm335x.o 

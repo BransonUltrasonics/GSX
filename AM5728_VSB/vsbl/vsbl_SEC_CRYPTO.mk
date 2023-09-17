@@ -1,0 +1,20 @@
+# Automatically generated file: do not edit
+
+##########################
+# SEC_CRYPTO Section
+##########################
+
+
+ifdef _WRS_CONFIG_SEC_CRYPTO
+VSBL_SEC_CRYPTO_SRC = 
+VSBL_SEC_CRYPTO_DEPEND = 
+ifdef _WRS_CONFIG_SEC_CRYPTO_1_0_4_0
+VSBL_SEC_CRYPTO_SRC += SEC_CRYPTO
+VSBL_SEC_CRYPTO_DEPEND += CORE_KERNEL
+SEC_CRYPTO_FASTBUILD = YES
+SEC_CRYPTO_FRIEND = DISK_ENCRYPTION
+VSBL_SEC_CRYPTO_PATH = $(WIND_BASE)/pkgs/security/secCrypto-1.0.4.0
+VSBL_SEC_CRYPTO_VERSION = SEC_CRYPTO_1_0_4_0
+endif
+endif
+

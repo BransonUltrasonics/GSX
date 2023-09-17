@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="or2clk">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2021-3-30T22:11:31</timestamp>
+    <pin polarity="Input" x="0" y="-176" name="I1" />
+    <pin polarity="Output" x="272" y="-144" name="O" />
+    <pin polarity="Input" x="0" y="-112" name="I0" />
+    <pin polarity="Input" x="112" y="-64" name="C" />
+    <graph>
+        <arc ex="48" ey="-192" sx="52" sy="-96" r="101" cx="-41" cy="-141" />
+        <arc ex="208" ey="-144" sx="112" sy="-96" r="120" cx="110" cy="-218" />
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="124" y="-200" type="symbol" />
+        <line x2="116" y1="-192" y2="-192" x1="48" />
+        <line x2="56" y1="-176" y2="-176" x1="0" />
+        <line x2="208" y1="-144" y2="-144" x1="272" />
+        <arc ex="116" ey="-192" sx="208" sy="-144" r="130" cx="105" cy="-62" />
+        <line x2="60" y1="-112" y2="-112" x1="0" />
+        <line x2="116" y1="-96" y2="-96" x1="52" />
+        <line x2="104" y1="-112" y2="-96" x1="112" />
+        <line x2="120" y1="-112" y2="-96" x1="112" />
+        <line x2="112" y1="-96" y2="-64" x1="112" />
+        <attrtext attrname="PinName" x="108" y="-120" type="pin C" />
+        <attrtext style="alignment:RIGHT" attrname="PinName" x="200" y="-144" type="pin O" />
+        <attrtext attrname="PinName" x="64" y="-112" type="pin I0" />
+        <attrtext attrname="PinName" x="64" y="-176" type="pin I1" />
+    </graph>
+</symbol>

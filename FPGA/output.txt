@@ -1,0 +1,11 @@
+Storage Target: Xilinx Flash/PROM
+Storage Family: Platform Flash
+xcf08p          [8 M]
+FF
+FPGA_GSX_output
+C:\Users\76053\Documents\Branson\Proyectos\Next Generation\FPGA\GSX_FPGA/
+
+MCS
+No
+No
+No

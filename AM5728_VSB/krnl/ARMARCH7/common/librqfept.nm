@@ -1,0 +1,58 @@
+
+librqfept.a:
+
+readyQFeptLib.o:
+00000000 b startedCpuSet
+00000000 T readyQInit
+         U vxCpuConfigured
+         U readyQSmpBMap
+         U readyQSmpHead
+         U qPriBMapInit
+00000064 T readyQCpuInit
+00000080 T readyQTaskInit
+         U taskStackAllot
+00000128 T readyQPut
+         U vxCpuSetReserved
+         U vxKernelVars
+         U vxCpuIndexGet
+00000214 T readyQRemove
+0000031c T readyQResort
+0000045c T readyQRotate
+00000504 T readyQPreemptCheck
+         U vxAtomic32And
+0000058c T readyQTaskGet
+         U vxAtomic32Get
+         U vxAtomic32Or
+         U vxCpuEnabled
+00000904 T readyQNextCpuGet
+00000974 T readyQNodeToTcb
+0000097c T readyQReservationCheck
+
+librqfept.a:
+
+readyQFeptLib.o:
+00000000 b startedCpuSet
+00000000 T readyQInit
+         U vxCpuConfigured
+         U readyQSmpBMap
+         U readyQSmpHead
+         U qPriBMapInit
+00000064 T readyQCpuInit
+00000080 T readyQTaskInit
+         U taskStackAllot
+00000128 T readyQPut
+         U vxCpuSetReserved
+         U vxKernelVars
+         U vxCpuIndexGet
+00000214 T readyQRemove
+0000031c T readyQResort
+0000045c T readyQRotate
+00000504 T readyQPreemptCheck
+         U vxAtomic32And
+0000058c T readyQTaskGet
+         U vxAtomic32Get
+         U vxAtomic32Or
+         U vxCpuEnabled
+00000904 T readyQNextCpuGet
+00000974 T readyQNodeToTcb
+0000097c T readyQReservationCheck

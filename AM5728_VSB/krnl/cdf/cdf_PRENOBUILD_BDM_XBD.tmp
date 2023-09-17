@@ -1,0 +1,16 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/storage/bdm-1.0.1.3/xbd-1.0.2.1/cdf/01comp_device_manager.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/storage/bdm-1.0.1.3/xbd-1.0.2.1/cdf/01comp_xbd.cdf>
+
+Layer Layer::BDM_XBD {
+	NAME BDM_XBD
+}

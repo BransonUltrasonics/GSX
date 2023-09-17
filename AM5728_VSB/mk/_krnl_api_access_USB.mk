@@ -1,0 +1,24 @@
+
+ifndef __HEADER_ACCESS_USB_INCLUDED
+__HEADER_ACCESS_USB_INCLUDED = TRUE
+
+
+
+
+
+__SUBSCRIBE_ACCESS_USB = 
+
+
+
+ifneq ($(wildcard $(VSB_KERNEL_PROTECTED_INCLUDE_DIR)/USB),)
+
+ifneq ($(VSBL_NAME),)
+ifeq ($(VSBL_NAME),$(filter $(VSBL_NAME), USB))
+VSBL_LKH += $(OPTION_INCLUDE_DIR)$(VSB_KERNEL_PROTECTED_INCLUDE_DIR)/USB
+endif
+endif
+
+endif
+
+endif
+

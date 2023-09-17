@@ -1,0 +1,78 @@
+
+librqdef.a:
+
+readyQDeltaLib.o:
+00000000 b readyQGblHead
+00000010 b readyQGblBMap
+0000137c t readyQRotateOrderListGet
+00000938 b execTasks
+000000b4 t readyQLowCpuFind
+00000958 b nextCpuSet
+00000550 t readyQCandidateTaskFind
+000006f0 t readyQCandidateTaskUpdate
+0000095c b taskIdCurrentRotateOrder
+00000000 T readyQInit
+         U vxCpuConfigured
+         U readyQSmpBMap
+         U readyQSmpHead
+         U qPriBMapInit
+000011c4 T readyQReservationCheck
+         U _func_readyQReservationCheck
+         U _func_readyQRotateOrderListGet
+00000090 T readyQCpuInit
+000000a4 T readyQTaskInit
+         U vxCpuEnabled
+         U vxCpuSetReserved
+         U vxAtomic32Get
+         U vxAtomic32Or
+00000174 T readyQPut
+         U vxCpuIndexGet
+         U ffs32Lsb
+         U vxKernelVars
+0000071c T readyQRemove
+0000084c T readyQResort
+00000b10 T readyQRotate
+00000ed0 T readyQPreemptCheck
+         U vxAtomic32And
+00000f44 T readyQTaskGet
+00001164 T readyQNextCpuGet
+000011bc T readyQNodeToTcb
+
+librqdef.a:
+
+readyQDeltaLib.o:
+00000000 b readyQGblHead
+00000010 b readyQGblBMap
+0000137c t readyQRotateOrderListGet
+00000938 b execTasks
+000000b4 t readyQLowCpuFind
+00000958 b nextCpuSet
+00000550 t readyQCandidateTaskFind
+000006f0 t readyQCandidateTaskUpdate
+0000095c b taskIdCurrentRotateOrder
+00000000 T readyQInit
+         U vxCpuConfigured
+         U readyQSmpBMap
+         U readyQSmpHead
+         U qPriBMapInit
+000011c4 T readyQReservationCheck
+         U _func_readyQReservationCheck
+         U _func_readyQRotateOrderListGet
+00000090 T readyQCpuInit
+000000a4 T readyQTaskInit
+         U vxCpuEnabled
+         U vxCpuSetReserved
+         U vxAtomic32Get
+         U vxAtomic32Or
+00000174 T readyQPut
+         U vxCpuIndexGet
+         U ffs32Lsb
+         U vxKernelVars
+0000071c T readyQRemove
+0000084c T readyQResort
+00000b10 T readyQRotate
+00000ed0 T readyQPreemptCheck
+         U vxAtomic32And
+00000f44 T readyQTaskGet
+00001164 T readyQNextCpuGet
+000011bc T readyQNodeToTcb

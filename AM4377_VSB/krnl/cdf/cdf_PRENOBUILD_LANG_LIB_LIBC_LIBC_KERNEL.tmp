@@ -1,0 +1,16 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/lang-lib/libc-1.0.0.1/libc-kernel-1.0.6.0/cdf/00libc.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/lang-lib/libc-1.0.0.1/libc-kernel-1.0.6.0/cdf/10libc_cert.cdf>
+
+Layer Layer::LANG_LIB_LIBC_LIBC_KERNEL {
+	NAME LANG_LIB_LIBC_LIBC_KERNEL
+}

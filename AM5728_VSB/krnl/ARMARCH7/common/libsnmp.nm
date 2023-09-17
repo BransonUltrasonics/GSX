@@ -1,0 +1,1588 @@
+
+libsnmp.a:
+
+asy_back.o:
+00000088 t async_get_routines
+00000000 T async_compat_test
+         U vbp_to_index_error
+         U testproc_good
+         U testproc_tproc_error
+         U getproc_got_int32
+         U getproc_got_uint32
+         U getproc_got_string
+         U getproc_got_object_id
+         U snmpdMemoryFree
+         U getproc_got_empty
+         U memcpy
+         U getproc_got_ip_address
+         U DYNCFG_VBL_envoy_use_v2_types
+         U getproc_got_uint64_high_low
+         U getproc_got_uint64
+         U getproc_error
+000002f4 T async_compat_next
+         U nextproc_no_next
+         U nextproc_next_instance
+00000374 T async_compat_get
+         U getproc_nosuchins
+00000410 T async_compat_set
+         U setproc_error
+         U setproc_good
+
+asy_util.o:
+00000000 T getproc_started
+00000010 T getproc_good
+00000020 T getproc_error
+         U vbp_to_index_error
+00000058 T getproc_nosuchins
+000000b0 T getproc_got_object_id
+         U build_object_id
+00000114 T nextproc_started
+00000124 T nextproc_good
+00000134 T nextproc_no_next
+00000144 T nextproc_error
+0000017c T nextproc_next_instance
+         U snmpdMemoryAlloc
+         U memcpy
+         U Clean_Obj_ID
+00000220 T nextproc_next_instance_string
+00000314 T testproc_started
+00000324 T testproc_good
+00000334 T testproc_error
+000003c0 T testproc_tproc_error
+000004a8 T setproc_started
+000004b8 T setproc_good
+000004c8 T setproc_error
+00000500 T undoproc_started
+00000510 T undoproc_good
+00000520 T undoproc_error
+0000053c T getproc_got_int32
+00000558 T getproc_got_uint32
+00000570 T getproc_got_ip_address
+000005b8 T getproc_got_empty
+000005d0 T getproc_got_string
+0000061c T getproc_got_octet_string
+         U EBufferAllocateLoad
+00000650 T getproc_got_uint64
+00000678 T getproc_got_uint64_high_low
+
+bindint.o:
+00000000 T VBL_Bind_Integer
+         U vblp_index_to_vbp
+         U build_object_id
+00000058 T SNMP_Bind_Integer
+
+bindip.o:
+00000000 T VBL_Bind_IP_Address
+         U vblp_index_to_vbp
+         U build_object_id
+         U memcpy
+00000064 T SNMP_Bind_IP_Address
+
+bindnull.o:
+00000000 T VBL_Bind_Null
+         U vblp_index_to_vbp
+         U build_object_id
+00000058 T SNMP_Bind_Null
+
+bindoid.o:
+00000000 T VBL_Bind_Object_ID
+         U vblp_index_to_vbp
+         U build_object_id
+         U Clean_Obj_ID
+00000084 T SNMP_Bind_Object_ID
+
+bindstr.o:
+00000000 T VBL_Bind_String
+         U vblp_index_to_vbp
+         U build_object_id
+         U snmpdMemoryAlloc
+         U Clean_Obj_ID
+         U memcpy
+000000e4 T SNMP_Bind_String
+
+binduint.o:
+00000000 T VBL_Bind_Unsigned_Integer
+         U vblp_index_to_vbp
+         U build_object_id
+0000007c T SNMP_Bind_Unsigned_Integer
+
+snmpEBuffer.o:
+00000000 T EBufferClone
+         U snmpdMemoryAlloc
+         U memcpy
+00000084 T EBufferClean
+         U snmpdMemoryFree
+000000c4 T EBufferAppend
+0000012c T EBufferSeek
+00000200 T EBufferAdjust
+000002a8 T EBufferReplace
+00000360 T EBufferAllocateLoad
+
+buildpkt.o:
+00000000 T vblp_index_to_vbp
+00000040 T index_to_vbp
+00000054 T vbp_to_index_error
+         U __div32
+
+creatreq.o:
+00000000 T _snmp_create_request
+         U SNMP_Allocate
+         U VarBindList_Allocate
+         U SNMP_Free
+00000068 T SNMP_Create_Request2
+
+creatint.o:
+00000000 T SNMP_Create_Internal_Request
+         U memset
+         U SNMP_Create_Request2
+         U SNMP_CoarseLock
+         U semTake
+         U p_snmpIoCommunityValidate
+         U SNMP_Free
+         U snmp_stats
+
+snmpBerDecode.o:
+00000000 T A_DecodeTypeValue
+000000e4 T A_DecodeLength
+00000248 T A_DecodeOctetStringData
+         U snmpdMemoryAlloc
+         U Lcl_Read
+         U snmpdMemoryFree
+000002e8 T A_DecodeOctetString
+0000034c T A_DecodeOctetStringWTC
+         U Lcl_Peekc
+000003f0 T A_DecodeOctetWTC
+000004c4 T A_DecodeIntegerData
+00000584 T A_DecodeInteger
+000005e8 T A_DecodeIntegerWTC
+00000690 T A_DecodeObjectIdData
+         U Lcl_Seek
+000008f4 T A_DecodeObjectId
+00000940 T A_DecodeObjectIdWTC
+000009cc T A_DecodeInteger64Data
+00000abc T A_DecodeInteger64
+
+snmpBerEncode.o:
+00000524 t A_EncodeSubId
+00000000 T A_SizeOfInt
+00000064 T A_SizeOfUnsignedInt
+000000b4 T A_SizeOfObjectId
+00000194 T A_SizeOfUnsignedInt64
+00000238 T A_EncodeType
+000002f8 T A_EncodeLength
+000003a0 T A_EncodeInt
+00000428 T A_EncodeUnsignedInt
+000004c4 T A_EncodeOctetString
+000005c8 T A_EncodeObjectId
+00000678 T A_EncodeUnsignedInt64
+000007b0 T A_EncodeHelper
+         U memcpy
+
+env_init.o:
+00000000 T envoy_init
+         U determineSnmpdComponents
+         U envoy_timer_init
+00000004 C DYNCFG_VBL_agentx_master_component
+00000004 C DYN_PTR_envoy_ax_ma_init
+00000004 C DYNCFG_VBL_agentx_subagent_component
+00000004 C DYN_PTR_envoy_ax_sa_init
+         U semBCreate
+00000004 C SNMP_CoarseLock
+00000004 C SNMP_infrastructure_lock
+         U viewroot
+0000008c T envoy_dyncfg_init
+00000004 C DYNCFG_VBL_envoy_use_v2_types
+00000004 C DYNCFG_VBL_envoy_use_v2_protos
+00000004 C DYNCFG_VBL_envoy_snmp_coexistence
+00000004 C DYNCFG_VBL_envoy_snmp_target
+00000004 C DYNCFG_VBL_envoy_snmp_proxy
+00000004 C DYNCFG_VBL_snmpv3_component
+00000004 C DYN_PTR_envoy_v3_init
+00000004 C DYNCFG_VBL_envoy_snmp_notify
+
+etimer.o:
+00000050 t envoy_timer_update
+00000000 b envoy_last_update.4
+000000bc t envoy_timer_exp
+00000000 T envoy_tm_init
+0000000c T envoy_now
+         U tick64Get
+         U __mul64
+         U sysClkRateGet
+         U __udiv64
+         U envoy_timer_list
+         U SNMP_TimerLock
+         U semTake
+00000004 C p_envoy_call_timer
+         U semGive
+0000017c T envoy_tm_cancel
+00000268 T envoy_tm_set
+
+etimerin.o:
+00000000 T envoy_timer_init
+00000000 D envoy_timer_list
+         U semBCreate
+00000004 C SNMP_TimerLock
+
+exists.o:
+00000000 T it_exists
+
+exist_as.o:
+00000000 T it_exists_async
+         U testproc_good
+         U testproc_error
+
+gas_int.o:
+00000000 T get_int_async
+         U getproc_nosuchins
+         U getproc_got_int32
+
+gas_ip.o:
+00000000 T get_ip_address_async
+         U getproc_nosuchins
+         U getproc_got_ip_address
+
+gas_oid.o:
+00000000 T get_object_identifier_async
+         U getproc_nosuchins
+         U getproc_got_object_id
+
+gas_str.o:
+00000000 T get_string_async
+         U getproc_nosuchins
+         U strlen
+         U getproc_got_string
+
+gas_uint.o:
+00000000 T get_uint_async
+         U getproc_nosuchins
+         U getproc_got_uint32
+
+gas_ulng.o:
+00000000 T get_ulong_async
+         U getproc_nosuchins
+         U getproc_got_uint32
+
+gas_incr.o:
+00000000 T get_TestAndIncr_async
+         U getproc_nosuchins
+         U getproc_got_int32
+
+get_int.o:
+00000000 T get_int
+
+get_ip.o:
+00000000 T get_ip_address
+
+get_oid.o:
+00000000 T get_object_identifier
+
+get_str.o:
+00000000 T get_string
+         U strlen
+
+get_uint.o:
+00000000 T get_uint
+
+get_ulng.o:
+00000000 T get_ulong
+
+getpdu.o:
+00000000 T snmpdMemoryAlloc
+         U malloc
+00000004 T snmpdMemoryFree
+         U free
+00000008 T SNMP_Process_Get_PDU
+         U VarBindList_Allocate
+         U build_object_id
+         U Clean_vb
+         U DYNCFG_VBL_agentx_master_component
+         U SNMP_infrastructure_lock
+         U semTake
+         U SNMP_View_Find_Family
+         U semGive
+         U find_object_node
+         U ENVOY_Send_SNMP_Error_Packet
+00000004 C getCmntyViewTbl
+00000004 C setCmntyViewTbl
+
+ip2rlist.o:
+00000000 T ip_to_rlist
+
+ip2llist.o:
+00000000 T ip_to_llist
+
+llistcmp.o:
+00000000 T llist_cmp
+
+localio.o:
+00000000 T Lcl_Open
+         U snmpdMemoryAlloc
+00000060 T Lcl_Close
+         U snmpdMemoryFree
+00000084 T Lcl_Peekc
+000000bc T Lcl_Read
+00000138 T Lcl_Seek
+000001c0 T Lcl_Resize
+00000234 T Lcl_Dup
+
+mibutils.o:
+00000000 T std_next
+00000018 T std_next_async
+         U nextproc_no_next
+         U group_by_getproc_and_instance
+         U nextproc_next_instance
+00000130 T branch_free
+         U snmpdMemoryFree
+00000194 T Find_Node_From_Root
+00000000 D p_mib_root_node
+0000024c T Add_Node_From_Root
+         U snmpdMemoryAlloc
+         U memset
+         U memcpy
+0000048c T Remove_Node_From_Root
+         U DYNCFG_VBL_agentx_master_component
+
+mib_fon.o:
+00000000 T find_object_node
+         U SNMP_View_Family_Check
+         U p_mib_root_node
+         U DYNCFG_VBL_agentx_master_component
+
+mib_next.o:
+00000074 t find_next_helper
+00000000 T _snmp_leaf_check
+         U SNMP_View_Family_Check
+         U snmpdMemoryAlloc
+         U memcpy
+         U snmpdMemoryFree
+         U DYNCFG_VBL_agentx_master_component
+         U DYN_PTR__snmp_find_next_helper_ax
+00000318 T find_next_object
+         U p_mib_root_node
+         U Clean_Obj_ID
+         U DYN_PTR__snmp_find_next_bound
+
+nextpdu.o:
+00000000 T SNMP_Process_Next_PDU
+         U DYNCFG_VBL_envoy_use_v2_protos
+         U SNMP_Bufsize_For_Packet
+         U snmp_stats
+         U Clean_vb_list
+         U VarBindList_Allocate
+         U DYNCFG_VBL_agentx_master_component
+         U SNMP_infrastructure_lock
+         U semTake
+         U ENVOY_Send_SNMP_Error_Packet
+         U SNMP_View_Find_Family
+         U semGive
+         U find_next_object
+         U build_object_id
+00000330 T SNMP_Process_Next_Redo
+         U SNMP_View_Family_Check
+         U Clean_vb_data
+         U Clean_Obj_ID
+         U snmpdMemoryFree
+00000740 T SNMP_Process_Bulk_Redo
+         U Clean_vb
+         U VBList_Allocate
+
+null_gas.o:
+00000000 T null_get_async
+         U getproc_good
+
+null_get.o:
+00000000 T null_get_proc
+
+null_nas.o:
+00000000 T null_next_async
+         U nextproc_next_instance
+         U nextproc_good
+
+null_nxt.o:
+00000000 T null_next_proc
+
+null_tas.o:
+00000000 T null_test_async
+         U testproc_good
+
+null_tst.o:
+00000000 T null_test_proc
+
+null_sas.o:
+00000000 T null_set_async
+         U setproc_good
+
+null_set.o:
+00000000 T null_set_proc
+
+objectid.o:
+00000000 T build_object_id
+         U snmpdMemoryAlloc
+         U memcpy
+00000058 T Clean_Obj_ID
+         U snmpdMemoryFree
+
+oid2ip.o:
+00000000 T oid_to_ip
+
+oid2str.o:
+00000000 T oid_to_string
+00000090 T string_to_oid
+
+oidcmp.o:
+00000000 T oidcmp
+
+oidcmp2.o:
+00000000 T oidcmp2
+
+oidorder.o:
+00000000 T oidorder
+
+rcv_pkt.o:
+00000000 T async_compat_error
+00000014 T async_compat_io
+         U SNMP_Process_Finish
+0000004c T Process_Received_SNMP_Packet
+         U Process_Rcvd_SNMP_Packet_Async
+
+row.o:
+00000000 T scan_vb_for_leaf
+0000006c T scan_for_leaf_and_match
+         U oidorder
+000000e0 T vb_extract_row
+         U index_to_vbp
+
+row_get.o:
+00000000 T group_by_getproc_and_instance
+         U oidcmp2
+
+rowloose.o:
+00000000 T vb_extract_row_loose
+         U index_to_vbp
+         U scan_for_leaf_and_match
+
+rpktasy.o:
+00000000 t snmp_finish_counters
+000005bc t process_packet_one
+00000004 C snmp_stats
+000000a8 T ENVOY_Send_SNMP_Error_Packet
+         U Clean_vb_list
+         U SNMP_Bufsize_For_Packet
+         U DYNCFG_VBL_envoy_use_v2_types
+00000270 T ENVOY_Send_SNMP_Packet
+000003c4 T SNMP_Continue_function
+         U SNMP_Process_Next_Redo
+         U SNMP_Process_Set_PDU
+         U DYNCFG_VBL_envoy_use_v2_protos
+         U SNMP_Process_Bulk_Redo
+         U semGive
+         U SNMP_Free
+0000051c T process_packet_two
+         U semTake
+         U SNMP_Process_Get_PDU
+         U SNMP_Process_Next_PDU
+         U SNMP_Process_Test_PDU
+00000698 T Process_Rcvd_SNMP_Packet_Async
+         U SNMP_Decode_Packet_WER
+00000758 T Process_Internal_SNMP_Packet
+00000774 T SNMP_Process_Finish
+         U SNMP_Encode_Pkt_With_Siz
+
+sas_int.o:
+00000000 T undo_int_async
+         U undoproc_good
+0000002c T set_int_async
+         U setproc_good
+
+sas_uint.o:
+00000000 T undo_uint_async
+         U undoproc_good
+0000002c T set_uint_async
+         U setproc_good
+
+sas_incr.o:
+00000000 T undo_TestAndIncr_async
+         U undoproc_good
+0000002c T test_TestAndIncr_async
+         U testproc_error
+         U testproc_good
+000000a8 T set_TestAndIncr_async
+         U setproc_good
+
+scan_loc.o:
+00000000 T scan_vb_for_locator
+
+set_int.o:
+00000000 T set_int
+
+set_uint.o:
+00000000 T set_uint
+
+serial.o:
+
+setpdu.o:
+00000000 T SNMP_Process_Test_PDU
+         U semGive
+         U semTake
+         U DYNCFG_VBL_envoy_use_v2_protos
+         U SNMP_Bufsize_For_Packet
+         U DYNCFG_VBL_agentx_master_component
+         U SNMP_infrastructure_lock
+         U SNMP_View_Find_Family
+         U find_object_node
+         U ENVOY_Send_SNMP_Error_Packet
+00000000 D p_snmpHookSetPduValidate
+         U ENVOY_Send_SNMP_Packet
+00000308 T SNMP_Process_Set_PDU
+00000004 D p_snmpHookPreSet
+0000000c D p_snmpHookPostSet
+         U undoproc_error
+00000008 D p_snmpHookSetFailed
+00000010 D p_snmpHookPrivRelease
+00000014 D p_snmpIoCommunityValidate
+
+snmp_d.o:
+00000000 t count_var_binds
+000000c8 t decode_pkt_to_vb
+000002f0 t decode_pkt_to_vblist
+000005ac t SNMP_Decode_V1_Packet
+         U A_DecodeTypeValue
+         U A_DecodeLength
+         U Lcl_Seek
+         U A_DecodeObjectIdWTC
+         U Lcl_Peekc
+         U A_DecodeIntegerData
+         U A_DecodeOctetStringData
+         U A_DecodeObjectIdData
+         U memset
+         U memcpy
+         U EBufferClean
+         U DYNCFG_VBL_envoy_use_v2_types
+         U A_DecodeInteger64Data
+         U VarBindList_Allocate
+00000414 T SNMP_Decode_PDU
+         U A_DecodeOctetStringWTC
+         U A_DecodeIntegerWTC
+00000004 C DYN_PTR_SNMP_community_coexistence_lookup
+         U snmp_stats
+00000758 T SNMP_Decode_Packet_WER
+         U Lcl_Open
+         U Lcl_Resize
+         U Lcl_Close
+         U SNMP_Allocate
+         U SNMP_CoarseLock
+         U semTake
+         U SNMP_Free
+00000000 D etc_copyright
+0000003a D isi_copyright
+0000006c D wind_copyright
+
+snmp_e.o:
+0000018c t set_vbl_sizes
+000002b0 t bufsize_for_normal_pkt
+0000036c t encode_var_bind_list
+00000668 t encode_snmp_common
+000006e8 t bufsize_for_trap_pkt
+000007ec t encode_snmp_trap_pdu
+00000000 T vbsize
+         U A_SizeOfObjectId
+         U A_SizeOfInt
+         U A_SizeOfUnsignedInt
+         U DYNCFG_VBL_envoy_use_v2_types
+         U A_SizeOfUnsignedInt64
+00000218 T set_pdu_size
+         U A_EncodeHelper
+         U A_EncodeType
+         U A_EncodeLength
+         U A_EncodeObjectId
+         U A_EncodeInt
+         U A_EncodeUnsignedInt
+         U A_EncodeOctetString
+         U A_EncodeUnsignedInt64
+000005d0 T encode_snmp_normal_pdu
+000008b0 T SNMP_Bufsize_For_Packet
+00000904 T SNMP_Encode_Pkt_With_Siz
+         U snmpdMemoryAlloc
+000009e0 T SNMP_Encode_Packet
+
+tree.o:
+00000000 T TREE_Add
+         U snmpdMemoryAlloc
+         U snmpdMemoryFree
+00000200 T TREE_Delete
+00000344 T TREE_Get
+000003ec T TREE_GetPrev
+000004e0 T TREE_GetNext
+0000054c T TREE_Extract
+00000594 T TREE_Install
+000005e8 T TREE_Name
+
+vb_rtns.o:
+0000019c t Clean_Pkt
+00000000 T Clean_vb_data
+         U EBufferClean
+         U Clean_Obj_ID
+00000054 T Clean_vb
+         U DYNCFG_VBL_agentx_master_component
+         U SNMP_infrastructure_lock
+         U semTake
+         U snmpdMemoryFree
+         U semGive
+0000010c T Clean_vb_list
+         U p_snmpHookPrivRelease
+         U semDelete
+00000224 T SNMP_Free
+00000248 T VarBindList_Allocate
+         U snmpdMemoryAlloc
+         U memset
+00000290 T VBList_Allocate
+000002f4 T VBList_Free
+0000030c T Initialize_Pkt
+         U semBCreate
+00000370 T SNMP_Allocate
+
+dyncfgvx.o:
+00000000 T determineSnmpdComponents
+00000004 C snmpdEngineConfigMutex
+         U semTake
+         U DYNCFG_VBL_envoy_use_v2_types
+         U DYNCFG_VBL_envoy_use_v2_protos
+00000000 D p_snmpdInstalledComponentsValue
+         U DYNCFG_VBL_agentx_master_component
+         U DYNCFG_VBL_agentx_subagent_component
+         U DYNCFG_VBL_snmpv3_component
+         U DYNCFG_VBL_envoy_snmp_coexistence
+         U DYNCFG_VBL_envoy_snmp_proxy
+         U DYNCFG_VBL_envoy_snmp_target
+         U DYNCFG_VBL_envoy_snmp_notify
+         U semGive
+00000004 C DYN_PTR__snmp_find_next_helper_ax
+00000004 C DYN_PTR__snmp_find_next_bound
+00000004 C DYN_PTR_SNMP_Decode_V3_Packet
+00000004 C DYN_PTR_SNMP_Check_Retrans_List
+00000004 C DYN_PTR_SNMP_Auth_Add_MD5
+00000004 C DYN_PTR_SNMP_Auth_Add_SHA
+00000004 C DYN_PTR_SNMP_Priv_Add_DES
+00000004 C DYN_PTR_SNMP_Priv_Add_AESCFB128
+00000004 C DYN_PTR_bufsize_for_v3_pkt
+00000004 C DYN_PTR_encode_snmp_v3
+00000004 C DYN_PTR_Send_Report_PDU
+
+view_chk.o:
+00000000 T SNMP_View_Find_Family
+00000000 D viewroot
+         U memcmp
+00000084 T SNMP_View_Family_Check
+         U __div32
+         U __rem32
+000002c0 T SNMP_View_Check
+
+view_rts.o:
+0000014c t install_view_in_masks
+00000000 T SNMP_View_Create
+         U snmpdMemoryAlloc
+         U build_object_id
+         U snmpdMemoryFree
+00000090 T SNMP_View_Delete
+         U Clean_Obj_ID
+         U EBufferClean
+000000bc T SNMP_View_Next
+         U viewroot
+00000118 T SNMP_View_Set_Mask
+         U EBufferReplace
+         U oidcmp2
+000001d4 T SNMP_View_2275_Install
+         U memcmp
+         U memcpy
+0000038c T SNMP_View_2275_Name
+000003e8 T SNMP_View_2275_Full_Name
+0000046c T SNMP_View_2275_Deinstall
+0000053c T SNMP_View_2275_Lookup
+
+vmth2275.o:
+00000000 t viewtable_destroy_cleanup
+0000002c t viewtable_create_cleanup
+00000060 t viewtable_update_cleanup
+0000008c t viewtable_destroy_undo
+00000120 t viewtable_create_undo
+00000198 t viewtable_update_undo
+00000268 t viewtable_set_cleanup
+00000970 t get_view_data
+0000000c D p_snmp_view_2275_backout
+         U SNMP_View_2275_Deinstall
+         U SNMP_View_Delete
+         U undoproc_good
+         U oid_to_string
+         U SNMP_View_2275_Install
+         U undoproc_error
+00000010 D p_snmp_view_2275_undo
+         U EBufferClean
+         U memcpy
+00000014 D p_snmp_view_2275_finished
+000002bc T viewtable_test
+         U memset
+         U group_by_getproc_and_instance
+         U testproc_good
+         U SNMP_View_2275_Lookup
+         U testproc_error
+00000004 D p_snmp_view_2275_test
+         U memcmp
+         U SNMP_View_Create
+         U EBufferClone
+00000804 T viewtable_set
+00000008 D p_snmp_view_2275_set
+         U setproc_good
+         U getproc_got_string
+         U getproc_got_int32
+00000a20 T viewtable_get
+         U getproc_nosuchins
+00000af8 T viewtable_next
+         U SNMP_View_Next
+         U viewroot
+         U oidcmp2
+         U nextproc_no_next
+         U SNMP_View_2275_Full_Name
+         U snmpdMemoryAlloc
+         U nextproc_error
+         U nextproc_next_instance
+         U snmpdMemoryFree
+00000000 D v3_vacmViewSpinLock
+
+creatrap.o:
+00000000 T SNMP_Create_Trap
+         U SNMP_Allocate
+         U build_object_id
+         U memcpy
+         U VarBindList_Allocate
+         U SNMP_Free
+
+get_ui64.o:
+00000000 T get_ui64
+
+set_ui64.o:
+00000000 T set_ui64
+
+gas_ui64.o:
+00000000 T get_ui64_async
+         U getproc_nosuchins
+         U getproc_got_uint64
+
+sas_ui64.o:
+00000000 T ui64_async_cleanup
+         U snmpdMemoryFree
+00000008 T ui64_async_undo
+         U undoproc_good
+00000064 T ui64_async_test
+         U snmpdMemoryAlloc
+         U testproc_error
+         U testproc_good
+000000dc T ui64_async_set
+         U setproc_good
+
+bindui64.o:
+00000000 T VBL_Bind_64_Unsigned_Integer
+         U vblp_index_to_vbp
+         U build_object_id
+00000068 T SNMP_Bind_64_Unsigned_Integer
+
+snmplock.o:
+00000000 T SNMP_Get_System_Lock
+         U SNMP_infrastructure_lock
+         U semTake
+00000048 T SNMP_Release_System_Lock
+         U semGive
+
+libsnmp.a:
+
+asy_back.o:
+00000088 t async_get_routines
+00000000 T async_compat_test
+         U vbp_to_index_error
+         U testproc_good
+         U testproc_tproc_error
+         U getproc_got_int32
+         U getproc_got_uint32
+         U getproc_got_string
+         U getproc_got_object_id
+         U snmpdMemoryFree
+         U getproc_got_empty
+         U memcpy
+         U getproc_got_ip_address
+         U DYNCFG_VBL_envoy_use_v2_types
+         U getproc_got_uint64_high_low
+         U getproc_got_uint64
+         U getproc_error
+000002f4 T async_compat_next
+         U nextproc_no_next
+         U nextproc_next_instance
+00000374 T async_compat_get
+         U getproc_nosuchins
+00000410 T async_compat_set
+         U setproc_error
+         U setproc_good
+
+asy_util.o:
+00000000 T getproc_started
+00000010 T getproc_good
+00000020 T getproc_error
+         U vbp_to_index_error
+00000058 T getproc_nosuchins
+000000b0 T getproc_got_object_id
+         U build_object_id
+00000114 T nextproc_started
+00000124 T nextproc_good
+00000134 T nextproc_no_next
+00000144 T nextproc_error
+0000017c T nextproc_next_instance
+         U snmpdMemoryAlloc
+         U memcpy
+         U Clean_Obj_ID
+00000220 T nextproc_next_instance_string
+00000314 T testproc_started
+00000324 T testproc_good
+00000334 T testproc_error
+000003c0 T testproc_tproc_error
+000004a8 T setproc_started
+000004b8 T setproc_good
+000004c8 T setproc_error
+00000500 T undoproc_started
+00000510 T undoproc_good
+00000520 T undoproc_error
+0000053c T getproc_got_int32
+00000558 T getproc_got_uint32
+00000570 T getproc_got_ip_address
+000005b8 T getproc_got_empty
+000005d0 T getproc_got_string
+0000061c T getproc_got_octet_string
+         U EBufferAllocateLoad
+00000650 T getproc_got_uint64
+00000678 T getproc_got_uint64_high_low
+
+bindint.o:
+00000000 T VBL_Bind_Integer
+         U vblp_index_to_vbp
+         U build_object_id
+00000058 T SNMP_Bind_Integer
+
+bindip.o:
+00000000 T VBL_Bind_IP_Address
+         U vblp_index_to_vbp
+         U build_object_id
+         U memcpy
+00000064 T SNMP_Bind_IP_Address
+
+bindnull.o:
+00000000 T VBL_Bind_Null
+         U vblp_index_to_vbp
+         U build_object_id
+00000058 T SNMP_Bind_Null
+
+bindoid.o:
+00000000 T VBL_Bind_Object_ID
+         U vblp_index_to_vbp
+         U build_object_id
+         U Clean_Obj_ID
+00000084 T SNMP_Bind_Object_ID
+
+bindstr.o:
+00000000 T VBL_Bind_String
+         U vblp_index_to_vbp
+         U build_object_id
+         U snmpdMemoryAlloc
+         U Clean_Obj_ID
+         U memcpy
+000000e4 T SNMP_Bind_String
+
+binduint.o:
+00000000 T VBL_Bind_Unsigned_Integer
+         U vblp_index_to_vbp
+         U build_object_id
+0000007c T SNMP_Bind_Unsigned_Integer
+
+snmpEBuffer.o:
+00000000 T EBufferClone
+         U snmpdMemoryAlloc
+         U memcpy
+00000084 T EBufferClean
+         U snmpdMemoryFree
+000000c4 T EBufferAppend
+0000012c T EBufferSeek
+00000200 T EBufferAdjust
+000002a8 T EBufferReplace
+00000360 T EBufferAllocateLoad
+
+buildpkt.o:
+00000000 T vblp_index_to_vbp
+00000040 T index_to_vbp
+00000054 T vbp_to_index_error
+         U __div32
+
+creatreq.o:
+00000000 T _snmp_create_request
+         U SNMP_Allocate
+         U VarBindList_Allocate
+         U SNMP_Free
+00000068 T SNMP_Create_Request2
+
+creatint.o:
+00000000 T SNMP_Create_Internal_Request
+         U memset
+         U SNMP_Create_Request2
+         U SNMP_CoarseLock
+         U semTake
+         U p_snmpIoCommunityValidate
+         U SNMP_Free
+         U snmp_stats
+
+snmpBerDecode.o:
+00000000 T A_DecodeTypeValue
+000000e4 T A_DecodeLength
+00000248 T A_DecodeOctetStringData
+         U snmpdMemoryAlloc
+         U Lcl_Read
+         U snmpdMemoryFree
+000002e8 T A_DecodeOctetString
+0000034c T A_DecodeOctetStringWTC
+         U Lcl_Peekc
+000003f0 T A_DecodeOctetWTC
+000004c4 T A_DecodeIntegerData
+00000584 T A_DecodeInteger
+000005e8 T A_DecodeIntegerWTC
+00000690 T A_DecodeObjectIdData
+         U Lcl_Seek
+000008f4 T A_DecodeObjectId
+00000940 T A_DecodeObjectIdWTC
+000009cc T A_DecodeInteger64Data
+00000abc T A_DecodeInteger64
+
+snmpBerEncode.o:
+00000524 t A_EncodeSubId
+00000000 T A_SizeOfInt
+00000064 T A_SizeOfUnsignedInt
+000000b4 T A_SizeOfObjectId
+00000194 T A_SizeOfUnsignedInt64
+00000238 T A_EncodeType
+000002f8 T A_EncodeLength
+000003a0 T A_EncodeInt
+00000428 T A_EncodeUnsignedInt
+000004c4 T A_EncodeOctetString
+000005c8 T A_EncodeObjectId
+00000678 T A_EncodeUnsignedInt64
+000007b0 T A_EncodeHelper
+         U memcpy
+
+env_init.o:
+00000000 T envoy_init
+         U determineSnmpdComponents
+         U envoy_timer_init
+00000004 C DYNCFG_VBL_agentx_master_component
+00000004 C DYN_PTR_envoy_ax_ma_init
+00000004 C DYNCFG_VBL_agentx_subagent_component
+00000004 C DYN_PTR_envoy_ax_sa_init
+         U semBCreate
+00000004 C SNMP_CoarseLock
+00000004 C SNMP_infrastructure_lock
+         U viewroot
+0000008c T envoy_dyncfg_init
+00000004 C DYNCFG_VBL_envoy_use_v2_types
+00000004 C DYNCFG_VBL_envoy_use_v2_protos
+00000004 C DYNCFG_VBL_envoy_snmp_coexistence
+00000004 C DYNCFG_VBL_envoy_snmp_target
+00000004 C DYNCFG_VBL_envoy_snmp_proxy
+00000004 C DYNCFG_VBL_snmpv3_component
+00000004 C DYN_PTR_envoy_v3_init
+00000004 C DYNCFG_VBL_envoy_snmp_notify
+
+etimer.o:
+00000050 t envoy_timer_update
+00000000 b envoy_last_update.4
+000000bc t envoy_timer_exp
+00000000 T envoy_tm_init
+0000000c T envoy_now
+         U tick64Get
+         U __mul64
+         U sysClkRateGet
+         U __udiv64
+         U envoy_timer_list
+         U SNMP_TimerLock
+         U semTake
+00000004 C p_envoy_call_timer
+         U semGive
+0000017c T envoy_tm_cancel
+00000268 T envoy_tm_set
+
+etimerin.o:
+00000000 T envoy_timer_init
+00000000 D envoy_timer_list
+         U semBCreate
+00000004 C SNMP_TimerLock
+
+exists.o:
+00000000 T it_exists
+
+exist_as.o:
+00000000 T it_exists_async
+         U testproc_good
+         U testproc_error
+
+gas_int.o:
+00000000 T get_int_async
+         U getproc_nosuchins
+         U getproc_got_int32
+
+gas_ip.o:
+00000000 T get_ip_address_async
+         U getproc_nosuchins
+         U getproc_got_ip_address
+
+gas_oid.o:
+00000000 T get_object_identifier_async
+         U getproc_nosuchins
+         U getproc_got_object_id
+
+gas_str.o:
+00000000 T get_string_async
+         U getproc_nosuchins
+         U strlen
+         U getproc_got_string
+
+gas_uint.o:
+00000000 T get_uint_async
+         U getproc_nosuchins
+         U getproc_got_uint32
+
+gas_ulng.o:
+00000000 T get_ulong_async
+         U getproc_nosuchins
+         U getproc_got_uint32
+
+gas_incr.o:
+00000000 T get_TestAndIncr_async
+         U getproc_nosuchins
+         U getproc_got_int32
+
+get_int.o:
+00000000 T get_int
+
+get_ip.o:
+00000000 T get_ip_address
+
+get_oid.o:
+00000000 T get_object_identifier
+
+get_str.o:
+00000000 T get_string
+         U strlen
+
+get_uint.o:
+00000000 T get_uint
+
+get_ulng.o:
+00000000 T get_ulong
+
+getpdu.o:
+00000000 T snmpdMemoryAlloc
+         U malloc
+00000004 T snmpdMemoryFree
+         U free
+00000008 T SNMP_Process_Get_PDU
+         U VarBindList_Allocate
+         U build_object_id
+         U Clean_vb
+         U DYNCFG_VBL_agentx_master_component
+         U SNMP_infrastructure_lock
+         U semTake
+         U SNMP_View_Find_Family
+         U semGive
+         U find_object_node
+         U ENVOY_Send_SNMP_Error_Packet
+00000004 C getCmntyViewTbl
+00000004 C setCmntyViewTbl
+
+ip2rlist.o:
+00000000 T ip_to_rlist
+
+ip2llist.o:
+00000000 T ip_to_llist
+
+llistcmp.o:
+00000000 T llist_cmp
+
+localio.o:
+00000000 T Lcl_Open
+         U snmpdMemoryAlloc
+00000060 T Lcl_Close
+         U snmpdMemoryFree
+00000084 T Lcl_Peekc
+000000bc T Lcl_Read
+00000138 T Lcl_Seek
+000001c0 T Lcl_Resize
+00000234 T Lcl_Dup
+
+mibutils.o:
+00000000 T std_next
+00000018 T std_next_async
+         U nextproc_no_next
+         U group_by_getproc_and_instance
+         U nextproc_next_instance
+00000130 T branch_free
+         U snmpdMemoryFree
+00000194 T Find_Node_From_Root
+00000000 D p_mib_root_node
+0000024c T Add_Node_From_Root
+         U snmpdMemoryAlloc
+         U memset
+         U memcpy
+0000048c T Remove_Node_From_Root
+         U DYNCFG_VBL_agentx_master_component
+
+mib_fon.o:
+00000000 T find_object_node
+         U SNMP_View_Family_Check
+         U p_mib_root_node
+         U DYNCFG_VBL_agentx_master_component
+
+mib_next.o:
+00000074 t find_next_helper
+00000000 T _snmp_leaf_check
+         U SNMP_View_Family_Check
+         U snmpdMemoryAlloc
+         U memcpy
+         U snmpdMemoryFree
+         U DYNCFG_VBL_agentx_master_component
+         U DYN_PTR__snmp_find_next_helper_ax
+00000318 T find_next_object
+         U p_mib_root_node
+         U Clean_Obj_ID
+         U DYN_PTR__snmp_find_next_bound
+
+nextpdu.o:
+00000000 T SNMP_Process_Next_PDU
+         U DYNCFG_VBL_envoy_use_v2_protos
+         U SNMP_Bufsize_For_Packet
+         U snmp_stats
+         U Clean_vb_list
+         U VarBindList_Allocate
+         U DYNCFG_VBL_agentx_master_component
+         U SNMP_infrastructure_lock
+         U semTake
+         U ENVOY_Send_SNMP_Error_Packet
+         U SNMP_View_Find_Family
+         U semGive
+         U find_next_object
+         U build_object_id
+00000330 T SNMP_Process_Next_Redo
+         U SNMP_View_Family_Check
+         U Clean_vb_data
+         U Clean_Obj_ID
+         U snmpdMemoryFree
+00000740 T SNMP_Process_Bulk_Redo
+         U Clean_vb
+         U VBList_Allocate
+
+null_gas.o:
+00000000 T null_get_async
+         U getproc_good
+
+null_get.o:
+00000000 T null_get_proc
+
+null_nas.o:
+00000000 T null_next_async
+         U nextproc_next_instance
+         U nextproc_good
+
+null_nxt.o:
+00000000 T null_next_proc
+
+null_tas.o:
+00000000 T null_test_async
+         U testproc_good
+
+null_tst.o:
+00000000 T null_test_proc
+
+null_sas.o:
+00000000 T null_set_async
+         U setproc_good
+
+null_set.o:
+00000000 T null_set_proc
+
+objectid.o:
+00000000 T build_object_id
+         U snmpdMemoryAlloc
+         U memcpy
+00000058 T Clean_Obj_ID
+         U snmpdMemoryFree
+
+oid2ip.o:
+00000000 T oid_to_ip
+
+oid2str.o:
+00000000 T oid_to_string
+00000090 T string_to_oid
+
+oidcmp.o:
+00000000 T oidcmp
+
+oidcmp2.o:
+00000000 T oidcmp2
+
+oidorder.o:
+00000000 T oidorder
+
+rcv_pkt.o:
+00000000 T async_compat_error
+00000014 T async_compat_io
+         U SNMP_Process_Finish
+0000004c T Process_Received_SNMP_Packet
+         U Process_Rcvd_SNMP_Packet_Async
+
+row.o:
+00000000 T scan_vb_for_leaf
+0000006c T scan_for_leaf_and_match
+         U oidorder
+000000e0 T vb_extract_row
+         U index_to_vbp
+
+row_get.o:
+00000000 T group_by_getproc_and_instance
+         U oidcmp2
+
+rowloose.o:
+00000000 T vb_extract_row_loose
+         U index_to_vbp
+         U scan_for_leaf_and_match
+
+rpktasy.o:
+00000000 t snmp_finish_counters
+000005bc t process_packet_one
+00000004 C snmp_stats
+000000a8 T ENVOY_Send_SNMP_Error_Packet
+         U Clean_vb_list
+         U SNMP_Bufsize_For_Packet
+         U DYNCFG_VBL_envoy_use_v2_types
+00000270 T ENVOY_Send_SNMP_Packet
+000003c4 T SNMP_Continue_function
+         U SNMP_Process_Next_Redo
+         U SNMP_Process_Set_PDU
+         U DYNCFG_VBL_envoy_use_v2_protos
+         U SNMP_Process_Bulk_Redo
+         U semGive
+         U SNMP_Free
+0000051c T process_packet_two
+         U semTake
+         U SNMP_Process_Get_PDU
+         U SNMP_Process_Next_PDU
+         U SNMP_Process_Test_PDU
+00000698 T Process_Rcvd_SNMP_Packet_Async
+         U SNMP_Decode_Packet_WER
+00000758 T Process_Internal_SNMP_Packet
+00000774 T SNMP_Process_Finish
+         U SNMP_Encode_Pkt_With_Siz
+
+sas_int.o:
+00000000 T undo_int_async
+         U undoproc_good
+0000002c T set_int_async
+         U setproc_good
+
+sas_uint.o:
+00000000 T undo_uint_async
+         U undoproc_good
+0000002c T set_uint_async
+         U setproc_good
+
+sas_incr.o:
+00000000 T undo_TestAndIncr_async
+         U undoproc_good
+0000002c T test_TestAndIncr_async
+         U testproc_error
+         U testproc_good
+000000a8 T set_TestAndIncr_async
+         U setproc_good
+
+scan_loc.o:
+00000000 T scan_vb_for_locator
+
+set_int.o:
+00000000 T set_int
+
+set_uint.o:
+00000000 T set_uint
+
+serial.o:
+
+setpdu.o:
+00000000 T SNMP_Process_Test_PDU
+         U semGive
+         U semTake
+         U DYNCFG_VBL_envoy_use_v2_protos
+         U SNMP_Bufsize_For_Packet
+         U DYNCFG_VBL_agentx_master_component
+         U SNMP_infrastructure_lock
+         U SNMP_View_Find_Family
+         U find_object_node
+         U ENVOY_Send_SNMP_Error_Packet
+00000000 D p_snmpHookSetPduValidate
+         U ENVOY_Send_SNMP_Packet
+00000308 T SNMP_Process_Set_PDU
+00000004 D p_snmpHookPreSet
+0000000c D p_snmpHookPostSet
+         U undoproc_error
+00000008 D p_snmpHookSetFailed
+00000010 D p_snmpHookPrivRelease
+00000014 D p_snmpIoCommunityValidate
+
+snmp_d.o:
+00000000 t count_var_binds
+000000c8 t decode_pkt_to_vb
+000002f0 t decode_pkt_to_vblist
+000005ac t SNMP_Decode_V1_Packet
+         U A_DecodeTypeValue
+         U A_DecodeLength
+         U Lcl_Seek
+         U A_DecodeObjectIdWTC
+         U Lcl_Peekc
+         U A_DecodeIntegerData
+         U A_DecodeOctetStringData
+         U A_DecodeObjectIdData
+         U memset
+         U memcpy
+         U EBufferClean
+         U DYNCFG_VBL_envoy_use_v2_types
+         U A_DecodeInteger64Data
+         U VarBindList_Allocate
+00000414 T SNMP_Decode_PDU
+         U A_DecodeOctetStringWTC
+         U A_DecodeIntegerWTC
+00000004 C DYN_PTR_SNMP_community_coexistence_lookup
+         U snmp_stats
+00000758 T SNMP_Decode_Packet_WER
+         U Lcl_Open
+         U Lcl_Resize
+         U Lcl_Close
+         U SNMP_Allocate
+         U SNMP_CoarseLock
+         U semTake
+         U SNMP_Free
+00000000 D etc_copyright
+0000003a D isi_copyright
+0000006c D wind_copyright
+
+snmp_e.o:
+0000018c t set_vbl_sizes
+000002b0 t bufsize_for_normal_pkt
+0000036c t encode_var_bind_list
+00000668 t encode_snmp_common
+000006e8 t bufsize_for_trap_pkt
+000007ec t encode_snmp_trap_pdu
+00000000 T vbsize
+         U A_SizeOfObjectId
+         U A_SizeOfInt
+         U A_SizeOfUnsignedInt
+         U DYNCFG_VBL_envoy_use_v2_types
+         U A_SizeOfUnsignedInt64
+00000218 T set_pdu_size
+         U A_EncodeHelper
+         U A_EncodeType
+         U A_EncodeLength
+         U A_EncodeObjectId
+         U A_EncodeInt
+         U A_EncodeUnsignedInt
+         U A_EncodeOctetString
+         U A_EncodeUnsignedInt64
+000005d0 T encode_snmp_normal_pdu
+000008b0 T SNMP_Bufsize_For_Packet
+00000904 T SNMP_Encode_Pkt_With_Siz
+         U snmpdMemoryAlloc
+000009e0 T SNMP_Encode_Packet
+
+tree.o:
+00000000 T TREE_Add
+         U snmpdMemoryAlloc
+         U snmpdMemoryFree
+00000200 T TREE_Delete
+00000344 T TREE_Get
+000003ec T TREE_GetPrev
+000004e0 T TREE_GetNext
+0000054c T TREE_Extract
+00000594 T TREE_Install
+000005e8 T TREE_Name
+
+vb_rtns.o:
+0000019c t Clean_Pkt
+00000000 T Clean_vb_data
+         U EBufferClean
+         U Clean_Obj_ID
+00000054 T Clean_vb
+         U DYNCFG_VBL_agentx_master_component
+         U SNMP_infrastructure_lock
+         U semTake
+         U snmpdMemoryFree
+         U semGive
+0000010c T Clean_vb_list
+         U p_snmpHookPrivRelease
+         U semDelete
+00000224 T SNMP_Free
+00000248 T VarBindList_Allocate
+         U snmpdMemoryAlloc
+         U memset
+00000290 T VBList_Allocate
+000002f4 T VBList_Free
+0000030c T Initialize_Pkt
+         U semBCreate
+00000370 T SNMP_Allocate
+
+dyncfgvx.o:
+00000000 T determineSnmpdComponents
+00000004 C snmpdEngineConfigMutex
+         U semTake
+         U DYNCFG_VBL_envoy_use_v2_types
+         U DYNCFG_VBL_envoy_use_v2_protos
+00000000 D p_snmpdInstalledComponentsValue
+         U DYNCFG_VBL_agentx_master_component
+         U DYNCFG_VBL_agentx_subagent_component
+         U DYNCFG_VBL_snmpv3_component
+         U DYNCFG_VBL_envoy_snmp_coexistence
+         U DYNCFG_VBL_envoy_snmp_proxy
+         U DYNCFG_VBL_envoy_snmp_target
+         U DYNCFG_VBL_envoy_snmp_notify
+         U semGive
+00000004 C DYN_PTR__snmp_find_next_helper_ax
+00000004 C DYN_PTR__snmp_find_next_bound
+00000004 C DYN_PTR_SNMP_Decode_V3_Packet
+00000004 C DYN_PTR_SNMP_Check_Retrans_List
+00000004 C DYN_PTR_SNMP_Auth_Add_MD5
+00000004 C DYN_PTR_SNMP_Auth_Add_SHA
+00000004 C DYN_PTR_SNMP_Priv_Add_DES
+00000004 C DYN_PTR_SNMP_Priv_Add_AESCFB128
+00000004 C DYN_PTR_bufsize_for_v3_pkt
+00000004 C DYN_PTR_encode_snmp_v3
+00000004 C DYN_PTR_Send_Report_PDU
+
+view_chk.o:
+00000000 T SNMP_View_Find_Family
+00000000 D viewroot
+         U memcmp
+00000084 T SNMP_View_Family_Check
+         U __div32
+         U __rem32
+000002c0 T SNMP_View_Check
+
+view_rts.o:
+0000014c t install_view_in_masks
+00000000 T SNMP_View_Create
+         U snmpdMemoryAlloc
+         U build_object_id
+         U snmpdMemoryFree
+00000090 T SNMP_View_Delete
+         U Clean_Obj_ID
+         U EBufferClean
+000000bc T SNMP_View_Next
+         U viewroot
+00000118 T SNMP_View_Set_Mask
+         U EBufferReplace
+         U oidcmp2
+000001d4 T SNMP_View_2275_Install
+         U memcmp
+         U memcpy
+0000038c T SNMP_View_2275_Name
+000003e8 T SNMP_View_2275_Full_Name
+0000046c T SNMP_View_2275_Deinstall
+0000053c T SNMP_View_2275_Lookup
+
+vmth2275.o:
+00000000 t viewtable_destroy_cleanup
+0000002c t viewtable_create_cleanup
+00000060 t viewtable_update_cleanup
+0000008c t viewtable_destroy_undo
+00000120 t viewtable_create_undo
+00000198 t viewtable_update_undo
+00000268 t viewtable_set_cleanup
+00000970 t get_view_data
+0000000c D p_snmp_view_2275_backout
+         U SNMP_View_2275_Deinstall
+         U SNMP_View_Delete
+         U undoproc_good
+         U oid_to_string
+         U SNMP_View_2275_Install
+         U undoproc_error
+00000010 D p_snmp_view_2275_undo
+         U EBufferClean
+         U memcpy
+00000014 D p_snmp_view_2275_finished
+000002bc T viewtable_test
+         U memset
+         U group_by_getproc_and_instance
+         U testproc_good
+         U SNMP_View_2275_Lookup
+         U testproc_error
+00000004 D p_snmp_view_2275_test
+         U memcmp
+         U SNMP_View_Create
+         U EBufferClone
+00000804 T viewtable_set
+00000008 D p_snmp_view_2275_set
+         U setproc_good
+         U getproc_got_string
+         U getproc_got_int32
+00000a20 T viewtable_get
+         U getproc_nosuchins
+00000af8 T viewtable_next
+         U SNMP_View_Next
+         U viewroot
+         U oidcmp2
+         U nextproc_no_next
+         U SNMP_View_2275_Full_Name
+         U snmpdMemoryAlloc
+         U nextproc_error
+         U nextproc_next_instance
+         U snmpdMemoryFree
+00000000 D v3_vacmViewSpinLock
+
+creatrap.o:
+00000000 T SNMP_Create_Trap
+         U SNMP_Allocate
+         U build_object_id
+         U memcpy
+         U VarBindList_Allocate
+         U SNMP_Free
+
+get_ui64.o:
+00000000 T get_ui64
+
+set_ui64.o:
+00000000 T set_ui64
+
+gas_ui64.o:
+00000000 T get_ui64_async
+         U getproc_nosuchins
+         U getproc_got_uint64
+
+sas_ui64.o:
+00000000 T ui64_async_cleanup
+         U snmpdMemoryFree
+00000008 T ui64_async_undo
+         U undoproc_good
+00000064 T ui64_async_test
+         U snmpdMemoryAlloc
+         U testproc_error
+         U testproc_good
+000000dc T ui64_async_set
+         U setproc_good
+
+bindui64.o:
+00000000 T VBL_Bind_64_Unsigned_Integer
+         U vblp_index_to_vbp
+         U build_object_id
+00000068 T SNMP_Bind_64_Unsigned_Integer
+
+snmplock.o:
+00000000 T SNMP_Get_System_Lock
+         U SNMP_infrastructure_lock
+         U semTake
+00000048 T SNMP_Release_System_Lock
+         U semGive

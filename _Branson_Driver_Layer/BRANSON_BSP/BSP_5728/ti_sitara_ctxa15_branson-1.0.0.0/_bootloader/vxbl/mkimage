@@ -1,0 +1,33 @@
+# helper script that embeds size information into the binary 
+#
+# Copyright (c) 2016 Wind River Systems, Inc.
+#
+# The right to copy, distribute, modify or otherwise make use
+# of this software may be licensed only pursuant to the terms
+# of an applicable Wind River license agreement.
+#
+# modification history
+# --------------------
+# 15mar16,jnl  created (US75898)
+
+set inputFile     [lindex $argv 0]
+set bootNandSize  [file size $inputFile]
+# set outFile       "MLO"
+set outFile       [lindex $argv 1]
+
+file delete $outFile
+
+set fp [open $inputFile "a+"]
+chan configure $fp -translation binary
+
+# set bootrom.nand.bin image size on offset 0
+
+set bootNandSize  [expr {$bootNandSize - 8}]
+set bootNandSize  [expr {($bootNandSize >> 24) | (($bootNandSize >> 8) & 0xff00) | (($bootNandSize << 8) & 0xff0000) | (($bootNandSize << 24) & 0xff000000)}]
+
+chan seek $fp 0
+puts -nonewline $fp [binary format I $bootNandSize]
+
+close $fp
+
+file rename $inputFile $outFile

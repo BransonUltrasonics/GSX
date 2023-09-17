@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="CLKMAN_4">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2021-4-13T14:48:53</timestamp>
+    <pin polarity="Input" x="0" y="-160" name="RST_IN" />
+    <pin polarity="Input" x="0" y="-208" name="CLKIN_IN" />
+    <pin polarity="Output" x="464" y="-32" name="LOCKED_OUT" />
+    <pin polarity="Output" x="464" y="-160" name="CLK90_OUT" />
+    <pin polarity="Output" x="464" y="-208" name="CLK0_OUT" />
+    <graph>
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="232" y="-264" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-160" type="pin RST_IN" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-208" type="pin CLKIN_IN" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-32" type="pin LOCKED_OUT" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-160" type="pin CLK90_OUT" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-208" type="pin CLK0_OUT" />
+        <rect width="336" x="64" y="-256" height="256" />
+        <line x2="464" y1="-160" y2="-160" x1="400" />
+        <line x2="0" y1="-208" y2="-208" x1="64" />
+        <line x2="0" y1="-160" y2="-160" x1="64" />
+        <line x2="464" y1="-32" y2="-32" x1="400" />
+        <line x2="464" y1="-208" y2="-208" x1="400" />
+    </graph>
+</symbol>

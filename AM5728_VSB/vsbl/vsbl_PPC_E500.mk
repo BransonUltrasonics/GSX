@@ -1,0 +1,21 @@
+# Automatically generated file: do not edit
+
+##########################
+# PPC_E500 Section
+##########################
+
+
+ifdef _WRS_CONFIG_PPC_E500
+VSBL_PPC_E500_SRC = 
+VSBL_PPC_E500_DEPEND = 
+ifdef _WRS_CONFIG_PPC_1_3_1_2_KERNEL_1_0_5_1_E500_1_0_7_5
+VSBL_PPC_E500_SRC += PPC_E500
+VSBL_PPC_E500_DEPEND += PPC_BASE
+VSBL_PPC_E500_DEPEND += CORE_KERNEL
+VSBL_PPC_E500_DEPEND += CORE_KERNEL
+PPC_E500_FASTBUILD = YES
+VSBL_PPC_E500_PATH = $(WIND_BASE)/pkgs/os/arch/ppc-1.3.1.2/kernel/e500
+VSBL_PPC_E500_VERSION = PPC_1_3_1_2_KERNEL_1_0_5_1_E500_1_0_7_5
+endif
+endif
+

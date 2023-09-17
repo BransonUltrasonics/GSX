@@ -1,0 +1,16 @@
+# Output products list for <counter3cr>
+core_resources.txt
+counter3cr.asy
+counter3cr.gise
+counter3cr.ngc
+counter3cr.sym
+counter3cr.vhd
+counter3cr.vho
+counter3cr.xco
+counter3cr.xise
+counter3cr\doc\c_counter_binary_v11_0_readme.txt
+counter3cr\doc\c_counter_binary_v11_0_vinfo.html
+counter3cr\doc\ds215_counter.pdf
+counter3cr_flist.txt
+counter3cr_xmdf.tcl
+gui_latency.txt

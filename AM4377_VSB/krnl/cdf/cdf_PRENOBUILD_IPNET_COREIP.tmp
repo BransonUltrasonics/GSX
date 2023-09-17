@@ -1,0 +1,75 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_ipcom.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_ipnet.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_ipnet_apps.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_ipnet_link_layer.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_ipnet_protos.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_ipnet_shell_cmds.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_ipnet_sock.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_net_arplib_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_net_boot_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_net_drv_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_net_end2_link_pool_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_net_ftp6lib_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_net_ftplib_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_net_getaddrinfo_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_net_getnameinfo_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_net_getservbyname_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_net_host_setup_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_net_host_show_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_net_host_tbl_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_net_ifconfig_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_net_inetlib_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_net_init_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_net_mux_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_net_netbuflib_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_net_netstat_uncomp_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_net_netstat_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_net_ping6_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_net_ping_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_net_pool_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_net_private_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_net_rem_io_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_net_remlib_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_net_rlogin_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_net_routecmd_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_net_sysctl_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_net_telnet_client_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_net_tftp_client_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00comp_vxmux_pkt_pool.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00folder_net_apps_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00folder_net_core_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00folder_net_host_utils_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00folder_net_private_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00folder_net_show_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00folder_net_socket_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00folder_net_sysctl_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00folder_network_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00init_usrnetapp_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00init_usrnethost_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00init_usrnetproto_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00init_usrnetremote_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/00init_usrnetutils_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/01comp_ipcom_wrapper_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/01comp_net_layer2_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/01folder_ipnet.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/01folder_ipnet_firewall.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/01folder_ipnet_mcast.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/01folder_ipwrap_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/02comp_ipnet_ldapc.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/02comp_ipnet_mcast.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/02comp_ipnet_sctp.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/ipnet-1.1.1.2/coreip-1.3.5.0/cdf/02comp_ipnet_vlan.cdf>
+
+Layer Layer::IPNET_COREIP {
+	NAME IPNET_COREIP
+}

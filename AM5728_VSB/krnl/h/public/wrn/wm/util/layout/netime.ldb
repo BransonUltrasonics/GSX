@@ -1,0 +1,14 @@
+(define-rcs-info "$Id: netime.ldb,v 1.1.1.1 2001/11/05 17:47:20 tneale Exp $")
+
+(C-include EPILOGUE_INSTALL_H <install.h>)
+(C-include EPILOGUE_TYPES_H <common/h/types.h>)
+(C-include EPILOGUE_LAYOUT_LDBGLUE_H <layout/ldbglue.h>)
+
+(define-layout NETIME_MESSAGE
+  (struct (field TIMESTAMP (unsigned 32))))
+
+
+; Local Variables:
+; mode: Scheme
+; End:
+

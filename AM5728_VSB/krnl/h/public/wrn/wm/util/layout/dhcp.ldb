@@ -1,0 +1,139 @@
+(define-rcs-info "$Id: dhcp.ldb,v 1.1.1.1 2001/11/05 17:47:19 tneale Exp $")
+
+(use-layouts "ip.ldb")
+(use-layouts "arp.ldb")
+
+(C-include EPILOGUE_INSTALL_H <install.h>)
+(C-include EPILOGUE_TYPES_H <common/h/types.h>)
+(C-include EPILOGUE_LAYOUT_LDBGLUE_H <layout/ldbglue.h>)
+
+(define-layout BOOTP_OPCODE
+  (enum (type (unsigned 8))
+	(value REQUEST 1)
+	(value REPLY 2)))
+
+;; option tags
+
+(define-layout DHCP_TAG
+  (enum (type (unsigned 8))
+	;; BOOTP-compatible 
+	(value PAD                      0)
+	(value SUBNET_MASK              1)
+	(value TIMEOFFSET               2)
+	(value ROUTER                   3)
+	(value TIMESERVER               4)
+	(value IEN116SERVER             5)
+	(value DNSSERVER                6)
+	(value LOGSERVER                7)
+	(value COOKIESERVER             8)
+	(value LPRSERVER                9)
+	(value IMPRESSSERVER           10)
+	(value RLPSERVER               11)
+	(value HOSTNAME                12)
+	(value BOOTFILESIZE            13)
+	(value MERITFILESIZE           14)
+	(value DOMAINNAME              15)
+	(value SWAPSERVER              16)
+	(value ROOTPATH                17)
+	(value EXTENSIONSPATH          18)
+	;; IP per-host parameters 
+	(value IPFORWARD               19)
+	(value SOURCEROUTE             20)
+	(value POLICYFILT              21)
+	(value MAX_REASSEMBLY          22)
+	(value DEF_TTL                 23)
+	(value MTU_TIMEOUT             24)
+	(value MTU_PLATEAUS            25)
+	(value MTU_VALUE               26)
+	(value MTU_SUBNETS_LOCAL       27)
+	(value BROADCAST_ADDR          28)
+	(value MASK_DISCOVER           29)
+	(value MASK_SUPPLY             30)
+	(value ROUTER_DISCOVER         31)
+	(value ROUTER_SOLICIT_ADDR     32)
+	(value STATIC_ROUTES           33) 
+	;; link layer per-interface parameters
+	(value ARP_TRAILERS            34)
+	(value ARP_TIMEOUT             35)
+	(value ETHERNET_802_3          36);; Ethernet encapsulation type
+
+	;; TCP per-interface parameters
+	(value TCP_TTL                 37)
+	(value TCP_KEEPALIVE_VALUE     38)
+	(value TCP_KEEPALIVE_GARBAGE   39)
+
+	;; miscellaneous application parameters
+	(value NIS_DOMAIN              40)
+	(value NIS_SERVERS             41)
+	(value NTP_SERVERS             42)
+	(value VENDOR_SPECIFIC         43)
+	;; NetBIOS
+	(value NB_NS                   44)
+	(value NB_DD                   45)
+	(value NB_NODETYPE             46)
+	(value NB_SCOPE                47)
+	;; X Window System
+	(value X_FS                    48)
+	(value X_DM                    49)
+	;; DHCP-specific options
+	(value REQ_ADDR                50)
+	(value LEASE_TIME              51)
+	(value OPT_OVERLOAD            52)
+	(value MSG_TYPE                53)
+	(value SERVER_ID               54)
+	(value PARAMS_REQ              55)
+	(value ERR_MESSAGE             56)
+	(value MAX_MSG_SIZE            57)
+	(value TIME_T1                 58)
+	(value TIME_T2                 59)
+	(value CLASS_ID                60)
+	(value CLIENT_ID               61)
+
+	(value END                    255)))
+
+;; values of message type -- for DHCP_TAG_is_MSG_TYPE
+
+(define-layout DHCP_MSGTYPE
+  (enum (type (unsigned 8))
+	(value DHCPDISCOVER       1)
+	(value DHCPOFFER          2)
+	(value DHCPREQUEST        3)
+	(value DHCPDECLINE        4)
+	(value DHCPACK            5)
+	(value DHCPNAK            6)
+	(value DHCPRELEASE        7)
+	(value DHCPINFORM         8)))
+
+(define-layout DHCP_OPTION_HDR
+  (struct (field TAG DHCP_TAG)
+	  (field length (unsigned 8))))
+	   
+(define-layout DHCP_MSG
+  (struct (field OPCODE BOOTP_OPCODE)
+	  (field HTYPE (unsigned 8))	; same as ARP_HEADER_HARDWARE_TYPE
+	  (field HLEN (unsigned 8))	; hardware length
+	  (field HOPS (unsigned 8))	; number of ?agent? hops
+	  (field XID (unsigned 32))
+	  (field SECS (unsigned 16))
+	  (field FLAGS (unsigned 16))
+	  (field CIADDR IP_ADDRESS)
+	  (field YIADDR IP_ADDRESS)
+	  (field SIADDR IP_ADDRESS)
+	  (field GIADDR IP_ADDRESS)
+	  (field CHADDR (array (count 16)
+			       (type (unsigned 8))))
+	  (field SNAME (array (count 64)
+			      (type (unsigned 8))))
+	  (field FILE (array (count 128)
+			     (type (unsigned 8))))
+	  (union
+	   (field COOKIE (unsigned 32))
+	   (field OPTIONS
+		  (array (count 312)
+			 (type (unsigned 8)))))))
+
+
+; Local Variables:
+; mode: Scheme
+; End:
+

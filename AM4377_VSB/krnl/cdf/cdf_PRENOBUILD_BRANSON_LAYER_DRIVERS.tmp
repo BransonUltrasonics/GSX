@@ -1,0 +1,39 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/_Branson_Driver_Layer/BRANSON_DRV/cdf/40cifx.cdf> 
+#include <C:/ScriptGSX2-3/GSX2-3Stream/_Branson_Driver_Layer/BRANSON_DRV/cdf/40vxbAm43xxSpi.cdf> 
+#include <C:/ScriptGSX2-3/GSX2-3Stream/_Branson_Driver_Layer/BRANSON_DRV/cdf/40vxbAm5728Epwm.cdf> 
+#include <C:/ScriptGSX2-3/GSX2-3Stream/_Branson_Driver_Layer/BRANSON_DRV/cdf/40vxbAm5728ehrpwm.cdf> 
+#include <C:/ScriptGSX2-3/GSX2-3Stream/_Branson_Driver_Layer/BRANSON_DRV/cdf/40vxbAm57xxSpi.cdf> 
+#include <C:/ScriptGSX2-3/GSX2-3Stream/_Branson_Driver_Layer/BRANSON_DRV/cdf/40vxbFdtbransonTiPruEscEnd.cdf> 
+#include <C:/ScriptGSX2-3/GSX2-3Stream/_Branson_Driver_Layer/BRANSON_DRV/cdf/40vxbFdtbransonTiPrussCoreEnd.cdf> 
+#include <C:/ScriptGSX2-3/GSX2-3Stream/_Branson_Driver_Layer/BRANSON_DRV/cdf/40vxbFdtbransonTiPrussEnd.cdf> 
+#include <C:/ScriptGSX2-3/GSX2-3Stream/_Branson_Driver_Layer/BRANSON_DRV/cdf/40vxbFdtbransonTiPrussIntcEnd.cdf> 
+#include <C:/ScriptGSX2-3/GSX2-3Stream/_Branson_Driver_Layer/BRANSON_DRV/cdf/40vxbFdtbransonTiPrussMdioEnd.cdf> 
+#include <C:/ScriptGSX2-3/GSX2-3Stream/_Branson_Driver_Layer/BRANSON_DRV/cdf/40vxbTiAm3Sio.cdf> 
+#include <C:/ScriptGSX2-3/GSX2-3Stream/_Branson_Driver_Layer/BRANSON_DRV/cdf/40vxbbranson40prudrv.cdf> 
+#include <C:/ScriptGSX2-3/GSX2-3Stream/_Branson_Driver_Layer/BRANSON_DRV/cdf/40vxbbransonEpwm.cdf> 
+#include <C:/ScriptGSX2-3/GSX2-3Stream/_Branson_Driver_Layer/BRANSON_DRV/cdf/40vxbbransonEqep.cdf> 
+#include <C:/ScriptGSX2-3/GSX2-3Stream/_Branson_Driver_Layer/BRANSON_DRV/cdf/40vxbbransonI2cLed.cdf> 
+#include <C:/ScriptGSX2-3/GSX2-3Stream/_Branson_Driver_Layer/BRANSON_DRV/cdf/40vxbbransonI2cPLLClkSynth.cdf> 
+#include <C:/ScriptGSX2-3/GSX2-3Stream/_Branson_Driver_Layer/BRANSON_DRV/cdf/40vxbbransonLed.cdf> 
+#include <C:/ScriptGSX2-3/GSX2-3Stream/_Branson_Driver_Layer/BRANSON_DRV/cdf/40vxbbransonTiAm437xqspi.cdf> 
+#include <C:/ScriptGSX2-3/GSX2-3Stream/_Branson_Driver_Layer/BRANSON_DRV/cdf/40vxbbransonTiAm572xqspi.cdf> 
+#include <C:/ScriptGSX2-3/GSX2-3Stream/_Branson_Driver_Layer/BRANSON_DRV/cdf/40vxbbransonTps62362.cdf> 
+#include <C:/ScriptGSX2-3/GSX2-3Stream/_Branson_Driver_Layer/BRANSON_DRV/cdf/40vxbbransonehrpwm.cdf> 
+#include <C:/ScriptGSX2-3/GSX2-3Stream/_Branson_Driver_Layer/BRANSON_DRV/cdf/40vxbbransonqspi.cdf> 
+#include <C:/ScriptGSX2-3/GSX2-3Stream/_Branson_Driver_Layer/BRANSON_DRV/cdf/40vxbeMmc.cdf> 
+#include <C:/ScriptGSX2-3/GSX2-3Stream/_Branson_Driver_Layer/BRANSON_DRV/cdf/40vxbeMmcStorage.cdf> 
+#include <C:/ScriptGSX2-3/GSX2-3Stream/_Branson_Driver_Layer/BRANSON_DRV/cdf/40vxbeMmchsCtrl.cdf>
+
+Layer Layer::BRANSON_LAYER_DRIVERS {
+	NAME BRANSON_LAYER_DRIVERS
+}

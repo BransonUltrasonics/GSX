@@ -1,0 +1,454 @@
+
+libfdt.a:
+
+fdt.o:
+00000000 T fdt_check_header
+00000158 T fdt_offset_ptr
+00000240 T fdt_next_tag
+000003b8 T _fdt_check_node_offset
+00000408 T _fdt_check_prop_offset
+00000458 T fdt_next_node
+0000052c T fdt_first_subnode
+00000568 T fdt_next_subnode
+000005b8 T _fdt_find_string
+         U strlen
+         U memcmp
+00000624 T fdt_move
+         U memmove
+
+fdt_ro.o:
+00000000 t _fdt_nodename_eq
+000000d0 t _fdt_string_eq
+00000448 t _nextprop
+         U fdt_offset_ptr
+         U memcmp
+         U memchr
+00000084 T fdt_string
+         U strlen
+0000011c T fdt_get_mem_rsv
+         U fdt_check_header
+000002bc T fdt_num_mem_rsv
+         U fdt_next_tag
+000004b4 T fdt_subnode_offset_namelen
+         U fdt_next_node
+00000550 T fdt_subnode_offset
+00000580 T fdt_first_property_offset
+         U _fdt_check_node_offset
+000005a8 T fdt_next_property_offset
+         U _fdt_check_prop_offset
+000005d0 T fdt_get_property_by_offset
+0000067c T fdt_get_property_namelen
+0000073c T fdt_getprop_namelen
+00000768 T fdt_get_alias_namelen
+000007b8 T fdt_path_offset
+         U strchr
+000008b4 T fdt_get_name
+00000950 T fdt_get_property
+00000994 T fdt_getprop_by_offset
+00000a10 T fdt_getprop
+00000a64 T fdt_get_phandle
+00000b00 T fdt_get_alias
+00000b30 T fdt_get_path
+         U memcpy
+00000c7c T fdt_supernode_atdepth_offset
+00000d34 T fdt_node_depth
+00000d70 T fdt_parent_offset
+00000db4 T fdt_node_offset_by_prop_value
+00000e54 T fdt_node_offset_by_phandle
+00000ed8 T fdt_stringlist_contains
+00000f5c T fdt_node_check_compatible
+00000fac T fdt_node_offset_by_compatible
+
+fdt_rw.o:
+00000000 t _fdt_blocks_misordered
+000001c0 t _fdt_rw_check_header
+000002d8 t _fdt_splice
+000003d8 t _fdt_splice_mem_rsv
+000004d8 t _fdt_splice_struct
+000005cc t _fdt_splice_string
+000006cc t _fdt_find_add_string
+000009e4 t _fdt_resize_property
+00000a80 t _fdt_add_property
+00001088 t _fdt_packblocks
+         U fdt_check_header
+         U memmove
+         U strlen
+         U _fdt_find_string
+         U memcpy
+000007d0 T fdt_add_mem_rsv
+         U fdt_num_mem_rsv
+0000094c T fdt_del_mem_rsv
+         U fdt_get_property
+         U _fdt_check_node_offset
+00000bc4 T fdt_set_name
+         U fdt_get_name
+00000c54 T fdt_setprop
+00000ce8 T fdt_appendprop
+00000de8 T fdt_delprop
+00000e4c T fdt_add_subnode_namelen
+         U fdt_subnode_offset_namelen
+         U fdt_next_tag
+         U memset
+00000fcc T fdt_add_subnode
+00000ffc T fdt_del_node
+         U _fdt_node_end_offset
+000012bc T fdt_open_into
+         U fdt_move
+00001660 T fdt_pack
+
+fdt_wip.o:
+00000050 t _fdt_nop_region
+00000000 T fdt_setprop_inplace
+         U fdt_getprop
+         U memcpy
+000000ac T fdt_nop_property
+         U fdt_get_property
+000000e4 T _fdt_node_end_offset
+         U fdt_next_node
+0000012c T fdt_nop_node
+         U fdt_offset_ptr
+
+fdt_empty_tree.o:
+00000000 T fdt_create_empty_tree
+         U fdt_create
+         U fdt_finish_reservemap
+         U fdt_begin_node
+         U fdt_end_node
+         U fdt_finish
+         U fdt_open_into
+
+fdt_sw.o:
+00000000 t _fdt_sw_check_header
+0000005c t _fdt_grab_space
+000006c4 t _fdt_find_add_string
+000001b8 T fdt_create
+         U memset
+00000380 T fdt_add_reservemap_entry
+00000580 T fdt_finish_reservemap
+000005a8 T fdt_begin_node
+         U strlen
+         U memcpy
+0000064c T fdt_end_node
+         U _fdt_find_string
+00000864 T fdt_property
+00000974 T fdt_finish
+         U memmove
+         U fdt_next_tag
+
+fdt_strerror.o:
+00000000 d fdt_errtable
+00000000 T fdt_strerror
+
+fdt_show.o:
+00000000 t fdt_is_string
+000000a0 t fdt_print_prop
+000001d4 t fdt_print_space
+         U isprint
+         U printf
+00000200 T fdt_dump
+         U fdt_check_header
+         U fdt_path_offset
+         U fdt_next_tag
+         U fdt_get_name
+         U fdt_offset_ptr
+         U fdt_string
+         U fdt_strerror
+
+vxFdtLib.o:
+00000000 d gpDtb
+00000558 t vxFdtDefRegMap
+00000b08 t vxFdtPhysMemDescInit
+00000000 T vxFdtLibInit
+         U fdt_open_into
+00000030 T vxFdt16ToCpu
+00000050 T vxCpuToFdt16
+00000070 T vxFdt32ToCpu
+000000a8 T vxCpuToFdt32
+000000e0 T vxFdt64ToCpu
+00000160 T vxCpuToFdt64
+000001e0 T vxFdtPathOffset
+         U fdt_path_offset
+00000218 T vxFdtNextNode
+         U fdt_next_node
+0000022c T vxFdtParentOffset
+         U fdt_parent_offset
+0000023c T vxFdtFirstSubnode
+         U fdt_first_subnode
+0000024c T vxFdtNextSubnode
+         U fdt_next_subnode
+0000025c T vxFdtPropGet
+         U fdt_getprop
+00000274 T vxFdtFirstPropGet
+         U fdt_first_property_offset
+         U fdt_getprop_by_offset
+000002bc T vxFdtNextPropGet
+         U fdt_next_property_offset
+00000304 T vxFdtGetName
+         U fdt_get_name
+00000318 T vxFdtIsEnabled
+         U strncmp
+00000370 T vxFdtDisable
+         U fdt_nop_node
+000003a8 T vxFdtNodeOffsetByPhandle
+         U fdt_node_offset_by_phandle
+000003b8 T vxFdtNodeOffsetByCompatible
+         U fdt_node_offset_by_compatible
+000003f8 T vxFdtNodeCheckCompatible
+         U fdt_node_check_compatible
+00000438 T vxFdtCellGet
+         U __rem32
+         U __div32
+000008a8 T vxFdtDefRegGet
+00000ab0 T vxFdtStdoutGet
+00000be8 T vxFdtPhysMemInfoGet
+00000eac T vxFdtBootargsGet
+         U strncpy
+00000f30 T vxFdtDtbAddressGet
+
+vxFdtCpu.o:
+00000000 T vxFdtCpuAvail
+         U vxFdtPathOffset
+         U vxFdtNextNode
+         U vxFdtPropGet
+         U strcmp
+00000088 T vxFdtCpuInfoGet
+
+vxFdtRwLib.o:
+00000000 T vxFdtDelNode
+         U vxFdtDtbAddressGet
+         U fdt_del_node
+00000018 T vxFdtPropSet
+         U fdt_setprop
+
+vxFdtShow.o:
+00000000 T vxFdtShowInit
+00000004 T vxFdtDtbDump
+         U vxFdtDtbAddressGet
+         U fdt_dump
+
+libfdt.a:
+
+fdt.o:
+00000000 T fdt_check_header
+00000158 T fdt_offset_ptr
+00000240 T fdt_next_tag
+000003b8 T _fdt_check_node_offset
+00000408 T _fdt_check_prop_offset
+00000458 T fdt_next_node
+0000052c T fdt_first_subnode
+00000568 T fdt_next_subnode
+000005b8 T _fdt_find_string
+         U strlen
+         U memcmp
+00000624 T fdt_move
+         U memmove
+
+fdt_ro.o:
+00000000 t _fdt_nodename_eq
+000000d0 t _fdt_string_eq
+00000448 t _nextprop
+         U fdt_offset_ptr
+         U memcmp
+         U memchr
+00000084 T fdt_string
+         U strlen
+0000011c T fdt_get_mem_rsv
+         U fdt_check_header
+000002bc T fdt_num_mem_rsv
+         U fdt_next_tag
+000004b4 T fdt_subnode_offset_namelen
+         U fdt_next_node
+00000550 T fdt_subnode_offset
+00000580 T fdt_first_property_offset
+         U _fdt_check_node_offset
+000005a8 T fdt_next_property_offset
+         U _fdt_check_prop_offset
+000005d0 T fdt_get_property_by_offset
+0000067c T fdt_get_property_namelen
+0000073c T fdt_getprop_namelen
+00000768 T fdt_get_alias_namelen
+000007b8 T fdt_path_offset
+         U strchr
+000008b4 T fdt_get_name
+00000950 T fdt_get_property
+00000994 T fdt_getprop_by_offset
+00000a10 T fdt_getprop
+00000a64 T fdt_get_phandle
+00000b00 T fdt_get_alias
+00000b30 T fdt_get_path
+         U memcpy
+00000c7c T fdt_supernode_atdepth_offset
+00000d34 T fdt_node_depth
+00000d70 T fdt_parent_offset
+00000db4 T fdt_node_offset_by_prop_value
+00000e54 T fdt_node_offset_by_phandle
+00000ed8 T fdt_stringlist_contains
+00000f5c T fdt_node_check_compatible
+00000fac T fdt_node_offset_by_compatible
+
+fdt_rw.o:
+00000000 t _fdt_blocks_misordered
+000001c0 t _fdt_rw_check_header
+000002d8 t _fdt_splice
+000003d8 t _fdt_splice_mem_rsv
+000004d8 t _fdt_splice_struct
+000005cc t _fdt_splice_string
+000006cc t _fdt_find_add_string
+000009e4 t _fdt_resize_property
+00000a80 t _fdt_add_property
+00001088 t _fdt_packblocks
+         U fdt_check_header
+         U memmove
+         U strlen
+         U _fdt_find_string
+         U memcpy
+000007d0 T fdt_add_mem_rsv
+         U fdt_num_mem_rsv
+0000094c T fdt_del_mem_rsv
+         U fdt_get_property
+         U _fdt_check_node_offset
+00000bc4 T fdt_set_name
+         U fdt_get_name
+00000c54 T fdt_setprop
+00000ce8 T fdt_appendprop
+00000de8 T fdt_delprop
+00000e4c T fdt_add_subnode_namelen
+         U fdt_subnode_offset_namelen
+         U fdt_next_tag
+         U memset
+00000fcc T fdt_add_subnode
+00000ffc T fdt_del_node
+         U _fdt_node_end_offset
+000012bc T fdt_open_into
+         U fdt_move
+00001660 T fdt_pack
+
+fdt_wip.o:
+00000050 t _fdt_nop_region
+00000000 T fdt_setprop_inplace
+         U fdt_getprop
+         U memcpy
+000000ac T fdt_nop_property
+         U fdt_get_property
+000000e4 T _fdt_node_end_offset
+         U fdt_next_node
+0000012c T fdt_nop_node
+         U fdt_offset_ptr
+
+fdt_empty_tree.o:
+00000000 T fdt_create_empty_tree
+         U fdt_create
+         U fdt_finish_reservemap
+         U fdt_begin_node
+         U fdt_end_node
+         U fdt_finish
+         U fdt_open_into
+
+fdt_sw.o:
+00000000 t _fdt_sw_check_header
+0000005c t _fdt_grab_space
+000006c4 t _fdt_find_add_string
+000001b8 T fdt_create
+         U memset
+00000380 T fdt_add_reservemap_entry
+00000580 T fdt_finish_reservemap
+000005a8 T fdt_begin_node
+         U strlen
+         U memcpy
+0000064c T fdt_end_node
+         U _fdt_find_string
+00000864 T fdt_property
+00000974 T fdt_finish
+         U memmove
+         U fdt_next_tag
+
+fdt_strerror.o:
+00000000 d fdt_errtable
+00000000 T fdt_strerror
+
+fdt_show.o:
+00000000 t fdt_is_string
+000000a0 t fdt_print_prop
+000001d4 t fdt_print_space
+         U isprint
+         U printf
+00000200 T fdt_dump
+         U fdt_check_header
+         U fdt_path_offset
+         U fdt_next_tag
+         U fdt_get_name
+         U fdt_offset_ptr
+         U fdt_string
+         U fdt_strerror
+
+vxFdtLib.o:
+00000000 d gpDtb
+00000558 t vxFdtDefRegMap
+00000b08 t vxFdtPhysMemDescInit
+00000000 T vxFdtLibInit
+         U fdt_open_into
+00000030 T vxFdt16ToCpu
+00000050 T vxCpuToFdt16
+00000070 T vxFdt32ToCpu
+000000a8 T vxCpuToFdt32
+000000e0 T vxFdt64ToCpu
+00000160 T vxCpuToFdt64
+000001e0 T vxFdtPathOffset
+         U fdt_path_offset
+00000218 T vxFdtNextNode
+         U fdt_next_node
+0000022c T vxFdtParentOffset
+         U fdt_parent_offset
+0000023c T vxFdtFirstSubnode
+         U fdt_first_subnode
+0000024c T vxFdtNextSubnode
+         U fdt_next_subnode
+0000025c T vxFdtPropGet
+         U fdt_getprop
+00000274 T vxFdtFirstPropGet
+         U fdt_first_property_offset
+         U fdt_getprop_by_offset
+000002bc T vxFdtNextPropGet
+         U fdt_next_property_offset
+00000304 T vxFdtGetName
+         U fdt_get_name
+00000318 T vxFdtIsEnabled
+         U strncmp
+00000370 T vxFdtDisable
+         U fdt_nop_node
+000003a8 T vxFdtNodeOffsetByPhandle
+         U fdt_node_offset_by_phandle
+000003b8 T vxFdtNodeOffsetByCompatible
+         U fdt_node_offset_by_compatible
+000003f8 T vxFdtNodeCheckCompatible
+         U fdt_node_check_compatible
+00000438 T vxFdtCellGet
+         U __rem32
+         U __div32
+000008a8 T vxFdtDefRegGet
+00000ab0 T vxFdtStdoutGet
+00000be8 T vxFdtPhysMemInfoGet
+00000eac T vxFdtBootargsGet
+         U strncpy
+00000f30 T vxFdtDtbAddressGet
+
+vxFdtCpu.o:
+00000000 T vxFdtCpuAvail
+         U vxFdtPathOffset
+         U vxFdtNextNode
+         U vxFdtPropGet
+         U strcmp
+00000088 T vxFdtCpuInfoGet
+
+vxFdtRwLib.o:
+00000000 T vxFdtDelNode
+         U vxFdtDtbAddressGet
+         U fdt_del_node
+00000018 T vxFdtPropSet
+         U fdt_setprop
+
+vxFdtShow.o:
+00000000 T vxFdtShowInit
+00000004 T vxFdtDtbDump
+         U vxFdtDtbAddressGet
+         U fdt_dump

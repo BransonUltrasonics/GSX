@@ -1,0 +1,14 @@
+
+# this file is generated
+
+# layers that have been built in the VSB
+__BUILT_LAYERS += ERF
+
+__OBJS_BUILT_ERF = C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/ARMARCH7/common/objerfLib/erfLib.o  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/ARMARCH7/common/objerfLib/erfShow.o  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/ARMARCH7/common/objerfLib/erfLib.d C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/ARMARCH7/common/objerfLib/erfShow.d
+
+
+# built libraries
+__BUILT_LIBRARIES += krnl_ARMARCH7_common_erfLib
+
+
+__OBJS_BUILT_krnl_ARMARCH7_common_erfLib = C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/ARMARCH7/common/objerfLib/erfLib.o  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/ARMARCH7/common/objerfLib/erfShow.o 

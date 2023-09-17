@@ -1,0 +1,214 @@
+
+<!--################################################
+        BRANSON AUTOMATION FRAMEWORK - Next Gen Ultrasonic
+
+Filename:    TE_Script.xml
+Description: This file is an ANT script which works as an interface between LabVIEW and RQM.	  
+1. This file is invoked by rqmexecutiontool.xml which inturn is invoked by master.xml
+2. It reads a pre-defined config file and supplies it's values to LabVIEW. 
+3. This file receives references to the results obtained by LabVIEW and uploads it to RQM.
+
+#################################################-->
+
+<project basedir="." default="Main" name="BAF_TE_Script">
+	
+	<sleep seconds="2"/>
+	<!--Navigates to antContrib path-->
+	<property name = "navContrib" value = "\..\Framework_Files\ant-contrib-1.0b3-bin\ant-contrib\ant-contrib-1.0b3.jar"/>
+	
+	<!--Navigates to the control.properties path-->
+	<property name = "navControl" value = "\..\Framework_Files\"/>
+	
+	<!--Including ANT Contrib into Path-->
+	<taskdef resource="net/sf/antcontrib/antlib.xml">
+		<classpath>
+			<pathelement location="${basedir}${navContrib}"/>
+		</classpath>
+	</taskdef>
+	
+	<property environment = "my_env" />
+	<property name = "projectName" value = "${my_env.qm_RQM_PROJECT_NAME}"/>
+	<property name = "suiteExecutionRecordName" value = "${my_env.qm_RQM_SUITEEXECUTIONRECORD_NAME}"/>
+	<property name = "suiteExecutionRecordId" value = "${my_env.qm_RQM_SUITEEXECUTIONRECORD_WEBID}"/>
+	<property name = "testSuiteName" value = "${my_env.qm_RQM_TESTSUITE_NAME}"/>
+	<property name = "testSuiteId" value = "${my_env.qm_RQM_TESTSUITE_WEBID}"/>
+	<property name = "testCaseName" value = "${my_env.qm_RQM_TESTCASE_NAME}"/>
+	<property name = "testCaseId" value = "${my_env.qm_RQM_TESTCASE_WEBID}"/>
+	<property name = "testScriptName" value = "${my_env.qm_RQM_TESTSCRIPT_NAME}"/>
+	<property name = "testScriptId" value = "${my_env.qm_RQM_TESTSCRIPT_WEBID}"/>
+		
+	<!--Paths to specific folders-->
+	<property name = "testCasePath" value = "${basedir}\${testSuiteName}\${testCaseName}\"/>
+		
+	<!--First Arguement passed to LabVIEW Script, Local Config.-->
+	<property name = "testCaseConfig" value = "${basedir}\${testSuiteName}\${testCaseName}\${testCaseName}_Config_Temp.ini"/>
+	
+	<!--Second Arguement passed to LabVIEW Script, Global Config.-->
+	<property name = "globalConfig" value = "${basedir}\Ultrasonic_Global_Config.ini"/>
+	
+	<!--Timestamp value obtained at the beginning of the script-->
+	<tstamp>
+		<format property="timeStamp" pattern="yyyyMMdd_HHmmss"/>
+	</tstamp>
+	
+	<!--Obtain properties defined in the Control.Properties File-->
+	<sleep seconds="1"/>
+	<loadproperties srcFile="${basedir}${navControl}Control.properties"/>
+	
+	<condition property="Date_Time_Stamp.set" else = "false">
+		<isset property="Date_Time_Stamp"/>
+	</condition>
+	
+	<if>
+		<equals arg1="${Date_Time_Stamp.set}" arg2="true" />
+		<then>
+			<!--Creating Path for results and logs Result-->
+			<mkdir dir="${basedir}\..\..\Results_Next_Gen\${Date_Time_Stamp}\Test_Results\${testSuiteName}_${Date_Time_Stamp}\${testCaseName}_${timeStamp}"/>
+			
+			<!--Storing the created directory into a property-->
+			<property name = "resultPath" value = "${basedir}\..\..\Results_Next_Gen\${Date_Time_Stamp}\Test_Results\${testSuiteName}_${Date_Time_Stamp}\${testCaseName}_${timeStamp}"/>
+		</then>
+	<elseif>
+		<equals arg1="${Date_Time_Stamp.set}" arg2="false" />
+		<then>
+			<!--Creating Path for results and logs Result-->
+			<mkdir dir="${basedir}\..\..\Results_Next_Gen\${timeStamp}\Test_Results\${testSuiteName}_${timeStamp}\${testCaseName}_${timeStamp}"/>
+			
+			<!--Storing the created directory into a property-->
+			<property name = "resultPath" value = "${basedir}\..\..\Results_Next_Gen\${timeStamp}\Test_Results\${testSuiteName}_${timeStamp}\${testCaseName}_${timeStamp}"/>
+		</then>
+	</elseif>
+	</if>
+		
+	
+	<!--Target to obtain the timestamp of the start of the Test Case-->
+	<target name = "StartTC">
+		<tstamp>
+			<format property="dStamp" pattern="MM/dd/yyyy"/>
+		</tstamp>
+		<tstamp>
+			<format property="tStamp" pattern="hh:mm a"/>
+		</tstamp>
+		<echo message="******************************************************************" />
+		<echo message="***********************BAF TEST EXECUTION*************************" />
+		<echo message="******************************************************************" />
+		<echo message="[TE_Script] TEST CASE EXECUTION STARTED ON ${dStamp}, at ${tStamp}." />
+	</target>
+	
+	<!--Target to obtain TC related data from RQM-->
+	<target name="DataFromRQM" depends = "StartTC">
+		<echo message="******************************************************************" />
+		<echo message="[TE_Script] PROJECT NAME: ${projectName}" />
+		<echo message="[TE_Script] TEST SUIT NAME: ${testSuiteName}" />
+		<echo message="[TE_Script] TEST SUIT ID: ${testSuiteId}" />
+		<echo message="[TE_Script] TEST SUIT EXECUTION RECORD NAME: ${suiteExecutionRecordName}" />
+		<echo message="[TE_Script] TEST SUIT EXECUTION RECORD ID: ${suiteExecutionRecordId}" />
+		<echo message="[TE_Script] TEST CASE NAME: ${testCaseName}" />
+		<echo message="[TE_Script] TEST CASE ID: ${testCaseId}" />
+		<echo message="[TE_Script] TEST SCRIPT NAME: ${testScriptName}" />
+		<echo message="[TE_Script] TEST SCRIPT ID: ${testScriptId}" />
+		<echo message="******************************************************************" />
+	</target>
+
+	<!--Target performing ANT Preamble operations-->
+	<target name = "Preamble" depends = "DataFromRQM">
+		<!--The following reads the config ini as a collection of properties into the ant script-->
+		<property file="${testCasePath}${testCaseName}_Config.ini"/>
+		
+		<!--Computing total iteration timeout duration-->
+		<var name="op1" value="${Timeout}"/>
+		<var name="op2" value="${Iterations}"/>
+		<var name="op" value="*"/>
+		<math result="totalTimeout" operand1="${op1}" operation="${op}" operand2="${op2}" datatype="int"/>
+		<sleep seconds="1"/>
+
+		<!--Writing ANT specific Data into Config File-->
+		<inifile source="${testCasePath}${testCaseName}_Config.ini" dest="${testCasePath}${testCaseName}_Config_Temp.ini">
+			<set section="framework_settings" property="Timestamp" value="${timeStamp}" />
+			<set section="framework_settings" property="TestSuite" value="${testSuiteName}" />
+			<set section="framework_settings" property="ReportPath" value="${resultPath}" />
+			
+		</inifile>
+	</target>
+	
+	<!--Target initiates the LabVIEW test script to be executed-->
+	<target name="LabVIEW" depends = "Preamble">
+		<trycatch>
+			<try>
+				<echo message="[TE_Script] TOTAL TIMEOUT: ${totalTimeout} milliseconds" />
+				<echo message="[TE_Script] TEST CASE PATH: ${testCasePath}" />
+				<parallel threadCount="1" timeout="${totalTimeout}" failonany="true">
+					<sequential>
+						<exec dir="${testCasePath}" executable="cmd"  failonerror="true">
+							<arg line = "/c ${testCaseName}.exe ${testCaseConfig} ${globalConfig}"/>
+						</exec>
+					</sequential>
+				</parallel>
+				
+				<!--Appending contents of LabVIEW Build log into ANT log-->
+				<concat>
+					<fileset file="${resultPath}\Log_${timeStamp}.txt"/>
+				</concat>
+			</try>
+			<catch>
+				<exec dir="${testCasePath}" executable="cmd"  failonerror="true">
+					<arg line = "/c taskkill /f /im ${testCaseName}.exe"/>
+				</exec>
+				<echo message="[TE_Script] ***FAIL! The execution time of ${testCaseName}.exe was found to exceed the set timeout duration. "/>
+				<fail/>
+			</catch>
+		</trycatch>	
+	</target>
+
+	<!--Target performs Postamble ANT operations-->
+	<target name = "Postamble">
+		
+		<!--Deleting Temporary Config INI file-->
+		<echo message="[TE_Script] CONFIG INI PATH: ${basedir}\${testSuiteName}\${testCaseName}" />
+		<delete file="${testCasePath}${testCaseName}_Config_Temp.ini"/>
+		
+		<!--The following reads the error.properties as a collection of properties into the ant script-->
+		<!--loadproperties srcFile="${resultPath}\error_${timeStamp}.properties"/-->
+		<sleep seconds="1"/>
+		<property file="${resultPath}\Result_${timeStamp}.properties"/>
+		
+		<!--Printing the error obtained error code-->
+		<echo message="[TE_Script] EXIT CODE OBTAINED FOR ${testCaseName}: ${Error_Code}" />
+		<echo message="[TE_Script] EXIT CODE DESCRIPTION FOR ${testCaseName}: ${Error_Description}" />
+		
+		<!--Uploading LabVIEW Report to RQM Results Page-->
+		<echo message="[TE_Script] UPLOADING LABVIEW REPORT TO RQM RESULTS PAGE" />
+		<property name = "attachFile" value = "${my_env.qm_AttachmentsFile}"/>
+		<propertyfile file="${attachFile}">
+			<entry  key="${testCaseName}_LabVIEW_Report" value="${resultPath}\Report_${timeStamp}.html"/>
+		</propertyfile>
+		
+		<!--Fails if error code is non-zero-->
+		<fail message="[TE_Script] ***FAIL! ${testCaseName}.exe exited with return code ${Error_Code}">
+			<condition>
+			<not>
+				<equals arg1="${Error_Code}" arg2="0"/>
+			</not>
+			</condition>
+		</fail>
+	</target>
+	
+	<!--Main target to call individual targets which perform specific functions-->
+	<target name = "Main">
+		
+		<trycatch>
+			<try>
+				<antcall target="LabVIEW">
+				</antcall>
+			</try>
+			<catch>
+				<fail message="[TE_Script] FAIL! Something went wrong during Test Execution..."/>
+			</catch>
+			<finally>
+				<antcall target="Postamble">
+				</antcall>
+			</finally>
+		</trycatch>
+	</target>
+
+</project>

@@ -1,0 +1,21 @@
+# Automatically generated file: do not edit
+
+##########################
+# HDC_AGENT Section
+##########################
+
+
+ifdef _WRS_CONFIG_HDC_AGENT
+VSBL_HDC_AGENT_SRC = 
+VSBL_HDC_AGENT_DEPEND = 
+ifdef _WRS_CONFIG_HDC_2_2_0_1_AGENT_2_2_0_1
+VSBL_HDC_AGENT_SRC += HDC_AGENT
+VSBL_HDC_AGENT_DEPEND += JSON
+VSBL_HDC_AGENT_DEPEND += MOSQUITTO
+VSBL_HDC_AGENT_DEPEND += JSON
+HDC_AGENT_FASTBUILD = YES
+VSBL_HDC_AGENT_PATH = $(WIND_BASE)/pkgs/app/hdc-2.2.0.1/agent
+VSBL_HDC_AGENT_VERSION = HDC_2_2_0_1_AGENT_2_2_0_1
+endif
+endif
+

@@ -1,0 +1,19 @@
+# Automatically generated file: do not edit
+
+##########################
+# OPENSSL_FIPS Section
+##########################
+
+
+ifdef _WRS_CONFIG_OPENSSL_FIPS
+VSBL_OPENSSL_FIPS_SRC = 
+VSBL_OPENSSL_FIPS_DEPEND = 
+ifdef _WRS_CONFIG_OPENSSL_FIPS_1_0_0_3
+VSBL_OPENSSL_FIPS_SRC += OPENSSL_FIPS
+VSBL_OPENSSL_FIPS_DEPEND += OPENSSL
+OPENSSL_FIPS_FASTBUILD = YES
+VSBL_OPENSSL_FIPS_PATH = $(WIND_BASE)/pkgs/security/openssl-fips-2.0-1.0.0.3
+VSBL_OPENSSL_FIPS_VERSION = OPENSSL_FIPS_1_0_0_3
+endif
+endif
+

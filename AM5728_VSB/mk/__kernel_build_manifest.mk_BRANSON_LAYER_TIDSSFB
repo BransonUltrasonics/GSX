@@ -1,0 +1,14 @@
+
+# this file is generated
+
+# layers that have been built in the VSB
+__BUILT_LAYERS += BRANSON_LAYER_TIDSSFB
+
+__OBJS_BUILT_BRANSON_LAYER_TIDSSFB = C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objgfxTiDssFb/gfxTiDssIosDrv.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objgfxTiDssFb/gfxTiDss.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objgfxTiDssFb/gfxTiAm35xx.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objgfxTiDssFb/gfxTiAm37xx.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objgfxTiDssFb/gfxTiDssIosDrv.d C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objgfxTiDssFb/gfxTiDss.d C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objgfxTiDssFb/gfxTiAm35xx.d C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objgfxTiDssFb/gfxTiAm37xx.d
+
+
+# built libraries
+__BUILT_LIBRARIES += krnl_ARMARCH7_common_gfxTiDssFb
+
+
+__OBJS_BUILT_krnl_ARMARCH7_common_gfxTiDssFb = C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objgfxTiDssFb/gfxTiDssIosDrv.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objgfxTiDssFb/gfxTiDss.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objgfxTiDssFb/gfxTiAm35xx.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objgfxTiDssFb/gfxTiAm37xx.o 

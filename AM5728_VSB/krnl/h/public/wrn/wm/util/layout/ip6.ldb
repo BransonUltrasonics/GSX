@@ -1,0 +1,452 @@
+; $Header: /usr/cvsroot/target/h/wrn/wm/util/layout/ip6.ldb,v 1.1.1.1 2001/11/05 17:47:20 tneale Exp $
+; Layout information for IPv6 protocols
+
+;****************************************************************************
+;
+;  *** Restricted Rights Legend ***
+;
+;  The programs and information contained herein are licensed only
+;  pursuant to a license agreement that contains use, reverse
+;  engineering, disclosure, and other restrictions; accordingly, it
+;  is "Unpublished--all rights reserved under the applicable
+;  copyright laws".
+;
+;  Use duplication, or disclosure by the Government is subject to
+;  restrictions as set forth in subparagraph (c)(1)(ii) of the Rights
+;  in Technical Data and Computer Licensed Programs clause of DFARS
+;  52.227 7013.
+;
+;  Copyright 2000-2001 Wind River Systems, Inc.
+;  Copyright 1996-1997 Epilogue Technology Corporation.
+;  Copyright 1998 Integrated Systems, Inc.
+;  All rights reserved.
+;
+;  *** Government Use ***
+;
+;  The Licensed Programs and their documentation were developed at
+;  private expense and no part of them is in the public domain.
+;
+;  The Licensed Programs are "Restricted Computer Software" as that
+;  term is defined in Clause 52.227-19 of the Federal Acquisition
+;  Regulations (FAR) and are "Commercial Computer Software" as that
+;  term is defined in Subpart 227.401 of the Department of Defense
+;  Federal Acquisition Regulation Supplement (DFARS).
+;
+;  (i) If the licensed Programs are supplied to the Department of
+;      Defense (DoD), the Licensed Programs are classified as
+;      "Commercial Computer Software" and the Government is acquiring
+;      only "restricted rights" in the Licensed Programs and their
+;      documentation as that term is defined in Clause 52.227
+;      7013(c)(1) of the DFARS, and
+;
+;  (ii) If the Licensed Programs are supplied to any unit or agency
+;      of the United States Government other than DoD, the
+;      Government's rights in the Licensed Programs and their
+;      documentation will be as defined in Clause 52.227-19(c)(2) of
+;      the FAR.
+;****************************************************************************
+
+;  $Log: ip6.ldb,v $
+;  Revision 1.1.1.1  2001/11/05 17:47:20  tneale
+;  Tornado shuffle
+;
+;  Revision 1.15  2001/01/19 22:22:33  paul
+;  Update copyright.
+;
+;  Revision 1.14  2000/12/04 02:35:49  sar
+;  Removed a description of FLOW_LABEL that had been replaced but not
+;  previously removed.
+;
+;  Revision 1.13  2000/12/02 20:22:20  sar
+;  Update the packet layouts this includes
+;   changing priority to traffic class
+;   modifying the size of flow label from 24 to 20
+;   in v6 icmp message updating the CODE field
+;   in du message changing option 2 (not a neighbor) to reserved
+;   in ptb message removing the option types
+;   in te message adding checksum and mtu fields
+;   in pp message adding unrecognized header and option types
+;   changing redirect from RD to RE
+;
+;  Revision 1.12  2000/03/13 21:21:48  paul
+;  Removed some code that we are no longer working on.
+;
+;  Revision 1.9  1998/02/25 15:21:41  sra
+;  Finish moving types.h, bug.h, and bugdef.h to common/h/.
+;
+;  Revision 1.8  1998/02/25 04:54:00  sra
+;  Update copyrights.
+;
+;  Revision 1.7  1998/02/20 04:02:37  sra
+;  Fix too-long layout macro names.
+;
+;  Revision 1.6  1997/09/26 20:21:15  alan
+;  Use features of new layout compiler: `use-layouts' and `C-include'.
+;
+;  Revision 1.5  1997/06/04 05:46:27  alan
+;  Fix RCS keywords.
+;
+;  Revision 1.4  1997/06/03 22:59:35  alan
+;  Use `define-rcs-info'.
+;
+;  Revision 1.3  1997/05/28 05:13:54  alan
+;  Fix ICMP layouts so that they no longer use internal unions.  This makes
+;  the size of the variants be what people expect.
+;
+;  Revision 1.2  1997/04/22 00:18:33  alan
+;  Fix copyright.
+;
+;  Revision 1.1  1997/04/19 04:12:16  alan
+;  Move all .ldb files into the `layout' directory.
+;
+;  Revision 1.5  1997/04/18 22:50:01  alan
+;  Add ICMP6_MESSAGE_MINIMUM_HEADER ...
+;
+;  Revision 1.4  1996/12/06 02:20:58  alan
+;  First supposedly working version.
+;
+;  Revision 1.3  1996/12/04  19:57:42  alan
+;  Fix bugs...
+;
+;  Revision 1.2  1996/12/03  07:52:46  alan
+;  A lot of this is now right.
+;
+;  Revision 1.1  1996/12/02  19:28:26  alan
+;  Still bogus, but here it is...
+
+(define-rcs-info "$Id: ip6.ldb,v 1.1.1.1 2001/11/05 17:47:20 tneale Exp $")
+
+(use-layouts "ip.ldb")
+
+(C-include EPILOGUE_INSTALL_H <install.h>)
+(C-include EPILOGUE_TYPES_H <common/h/types.h>)
+(C-include EPILOGUE_LAYOUT_LDBGLUE_H <layout/ldbglue.h>)
+
+(define-layout IP6_ADDRESS
+  (union (size 128)
+	 (field BYTES (array (count 16)
+			     (type (unsigned 8))))))
+
+(define-layout IP6_HEADER
+  (struct (size (* 10 32))	; error check
+	  (struct (align 4)
+		  (field VERSION
+			 (enum (type (unsigned 4))
+			       (value IPV4 4)
+			       (value IPV6 6)))
+		  (field TRAFFIC_CLASS (unsigned 8))
+		  (field FLOW_LABEL (unsigned 20)))
+	  (field PAYLOAD_LENGTH (unsigned 16))
+	  (field NEXT_HEADER IP_PROTOCOL)
+	  (field HOP_LIMIT (unsigned 8))
+	  (field SOURCE_ADDRESS IP6_ADDRESS)
+	  (field DESTINATION_ADDRESS IP6_ADDRESS)
+	  ))
+
+;
+; Hop-by-Hop or Destination Options Header
+;
+
+(define-layout IP6_OPTIONS_HEADER
+  (struct (size (* 2 32))
+	  (field NEXT_HEADER IP_PROTOCOL)
+	  (field LENGTH (unsigned 8))
+	  (field OPTIONS (array (count 6)
+				(type (unsigned 8))))))
+
+(define-layout IP6_OPTION
+  (struct (union (size 8)
+		 (struct (size 8)
+			 (align 1)
+			 (field ACTION (enum (type (unsigned 2))
+					     (value IGNORE 0)
+					     (value NEVER_COMPLAIN 1)
+					     (value ALWAYS_COMPLAIN 2)
+					     (value COMPLAIN 3)))
+			 (field MAY_CHANGE_P (boolean 1))
+			 (fill 5))
+		 (field TYPE (enum (type (unsigned 8))
+				   (value PAD1 0)	; special case: no data
+				   (value PADN 1)
+				   (value JUMBO 194)	; length = 4
+				   )))
+	  (field DATA_LENGTH (unsigned 8))
+	  (union (field JUMBO_LENGTH (unsigned 32))
+		 )))
+
+;
+; Routing Header
+;
+
+(define-layout IP6_ROUTING_HEADER
+  (struct (field NEXT_HEADER IP_PROTOCOL)
+	  (field LENGTH (unsigned 8))
+	  (field TYPE (enum (type (unsigned 8))
+			    (value TYPE0 0)	; name???
+			    ))
+	  (field SEGMENTS_LEFT (unsigned 8))
+	  (union ;; Type 0:
+		 (struct (fill 8)	; MBZ
+			 (field STRICT (array (count 24)
+					      (align 1)
+					      (type (boolean 1))))
+			 (field HOP (array (count 0)
+					   (type IP6_ADDRESS))))
+		 )))
+
+;
+; Fragment Header
+;
+
+(define-layout IP6_FRAGMENT_HEADER
+  (struct (size (* 2 32))
+	  (field NEXT_HEADER IP_PROTOCOL)
+	  (fill 8)	; MBZ
+	  (struct (size 16)
+		  (align 1)
+		  (field OFFSET (unsigned 13))
+		  (fill 2)	; MBZ
+		  (field MORE_P (boolean 1)))
+	  (field IDENTIFICATION (opaque 32))))
+
+; 
+; Etc.
+;
+
+(define-layout IP6_PSEUDO_HEADER
+  ;; for computing ICMP, UDP or TCP checksums
+  (struct (size (* 10 32))
+	  (field SOURCE_ADDRESS IP6_ADDRESS)
+	  (field DESTINATION_ADDRESS IP6_ADDRESS)
+	  (field PAYLOAD_LENGTH (unsigned 32))
+	  (fill 24)	; MBZ
+	  (field NEXT_HEADER IP_PROTOCOL)))
+
+;
+; ICMPv6
+;
+
+(define-layout ICMP6_MSG
+  (union (struct ;; Many ICMP messages share these fields:
+		 (union (size 8)
+			(struct (size 8)
+				(align 1)
+				(field INFO_P (boolean 1))
+				(fill 7))
+			(field TYPE
+			       (enum (type (unsigned 8))
+				     (value DESTINATION_UNREACHABLE 1)
+				     (value PACKET_TOO_BIG 2)
+				     (value TIME_EXCEEDED 3)
+				     (value PARAMETER_PROBLEM 4)
+				     (value ECHO_REQUEST 128)
+				     (value ECHO_REPLY 129)
+				     (value GM_QUERY 130)
+				     (value GM_REPORT 131)
+				     (value GM_REDUCTION 132)
+				     ;; Neighbor Discovery Types:
+				     (value ROUTER_SOLICITATION 133)
+				     (value ROUTER_ADVERTISEMENT 134)
+				     (value NEIGHBOR_SOLICITATION 135)
+				     (value NEIGHBOR_ADVERTISEMENT 136)
+				     (value REDIRECT 137)
+				     )))
+		 (field CODE (unsigned 8))		; the CODE
+		 (field CHECKSUM (unsigned 16))		; always
+		 (field IDENTIFICATION (opaque 16))	; sometimes
+		 (field SEQUENCE_NUMBER (unsigned 16))	; sometimes
+		 (field HEADER IP6_HEADER)		; sometimes
+		 )
+
+	 ;; Usefull size to know
+	 (field MINIMUM_HEADER (struct (size (* 8 8))	; error check
+				       (fill 8)		; TYPE
+				       (fill 8)		; CODE
+				       (fill 16)	; CHECKSUM
+				       (fill 16)	; IDENTIFICATION
+				       (fill 16)	; SEQUENCE_NUMBER
+				       ))
+
+	 ;; Destination Unreachable Message
+	 (field DU (struct (fill 8)	; the TYPE
+			   (field CODE (enum (type (unsigned 8))
+					     (value NO_ROUTE 0)
+					     (value PROHIBITED 1)
+					     ;; 2 is reserved
+					     (value ADDRESS 3)
+					     (value PORT 4)))
+			    (fill 16)	; checksum
+			    (fill 32)   ; reserved
+			   ;; contains a datagram
+			   ))
+
+	 ;; Packet Too Big Message
+	 (field PTB (struct (fill 8)	; the TYPE
+			    (field CODE (enum (type (unsigned 8))
+					      ;; no types defined
+					      ))
+			    (fill 16)	; checksum
+			    (field MTU (unsigned 32))
+			    ;; contains a datagram
+			    ))
+
+	 ;; Time Exceeded Message:
+	 (field TE (struct (fill 8)	; the TYPE
+			   (field CODE (enum (type (unsigned 8))
+					     (value HOPS 0)
+					     (value REASSEMBLY 1)))
+			   (fill 16)	; checksum
+			   (field MTU (unsigned 32))
+			   ;; contains a datagram
+			   ))
+
+	 ;; Parameter Problem Message:
+	 (field PP (struct (fill 8)	; the TYPE
+			   (field CODE (enum (type (unsigned 8))
+					     (value ZERO 0)
+					     (value UNREC_HEADER 1)
+					     (value UNREC_OPTION 2)))
+			   (fill 16)	; checksum
+			   (field POINTER (unsigned 32))
+			   ;; contains a datagram
+			   ))
+
+	 ;; Echo Request or Reply Message:
+	 (field ECHO
+		(struct (size (* 8 8))	; error check
+			(fill 8)	; the TYPE
+			(field CODE (enum (type (unsigned 8))
+					  (value ZERO 0)))
+			(fill 48)	; checksum+ident+sequence
+			(field DATA (array (count 0)
+					   (type (unsigned 8))))))
+
+	 ;; Group Membership Query, Report or Reduction Message:
+	 (field GM
+		(struct (size (* 24 8))		; error check
+			(fill 8)	; the TYPE
+			(field CODE (enum (type (unsigned 8))
+					  (value ZERO 0)))
+			(fill 16)	; checksum
+			(field DELAY (unsigned 16))
+			(fill 16)	; MBZ
+			(field ADDRESS IP6_ADDRESS)))
+
+	 ;; ----- Neighbor Discovery Messages -----
+
+	 ;; Router Solicitation Message:
+	 (field RS
+		(struct (size (* 8 8))	; error check
+			(fill 8)	; the TYPE
+			(field CODE (enum (type (unsigned 8))
+					  (value ZERO 0)))
+			(fill 16)	; checksum
+			(fill 32)	; MBZ
+			(field OPTIONS (array (count 0)
+					      (type (unsigned 8))))))
+
+	 ;; Router Advertisement Message:
+	 (field RA
+		(struct (size (* 16 8))		; error check
+			(fill 8)	; the TYPE
+			(field CODE (enum (type (unsigned 8))
+					  (value ZERO 0)))
+			(fill 16)	; checksum
+			(field HOP_LIMIT (unsigned 8))
+			(struct (size 8)
+				(align 1)
+				(field MANAGED_P (boolean 1))
+				(field OTHER_P (boolean 1))
+				(fill 6)	; MBZ
+				)
+			(field ROUTER_LIFETIME (unsigned 16))
+			(field REACHABLE_TIME (unsigned 32))
+			(field RETRANSMIT_TIME (unsigned 32))
+			(field OPTIONS (array (count 0)
+					      (type (unsigned 8))))))
+
+	 ;; Neighbor Solicitation Message:
+	 (field NS
+		(struct (size (* 24 8))		; error check
+			(fill 8)	; the TYPE
+			(field CODE (enum (type (unsigned 8))
+					  (value ZERO 0)))
+			(fill 16)	; checksum
+			(fill 32)	; MBZ
+			(field ADDRESS IP6_ADDRESS)
+			(field OPTIONS (array (count 0)
+					      (type (unsigned 8))))))
+
+	 ;; Neighbor Advertisement Message:
+	 (field NA
+		(struct (size (* 24 8))		; error check
+			(fill 8)	; the TYPE
+			(field CODE (enum (type (unsigned 8))
+					  (value ZERO 0)))
+			(fill 16)	; checksum
+			(struct (size 32)
+				(align 1)
+				(field ROUTER_P (boolean 1))
+				(field SOLICITED_P (boolean 1))
+				(field OVERRIDE_P (boolean 1))
+				(fill 29)	; MBZ
+				)
+			(field ADDRESS IP6_ADDRESS)
+			(field OPTIONS (array (count 0)
+					      (type (unsigned 8))))))
+
+	 ;; Redirect Message:
+	 (field RE
+		(struct (size (* 40 8))		; error check
+			(fill 8)	; the TYPE
+			(field CODE (enum (type (unsigned 8))
+					  (value ZERO 0)))
+			(fill 16)	; checksum
+			(fill 32)	; MBZ
+			(field TARGET_ADDRESS IP6_ADDRESS)
+			(field DESTINATION_ADDRESS IP6_ADDRESS)
+			(field OPTIONS (array (count 0)
+					      (type (unsigned 8))))))
+	 ))
+
+(define-layout IP6_ND_OPT
+  ;; for RS, RA, NS, NA and RE variants above...
+  (union (struct ;; All options share these fields:
+		 (size 16)	; error check
+		 (field TYPE
+			(enum (type (unsigned 8))
+			      (value SOURCE_LINK_LAYER_ADDRESS 1)
+			      (value TARGET_LINK_LAYER_ADDRESS 2)
+			      (value PREFIX_INFORMATION 3)	; length = 4
+			      (value REDIRECTED_HEADER 4)
+			      (value MTU 5)	; length = 1
+			      ))
+		 (field LENGTH (unsigned 8)))
+	 (field LINK_LAYER (struct (fill 16)	; TYPE & LENGTH
+				   (field ADDR
+					  (array (count 0)
+						 (type (unsigned 8))))))
+	 (field PREFIX (struct (size (* 32 8))	; error check
+			       (fill 16)	; TYPE & LENGTH
+			       (field LENGTH (unsigned 8))
+			       (struct (size 8)
+				       (align 1)
+				       (field ON_LINK_P (boolean 1))
+				       (field AUTONOMOUS_P (boolean 1))
+				       (fill 6)		; MBZ
+				       )
+			       (field VALID_LIFETIME (unsigned 32))
+			       (field PREFERRED_LIFETIME (unsigned 32))
+			       (fill 32)	; MBZ
+			       (field PREFIX IP6_ADDRESS)))
+	 (field REDIRECTED (struct (fill 16)	; TYPE & LENGTH
+				   (fill (* 6 8))
+				   (field HEADER IP6_HEADER)))
+	 (field MTU (struct (fill 16)	; TYPE & LENGTH
+			    (fill 16)
+			    (field MTU (unsigned 32))))
+	 ))
+
+; Local Variables:
+; mode: Scheme
+; End:

@@ -1,0 +1,11 @@
+Driver PATH:
+pdk_am57xx_1_0_13/packages/ti/drv/spi/src/v1/QSPI_v1.c
+
+pdk_am57xx_1_0_13/packages/ti/board/src/idkAM572x/device/qspi_flash.c
+pdk_am57xx_1_0_13/packages/ti/board/src/idkAM572x/device/qspi_flash.h
+
+Application path:
+/home/emerson/ti/pdk_am57xx_1_0_13/packages/ti/board/diag/qspi
+
+Binary path:
+/home/emerson/ti/pdk_am57xx_1_0_13/packages/ti/board/bin/idkAM572x/armv7/qspi_diagExample_idkAM572x_armv7.out

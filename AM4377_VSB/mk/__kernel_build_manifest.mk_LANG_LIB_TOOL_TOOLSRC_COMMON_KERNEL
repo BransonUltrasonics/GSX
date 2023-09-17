@@ -1,0 +1,14 @@
+
+# this file is generated
+
+# layers that have been built in the VSB
+__BUILT_LAYERS += LANG_LIB_TOOL_TOOLSRC_COMMON_KERNEL
+
+__OBJS_BUILT_LANG_LIB_TOOL_TOOLSRC_COMMON_KERNEL = C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/ARMARCH7/common/objcommoncc/cxa_atexit.o  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/ARMARCH7/common/objcommoncc/cxa_atexit.d C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/ARMARCH7/common/objcommoncc/arm_call_via.o  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/ARMARCH7/common/objcommoncc/__common_intrinsics.o C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/ARMARCH7/common/objcommoncc/arm_call_via.d C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/ARMARCH7/common/objcommoncc/__common_intrinsics.d
+
+
+# built libraries
+__BUILT_LIBRARIES += krnl_ARMARCH7_common_commoncc
+
+
+__OBJS_BUILT_krnl_ARMARCH7_common_commoncc = C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/ARMARCH7/common/objcommoncc/cxa_atexit.o  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/ARMARCH7/common/objcommoncc/arm_call_via.o  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/ARMARCH7/common/objcommoncc/__common_intrinsics.o

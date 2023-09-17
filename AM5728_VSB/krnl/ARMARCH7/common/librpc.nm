@@ -1,0 +1,1344 @@
+
+librpc.a:
+
+auth_none.o:
+00000000 d ops
+000000bc t authnone_marshal
+000000f0 t authnone_verf
+000000f4 t authnone_validate
+000000fc t authnone_refresh
+00000104 t authnone_destroy
+00000000 T authnone_create
+         U taskIdSelf
+         U _null_auth
+         U xdrmem_create
+         U xdr_opaque_auth
+
+auth_unix.o:
+00000000 t marshal_new_auth
+00000000 d auth_unix_ops
+00000214 t authunix_nextverf
+00000218 t authunix_marshal
+0000024c t authunix_validate
+00000300 t authunix_refresh
+000003f0 t authunix_destroy
+         U xdrmem_create
+         U xdr_opaque_auth
+         U perror
+00000098 T authunix_create
+         U memSysPartId
+         U memPartAlloc
+         U _null_auth
+         U xdr_authunix_parms
+         U abort
+         U memPartFree
+         U printErr
+         U bcopy
+
+authunix_pro.o:
+00000000 T xdr_authunix_parms
+         U xdr_u_long
+         U xdr_string
+         U xdr_int
+         U xdr_array
+
+clnt_generic.o:
+00000000 T clnt_genericInclude
+00000004 T clnt_create
+         U hostGetByName
+         U inet_addr
+         U bzero
+         U strcmp
+         U clntudp_create
+         U clnttcp_create
+         U taskIdSelf
+
+clnt_perror.o:
+00000000 d rpc_errlist
+00000030 t auth_errmsg
+00000090 d auth_errlist
+00000000 T clnt_sperrno
+00000060 T clnt_sperror
+         U taskIdSelf
+         U memSysPartId
+         U memPartAlloc
+         U sprintf
+         U strlen
+         U strcpy
+0000022c T clnt_perror
+         U printErr
+0000024c T clnt_perrno
+0000026c T clnt_spcreateerror
+         U strcat
+00000384 T clnt_pcreateerror
+
+clnt_raw.o:
+00000004 t clnt_rawInit
+000000e4 t clnt_rawExit
+00000000 d client_ops
+00000218 t clntraw_call
+00000434 t clntraw_geterr
+00000438 t clntraw_freeres
+00000470 t clntraw_abort
+00000474 t clntraw_control
+0000047c t clntraw_destroy
+00000000 T clnt_rawInclude
+         U taskIdSelf
+         U memSysPartId
+         U memPartAlloc
+         U printErr
+         U bzero
+         U memPartFree
+00000148 T clntraw_create
+         U xdrmem_create
+         U xdr_callhdr
+         U perror
+         U authnone_create
+         U svc_getreq
+         U _null_auth
+         U xdr_replymsg
+         U _seterr_reply
+         U xdr_opaque_auth
+
+clnt_simple.o:
+00000000 T clnt_simpleInclude
+00000004 T callrpc
+         U taskIdSelf
+         U strcmp
+         U close
+         U hostGetByName
+         U clntudp_create
+         U strncpy
+
+clnt_tcp.o:
+000006d4 t clnt_readtcp
+00000808 t clnt_writetcp
+00000000 d tcp_ops
+00000290 t clnttcp_call
+0000059c t clnttcp_geterr
+000005bc t clnttcp_freeres
+000005f0 t clnttcp_abort
+000005f4 t clnttcp_control
+00000670 t clnttcp_destroy
+00000000 T clnttcp_create
+         U taskIdSelf
+         U memSysPartId
+         U memPartAlloc
+         U printErr
+         U pmap_getport
+         U memPartFree
+         U socket
+         U connect
+         U close
+         U rpcErrnoGet
+         U tickGet
+         U xdrmem_create
+         U xdr_callhdr
+         U xdrrec_create
+         U authnone_create
+         U xdrrec_endofrecord
+         U _null_auth
+         U xdr_void
+         U xdrrec_skiprecord
+         U xdr_replymsg
+         U _seterr_reply
+         U xdr_opaque_auth
+         U bzero
+         U select
+         U read
+         U write
+
+clnt_udp.o:
+00000000 d udp_ops
+00000320 t clntudp_waittime
+00000348 t clntudp_call
+00000810 t clntudp_geterr
+00000878 t clntudp_abort
+0000087c t clntudp_control
+0000092c t clntudp_destroy
+00000000 T clntudp_bufcreate
+         U taskIdSelf
+         U memSysPartId
+         U memPartAlloc
+         U printErr
+         U pmap_getport
+         U tickGet
+         U xdrmem_create
+         U xdr_callhdr
+         U socket
+         U rpcErrnoGet
+         U setsockopt
+         U close
+         U bindresvport
+         U ioctl
+         U authnone_create
+         U memPartFree
+000002d8 T clntudp_create
+         U sysClkRateGet
+         U sendto
+         U taskDelay
+         U _null_auth
+         U bzero
+         U select
+         U recvfrom
+         U __udiv32
+         U xdr_replymsg
+         U _seterr_reply
+         U xdr_opaque_auth
+00000830 T clntudp_freeres
+
+get_myaddr.o:
+00000000 T get_myaddress
+         U socket
+         U perror
+         U taskSuspend
+         U ioctl
+         U bcopy
+         U close
+
+pmap_clnt.o:
+00000000 d timeout
+00000008 d tottimeout
+00000000 T pmap_set
+         U get_myaddress
+         U clntudp_bufcreate
+         U xdr_bool
+         U xdr_pmap
+         U clnt_perror
+000000f4 T pmap_unset
+000001c8 T pmapUnset
+         U pmaplist
+         U free
+
+pmap_getmaps.o:
+00000000 T pmap_getmapsInclude
+00000004 T pmap_getmaps
+         U clnttcp_create
+         U xdr_pmaplist
+         U xdr_void
+         U clnt_perror
+
+pmap_getport.o:
+00000000 d timeout
+00000008 d tottimeout
+00000000 T pmap_getport
+         U clntudp_bufcreate
+         U xdr_u_short
+         U xdr_pmap
+         U taskIdSelf
+
+pmap_prot.o:
+00000000 T xdr_pmap
+         U xdr_u_long
+
+pmap_prot2.o:
+00000000 T xdr_pmaplist
+         U xdr_bool
+         U xdr_pmap
+         U xdr_reference
+
+pmap_rmt.o:
+00000000 d timeout
+00000290 t getbroadcastnets
+00000000 T pmap_rmtcall
+         U clntudp_create
+00000220 T xdr_rmtcallres
+00000100 T xdr_rmtcall_args
+         U xdr_u_long
+         U xdr_reference
+         U ioctl
+         U perror
+         U bcopy
+         U inet_netof
+         U inet_makeaddr_b
+000003a0 T clnt_broadcast
+         U authunix_create_default
+         U taskIdSelf
+         U memSysPartId
+         U memPartAlloc
+         U malloc
+         U panic
+         U socket
+         U setsockopt
+         U bzero
+         U tickGet
+         U xdrmem_create
+         U xdr_callmsg
+         U sendto
+         U _null_auth
+         U select
+         U rpcErrnoGet
+         U recvfrom
+         U xdr_replymsg
+         U xdr_void
+         U close
+         U free
+         U memPartFree
+
+portmap.o:
+00000000 b pMapXprt
+00000148 t find_service
+000001a4 t callit
+000007a0 t xdr_rmtcall_args
+00000854 t xdr_len_opaque_parms
+00000844 t xdr_opaque_parms
+00000804 t xdr_rmtcall_result
+00000000 d pMapFirstTime.36
+00000790 t xdr_encap_parms
+00000004 d debugging
+00000000 T portmapd
+         U rpcTaskInit
+         U memset
+         U socket
+         U perror
+         U bind
+         U taskSuspend
+         U svcudp_create
+         U printErr
+         U svctcp_create
+00000664 T reg_service
+         U svc_register
+         U svc_run
+         U abort
+00000004 C pmaplist
+         U malloc
+         U get_myaddress
+         U clntudp_create
+         U authunix_create
+         U svc_sendreply
+         U free
+0000033c T reg_service_internal
+         U xdr_void
+         U xdr_pmap
+         U memSysPartId
+         U memPartAlloc
+         U memPartFree
+         U xdr_long
+         U svcerr_decode
+         U xdr_pmaplist
+         U svcerr_noproc
+         U xdr_bytes
+         U xdr_u_long
+         U xdr_opaque
+
+rpc_callmsg.o:
+00000000 T xdr_callmsg
+         U bcopy
+         U ixdr_get_long
+         U memSysPartId
+         U memPartAlloc
+         U xdr_opaque
+         U xdr_enum
+         U xdr_u_int
+         U xdr_u_long
+         U xdr_opaque_auth
+
+rpc_common.o:
+00000004 C _null_auth
+
+rpc_prot.o:
+00000000 d reply_dscrm
+00000000 T xdr_opaque_auth
+         U xdr_enum
+         U xdr_bytes
+00000044 T xdr_des_block
+         U xdr_opaque
+0000004c T xdr_deskey
+         U xdr_u_long
+00000088 T xdr_accepted_reply
+00000134 T xdr_rejected_reply
+000001ac T xdr_replymsg
+         U xdr_union
+00000218 T xdr_callhdr
+000002ac T accepted
+0000033c T rejected
+00000380 T _seterr_reply
+
+svc.o:
+00000000 T xprt_register
+         U taskIdSelf
+0000005c T xprt_unregister
+000000d4 T svc_find
+00000138 T svc_register
+         U memSysPartId
+         U memPartAlloc
+         U pmap_set
+000001f4 T svc_unregister
+         U memPartFree
+         U pmap_unset
+0000026c T svc_unregisterall
+         U pmapUnset
+000002b0 T svc_sendreply
+00000308 T svcerr_noproc
+0000035c T svcerr_decode
+000003b0 T svcerr_systemerr
+00000404 T svcerr_auth
+0000043c T svcerr_weakauth
+00000444 T svcerr_noprog
+00000494 T svcerr_progvers
+000004f0 T svc_getreqset
+         U panic
+         U bzero
+         U _authenticate
+00000738 T svc_getreq
+00000764 T svc_run
+         U select
+         U rpcErrnoGet
+         U perror
+
+svc_auth.o:
+00000000 d svcauthsw
+00000000 T _authenticate
+         U _null_auth
+00000080 T _svcauth_null
+         U _svcauth_unix
+         U _svcauth_short
+
+svc_auth_uni.o:
+00000000 T _svcauth_unix
+         U xdrmem_create
+         U ixdr_get_long
+         U bcopy
+         U printf
+         U xdr_authunix_parms
+000001a8 T _svcauth_short
+
+svc_raw.o:
+00000004 t svc_rawInit
+000000d8 t svc_rawExit
+00000000 d server_ops
+00000198 t svcraw_stat
+000001a0 t svcraw_recv
+000001f4 t svcraw_reply
+00000260 t svcraw_getargs
+00000290 t svcraw_freeargs
+000002c8 t svcraw_destroy
+00000000 T svc_rawInclude
+         U taskIdSelf
+         U memSysPartId
+         U memPartAlloc
+         U printErr
+         U bzero
+         U memPartFree
+0000013c T svcraw_create
+         U xdrmem_create
+         U xdr_callmsg
+         U xdr_replymsg
+
+svc_simple.o:
+00000120 t universal
+00000000 T svc_simpleInclude
+00000004 T registerrpc
+         U taskIdSelf
+         U printErr
+         U svcudp_create
+         U pmap_unset
+         U svc_register
+         U memSysPartId
+         U memPartAlloc
+         U panic
+         U xdr_void
+         U svc_sendreply
+         U memPartFree
+         U taskSuspend
+         U bzero
+         U svcerr_decode
+
+svc_tcp.o:
+00000018 d svctcp_rendezvous_op
+000001a4 t makefd_xprt
+00000390 t readtcp
+000004a0 t writetcp
+00000000 d svctcp_op
+00000294 t rendezvous_request
+00000314 t rendezvous_stat
+0000031c t svctcp_destroy
+00000030 d wait_per_try
+00000508 t svctcp_stat
+00000550 t svctcp_recv
+000005a8 t svctcp_getargs
+000005d4 t svctcp_freeargs
+00000608 t svctcp_reply
+00000000 T svctcp_create
+         U socket
+         U perror
+         U bzero
+         U bindresvport
+         U bind
+         U getsockname
+         U listen
+         U close
+         U memSysPartId
+         U memPartAlloc
+         U memPartFree
+         U printErr
+         U _null_auth
+         U xprt_register
+         U xdrrec_create
+00000290 T svcfd_create
+         U accept
+         U rpcErrnoGet
+         U xprt_unregister
+         U taskIdSelf
+         U memcpy
+         U select
+         U errnoGet
+         U read
+         U write
+         U xdrrec_eof
+         U xdrrec_skiprecord
+         U xdr_callmsg
+         U xdr_replymsg
+         U xdrrec_endofrecord
+         U abort
+
+svc_udp.o:
+00000000 d svcudp_op
+0000020c t svcudp_stat
+00000214 t cache_partialset
+000003a0 t cache_get
+000004e0 t svcudp_recv
+000005f4 t cache_commitset
+000006d8 t svcudp_reply
+00000798 t svcudp_getargs
+000007c4 t svcudp_freeargs
+000007f8 t svcudp_destroy
+00000000 T svcudp_bufcreate
+         U socket
+         U perror
+         U bzero
+         U bindresvport
+         U bind
+         U getsockname
+         U close
+         U memSysPartId
+         U memPartAlloc
+         U printErr
+         U memPartFree
+         U xdrmem_create
+         U xprt_register
+00000200 T svcudp_create
+         U __urem32
+         U free
+         U bcopy
+         U __udiv32
+         U semTake
+         U bcmp
+         U semGive
+         U recvfrom
+         U rpcErrnoGet
+         U xdr_callmsg
+         U sendto
+         U xdr_replymsg
+         U xprt_unregister
+         U semDelete
+00000908 T svcudp_enablecache
+00000018 D cacheSemOptions
+         U semMCreate
+00000a20 T cache_fillparams
+
+xdr.o:
+00000000 b crud.102
+00000000 d xdr_zero
+00000000 T xdr_free
+00000028 T xdr_void
+00000030 T xdr_long
+0000008c T xdr_int
+00000090 T xdr_u_long
+000000ec T xdr_u_int
+000000f0 T xdr_u_longlong_t
+0000014c T xdr_longlong_t
+000001a8 T xdr_short
+00000234 T xdr_u_short
+000002c0 T xdr_char
+00000300 T xdr_u_char
+00000340 T xdr_bool
+000003dc T xdr_enum
+000003e0 T xdr_opaque
+000004c0 T xdr_bytes
+         U memSysPartId
+         U memPartAlloc
+         U _func_printErr
+         U memPartFree
+000005b8 T xdr_netobj
+000005c8 T xdr_union
+00000660 T xdr_string
+         U strlen
+00000784 T xdr_wrapstring
+000007a8 T ixdr_get_long
+
+xdr_array.o:
+00000000 T xdr_array
+         U xdr_u_int
+         U _func_printErr
+         U memSysPartId
+         U memPartAlloc
+         U bzero
+         U memPartFree
+00000184 T xdr_vector
+
+xdr_float.o:
+00000000 T xdr_floatInclude
+00000004 T xdr_float
+00000064 T xdr_double
+
+xdr_mem.o:
+00000000 d xdrmem_ops
+0000001c t xdrmem_destroy
+00000020 t xdrmem_getlonglong
+00000090 t xdrmem_putlonglong
+00000100 t xdrmem_getlong
+00000158 t xdrmem_putlong
+000001b0 t xdrmem_getbytes
+00000200 t xdrmem_putbytes
+00000250 t xdrmem_putwords
+000002a0 t xdrmem_putlongs
+000002f0 t xdrmem_getpos
+00000300 t xdrmem_setpos
+00000350 t xdrmem_inline
+00000000 T xdrmem_create
+         U bcopy
+         U bcopyWords
+         U bcopyLongs
+
+xdr_rec.o:
+00000000 t fix_buf_size
+00000000 d xdrrec_ops
+00000140 t fill_input_buf
+00000194 t get_input_bytes
+00000220 t set_input_fragment
+00000288 t xdrrec_getbytes
+00000330 t xdrrec_getlong
+000003d0 t flush_out
+00000460 t xdrrec_putlong
+000004e8 t xdrrec_putbytes
+00000578 t xdrrec_getpos
+000005f0 t xdrrec_setpos
+000006a0 t xdrrec_inline
+0000072c t xdrrec_destroy
+0000075c t skip_input_bytes
+0000001c T xdrrec_create
+         U memSysPartId
+         U memPartAlloc
+         U memPartFree
+         U printErr
+         U __rem32
+         U bcopy
+         U lseek
+000007d0 T xdrrec_skiprecord
+00000850 T xdrrec_eof
+000008d8 T xdrrec_endofrecord
+
+xdr_ref.o:
+00000000 T xdr_reference
+         U memSysPartId
+         U memPartAlloc
+         U printErr
+         U bzero
+         U memPartFree
+000000bc T xdr_pointer
+         U xdr_bool
+
+rpcLib.o:
+0000000c d rpcInitialized.11
+00000144 t rpcTaskDeleteHook
+00000010 d rpcInstalled.18
+00000000 T rpcInit
+         U portmapd
+00000000 D portmapdPriority
+00000004 D portmapdOptions
+00000008 D portmapdStackSize
+         U taskSpawn
+00000004 C portmapdId
+         U clnt_genericInclude
+         U clnt_rawInclude
+         U clnt_simpleInclude
+         U pmap_getmapsInclude
+         U svc_rawInclude
+         U svc_simpleInclude
+         U xdr_floatInclude
+000000b8 T rpcTaskInit
+         U taskDeleteHookAdd
+         U taskIdSelf
+         U memSysPartId
+         U memPartAlloc
+         U bzero
+         U close
+         U svc_unregisterall
+         U memPartFree
+0000025c T rpcClntErrnoSet
+         U errnoSet
+00000264 T rpcErrnoGet
+         U errnoGet
+
+librpc.a:
+
+auth_none.o:
+00000000 d ops
+000000bc t authnone_marshal
+000000f0 t authnone_verf
+000000f4 t authnone_validate
+000000fc t authnone_refresh
+00000104 t authnone_destroy
+00000000 T authnone_create
+         U taskIdSelf
+         U _null_auth
+         U xdrmem_create
+         U xdr_opaque_auth
+
+auth_unix.o:
+00000000 t marshal_new_auth
+00000000 d auth_unix_ops
+00000214 t authunix_nextverf
+00000218 t authunix_marshal
+0000024c t authunix_validate
+00000300 t authunix_refresh
+000003f0 t authunix_destroy
+         U xdrmem_create
+         U xdr_opaque_auth
+         U perror
+00000098 T authunix_create
+         U memSysPartId
+         U memPartAlloc
+         U _null_auth
+         U xdr_authunix_parms
+         U abort
+         U memPartFree
+         U printErr
+         U bcopy
+
+authunix_pro.o:
+00000000 T xdr_authunix_parms
+         U xdr_u_long
+         U xdr_string
+         U xdr_int
+         U xdr_array
+
+clnt_generic.o:
+00000000 T clnt_genericInclude
+00000004 T clnt_create
+         U hostGetByName
+         U inet_addr
+         U bzero
+         U strcmp
+         U clntudp_create
+         U clnttcp_create
+         U taskIdSelf
+
+clnt_perror.o:
+00000000 d rpc_errlist
+00000030 t auth_errmsg
+00000090 d auth_errlist
+00000000 T clnt_sperrno
+00000060 T clnt_sperror
+         U taskIdSelf
+         U memSysPartId
+         U memPartAlloc
+         U sprintf
+         U strlen
+         U strcpy
+0000022c T clnt_perror
+         U printErr
+0000024c T clnt_perrno
+0000026c T clnt_spcreateerror
+         U strcat
+00000384 T clnt_pcreateerror
+
+clnt_raw.o:
+00000004 t clnt_rawInit
+000000e4 t clnt_rawExit
+00000000 d client_ops
+00000218 t clntraw_call
+00000434 t clntraw_geterr
+00000438 t clntraw_freeres
+00000470 t clntraw_abort
+00000474 t clntraw_control
+0000047c t clntraw_destroy
+00000000 T clnt_rawInclude
+         U taskIdSelf
+         U memSysPartId
+         U memPartAlloc
+         U printErr
+         U bzero
+         U memPartFree
+00000148 T clntraw_create
+         U xdrmem_create
+         U xdr_callhdr
+         U perror
+         U authnone_create
+         U svc_getreq
+         U _null_auth
+         U xdr_replymsg
+         U _seterr_reply
+         U xdr_opaque_auth
+
+clnt_simple.o:
+00000000 T clnt_simpleInclude
+00000004 T callrpc
+         U taskIdSelf
+         U strcmp
+         U close
+         U hostGetByName
+         U clntudp_create
+         U strncpy
+
+clnt_tcp.o:
+000006d4 t clnt_readtcp
+00000808 t clnt_writetcp
+00000000 d tcp_ops
+00000290 t clnttcp_call
+0000059c t clnttcp_geterr
+000005bc t clnttcp_freeres
+000005f0 t clnttcp_abort
+000005f4 t clnttcp_control
+00000670 t clnttcp_destroy
+00000000 T clnttcp_create
+         U taskIdSelf
+         U memSysPartId
+         U memPartAlloc
+         U printErr
+         U pmap_getport
+         U memPartFree
+         U socket
+         U connect
+         U close
+         U rpcErrnoGet
+         U tickGet
+         U xdrmem_create
+         U xdr_callhdr
+         U xdrrec_create
+         U authnone_create
+         U xdrrec_endofrecord
+         U _null_auth
+         U xdr_void
+         U xdrrec_skiprecord
+         U xdr_replymsg
+         U _seterr_reply
+         U xdr_opaque_auth
+         U bzero
+         U select
+         U read
+         U write
+
+clnt_udp.o:
+00000000 d udp_ops
+00000320 t clntudp_waittime
+00000348 t clntudp_call
+00000810 t clntudp_geterr
+00000878 t clntudp_abort
+0000087c t clntudp_control
+0000092c t clntudp_destroy
+00000000 T clntudp_bufcreate
+         U taskIdSelf
+         U memSysPartId
+         U memPartAlloc
+         U printErr
+         U pmap_getport
+         U tickGet
+         U xdrmem_create
+         U xdr_callhdr
+         U socket
+         U rpcErrnoGet
+         U setsockopt
+         U close
+         U bindresvport
+         U ioctl
+         U authnone_create
+         U memPartFree
+000002d8 T clntudp_create
+         U sysClkRateGet
+         U sendto
+         U taskDelay
+         U _null_auth
+         U bzero
+         U select
+         U recvfrom
+         U __udiv32
+         U xdr_replymsg
+         U _seterr_reply
+         U xdr_opaque_auth
+00000830 T clntudp_freeres
+
+get_myaddr.o:
+00000000 T get_myaddress
+         U socket
+         U perror
+         U taskSuspend
+         U ioctl
+         U bcopy
+         U close
+
+pmap_clnt.o:
+00000000 d timeout
+00000008 d tottimeout
+00000000 T pmap_set
+         U get_myaddress
+         U clntudp_bufcreate
+         U xdr_bool
+         U xdr_pmap
+         U clnt_perror
+000000f4 T pmap_unset
+000001c8 T pmapUnset
+         U pmaplist
+         U free
+
+pmap_getmaps.o:
+00000000 T pmap_getmapsInclude
+00000004 T pmap_getmaps
+         U clnttcp_create
+         U xdr_pmaplist
+         U xdr_void
+         U clnt_perror
+
+pmap_getport.o:
+00000000 d timeout
+00000008 d tottimeout
+00000000 T pmap_getport
+         U clntudp_bufcreate
+         U xdr_u_short
+         U xdr_pmap
+         U taskIdSelf
+
+pmap_prot.o:
+00000000 T xdr_pmap
+         U xdr_u_long
+
+pmap_prot2.o:
+00000000 T xdr_pmaplist
+         U xdr_bool
+         U xdr_pmap
+         U xdr_reference
+
+pmap_rmt.o:
+00000000 d timeout
+00000290 t getbroadcastnets
+00000000 T pmap_rmtcall
+         U clntudp_create
+00000220 T xdr_rmtcallres
+00000100 T xdr_rmtcall_args
+         U xdr_u_long
+         U xdr_reference
+         U ioctl
+         U perror
+         U bcopy
+         U inet_netof
+         U inet_makeaddr_b
+000003a0 T clnt_broadcast
+         U authunix_create_default
+         U taskIdSelf
+         U memSysPartId
+         U memPartAlloc
+         U malloc
+         U panic
+         U socket
+         U setsockopt
+         U bzero
+         U tickGet
+         U xdrmem_create
+         U xdr_callmsg
+         U sendto
+         U _null_auth
+         U select
+         U rpcErrnoGet
+         U recvfrom
+         U xdr_replymsg
+         U xdr_void
+         U close
+         U free
+         U memPartFree
+
+portmap.o:
+00000000 b pMapXprt
+00000148 t find_service
+000001a4 t callit
+000007a0 t xdr_rmtcall_args
+00000854 t xdr_len_opaque_parms
+00000844 t xdr_opaque_parms
+00000804 t xdr_rmtcall_result
+00000000 d pMapFirstTime.36
+00000790 t xdr_encap_parms
+00000004 d debugging
+00000000 T portmapd
+         U rpcTaskInit
+         U memset
+         U socket
+         U perror
+         U bind
+         U taskSuspend
+         U svcudp_create
+         U printErr
+         U svctcp_create
+00000664 T reg_service
+         U svc_register
+         U svc_run
+         U abort
+00000004 C pmaplist
+         U malloc
+         U get_myaddress
+         U clntudp_create
+         U authunix_create
+         U svc_sendreply
+         U free
+0000033c T reg_service_internal
+         U xdr_void
+         U xdr_pmap
+         U memSysPartId
+         U memPartAlloc
+         U memPartFree
+         U xdr_long
+         U svcerr_decode
+         U xdr_pmaplist
+         U svcerr_noproc
+         U xdr_bytes
+         U xdr_u_long
+         U xdr_opaque
+
+rpc_callmsg.o:
+00000000 T xdr_callmsg
+         U bcopy
+         U ixdr_get_long
+         U memSysPartId
+         U memPartAlloc
+         U xdr_opaque
+         U xdr_enum
+         U xdr_u_int
+         U xdr_u_long
+         U xdr_opaque_auth
+
+rpc_common.o:
+00000004 C _null_auth
+
+rpc_prot.o:
+00000000 d reply_dscrm
+00000000 T xdr_opaque_auth
+         U xdr_enum
+         U xdr_bytes
+00000044 T xdr_des_block
+         U xdr_opaque
+0000004c T xdr_deskey
+         U xdr_u_long
+00000088 T xdr_accepted_reply
+00000134 T xdr_rejected_reply
+000001ac T xdr_replymsg
+         U xdr_union
+00000218 T xdr_callhdr
+000002ac T accepted
+0000033c T rejected
+00000380 T _seterr_reply
+
+svc.o:
+00000000 T xprt_register
+         U taskIdSelf
+0000005c T xprt_unregister
+000000d4 T svc_find
+00000138 T svc_register
+         U memSysPartId
+         U memPartAlloc
+         U pmap_set
+000001f4 T svc_unregister
+         U memPartFree
+         U pmap_unset
+0000026c T svc_unregisterall
+         U pmapUnset
+000002b0 T svc_sendreply
+00000308 T svcerr_noproc
+0000035c T svcerr_decode
+000003b0 T svcerr_systemerr
+00000404 T svcerr_auth
+0000043c T svcerr_weakauth
+00000444 T svcerr_noprog
+00000494 T svcerr_progvers
+000004f0 T svc_getreqset
+         U panic
+         U bzero
+         U _authenticate
+00000738 T svc_getreq
+00000764 T svc_run
+         U select
+         U rpcErrnoGet
+         U perror
+
+svc_auth.o:
+00000000 d svcauthsw
+00000000 T _authenticate
+         U _null_auth
+00000080 T _svcauth_null
+         U _svcauth_unix
+         U _svcauth_short
+
+svc_auth_uni.o:
+00000000 T _svcauth_unix
+         U xdrmem_create
+         U ixdr_get_long
+         U bcopy
+         U printf
+         U xdr_authunix_parms
+000001a8 T _svcauth_short
+
+svc_raw.o:
+00000004 t svc_rawInit
+000000d8 t svc_rawExit
+00000000 d server_ops
+00000198 t svcraw_stat
+000001a0 t svcraw_recv
+000001f4 t svcraw_reply
+00000260 t svcraw_getargs
+00000290 t svcraw_freeargs
+000002c8 t svcraw_destroy
+00000000 T svc_rawInclude
+         U taskIdSelf
+         U memSysPartId
+         U memPartAlloc
+         U printErr
+         U bzero
+         U memPartFree
+0000013c T svcraw_create
+         U xdrmem_create
+         U xdr_callmsg
+         U xdr_replymsg
+
+svc_simple.o:
+00000120 t universal
+00000000 T svc_simpleInclude
+00000004 T registerrpc
+         U taskIdSelf
+         U printErr
+         U svcudp_create
+         U pmap_unset
+         U svc_register
+         U memSysPartId
+         U memPartAlloc
+         U panic
+         U xdr_void
+         U svc_sendreply
+         U memPartFree
+         U taskSuspend
+         U bzero
+         U svcerr_decode
+
+svc_tcp.o:
+00000018 d svctcp_rendezvous_op
+000001a4 t makefd_xprt
+00000390 t readtcp
+000004a0 t writetcp
+00000000 d svctcp_op
+00000294 t rendezvous_request
+00000314 t rendezvous_stat
+0000031c t svctcp_destroy
+00000030 d wait_per_try
+00000508 t svctcp_stat
+00000550 t svctcp_recv
+000005a8 t svctcp_getargs
+000005d4 t svctcp_freeargs
+00000608 t svctcp_reply
+00000000 T svctcp_create
+         U socket
+         U perror
+         U bzero
+         U bindresvport
+         U bind
+         U getsockname
+         U listen
+         U close
+         U memSysPartId
+         U memPartAlloc
+         U memPartFree
+         U printErr
+         U _null_auth
+         U xprt_register
+         U xdrrec_create
+00000290 T svcfd_create
+         U accept
+         U rpcErrnoGet
+         U xprt_unregister
+         U taskIdSelf
+         U memcpy
+         U select
+         U errnoGet
+         U read
+         U write
+         U xdrrec_eof
+         U xdrrec_skiprecord
+         U xdr_callmsg
+         U xdr_replymsg
+         U xdrrec_endofrecord
+         U abort
+
+svc_udp.o:
+00000000 d svcudp_op
+0000020c t svcudp_stat
+00000214 t cache_partialset
+000003a0 t cache_get
+000004e0 t svcudp_recv
+000005f4 t cache_commitset
+000006d8 t svcudp_reply
+00000798 t svcudp_getargs
+000007c4 t svcudp_freeargs
+000007f8 t svcudp_destroy
+00000000 T svcudp_bufcreate
+         U socket
+         U perror
+         U bzero
+         U bindresvport
+         U bind
+         U getsockname
+         U close
+         U memSysPartId
+         U memPartAlloc
+         U printErr
+         U memPartFree
+         U xdrmem_create
+         U xprt_register
+00000200 T svcudp_create
+         U __urem32
+         U free
+         U bcopy
+         U __udiv32
+         U semTake
+         U bcmp
+         U semGive
+         U recvfrom
+         U rpcErrnoGet
+         U xdr_callmsg
+         U sendto
+         U xdr_replymsg
+         U xprt_unregister
+         U semDelete
+00000908 T svcudp_enablecache
+00000018 D cacheSemOptions
+         U semMCreate
+00000a20 T cache_fillparams
+
+xdr.o:
+00000000 b crud.102
+00000000 d xdr_zero
+00000000 T xdr_free
+00000028 T xdr_void
+00000030 T xdr_long
+0000008c T xdr_int
+00000090 T xdr_u_long
+000000ec T xdr_u_int
+000000f0 T xdr_u_longlong_t
+0000014c T xdr_longlong_t
+000001a8 T xdr_short
+00000234 T xdr_u_short
+000002c0 T xdr_char
+00000300 T xdr_u_char
+00000340 T xdr_bool
+000003dc T xdr_enum
+000003e0 T xdr_opaque
+000004c0 T xdr_bytes
+         U memSysPartId
+         U memPartAlloc
+         U _func_printErr
+         U memPartFree
+000005b8 T xdr_netobj
+000005c8 T xdr_union
+00000660 T xdr_string
+         U strlen
+00000784 T xdr_wrapstring
+000007a8 T ixdr_get_long
+
+xdr_array.o:
+00000000 T xdr_array
+         U xdr_u_int
+         U _func_printErr
+         U memSysPartId
+         U memPartAlloc
+         U bzero
+         U memPartFree
+00000184 T xdr_vector
+
+xdr_float.o:
+00000000 T xdr_floatInclude
+00000004 T xdr_float
+00000064 T xdr_double
+
+xdr_mem.o:
+00000000 d xdrmem_ops
+0000001c t xdrmem_destroy
+00000020 t xdrmem_getlonglong
+00000090 t xdrmem_putlonglong
+00000100 t xdrmem_getlong
+00000158 t xdrmem_putlong
+000001b0 t xdrmem_getbytes
+00000200 t xdrmem_putbytes
+00000250 t xdrmem_putwords
+000002a0 t xdrmem_putlongs
+000002f0 t xdrmem_getpos
+00000300 t xdrmem_setpos
+00000350 t xdrmem_inline
+00000000 T xdrmem_create
+         U bcopy
+         U bcopyWords
+         U bcopyLongs
+
+xdr_rec.o:
+00000000 t fix_buf_size
+00000000 d xdrrec_ops
+00000140 t fill_input_buf
+00000194 t get_input_bytes
+00000220 t set_input_fragment
+00000288 t xdrrec_getbytes
+00000330 t xdrrec_getlong
+000003d0 t flush_out
+00000460 t xdrrec_putlong
+000004e8 t xdrrec_putbytes
+00000578 t xdrrec_getpos
+000005f0 t xdrrec_setpos
+000006a0 t xdrrec_inline
+0000072c t xdrrec_destroy
+0000075c t skip_input_bytes
+0000001c T xdrrec_create
+         U memSysPartId
+         U memPartAlloc
+         U memPartFree
+         U printErr
+         U __rem32
+         U bcopy
+         U lseek
+000007d0 T xdrrec_skiprecord
+00000850 T xdrrec_eof
+000008d8 T xdrrec_endofrecord
+
+xdr_ref.o:
+00000000 T xdr_reference
+         U memSysPartId
+         U memPartAlloc
+         U printErr
+         U bzero
+         U memPartFree
+000000bc T xdr_pointer
+         U xdr_bool
+
+rpcLib.o:
+0000000c d rpcInitialized.11
+00000144 t rpcTaskDeleteHook
+00000010 d rpcInstalled.18
+00000000 T rpcInit
+         U portmapd
+00000000 D portmapdPriority
+00000004 D portmapdOptions
+00000008 D portmapdStackSize
+         U taskSpawn
+00000004 C portmapdId
+         U clnt_genericInclude
+         U clnt_rawInclude
+         U clnt_simpleInclude
+         U pmap_getmapsInclude
+         U svc_rawInclude
+         U svc_simpleInclude
+         U xdr_floatInclude
+000000b8 T rpcTaskInit
+         U taskDeleteHookAdd
+         U taskIdSelf
+         U memSysPartId
+         U memPartAlloc
+         U bzero
+         U close
+         U svc_unregisterall
+         U memPartFree
+0000025c T rpcClntErrnoSet
+         U errnoSet
+00000264 T rpcErrnoGet
+         U errnoGet

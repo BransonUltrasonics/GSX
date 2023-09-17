@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="FBIF_SPIIF">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2021-7-14T14:39:1</timestamp>
+    <pin polarity="Input" x="320" y="0" name="ADC_ERROR" />
+    <pin polarity="Input" x="384" y="-3312" name="CLK_1ms" />
+    <pin polarity="Input" x="288" y="-3312" name="CLK_4" />
+    <pin polarity="Input" x="336" y="-3312" name="CLK_8" />
+    <pin polarity="Input" x="240" y="-3312" name="CLK_M" />
+    <pin polarity="Input" x="0" y="-672" name="GPI(7:0)" />
+    <pin polarity="Input" x="0" y="-2352" name="HW_VERS_BD(7:0)" />
+    <pin polarity="Input" x="0" y="-1584" name="RCYC_S_FrequValOut(23:0)" />
+    <pin polarity="Input" x="0" y="-1552" name="RCYC_S_PhaseValOut(15:0)" />
+    <pin polarity="Input" x="0" y="-1712" name="RCYC_S_StatHdx(15:0)" />
+    <pin polarity="Input" x="0" y="-2064" name="SPI_CLK" />
+    <pin polarity="Input" x="0" y="-1968" name="SPI_I_MOSI" />
+    <pin polarity="Input" x="0" y="-2032" name="SPI_N_CS" />
+    <pin polarity="Input" x="0" y="-2400" name="TYPE_BD(7:0)" />
+    <pin polarity="Input" x="144" y="-3312" name="X_RST" />
+    <pin polarity="Output" x="0" y="-544" name="BTM" />
+    <pin polarity="Output" x="0" y="-448" name="BTM_GPO(7:0)" />
+    <pin polarity="Output" x="0" y="-512" name="BTM_PWMA" />
+    <pin polarity="Output" x="0" y="-480" name="BTM_PWMB" />
+    <pin polarity="Output" x="0" y="-3088" name="FBIF_TEST_1" />
+    <pin polarity="Output" x="0" y="-3056" name="FBIF_TEST_2" />
+    <pin polarity="Output" x="0" y="-3024" name="FPGA_CTRL_TEST(15:0)" />
+    <pin polarity="Output" x="192" y="-3312" name="FPGA_RUN" />
+    <pin polarity="Output" x="0" y="-2992" name="FPGA_STAT_TEST(15:0)" />
+    <pin polarity="Output" x="0" y="-624" name="GPO(7:0)" />
+    <pin polarity="Output" x="0" y="-2000" name="SPI_O_MISO" />
+    <pin polarity="Output" x="896" y="-1712" name="WCYC_P_CtrlHdx(15:0)" />
+    <pin polarity="Output" x="896" y="-1584" name="WCYC_P_FrequValIn(23:0)" />
+    <pin polarity="Output" x="896" y="-1552" name="WCYC_P_PhaseValIn(15:0)" />
+    <pin polarity="Output" x="896" y="-1520" name="WCYC_P_PWMVal(15:0)" />
+    <graph>
+        <attrtext style="alignment:BCENTER;fontsize:44;fontname:Arial" attrname="SymbolName" x="656" y="0" type="symbol" />
+        <attrtext style="alignment:VRIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="320" y="-220" type="pin ADC_ERROR" />
+        <attrtext style="alignment:VRIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="384" y="-3260" type="pin CLK_1ms" />
+        <attrtext style="alignment:VRIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="288" y="-3260" type="pin CLK_4" />
+        <attrtext style="alignment:VRIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="336" y="-3256" type="pin CLK_8" />
+        <attrtext style="alignment:VRIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="240" y="-3256" type="pin CLK_M" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-672" type="pin GPI(7:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-2352" type="pin HW_VERS_BD(7:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-1584" type="pin RCYC_S_FrequValOut(23:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-1552" type="pin RCYC_S_PhaseValOut(15:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-1712" type="pin RCYC_S_StatHdx(15:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-2064" type="pin SPI_CLK" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-1968" type="pin SPI_I_MOSI" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-2032" type="pin SPI_N_CS" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-2400" type="pin TYPE_BD(7:0)" />
+        <attrtext style="alignment:VLEFT;fontsize:24;fontname:Arial" attrname="PinName" x="144" y="-3180" type="pin X_RST" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="128" y="-544" type="pin BTM" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="248" y="-448" type="pin BTM_GPO(7:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="216" y="-512" type="pin BTM_PWMA" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="216" y="-480" type="pin BTM_PWMB" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="236" y="-3088" type="pin FBIF_TEST_1" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="236" y="-3056" type="pin FBIF_TEST_2" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="356" y="-3024" type="pin FPGA_CTRL_TEST(15:0)" />
+        <attrtext style="alignment:VRIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="196" y="-3264" type="pin FPGA_RUN" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="356" y="-2992" type="pin FPGA_STAT_TEST(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="180" y="-620" type="pin GPO(7:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="224" y="-2000" type="pin SPI_O_MISO" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="824" y="-1712" type="pin WCYC_P_CtrlHdx(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="824" y="-1584" type="pin WCYC_P_FrequValIn(23:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="824" y="-1552" type="pin WCYC_P_PhaseValIn(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="824" y="-1520" type="pin WCYC_P_PWMVal(15:0)" />
+        <line x2="144" y1="-3264" y2="-3312" x1="144" />
+        <line x2="272" y1="-3264" y2="-3264" x1="208" />
+        <line x2="192" y1="-3264" y2="-3312" x1="192" />
+        <line x2="240" y1="-3312" y2="-3264" x1="240" />
+        <line x2="288" y1="-3312" y2="-3264" x1="288" />
+        <line x2="336" y1="-3312" y2="-3264" x1="336" />
+        <line x2="384" y1="-3264" y2="-3312" x1="384" />
+        <line x2="64" y1="-3088" y2="-3088" x1="0" />
+        <line x2="64" y1="-3056" y2="-3056" x1="0" />
+        <rect width="64" x="0" y="-3036" height="24" />
+        <line x2="64" y1="-3024" y2="-3024" x1="0" />
+        <rect width="768" x="64" y="-3264" height="3204" />
+        <rect width="64" x="0" y="-3004" height="24" />
+        <line x2="64" y1="-2992" y2="-2992" x1="0" />
+        <rect width="64" x="832" y="-1724" height="24" />
+        <line x2="896" y1="-1712" y2="-1712" x1="832" />
+        <rect width="64" x="832" y="-1596" height="24" />
+        <line x2="896" y1="-1584" y2="-1584" x1="832" />
+        <rect width="64" x="832" y="-1564" height="24" />
+        <line x2="896" y1="-1552" y2="-1552" x1="832" />
+        <rect width="64" x="832" y="-1532" height="24" />
+        <line x2="896" y1="-1520" y2="-1520" x1="832" />
+        <line x2="0" y1="-2064" y2="-2064" x1="64" />
+        <line x2="0" y1="-2032" y2="-2032" x1="64" />
+        <rect width="64" x="0" y="-2364" height="24" />
+        <line x2="0" y1="-2352" y2="-2352" x1="64" />
+        <rect width="64" x="0" y="-2412" height="24" />
+        <line x2="0" y1="-2400" y2="-2400" x1="64" />
+        <line x2="64" y1="-2000" y2="-2000" x1="0" />
+        <line x2="0" y1="-1968" y2="-1968" x1="64" />
+        <rect width="64" x="0" y="-1724" height="24" />
+        <line x2="0" y1="-1712" y2="-1712" x1="64" />
+        <rect width="64" x="0" y="-1596" height="24" />
+        <line x2="0" y1="-1584" y2="-1584" x1="64" />
+        <rect width="64" x="0" y="-1564" height="24" />
+        <line x2="0" y1="-1552" y2="-1552" x1="64" />
+        <rect width="64" x="0" y="-684" height="24" />
+        <line x2="0" y1="-672" y2="-672" x1="64" />
+        <rect width="64" x="0" y="-636" height="24" />
+        <line x2="64" y1="-624" y2="-624" x1="0" />
+        <line x2="64" y1="-544" y2="-544" x1="0" />
+        <line x2="64" y1="-512" y2="-512" x1="0" />
+        <line x2="64" y1="-480" y2="-480" x1="0" />
+        <rect width="64" x="0" y="-460" height="24" />
+        <line x2="64" y1="-448" y2="-448" x1="0" />
+        <line x2="320" y1="0" y2="-60" x1="320" />
+    </graph>
+</symbol>

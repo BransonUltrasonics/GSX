@@ -1,0 +1,48 @@
+(define-rcs-info "$Id: tftp.ldb,v 1.1.1.1 2001/11/05 17:47:21 tneale Exp $")
+
+(C-include EPILOGUE_INSTALL_H <install.h>)
+(C-include EPILOGUE_TYPES_H <common/h/types.h>)
+(C-include EPILOGUE_LAYOUT_LDBGLUE_H <layout/ldbglue.h>)
+
+(define-layout TFTP_MESSAGE
+  (union (struct
+	  (field OPCODE (enum (type (unsigned 16))
+			      (value OP_RRQ 1)
+			      (value OP_WRQ 2)
+			      (value OP_DATA 3)
+			      (value OP_ACK 4)
+			      (value OP_ERROR 5)))
+	  )
+	 (struct
+	  ;; OP_RRQ/OP_WRQ
+	  (fill 16)			;opcode
+	  (field FILENAME (unsigned 8)) ; well, not really, but....
+	  )
+	 (struct
+	  ;; OP_DATA/OP_ACK
+	  (fill 16)			;opcode
+	  (field BLOCK (unsigned 16))
+	  ;; followed by data
+	  )
+	 (struct
+	  ;; OP_ERROR
+	  (fill 16)			;opcode
+	  (field ERROR (enum (type (unsigned 16))
+			     (value ERR_USEMSG 	0)
+			     (value ERR_NOFILE 	1)
+			     (value ERR_ACCESS 	2)
+			     (value ERR_DISKFULL 3)
+			     (value ERR_ILLEGALOP 4)
+			     (value ERR_BADTID 5)
+			     (value ERR_EXISTS 6)
+			     (value ERR_NOUSER 7)))
+	  ;;; rest of packet is error message
+	  )))
+
+
+
+
+; Local Variables:
+; mode: Scheme
+; End:
+

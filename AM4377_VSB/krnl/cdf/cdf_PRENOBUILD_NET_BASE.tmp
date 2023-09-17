@@ -1,0 +1,20 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/net_base-1.0.4.0/cdf/00comp_net_arpainetlib.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/net_base-1.0.4.0/cdf/00comp_net_base.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/net_base-1.0.4.0/cdf/00comp_net_daemon_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/net_base-1.0.4.0/cdf/00comp_net_ifnamelib.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/net_base-1.0.4.0/cdf/00comp_net_init.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/net_base-1.0.4.0/cdf/01folder_net_base.cdf>
+
+Layer Layer::NET_BASE {
+	NAME NET_BASE
+}

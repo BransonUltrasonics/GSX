@@ -1,0 +1,6 @@
+FrequencyStart 19500 1
+FrequencyStep 1 1
+FrequencyStop 20500 1
+MaxAmplitude 10 1
+MaxCurrent 10 1
+TimeDelay 10 1

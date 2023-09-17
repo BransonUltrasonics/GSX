@@ -1,0 +1,1 @@
+__FILES_COPIED_USB_HID = C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/h/public/usbhid.h C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/h/public/usb_hid_usages C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/h/public/usb2Hid.h

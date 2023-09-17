@@ -1,0 +1,460 @@
+
+libcplus.a:
+
+cplusDemStyle.o:
+00000000 T cplusDemanglerStyleInit
+00000004 C cplusDemanglerStyle
+00000014 T cplusDemanglerStyleSet
+
+cplusDem.o:
+00000000 T _cplusDemangle
+         U demangleToBuffer
+         U cplusDemanglerMode
+00000038 T cplusDemanglerInit
+         U cplusDemangleFunc
+         U cplusDemangle2Func
+         U demangle
+         U cplusDemangleToBufferFunc
+00000000 D __cplusDem_o
+
+cplusDemStub.o:
+00000000 t startsWith
+00000060 t symNodeAdd
+00000134 t findMatches
+         U strlen
+         U calloc
+         U strcpy
+         U lstAdd
+000000b0 T cplusDemanglerSet
+000000c0 T cplusDemangle
+000000e4 T cplusDemangle2
+         U malloc
+         U strstr
+         U strcmp
+         U free
+         U cplusDemanglerStyle
+000001f8 T cplusDemangleToBuffer
+0000023c T cplusUserAsk
+         U lstCount
+         U lstFirst
+         U printf
+         U lstNext
+         U __stdin
+         U fgets
+         U atoi
+0000032c T cplusMatchMangledListGet
+         U _func_symEach
+0000037c T cplusMangledSymGet
+         U lstInit
+         U memset
+         U lstFree
+         U lstNth
+         U _func_symFind
+000004a8 T cplusMatchMangled
+000004cc T cplusMangledSymCheck
+0000000c D cplusDemangleToBufferFunc
+00000008 D cplusDemangle2Func
+00000004 D cplusDemangleFunc
+00000000 D cplusDemanglerMode
+
+etoa_decode.o:
+00000000 t demangle_operator
+00000a30 t write_id_ch$part$0
+00000aa0 t write_id_str$part$1
+00000aec t demangle_type_qualifiers
+00000be0 t output_cv_qualifiers
+00000cec t write_template_parameter_name
+00000dd4 t bad_mangled_name$part$2
+00000df8 t get_length
+00000edc t cfront_get_number
+00000f84 t IA64_get_number
+00001030 t get_operator_name
+00001540 t demangle_source_name
+0000178c t demangle_template_param
+00001858 t demangle_call_offset
+000019f8 t get_single_digit_number
+00001a5c t get_length_with_optional_underscore
+00001b1c t record_substitutable_entity
+00001b90 t get_hex_digit$isra$7
+00001bf0 t demangle_unscoped_name$isra$11
+000034b4 t demangle_unqualified_name
+00001c64 t demangle_substitution
+00003c68 t IA64_demangle_type_second_part
+00002090 t demangle_nested_name_components
+00002ec4 t IA64_demangle_type_first_part
+00002dc8 t demangle_template_args
+0000233c t IA64_demangle_name
+000026d4 t demangle_encoding
+000035dc t demangle_bare_function_type
+0000346c t IA64_demangle_type
+000029f4 t demangle_literal
+0000373c t demangle_expression
+00003f40 t cfront_demangle_name
+000050a0 t demangle_template_arguments
+000049ac t full_demangle_type_name
+00004e0c t cfront_demangle_type
+0000478c t demangle_name_with_preceding_length
+00006880 t demangle_function_local_indication
+00004988 t demangle_simple_type_name
+00005364 t demangle_template_parameter_name
+00004b0c t demangle_vtbl_class_name
+00004b90 t cfront_demangle_type_second_part$constprop$12
+00005470 t demangle_constant
+00004e40 t demangle_function_parameters
+00005ba4 t cfront_demangle_type_first_part
+000063e8 t full_demangle_identifier
+00000000 d digits$5152
+00000000 b host_little_endian
+         U sprintf
+         U __ctype
+         U strchr
+         U strlen
+         U strcmp
+00006974 T is_IA64_encoded_identifier
+0000699c T decode_identifier_styled
+0000739c T cfront_decode_identifier
+000073d8 T IA64_decode_identifier_ex
+00007564 T decode_identifier_ex
+000075e4 T decode_identifier
+00007624 T __cxa_demangle
+         U malloc
+         U free
+         U realloc
+         U strcpy
+00000028 D emulate_gnu_abi_bugs
+
+demangler.o:
+00000000 T demanglerStyleFromName
+         U strcmp
+00000054 T demanglerNameFromStyle
+00000094 T demangleResultFree
+         U free
+000000a0 T realDemangleToBufferEx
+         U decode_identifier_ex
+         U printf
+00000298 T demangleToBufferEx
+000002a4 T demangleToBuffer
+00000354 T demangle
+         U realloc
+         U strlen
+         U malloc
+         U strcpy
+00000020 D cplusExtractDebug
+00000000 D manglingStyles
+
+cplusLib.o:
+00000000 d cplusLibInitialized
+00000000 T cplusLibMinInit
+         U semMCreate
+         U cplusArraysInit
+         U cplusDemanglerStyleInit
+00000004 C cplusNewHdlMutex
+00000044 T __pure_virtual_called
+         U taskSuspend
+         U _func_logMsg
+00000094 T __pure_virtual
+
+cplusCore.o:
+00000000 T cplusNewHandlerExists
+         U semTake
+         U semGive
+         U cplusNewHdlMutex
+         U __aeabi_unwind_cpp_pr0
+00000028 T cplusCallNewHandler
+0000004c T cplusTerminate
+         U taskSuspend
+         U _func_logMsg
+0000009c T cplusArraysInit
+00000000 B __cplusCore_o
+
+cplusInit.o:
+00000000 T cplusLibInit
+         U _ZSt13set_terminatePFvvE
+         U atexitInit
+         U cplusLibMinInit
+         U cplusTerminate
+         U __aeabi_unwind_cpp_pr1
+00000000 D __cplusObjFiles
+         U __cplusCore_o
+         U __cplusStr_o
+         U __cplusXtors_o
+
+cplusStr.o:
+00000000 T _ZN18RBStringIterator_TC2ERK10RBString_T
+00000000 T _ZN18RBStringIterator_TC1ERK10RBString_T
+0000000c T _ZN18RBStringIterator_T8nextCharEv
+0000003c T _ZN10RBString_TC2Ev
+0000003c T _ZN10RBString_TC1Ev
+00000058 T _ZN10RBString_T5clearEv
+00000070 T _ZN10RBString_TC2ERS_
+         U memcpy
+00000070 T _ZN10RBString_TC1ERS_
+000000b4 T _ZN10RBString_TC2EPKc
+         U strlen
+000000b4 T _ZN10RBString_TC1EPKc
+00000110 T _ZN10RBString_TaSERS_
+0000015c T _ZNK10RBString_TeqERS_
+000001fc T _ZN10RBString_T14extractCStringEPcj
+0000026c T _ZN10RBString_T6appendERS_
+000002f8 T _ZN10RBString_T6appendEPKcj
+0000037c T _ZN10RBString_T6appendEc
+000003d0 T _ZN10RBString_T7prependEc
+00000408 T _ZN10RBString_T7prependERS_
+00000440 T _ZN10RBString_T7prependEPKcj
+00000000 B __cplusStr_o
+
+cplusXtors.o:
+00000000 T cplusCtorsLink
+         U _ctors
+00000048 T cplusDtorsLink
+         U _dtors
+00000094 T cplusCallCtors
+000000bc T cplusCallDtors
+00000000 D linkedCtorsInitialized
+00000004 D cplusXtorStrategy
+00000008 D __cplusXtors_o
+
+cplusUsr.o:
+00000000 t callAllCtors
+0000001c t callAllDtors
+         U cplusCallCtors
+         U cplusCallDtors
+00000038 T cplusXtorGet
+         U cplusXtorStrategy
+00000048 T cplusXtorSet
+00000058 T cplusCtors
+         U moduleFindByName
+         U moduleEach
+         U _func_logMsg
+000000e4 T cplusDtors
+00000000 D __cplusUsr_o
+
+libcplus.a:
+
+cplusDemStyle.o:
+00000000 T cplusDemanglerStyleInit
+00000004 C cplusDemanglerStyle
+00000014 T cplusDemanglerStyleSet
+
+cplusDem.o:
+00000000 T _cplusDemangle
+         U demangleToBuffer
+         U cplusDemanglerMode
+00000038 T cplusDemanglerInit
+         U cplusDemangleFunc
+         U cplusDemangle2Func
+         U demangle
+         U cplusDemangleToBufferFunc
+00000000 D __cplusDem_o
+
+cplusDemStub.o:
+00000000 t startsWith
+00000060 t symNodeAdd
+00000134 t findMatches
+         U strlen
+         U calloc
+         U strcpy
+         U lstAdd
+000000b0 T cplusDemanglerSet
+000000c0 T cplusDemangle
+000000e4 T cplusDemangle2
+         U malloc
+         U strstr
+         U strcmp
+         U free
+         U cplusDemanglerStyle
+000001f8 T cplusDemangleToBuffer
+0000023c T cplusUserAsk
+         U lstCount
+         U lstFirst
+         U printf
+         U lstNext
+         U __stdin
+         U fgets
+         U atoi
+0000032c T cplusMatchMangledListGet
+         U _func_symEach
+0000037c T cplusMangledSymGet
+         U lstInit
+         U memset
+         U lstFree
+         U lstNth
+         U _func_symFind
+000004a8 T cplusMatchMangled
+000004cc T cplusMangledSymCheck
+0000000c D cplusDemangleToBufferFunc
+00000008 D cplusDemangle2Func
+00000004 D cplusDemangleFunc
+00000000 D cplusDemanglerMode
+
+etoa_decode.o:
+00000000 t demangle_operator
+00000a30 t write_id_ch$part$0
+00000aa0 t write_id_str$part$1
+00000aec t demangle_type_qualifiers
+00000be0 t output_cv_qualifiers
+00000cec t write_template_parameter_name
+00000dd4 t bad_mangled_name$part$2
+00000df8 t get_length
+00000edc t cfront_get_number
+00000f84 t IA64_get_number
+00001030 t get_operator_name
+00001540 t demangle_source_name
+0000178c t demangle_template_param
+00001858 t demangle_call_offset
+000019f8 t get_single_digit_number
+00001a5c t get_length_with_optional_underscore
+00001b1c t record_substitutable_entity
+00001b90 t get_hex_digit$isra$7
+00001bf0 t demangle_unscoped_name$isra$11
+000034b4 t demangle_unqualified_name
+00001c64 t demangle_substitution
+00003c68 t IA64_demangle_type_second_part
+00002090 t demangle_nested_name_components
+00002ec4 t IA64_demangle_type_first_part
+00002dc8 t demangle_template_args
+0000233c t IA64_demangle_name
+000026d4 t demangle_encoding
+000035dc t demangle_bare_function_type
+0000346c t IA64_demangle_type
+000029f4 t demangle_literal
+0000373c t demangle_expression
+00003f40 t cfront_demangle_name
+000050a0 t demangle_template_arguments
+000049ac t full_demangle_type_name
+00004e0c t cfront_demangle_type
+0000478c t demangle_name_with_preceding_length
+00006880 t demangle_function_local_indication
+00004988 t demangle_simple_type_name
+00005364 t demangle_template_parameter_name
+00004b0c t demangle_vtbl_class_name
+00004b90 t cfront_demangle_type_second_part$constprop$12
+00005470 t demangle_constant
+00004e40 t demangle_function_parameters
+00005ba4 t cfront_demangle_type_first_part
+000063e8 t full_demangle_identifier
+00000000 d digits$5152
+00000000 b host_little_endian
+         U sprintf
+         U __ctype
+         U strchr
+         U strlen
+         U strcmp
+00006974 T is_IA64_encoded_identifier
+0000699c T decode_identifier_styled
+0000739c T cfront_decode_identifier
+000073d8 T IA64_decode_identifier_ex
+00007564 T decode_identifier_ex
+000075e4 T decode_identifier
+00007624 T __cxa_demangle
+         U malloc
+         U free
+         U realloc
+         U strcpy
+00000028 D emulate_gnu_abi_bugs
+
+demangler.o:
+00000000 T demanglerStyleFromName
+         U strcmp
+00000054 T demanglerNameFromStyle
+00000094 T demangleResultFree
+         U free
+000000a0 T realDemangleToBufferEx
+         U decode_identifier_ex
+         U printf
+00000298 T demangleToBufferEx
+000002a4 T demangleToBuffer
+00000354 T demangle
+         U realloc
+         U strlen
+         U malloc
+         U strcpy
+00000020 D cplusExtractDebug
+00000000 D manglingStyles
+
+cplusLib.o:
+00000000 d cplusLibInitialized
+00000000 T cplusLibMinInit
+         U semMCreate
+         U cplusArraysInit
+         U cplusDemanglerStyleInit
+00000004 C cplusNewHdlMutex
+00000044 T __pure_virtual_called
+         U taskSuspend
+         U _func_logMsg
+00000094 T __pure_virtual
+
+cplusCore.o:
+00000000 T cplusNewHandlerExists
+         U semTake
+         U semGive
+         U cplusNewHdlMutex
+         U __aeabi_unwind_cpp_pr0
+00000028 T cplusCallNewHandler
+0000004c T cplusTerminate
+         U taskSuspend
+         U _func_logMsg
+0000009c T cplusArraysInit
+00000000 B __cplusCore_o
+
+cplusInit.o:
+00000000 T cplusLibInit
+         U _ZSt13set_terminatePFvvE
+         U atexitInit
+         U cplusLibMinInit
+         U cplusTerminate
+         U __aeabi_unwind_cpp_pr1
+00000000 D __cplusObjFiles
+         U __cplusCore_o
+         U __cplusStr_o
+         U __cplusXtors_o
+
+cplusStr.o:
+00000000 T _ZN18RBStringIterator_TC2ERK10RBString_T
+00000000 T _ZN18RBStringIterator_TC1ERK10RBString_T
+0000000c T _ZN18RBStringIterator_T8nextCharEv
+0000003c T _ZN10RBString_TC2Ev
+0000003c T _ZN10RBString_TC1Ev
+00000058 T _ZN10RBString_T5clearEv
+00000070 T _ZN10RBString_TC2ERS_
+         U memcpy
+00000070 T _ZN10RBString_TC1ERS_
+000000b4 T _ZN10RBString_TC2EPKc
+         U strlen
+000000b4 T _ZN10RBString_TC1EPKc
+00000110 T _ZN10RBString_TaSERS_
+0000015c T _ZNK10RBString_TeqERS_
+000001fc T _ZN10RBString_T14extractCStringEPcj
+0000026c T _ZN10RBString_T6appendERS_
+000002f8 T _ZN10RBString_T6appendEPKcj
+0000037c T _ZN10RBString_T6appendEc
+000003d0 T _ZN10RBString_T7prependEc
+00000408 T _ZN10RBString_T7prependERS_
+00000440 T _ZN10RBString_T7prependEPKcj
+00000000 B __cplusStr_o
+
+cplusXtors.o:
+00000000 T cplusCtorsLink
+         U _ctors
+00000048 T cplusDtorsLink
+         U _dtors
+00000094 T cplusCallCtors
+000000bc T cplusCallDtors
+00000000 D linkedCtorsInitialized
+00000004 D cplusXtorStrategy
+00000008 D __cplusXtors_o
+
+cplusUsr.o:
+00000000 t callAllCtors
+0000001c t callAllDtors
+         U cplusCallCtors
+         U cplusCallDtors
+00000038 T cplusXtorGet
+         U cplusXtorStrategy
+00000048 T cplusXtorSet
+00000058 T cplusCtors
+         U moduleFindByName
+         U moduleEach
+         U _func_logMsg
+000000e4 T cplusDtors
+00000000 D __cplusUsr_o

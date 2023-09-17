@@ -1,0 +1,5 @@
+CheckSum 123 0
+Frequency 20 1
+Power 4000 1
+SerialNo 1 0
+SystemType 1 0

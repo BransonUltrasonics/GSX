@@ -1,0 +1,73 @@
+/***********************************************************
+Description: Temporary input recipe text file
+
+Input line ID:
+
+SC DIO lines:
+		Input 0 is line 1
+		Input 1 is line 2
+		Input 2 is line 3
+		Input 3 is line 4
+		Input 4 is line 5
+		Input 5 is line 6
+		Input 6 is line 7
+		Input 7 is line 8
+		Input 8 is line 9
+		Input 9 is line 10
+		Input 10 is line 11
+
+AC DIO lines:
+		Input 11 is line 12 (used for palm 1)
+		Input 12 is line 13 (used for palm 2)
+		Input 13 is line 14
+		Input 14 is line 15
+		Input 15 is line 16
+		Input 16 is line 17
+		Input 17 is line 18
+		Input 18 is line 19 (used for homing)
+
+
+Input functions codes:
+		FUNCTION_NONE = 0
+		INPUT_DISABLE = 1
+		INPUT_CUSTOM = 2
+		INPUT_SONIC_DISABLE = 3
+		
+		INPUT_CYCLE_ABORT = 4
+		INPUT_ALARM_RESET = 5
+		INPUT_TOOLING_READY = 6
+		INPUT_CYCLE_SYNC = 7
+		INPUT_PART_PRESENT = 8
+		INPUT_REJECT_CONFIRM = 9
+		INPUT_GROUND_DETECT = 10
+		INPUT_HOLD_DELAY = 11
+
+Input state codes:
+		STATE_ACTIVE_LOW = 0
+		STATE_ACTIVE_HIGH = 1
+
+Input source codes:
+		SOURCE_DIO = 0
+		SOURCE_FIELDBUS = 1 (future use)
+
+
+************************************************************/
+@0:1:0;
+@0:1:0;
+@0:1:0;
+@0:1:0;
+@0:1:0;
+@0:1:0;
+@0:1:0;
+@0:1:0;
+@0:1:0;
+@0:1:0;
+@0:1:0;
+@0:1:0;
+@0:1:0;
+@0:1:0;
+@0:1:0;
+@0:1:0;
+@0:1:0;
+@0:1:0;
+@0:1:0;

@@ -1,0 +1,98 @@
+
+librandom.a:
+
+randomNumGenLib.o:
+00000000 T randBytes
+00000004 C randomNumGenLibFuncs
+00000034 T randPseudoBytes
+00000068 T randAdd
+0000009c T randStatus
+
+randomSWNumGenLib.o:
+00000294 b randomNumGenSem
+00000000 b spinLock
+00000058 t randomSWAddWork
+00000010 d entropy
+00000074 b randomState
+000000cc t randomSWSanityCheck
+0000012c t randomSWAdd
+000001d4 t randomSWBytesInt
+00000274 b randomStateHash
+00000340 t randomSWBytes
+00000348 t randomSWPseudoBytes
+00000350 t randomSWStatus
+00000014 d seedPos
+00000000 T randomSWNumGenInit
+         U semMCreate
+         U spinLockIsrInit
+00000000 D randomNumGenLibFuncsLocal
+00000004 C randomNumGenLibFuncs
+00000180 T randomAddTimeStamp
+00000004 C _func_randomAddTimeStamp
+         U spinLockIsrTake
+         U spinLockIsrGive
+         U _func_clkTimerCountGet
+         U tickGet
+         U randAdd
+         U semTake
+         U secHashSha256TemplateGet
+         U secHash
+         U memcpy
+         U semGive
+
+randomScLib.o:
+00000000 T randNumGenCtlSc
+         U scMemValidate
+         U randBytes
+         U randPseudoBytes
+         U randAdd
+         U randStatus
+
+librandom.a:
+
+randomNumGenLib.o:
+00000000 T randBytes
+00000004 C randomNumGenLibFuncs
+00000034 T randPseudoBytes
+00000068 T randAdd
+0000009c T randStatus
+
+randomSWNumGenLib.o:
+00000294 b randomNumGenSem
+00000000 b spinLock
+00000058 t randomSWAddWork
+00000010 d entropy
+00000074 b randomState
+000000cc t randomSWSanityCheck
+0000012c t randomSWAdd
+000001d4 t randomSWBytesInt
+00000274 b randomStateHash
+00000340 t randomSWBytes
+00000348 t randomSWPseudoBytes
+00000350 t randomSWStatus
+00000014 d seedPos
+00000000 T randomSWNumGenInit
+         U semMCreate
+         U spinLockIsrInit
+00000000 D randomNumGenLibFuncsLocal
+00000004 C randomNumGenLibFuncs
+00000180 T randomAddTimeStamp
+00000004 C _func_randomAddTimeStamp
+         U spinLockIsrTake
+         U spinLockIsrGive
+         U _func_clkTimerCountGet
+         U tickGet
+         U randAdd
+         U semTake
+         U secHashSha256TemplateGet
+         U secHash
+         U memcpy
+         U semGive
+
+randomScLib.o:
+00000000 T randNumGenCtlSc
+         U scMemValidate
+         U randBytes
+         U randPseudoBytes
+         U randAdd
+         U randStatus

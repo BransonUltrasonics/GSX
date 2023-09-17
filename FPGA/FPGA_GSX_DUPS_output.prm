@@ -1,0 +1,17 @@
+PROMGEN: Xilinx Prom Generator P.20131013
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o C:\Users\76053\Documents\Entrenamientos\VHDL_FPGA\GSX_FPGA//FPGA_GSX_DUPS_output -x xcf08p -ver 0 C:/Users/76053/Documents/Entrenamientos/VHDL_FPGA/GSX_FPGA/fpga_dups.bit 
+
+PROM C:\Users\76053\Documents\Entrenamientos\VHDL_FPGA\GSX_FPGA\FPGA_GSX_DUPS_output.prm map: Mon May 17 16:55:09 2021
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          1024K
+PROM start    0000:0000
+PROM end      000f:ffff
+PROM checksum 0701a342
+
+        Addr1        Addr2                     Date File(s)
+    0000:0000    0009:1211     May 17 16:54:34 2021 C:/Users/76053/Documents/Entrenamientos/VHDL_FPGA/GSX_FPGA/fpga_dups.bit

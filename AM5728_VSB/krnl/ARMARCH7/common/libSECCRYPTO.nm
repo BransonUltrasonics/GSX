@@ -1,0 +1,674 @@
+
+libSECCRYPTO.a:
+
+secCipher.o:
+00000000 T secCipherInit
+         U memset
+0000008c T secCipherUpdate
+         U __div32
+         U memcpy
+00000344 T secCipherFinal
+00000464 T secCipherCtrl
+000004f0 T secCipherCleanup
+00000534 T secCipherCopy
+
+secCipherAes128Cbc.o:
+00000000 d aes128CbcTemplate
+00000000 T secCipherAes128CbcTemplateSet
+00000024 T secCipherAes128CbcTemplateGet
+
+secCipherAes128Ctr.o:
+00000000 d aes128ctrTemplate
+00000000 T secCipherAes128CtrTemplateSet
+00000020 T secCipherAes128CtrTemplateGet
+
+secCipherAes128Ecb.o:
+00000000 d aes128EcbTemplate
+00000000 T secCipherAes128EcbTemplateSet
+00000020 T secCipherAes128EcbTemplateGet
+
+secCipherAes192Cbc.o:
+00000000 d aes192CbcTemplate
+00000000 T secCipherAes192CbcTemplateSet
+00000024 T secCipherAes192CbcTemplateGet
+
+secCipherAes192Ctr.o:
+00000000 d aes192ctrTemplate
+00000000 T secCipherAes192CtrTemplateSet
+00000024 T secCipherAes192CtrTemplateGet
+
+secCipherAes256Cbc.o:
+00000000 d aes256CbcTemplate
+00000000 T secCipherAes256CbcTemplateSet
+00000024 T secCipherAes256CbcTemplateGet
+
+secCipherAes256Ctr.o:
+00000000 d aes256ctrTemplate
+00000000 T secCipherAes256CtrTemplateSet
+00000024 T secCipherAes256CtrTemplateGet
+
+secCipherAes256Ecb.o:
+00000000 d aes256EcbTemplate
+00000000 T secCipherAes256EcbTemplateSet
+00000024 T secCipherAes256EcbTemplateGet
+
+secCipherBlowfishCbc.o:
+00000000 d blowfishCbcTemplate
+00000000 T secCipherBlowfishCbcTemplateSet
+00000024 T secCipherBlowfishCbcTemplateGet
+
+secCipherCastCbc.o:
+00000000 d castCbcTemplate
+00000000 T secCipherCastCbcTemplateSet
+00000024 T secCipherCastCbcTemplateGet
+
+secCipherDesCbc.o:
+00000000 d desCbcTemplate
+00000000 T secCipherDesCbcTemplateSet
+00000024 T secCipherDesCbcTemplateGet
+
+secCipher3DesCbc.o:
+00000000 d trippleDesCbcTemplate
+00000000 T secCipher3DesCbcTemplateSet
+00000020 T secCipher3DesCbcTemplateGet
+
+secCipherRc4.o:
+00000000 d rc4Template
+00000000 T secCipherRc4TemplateSet
+00000024 T secCipherRc4TemplateGet
+
+secKeyStoreLib.o:
+00000000 T secKeyStoreInit
+00000004 T secKeyStoreKepGet
+         U secVaultKepGet
+00000040 T secKeyStoreGet
+         U strlen
+         U __errno
+         U secVaultLock
+         U secVaultFpGet
+         U PEM_read_PrivateKey
+         U fclose
+         U secVaultUnlock
+000000c0 T secKeyStoreImport
+         U EVP_aes_256_cbc
+         U PEM_write_PKCS8PrivateKey
+00000198 T secKeyStoreX509Get
+         U X509_get_pubkey
+         U secVaultOpenDir
+         U secVaultRead
+         U EVP_PKEY_cmp
+         U strcpy
+         U EVP_PKEY_free
+         U closedir
+00000310 T secKeyStoreDel
+         U secVaultGetFilePath
+         U unlink
+00000388 T secKeyStoreOpen
+00000390 T secKeyStoreRead
+00000394 T secKeyStoreClose
+
+secKeyStoreCmd.o:
+00000000 T secKeyStoreCmdInit
+         U shellCmdTopicAdd
+00000000 D secKeyStoreCmdData
+         U shellCmdAdd
+00000028 T secKeyStoreCmdUsage
+         U printf
+00000030 T secKeyStoreCmdImport
+         U fopen
+         U PEM_read_PrivateKey
+         U secKeyStoreImport
+         U fclose
+         U EVP_PKEY_free
+000000e8 T secKeyStoreCmdDelete
+         U secKeyStoreDel
+0000011c T secKeyStoreCmdPrint
+         U secKeyStoreGet
+         U __stdout
+         U BIO_new_fp
+         U EVP_PKEY_print_public
+         U BIO_free
+000001bc T secKeyStoreCmdList
+         U secKeyStoreOpen
+         U secKeyStoreRead
+         U secKeyStoreClose
+00000214 T secKeyStoreCmdFind
+         U PEM_read_X509
+         U secKeyStoreX509Get
+         U X509_free
+00000308 T secKeyStoreCmd
+         U strcmp
+
+ipcom_cmd_keydb.o:
+00000000 t ipcom_cmd_keydb_import
+00000204 t ipcom_cmd_keydb_list
+000002e4 t ipcom_cmd_keydb_delete
+00000374 t ipcom_cmd_keydb_find
+0000044c t ipcom_cmd_keydb_print
+00000574 t ipcom_cmd_keydb_verify
+00000000 d keydb_opt_map
+         U strcmp
+         U printf
+         U ipcom_fopen
+         U PEM_read_PrivateKey
+         U ipcom_fclose
+         U ipcom_key_db_pkey_import
+         U ipcom_err_string
+         U EVP_PKEY_free
+         U ipcom_getline_init
+         U strlen
+         U ipcom_getline
+         U ipcom_getline_exit
+         U ipcom_key_db_buf_import
+         U ipcom_key_db_pkey_opendb
+         U ipcom_key_db_pkey_readdb
+         U ipcom_key_db_pkey_closedb
+         U ipcom_key_db_buf_opendb
+         U ipcom_key_db_buf_readdb
+         U ipcom_key_db_buf_closedb
+         U ipcom_key_db_pkey_del
+         U ipcom_key_db_buf_del
+         U PEM_read_X509
+         U ipcom_key_db_pkey_get2
+         U X509_free
+         U ipcom_key_db_pkey_get
+         U BN_num_bits
+         U BN_clear_free
+         U ipcom_stdout
+         U RSA_print_fp
+         U DSA_print_fp
+         U ipcom_key_db_buf_get
+         U memcmp
+00000664 T ipcom_cmd_keydb
+         U strncmp
+00000870 T ipcom_cmd_keydb_init
+         U ipcom_shell_add_cmd
+
+ipcom_key_db.o:
+00000000 T ipcom_key_db_pkey_get
+         U strlen
+         U secKeyStoreGet
+00000034 T ipcom_key_db_pkey_import
+         U secKeyStoreImport
+         U __errno
+000000a0 T ipcom_key_db_pkey_get2
+         U secKeyStoreX509Get
+000000a4 T ipcom_key_db_pkey_opendb
+         U secKeyStoreOpen
+000000a8 T ipcom_key_db_pkey_readdb
+         U secKeyStoreRead
+000000f8 T ipcom_key_db_pkey_closedb
+         U secKeyStoreClose
+00000124 T ipcom_key_db_pkey_del
+         U secKeyStoreDel
+0000017c T ipcom_key_db_buf_import
+         U secVaultImport
+000001f0 T ipcom_key_db_buf_get
+         U secVaultGet
+0000025c T ipcom_key_db_buf_del
+         U secVaultDel
+000002a4 T ipcom_key_db_buf_opendb
+         U secVaultOpen
+000002a8 T ipcom_key_db_buf_readdb
+         U secVaultRead
+000002e0 T ipcom_key_db_buf_closedb
+         U secVaultClose
+
+ipcrypto_key_db_example_keys.o:
+00000000 t ipcrypto_key_db_install_example_key
+         U strlen
+         U malloc
+         U strcpy
+         U strcat
+         U ipcom_fopen
+         U ipcom_fwrite
+         U ipcom_syslog
+         U ipcom_fseek
+         U ipcom_errno_get
+         U PEM_read_PrivateKey
+         U ipcom_key_db_pkey_import
+         U ipcom_fclose
+         U ipcom_unlink
+         U free
+         U EVP_PKEY_free
+0000017c T ipcrypto_key_db_install_example_keys
+
+secVaultCmd.o:
+00000000 t secVaultCmdUsage
+00000070 t secVaultCmdPromptSecret
+00000000 D secVaultCmdData
+         U printf
+00000048 T secVaultCmdInit
+         U shellCmdTopicAdd
+         U shellCmdAdd
+         U ioctl
+         U __stdin
+         U fgets
+         U strlen
+00000174 T secVaultCmdImport
+         U strncmp
+         U secVaultImport
+00000248 T secVaultCmdVerify
+         U secVaultGet
+         U strcmp
+00000334 T secVaultCmdDelete
+         U secVaultDel
+00000364 T secVaultCmdList
+         U secVaultOpen
+         U secVaultRead
+         U secVaultClose
+000003bc T secVaultCmd
+
+secVaultLib.o:
+00000000 d secVault
+0000013c t secVaultGetKekIv
+000002ec t secVaultReadyCheck
+00000000 T secVaultCreateDirs
+         U strchr
+         U strdup
+         U free
+         U strlen
+         U strcmp
+         U mkdir
+000000f8 T secVaultKepGet
+         U secHashSha1TemplateGet
+         U secHashInit
+         U secHashUpdate
+         U secHashFinal
+         U memset
+00000284 T secVaultSetKepCb
+000002a4 T secVaultGetKepCb
+000002b0 T secVaultKepBackendSet
+         U iosDevFind
+0000033c T secVaultGetDirPath
+         U strncpy
+00000394 T secVaultGetFilePath
+         U strncat
+00000420 T secVaultFpGet
+         U fopen
+000004cc T secVaultInitDir
+         U calloc
+         U printf
+000005bc T secVaultInit
+         U semMCreate
+         U semDelete
+00000668 T secVaultLock
+         U semTake
+00000694 T secVaultUnlock
+         U semGive
+000006bc T secVaultOpenDir
+         U opendir
+00000718 T secVaultImport
+         U __errno
+         U malloc
+         U secCipherAes256CbcTemplateGet
+         U secCipherInit
+         U secCipherUpdate
+         U secCipherFinal
+         U fwrite
+         U fclose
+         U secCipherCleanup
+000008cc T secVaultGet
+         U fread
+00000a68 T secVaultDel
+         U unlink
+00000ae0 T secVaultOpen
+00000ae8 T secVaultRead
+         U readdir
+00000b9c T secVaultClose
+         U closedir
+
+secVaultKepObfuscator.o:
+00000000 T secVaultKepObfuscatorInit
+         U secVaultKepObfuscator
+         U secVaultKepBackendSet
+
+secCipherXexAes.o:
+00000000 T secXexAesInit
+         U calloc
+         U secCipherInit
+         U secCipherCtrl
+         U secCipherCleanup
+         U free
+00000178 T secXexAesUpdate
+         U __udiv32
+         U secCipherUpdate
+000003bc T secXexAesCleanup
+         U bzero
+
+libSECCRYPTO.a:
+
+secCipher.o:
+00000000 T secCipherInit
+         U memset
+0000008c T secCipherUpdate
+         U __div32
+         U memcpy
+00000344 T secCipherFinal
+00000464 T secCipherCtrl
+000004f0 T secCipherCleanup
+00000534 T secCipherCopy
+
+secCipherAes128Cbc.o:
+00000000 d aes128CbcTemplate
+00000000 T secCipherAes128CbcTemplateSet
+00000024 T secCipherAes128CbcTemplateGet
+
+secCipherAes128Ctr.o:
+00000000 d aes128ctrTemplate
+00000000 T secCipherAes128CtrTemplateSet
+00000020 T secCipherAes128CtrTemplateGet
+
+secCipherAes128Ecb.o:
+00000000 d aes128EcbTemplate
+00000000 T secCipherAes128EcbTemplateSet
+00000020 T secCipherAes128EcbTemplateGet
+
+secCipherAes192Cbc.o:
+00000000 d aes192CbcTemplate
+00000000 T secCipherAes192CbcTemplateSet
+00000024 T secCipherAes192CbcTemplateGet
+
+secCipherAes192Ctr.o:
+00000000 d aes192ctrTemplate
+00000000 T secCipherAes192CtrTemplateSet
+00000024 T secCipherAes192CtrTemplateGet
+
+secCipherAes256Cbc.o:
+00000000 d aes256CbcTemplate
+00000000 T secCipherAes256CbcTemplateSet
+00000024 T secCipherAes256CbcTemplateGet
+
+secCipherAes256Ctr.o:
+00000000 d aes256ctrTemplate
+00000000 T secCipherAes256CtrTemplateSet
+00000024 T secCipherAes256CtrTemplateGet
+
+secCipherAes256Ecb.o:
+00000000 d aes256EcbTemplate
+00000000 T secCipherAes256EcbTemplateSet
+00000024 T secCipherAes256EcbTemplateGet
+
+secCipherBlowfishCbc.o:
+00000000 d blowfishCbcTemplate
+00000000 T secCipherBlowfishCbcTemplateSet
+00000024 T secCipherBlowfishCbcTemplateGet
+
+secCipherCastCbc.o:
+00000000 d castCbcTemplate
+00000000 T secCipherCastCbcTemplateSet
+00000024 T secCipherCastCbcTemplateGet
+
+secCipherDesCbc.o:
+00000000 d desCbcTemplate
+00000000 T secCipherDesCbcTemplateSet
+00000024 T secCipherDesCbcTemplateGet
+
+secCipher3DesCbc.o:
+00000000 d trippleDesCbcTemplate
+00000000 T secCipher3DesCbcTemplateSet
+00000020 T secCipher3DesCbcTemplateGet
+
+secCipherRc4.o:
+00000000 d rc4Template
+00000000 T secCipherRc4TemplateSet
+00000024 T secCipherRc4TemplateGet
+
+secKeyStoreLib.o:
+00000000 T secKeyStoreInit
+00000004 T secKeyStoreKepGet
+         U secVaultKepGet
+00000040 T secKeyStoreGet
+         U strlen
+         U __errno
+         U secVaultLock
+         U secVaultFpGet
+         U PEM_read_PrivateKey
+         U fclose
+         U secVaultUnlock
+000000c0 T secKeyStoreImport
+         U EVP_aes_256_cbc
+         U PEM_write_PKCS8PrivateKey
+00000198 T secKeyStoreX509Get
+         U X509_get_pubkey
+         U secVaultOpenDir
+         U secVaultRead
+         U EVP_PKEY_cmp
+         U strcpy
+         U EVP_PKEY_free
+         U closedir
+00000310 T secKeyStoreDel
+         U secVaultGetFilePath
+         U unlink
+00000388 T secKeyStoreOpen
+00000390 T secKeyStoreRead
+00000394 T secKeyStoreClose
+
+secKeyStoreCmd.o:
+00000000 T secKeyStoreCmdInit
+         U shellCmdTopicAdd
+00000000 D secKeyStoreCmdData
+         U shellCmdAdd
+00000028 T secKeyStoreCmdUsage
+         U printf
+00000030 T secKeyStoreCmdImport
+         U fopen
+         U PEM_read_PrivateKey
+         U secKeyStoreImport
+         U fclose
+         U EVP_PKEY_free
+000000e8 T secKeyStoreCmdDelete
+         U secKeyStoreDel
+0000011c T secKeyStoreCmdPrint
+         U secKeyStoreGet
+         U __stdout
+         U BIO_new_fp
+         U EVP_PKEY_print_public
+         U BIO_free
+000001bc T secKeyStoreCmdList
+         U secKeyStoreOpen
+         U secKeyStoreRead
+         U secKeyStoreClose
+00000214 T secKeyStoreCmdFind
+         U PEM_read_X509
+         U secKeyStoreX509Get
+         U X509_free
+00000308 T secKeyStoreCmd
+         U strcmp
+
+ipcom_cmd_keydb.o:
+00000000 t ipcom_cmd_keydb_import
+00000204 t ipcom_cmd_keydb_list
+000002e4 t ipcom_cmd_keydb_delete
+00000374 t ipcom_cmd_keydb_find
+0000044c t ipcom_cmd_keydb_print
+00000574 t ipcom_cmd_keydb_verify
+00000000 d keydb_opt_map
+         U strcmp
+         U printf
+         U ipcom_fopen
+         U PEM_read_PrivateKey
+         U ipcom_fclose
+         U ipcom_key_db_pkey_import
+         U ipcom_err_string
+         U EVP_PKEY_free
+         U ipcom_getline_init
+         U strlen
+         U ipcom_getline
+         U ipcom_getline_exit
+         U ipcom_key_db_buf_import
+         U ipcom_key_db_pkey_opendb
+         U ipcom_key_db_pkey_readdb
+         U ipcom_key_db_pkey_closedb
+         U ipcom_key_db_buf_opendb
+         U ipcom_key_db_buf_readdb
+         U ipcom_key_db_buf_closedb
+         U ipcom_key_db_pkey_del
+         U ipcom_key_db_buf_del
+         U PEM_read_X509
+         U ipcom_key_db_pkey_get2
+         U X509_free
+         U ipcom_key_db_pkey_get
+         U BN_num_bits
+         U BN_clear_free
+         U ipcom_stdout
+         U RSA_print_fp
+         U DSA_print_fp
+         U ipcom_key_db_buf_get
+         U memcmp
+00000664 T ipcom_cmd_keydb
+         U strncmp
+00000870 T ipcom_cmd_keydb_init
+         U ipcom_shell_add_cmd
+
+ipcom_key_db.o:
+00000000 T ipcom_key_db_pkey_get
+         U strlen
+         U secKeyStoreGet
+00000034 T ipcom_key_db_pkey_import
+         U secKeyStoreImport
+         U __errno
+000000a0 T ipcom_key_db_pkey_get2
+         U secKeyStoreX509Get
+000000a4 T ipcom_key_db_pkey_opendb
+         U secKeyStoreOpen
+000000a8 T ipcom_key_db_pkey_readdb
+         U secKeyStoreRead
+000000f8 T ipcom_key_db_pkey_closedb
+         U secKeyStoreClose
+00000124 T ipcom_key_db_pkey_del
+         U secKeyStoreDel
+0000017c T ipcom_key_db_buf_import
+         U secVaultImport
+000001f0 T ipcom_key_db_buf_get
+         U secVaultGet
+0000025c T ipcom_key_db_buf_del
+         U secVaultDel
+000002a4 T ipcom_key_db_buf_opendb
+         U secVaultOpen
+000002a8 T ipcom_key_db_buf_readdb
+         U secVaultRead
+000002e0 T ipcom_key_db_buf_closedb
+         U secVaultClose
+
+ipcrypto_key_db_example_keys.o:
+00000000 t ipcrypto_key_db_install_example_key
+         U strlen
+         U malloc
+         U strcpy
+         U strcat
+         U ipcom_fopen
+         U ipcom_fwrite
+         U ipcom_syslog
+         U ipcom_fseek
+         U ipcom_errno_get
+         U PEM_read_PrivateKey
+         U ipcom_key_db_pkey_import
+         U ipcom_fclose
+         U ipcom_unlink
+         U free
+         U EVP_PKEY_free
+0000017c T ipcrypto_key_db_install_example_keys
+
+secVaultCmd.o:
+00000000 t secVaultCmdUsage
+00000070 t secVaultCmdPromptSecret
+00000000 D secVaultCmdData
+         U printf
+00000048 T secVaultCmdInit
+         U shellCmdTopicAdd
+         U shellCmdAdd
+         U ioctl
+         U __stdin
+         U fgets
+         U strlen
+00000174 T secVaultCmdImport
+         U strncmp
+         U secVaultImport
+00000248 T secVaultCmdVerify
+         U secVaultGet
+         U strcmp
+00000334 T secVaultCmdDelete
+         U secVaultDel
+00000364 T secVaultCmdList
+         U secVaultOpen
+         U secVaultRead
+         U secVaultClose
+000003bc T secVaultCmd
+
+secVaultLib.o:
+00000000 d secVault
+0000013c t secVaultGetKekIv
+000002ec t secVaultReadyCheck
+00000000 T secVaultCreateDirs
+         U strchr
+         U strdup
+         U free
+         U strlen
+         U strcmp
+         U mkdir
+000000f8 T secVaultKepGet
+         U secHashSha1TemplateGet
+         U secHashInit
+         U secHashUpdate
+         U secHashFinal
+         U memset
+00000284 T secVaultSetKepCb
+000002a4 T secVaultGetKepCb
+000002b0 T secVaultKepBackendSet
+         U iosDevFind
+0000033c T secVaultGetDirPath
+         U strncpy
+00000394 T secVaultGetFilePath
+         U strncat
+00000420 T secVaultFpGet
+         U fopen
+000004cc T secVaultInitDir
+         U calloc
+         U printf
+000005bc T secVaultInit
+         U semMCreate
+         U semDelete
+00000668 T secVaultLock
+         U semTake
+00000694 T secVaultUnlock
+         U semGive
+000006bc T secVaultOpenDir
+         U opendir
+00000718 T secVaultImport
+         U __errno
+         U malloc
+         U secCipherAes256CbcTemplateGet
+         U secCipherInit
+         U secCipherUpdate
+         U secCipherFinal
+         U fwrite
+         U fclose
+         U secCipherCleanup
+000008cc T secVaultGet
+         U fread
+00000a68 T secVaultDel
+         U unlink
+00000ae0 T secVaultOpen
+00000ae8 T secVaultRead
+         U readdir
+00000b9c T secVaultClose
+         U closedir
+
+secVaultKepObfuscator.o:
+00000000 T secVaultKepObfuscatorInit
+         U secVaultKepObfuscator
+         U secVaultKepBackendSet
+
+secCipherXexAes.o:
+00000000 T secXexAesInit
+         U calloc
+         U secCipherInit
+         U secCipherCtrl
+         U secCipherCleanup
+         U free
+00000178 T secXexAesUpdate
+         U __udiv32
+         U secCipherUpdate
+000003bc T secXexAesCleanup
+         U bzero

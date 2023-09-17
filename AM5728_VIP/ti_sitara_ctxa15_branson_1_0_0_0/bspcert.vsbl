@@ -1,0 +1,28 @@
+/* bspcert.vsbl - TI Cortex-A15 Sitara family BSP CERT metadata file */
+
+/*
+ * Copyright (c) 2016 Wind River Systems, Inc.
+ *
+ * The right to copy, distribute, modify or otherwise make use
+ * of this software may be licensed only pursuant to the terms
+ * of an applicable Wind River license agreement.
+ */
+
+/*
+modification history
+--------------------
+03dec16,mze  updated VERSION to 1.0.2.1
+16mar16,gls  updated VERSION to 1.0.1.0
+21apr16,mze  created.
+*/
+
+Layer ti_sitara_ctxa15_branson
+    {
+    SYNOPSIS            TI Cortex-A15 Sitara Family BSP
+    VERSION             1.0.2.1
+    VENDOR              Wind River
+    LAYER_REQUIRES      FDT TI_SITARA VXBUS_DRV
+    CONFIG_FILES        SAFETY_CERT_ARMARCH7
+    FEATURE_REQUIRES    {BOARDLIB BOARD_INFO_SHOW} \
+                        {BOARDLIB WARM_BOOT}
+    }

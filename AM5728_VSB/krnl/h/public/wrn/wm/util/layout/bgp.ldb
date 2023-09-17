@@ -1,0 +1,273 @@
+; $Header: /usr/cvsroot/target/h/wrn/wm/util/layout/bgp.ldb,v 1.1.1.1 2001/11/05 17:47:19 tneale Exp $
+; Layout information for BGP
+
+;****************************************************************************
+;
+;  *** Restricted Rights Legend ***
+;
+;  The programs and information contained herein are licensed only
+;  pursuant to a license agreement that contains use, reverse
+;  engineering, disclosure, and other restrictions; accordingly, it
+;  is "Unpublished--all rights reserved under the applicable
+;  copyright laws".
+;
+;  Use duplication, or disclosure by the Government is subject to
+;  restrictions as set forth in subparagraph (c)(1)(ii) of the Rights
+;  in Technical Data and Computer Licensed Programs clause of DFARS
+;  52.227 7013.
+;
+;  Copyright 2000-2001 Wind River Systems, Inc.
+;  Copyright 1997 Epilogue Technology Corporation.
+;  Copyright 1998 Integrated Systems, Inc.
+;  All rights reserved.
+;
+;  *** Government Use ***
+;
+;  The Licensed Programs and their documentation were developed at
+;  private expense and no part of them is in the public domain.
+;
+;  The Licensed Programs are "Restricted Computer Software" as that
+;  term is defined in Clause 52.227-19 of the Federal Acquisition
+;  Regulations (FAR) and are "Commercial Computer Software" as that
+;  term is defined in Subpart 227.401 of the Department of Defense
+;  Federal Acquisition Regulation Supplement (DFARS).
+;
+;  (i) If the licensed Programs are supplied to the Department of
+;      Defense (DoD), the Licensed Programs are classified as
+;      "Commercial Computer Software" and the Government is acquiring
+;      only "restricted rights" in the Licensed Programs and their
+;      documentation as that term is defined in Clause 52.227
+;      7013(c)(1) of the DFARS, and
+;
+;  (ii) If the Licensed Programs are supplied to any unit or agency
+;      of the United States Government other than DoD, the
+;      Government's rights in the Licensed Programs and their
+;      documentation will be as defined in Clause 52.227-19(c)(2) of
+;      the FAR.
+;****************************************************************************
+
+;  $Log: bgp.ldb,v $
+;  Revision 1.1.1.1  2001/11/05 17:47:19  tneale
+;  Tornado shuffle
+;
+;  Revision 1.9  2001/01/19 22:22:32  paul
+;  Update copyright.
+;
+;  Revision 1.8  1998/02/25 15:21:39  sra
+;  Finish moving types.h, bug.h, and bugdef.h to common/h/.
+;
+;  Revision 1.7  1998/02/25 04:53:50  sra
+;  Update copyrights.
+;
+;  Revision 1.6  1998/02/20 04:02:36  sra
+;  Fix too-long layout macro names.
+;
+;  Revision 1.5  1997/09/26 20:21:13  alan
+;  Use features of new layout compiler: `use-layouts' and `C-include'.
+;
+;  Revision 1.4  1997/06/04 05:46:20  alan
+;  Fix RCS keywords.
+;
+;  Revision 1.3  1997/06/03 22:59:30  alan
+;  Use `define-rcs-info'.
+;
+;  Revision 1.2  1997/04/22 20:59:25  alan
+;  Construction finished...
+;
+;  Revision 1.1  1997/04/22 06:05:43  alan
+;  Still under construction.
+
+(define-rcs-info "$Id: bgp.ldb,v 1.1.1.1 2001/11/05 17:47:19 tneale Exp $")
+
+(use-layouts "ip.ldb")
+
+(C-include EPILOGUE_INSTALL_H <install.h>)
+(C-include EPILOGUE_TYPES_H <common/h/types.h>)
+(C-include EPILOGUE_LAYOUT_LDBGLUE_H <layout/ldbglue.h>)
+
+; These layouts often use the convention that a `(struct (size 0))' usually
+; signals a case where the layout language was unable to express something
+; (usually having to do with lengths or offsets that vary).  A nearby
+; comment will usually explain what is going on.
+
+(define-layout AS_NUMBER (unsigned 16))
+
+(define-layout BGP_HEADER
+  (struct (size (* 19 8))
+	  (field MARKER (array (count 16)
+			       (type (unsigned 8))))
+	  (field LENGTH (unsigned 16))
+	  (field TYPE (enum (type (unsigned 8))
+			    (value OPEN 1)
+			    (value UPDATE 2)
+			    (value NOTIFICATION 3)
+			    (value KEEPALIVE 4)))))
+
+;
+; OPEN
+;
+
+(define-layout BGP_OPEN_MSG
+  (struct (fill (sizeof BGP_HEADER))
+	  (field VERSION (unsigned 8))	; Must be 4
+	  (field MY_AS AS_NUMBER)
+	  (field HOLD_TIME (unsigned 16))
+	  (field IDENTIFIER (unsigned 32))
+	  (field PARAMETERS_LENGTH (unsigned 8))
+	  (field PARAMETERS (struct (size 0)))))
+
+; The PARAMETERS are a sequence of the following:
+
+(define-layout BGP_OPEN_PARAM
+  (struct (field TYPE (enum (type (unsigned 8))
+			    (value AUTH 1)))
+	  (field LENGTH (unsigned 8))
+	  (union (field AUTH (struct (field CODE (unsigned 8))
+				     (field DATA (array (count 0)
+							(type (unsigned 8))))))
+		 )))
+
+;
+; KEEPALIVE
+;
+
+(define-layout BGP_KEEPALIVE_MSG
+  (struct (fill (sizeof BGP_HEADER))
+	  ))
+
+;
+; UPDATE
+;
+
+(define-layout BGP_UPDATE_MSG
+  (struct (fill (sizeof BGP_HEADER))
+	  (field INFO (struct (size 0)))))
+
+; INFO consists of the following three sections, in this order:
+
+(define-layout BGP_UPDATE_UNFEASIBLES
+  (struct (field LENGTH (unsigned 16))
+	  (field PREFIXES (struct (size 0)))))
+
+(define-layout BGP_UPDATE_ATTRIBUTES
+  (struct (field LENGTH (unsigned 16))
+	  (field ATTRIBUTES (struct (size 0)))))
+
+(define-layout BGP_UPDATE_REACHABLES
+  (struct ;; LENGTH in this one is implicit
+	  (field PREFIXES (struct (size 0)))))
+
+; PREFIXES are used in two of the above three sections:
+
+(define-layout BGP_ADDRESS_PREFIX
+  (struct (field LENGTH (unsigned 8))
+	  (field PREFIX (array (count 0)
+			       (type (unsigned 8))))))
+
+; ATTRIBUTES are used in the other:
+
+(define-layout BGP_ATTRIBUTE
+  (struct (struct (size 8)
+		  (align 1)
+		  (field OPTIONAL (boolean 1))
+		  (field TRANSITIVE (boolean 1))
+		  (field PARTIAL (boolean 1))
+		  (field EXTENDED (boolean 1))
+		  (fill 4)	; MBZ
+		  )
+	  (field TYPE (enum (type (unsigned 8))
+			    (value ORIGIN 1)	; Len = 1
+			    (value AS_PATH 2)	; Len varies
+			    (value NEXT_HOP 3)	; Len = 4
+			    (value MULTI_EXIT_DISC 4)	; Len = 4
+			    (value LOCAL_PREF 5)	; Len = 4
+			    (value ATOMIC_AGGREGATE 6)	; Len = 0
+			    (value AGGREGATOR 7)	; Len = 6
+			    ))
+	  (union (field SHORT (struct (field LENGTH (unsigned 8))
+				      (field DATA (struct (size 0)))))
+		 (field LONG (struct (field LENGTH (unsigned 16))
+				     (field DATA (struct (size 0))))))))
+
+; Depending on TYPE, DATA is one of the following:
+; (This -could- be written as a seven-way union...)
+
+(define-layout BGP_ORIGIN_ATTRIBUTE
+  (enum (type (unsigned 8))
+	(value IGP 0)
+	(value EGP 1)
+	(value INCOMPLETE 2)))
+
+(define-layout BGP_NEXT_HOP_ATTRIBUTE
+  (struct (field ROUTER IP_ADDRESS)))
+
+(define-layout BGP_MULTI_EXIT_DISC_ATTRIBUTE
+  (struct (field METRIC (unsigned 32))))
+
+(define-layout BGP_LOCAL_PREF_ATTRIBUTE
+  (struct (field PREF (unsigned 32))))
+
+(define-layout BGP_ATOMIC_AGGREGATE_ATTRIBUTE
+  (struct (size 0)))	; This attribute really is empty.
+
+(define-layout BGP_AGGREGATOR_ATTRIBUTE
+  (struct (field AS AS_NUMBER)
+	  (field ADDRESS IP_ADDRESS)))
+
+(define-layout BGP_AS_PATH_ATTRIBUTE
+  (struct (field SEGMENTS (struct (size 0)))))
+
+; The segments in a AS_PATH attribute are a sequence of the following:
+
+(define-layout BGP_PATH_SEGMENT
+  (struct (field TYPE (enum (type (unsigned 8))
+			    (value AS_SET 1)
+			    (value AS_SEQUENCE 2)))
+	  (field LENGTH (unsigned 8))
+	  (field AS (array (count 0)
+			   (type AS_NUMBER)))))
+
+;
+; NOTIFICATION
+;
+
+(define-layout BGP_NOTIFY
+  (struct (fill (sizeof BGP_HEADER))
+	  (field CODE (enum (type (unsigned 8))
+			    (value HDR_ERR 1)
+			    (value OPEN_ERR 2)
+			    (value UPD_ERR 3)
+			    (value HOLD_TIMER 4)
+			    (value STATE_MACHINE 5)
+			    (value CEASE 6)))
+	  (union (size 8)	; error subcode
+		 (field HDR_ERR (enum (type (unsigned 8))
+				      (value CONN_NOT_SYNC 1)
+				      (value BAD_LENGTH 2)
+				      (value BAD_TYPE 3)))
+		 (field OPEN_ERR (enum (type (unsigned 8))
+				       (value VERSION_UNSUPPORTED 1)
+				       (value BAD_AS 2)
+				       (value BAD_IDENTIFIER 3)
+				       (value PARAMETER_UNSUPPORTED 4)
+				       (value AUTH_FAILURE 5)
+				       (value BAD_HOLD_TIME 6)))
+		 (field UPD_ERR (enum (type (unsigned 8))
+				      (value BAD_ATTRIBUTES 1)
+				      (value UNRECOGNIZED_ATTRIBUTE 2)
+				      (value MISSING_ATTRIBUTE 3)
+				      (value BAD_FLAGS 4)
+				      (value BAD_LENGTH 5)
+				      (value BAD_ORIGIN 6)
+				      (value ROUTING_LOOP 7)
+				      (value BAD_NEXT_HOP 8)
+				      (value BAD_OPTIONAL_ATTRIBUTE 9)
+				      (value BAD_NETWORK 10)
+				      (value BAD_AS_PATH 11))))
+	  (field DATA (array (count 0)
+			     (type (unsigned 8))))
+	  ))
+
+; Local Variables:
+; mode: Scheme
+; End:

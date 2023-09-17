@@ -1,0 +1,14 @@
+
+# this file is generated
+
+# layers that have been built in the VSB
+__BUILT_LAYERS += SDMMC_SDHC
+
+__OBJS_BUILT_SDMMC_SDHC = C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objsdhclib/vxbFslSdhcCtrl.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objsdhclib/vxbSdhcCtrl.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objsdhclib/vxbFslImxShdcCtrl.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objsdhclib/vxbPciSdhcCtrl.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objsdhclib/vxbZynqSdhcCtrl.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objsdhclib/vxbFslSdhcCtrl.d C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objsdhclib/vxbSdhcCtrl.d C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objsdhclib/vxbFslImxShdcCtrl.d C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objsdhclib/vxbPciSdhcCtrl.d C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objsdhclib/vxbZynqSdhcCtrl.d
+
+
+# built libraries
+__BUILT_LIBRARIES += krnl_ARMARCH7_common_sdhclib
+
+
+__OBJS_BUILT_krnl_ARMARCH7_common_sdhclib = C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objsdhclib/vxbFslSdhcCtrl.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objsdhclib/vxbSdhcCtrl.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objsdhclib/vxbFslImxShdcCtrl.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objsdhclib/vxbPciSdhcCtrl.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objsdhclib/vxbZynqSdhcCtrl.o 

@@ -1,0 +1,198 @@
+; $Header: /usr/cvsroot/target/h/wrn/wm/util/layout/ppp.ldb,v 1.1.1.1 2001/11/05 17:47:20 tneale Exp $
+
+;****************************************************************************
+;
+;  *** Restricted Rights Legend ***
+;
+;  The programs and information contained herein are licensed only
+;  pursuant to a license agreement that contains use, reverse
+;  engineering, disclosure, and other restrictions; accordingly, it
+;  is "Unpublished--all rights reserved under the applicable
+;  copyright laws".
+;
+;  Use duplication, or disclosure by the Government is subject to
+;  restrictions as set forth in subparagraph (c)(1)(ii) of the Rights
+;  in Technical Data and Computer Licensed Programs clause of DFARS
+;  52.227 7013.
+;
+;  Copyright 2000-2001 Wind River Systems, Inc.
+;  Copyright 1997 Epilogue Technology Corporation.
+;  Copyright 1998 Integrated Systems, Inc.
+;  All rights reserved.
+;
+;  *** Government Use ***
+;
+;  The Licensed Programs and their documentation were developed at
+;  private expense and no part of them is in the public domain.
+;
+;  The Licensed Programs are "Restricted Computer Software" as that
+;  term is defined in Clause 52.227-19 of the Federal Acquisition
+;  Regulations (FAR) and are "Commercial Computer Software" as that
+;  term is defined in Subpart 227.401 of the Department of Defense
+;  Federal Acquisition Regulation Supplement (DFARS).
+;
+;  (i) If the licensed Programs are supplied to the Department of
+;      Defense (DoD), the Licensed Programs are classified as
+;      "Commercial Computer Software" and the Government is acquiring
+;      only "restricted rights" in the Licensed Programs and their
+;      documentation as that term is defined in Clause 52.227
+;      7013(c)(1) of the DFARS, and
+;
+;  (ii) If the Licensed Programs are supplied to any unit or agency
+;      of the United States Government other than DoD, the
+;      Government's rights in the Licensed Programs and their
+;      documentation will be as defined in Clause 52.227-19(c)(2) of
+;      the FAR.
+;****************************************************************************
+
+;  $Log: ppp.ldb,v $
+;  Revision 1.1.1.1  2001/11/05 17:47:20  tneale
+;  Tornado shuffle
+;
+;  Revision 1.7  2001/01/19 22:22:33  paul
+;  Update copyright.
+;
+;  Revision 1.6  2000/10/16 19:21:14  paul
+;  Restore Bala's new PPP.
+;
+;  Revision 1.5  2000/03/13 21:21:50  paul
+;  Removed some code that we are no longer working on.
+;
+;  Revision 1.4  1999/08/16 18:53:32  bala
+;  MSCHAP option value added
+;
+;  Revision 1.3  1998/02/25 15:21:41  sra
+;  Finish moving types.h, bug.h, and bugdef.h to common/h/.
+;
+;  Revision 1.2  1998/02/25 04:54:06  sra
+;  Update copyrights.
+;
+;  Revision 1.1  1997/11/18 03:18:34  sra
+;  Brand new PAP and CHAP code for PPP.
+;
+
+(define-rcs-info "$Id: ppp.ldb,v 1.1.1.1 2001/11/05 17:47:20 tneale Exp $")
+
+(C-include EPILOGUE_INSTALL_H		<install.h>)
+(C-include EPILOGUE_TYPES_H		<common/h/types.h>)
+(C-include EPILOGUE_LAYOUT_LDBGLUE_H	<layout/ldbglue.h>)
+
+; Eventually this should include all the header definitions
+; for PPP, for now it's just the ones I need, primarily PAP and CHAP.
+;
+; I'm trying a new idiom for nested headers, using (fill (sizeof ...))
+; as a form of class inheritance instead of the N-level-deep unions of
+; structs that we've used elsewhere.  Dunno if it'll work, but if it
+; does perhaps it'll be easier to understand.
+
+; LCP option negotiations
+
+(define-layout PPP_LCP_OPT
+  (struct (size (* 2 8))
+	  (field TYPE (enum (type (unsigned 8))
+			    (value MRU 1)
+			    (value ACCM 2)
+			    (value AUTH 3)
+			    (value QUALITY 4)
+			    (value MAGIC_NUMBER 5)
+			    (value PFC 7)
+			    (value ACFC 8)
+			    ))
+	  (field LENGTH (unsigned 8))
+	  (field DATA (struct (size 0)))))
+
+(define-layout PPP_LCP_OPT_MRU
+  (struct (size (* 4 8))
+	  (fill (sizeof PPP_LCP_OPT))
+	  (field MRU (unsigned 16))))
+
+(define-layout PPP_LCP_OPT_ACCM
+  (struct (size (* 6 8))
+	  (fill (sizeof PPP_LCP_OPT))
+	  (field ACCM (unsigned 32))))
+
+(define-layout PPP_LCP_OPT_AUTH
+  (struct (size (* 4 8))
+	  (fill (sizeof PPP_LCP_OPT))
+	  (field PROTO (enum (type (unsigned 16))
+			     (value PAP  #xC023)
+			     (value CHAP #xC223)))
+	  (field DATA (struct (size 0)))))
+
+(define-layout PPP_LCP_OPT_QUALITY
+  (struct (size (* 4 8))
+	  (fill (sizeof PPP_LCP_OPT))
+	  (field PROTO (enum (type (unsigned 16))
+			     (value LQR #xc025)))
+	  (field DATA (struct (size 0)))))
+
+(define-layout PPP_LCP_OPT_MAGIC_NUMBER
+  (struct (size (* 6 8))
+	  (fill (sizeof PPP_LCP_OPT))
+	  (field NUMBER (unsigned 32))))
+
+(define-layout PPP_LCP_OPT_PFC
+  (struct (size (* 2 8))
+	  (fill (sizeof PPP_LCP_OPT))))
+
+(define-layout PPP_LCP_OPT_ACFC
+  (struct (size (* 2 8))
+	  (fill (sizeof PPP_LCP_OPT))))
+
+; Authentication protocol headers
+
+; Password Authentication Protocol (RFC-1334)
+
+(define-layout PPP_LCP_OPT_AUTH_PAP
+  (struct (size (* 4 8))
+	  (fill (sizeof PPP_LCP_OPT_AUTH))))
+
+(define-layout PPP_PAP_HDR
+  (struct (size (* 4 8))
+	  (field CODE (enum (type (unsigned 8))
+			    (value REQUEST 1)
+			    (value ACK 2)
+			    (value NAK 3)))
+	  (field ID (unsigned 8))
+	  (field LENGTH (unsigned 16))
+	  (field DATA (struct (size 0)))
+	  ; Rest of packet is variable format
+	  ))
+
+; Challenge Handshake Authentication Protococl (RFC-1994)
+
+(define-layout PPP_LCP_OPT_AUTH_CHAP
+  (struct (size (* 5 8))
+	  (fill (sizeof PPP_LCP_OPT_AUTH))
+	  (field ALGORITHM (enum (type (unsigned 8))
+				 (value MD5 5)
+                                 (value MSCHAP #x80)))))
+(define-layout PPP_CHAP_HDR
+  (struct (size (* 4 8))
+	  (field CODE (enum (type (unsigned 8))
+			    (value CHALLENGE 1)
+			    (value RESPONSE 2)
+			    (value SUCCESS 3)
+			    (value FAILURE 4)))
+	  (field ID (unsigned 8))
+	  (field LENGTH (unsigned 16))
+	  (field DATA (struct (size 0)))
+	  ; Rest of packet is variable format
+	  ))
+
+
+; Random data type
+
+(define-layout PPP_STRING
+  ; This is a bit of a crock, but better than the alternatives.
+  ; To make things even more crockish, the various PPP options
+  ; aren't consistant about whether they use this format or just
+  ; expect you to figure out the length from the packet size.
+  (struct (size (* 1 8))
+	  (field LENGTH (unsigned 8))
+	  (field VALUE (struct (size 0)))))
+
+
+; Local Variables:
+; mode: Scheme
+; End:

@@ -1,0 +1,39 @@
+/* Automatically generated layer.vsbl file for BRANSON_DRV */
+
+Layer DRIVERS {
+ SYNOPSIS 					Container layer for branson specific drivers and libraries
+ VENDOR 					sasken
+ VERSION 					1.0.0.0
+ FEATURE NOT_DEFINED
+ VSB_REQUIRES 
+ LAYER_REQUIRES 
+ SELECT 
+ FEATURE_PROVIDES 
+ FEATURE_REQUIRES 
+ OPTIONAL YES
+ DEFAULT YES
+ PARENT 
+ DOC_BUILD NO
+ FASTBUILD YES
+ HELP 						Container layer for branson specific drivers and libraries BRANSON_DRV
+}
+
+
+
+/* 
+   VENDOR            The name of the company producing the layer
+   VERSION           The 4 digit version number for the layer defaults to 1.0.0.0
+   FEATURE           The container name used by the System Project to enable or disable multiple layers at a time, defaults to NOT_DEFINED
+   SYNOPSIS          Short description of the layer
+   VSB_REQUIRES      VSB attributes that this layer requires, e.g. LP64 SMP,  default blank 
+   FEATURE_PROVIDES  Features that this layer provides, default blank 
+   LAYER_REQUIRES    Layers that this layer requires (for headers etc) to compile, default blank  
+   SELECT            Layers that this layer requires but does not want to be dependent on, default blank  
+   FEATURE_REQUIRES  Features that this layer requires in the LAYERS_REQUIRES, default blank 
+   OPTIONAL          Determines if this layer can be disabled in the VSB, default YES 
+   DEFAULT           Automatically enables this layer in the VSB, default YES 
+   PARENT            Define only if layer location is not under the parent's directory structure 
+   DOC_BUILD         Enables document build, default NO 
+   FASTBUILD         Specifies if this layer supports parallel builds, default YES 
+   HELP              Multi line help describing this layer 
+*/

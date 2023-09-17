@@ -1,0 +1,72 @@
+#This document will describe the automated jtag build creation
+
+Software installation in Builder4 VM
+-> samba, samba-client, cifs-utils
+https://help.ubuntu.com/community/Samba/SambaClientGuide
+
+ubuntu fstab modification:
+location :/etc/fstab
+
+added entry:
+//buc-dan-fs-04/swlab /media/samba_share cifs username=builder4,domain=EMRSN,password=Freeway4,uid=nobody,iocharset=utf8,noperm 0 0
+
+Note: password need to be update if it changed in builder4
+
+
+Builder 4 script path: /home/builder4/jtag_build
+#Command Template:
+./jtag_build.sh <Version no> <relative path build share path after \\buc-dan-fs-04\SWLAB\BuildArchive\NextGen till firmware upgrade binary folder>
+
+
+#For building jtag build 
+./jtag_build.sh 1.0.6 Staging/Integration/DailyBuilds/Build_1.0.6/Binaries/Debug_FirmwareUpgrade
+
+#For building jtag build with crc
+./jtag_build.sh 1.0.6 Staging/Integration/DailyBuilds/Build_1.0.6/Binaries/Debug_FirmwareUpgrade
+
+#This will copy the firmware upgrade image from share path and create a jtag binary for all three board 
+
+
+#IF bootloader change required:
+bootloader are part of sources code
+
+ To change bootloader you have to create bootloader header file using bin2header utility and copy to source
+
+bin2header location:/home/builder4/jtag_build
+
+#command to convert to header file:
+
+#For master:
+./bin2header MLO
+./bin2header u-boot.img
+
+above command will create MLO.h and uboot.h header file, copy this to master source code
+
+Master source location:/home/builder4/jtag_build/AM5728/flash_tool
+qspi :  normal build
+qspi_crc : crc build
+
+after copy the header file run the jtag_build script for normal build or crc build
+
+For Slave:
+./bin2header u-boot.bin
+
+above command will create uboot.h header file, copy this to slave source code
+
+Slave source location: /home/builder4/Workspace_Jtag
+Jtag_tool : normal build
+Jtag_tool_crc : crc build
+
+after copy the header file run the jtag_build script for normal build or crc build
+
+
+Output:
+After running the jtag build the output folder get created in 
+
+#for build 1.0.6
+Standard build: /home/builder4/jtag_build/jtag_flasher_L2_1.0.6
+crc build: 	/home/builder4/jtag_build/jtag_flasher_L2_1.0.6_crc
+
+
+Note: porting same script to other sytem will requires changes in source, pdk path change in the script
+	script is only created for builder 4 environment.

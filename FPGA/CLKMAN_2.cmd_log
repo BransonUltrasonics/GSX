@@ -1,0 +1,4 @@
+xaw2spl {-intstyle ise} C:/Users/76053/Documents/Entrenamientos/VHDL_FPGA/GSX_FPGA/ipcore_dir/CLKMAN_2.xaw 
+spl2sym -intstyle ise -family spartan3a CLKMAN_2.spl C:/Users/76053/Documents/Entrenamientos/VHDL_FPGA/GSX_FPGA/CLKMAN_2.sym 
+xaw2spl {-intstyle ise} C:/Users/76053/Documents/Entrenamientos/VHDL_FPGA/GSX_FPGA/ipcore_dir/CLKMAN_2.xaw 
+spl2sym -intstyle ise -family spartan3a CLKMAN_2.spl C:/Users/76053/Documents/Entrenamientos/VHDL_FPGA/GSX_FPGA/CLKMAN_2.sym 

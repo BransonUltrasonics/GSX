@@ -1,0 +1,24 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/mib2-1.1.1.6/cdf/00comp_net_mib2_all.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/mib2-1.1.1.6/cdf/00comp_net_mib2_icmp.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/mib2-1.1.1.6/cdf/00comp_net_mib2_if.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/mib2-1.1.1.6/cdf/00comp_net_mib2_ifmgt.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/mib2-1.1.1.6/cdf/00comp_net_mib2_ip.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/mib2-1.1.1.6/cdf/00comp_net_mib2_sys.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/mib2-1.1.1.6/cdf/00comp_net_mib2_tcp.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/mib2-1.1.1.6/cdf/00comp_net_mib2_udp.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/mib2-1.1.1.6/cdf/00init_usrnetmib2.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/net/mib2-1.1.1.6/cdf/01folder_net_mib2.cdf>
+
+Layer Layer::MIB2 {
+	NAME MIB2
+}

@@ -1,0 +1,19 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/connectivity/usb-1.1.0.6/phy-1.0.6.0/cdf/40vxbFdtAm335xUsbPhy.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/connectivity/usb-1.1.0.6/phy-1.0.6.0/cdf/40vxbFdtUsbPhyAltSocGen5.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/connectivity/usb-1.1.0.6/phy-1.0.6.0/cdf/40vxbFdtUsbPhyFslOnChip.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/connectivity/usb-1.1.0.6/phy-1.0.6.0/cdf/40vxbFdtUsbPhyLib.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/connectivity/usb-1.1.0.6/phy-1.0.6.0/cdf/40vxbFdtUsbPhyUlpiViewPort.cdf>
+
+Layer Layer::USB_PHY {
+	NAME USB_PHY
+}

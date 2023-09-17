@@ -1,0 +1,21 @@
+# Automatically generated file: do not edit
+
+##########################
+# PPC_BASE Section
+##########################
+
+
+ifdef _WRS_CONFIG_PPC_BASE
+VSBL_PPC_BASE_SRC = 
+VSBL_PPC_BASE_DEPEND = 
+ifdef _WRS_CONFIG_PPC_1_3_1_2_KERNEL_1_0_5_1_BASE_1_0_8_2
+VSBL_PPC_BASE_SRC += PPC_BASE
+VSBL_PPC_BASE_DEPEND += CORE_KERNEL
+VSBL_PPC_BASE_DEPEND += CORE_KERNEL
+VSBL_PPC_BASE_DEPEND += CORE_KERNEL
+PPC_BASE_FASTBUILD = YES
+VSBL_PPC_BASE_PATH = $(WIND_BASE)/pkgs/os/arch/ppc-1.3.1.2/kernel/base
+VSBL_PPC_BASE_VERSION = PPC_1_3_1_2_KERNEL_1_0_5_1_BASE_1_0_8_2
+endif
+endif
+

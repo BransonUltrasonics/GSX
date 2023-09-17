@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.xst" -ofn "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc FPGA_DUPS.ucf -p xc3s1400a-ft256-4 "FPGA_DUPS.ngc" FPGA_DUPS.ngd  
+map -intstyle ise -p xc3s1400a-ft256-4 -cm area -ir off -pr off -c 100 -o FPGA_DUPS_map.ncd FPGA_DUPS.ngd FPGA_DUPS.pcf 
+par -w -intstyle ise -ol high -t 1 FPGA_DUPS_map.ncd FPGA_DUPS.ncd FPGA_DUPS.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml FPGA_DUPS.twx FPGA_DUPS.ncd -o FPGA_DUPS.twr FPGA_DUPS.pcf -ucf FPGA_DUPS.ucf 
+bitgen -intstyle ise -f FPGA_DUPS.ut FPGA_DUPS.ncd 

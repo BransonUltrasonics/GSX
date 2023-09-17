@@ -1,0 +1,50 @@
+
+libaudioDemoPlayback.a:
+
+audioDemoPlayback.o:
+000001c8 t audioPlay
+000000a0 t audioOpenFile
+00000000 T audPlay
+         U taskSpawn
+         U vxCpuConfiguredGet
+         U taskCpuAffinitySet
+         U taskDelete
+         U taskActivate
+         U open
+         U printf
+         U audioWavHeaderRead
+         U bzero
+         U ioctl
+         U bcopy
+         U __udiv32
+         U calloc
+         U lseek
+         U read
+         U write
+         U close
+         U free
+
+libaudioDemoPlayback.a:
+
+audioDemoPlayback.o:
+000001c8 t audioPlay
+000000a0 t audioOpenFile
+00000000 T audPlay
+         U taskSpawn
+         U vxCpuConfiguredGet
+         U taskCpuAffinitySet
+         U taskDelete
+         U taskActivate
+         U open
+         U printf
+         U audioWavHeaderRead
+         U bzero
+         U ioctl
+         U bcopy
+         U __udiv32
+         U calloc
+         U lseek
+         U read
+         U write
+         U close
+         U free

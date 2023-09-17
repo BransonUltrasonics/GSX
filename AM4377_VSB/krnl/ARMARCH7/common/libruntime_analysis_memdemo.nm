@@ -1,0 +1,58 @@
+
+libruntime_analysis_memdemo.a:
+
+cafe_mem_demo.o:
+00000000 t my_malloc_special
+00000000 d next_slot
+00000080 t my_free_special
+0000009c t my_malloc
+000000e4 t my_free
+00000124 t run_test
+00000000 b malloc_func
+00000004 b free_func
+00000004 d stopme
+00000008 b pointers
+00000008 C slots
+         U __rem32
+         U malloc
+         U free
+         U vxAtomicSet
+         U vxAtomicGet
+         U memset
+         U sysClkRateGet
+         U __div32
+         U taskDelay
+0000022c T cafe_mem_demo_start
+         U __stderr
+         U fputs
+         U taskSpawn
+000002c8 T cafe_mem_demo_stop
+
+libruntime_analysis_memdemo.a:
+
+cafe_mem_demo.o:
+00000000 t my_malloc_special
+00000000 d next_slot
+00000080 t my_free_special
+0000009c t my_malloc
+000000e4 t my_free
+00000124 t run_test
+00000000 b malloc_func
+00000004 b free_func
+00000004 d stopme
+00000008 b pointers
+00000008 C slots
+         U __rem32
+         U malloc
+         U free
+         U vxAtomicSet
+         U vxAtomicGet
+         U memset
+         U sysClkRateGet
+         U __div32
+         U taskDelay
+0000022c T cafe_mem_demo_start
+         U __stderr
+         U fputs
+         U taskSpawn
+000002c8 T cafe_mem_demo_stop

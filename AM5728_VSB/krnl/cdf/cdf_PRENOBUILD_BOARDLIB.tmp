@@ -1,0 +1,19 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/utils/boardlib-1.1.1.0/cdf/01boardLib.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/utils/boardlib-1.1.1.0/cdf/01warmBoot.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/utils/boardlib-1.1.1.0/cdf/10memDesc.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/utils/boardlib-1.1.1.0/cdf/10serial.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/utils/boardlib-1.1.1.0/cdf/10timer.cdf>
+
+Layer Layer::BOARDLIB {
+	NAME BOARDLIB
+}

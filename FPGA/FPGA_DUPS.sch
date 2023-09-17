@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<drawing version="7">
+    <attr value="spartan3a" name="DeviceFamilyName">
+        <trait delete="all:0" />
+        <trait editname="all:0" />
+        <trait edittrait="all:0" />
+    </attr>
+    <netlist>
+        <signal name="XLXN_1" />
+        <signal name="XLXN_2" />
+        <signal name="HW_VERS_BD(7:0)" />
+        <signal name="I_SPI_N_CS" />
+        <signal name="I_SPI_MOSI" />
+        <signal name="O_SPI_MISO" />
+        <signal name="s_DSPI_ADC(0)" />
+        <signal name="s_DSPI_ADC(1)" />
+        <signal name="s_DSPI_ADC(2)" />
+        <signal name="s_DSPI_ADC(3)" />
+        <signal name="s_DSPI_ADC(4)" />
+        <signal name="I_DSPI_CLK" />
+        <signal name="I_DSPI_CS_ADC" />
+        <signal name="I_DSPI_RXD" />
+        <signal name="I_DSPI_TXD" />
+        <signal name="I_PHASE_SIGN" />
+        <signal name="O_N_LED5" />
+        <signal name="O_N_LED6" />
+        <signal name="O_N_LED7" />
+        <signal name="FMOT" />
+        <signal name="FQUAD" />
+        <signal name="PWMA" />
+        <signal name="PWMB" />
+        <signal name="GPIO(6:0)" />
+        <signal name="GPIO(0)" />
+        <signal name="GPIO(1)" />
+        <signal name="GPIO(2)" />
+        <signal name="GPIO(4)" />
+        <signal name="GPIO(5)" />
+        <signal name="GPIO(6)" />
+        <signal name="GPI_OL_TEMP" />
+        <signal name="OL_POWER" />
+        <signal name="OL_VOLTAGE" />
+        <signal name="OL_CURRENT" />
+        <signal name="OVL_FUNCTION" />
+        <signal name="GPIO(3)" />
+        <signal name="GPO_OL_RESET" />
+        <signal name="GPO_DDS_STOP" />
+        <signal name="I_N_RESET" />
+        <signal name="I_N_RESET_UP_OUT" />
+        <signal name="XLXN_56" />
+        <signal name="s_DSPI_ADC(4:0)" />
+        <signal name="I_CLK_25MHZ" />
+        <signal name="XLXN_107" />
+        <signal name="XLXN_116" />
+        <signal name="XLXN_122" />
+        <signal name="XLXN_139" />
+        <signal name="XLXN_140" />
+        <signal name="XLXN_141" />
+        <signal name="XLXN_148" />
+        <signal name="XLXN_150" />
+        <signal name="XLXN_152" />
+        <signal name="I_SPI_CLK" />
+        <signal name="XLXN_176" />
+        <signal name="XLXN_180" />
+        <signal name="O_TP_53" />
+        <signal name="O_TP_51" />
+        <signal name="XLXN_204" />
+        <signal name="XLXN_205" />
+        <signal name="XLXN_206" />
+        <signal name="O_TP_52" />
+        <signal name="O_TP_54" />
+        <signal name="XLXN_209" />
+        <signal name="XLXN_210" />
+        <port polarity="Input" name="HW_VERS_BD(7:0)" />
+        <port polarity="Input" name="I_SPI_N_CS" />
+        <port polarity="Input" name="I_SPI_MOSI" />
+        <port polarity="Output" name="O_SPI_MISO" />
+        <port polarity="Input" name="I_DSPI_CLK" />
+        <port polarity="Input" name="I_DSPI_CS_ADC" />
+        <port polarity="Input" name="I_DSPI_RXD" />
+        <port polarity="Input" name="I_DSPI_TXD" />
+        <port polarity="Input" name="I_PHASE_SIGN" />
+        <port polarity="Output" name="O_N_LED5" />
+        <port polarity="Output" name="O_N_LED6" />
+        <port polarity="Output" name="O_N_LED7" />
+        <port polarity="Output" name="FMOT" />
+        <port polarity="Output" name="FQUAD" />
+        <port polarity="Output" name="PWMA" />
+        <port polarity="Output" name="PWMB" />
+        <port polarity="Input" name="GPI_OL_TEMP" />
+        <port polarity="Input" name="OL_POWER" />
+        <port polarity="Input" name="OL_VOLTAGE" />
+        <port polarity="Input" name="OL_CURRENT" />
+        <port polarity="Input" name="OVL_FUNCTION" />
+        <port polarity="Output" name="GPO_OL_RESET" />
+        <port polarity="Output" name="GPO_DDS_STOP" />
+        <port polarity="Input" name="I_N_RESET" />
+        <port polarity="Input" name="I_N_RESET_UP_OUT" />
+        <port polarity="Input" name="I_CLK_25MHZ" />
+        <port polarity="Input" name="I_SPI_CLK" />
+        <port polarity="Output" name="O_TP_53" />
+        <port polarity="Output" name="O_TP_51" />
+        <port polarity="Output" name="O_TP_52" />
+        <port polarity="Output" name="O_TP_54" />
+        <blockdef name="RST_DEB_1">
+            <timestamp>2021-3-24T21:7:17</timestamp>
+            <rect width="352" x="64" y="-128" height="128" />
+            <line x2="0" y1="-96" y2="-96" x1="64" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <line x2="480" y1="-64" y2="-64" x1="416" />
+        </blockdef>
+        <blockdef name="RST_DEB_2">
+            <timestamp>2021-3-24T21:13:25</timestamp>
+            <line x2="0" y1="-96" y2="-96" x1="64" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <rect width="352" x="64" y="-128" height="128" />
+            <line x2="480" y1="-64" y2="-64" x1="416" />
+        </blockdef>
+        <blockdef name="and2">
+            <timestamp>2000-1-1T10:10:10</timestamp>
+            <line x2="64" y1="-64" y2="-64" x1="0" />
+            <line x2="64" y1="-128" y2="-128" x1="0" />
+            <line x2="192" y1="-96" y2="-96" x1="256" />
+            <arc ex="144" ey="-144" sx="144" sy="-48" r="48" cx="144" cy="-96" />
+            <line x2="64" y1="-48" y2="-48" x1="144" />
+            <line x2="144" y1="-144" y2="-144" x1="64" />
+            <line x2="64" y1="-48" y2="-144" x1="64" />
+        </blockdef>
+        <blockdef name="buf">
+            <timestamp>2000-1-1T10:10:10</timestamp>
+            <line x2="64" y1="-32" y2="-32" x1="0" />
+            <line x2="128" y1="-32" y2="-32" x1="224" />
+            <line x2="128" y1="0" y2="-32" x1="64" />
+            <line x2="64" y1="-32" y2="-64" x1="128" />
+            <line x2="64" y1="-64" y2="0" x1="64" />
+        </blockdef>
+        <blockdef name="inv">
+            <timestamp>2000-1-1T10:10:10</timestamp>
+            <line x2="64" y1="-32" y2="-32" x1="0" />
+            <line x2="160" y1="-32" y2="-32" x1="224" />
+            <line x2="128" y1="-64" y2="-32" x1="64" />
+            <line x2="64" y1="-32" y2="0" x1="128" />
+            <line x2="64" y1="0" y2="-64" x1="64" />
+            <circle r="16" cx="144" cy="-32" />
+        </blockdef>
+        <blockdef name="FPGA_DUPS_Main">
+            <timestamp>2021-7-13T16:25:0</timestamp>
+            <rect width="512" x="64" y="-832" height="768" />
+            <line x2="0" y1="-352" y2="-352" x1="64" />
+            <line x2="0" y1="-784" y2="-784" x1="64" />
+            <line x2="0" y1="-752" y2="-752" x1="64" />
+            <line x2="0" y1="-720" y2="-720" x1="64" />
+            <line x2="0" y1="-688" y2="-688" x1="64" />
+            <line x2="0" y1="-656" y2="-656" x1="64" />
+            <line x2="0" y1="-560" y2="-560" x1="64" />
+            <line x2="0" y1="-592" y2="-592" x1="64" />
+            <line x2="0" y1="-448" y2="-448" x1="64" />
+            <rect width="64" x="0" y="-460" height="24" />
+            <line x2="0" y1="-320" y2="-320" x1="64" />
+            <line x2="0" y1="-288" y2="-288" x1="64" />
+            <line x2="64" y1="-256" y2="-256" x1="0" />
+            <line x2="0" y1="-176" y2="-176" x1="64" />
+            <rect width="64" x="0" y="-188" height="24" />
+            <line x2="352" y1="0" y2="-64" x1="352" />
+            <rect width="32" x="336" y="-64" height="64" />
+            <line x2="640" y1="-224" y2="-224" x1="576" />
+            <line x2="640" y1="-256" y2="-256" x1="576" />
+            <line x2="640" y1="-288" y2="-288" x1="576" />
+            <line x2="640" y1="-784" y2="-784" x1="576" />
+            <line x2="640" y1="-736" y2="-736" x1="576" />
+            <line x2="640" y1="-688" y2="-688" x1="576" />
+            <line x2="640" y1="-640" y2="-640" x1="576" />
+            <line x2="640" y1="-496" y2="-496" x1="576" />
+            <line x2="640" y1="-464" y2="-464" x1="576" />
+            <line x2="640" y1="-144" y2="-144" x1="576" />
+            <line x2="640" y1="-96" y2="-96" x1="576" />
+        </blockdef>
+        <blockdef name="CLK_GEN">
+            <timestamp>2021-4-1T17:13:5</timestamp>
+            <rect width="608" x="64" y="-512" height="344" />
+            <line x2="736" y1="-480" y2="-480" x1="672" />
+            <line x2="736" y1="-448" y2="-448" x1="672" />
+            <line x2="736" y1="-416" y2="-416" x1="672" />
+            <line x2="736" y1="-384" y2="-384" x1="672" />
+            <line x2="736" y1="-352" y2="-352" x1="672" />
+            <line x2="736" y1="-320" y2="-320" x1="672" />
+            <line x2="736" y1="-240" y2="-240" x1="672" />
+            <line x2="736" y1="-208" y2="-208" x1="672" />
+            <line x2="0" y1="-208" y2="-208" x1="64" />
+            <line x2="0" y1="-464" y2="-464" x1="64" />
+        </blockdef>
+        <blockdef name="ibuf">
+            <timestamp>2000-1-1T10:10:10</timestamp>
+            <line x2="64" y1="0" y2="-64" x1="64" />
+            <line x2="64" y1="-32" y2="0" x1="128" />
+            <line x2="128" y1="-64" y2="-32" x1="64" />
+            <line x2="128" y1="-32" y2="-32" x1="224" />
+            <line x2="64" y1="-32" y2="-32" x1="0" />
+        </blockdef>
+        <block symbolname="RST_DEB_1" name="XLXI_3">
+            <blockpin signalname="XLXN_122" name="CLK_25MHZ" />
+            <blockpin signalname="I_N_RESET" name="X_RST_IN_1" />
+            <blockpin signalname="XLXN_1" name="X_RST_OUT_1" />
+        </block>
+        <block symbolname="RST_DEB_2" name="XLXI_4">
+            <blockpin signalname="XLXN_122" name="CLK_25MHZ" />
+            <blockpin signalname="I_N_RESET_UP_OUT" name="X_RST_IN_2" />
+            <blockpin signalname="XLXN_2" name="X_RST_OUT_2" />
+        </block>
+        <block symbolname="and2" name="XLXI_5">
+            <blockpin signalname="XLXN_2" name="I0" />
+            <blockpin signalname="XLXN_1" name="I1" />
+            <blockpin signalname="XLXN_56" name="O" />
+        </block>
+        <block symbolname="buf" name="XLXI_6">
+            <blockpin signalname="I_DSPI_CLK" name="I" />
+            <blockpin signalname="s_DSPI_ADC(0)" name="O" />
+        </block>
+        <block symbolname="buf" name="XLXI_7">
+            <blockpin signalname="I_DSPI_CS_ADC" name="I" />
+            <blockpin signalname="s_DSPI_ADC(1)" name="O" />
+        </block>
+        <block symbolname="buf" name="XLXI_8">
+            <blockpin signalname="I_DSPI_RXD" name="I" />
+            <blockpin signalname="s_DSPI_ADC(2)" name="O" />
+        </block>
+        <block symbolname="buf" name="XLXI_9">
+            <blockpin signalname="I_DSPI_TXD" name="I" />
+            <blockpin signalname="s_DSPI_ADC(3)" name="O" />
+        </block>
+        <block symbolname="buf" name="XLXI_10">
+            <blockpin signalname="I_PHASE_SIGN" name="I" />
+            <blockpin signalname="s_DSPI_ADC(4)" name="O" />
+        </block>
+        <block symbolname="inv" name="XLXI_11">
+            <blockpin signalname="XLXN_139" name="I" />
+            <blockpin signalname="O_N_LED5" name="O" />
+        </block>
+        <block symbolname="inv" name="XLXI_13">
+            <blockpin signalname="XLXN_141" name="I" />
+            <blockpin signalname="O_N_LED7" name="O" />
+        </block>
+        <block symbolname="buf" name="XLXI_19">
+            <blockpin signalname="GPIO(5)" name="I" />
+            <blockpin signalname="GPO_OL_RESET" name="O" />
+        </block>
+        <block symbolname="buf" name="XLXI_20">
+            <blockpin signalname="GPIO(6)" name="I" />
+            <blockpin signalname="GPO_DDS_STOP" name="O" />
+        </block>
+        <block symbolname="buf" name="XLXI_14">
+            <blockpin signalname="GPI_OL_TEMP" name="I" />
+            <blockpin signalname="GPIO(0)" name="O" />
+        </block>
+        <block symbolname="buf" name="XLXI_15">
+            <blockpin signalname="OL_POWER" name="I" />
+            <blockpin signalname="GPIO(1)" name="O" />
+        </block>
+        <block symbolname="buf" name="XLXI_16">
+            <blockpin signalname="OL_VOLTAGE" name="I" />
+            <blockpin signalname="GPIO(2)" name="O" />
+        </block>
+        <block symbolname="buf" name="XLXI_17">
+            <blockpin signalname="OL_CURRENT" name="I" />
+            <blockpin signalname="GPIO(3)" name="O" />
+        </block>
+        <block symbolname="buf" name="XLXI_18">
+            <blockpin signalname="OVL_FUNCTION" name="I" />
+            <blockpin signalname="GPIO(4)" name="O" />
+        </block>
+        <block symbolname="CLK_GEN" name="XLXI_33">
+            <blockpin signalname="XLXN_148" name="CLK_M" />
+            <blockpin signalname="XLXN_150" name="CLK_DDS" />
+            <blockpin signalname="XLXN_152" name="CLK_4" />
+            <blockpin signalname="XLXN_176" name="CLK_8" />
+            <blockpin signalname="XLXN_180" name="CLK_1ms" />
+            <blockpin name="CLK_FADC" />
+            <blockpin signalname="XLXN_116" name="ALIVE" />
+            <blockpin signalname="XLXN_107" name="SUD_LOCKED" />
+            <blockpin signalname="XLXN_56" name="RST" />
+            <blockpin signalname="XLXN_122" name="CLK_25MHZ" />
+        </block>
+        <block symbolname="ibuf" name="XLXI_34">
+            <blockpin signalname="I_CLK_25MHZ" name="I" />
+            <blockpin signalname="XLXN_122" name="O" />
+        </block>
+        <block symbolname="inv" name="XLXI_12">
+            <blockpin signalname="XLXN_140" name="I" />
+            <blockpin signalname="O_N_LED6" name="O" />
+        </block>
+        <block symbolname="FPGA_DUPS_Main" name="XLXI_47">
+            <blockpin signalname="XLXN_116" name="ALIVE" />
+            <blockpin signalname="XLXN_180" name="CLK_1ms" />
+            <blockpin signalname="XLXN_152" name="CLK_4" />
+            <blockpin signalname="XLXN_176" name="CLK_8" />
+            <blockpin signalname="XLXN_150" name="CLK_DDS" />
+            <blockpin signalname="XLXN_148" name="CLK_M" />
+            <blockpin signalname="HW_VERS_BD(7:0)" name="HW_VERS_BD(7:0)" />
+            <blockpin signalname="I_SPI_CLK" name="SPI_CLK" />
+            <blockpin signalname="I_SPI_MOSI" name="SPI_I_MOSI" />
+            <blockpin signalname="I_SPI_N_CS" name="SPI_N_CS" />
+            <blockpin signalname="s_DSPI_ADC(4:0)" name="s_DSPI_ADC(4:0)" />
+            <blockpin signalname="XLXN_107" name="X_RST" />
+            <blockpin signalname="GPIO(6:0)" name="GPIO(6:0)" />
+            <blockpin signalname="FQUAD" name="F" />
+            <blockpin signalname="XLXN_139" name="GPLED1_5" />
+            <blockpin signalname="XLXN_140" name="GPLED2_6" />
+            <blockpin signalname="XLXN_141" name="GPLED3_7" />
+            <blockpin signalname="FMOT" name="N_FMOT_to_FMOT" />
+            <blockpin signalname="PWMB" name="N_PWMA_to_PWMB" />
+            <blockpin signalname="PWMA" name="N_PWMB_to_PWMA" />
+            <blockpin signalname="O_SPI_MISO" name="SPI_O_MISO" />
+            <blockpin name="FBIF_TEST_1" />
+            <blockpin name="FBIF_TEST_2" />
+            <blockpin signalname="XLXN_209" name="SUM31" />
+            <blockpin signalname="XLXN_210" name="DIFF31" />
+        </block>
+        <block symbolname="buf" name="XLXI_53">
+            <blockpin signalname="XLXN_206" name="I" />
+            <blockpin signalname="O_TP_53" name="O" />
+        </block>
+        <block symbolname="buf" name="XLXI_54">
+            <blockpin signalname="XLXN_205" name="I" />
+            <blockpin signalname="O_TP_51" name="O" />
+        </block>
+        <block symbolname="inv" name="XLXI_57">
+            <blockpin signalname="PWMA" name="I" />
+            <blockpin signalname="XLXN_205" name="O" />
+        </block>
+        <block symbolname="inv" name="XLXI_58">
+            <blockpin signalname="PWMB" name="I" />
+            <blockpin signalname="XLXN_206" name="O" />
+        </block>
+        <block symbolname="buf" name="XLXI_59">
+            <blockpin signalname="XLXN_209" name="I" />
+            <blockpin signalname="O_TP_52" name="O" />
+        </block>
+        <block symbolname="buf" name="XLXI_60">
+            <blockpin signalname="XLXN_210" name="I" />
+            <blockpin signalname="O_TP_54" name="O" />
+        </block>
+    </netlist>
+    <sheet sheetnum="1" width="3520" height="2720">
+        <instance x="1184" y="832" name="XLXI_4" orien="R0">
+        </instance>
+        <instance x="1184" y="576" name="XLXI_3" orien="R0">
+        </instance>
+        <branch name="HW_VERS_BD(7:0)">
+            <wire x2="1664" y1="1024" y2="1024" x1="416" />
+            <wire x2="1664" y1="1024" y2="1360" x1="1664" />
+            <wire x2="2032" y1="1360" y2="1360" x1="1664" />
+        </branch>
+        <iomarker fontsize="28" x="416" y="1024" name="HW_VERS_BD(7:0)" orien="R180" />
+        <iomarker fontsize="28" x="320" y="1472" name="I_SPI_MOSI" orien="R180" />
+        <iomarker fontsize="28" x="320" y="1504" name="O_SPI_MISO" orien="R180" />
+        <bustap x2="1040" y1="1648" y2="1648" x1="1136" />
+        <bustap x2="1040" y1="1696" y2="1696" x1="1136" />
+        <bustap x2="1040" y1="1744" y2="1744" x1="1136" />
+        <bustap x2="1040" y1="1792" y2="1792" x1="1136" />
+        <bustap x2="1040" y1="1840" y2="1840" x1="1136" />
+        <instance x="608" y="1680" name="XLXI_6" orien="R0" />
+        <instance x="608" y="1744" name="XLXI_7" orien="R0" />
+        <instance x="608" y="1808" name="XLXI_8" orien="R0" />
+        <instance x="608" y="1872" name="XLXI_9" orien="R0" />
+        <instance x="608" y="1936" name="XLXI_10" orien="R0" />
+        <branch name="s_DSPI_ADC(0)">
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="927" y="1648" type="branch" />
+            <wire x2="1040" y1="1648" y2="1648" x1="832" />
+        </branch>
+        <branch name="s_DSPI_ADC(1)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="944" y="1696" type="branch" />
+            <wire x2="928" y1="1712" y2="1712" x1="832" />
+            <wire x2="928" y1="1696" y2="1712" x1="928" />
+            <wire x2="944" y1="1696" y2="1696" x1="928" />
+            <wire x2="1040" y1="1696" y2="1696" x1="944" />
+        </branch>
+        <branch name="s_DSPI_ADC(2)">
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="946" y="1744" type="branch" />
+            <wire x2="928" y1="1776" y2="1776" x1="832" />
+            <wire x2="928" y1="1744" y2="1776" x1="928" />
+            <wire x2="1040" y1="1744" y2="1744" x1="928" />
+        </branch>
+        <branch name="s_DSPI_ADC(3)">
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="940" y="1792" type="branch" />
+            <wire x2="928" y1="1840" y2="1840" x1="832" />
+            <wire x2="928" y1="1792" y2="1840" x1="928" />
+            <wire x2="1040" y1="1792" y2="1792" x1="928" />
+        </branch>
+        <branch name="s_DSPI_ADC(4)">
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="902" y="1904" type="branch" />
+            <wire x2="944" y1="1904" y2="1904" x1="832" />
+            <wire x2="944" y1="1840" y2="1904" x1="944" />
+            <wire x2="1040" y1="1840" y2="1840" x1="944" />
+        </branch>
+        <branch name="I_DSPI_CLK">
+            <wire x2="608" y1="1648" y2="1648" x1="272" />
+        </branch>
+        <branch name="I_DSPI_CS_ADC">
+            <wire x2="608" y1="1712" y2="1712" x1="336" />
+        </branch>
+        <branch name="I_DSPI_RXD">
+            <wire x2="608" y1="1776" y2="1776" x1="272" />
+        </branch>
+        <branch name="I_DSPI_TXD">
+            <wire x2="608" y1="1840" y2="1840" x1="272" />
+        </branch>
+        <branch name="I_PHASE_SIGN">
+            <wire x2="608" y1="1904" y2="1904" x1="320" />
+        </branch>
+        <iomarker fontsize="28" x="272" y="1648" name="I_DSPI_CLK" orien="R180" />
+        <iomarker fontsize="28" x="272" y="1776" name="I_DSPI_RXD" orien="R180" />
+        <iomarker fontsize="28" x="272" y="1840" name="I_DSPI_TXD" orien="R180" />
+        <iomarker fontsize="28" x="336" y="1712" name="I_DSPI_CS_ADC" orien="R180" />
+        <iomarker fontsize="28" x="320" y="1904" name="I_PHASE_SIGN" orien="R180" />
+        <branch name="O_N_LED5">
+            <wire x2="3248" y1="1488" y2="1488" x1="3216" />
+        </branch>
+        <branch name="O_N_LED6">
+            <wire x2="3248" y1="1584" y2="1584" x1="3216" />
+        </branch>
+        <branch name="O_N_LED7">
+            <wire x2="3248" y1="1664" y2="1664" x1="3216" />
+        </branch>
+        <iomarker fontsize="28" x="3264" y="1024" name="FMOT" orien="R0" />
+        <iomarker fontsize="28" x="3264" y="1072" name="FQUAD" orien="R0" />
+        <iomarker fontsize="28" x="3264" y="1120" name="PWMA" orien="R0" />
+        <iomarker fontsize="28" x="3264" y="1168" name="PWMB" orien="R0" />
+        <branch name="GPIO(6:0)">
+            <wire x2="2384" y1="1808" y2="1840" x1="2384" />
+            <wire x2="2384" y1="1840" y2="1888" x1="2384" />
+            <wire x2="2384" y1="1888" y2="1936" x1="2384" />
+            <wire x2="2384" y1="1936" y2="1984" x1="2384" />
+            <wire x2="2384" y1="1984" y2="2032" x1="2384" />
+            <wire x2="2384" y1="2032" y2="2096" x1="2384" />
+            <wire x2="2384" y1="2096" y2="2144" x1="2384" />
+            <wire x2="2384" y1="2144" y2="2160" x1="2384" />
+        </branch>
+        <bustap x2="2288" y1="1840" y2="1840" x1="2384" />
+        <bustap x2="2288" y1="1888" y2="1888" x1="2384" />
+        <bustap x2="2288" y1="1936" y2="1936" x1="2384" />
+        <bustap x2="2288" y1="1984" y2="1984" x1="2384" />
+        <bustap x2="2288" y1="2032" y2="2032" x1="2384" />
+        <bustap x2="2480" y1="2096" y2="2096" x1="2384" />
+        <bustap x2="2480" y1="2144" y2="2144" x1="2384" />
+        <instance x="2560" y="2112" name="XLXI_19" orien="R0" />
+        <instance x="2560" y="2192" name="XLXI_20" orien="R0" />
+        <branch name="GPIO(0)">
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="2195" y="1840" type="branch" />
+            <wire x2="2288" y1="1840" y2="1840" x1="2096" />
+        </branch>
+        <branch name="GPIO(1)">
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="2202" y="1904" type="branch" />
+            <wire x2="2272" y1="1904" y2="1904" x1="2096" />
+            <wire x2="2288" y1="1888" y2="1888" x1="2272" />
+            <wire x2="2272" y1="1888" y2="1904" x1="2272" />
+        </branch>
+        <branch name="GPIO(2)">
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="2196" y="1968" type="branch" />
+            <wire x2="2272" y1="1968" y2="1968" x1="2096" />
+            <wire x2="2288" y1="1936" y2="1936" x1="2272" />
+            <wire x2="2272" y1="1936" y2="1968" x1="2272" />
+        </branch>
+        <branch name="GPIO(4)">
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="2216" y="2096" type="branch" />
+            <wire x2="2272" y1="2096" y2="2096" x1="2096" />
+            <wire x2="2288" y1="2032" y2="2032" x1="2272" />
+            <wire x2="2272" y1="2032" y2="2096" x1="2272" />
+        </branch>
+        <branch name="GPIO(5)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2512" y="2080" type="branch" />
+            <wire x2="2512" y1="2096" y2="2096" x1="2480" />
+            <wire x2="2512" y1="2080" y2="2096" x1="2512" />
+            <wire x2="2560" y1="2080" y2="2080" x1="2512" />
+        </branch>
+        <branch name="GPIO(6)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2512" y="2144" type="branch" />
+            <wire x2="2512" y1="2144" y2="2144" x1="2480" />
+            <wire x2="2512" y1="2144" y2="2160" x1="2512" />
+            <wire x2="2560" y1="2160" y2="2160" x1="2512" />
+        </branch>
+        <branch name="GPI_OL_TEMP">
+            <wire x2="1872" y1="1840" y2="1840" x1="1696" />
+        </branch>
+        <branch name="OL_POWER">
+            <wire x2="1872" y1="1904" y2="1904" x1="1664" />
+        </branch>
+        <branch name="OL_VOLTAGE">
+            <wire x2="1872" y1="1968" y2="1968" x1="1696" />
+        </branch>
+        <branch name="OL_CURRENT">
+            <wire x2="1872" y1="2032" y2="2032" x1="1712" />
+        </branch>
+        <branch name="OVL_FUNCTION">
+            <wire x2="1872" y1="2096" y2="2096" x1="1744" />
+        </branch>
+        <iomarker fontsize="28" x="1744" y="2096" name="OVL_FUNCTION" orien="R180" />
+        <iomarker fontsize="28" x="1712" y="2032" name="OL_CURRENT" orien="R180" />
+        <iomarker fontsize="28" x="1696" y="1968" name="OL_VOLTAGE" orien="R180" />
+        <iomarker fontsize="28" x="1664" y="1904" name="OL_POWER" orien="R180" />
+        <iomarker fontsize="28" x="1696" y="1840" name="GPI_OL_TEMP" orien="R180" />
+        <instance x="1872" y="1872" name="XLXI_14" orien="R0" />
+        <instance x="1872" y="1936" name="XLXI_15" orien="R0" />
+        <instance x="1872" y="2000" name="XLXI_16" orien="R0" />
+        <instance x="1872" y="2064" name="XLXI_17" orien="R0" />
+        <instance x="1872" y="2128" name="XLXI_18" orien="R0" />
+        <branch name="GPIO(3)">
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="2177" y="2032" type="branch" />
+            <wire x2="2192" y1="2032" y2="2032" x1="2096" />
+            <wire x2="2192" y1="1984" y2="2032" x1="2192" />
+            <wire x2="2288" y1="1984" y2="1984" x1="2192" />
+        </branch>
+        <branch name="GPO_OL_RESET">
+            <wire x2="2816" y1="2080" y2="2080" x1="2784" />
+        </branch>
+        <iomarker fontsize="28" x="2816" y="2080" name="GPO_OL_RESET" orien="R0" />
+        <branch name="GPO_DDS_STOP">
+            <wire x2="2816" y1="2160" y2="2160" x1="2784" />
+        </branch>
+        <iomarker fontsize="28" x="2816" y="2160" name="GPO_DDS_STOP" orien="R0" />
+        <branch name="I_N_RESET">
+            <wire x2="1168" y1="560" y2="560" x1="240" />
+            <wire x2="1184" y1="544" y2="544" x1="1168" />
+            <wire x2="1168" y1="544" y2="560" x1="1168" />
+        </branch>
+        <branch name="I_N_RESET_UP_OUT">
+            <wire x2="1184" y1="800" y2="800" x1="384" />
+        </branch>
+        <iomarker fontsize="28" x="240" y="560" name="I_N_RESET" orien="R180" />
+        <iomarker fontsize="28" x="384" y="800" name="I_N_RESET_UP_OUT" orien="R180" />
+        <instance x="1792" y="672" name="XLXI_5" orien="R0" />
+        <branch name="s_DSPI_ADC(4:0)">
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="1496" y="1632" type="branch" />
+            <wire x2="1136" y1="1632" y2="1648" x1="1136" />
+            <wire x2="1136" y1="1648" y2="1696" x1="1136" />
+            <wire x2="1136" y1="1696" y2="1744" x1="1136" />
+            <wire x2="1136" y1="1744" y2="1792" x1="1136" />
+            <wire x2="1136" y1="1792" y2="1840" x1="1136" />
+            <wire x2="1136" y1="1840" y2="1856" x1="1136" />
+            <wire x2="2032" y1="1632" y2="1632" x1="1136" />
+        </branch>
+        <iomarker fontsize="28" x="416" y="288" name="I_CLK_25MHZ" orien="R180" />
+        <branch name="XLXN_2">
+            <wire x2="1680" y1="768" y2="768" x1="1664" />
+            <wire x2="1792" y1="608" y2="608" x1="1680" />
+            <wire x2="1680" y1="608" y2="768" x1="1680" />
+        </branch>
+        <branch name="XLXN_1">
+            <wire x2="1680" y1="512" y2="512" x1="1664" />
+            <wire x2="1680" y1="512" y2="544" x1="1680" />
+            <wire x2="1792" y1="544" y2="544" x1="1680" />
+        </branch>
+        <branch name="XLXN_56">
+            <wire x2="2064" y1="576" y2="576" x1="2048" />
+        </branch>
+        <branch name="XLXN_116">
+            <wire x2="1968" y1="864" y2="1216" x1="1968" />
+            <wire x2="2032" y1="1216" y2="1216" x1="1968" />
+            <wire x2="2912" y1="864" y2="864" x1="1968" />
+            <wire x2="2912" y1="544" y2="544" x1="2800" />
+            <wire x2="2912" y1="544" y2="864" x1="2912" />
+        </branch>
+        <branch name="I_CLK_25MHZ">
+            <wire x2="784" y1="288" y2="288" x1="416" />
+        </branch>
+        <instance x="784" y="320" name="XLXI_34" orien="R0" />
+        <branch name="XLXN_122">
+            <wire x2="1120" y1="288" y2="288" x1="1008" />
+            <wire x2="1120" y1="288" y2="480" x1="1120" />
+            <wire x2="1184" y1="480" y2="480" x1="1120" />
+            <wire x2="1120" y1="480" y2="736" x1="1120" />
+            <wire x2="1184" y1="736" y2="736" x1="1120" />
+            <wire x2="1584" y1="288" y2="288" x1="1120" />
+            <wire x2="1584" y1="288" y2="320" x1="1584" />
+            <wire x2="2064" y1="320" y2="320" x1="1584" />
+        </branch>
+        <branch name="XLXN_107">
+            <wire x2="2944" y1="848" y2="848" x1="1936" />
+            <wire x2="1936" y1="848" y2="1248" x1="1936" />
+            <wire x2="2032" y1="1248" y2="1248" x1="1936" />
+            <wire x2="2944" y1="576" y2="576" x1="2800" />
+            <wire x2="2944" y1="576" y2="848" x1="2944" />
+        </branch>
+        <branch name="XLXN_140">
+            <wire x2="2832" y1="1552" y2="1552" x1="2672" />
+            <wire x2="2832" y1="1552" y2="1584" x1="2832" />
+            <wire x2="2992" y1="1584" y2="1584" x1="2832" />
+        </branch>
+        <instance x="2064" y="784" name="XLXI_33" orien="R0">
+        </instance>
+        <branch name="XLXN_150">
+            <wire x2="2848" y1="784" y2="784" x1="2000" />
+            <wire x2="2000" y1="784" y2="1056" x1="2000" />
+            <wire x2="2032" y1="1056" y2="1056" x1="2000" />
+            <wire x2="2848" y1="336" y2="336" x1="2800" />
+            <wire x2="2848" y1="336" y2="784" x1="2848" />
+        </branch>
+        <branch name="XLXN_148">
+            <wire x2="2864" y1="816" y2="816" x1="2016" />
+            <wire x2="2016" y1="816" y2="1024" x1="2016" />
+            <wire x2="2032" y1="1024" y2="1024" x1="2016" />
+            <wire x2="2864" y1="304" y2="304" x1="2800" />
+            <wire x2="2864" y1="304" y2="816" x1="2864" />
+        </branch>
+        <instance x="2032" y="1808" name="XLXI_47" orien="R0">
+        </instance>
+        <branch name="XLXN_176">
+            <wire x2="2960" y1="720" y2="720" x1="1904" />
+            <wire x2="1904" y1="720" y2="1120" x1="1904" />
+            <wire x2="2032" y1="1120" y2="1120" x1="1904" />
+            <wire x2="2960" y1="400" y2="400" x1="2800" />
+            <wire x2="2960" y1="400" y2="720" x1="2960" />
+        </branch>
+        <branch name="I_SPI_N_CS">
+            <wire x2="1168" y1="1440" y2="1440" x1="320" />
+            <wire x2="1168" y1="1440" y2="1488" x1="1168" />
+            <wire x2="2032" y1="1488" y2="1488" x1="1168" />
+        </branch>
+        <branch name="I_SPI_MOSI">
+            <wire x2="1152" y1="1472" y2="1472" x1="320" />
+            <wire x2="1152" y1="1472" y2="1520" x1="1152" />
+            <wire x2="2032" y1="1520" y2="1520" x1="1152" />
+        </branch>
+        <branch name="O_SPI_MISO">
+            <wire x2="1136" y1="1504" y2="1504" x1="320" />
+            <wire x2="1136" y1="1504" y2="1552" x1="1136" />
+            <wire x2="2032" y1="1552" y2="1552" x1="1136" />
+        </branch>
+        <branch name="FMOT">
+            <wire x2="3264" y1="1024" y2="1024" x1="2672" />
+        </branch>
+        <branch name="PWMA">
+            <wire x2="2608" y1="832" y2="944" x1="2608" />
+            <wire x2="2672" y1="944" y2="944" x1="2608" />
+            <wire x2="2976" y1="832" y2="832" x1="2608" />
+            <wire x2="2976" y1="832" y2="1040" x1="2976" />
+            <wire x2="2688" y1="1120" y2="1120" x1="2672" />
+            <wire x2="3264" y1="1120" y2="1120" x1="2688" />
+            <wire x2="2976" y1="1040" y2="1040" x1="2688" />
+            <wire x2="2688" y1="1040" y2="1120" x1="2688" />
+        </branch>
+        <branch name="PWMB">
+            <wire x2="2688" y1="1168" y2="1168" x1="2672" />
+            <wire x2="2688" y1="1168" y2="1440" x1="2688" />
+            <wire x2="2704" y1="1440" y2="1440" x1="2688" />
+            <wire x2="3264" y1="1168" y2="1168" x1="2688" />
+        </branch>
+        <branch name="XLXN_152">
+            <wire x2="1920" y1="752" y2="1088" x1="1920" />
+            <wire x2="2032" y1="1088" y2="1088" x1="1920" />
+            <wire x2="2896" y1="752" y2="752" x1="1920" />
+            <wire x2="2896" y1="368" y2="368" x1="2800" />
+            <wire x2="2896" y1="368" y2="752" x1="2896" />
+        </branch>
+        <branch name="FQUAD">
+            <wire x2="3264" y1="1072" y2="1072" x1="2672" />
+        </branch>
+        <branch name="O_TP_53">
+            <wire x2="3072" y1="1344" y2="1344" x1="3040" />
+        </branch>
+        <branch name="O_TP_51">
+            <wire x2="3072" y1="1264" y2="1264" x1="3040" />
+        </branch>
+        <branch name="XLXN_180">
+            <wire x2="1888" y1="688" y2="1152" x1="1888" />
+            <wire x2="2032" y1="1152" y2="1152" x1="1888" />
+            <wire x2="2816" y1="688" y2="688" x1="1888" />
+            <wire x2="2816" y1="432" y2="432" x1="2800" />
+            <wire x2="2816" y1="432" y2="688" x1="2816" />
+        </branch>
+        <instance x="2992" y="1696" name="XLXI_13" orien="R0" />
+        <branch name="XLXN_141">
+            <wire x2="2688" y1="1584" y2="1584" x1="2672" />
+            <wire x2="2688" y1="1584" y2="1632" x1="2688" />
+            <wire x2="2992" y1="1632" y2="1632" x1="2688" />
+            <wire x2="2992" y1="1632" y2="1664" x1="2992" />
+        </branch>
+        <iomarker fontsize="28" x="3248" y="1664" name="O_N_LED7" orien="R0" />
+        <instance x="2992" y="1616" name="XLXI_12" orien="R0" />
+        <iomarker fontsize="28" x="3248" y="1584" name="O_N_LED6" orien="R0" />
+        <instance x="2992" y="1520" name="XLXI_11" orien="R0" />
+        <branch name="XLXN_139">
+            <wire x2="2688" y1="1520" y2="1520" x1="2672" />
+            <wire x2="2992" y1="1488" y2="1488" x1="2688" />
+            <wire x2="2688" y1="1488" y2="1520" x1="2688" />
+        </branch>
+        <iomarker fontsize="28" x="3248" y="1488" name="O_N_LED5" orien="R0" />
+        <instance x="2816" y="1296" name="XLXI_54" orien="R0" />
+        <iomarker fontsize="28" x="3072" y="1264" name="O_TP_51" orien="R0" />
+        <instance x="2816" y="1376" name="XLXI_53" orien="R0" />
+        <iomarker fontsize="28" x="3072" y="1344" name="O_TP_53" orien="R0" />
+        <iomarker fontsize="28" x="320" y="1440" name="I_SPI_N_CS" orien="R180" />
+        <branch name="I_SPI_CLK">
+            <wire x2="2032" y1="1408" y2="1408" x1="320" />
+            <wire x2="2032" y1="1408" y2="1440" x1="2032" />
+            <wire x2="2032" y1="1440" y2="1456" x1="2032" />
+        </branch>
+        <iomarker fontsize="28" x="320" y="1408" name="I_SPI_CLK" orien="R180" />
+        <instance x="2704" y="1472" name="XLXI_58" orien="R0" />
+        <instance x="2672" y="976" name="XLXI_57" orien="R0" />
+        <branch name="XLXN_205">
+            <wire x2="2736" y1="1152" y2="1264" x1="2736" />
+            <wire x2="2816" y1="1264" y2="1264" x1="2736" />
+            <wire x2="2960" y1="1152" y2="1152" x1="2736" />
+            <wire x2="2960" y1="944" y2="944" x1="2896" />
+            <wire x2="2960" y1="944" y2="1152" x1="2960" />
+        </branch>
+        <branch name="XLXN_206">
+            <wire x2="2752" y1="1184" y2="1344" x1="2752" />
+            <wire x2="2816" y1="1344" y2="1344" x1="2752" />
+            <wire x2="3248" y1="1184" y2="1184" x1="2752" />
+            <wire x2="3248" y1="1184" y2="1440" x1="3248" />
+            <wire x2="3248" y1="1440" y2="1440" x1="2928" />
+        </branch>
+        <instance x="2976" y="1824" name="XLXI_59" orien="R0" />
+        <instance x="3008" y="1952" name="XLXI_60" orien="R0" />
+        <branch name="O_TP_52">
+            <wire x2="3232" y1="1792" y2="1792" x1="3200" />
+        </branch>
+        <iomarker fontsize="28" x="3232" y="1792" name="O_TP_52" orien="R0" />
+        <branch name="O_TP_54">
+            <wire x2="3264" y1="1920" y2="1920" x1="3232" />
+        </branch>
+        <iomarker fontsize="28" x="3264" y="1920" name="O_TP_54" orien="R0" />
+        <branch name="XLXN_209">
+            <wire x2="2816" y1="1664" y2="1664" x1="2672" />
+            <wire x2="2816" y1="1664" y2="1792" x1="2816" />
+            <wire x2="2976" y1="1792" y2="1792" x1="2816" />
+        </branch>
+        <branch name="XLXN_210">
+            <wire x2="2800" y1="1712" y2="1712" x1="2672" />
+            <wire x2="2800" y1="1712" y2="1920" x1="2800" />
+            <wire x2="3008" y1="1920" y2="1920" x1="2800" />
+        </branch>
+    </sheet>
+</drawing>

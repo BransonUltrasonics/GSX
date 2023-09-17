@@ -1,0 +1,14 @@
+
+# this file is generated
+
+# layers that have been built in the VSB
+__BUILT_LAYERS += FS_ROMFS
+
+__OBJS_BUILT_FS_ROMFS = C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objfsRomfs/romfs.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objfsRomfs/romfsDrv.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objfsRomfs/romfsLib.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objfsRomfs/romfs.d C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objfsRomfs/romfsDrv.d C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objfsRomfs/romfsLib.d
+
+
+# built libraries
+__BUILT_LIBRARIES += krnl_ARMARCH7_common_fsRomfs
+
+
+__OBJS_BUILT_krnl_ARMARCH7_common_fsRomfs = C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objfsRomfs/romfs.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objfsRomfs/romfsDrv.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objfsRomfs/romfsLib.o 

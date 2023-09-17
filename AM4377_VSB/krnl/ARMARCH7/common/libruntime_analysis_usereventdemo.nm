@@ -1,0 +1,62 @@
+
+libruntime_analysis_usereventdemo.a:
+
+memdemo.o:
+00000000 t wait_for_keypress
+         U bzero
+         U select
+00000070 T memdemo_fibonacci_example
+         U mybuf_strdup
+         U printf
+         U strlen
+         U mybuf_alloc
+         U __div32
+         U __rem32
+         U strncpy
+         U mybuf_free
+00000268 T memdemo
+         U __stdout
+         U fflush
+
+mybuffer.o:
+00000000 d ALLOC_LABEL
+00000004 d FREE_LABEL
+00000000 T mybuf_alloc
+         U malloc
+         U cafe_user_event_unsigned
+00000048 T mybuf_free
+         U free
+0000007c T mybuf_strdup
+         U strlen
+         U memcpy
+
+libruntime_analysis_usereventdemo.a:
+
+memdemo.o:
+00000000 t wait_for_keypress
+         U bzero
+         U select
+00000070 T memdemo_fibonacci_example
+         U mybuf_strdup
+         U printf
+         U strlen
+         U mybuf_alloc
+         U __div32
+         U __rem32
+         U strncpy
+         U mybuf_free
+00000268 T memdemo
+         U __stdout
+         U fflush
+
+mybuffer.o:
+00000000 d ALLOC_LABEL
+00000004 d FREE_LABEL
+00000000 T mybuf_alloc
+         U malloc
+         U cafe_user_event_unsigned
+00000048 T mybuf_free
+         U free
+0000007c T mybuf_strdup
+         U strlen
+         U memcpy

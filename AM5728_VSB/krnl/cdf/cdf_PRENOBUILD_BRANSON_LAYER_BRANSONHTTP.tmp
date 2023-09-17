@@ -1,0 +1,15 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/_Branson_Driver_Layer/BRANSON_DRV/src/BransonHTTP/cdf/40bransonhttp.cdf>
+
+Layer Layer::BRANSON_LAYER_BRANSONHTTP {
+	NAME BRANSON_LAYER_BRANSONHTTP
+}

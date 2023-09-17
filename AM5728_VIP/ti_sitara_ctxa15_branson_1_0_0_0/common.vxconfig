@@ -1,0 +1,35 @@
+# common.vxconfig - VSB configuration flags and options for ti_sitara_ctxa15 BSP
+
+# Copyright (c) 2015-2016 Wind River Systems, Inc.
+#
+# The right to copy, distribute, modify or otherwise make use
+# of this software may be licensed only pursuant to the terms
+# of an applicable Wind River license agreement.
+
+#
+# modification history
+# --------------------
+# 04mar16,gls  made ARMV7_CORE_CTX_A15_BSP visible
+# 22oct15,yjw created (US40646)
+#
+#
+# DESCRIPTION
+#
+# This file defines the VxWorks Source Build configuration options that apply
+# only to the ti_sitara_ctxa15 BSP.
+#
+################################################################################
+
+
+# Configure the ARM v7 core type when configuring a VSB
+config  ARMV7_CORE_CTX_A15_BSP
+        bool "ARM Cortex-A15"
+        default y
+
+config REQUIRES_ARM_LPAE
+        bool
+        default y
+
+config  UNSUPPORTS_HARDWARE_BP
+	bool
+	default n

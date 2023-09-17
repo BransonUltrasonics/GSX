@@ -1,0 +1,34 @@
+/* bsp.vsbl - TI Cortex-A15 Sitara family BSP metadata file */
+
+/*
+ * Copyright (c) 2015-2017 Wind River Systems, Inc.
+ *
+ * The right to copy, distribute, modify or otherwise make use
+ * of this software may be licensed only pursuant to the terms
+ * of an applicable Wind River license agreement.
+ */
+
+/*
+modification history
+--------------------
+23jan17,ghl  updated to version 1.0.4.0, added Mailbox for AM572x (F8373)
+31oct16,wch  updated to version 1.0.3.0
+08oct16,mw1  add usb2_mod,usb1 and usb1phy to support USB2. (F7945)
+06jul16,myt  add SD/eMMC support for AM572x. (F5938)
+19may16,m_w  version 1.0.2.0, updated clock DTS,required TI_SITARA_CLK.(F7158)
+28apr16,sye  removed dependency for END (V7PRO-2998)
+27apr16,jnl  version 1.0.1.0, added support for vxbl (US75898)
+25sep15,yjw  created (US64529)
+*/
+
+Layer ti_sitara_ctxa15_branson
+    {
+    SYNOPSIS            TI Cortex-A15 Sitara Family BSP
+    VERSION             1.0.0.0
+    VENDOR              Wind River
+    LAYER_REQUIRES      FDT VXBUS_DRV
+    FEATURE_REQUIRES    {BOARDLIB  BOARD_INFO_SHOW} \
+                        {BOARDLIB  WARM_BOOT}       \
+                        {TI_SITARA TI_SITARA_CLK}   \
+                        {TI_SITARA TI_SITARA_RTC}
+    }

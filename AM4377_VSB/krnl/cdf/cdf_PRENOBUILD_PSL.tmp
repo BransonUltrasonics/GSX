@@ -1,0 +1,28 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/platform/ti_sitara-1.0.3.0/cdf/40usrStaticClkData.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/platform/ti_sitara-1.0.3.0/cdf/40vxbAm35xxSpi.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/platform/ti_sitara-1.0.3.0/cdf/40vxbAm38xxI2c.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/platform/ti_sitara-1.0.3.0/cdf/40vxbAm3Pads.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/platform/ti_sitara-1.0.3.0/cdf/40vxbAm3Prcm.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/platform/ti_sitara-1.0.3.0/cdf/40vxbAm3Rtc.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/platform/ti_sitara-1.0.3.0/cdf/40vxbAmIPUCache.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/platform/ti_sitara-1.0.3.0/cdf/40vxbFdtTiAM572xPcie.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/platform/ti_sitara-1.0.3.0/cdf/40vxbOmap35xxIntCtlr.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/platform/ti_sitara-1.0.3.0/cdf/40vxbOmap35xxTimer.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/platform/ti_sitara-1.0.3.0/cdf/40vxbOmapGpioCtlr.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/platform/ti_sitara-1.0.3.0/cdf/40vxbTAm5Clk.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/platform/ti_sitara-1.0.3.0/cdf/40vxbTiAm3Sio.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/platform/ti_sitara-1.0.3.0/cdf/40vxbTiClkAm4.cdf>
+
+Layer Layer::PSL {
+	NAME PSL
+}

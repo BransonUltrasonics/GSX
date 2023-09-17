@@ -1,0 +1,4 @@
+echo 'loading uboot env from qspi flash'
+loadaddr=0x84100000
+bootcmd=sf probe 0;sf read ${loadaddr} 0x1e0000 0xE00000;go ${loadaddr}
+uenvcmd=boot

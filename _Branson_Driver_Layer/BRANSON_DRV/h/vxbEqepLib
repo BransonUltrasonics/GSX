@@ -1,0 +1,70 @@
+/* vxbEqepLib.h - VxBus EQEP interfaces header file */
+
+/*
+ * Copyright : To Be Done
+ */
+/*
+DESCRIPTION
+
+This library provides the EQEP specific interfaces
+
+*/
+
+#ifndef __INCvxbEqepLibh
+#define __INCvxbEqepLibh 
+
+#include <hwif/vxBus.h>
+#include <hwif/util/vxbIsrDeferLib.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+
+
+
+
+/* structure to be used and updated EQEP time and Alarm */
+
+typedef struct vxbEqepFunctionality
+    {
+
+    STATUS (*eqepGet)(VXB_DEV_ID pInst);
+    STATUS (*eqepGetPosCount)(VXB_DEV_ID pInst);
+	STATUS (*eqepGetMaxCount)(VXB_DEV_ID pInst);
+	STATUS (*eqepSetMaxCount)(VXB_DEV_ID pInst, int val);
+    STATUS (*eqepSetInitCount)(VXB_DEV_ID pInst,int val);
+	STATUS (*eqepGetInitCount)(VXB_DEV_ID pInst);
+	STATUS (*eqepGetDirection)(VXB_DEV_ID pInst);
+    } VXB_PWMSS_EQEP_FUNC;
+
+struct vxbEqepHandle
+    {
+    struct vxbEqepFunctionality *pEqepFunc;
+    VXB_DEV_ID                  pInst;
+    };
+
+/* IMPORT */
+
+IMPORT STATUS vxbEqepGet (int);
+IMPORT STATUS vxbEqepGetMaxCount (int);
+IMPORT STATUS vxbEqepGetPosCount (int);
+IMPORT STATUS vxbEqepSetMaxCount (int,int);
+IMPORT STATUS vxbEqepGetInitCount (int);
+IMPORT STATUS vxbEqepSetInitCount (int,int);
+IMPORT STATUS vxbEqepGetDirection (int);
+IMPORT STATUS vxbKirthiFunc (void);
+
+IMPORT void eqepRegister
+    (
+    VXB_DEV_ID pDev,
+    VXB_PWMSS_EQEP_FUNC * eqep,
+	 char    name[32]
+    );
+    
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* __INCvxbEqepLibh */
+

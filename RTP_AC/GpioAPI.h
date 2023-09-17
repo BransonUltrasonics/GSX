@@ -1,0 +1,111 @@
+/*
+ * GPIOAPI.h
+ *
+ *  Created on: Nov. 30, 2017
+ *      Author: FLi
+ */
+
+
+#ifndef GPIO_API_H
+#define GPIO_API_H
+
+#define GPIO_OK           0
+#define GPIO_ERROR       -1
+
+#define GPIO_PIN_VAL_LOW       (0U)
+#define GPIO_PIN_VAL_HIGH      (1U)
+
+#define GPIO_DIR_INPUT          (0)
+#define GPIO_DIR_OUTPUT         (1)
+#define GPIO_VALUE_LOW          (0)
+#define GPIO_VALUE_HIGH         (1)
+
+typedef enum
+	{
+		LINE_LOW,   // 0 V, line level of Output and Input 
+		LINE_HIGH   // 24 V, line level of Output and Input 
+	} LINE_VALUE;
+
+// GPIO pin value definitions 
+//GPIO1
+#define GPIO_1_5   (0x25)		//GPIO1[5]	A7	INPUT	\FAIL_5V
+#define GPIO_1_6   (0x26)		//GPIO1[6]	C8	INPUT	\FAIL_24V
+#define GPIO_1_7   (0x27)		//GPIO1[7]	B8	OUTPUT	\FAN_EN
+
+//GPIO3
+#define GPIO_3_17   (0x71)		//GPIO3[17]	M24	INPUT	\SERVO_AMP_ALARM
+#define GPIO_3_20   (0x74)		//GPIO3[20]	M25	OUTPUT	\SV1_REQ
+	
+//GPIO4	 	 	 	 	 	 
+#define GPIO_4_20   (0x94)		//GPIO4[20]	AD23	OUTPUT	\UP_PRUETH_RESET	
+#define GPIO_4_16   (0x90)		//GPIO4[16]	AD21	OUTPUT	\UP_DIGIO_RESET	 
+#define GPIO_4_17   (0x91)		//GPIO4[17]	AE22	OUTPUT	\IO_POWER_EN	 
+#define GPIO_4_10   (0x8A)		//GPIO4[10]	AC23	INPUT	ESTOP1_SIG	 
+#define GPIO_4_11   (0x8B)		//GPIO4[11]	AE21	INPUT	PB2_SIG	 
+#define GPIO_4_12   (0x8C)		//GPIO4[12]	AC25	INPUT	ESTOP2_SIG	 
+#define GPIO_4_9    (0x89)		//GPIO4[9]	AD25	INPUT	PB1_SIG	 
+#define GPIO_4_24   (0x98)		//GPIO4[24]	Y18		OUTPUT	SV3_EN	Converter Cooling
+#define GPIO_4_25   (0x99)		//GPIO4[25]	AA18	OUTPUT	SERVO_AMP_RESET
+#define GPIO_4_28   (0x9C)		//GPIO4[28]	AE20	INPUT	ENLOG_ID1	 
+#define GPIO_4_29   (0x9D)		//GPIO4[29]	AD20	INPUT	ENLOG_ID0	 
+						
+//GPIO5	 	 	 	 	 	 
+#define GPIO_5_19   (0xB3)		//GPIO5[19]	AE18	OUTPUT	\LED5	
+#define GPIO_5_12   (0xAC)		//GPIO5[12]	E25	INPUT	\ULS_SIG	 
+#define GPIO_5_9    (0xA9)		//GPIO5[9]	F24	INPUT	\GND_DET_SIG	 
+#define GPIO_5_20   (0xB4)		//GPIO5[20]	AB18	OUTPUT	BLUE_LED_EN	Blue LED
+//#define GPIO_5_25   (0xB9)		//GPIO5[25]	A10	OUTPUT	LATCH_CLK	 
+//#define GPIO_5_26   (0xBA)		//GPIO5[26]	B10	OUTPUT	\LATCH_OE	 
+#define GPIO_0_23   (0x17)		//GPIO0[23]	A10	OUTPUT	LATCH_CLK	 
+#define GPIO_0_22   (0x16)		//GPIO0[22]	B10	OUTPUT	\LATCH_OE	 
+#define GPIO_5_23   (0xB7)		//GPIO5[23]	D11	INPUT	\DIG_IN_INT	 
+#define GPIO_5_4    (0xA4)		//GPIO5[4]	P25	INPUT	\ENLOG_ALARM0	 
+#define GPIO_5_5    (0xA5)		//GPIO5[5]	R24	INPUT	\ENLOG_ALARM1	 
+#define GPIO_5_6    (0xA6)		//GPIO5[6]	P24	INPUT	\ENLOG_ALARM2	 
+#define GPIO_5_7    (0xA7)		//GPIO5[7]	N25	INPUT	\ENLOG_ALARM3	 
+
+//GPIO1
+#define FAIL_5V         GPIO_1_5   //GPIO1[5]	A7	INPUT	\FAIL_5V
+#define FAIL_24V        GPIO_1_6   //GPIO1[6]	C8	INPUT	\FAIL_24V
+#define FAN_EN          GPIO_1_7   //GPIO1[7]	B8	OUTPUT	\FAN_EN
+
+//GPIO3
+#define SERVO_AMP_ALARM	GPIO_3_17  	//GPIO3[17]	M24	INPUT	\SERVO_AMP_ALARM
+#define SV1_REQ			GPIO_3_20  	//GPIO3[20]	M25	OUTPUT	\SV1_REQ
+	
+//GPIO4
+#define UP_PRUETH_RESET GPIO_4_20   //GPIO4[20]	AD23	OUTPUT	\UP_PRUETH_RESET	
+#define UP_DIGIO_RESET  GPIO_4_16   //GPIO4[16]	AD21	OUTPUT	\UP_DIGIO_RESET	 
+#define IO_POWER_EN     GPIO_4_17   //GPIO4[17]	AE22	OUTPUT	\IO_POWER_EN	 
+#define ESTOP1_SIG      GPIO_4_10   //GPIO4[10]	AC23	INPUT	ESTOP1_SIG	 
+#define PB2_SIG         GPIO_4_11   //GPIO4[11]	AE21	INPUT	PB2_SIG	 
+#define ESTOP2_SIG      GPIO_4_12   //GPIO4[12]	AC25	INPUT	ESTOP2_SIG	 
+#define PB1_SIG         GPIO_4_9    //GPIO4[9]	AD25	INPUT	PB1_SIG	 
+#define SV3_EN          GPIO_4_24   //GPIO4[24]	Y18	    OUTPUT	SV3_EN	Converter Cooling
+#define SERVO_AMP_RESET GPIO_4_25   //GPIO4[25]	AA18	OUTPUT	SERVO_AMP_RESET
+#define ENLOG_ID1       GPIO_4_28   //GPIO4[28]	AE20	INPUT	ENLOG_ID1	 
+#define ENLOG_ID0       GPIO_4_29   //GPIO4[29]	AD20	INPUT	ENLOG_ID0	 
+						
+//GPIO5	 	 	 	 	 	 
+#define LED5            GPIO_5_19   //GPIO5[19]	AE18	OUTPUT	\LED5	
+#define ULS_SIG         GPIO_5_12   //GPIO5[12]	E25	INPUT	\ULS_SIG	 
+#define GND_DET_SIG     GPIO_5_9    //GPIO5[9]	F24	INPUT	\GND_DET_SIG	 
+#define BLUE_LED_EN     GPIO_5_20   //GPIO5[20]	AB18	OUTPUT	BLUE_LED_EN	Blue LED
+//#define LATCH_CLK       GPIO_5_25   //GPIO5[25]	A10	OUTPUT	LATCH_CLK	 
+//#define LATCH_OE        GPIO_5_26   //GPIO5[26]	B10	OUTPUT	\LATCH_OE	 
+#define LATCH_CLK       GPIO_0_23   //GPIO0[23]	A10	OUTPUT	LATCH_CLK	 
+#define LATCH_OE        GPIO_0_22   //GPIO0[22]	B10	OUTPUT	\LATCH_OE	 
+#define DIG_IN_INT      GPIO_5_23   //GPIO5[23]	D11	INPUT	\DIG_IN_INT	 
+#define ENLOG_ALARM0    GPIO_5_4    //GPIO5[4]	P25	INPUT	\ENLOG_ALARM0	 
+#define ENLOG_ALARM1    GPIO_5_5    //GPIO5[5]	R24	INPUT	\ENLOG_ALARM1	 
+#define ENLOG_ALARM2    GPIO_5_6    //GPIO5[6]	P24	INPUT	\ENLOG_ALARM2	 
+#define ENLOG_ALARM3    GPIO_5_7    
+//GPIO5[7]	N25	INPUT	\ENLOG_ALARM3	 
+
+
+INT16 GpioInit(void);
+INT16 GpioSetVal(UINT16 pinNum, UINT16 value);
+INT16 GpioGetVal(UINT16 pinNum, UINT16* val); 
+
+#endif  //GPIO_API_H
+

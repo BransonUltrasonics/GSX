@@ -1,0 +1,24 @@
+
+ifndef __HEADER_ACCESS_ARM_DRV_INCLUDED
+__HEADER_ACCESS_ARM_DRV_INCLUDED = TRUE
+
+
+
+
+
+__SUBSCRIBE_ACCESS_ARM_DRV = 
+
+
+
+ifneq ($(wildcard $(VSB_USER_PROTECTED_INCLUDE_DIR)/ARM_DRV),)
+
+ifneq ($(VSBL_NAME),)
+ifeq ($(VSBL_NAME),$(filter $(VSBL_NAME), ARM_DRV))
+VSBL_LUH += $(OPTION_INCLUDE_DIR)$(VSB_USER_PROTECTED_INCLUDE_DIR)/ARM_DRV
+endif
+endif
+
+endif
+
+endif
+

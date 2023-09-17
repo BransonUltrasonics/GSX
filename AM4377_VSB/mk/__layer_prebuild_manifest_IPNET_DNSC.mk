@@ -1,0 +1,1 @@
+__FILES_COPIED_IPNET_DNSC = C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/ipdnsc_config.h C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/ipdnsc.h C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/cdf/02comp_ipnet_appl_dnsc.cdf C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/subprojects/etc/dnsc.conf C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/configlette/ipdnsc_config.c

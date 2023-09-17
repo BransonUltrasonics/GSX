@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="ERRSTAT">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2021-3-17T17:14:5</timestamp>
+    <pin polarity="Input" x="0" y="-224" name="FSYNC_VAL_VALID" />
+    <pin polarity="Input" x="0" y="-192" name="PHA_VAL_VALID" />
+    <pin polarity="Input" x="0" y="-272" name="MD" />
+    <pin polarity="Input" x="112" y="-432" name="RST" />
+    <pin polarity="Input" x="0" y="-32" name="PWM_STOP_CF" />
+    <pin polarity="Input" x="0" y="-64" name="GPO_OL_RESET" />
+    <pin polarity="Output" x="608" y="-48" name="S_StatHdx(15:0)" />
+    <pin polarity="Output" x="608" y="-176" name="SYNC_DDS_RUN" />
+    <pin polarity="Output" x="608" y="-144" name="SYNC_DDS_ERR" />
+    <pin polarity="Output" x="608" y="-112" name="PWM_STOP" />
+    <graph>
+        <line x2="0" y1="-224" y2="-224" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-224" type="pin FSYNC_VAL_VALID" />
+        <attrtext style="alignment:BCENTER;fontsize:40;fontname:Arial" attrname="SymbolName" x="312" y="60" type="symbol" />
+        <line x2="0" y1="-192" y2="-192" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-192" type="pin PHA_VAL_VALID" />
+        <line x2="0" y1="-272" y2="-272" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-272" type="pin MD" />
+        <line x2="112" y1="-384" y2="-432" x1="112" />
+        <attrtext style="alignment:VRIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="112" y="-376" type="pin RST" />
+        <line x2="0" y1="-32" y2="-32" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-32" type="pin PWM_STOP_CF" />
+        <line x2="0" y1="-64" y2="-64" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-64" type="pin GPO_OL_RESET" />
+        <line x2="608" y1="-48" y2="-48" x1="544" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="536" y="-48" type="pin S_StatHdx(15:0)" />
+        <rect width="64" x="544" y="-60" height="24" />
+        <rect width="480" x="64" y="-384" height="384" />
+        <line x2="608" y1="-176" y2="-176" x1="544" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="536" y="-176" type="pin SYNC_DDS_RUN" />
+        <line x2="608" y1="-144" y2="-144" x1="544" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="536" y="-144" type="pin SYNC_DDS_ERR" />
+        <line x2="608" y1="-112" y2="-112" x1="544" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="536" y="-112" type="pin PWM_STOP" />
+    </graph>
+</symbol>

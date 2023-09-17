@@ -1,0 +1,268 @@
+
+libusbcore.a:
+
+ossLib.o:
+00000000 t translateError
+0000004c t translatePriority
+00000094 t threadHead
+00000000 d usbMemPartSize
+00000004 b usbMemPartId
+00000004 d ossPartInitFlag
+00000000 b pUsbMemSpace
+00000008 d ossOldInstallFlag
+         U __errno
+         U taskPriorityGet
+000000bc T ossStatus
+         U errnoSet
+000000ec T ossShutdown
+000000f4 T ossThreadCreate
+         U taskSpawn
+00000190 T ossThreadDestroy
+         U taskDelete
+000001c0 T ossThreadSleep
+         U sysClkRateGet
+         U __div32
+         U __rem32
+         U taskDelay
+00000210 T ossSemCreate
+         U semCCreate
+00000250 T ossSemDestroy
+         U semDelete
+00000280 T ossSemGive
+         U semGive
+000002b0 T ossSemTake
+         U semTake
+00000320 T ossMutexCreate
+         U semMCreate
+00000360 T ossMutexDestroy
+00000390 T ossMutexTake
+00000400 T ossMutexRelease
+00000430 T ossPartSizeGet
+0000043c T ossPartSizeSet
+00000470 T ossPartIdGet
+0000047c T ossMemUsedGet
+000004a4 T ossMalloc
+00000004 C ossMallocFuncPtr
+000004c8 T ossPartMalloc
+         U cacheArchAlignSize
+         U memalign
+         U memPartCreate
+         U free
+         U memPartAlignedAlloc
+         U memPartAddToPool
+00000614 T ossOldMalloc
+00000630 T ossCalloc
+         U memset
+00000674 T ossFree
+00000004 C ossFreeFuncPtr
+00000698 T ossPartFree
+         U memPartFree
+000006d0 T ossOldFree
+000006f0 T ossOldInstall
+00000728 T ossTime
+         U tickGet
+00000754 T ossInitialize
+
+usbDescrCopyLib.o:
+00000000 T usbDescrCopy32
+         U memcpy
+00000038 T usbDescrCopy
+00000060 T usbDescrStrCopy32
+         U strlen
+000000fc T usbDescrStrCopy
+
+usbHandleLib.o:
+00000000 d handles
+00000004 d numHandles
+00000008 d initCount
+0000000c d nextHandleNum
+00000010 d mutex
+00000014 d usedHandles
+00000000 T usbHandleInitialize
+         U ossCalloc
+         U ossStatus
+         U ossMutexCreate
+         U ossFree
+000000c0 T usbHandleShutdown
+         U ossMutexTake
+         U ossMutexDestroy
+00000128 T usbHandleCreate
+         U __urem32
+         U ossMutexRelease
+00000260 T usbHandleDestroy
+000002f4 T usbHandleValidate
+
+usbLib.o:
+00000000 T usbTransferTime
+         U __udiv32
+000000b8 T usbRecurringTime
+0000018c T usbDescrParseSkip
+000001fc T usbDescrParse
+
+usbListLib.o:
+00000000 T usbListLink
+00000054 T usbListLinkProt
+         U ossMutexTake
+         U ossMutexRelease
+00000098 T usbListUnlink
+000000c8 T usbListUnlinkProt
+000000fc T usbListFirst
+00000120 T usbListNext
+
+usbQueueLib.o:
+00000000 T usbQueueDestroy
+         U ossStatus
+         U ossSemDestroy
+         U ossMutexTake
+         U ossMutexDestroy
+         U ossFree
+00000078 T usbQueueCreate
+         U ossCalloc
+         U ossSemCreate
+         U ossMutexCreate
+00000138 T usbQueuePut
+         U ossSemTake
+         U ossSemGive
+         U ossMutexRelease
+0000020c T usbQueueGet
+         U memcpy
+
+vxbUsbBus.o:
+00000000 D vxbUsbBus_desc
+00000000 D __dataset__bustype_vxbUsbBus_desc
+0000000c D vxbUsbRootHub_desc
+00000028 D __dataset__bustype_vxbUsbRootHub_desc
+
+libusbcore.a:
+
+ossLib.o:
+00000000 t translateError
+0000004c t translatePriority
+00000094 t threadHead
+00000000 d usbMemPartSize
+00000004 b usbMemPartId
+00000004 d ossPartInitFlag
+00000000 b pUsbMemSpace
+00000008 d ossOldInstallFlag
+         U __errno
+         U taskPriorityGet
+000000bc T ossStatus
+         U errnoSet
+000000ec T ossShutdown
+000000f4 T ossThreadCreate
+         U taskSpawn
+00000190 T ossThreadDestroy
+         U taskDelete
+000001c0 T ossThreadSleep
+         U sysClkRateGet
+         U __div32
+         U __rem32
+         U taskDelay
+00000210 T ossSemCreate
+         U semCCreate
+00000250 T ossSemDestroy
+         U semDelete
+00000280 T ossSemGive
+         U semGive
+000002b0 T ossSemTake
+         U semTake
+00000320 T ossMutexCreate
+         U semMCreate
+00000360 T ossMutexDestroy
+00000390 T ossMutexTake
+00000400 T ossMutexRelease
+00000430 T ossPartSizeGet
+0000043c T ossPartSizeSet
+00000470 T ossPartIdGet
+0000047c T ossMemUsedGet
+000004a4 T ossMalloc
+00000004 C ossMallocFuncPtr
+000004c8 T ossPartMalloc
+         U cacheArchAlignSize
+         U memalign
+         U memPartCreate
+         U free
+         U memPartAlignedAlloc
+         U memPartAddToPool
+00000614 T ossOldMalloc
+00000630 T ossCalloc
+         U memset
+00000674 T ossFree
+00000004 C ossFreeFuncPtr
+00000698 T ossPartFree
+         U memPartFree
+000006d0 T ossOldFree
+000006f0 T ossOldInstall
+00000728 T ossTime
+         U tickGet
+00000754 T ossInitialize
+
+usbDescrCopyLib.o:
+00000000 T usbDescrCopy32
+         U memcpy
+00000038 T usbDescrCopy
+00000060 T usbDescrStrCopy32
+         U strlen
+000000fc T usbDescrStrCopy
+
+usbHandleLib.o:
+00000000 d handles
+00000004 d numHandles
+00000008 d initCount
+0000000c d nextHandleNum
+00000010 d mutex
+00000014 d usedHandles
+00000000 T usbHandleInitialize
+         U ossCalloc
+         U ossStatus
+         U ossMutexCreate
+         U ossFree
+000000c0 T usbHandleShutdown
+         U ossMutexTake
+         U ossMutexDestroy
+00000128 T usbHandleCreate
+         U __urem32
+         U ossMutexRelease
+00000260 T usbHandleDestroy
+000002f4 T usbHandleValidate
+
+usbLib.o:
+00000000 T usbTransferTime
+         U __udiv32
+000000b8 T usbRecurringTime
+0000018c T usbDescrParseSkip
+000001fc T usbDescrParse
+
+usbListLib.o:
+00000000 T usbListLink
+00000054 T usbListLinkProt
+         U ossMutexTake
+         U ossMutexRelease
+00000098 T usbListUnlink
+000000c8 T usbListUnlinkProt
+000000fc T usbListFirst
+00000120 T usbListNext
+
+usbQueueLib.o:
+00000000 T usbQueueDestroy
+         U ossStatus
+         U ossSemDestroy
+         U ossMutexTake
+         U ossMutexDestroy
+         U ossFree
+00000078 T usbQueueCreate
+         U ossCalloc
+         U ossSemCreate
+         U ossMutexCreate
+00000138 T usbQueuePut
+         U ossSemTake
+         U ossSemGive
+         U ossMutexRelease
+0000020c T usbQueueGet
+         U memcpy
+
+vxbUsbBus.o:
+00000000 D vxbUsbBus_desc
+00000000 D __dataset__bustype_vxbUsbBus_desc
+0000000c D vxbUsbRootHub_desc
+00000028 D __dataset__bustype_vxbUsbRootHub_desc

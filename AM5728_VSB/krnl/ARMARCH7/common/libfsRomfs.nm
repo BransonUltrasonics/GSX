@@ -1,0 +1,144 @@
+
+libfsRomfs.a:
+
+romfs.o:
+00000000 T rfsread
+         U semTake
+         U vxBlkIO
+         U semGive
+         U bcopy
+00000138 T romfs_ntoh
+00000244 T rfs_open
+         U malloc
+         U memcpy
+         U printf
+         U strncmp
+         U free
+00000528 T rfs_read
+000005e0 T rfs_seek
+00000640 T rfs_close
+00000678 T rfs_write
+00000684 T rfs_stat
+         U bzero
+000006f0 T rfs_ls
+
+romfsDrv.o:
+0000009c t romfsBlkRd
+00000000 T romfsBlkDevCreate
+         U __div32
+         U malloc
+         U bzero
+         U bcopy
+         U __udiv32
+
+romfsLib.o:
+00000000 t romfsFdAlloc
+00000034 t romfsFsOpen
+000000c4 t romfsFsClose
+00000104 t romfsFsWrite
+00000124 t romfsFsRead
+00000160 t romfsFsDirRead
+000002ac t romfsFsIoctl
+00000000 b romfsMaxOpenFiles
+0000046c t romfsFsDevDelete
+         U poolItemGet
+         U errnoSet
+         U rfs_open
+         U poolItemReturn
+         U rfs_close
+         U rfs_read
+         U rfsread
+         U memcpy
+         U rfs_seek
+         U rfs_stat
+00000400 T romfsFsInit
+00000000 D romfsFsDrvNum
+         U iosDrvInstall
+         U printErr
+         U iosDevFind
+         U iosDevDelete
+         U poolDelete
+         U free
+0000051c T romfsFsDevCreate
+         U malloc
+         U bzero
+         U poolCreate
+         U semMCreate
+         U iosDevAdd
+         U fsPathAddedEventRaise
+000005f4 T vxBlkIO
+         U __udiv32
+00000684 T romfsVolumeCreate
+         U romfsBlkDevCreate
+
+libfsRomfs.a:
+
+romfs.o:
+00000000 T rfsread
+         U semTake
+         U vxBlkIO
+         U semGive
+         U bcopy
+00000138 T romfs_ntoh
+00000244 T rfs_open
+         U malloc
+         U memcpy
+         U printf
+         U strncmp
+         U free
+00000528 T rfs_read
+000005e0 T rfs_seek
+00000640 T rfs_close
+00000678 T rfs_write
+00000684 T rfs_stat
+         U bzero
+000006f0 T rfs_ls
+
+romfsDrv.o:
+0000009c t romfsBlkRd
+00000000 T romfsBlkDevCreate
+         U __div32
+         U malloc
+         U bzero
+         U bcopy
+         U __udiv32
+
+romfsLib.o:
+00000000 t romfsFdAlloc
+00000034 t romfsFsOpen
+000000c4 t romfsFsClose
+00000104 t romfsFsWrite
+00000124 t romfsFsRead
+00000160 t romfsFsDirRead
+000002ac t romfsFsIoctl
+00000000 b romfsMaxOpenFiles
+0000046c t romfsFsDevDelete
+         U poolItemGet
+         U errnoSet
+         U rfs_open
+         U poolItemReturn
+         U rfs_close
+         U rfs_read
+         U rfsread
+         U memcpy
+         U rfs_seek
+         U rfs_stat
+00000400 T romfsFsInit
+00000000 D romfsFsDrvNum
+         U iosDrvInstall
+         U printErr
+         U iosDevFind
+         U iosDevDelete
+         U poolDelete
+         U free
+0000051c T romfsFsDevCreate
+         U malloc
+         U bzero
+         U poolCreate
+         U semMCreate
+         U iosDevAdd
+         U fsPathAddedEventRaise
+000005f4 T vxBlkIO
+         U __udiv32
+00000684 T romfsVolumeCreate
+         U romfsBlkDevCreate

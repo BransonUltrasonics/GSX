@@ -1,0 +1,19 @@
+# Automatically generated file: do not edit
+
+##########################
+# VXDBG_VXTEST Section
+##########################
+
+
+ifdef _WRS_CONFIG_VXDBG_VXTEST
+VSBL_VXDBG_VXTEST_SRC = 
+VSBL_VXDBG_VXTEST_DEPEND = 
+ifdef _WRS_CONFIG_VXDBG_1_0_6_6_VXTEST_1_0_0_1
+VSBL_VXDBG_VXTEST_SRC += VXDBG_VXTEST
+VSBL_VXDBG_VXTEST_DEPEND += CORE_KERNEL_VXTEST
+VXDBG_VXTEST_FASTBUILD = YES
+VSBL_VXDBG_VXTEST_PATH = $(WIND_BASE)/pkgs/os/debug/vxdbg-1.0.6.6/vxTest
+VSBL_VXDBG_VXTEST_VERSION = VXDBG_1_0_6_6_VXTEST_1_0_0_1
+endif
+endif
+

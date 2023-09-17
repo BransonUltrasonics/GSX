@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="counter3cr">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2021-3-25T20:36:30</timestamp>
+    <pin polarity="Input" x="144" y="224" name="clk" />
+    <pin polarity="Input" x="144" y="192" name="ce" />
+    <pin polarity="Input" x="272" y="288" name="sclr" />
+    <pin polarity="Output" x="400" y="208" name="q(2:0)" />
+    <graph>
+        <rect width="188" x="176" y="152" height="112" />
+        <line x2="176" y1="224" y2="224" x1="144" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="180" y="224" type="pin clk" />
+        <line x2="176" y1="192" y2="192" x1="144" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="180" y="192" type="pin ce" />
+        <line x2="272" y1="288" y2="264" x1="272" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="256" y="252" type="pin sclr" />
+        <line x2="368" y1="208" y2="208" style="linewidth:W" x1="400" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="364" y="208" type="pin q(2:0)" />
+        <text style="fontsize:40;fontname:Arial" x="176" y="132">counter3cr</text>
+    </graph>
+</symbol>

@@ -1,0 +1,44 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/drv-1.2.5.0/cdf/10drv.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/drv-1.2.5.0/cdf/40fdtBus.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/drv-1.2.5.0/cdf/40uart.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/drv-1.2.5.0/cdf/40vxbAdxl345.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/drv-1.2.5.0/cdf/40vxbCpmIntCtlr.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/drv-1.2.5.0/cdf/40vxbEeprom.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/drv-1.2.5.0/cdf/40vxbFdtFslFtmTimer.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/drv-1.2.5.0/cdf/40vxbFdtFslQspi.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/drv-1.2.5.0/cdf/40vxbFdtFslSRtc.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/drv-1.2.5.0/cdf/40vxbFdtFslSpi.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/drv-1.2.5.0/cdf/40vxbFdtFslVybridADC.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/drv-1.2.5.0/cdf/40vxbFdtKinetisGpio.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/drv-1.2.5.0/cdf/40vxbFdtKinetisTimer.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/drv-1.2.5.0/cdf/40vxbFdtOmapMailbox.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/drv-1.2.5.0/cdf/40vxbFdtSensorMma8451q.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/drv-1.2.5.0/cdf/40vxbFslDma.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/drv-1.2.5.0/cdf/40vxbFslEdma.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/drv-1.2.5.0/cdf/40vxbFslEspi.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/drv-1.2.5.0/cdf/40vxbFslI2c.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/drv-1.2.5.0/cdf/40vxbFslMsi.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/drv-1.2.5.0/cdf/40vxbFslPci.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/drv-1.2.5.0/cdf/40vxbI2cEeprom.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/drv-1.2.5.0/cdf/40vxbI2cGpioFdtMax731x.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/drv-1.2.5.0/cdf/40vxbI2cMux.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/drv-1.2.5.0/cdf/40vxbI2cPcfRtc.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/drv-1.2.5.0/cdf/40vxbI2cRtc.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/drv-1.2.5.0/cdf/40vxbMpicIntCtlr.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/drv-1.2.5.0/cdf/40vxbOpenPicTimer.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/drv-1.2.5.0/cdf/40vxbTiEdma3.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/drv-1.2.5.0/cdf/40vxbVirtBus.cdf>
+
+Layer Layer::VXBUS_DRV {
+	NAME VXBUS_DRV
+}

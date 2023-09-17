@@ -1,0 +1,1 @@
+__FILES_COPIED_IPNET_SNTP = C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/ipsntp_config.h C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/ipsntp.h C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/cdf/02comp_ipnet_sntp.cdf C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/configlette/ipsntp_config.c

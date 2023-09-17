@@ -1,0 +1,24 @@
+
+ifndef __HEADER_ACCESS_AUDIO_INCLUDED
+__HEADER_ACCESS_AUDIO_INCLUDED = TRUE
+
+
+
+
+
+__SUBSCRIBE_ACCESS_AUDIO = 
+
+
+
+ifneq ($(wildcard $(VSB_USER_PROTECTED_INCLUDE_DIR)/AUDIO),)
+
+ifneq ($(VSBL_NAME),)
+ifeq ($(VSBL_NAME),$(filter $(VSBL_NAME), AUDIO))
+VSBL_LUH += $(OPTION_INCLUDE_DIR)$(VSB_USER_PROTECTED_INCLUDE_DIR)/AUDIO
+endif
+endif
+
+endif
+
+endif
+

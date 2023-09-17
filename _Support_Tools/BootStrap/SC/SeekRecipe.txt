@@ -1,0 +1,9 @@
+SeekAmplitudeLoopC1 205 1
+SeekAmplitudeLoopC2 370 1
+SeekFreqLimitHigh 1000 1
+SeekFreqLimitLow 1000 1
+SeekFreqOffset 0 1
+SeekPhaseloopCF 200 1
+SeekPhaseloopI 60 1
+SeekRampTime 500 1
+SeekTime 500 1

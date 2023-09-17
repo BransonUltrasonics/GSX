@@ -1,0 +1,15 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/storage/fs-1.0.0.2/dosfs-1.0.0.15/cdf/20comp_dosfs.cdf>
+
+Layer Layer::FS_DOSFS {
+	NAME FS_DOSFS
+}

@@ -1,0 +1,750 @@
+
+libHASH.a:
+
+openssl_pub_sym.o:
+
+secHashMd5Openssl.o:
+00000000 t secHashMd5Init
+0000005c t secHashMd5Update
+000000ac t secHashMd5Final
+00000110 t secHashMd5Copy
+00000178 t secHashMd5Cleanup
+00000000 d secHashMd5OpensslTempl
+         U malloc
+         U MD5_Init
+         U MD5_Update
+         U MD5_Final
+         U memcpy
+         U free
+000001a8 T secHashMd5OpensslTemplateGet
+000001b0 T secHashMd5OpensslInit
+         U secHashMd5TemplateSet
+
+secHashRmdOpenssl.o:
+00000000 t secHashRmdInit
+0000005c t secHashRmdUpdate
+000000ac t secHashRmdFinal
+00000110 t secHashRmdCopy
+00000178 t secHashRmdCleanup
+         U malloc
+         U RIPEMD160_Init
+         U RIPEMD160_Update
+         U RIPEMD160_Final
+         U memcpy
+         U free
+000001a8 T secHashRmdOpensslInit
+00000000 D secHashRmdOpensslTempl
+         U secHashRmdTemplateSet
+000001b0 T secHashRmdOpensslTemplateGet
+
+secHashSha1Openssl.o:
+00000000 t secHashSha1Init
+0000005c t secHashSha1Update
+000000ac t secHashSha1Final
+00000110 t secHashSha1Copy
+00000178 t secHashSha1Cleanup
+00000000 d secHashSha1OpensslTemplate
+         U malloc
+         U SHA1_Init
+         U SHA1_Update
+         U SHA1_Final
+         U memcpy
+         U free
+000001a8 T secHashSha1OpensslInit
+         U secHashSha1TemplateSet
+000001b0 T secHashSha1OpensslTemplateGet
+
+secHashSha256Openssl.o:
+00000000 t secHashSha256Init
+0000005c t secHashSha256Update
+000000ac t secHashSha256Final
+00000110 t secHashSha256Copy
+00000178 t secHashSha256Cleanup
+00000000 d secHashSha256OpensslTempl
+         U malloc
+         U SHA256_Init
+         U SHA256_Update
+         U SHA256_Final
+         U memcpy
+         U free
+000001a8 T secHashSha256OpensslInit
+         U secHashSha256TemplateSet
+000001b0 T secHashSha256OpensslTemplateGet
+
+secHashSha384Openssl.o:
+00000000 t secHashSha384Init
+0000005c t secHashSha384Update
+000000ac t secHashSha384Final
+00000110 t secHashSha384Copy
+00000178 t secHashSha384Cleanup
+00000000 d secHashSha384OpensslTempl
+         U malloc
+         U SHA384_Init
+         U SHA384_Update
+         U SHA384_Final
+         U memcpy
+         U free
+000001a8 T secHashSha384OpensslInit
+         U secHashSha384TemplateSet
+000001b0 T secHashSha384OpensslTemplateGet
+
+secHashSha512Openssl.o:
+00000000 t secHashSha512Init
+0000005c t secHashSha512Update
+000000ac t secHashSha512Final
+00000110 t secHashSha512Copy
+00000178 t secHashSha512Cleanup
+00000000 d secHashSha512OpensslTempl
+         U malloc
+         U SHA512_Init
+         U SHA512_Update
+         U SHA512_Final
+         U memcpy
+         U free
+000001a8 T secHashSha512OpensslInit
+         U secHashSha512TemplateSet
+000001b0 T secHashSha512OpensslTemplateGet
+
+secHashWhirlpoolOpenssl.o:
+00000000 t secHashWhirlpoolInit
+0000005c t secHashWhirlpoolUpdate
+000000ac t secHashWhirlpoolFinal
+00000110 t secHashWhirlpoolCopy
+00000178 t secHashWhirlpoolCleanup
+00000000 d secHashWhirlpoolOpensslTemplate
+         U malloc
+         U WHIRLPOOL_Init
+         U WHIRLPOOL_Update
+         U WHIRLPOOL_Final
+         U memcpy
+         U free
+000001a8 T secHashWhirlpoolOpensslInit
+         U secHashWhirlpoolTemplateSet
+000001b0 T secHashWhirlpoolOpensslTemplateGet
+
+encode.o:
+00000000 t conv_ascii2bin
+00000041 d data_ascii2bin
+00000000 d data_bin2ascii
+00000018 T EVP_EncodeInit
+0000002c T EVP_EncodeBlock
+0000012c T EVP_EncodeUpdate
+         U __assert
+         U memcpy
+0000027c T EVP_EncodeFinal
+000002cc T EVP_DecodeInit
+000002e4 T EVP_DecodeBlock
+         U __rem32
+0000041c T EVP_DecodeUpdate
+000005e4 T EVP_DecodeFinal
+
+md4_dgst.o:
+00000000 T md4_block_data_order
+00000928 T MD4_Update
+         U memcpy
+         U memset
+00000a40 T MD4_Transform
+00000a48 T MD4_Final
+         U OPENSSL_cleanse
+00000ba4 T MD4_Init
+00000000 D MD4_version
+
+md4_one.o:
+00000000 b m.2
+00000000 T MD4
+         U MD4_Init
+         U MD4_Update
+         U MD4_Final
+         U OPENSSL_cleanse
+
+md4test.o:
+00000000 t pt
+00000000 b buf.14
+00000000 d test
+00000020 d ret
+         U sprintf
+00000044 T md4test
+         U EVP_md4
+         U strlen
+         U EVP_Digest
+         U strcmp
+         U printf
+
+md5_dgst.o:
+00000000 T md5_block_data_order
+00000f00 T MD5_Update
+         U memcpy
+         U memset
+00001034 T MD5_Transform
+0000103c T MD5_Final
+         U OPENSSL_cleanse
+000011bc T MD5_Init
+00000000 D MD5_version
+
+md5_one.o:
+00000000 b m.2
+00000000 T MD5
+         U MD5_Init
+         U MD5_Update
+         U MD5_Final
+         U OPENSSL_cleanse
+
+md5test.o:
+00000000 t pt
+00000000 b buf.14
+00000000 d test
+00000020 d ret
+         U sprintf
+00000044 T md5test
+         U EVP_md5
+         U strlen
+         U EVP_Digest
+         U strcmp
+         U printf
+
+rmd_dgst.o:
+00000000 T ripemd160_block_data_order
+00002188 T RIPEMD160_Update
+         U memcpy
+         U memset
+000022a0 T RIPEMD160_Transform
+000022a8 T RIPEMD160_Final
+         U OPENSSL_cleanse
+0000242c T RIPEMD160_Init
+00000000 D RMD160_version
+
+rmd_one.o:
+00000000 b m.2
+00000000 T RIPEMD160
+         U RIPEMD160_Init
+         U RIPEMD160_Update
+         U RIPEMD160_Final
+         U OPENSSL_cleanse
+
+rmdtest.o:
+00000000 t pt
+00000000 b buf.14
+00000000 d test
+00000024 d ret
+         U sprintf
+00000044 T rmdtest
+         U EVP_ripemd160
+         U strlen
+         U EVP_Digest
+         U strcmp
+         U printf
+
+sha1dgst.o:
+00000000 t sha1_block_data_order
+00001db4 T SHA1_Update
+         U memcpy
+         U memset
+00001ecc T SHA1_Transform
+00001ed4 T SHA1_Final
+         U OPENSSL_cleanse
+00002050 T SHA1_Init
+00000000 D SHA1_version
+
+sha1_one.o:
+00000000 b m.2
+00000000 T SHA1
+         U SHA1_Init
+         U SHA1_Update
+         U SHA1_Final
+         U OPENSSL_cleanse
+
+sha256.o:
+000000d0 t sha256_block_data_order
+0000002c d K256
+00000000 b m.4
+0000001c b m.8
+00000000 T SHA224_Init
+         U memset
+00000068 T SHA256_Init
+0000243c T SHA256_Update
+         U memcpy
+00002554 T SHA256_Final
+         U OPENSSL_cleanse
+000026f8 T SHA224
+0000274c T SHA256
+000027a0 T SHA224_Update
+000027a4 T SHA224_Final
+000027a8 T SHA256_Transform
+00000000 D SHA256_version
+
+sha512.o:
+00000158 t sha512_block_data_order
+00000030 d K512
+00000000 b m.56
+00000030 b m.60
+00000000 T SHA384_Init
+000000ac T SHA512_Init
+000059a4 T SHA512_Final
+         U memset
+00005be4 T SHA384_Final
+00005be8 T SHA512_Update
+         U memcpy
+00005d30 T SHA384_Update
+00005d34 T SHA512_Transform
+00005d64 T SHA384
+         U OPENSSL_cleanse
+00005db8 T SHA512
+00000000 D SHA512_version
+
+sha_dgst.o:
+00000000 t sha_block_data_order
+00001b78 T SHA_Update
+         U memcpy
+         U memset
+00001c90 T SHA_Transform
+00001c98 T SHA_Final
+         U OPENSSL_cleanse
+00001e14 T SHA_Init
+00000000 D SHA_version
+
+sha_one.o:
+00000000 b m.2
+00000000 T SHA
+         U SHA_Init
+         U SHA_Update
+         U SHA_Final
+         U OPENSSL_cleanse
+
+sha1test.o:
+00000000 t pt
+000003e8 b buf.23
+00000000 d test
+0000000c d ret
+00000000 b buf.5
+00000014 d bigret
+         U sprintf
+00000044 T sha1test
+         U EVP_MD_CTX_init
+         U EVP_sha1
+         U strlen
+         U EVP_Digest
+         U strcmp
+         U printf
+         U memset
+         U EVP_DigestInit_ex
+         U EVP_DigestUpdate
+         U EVP_DigestFinal_ex
+         U EVP_MD_CTX_cleanup
+
+sha512t.o:
+00000000 T sha512test
+         U __stdout
+         U fprintf
+         U EVP_sha512
+         U EVP_Digest
+00000000 D app_c1
+         U memcmp
+         U fflush
+00000040 D app_c2
+         U EVP_MD_CTX_init
+         U EVP_DigestInit_ex
+         U EVP_DigestUpdate
+         U EVP_DigestFinal_ex
+         U EVP_MD_CTX_cleanup
+00000080 D app_c3
+         U EVP_sha384
+000000c0 D app_d1
+         U __stderr
+000000f0 D app_d2
+00000120 D app_d3
+
+shatest.o:
+00000000 t pt
+000003e8 b buf.23
+00000000 d test
+0000000c d ret
+00000000 b buf.5
+00000014 d bigret
+         U sprintf
+00000044 T shatest
+         U EVP_MD_CTX_init
+         U EVP_sha
+         U strlen
+         U EVP_Digest
+         U strcmp
+         U printf
+         U memset
+         U EVP_DigestInit_ex
+         U EVP_DigestUpdate
+         U EVP_DigestFinal_ex
+         U EVP_MD_CTX_cleanup
+
+libHASH.a:
+
+openssl_pub_sym.o:
+
+secHashMd5Openssl.o:
+00000000 t secHashMd5Init
+0000005c t secHashMd5Update
+000000ac t secHashMd5Final
+00000110 t secHashMd5Copy
+00000178 t secHashMd5Cleanup
+00000000 d secHashMd5OpensslTempl
+         U malloc
+         U MD5_Init
+         U MD5_Update
+         U MD5_Final
+         U memcpy
+         U free
+000001a8 T secHashMd5OpensslTemplateGet
+000001b0 T secHashMd5OpensslInit
+         U secHashMd5TemplateSet
+
+secHashRmdOpenssl.o:
+00000000 t secHashRmdInit
+0000005c t secHashRmdUpdate
+000000ac t secHashRmdFinal
+00000110 t secHashRmdCopy
+00000178 t secHashRmdCleanup
+         U malloc
+         U RIPEMD160_Init
+         U RIPEMD160_Update
+         U RIPEMD160_Final
+         U memcpy
+         U free
+000001a8 T secHashRmdOpensslInit
+00000000 D secHashRmdOpensslTempl
+         U secHashRmdTemplateSet
+000001b0 T secHashRmdOpensslTemplateGet
+
+secHashSha1Openssl.o:
+00000000 t secHashSha1Init
+0000005c t secHashSha1Update
+000000ac t secHashSha1Final
+00000110 t secHashSha1Copy
+00000178 t secHashSha1Cleanup
+00000000 d secHashSha1OpensslTemplate
+         U malloc
+         U SHA1_Init
+         U SHA1_Update
+         U SHA1_Final
+         U memcpy
+         U free
+000001a8 T secHashSha1OpensslInit
+         U secHashSha1TemplateSet
+000001b0 T secHashSha1OpensslTemplateGet
+
+secHashSha256Openssl.o:
+00000000 t secHashSha256Init
+0000005c t secHashSha256Update
+000000ac t secHashSha256Final
+00000110 t secHashSha256Copy
+00000178 t secHashSha256Cleanup
+00000000 d secHashSha256OpensslTempl
+         U malloc
+         U SHA256_Init
+         U SHA256_Update
+         U SHA256_Final
+         U memcpy
+         U free
+000001a8 T secHashSha256OpensslInit
+         U secHashSha256TemplateSet
+000001b0 T secHashSha256OpensslTemplateGet
+
+secHashSha384Openssl.o:
+00000000 t secHashSha384Init
+0000005c t secHashSha384Update
+000000ac t secHashSha384Final
+00000110 t secHashSha384Copy
+00000178 t secHashSha384Cleanup
+00000000 d secHashSha384OpensslTempl
+         U malloc
+         U SHA384_Init
+         U SHA384_Update
+         U SHA384_Final
+         U memcpy
+         U free
+000001a8 T secHashSha384OpensslInit
+         U secHashSha384TemplateSet
+000001b0 T secHashSha384OpensslTemplateGet
+
+secHashSha512Openssl.o:
+00000000 t secHashSha512Init
+0000005c t secHashSha512Update
+000000ac t secHashSha512Final
+00000110 t secHashSha512Copy
+00000178 t secHashSha512Cleanup
+00000000 d secHashSha512OpensslTempl
+         U malloc
+         U SHA512_Init
+         U SHA512_Update
+         U SHA512_Final
+         U memcpy
+         U free
+000001a8 T secHashSha512OpensslInit
+         U secHashSha512TemplateSet
+000001b0 T secHashSha512OpensslTemplateGet
+
+secHashWhirlpoolOpenssl.o:
+00000000 t secHashWhirlpoolInit
+0000005c t secHashWhirlpoolUpdate
+000000ac t secHashWhirlpoolFinal
+00000110 t secHashWhirlpoolCopy
+00000178 t secHashWhirlpoolCleanup
+00000000 d secHashWhirlpoolOpensslTemplate
+         U malloc
+         U WHIRLPOOL_Init
+         U WHIRLPOOL_Update
+         U WHIRLPOOL_Final
+         U memcpy
+         U free
+000001a8 T secHashWhirlpoolOpensslInit
+         U secHashWhirlpoolTemplateSet
+000001b0 T secHashWhirlpoolOpensslTemplateGet
+
+encode.o:
+00000000 t conv_ascii2bin
+00000041 d data_ascii2bin
+00000000 d data_bin2ascii
+00000018 T EVP_EncodeInit
+0000002c T EVP_EncodeBlock
+0000012c T EVP_EncodeUpdate
+         U __assert
+         U memcpy
+0000027c T EVP_EncodeFinal
+000002cc T EVP_DecodeInit
+000002e4 T EVP_DecodeBlock
+         U __rem32
+0000041c T EVP_DecodeUpdate
+000005e4 T EVP_DecodeFinal
+
+md4_dgst.o:
+00000000 T md4_block_data_order
+00000928 T MD4_Update
+         U memcpy
+         U memset
+00000a40 T MD4_Transform
+00000a48 T MD4_Final
+         U OPENSSL_cleanse
+00000ba4 T MD4_Init
+00000000 D MD4_version
+
+md4_one.o:
+00000000 b m.2
+00000000 T MD4
+         U MD4_Init
+         U MD4_Update
+         U MD4_Final
+         U OPENSSL_cleanse
+
+md4test.o:
+00000000 t pt
+00000000 b buf.14
+00000000 d test
+00000020 d ret
+         U sprintf
+00000044 T md4test
+         U EVP_md4
+         U strlen
+         U EVP_Digest
+         U strcmp
+         U printf
+
+md5_dgst.o:
+00000000 T md5_block_data_order
+00000f00 T MD5_Update
+         U memcpy
+         U memset
+00001034 T MD5_Transform
+0000103c T MD5_Final
+         U OPENSSL_cleanse
+000011bc T MD5_Init
+00000000 D MD5_version
+
+md5_one.o:
+00000000 b m.2
+00000000 T MD5
+         U MD5_Init
+         U MD5_Update
+         U MD5_Final
+         U OPENSSL_cleanse
+
+md5test.o:
+00000000 t pt
+00000000 b buf.14
+00000000 d test
+00000020 d ret
+         U sprintf
+00000044 T md5test
+         U EVP_md5
+         U strlen
+         U EVP_Digest
+         U strcmp
+         U printf
+
+rmd_dgst.o:
+00000000 T ripemd160_block_data_order
+00002188 T RIPEMD160_Update
+         U memcpy
+         U memset
+000022a0 T RIPEMD160_Transform
+000022a8 T RIPEMD160_Final
+         U OPENSSL_cleanse
+0000242c T RIPEMD160_Init
+00000000 D RMD160_version
+
+rmd_one.o:
+00000000 b m.2
+00000000 T RIPEMD160
+         U RIPEMD160_Init
+         U RIPEMD160_Update
+         U RIPEMD160_Final
+         U OPENSSL_cleanse
+
+rmdtest.o:
+00000000 t pt
+00000000 b buf.14
+00000000 d test
+00000024 d ret
+         U sprintf
+00000044 T rmdtest
+         U EVP_ripemd160
+         U strlen
+         U EVP_Digest
+         U strcmp
+         U printf
+
+sha1dgst.o:
+00000000 t sha1_block_data_order
+00001db4 T SHA1_Update
+         U memcpy
+         U memset
+00001ecc T SHA1_Transform
+00001ed4 T SHA1_Final
+         U OPENSSL_cleanse
+00002050 T SHA1_Init
+00000000 D SHA1_version
+
+sha1_one.o:
+00000000 b m.2
+00000000 T SHA1
+         U SHA1_Init
+         U SHA1_Update
+         U SHA1_Final
+         U OPENSSL_cleanse
+
+sha256.o:
+000000d0 t sha256_block_data_order
+0000002c d K256
+00000000 b m.4
+0000001c b m.8
+00000000 T SHA224_Init
+         U memset
+00000068 T SHA256_Init
+0000243c T SHA256_Update
+         U memcpy
+00002554 T SHA256_Final
+         U OPENSSL_cleanse
+000026f8 T SHA224
+0000274c T SHA256
+000027a0 T SHA224_Update
+000027a4 T SHA224_Final
+000027a8 T SHA256_Transform
+00000000 D SHA256_version
+
+sha512.o:
+00000158 t sha512_block_data_order
+00000030 d K512
+00000000 b m.56
+00000030 b m.60
+00000000 T SHA384_Init
+000000ac T SHA512_Init
+000059a4 T SHA512_Final
+         U memset
+00005be4 T SHA384_Final
+00005be8 T SHA512_Update
+         U memcpy
+00005d30 T SHA384_Update
+00005d34 T SHA512_Transform
+00005d64 T SHA384
+         U OPENSSL_cleanse
+00005db8 T SHA512
+00000000 D SHA512_version
+
+sha_dgst.o:
+00000000 t sha_block_data_order
+00001b78 T SHA_Update
+         U memcpy
+         U memset
+00001c90 T SHA_Transform
+00001c98 T SHA_Final
+         U OPENSSL_cleanse
+00001e14 T SHA_Init
+00000000 D SHA_version
+
+sha_one.o:
+00000000 b m.2
+00000000 T SHA
+         U SHA_Init
+         U SHA_Update
+         U SHA_Final
+         U OPENSSL_cleanse
+
+sha1test.o:
+00000000 t pt
+000003e8 b buf.23
+00000000 d test
+0000000c d ret
+00000000 b buf.5
+00000014 d bigret
+         U sprintf
+00000044 T sha1test
+         U EVP_MD_CTX_init
+         U EVP_sha1
+         U strlen
+         U EVP_Digest
+         U strcmp
+         U printf
+         U memset
+         U EVP_DigestInit_ex
+         U EVP_DigestUpdate
+         U EVP_DigestFinal_ex
+         U EVP_MD_CTX_cleanup
+
+sha512t.o:
+00000000 T sha512test
+         U __stdout
+         U fprintf
+         U EVP_sha512
+         U EVP_Digest
+00000000 D app_c1
+         U memcmp
+         U fflush
+00000040 D app_c2
+         U EVP_MD_CTX_init
+         U EVP_DigestInit_ex
+         U EVP_DigestUpdate
+         U EVP_DigestFinal_ex
+         U EVP_MD_CTX_cleanup
+00000080 D app_c3
+         U EVP_sha384
+000000c0 D app_d1
+         U __stderr
+000000f0 D app_d2
+00000120 D app_d3
+
+shatest.o:
+00000000 t pt
+000003e8 b buf.23
+00000000 d test
+0000000c d ret
+00000000 b buf.5
+00000014 d bigret
+         U sprintf
+00000044 T shatest
+         U EVP_MD_CTX_init
+         U EVP_sha
+         U strlen
+         U EVP_Digest
+         U strcmp
+         U printf
+         U memset
+         U EVP_DigestInit_ex
+         U EVP_DigestUpdate
+         U EVP_DigestFinal_ex
+         U EVP_MD_CTX_cleanup

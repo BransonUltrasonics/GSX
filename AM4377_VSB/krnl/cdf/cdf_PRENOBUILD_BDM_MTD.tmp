@@ -1,0 +1,24 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/storage/bdm-1.0.1.3/flash/mtd-1.1.1.0/cdf/40mtd.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/storage/bdm-1.0.1.3/flash/mtd-1.1.1.0/cdf/40vxbEmif16.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/storage/bdm-1.0.1.3/flash/mtd-1.1.1.0/cdf/40vxbFcm.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/storage/bdm-1.0.1.3/flash/mtd-1.1.1.0/cdf/40vxbFdtAlt5QspiFlash.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/storage/bdm-1.0.1.3/flash/mtd-1.1.1.0/cdf/40vxbGpmc.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/storage/bdm-1.0.1.3/flash/mtd-1.1.1.0/cdf/40vxbGpmi.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/storage/bdm-1.0.1.3/flash/mtd-1.1.1.0/cdf/40vxbNfc.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/storage/bdm-1.0.1.3/flash/mtd-1.1.1.0/cdf/40vxbNorFlash.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/storage/bdm-1.0.1.3/flash/mtd-1.1.1.0/cdf/40vxbSp25SpiFlash.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/storage/bdm-1.0.1.3/flash/mtd-1.1.1.0/cdf/40vxbSpiFlash.cdf>
+
+Layer Layer::BDM_MTD {
+	NAME BDM_MTD
+}

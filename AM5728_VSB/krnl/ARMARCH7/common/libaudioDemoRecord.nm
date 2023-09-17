@@ -1,0 +1,46 @@
+
+libaudioDemoRecord.a:
+
+audioDemoRecord.o:
+000000a8 t audioRec
+00000000 T audRec
+         U taskSpawn
+         U vxCpuConfiguredGet
+         U taskCpuAffinitySet
+         U taskDelete
+         U taskActivate
+         U bzero
+         U open
+         U printf
+         U ioctl
+         U bcopy
+         U calloc
+         U read
+         U write
+         U __div32
+         U audioWavHeaderWrite
+         U close
+         U free
+
+libaudioDemoRecord.a:
+
+audioDemoRecord.o:
+000000a8 t audioRec
+00000000 T audRec
+         U taskSpawn
+         U vxCpuConfiguredGet
+         U taskCpuAffinitySet
+         U taskDelete
+         U taskActivate
+         U bzero
+         U open
+         U printf
+         U ioctl
+         U bcopy
+         U calloc
+         U read
+         U write
+         U __div32
+         U audioWavHeaderWrite
+         U close
+         U free

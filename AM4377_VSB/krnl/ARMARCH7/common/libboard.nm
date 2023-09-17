@@ -1,0 +1,92 @@
+
+libboard.a:
+
+boardLib.o:
+00000000 t boardProbe
+00000000 d gpBoardFuncTbl
+000001ac t boardSwUsDelay
+00000004 d gpBoardDesc
+00000058 T boardLibInit
+         U datasetIterate
+000000c0 T boardInit
+000000f8 T boardReset
+00000134 T boardInfoShow
+0000016c T boardFlagCheck
+00000204 T sysUsDelay
+00000234 T sysMsDelay
+0000025c T sysDelay
+00000264 T sysToMonitor
+000002a8 T sysProcNumGet
+         U sysProcNum
+000002b4 T sysProcNumSet
+000002c0 T sysModel
+00000318 T sysMemSizeGet
+         U sysMemDescGet
+00000004 C sysWarmBootLibInit
+00000004 C sysWarmBootFunc
+
+warmBootLib.o:
+00000000 d lCrcTab32
+00000000 T warmBootLibInit
+00000204 T warmBootStart
+         U sysWarmBootFunc
+00000014 T warmBootDataEndGet
+         U warmBootDataAlign
+         U wrs_kernel_bss_end
+00000048 T warmBootCRC
+00000080 T warmBootBackup
+         U wrs_kernel_data_start
+         U wrs_kernel_data_end
+         U bcopy
+         U wrs_kernel_text_start
+         U wrs_kernel_text_end
+00000118 T warmBootCheck
+000001b8 T warmBootRestore
+         U vmTranslate
+         U vxFdtDtbAddressGet
+
+libboard.a:
+
+boardLib.o:
+00000000 t boardProbe
+00000000 d gpBoardFuncTbl
+000001ac t boardSwUsDelay
+00000004 d gpBoardDesc
+00000058 T boardLibInit
+         U datasetIterate
+000000c0 T boardInit
+000000f8 T boardReset
+00000134 T boardInfoShow
+0000016c T boardFlagCheck
+00000204 T sysUsDelay
+00000234 T sysMsDelay
+0000025c T sysDelay
+00000264 T sysToMonitor
+000002a8 T sysProcNumGet
+         U sysProcNum
+000002b4 T sysProcNumSet
+000002c0 T sysModel
+00000318 T sysMemSizeGet
+         U sysMemDescGet
+00000004 C sysWarmBootLibInit
+00000004 C sysWarmBootFunc
+
+warmBootLib.o:
+00000000 d lCrcTab32
+00000000 T warmBootLibInit
+00000204 T warmBootStart
+         U sysWarmBootFunc
+00000014 T warmBootDataEndGet
+         U warmBootDataAlign
+         U wrs_kernel_bss_end
+00000048 T warmBootCRC
+00000080 T warmBootBackup
+         U wrs_kernel_data_start
+         U wrs_kernel_data_end
+         U bcopy
+         U wrs_kernel_text_start
+         U wrs_kernel_text_end
+00000118 T warmBootCheck
+000001b8 T warmBootRestore
+         U vmTranslate
+         U vxFdtDtbAddressGet

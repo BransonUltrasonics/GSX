@@ -1,0 +1,2 @@
+vhdtdtfi -lib work FBIF_SPIIF.vhd -prj GSX_FPGA -o FBIF_SPIIF.spl -module FBIF_SPIIF -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3a FBIF_SPIIF.spl C:/Users/76053/Documents/Entrenamientos/VHDL_FPGA/GSX_FPGA/FBIF_SPIIF.sym 

@@ -1,0 +1,14 @@
+
+# this file is generated
+
+# layers that have been built in the VSB
+__BUILT_LAYERS += IPNET_DHCPC
+
+__OBJS_BUILT_IPNET_DHCPC = C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objDHCPC/ipdhcpc.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objDHCPC/ipdhcpc_cmd_dhcpc.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objDHCPC/ipdhcpc.d C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objDHCPC/ipdhcpc_cmd_dhcpc.d
+
+
+# built libraries
+__BUILT_LIBRARIES += krnl_ARMARCH7_common_DHCPC
+
+
+__OBJS_BUILT_krnl_ARMARCH7_common_DHCPC = C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objDHCPC/ipdhcpc.o  C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/ARMARCH7/common/objDHCPC/ipdhcpc_cmd_dhcpc.o 

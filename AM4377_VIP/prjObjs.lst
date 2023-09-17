@@ -1,0 +1,5 @@
+usrAppInit.o
+ usrRtpAppInit.o
+ prjConfig.o
+ linkSyms.o
+ loadInvokeApps.o

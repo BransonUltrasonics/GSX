@@ -1,0 +1,17 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/utils/shell-1.1.4.3/cdf/01bundle_shell.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/utils/shell-1.1.4.3/cdf/01shell.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/utils/shell-1.1.4.3/cdf/02shell_commands.cdf>
+
+Layer Layer::SHELL {
+	NAME SHELL
+}

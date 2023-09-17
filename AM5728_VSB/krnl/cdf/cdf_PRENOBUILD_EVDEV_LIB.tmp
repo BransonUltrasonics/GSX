@@ -1,0 +1,20 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/ui/evdev-1.0.0.3/lib-1.1.2.5/cdf/30evdevLib.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/ui/evdev-1.0.0.3/lib-1.1.2.5/cdf/40evdevLibCore.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/ui/evdev-1.0.0.3/lib-1.1.2.5/cdf/40evdevLibKbd.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/ui/evdev-1.0.0.3/lib-1.1.2.5/cdf/40evdevLibPtr.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/ui/evdev-1.0.0.3/lib-1.1.2.5/cdf/40evdevLibTs.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/ui/evdev-1.0.0.3/lib-1.1.2.5/cdf/41evdevLibKbdMapUS.cdf>
+
+Layer Layer::EVDEV_LIB {
+	NAME EVDEV_LIB
+}

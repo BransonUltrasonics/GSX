@@ -1,0 +1,540 @@
+Archive member included because of file (symbol)
+
+obj/libAC.a(Diagnostics_c.o)  obj/SystemInitialization_c_ut.o (DiagSummary)
+obj/libAC.a(Printf_c.o)       obj/SystemInitialization_c_ut.o (puts)
+obj/libAC.a(String_c.o)       obj/libAC.a(Printf_c.o) (strlen)
+obj/libAC.a(RTC_c.o)          obj/Vectors_s.o (RTC_IRQHandler)
+obj/libAC.a(QEI_c.o)          obj/SystemInitialization_c_ut.o (QuadratureEncoderInit)
+obj/libAC.a(Serial_c.o)       obj/libAC.a(Diagnostics_c.o) (SerialInit)
+obj/libAC.a(IOInit_c.o)       obj/SystemInitialization_c_ut.o (IOInit)
+obj/libAC.a(ADCTest_c.o)      obj/Vectors_s.o (ADC_IRQHandler)
+obj/libAC.a(PBDiagnostics_c.o)
+                              obj/SystemInitialization_c_ut.o (PWM_Init)
+obj/libAC.a(SSP_c.o)          obj/SystemInitialization_c_ut.o (SSPSyncUp)
+obj/libAC.a(Global_c.o)       obj/libAC.a(QEI_c.o) (QEIPosition)
+obj/libAC.a(lpc17xx_clkpwr_c.o)
+                              obj/libAC.a(SSP_c.o) (CLKPWR_GetPCLK)
+obj/libAC.a(PartContact_c.o)  obj/libAC.a(ADCTest_c.o) (forceData)
+obj/libAC.a(TRSDiagnostics_c.o)
+                              obj/libAC.a(PartContact_c.o) (OldULSPosition)
+obj/libAC.a(SetOutputs_c.o)   obj/libAC.a(IOInit_c.o) (PINSEL_SetOutput)
+obj/libAC.a(CrossMonitoring_c.o)
+                              obj/libAC.a(SetOutputs_c.o) (U2Fault)
+
+Allocating common symbols
+Common symbol       size              file
+
+sspdat              0x10              obj/libAC.a(SSP_c.o)
+EStopStatus         0x4               obj/libAC.a(Global_c.o)
+UFAIL24Status       0x4               obj/libAC.a(Global_c.o)
+PeripherialDiag     0x4               obj/SystemInitialization_c_ut.o
+ULSLEReading        0x4               obj/libAC.a(PartContact_c.o)
+ULS                 0x4               obj/libAC.a(Global_c.o)
+ssp0                0x1c              obj/libAC.a(SSP_c.o)
+OldVelocity         0x4               obj/libAC.a(PartContact_c.o)
+IsThisCPU1          0x4               obj/libAC.a(Global_c.o)
+ESTOP1              0x4               obj/libAC.a(Global_c.o)
+match_counter0      0x4               obj/libAC.a(PBDiagnostics_c.o)
+SONICS_EN           0x4               obj/libAC.a(Global_c.o)
+PeakVelocity        0x4               obj/libAC.a(PartContact_c.o)
+DriveStatus         0x4               obj/libAC.a(Global_c.o)
+QEIPhaseErrorCnt    0x4               obj/libAC.a(QEI_c.o)
+ssp0TxMsg           0x2               obj/libAC.a(SSP_c.o)
+ssp0RxMsg           0x2               obj/libAC.a(SSP_c.o)
+SSPRxTimeOut        0x4               obj/libAC.a(CrossMonitoring_c.o)
+BytesToTx           0x4               obj/libAC.a(Global_c.o)
+CrossMonitoringErrCnt
+                    0x4               obj/libAC.a(CrossMonitoring_c.o)
+DebugForceData      0x4b0             obj/libAC.a(PartContact_c.o)
+ADC0IntDone         0x4               obj/libAC.a(Global_c.o)
+OldULSPosition      0x4               obj/libAC.a(TRSDiagnostics_c.o)
+WDCount             0x4               obj/libAC.a(Global_c.o)
+CurrPressure        0x4               obj/libAC.a(PartContact_c.o)
+SV1_REQ             0x4               obj/libAC.a(Global_c.o)
+FaultReset          0x4               obj/libAC.a(Global_c.o)
+EStop               0x1               obj/libAC.a(Global_c.o)
+SysinitDiag         0x4               obj/SystemInitialization_c_ut.o
+PBStatus            0x4               obj/libAC.a(Global_c.o)
+distIndex           0x4               obj/libAC.a(PartContact_c.o)
+PCPosition          0x4               obj/libAC.a(PartContact_c.o)
+SV2                 0x4               obj/libAC.a(Global_c.o)
+OldTRS              0x4               obj/libAC.a(PartContact_c.o)
+SSPRxMsgFaultCtr    0x4               obj/libAC.a(CrossMonitoring_c.o)
+TRSStatus           0x4               obj/libAC.a(Global_c.o)
+DebugPositionData   0x4b0             obj/libAC.a(PartContact_c.o)
+PB1_NO_INPUT        0x4               obj/libAC.a(Global_c.o)
+PB1_NO_IN           0x4               obj/libAC.a(Global_c.o)
+CurrVelocity        0x4               obj/libAC.a(PartContact_c.o)
+State               0x1               obj/libAC.a(Global_c.o)
+prevForce           0x4               obj/libAC.a(PartContact_c.o)
+PCSpeed             0x4               obj/libAC.a(PartContact_c.o)
+ESTOP2              0x4               obj/libAC.a(Global_c.o)
+ssp1RxMsg           0x2               obj/libAC.a(SSP_c.o)
+NoTRSDiagCntr       0x4               obj/libAC.a(TRSDiagnostics_c.o)
+match_counter1      0x4               obj/libAC.a(PBDiagnostics_c.o)
+LEStatus            0x4               obj/libAC.a(Global_c.o)
+PartContactCounter  0x4               obj/libAC.a(PartContact_c.o)
+PB2_NO_INPUT        0x4               obj/libAC.a(Global_c.o)
+RxMsgRxd            0x4               obj/libAC.a(CrossMonitoring_c.o)
+SV1                 0x4               obj/libAC.a(Global_c.o)
+UFAIL24V            0x4               obj/libAC.a(Global_c.o)
+FOBuff              0x3e8             obj/libAC.a(ADCTest_c.o)
+SV2_REQ             0x4               obj/libAC.a(Global_c.o)
+SV_FAIL             0x4               obj/libAC.a(Global_c.o)
+PCForce             0x4               obj/libAC.a(PartContact_c.o)
+RxMsgSanity         0x4               obj/libAC.a(CrossMonitoring_c.o)
+currdiffForce       0x4               obj/libAC.a(PartContact_c.o)
+MsInterruptCounter  0x4               obj/libAC.a(Global_c.o)
+SONICS_FAIL         0x4               obj/libAC.a(Global_c.o)
+SonicsEnStatus      0x4               obj/libAC.a(Global_c.o)
+CurrForce           0x4               obj/libAC.a(Global_c.o)
+OldPosition         0x4               obj/libAC.a(PartContact_c.o)
+SSPRxFaultStatus    0x4               obj/libAC.a(CrossMonitoring_c.o)
+SV2_FAIL            0x4               obj/libAC.a(Global_c.o)
+TRS                 0x4               obj/libAC.a(Global_c.o)
+CPUDiag             0x4               obj/SystemInitialization_c_ut.o
+ssp1                0x1c              obj/libAC.a(SSP_c.o)
+MachineConfiguration
+                    0x4               obj/libAC.a(Global_c.o)
+ChkFunReturn        0x4               obj/libAC.a(Global_c.o)
+ADCStatus           0x4               obj/libAC.a(Global_c.o)
+prevdiffForce       0x4               obj/libAC.a(PartContact_c.o)
+SyncUpFault         0x4               obj/SystemInitialization_c_ut.o
+FailureData         0x28              obj/libAC.a(PartContact_c.o)
+FaultFlag           0x4               obj/libAC.a(Global_c.o)
+PB_OUT              0x4               obj/libAC.a(Global_c.o)
+LUTestStatus        0x4               obj/libAC.a(Global_c.o)
+SSPTxFaultStatus    0x4               obj/libAC.a(CrossMonitoring_c.o)
+PCStepsCtr          0x4               obj/libAC.a(PartContact_c.o)
+OldPressure         0x4               obj/libAC.a(PartContact_c.o)
+ssp1TxMsg           0x2               obj/libAC.a(SSP_c.o)
+PB2_NO_IN           0x4               obj/libAC.a(Global_c.o)
+CurrPosition        0x4               obj/libAC.a(PartContact_c.o)
+uart                0x4               obj/libAC.a(Serial_c.o)
+DebugIndx           0x4               obj/libAC.a(PartContact_c.o)
+BothHandStatus      0x4               obj/libAC.a(Global_c.o)
+SSPTxTimeOut        0x4               obj/libAC.a(CrossMonitoring_c.o)
+BEEPER              0x4               obj/libAC.a(Global_c.o)
+ALARM               0x4               obj/libAC.a(Global_c.o)
+DRIVE_FAIL          0x4               obj/libAC.a(Global_c.o)
+ADC0Value           0x20              obj/libAC.a(ADCTest_c.o)
+TRSErrCntr          0x4               obj/libAC.a(TRSDiagnostics_c.o)
+ULSPosition         0x4               obj/libAC.a(Global_c.o)
+SBeamStatus         0x4               obj/libAC.a(Global_c.o)
+LUTestErrMask       0x4               obj/libAC.a(Global_c.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x00000000         0x00080000         xr
+SRAM             0x10000000         0x00008000         rw
+BOOT_ROM         0x1fff0000         0x00002000         xr
+AHB_RAM0         0x2007c000         0x00004000         rw
+AHB_RAM1         0x20080000         0x00004000         rw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD obj/Vectors_s.o
+LOAD obj/SystemInitialization_c_ut.o
+LOAD obj/libAC.a
+                0x10008000                _vRamTop = 0x10008000
+
+.text           0x00000000     0x3640
+ *(.isr_vector)
+ .isr_vector    0x00000000       0xc4 obj/Vectors_s.o
+ *(.text*)
+ .text          0x000000c4       0x38 obj/Vectors_s.o
+                0x000000c4                MemoryInit
+ .text          0x000000fc      0x458 obj/SystemInitialization_c_ut.o
+                0x000000fc                SystemCoreClockUpdate
+                0x00000208                InitPeripherals
+                0x000002f4                SystemInitialization
+                0x00000354                ResetHandler
+                0x000003a0                CPUInit
+ .text          0x00000554      0x1b0 obj/libAC.a(Diagnostics_c.o)
+                0x00000554                ResetdiagTests
+                0x00000564                ResetdiagErrors
+                0x00000574                DiagSummary
+                0x000005a0                DiagPrintInt
+                0x000005fc                DiagPrint
+                0x00000660                DiagCheckpoint
+                0x000006d0                DiagInit
+ .text          0x00000704      0x7fc obj/libAC.a(Printf_c.o)
+                0x000007b0                putchar
+                0x000007dc                puts
+                0x00000e80                sprintf
+                0x00000ec4                printf
+ .text          0x00000f00       0x14 obj/libAC.a(String_c.o)
+                0x00000f00                strlen
+ .text          0x00000f14      0x314 obj/libAC.a(RTC_c.o)
+                0x00000f14                RTC_Configure
+                0x000010c0                RTC_SetTime
+                0x0000118c                RTC_IRQHandler
+                0x000011b8                SysTick_Handler
+                0x000011cc                RTC_Init
+                0x00001200                RTCModule
+ .text          0x00001228      0x190 obj/libAC.a(QEI_c.o)
+                0x00001228                QuadratureEncoderInit
+                0x000012e8                QEI_ResetPosition
+                0x000012f8                QEI_GetPosition
+                0x00001328                QEI_IRQHandler
+ .text          0x000013b8       0xfc obj/libAC.a(Serial_c.o)
+                0x000013b8                SerialInit
+                0x00001460                SerialOutChar
+                0x00001478                SerialOut
+ .text          0x000014b4      0x260 obj/libAC.a(IOInit_c.o)
+                0x000014b4                InitializeInputs
+                0x0000163c                InitializeOutput
+                0x000016fc                IOInit
+ .text          0x00001714      0x4ec obj/libAC.a(ADCTest_c.o)
+                0x00001714                ThreePtFilter
+                0x00001780                ADC_IRQHandler
+                0x00001adc                ADCInit
+                0x00001b70                EnableReadADCInterrupt
+                0x00001bb0                ADC_Test
+ .text          0x00001c00      0x234 obj/libAC.a(PBDiagnostics_c.o)
+                0x00001c00                PWM_Init
+                0x00001c8c                PWM_Start
+                0x00001cac                PWM_Stop
+                0x00001cc8                EINT3_IRQHandler
+ .text          0x00001e34      0x44c obj/libAC.a(SSP_c.o)
+                0x00001e34                PIN_Config
+                0x00001ec8                SSP0_Transmit
+                0x00002018                SSPTxChl0
+                0x00002020                SSPRxChl1
+                0x00002038                SSPSyncUp
+                0x00002060                InitSSPChl1Rx
+                0x00002160                InitSSPChl0Tx
+                0x00002258                InitSSP
+ .text          0x00002280        0x0 obj/libAC.a(Global_c.o)
+ .text          0x00002280      0x188 obj/libAC.a(lpc17xx_clkpwr_c.o)
+                0x00002280                CLKPWR_SetPCLKDiv
+                0x000022d8                CLKPWR_GetPCLKSEL
+                0x00002304                CLKPWR_GetPCLK
+                0x0000234c                CLKPWR_ConfigPPWR
+                0x00002394                CLKPWR_Sleep
+                0x000023a8                CLKPWR_DeepSleep
+                0x000023c8                CLKPWR_PowerDown
+                0x000023e8                CLKPWR_DeepPowerDown
+ .text          0x00002408      0x874 obj/libAC.a(PartContact_c.o)
+                0x00002408                BubbleSort
+                0x00002498                VelocityEstimator
+                0x000024fc                AverageForceandDistanceReading
+                0x0000261c                CalculateSpeed
+                0x00002680                DetectPartContactGSXEorP
+                0x000027a0                DetectPartContactGSXI
+                0x00002838                VerifyPartContactGSXI
+                0x000028bc                PCDummy4
+                0x000028c0                VerifyPartContactGSXEorP
+                0x00002a78                PartContact
+ .text          0x00002c7c       0xcc obj/libAC.a(TRSDiagnostics_c.o)
+                0x00002c7c                TRSDiagnostics
+ .text          0x00002d48      0x4c0 obj/libAC.a(SetOutputs_c.o)
+                0x00002d48                PINSEL_SetOutput
+                0x00002d90                OFFBeeper
+                0x00002db0                BeepBeeper
+                0x00002df4                HandleBeeper
+                0x00002f1c                SetEN_ALARMcode
+                0x00003048                SetSVRelay
+                0x000030d0                SetPBs
+                0x00003120                ResetExternalWatchdog
+                0x00003184                SetOutputs
+ .text          0x00003208      0x2dc obj/libAC.a(CrossMonitoring_c.o)
+                0x00003208                PrepareSSPMsg
+                0x00003284                VerifyRxdMsg
+                0x000032f8                CrossMonitoringRx
+                0x00003410                CrossMonitoringTx
+                0x00003498                CrossMonitoring
+ *(.rodata*)
+ .rodata.str1.4
+                0x000034e4       0x54 obj/SystemInitialization_c_ut.o
+ .rodata.str1.4
+                0x00003538       0xb3 obj/libAC.a(Diagnostics_c.o)
+                                 0xb4 (size before relaxing)
+ *fill*         0x000035eb        0x1 00
+ .rodata.str1.4
+                0x000035ec       0x20 obj/libAC.a(QEI_c.o)
+ .rodata.str1.4
+                0x0000360c       0x18 obj/libAC.a(PartContact_c.o)
+ .rodata.str1.4
+                0x00003624        0x8 obj/libAC.a(SetOutputs_c.o)
+ .rodata.str1.4
+                0x0000362c       0x14 obj/libAC.a(CrossMonitoring_c.o)
+
+.glue_7         0x00003640        0x0
+ .glue_7        0x00000000        0x0 linker stubs
+
+.glue_7t        0x00003640        0x0
+ .glue_7t       0x00000000        0x0 linker stubs
+
+.vfp11_veneer   0x00003640        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x00003640        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x00003640                __exidx_start = .
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x00003640                . = ALIGN (0x4)
+                0x00003640                __exidx_end = .
+                0x00003640                _etext = .
+
+.data           0x10000000       0x38 load address 0x00003640
+                0x10000000                _data = .
+ *(vtable)
+ *(.data*)
+ .data          0x10000000        0x0 obj/Vectors_s.o
+ .data          0x10000000        0x8 obj/SystemInitialization_c_ut.o
+                0x10000000                SystemCoreClock
+                0x10000004                SystemFrequency
+ .data          0x10000008        0x0 obj/libAC.a(Diagnostics_c.o)
+ .data          0x10000008        0x0 obj/libAC.a(Printf_c.o)
+ .data          0x10000008        0x0 obj/libAC.a(String_c.o)
+ .data          0x10000008        0x0 obj/libAC.a(RTC_c.o)
+ .data          0x10000008        0x0 obj/libAC.a(QEI_c.o)
+ .data          0x10000008        0x0 obj/libAC.a(Serial_c.o)
+ .data          0x10000008        0x0 obj/libAC.a(IOInit_c.o)
+ .data          0x10000008        0x4 obj/libAC.a(ADCTest_c.o)
+ .data          0x1000000c        0x0 obj/libAC.a(PBDiagnostics_c.o)
+ .data          0x1000000c        0x0 obj/libAC.a(SSP_c.o)
+ .data          0x1000000c        0x4 obj/libAC.a(Global_c.o)
+                0x1000000c                InterruptTestResult
+ .data          0x10000010        0x0 obj/libAC.a(lpc17xx_clkpwr_c.o)
+ .data          0x10000010       0x28 obj/libAC.a(PartContact_c.o)
+ .data          0x10000038        0x0 obj/libAC.a(TRSDiagnostics_c.o)
+ .data          0x10000038        0x0 obj/libAC.a(SetOutputs_c.o)
+ .data          0x10000038        0x0 obj/libAC.a(CrossMonitoring_c.o)
+                0x10000038                . = ALIGN (0x4)
+                0x10000038                _edata = .
+
+.bss            0x10000038     0x10a0 load address 0x00003678
+                0x10000038                _bss = .
+ *(.bss*)
+ .bss           0x10000038        0x0 obj/Vectors_s.o
+ .bss           0x10000038        0x0 obj/SystemInitialization_c_ut.o
+ .bss           0x10000038        0x8 obj/libAC.a(Diagnostics_c.o)
+ .bss           0x10000040        0x4 obj/libAC.a(Printf_c.o)
+                0x10000040                PrintfEnabled
+ .bss           0x10000044        0x0 obj/libAC.a(String_c.o)
+ .bss           0x10000044        0x8 obj/libAC.a(RTC_c.o)
+                0x10000044                RTC_Callback
+                0x10000048                SysTick_Callback
+ .bss           0x1000004c        0x0 obj/libAC.a(QEI_c.o)
+ .bss           0x1000004c        0x0 obj/libAC.a(Serial_c.o)
+ .bss           0x1000004c        0x0 obj/libAC.a(IOInit_c.o)
+ .bss           0x1000004c       0x54 obj/libAC.a(ADCTest_c.o)
+                0x1000008c                FOCount
+                0x1000008e                FFull
+                0x10000090                FSum
+                0x10000098                ADCErrorCnt
+                0x1000009c                NumBadReadings
+ .bss           0x100000a0        0xc obj/libAC.a(PBDiagnostics_c.o)
+                0x100000a8                PBErrorCounter
+ .bss           0x100000ac        0x0 obj/libAC.a(SSP_c.o)
+ .bss           0x100000ac       0x14 obj/libAC.a(Global_c.o)
+                0x100000ac                LastFault
+                0x100000b0                PartContactStatus
+                0x100000b4                QEIPosition
+                0x100000b8                QEIPositionOld
+                0x100000bc                NotMyFault
+ .bss           0x100000c0        0x0 obj/libAC.a(lpc17xx_clkpwr_c.o)
+ .bss           0x100000c0       0xc0 obj/libAC.a(PartContact_c.o)
+                0x100000c0                NewCurrVelocity
+                0x100000c4                ForceDistindex
+                0x100000c8                Distancedata
+                0x100000f4                ForceSamples
+                0x100000f8                forceData
+                0x10000130                ForceOffset
+                0x10000134                PCLostIndex1
+                0x10000138                PCLostIndex2
+                0x1000013c                PCLostIndex3
+                0x10000140                PCForceDelay
+                0x10000144                OldSVReq
+                0x10000148                forceDataCopy
+                0x10000174                LostCondition
+                0x10000178                Distance
+                0x1000017c                Sbeam
+ .bss           0x10000180        0x0 obj/libAC.a(TRSDiagnostics_c.o)
+ .bss           0x10000180       0x1c obj/libAC.a(SetOutputs_c.o)
+                0x10000180                FlashingTimer
+                0x10000188                BeeperOFF
+                0x1000018c                FlashCounter
+                0x10000190                Beeping
+ .bss           0x1000019c        0x8 obj/libAC.a(CrossMonitoring_c.o)
+                0x1000019c                U2Fault
+                0x100001a0                CMFault
+ *(COMMON)
+ COMMON         0x100001a4       0x10 obj/SystemInitialization_c_ut.o
+                0x100001a4                PeripherialDiag
+                0x100001a8                SysinitDiag
+                0x100001ac                CPUDiag
+                0x100001b0                SyncUpFault
+ COMMON         0x100001b4        0x4 obj/libAC.a(QEI_c.o)
+                0x100001b4                QEIPhaseErrorCnt
+ COMMON         0x100001b8        0x4 obj/libAC.a(Serial_c.o)
+                0x100001b8                uart
+ COMMON         0x100001bc      0x408 obj/libAC.a(ADCTest_c.o)
+                0x100001bc                FOBuff
+                0x100005a4                ADC0Value
+ COMMON         0x100005c4        0x8 obj/libAC.a(PBDiagnostics_c.o)
+                0x100005c4                match_counter0
+                0x100005c8                match_counter1
+ COMMON         0x100005cc       0x52 obj/libAC.a(SSP_c.o)
+                0x100005cc                sspdat
+                0x100005dc                ssp0
+                0x100005f8                ssp0TxMsg
+                0x100005fa                ssp0RxMsg
+                0x100005fc                ssp1RxMsg
+                0x10000600                ssp1
+                0x1000061c                ssp1TxMsg
+ *fill*         0x1000061e        0x2 00
+ COMMON         0x10000620       0xb8 obj/libAC.a(Global_c.o)
+                0x10000620                EStopStatus
+                0x10000624                UFAIL24Status
+                0x10000628                ULS
+                0x1000062c                IsThisCPU1
+                0x10000630                ESTOP1
+                0x10000634                SONICS_EN
+                0x10000638                DriveStatus
+                0x1000063c                BytesToTx
+                0x10000640                ADC0IntDone
+                0x10000644                WDCount
+                0x10000648                SV1_REQ
+                0x1000064c                FaultReset
+                0x10000650                EStop
+                0x10000654                PBStatus
+                0x10000658                SV2
+                0x1000065c                TRSStatus
+                0x10000660                PB1_NO_INPUT
+                0x10000664                PB1_NO_IN
+                0x10000668                State
+                0x1000066c                ESTOP2
+                0x10000670                LEStatus
+                0x10000674                PB2_NO_INPUT
+                0x10000678                SV1
+                0x1000067c                UFAIL24V
+                0x10000680                SV2_REQ
+                0x10000684                SV_FAIL
+                0x10000688                MsInterruptCounter
+                0x1000068c                SONICS_FAIL
+                0x10000690                SonicsEnStatus
+                0x10000694                CurrForce
+                0x10000698                SV2_FAIL
+                0x1000069c                TRS
+                0x100006a0                MachineConfiguration
+                0x100006a4                ChkFunReturn
+                0x100006a8                ADCStatus
+                0x100006ac                FaultFlag
+                0x100006b0                PB_OUT
+                0x100006b4                LUTestStatus
+                0x100006b8                PB2_NO_IN
+                0x100006bc                BothHandStatus
+                0x100006c0                BEEPER
+                0x100006c4                ALARM
+                0x100006c8                DRIVE_FAIL
+                0x100006cc                ULSPosition
+                0x100006d0                SBeamStatus
+                0x100006d4                LUTestErrMask
+ COMMON         0x100006d8      0x9d4 obj/libAC.a(PartContact_c.o)
+                0x100006d8                ULSLEReading
+                0x100006dc                OldVelocity
+                0x100006e0                PeakVelocity
+                0x100006e4                DebugForceData
+                0x10000b94                CurrPressure
+                0x10000b98                distIndex
+                0x10000b9c                PCPosition
+                0x10000ba0                OldTRS
+                0x10000ba4                DebugPositionData
+                0x10001054                CurrVelocity
+                0x10001058                prevForce
+                0x1000105c                PCSpeed
+                0x10001060                PartContactCounter
+                0x10001064                PCForce
+                0x10001068                currdiffForce
+                0x1000106c                OldPosition
+                0x10001070                prevdiffForce
+                0x10001074                FailureData
+                0x1000109c                PCStepsCtr
+                0x100010a0                OldPressure
+                0x100010a4                CurrPosition
+                0x100010a8                DebugIndx
+ COMMON         0x100010ac        0xc obj/libAC.a(TRSDiagnostics_c.o)
+                0x100010ac                OldULSPosition
+                0x100010b0                NoTRSDiagCntr
+                0x100010b4                TRSErrCntr
+ COMMON         0x100010b8       0x20 obj/libAC.a(CrossMonitoring_c.o)
+                0x100010b8                SSPRxTimeOut
+                0x100010bc                CrossMonitoringErrCnt
+                0x100010c0                SSPRxMsgFaultCtr
+                0x100010c4                RxMsgRxd
+                0x100010c8                RxMsgSanity
+                0x100010cc                SSPRxFaultStatus
+                0x100010d0                SSPTxFaultStatus
+                0x100010d4                SSPTxTimeOut
+                0x100010d8                . = ALIGN (0x4)
+                0x100010d8                _ebss = .
+                0x10007ff0                _vStackTop = (_vRamTop - 0x10)
+OUTPUT(SystemInitialization_c_ut.elf elf32-littlearm)
+
+.ARM.attributes
+                0x00000000       0x2d
+ .ARM.attributes
+                0x00000000       0x21 obj/Vectors_s.o
+ .ARM.attributes
+                0x00000021       0x31 obj/SystemInitialization_c_ut.o
+ .ARM.attributes
+                0x00000052       0x31 obj/libAC.a(Diagnostics_c.o)
+ .ARM.attributes
+                0x00000083       0x31 obj/libAC.a(Printf_c.o)
+ .ARM.attributes
+                0x000000b4       0x31 obj/libAC.a(String_c.o)
+ .ARM.attributes
+                0x000000e5       0x31 obj/libAC.a(RTC_c.o)
+ .ARM.attributes
+                0x00000116       0x31 obj/libAC.a(QEI_c.o)
+ .ARM.attributes
+                0x00000147       0x31 obj/libAC.a(Serial_c.o)
+ .ARM.attributes
+                0x00000178       0x31 obj/libAC.a(IOInit_c.o)
+ .ARM.attributes
+                0x000001a9       0x31 obj/libAC.a(ADCTest_c.o)
+ .ARM.attributes
+                0x000001da       0x31 obj/libAC.a(PBDiagnostics_c.o)
+ .ARM.attributes
+                0x0000020b       0x31 obj/libAC.a(SSP_c.o)
+ .ARM.attributes
+                0x0000023c       0x31 obj/libAC.a(Global_c.o)
+ .ARM.attributes
+                0x0000026d       0x31 obj/libAC.a(lpc17xx_clkpwr_c.o)
+ .ARM.attributes
+                0x0000029e       0x31 obj/libAC.a(PartContact_c.o)
+ .ARM.attributes
+                0x000002cf       0x31 obj/libAC.a(TRSDiagnostics_c.o)
+ .ARM.attributes
+                0x00000300       0x31 obj/libAC.a(SetOutputs_c.o)
+ .ARM.attributes
+                0x00000331       0x31 obj/libAC.a(CrossMonitoring_c.o)
+
+.comment        0x00000000      0x2ca
+ .comment       0x00000000       0x2a obj/SystemInitialization_c_ut.o
+ .comment       0x0000002a       0x2a obj/libAC.a(Diagnostics_c.o)
+ .comment       0x00000054       0x2a obj/libAC.a(Printf_c.o)
+ .comment       0x0000007e       0x2a obj/libAC.a(String_c.o)
+ .comment       0x000000a8       0x2a obj/libAC.a(RTC_c.o)
+ .comment       0x000000d2       0x2a obj/libAC.a(QEI_c.o)
+ .comment       0x000000fc       0x2a obj/libAC.a(Serial_c.o)
+ .comment       0x00000126       0x2a obj/libAC.a(IOInit_c.o)
+ .comment       0x00000150       0x2a obj/libAC.a(ADCTest_c.o)
+ .comment       0x0000017a       0x2a obj/libAC.a(PBDiagnostics_c.o)
+ .comment       0x000001a4       0x2a obj/libAC.a(SSP_c.o)
+ .comment       0x000001ce       0x2a obj/libAC.a(Global_c.o)
+ .comment       0x000001f8       0x2a obj/libAC.a(lpc17xx_clkpwr_c.o)
+ .comment       0x00000222       0x2a obj/libAC.a(PartContact_c.o)
+ .comment       0x0000024c       0x2a obj/libAC.a(TRSDiagnostics_c.o)
+ .comment       0x00000276       0x2a obj/libAC.a(SetOutputs_c.o)
+ .comment       0x000002a0       0x2a obj/libAC.a(CrossMonitoring_c.o)

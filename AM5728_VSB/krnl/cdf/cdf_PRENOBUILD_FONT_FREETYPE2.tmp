@@ -1,0 +1,15 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/ui/font-1.0.0.1/freetype2-2.3.2.3/cdf/30gfxFreeType2.cdf>
+
+Layer Layer::FONT_FREETYPE2 {
+	NAME FONT_FREETYPE2
+}

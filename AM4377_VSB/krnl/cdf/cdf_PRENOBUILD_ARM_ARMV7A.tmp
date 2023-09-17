@@ -1,0 +1,16 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/arch/arm-1.1.9.1/kernel/armv7a/cdf/30arch.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/arch/arm-1.1.9.1/kernel/armv7a/cdf/30bsp.cdf>
+
+Layer Layer::ARM_ARMV7A {
+	NAME ARM_ARMV7A
+}

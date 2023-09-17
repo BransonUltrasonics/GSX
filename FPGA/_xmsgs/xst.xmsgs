@@ -1,0 +1,955 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf</arg>&quot; line <arg fmt="%d" index="2">1573</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CLK_FADC</arg>&apos; of component &apos;<arg fmt="%s" index="4">CLK_GEN_MUSER_FPGA_DUPS</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf</arg>&quot; line <arg fmt="%d" index="2">1589</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">FBIF_TEST_1</arg>&apos; of component &apos;<arg fmt="%s" index="4">FPGA_DUPS_Main_MUSER_FPGA_DUPS</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf</arg>&quot; line <arg fmt="%d" index="2">1589</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">FBIF_TEST_2</arg>&apos; of component &apos;<arg fmt="%s" index="4">FPGA_DUPS_Main_MUSER_FPGA_DUPS</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf</arg>&quot; line <arg fmt="%d" index="2">1137</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">counter3cr</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf</arg>&quot; line <arg fmt="%d" index="2">1195</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CEO</arg>&apos; of component &apos;<arg fmt="%s" index="4">CC16CE_HXILINX_FPGA_DUPS</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf</arg>&quot; line <arg fmt="%d" index="2">1195</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">TC</arg>&apos; of component &apos;<arg fmt="%s" index="4">CC16CE_HXILINX_FPGA_DUPS</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf</arg>&quot; line <arg fmt="%d" index="2">1206</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">LT</arg>&apos; of component &apos;<arg fmt="%s" index="4">COMPM16_HXILINX_FPGA_DUPS</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf</arg>&quot; line <arg fmt="%d" index="2">1226</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CEO</arg>&apos; of component &apos;<arg fmt="%s" index="4">CC16CE_HXILINX_FPGA_DUPS</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf</arg>&quot; line <arg fmt="%d" index="2">1226</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">TC</arg>&apos; of component &apos;<arg fmt="%s" index="4">CC16CE_HXILINX_FPGA_DUPS</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf</arg>&quot; line <arg fmt="%d" index="2">1237</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CEO</arg>&apos; of component &apos;<arg fmt="%s" index="4">CC16CE_HXILINX_FPGA_DUPS</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf</arg>&quot; line <arg fmt="%d" index="2">1237</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">Q</arg>&apos; of component &apos;<arg fmt="%s" index="4">CC16CE_HXILINX_FPGA_DUPS</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf</arg>&quot; line <arg fmt="%d" index="2">1255</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">Q</arg>&apos; of component &apos;<arg fmt="%s" index="4">counter23</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf</arg>&quot; line <arg fmt="%d" index="2">1255</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CEO</arg>&apos; of component &apos;<arg fmt="%s" index="4">counter23</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf</arg>&quot; line <arg fmt="%d" index="2">1291</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CLK90_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">CLKMAN_1</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf</arg>&quot; line <arg fmt="%d" index="2">1298</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CLK90_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">CLKMAN_2</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf</arg>&quot; line <arg fmt="%d" index="2">1305</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CLK90_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">CLKMAN_3</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf</arg>&quot; line <arg fmt="%d" index="2">1312</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CLK90_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">CLKMAN_4</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf</arg>&quot; line <arg fmt="%d" index="2">755</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">S_StatHdx</arg>&apos; of component &apos;<arg fmt="%s" index="4">ERRSTAT_MUSER_FPGA_DUPS</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="754" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf</arg>&quot; line <arg fmt="%d" index="2">836</arg>: Unconnected inout port &apos;<arg fmt="%s" index="3">BTM_GPO</arg>&apos; of component &apos;<arg fmt="%s" index="4">uP_SPI_IF_MUSER_FPGA_DUPS</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf</arg>&quot; line <arg fmt="%d" index="2">836</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">BTM_PWMA</arg>&apos; of component &apos;<arg fmt="%s" index="4">uP_SPI_IF_MUSER_FPGA_DUPS</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf</arg>&quot; line <arg fmt="%d" index="2">836</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">BTM_PWMB</arg>&apos; of component &apos;<arg fmt="%s" index="4">uP_SPI_IF_MUSER_FPGA_DUPS</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf</arg>&quot; line <arg fmt="%d" index="2">836</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">Phase_Val_Adc</arg>&apos; of component &apos;<arg fmt="%s" index="4">uP_SPI_IF_MUSER_FPGA_DUPS</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf</arg>&quot; line <arg fmt="%d" index="2">249</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">FPGA_CTRL_TEST</arg>&apos; of component &apos;<arg fmt="%s" index="4">FBIF_SPIIF</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf</arg>&quot; line <arg fmt="%d" index="2">249</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">FPGA_STAT_TEST</arg>&apos; of component &apos;<arg fmt="%s" index="4">FBIF_SPIIF</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf</arg>&quot; line <arg fmt="%d" index="2">249</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">WCYC_P_CtrlHdx</arg>&apos; of component &apos;<arg fmt="%s" index="4">FBIF_SPIIF</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FBIF_SPIIF.vhd</arg>&quot; line <arg fmt="%d" index="2">1353</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FBIF_SPIIF.vhd</arg>&quot; line <arg fmt="%d" index="2">1356</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FBIF_SPIIF.vhd</arg>&quot; line <arg fmt="%d" index="2">1359</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FBIF_SPIIF.vhd</arg>&quot; line <arg fmt="%d" index="2">1507</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FBIF_SPIIF.vhd</arg>&quot; line <arg fmt="%d" index="2">1512</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FBIF_SPIIF.vhd</arg>&quot; line <arg fmt="%d" index="2">1514</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FBIF_SPIIF.vhd</arg>&quot; line <arg fmt="%d" index="2">1522</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">FPGA_STAT_REG_RO&lt;15&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">FPGA_STAT_REG_RO&lt;14&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">FPGA_STAT_REG_RO&lt;13&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">FPGA_STAT_REG_RO&lt;12&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">FPGA_STAT_REG_RO&lt;11&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">FPGA_STAT_REG_RO&lt;3&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">FPGA_STAT_REG_RO&lt;2&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">FPGA_STAT_REG_RO&lt;1&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">SPI_WR_D_W</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">0000000000000000</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">SPI_MISO_DOUT&lt;63&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">SPI_MISO_DOUT&lt;62&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">SPI_MISO_DOUT&lt;61&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">SPI_MISO_DOUT&lt;60&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">SPI_MISO_DOUT&lt;59&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">SPI_MISO_DOUT&lt;58&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">SPI_MISO_DOUT&lt;57&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">SPI_MISO_DOUT&lt;56&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">SPI_MISO_DOUT&lt;55&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">SPI_MISO_DOUT&lt;54&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">SPI_MISO_DOUT&lt;53&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">SPI_MISO_DOUT&lt;52&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">SPI_MISO_DOUT&lt;51&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">SPI_MISO_DOUT&lt;50&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">SPI_MISO_DOUT&lt;49&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">SPI_MISO_DOUT&lt;48&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">SPI_MISO_DOUT&lt;45&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">SPI_MISO_DOUT&lt;43&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">SPI_MISO_DOUT&lt;42&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">FB_A_INT_LW_CHECK_RD</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">111111111111</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">READ_NOT_LATCHED</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">SPI_READ_HW</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">FB_A_INT_LW_CHECK_WR</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">111111111111</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO&lt;4&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">00000000000000000000000000000000</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO&lt;5&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">00000000000000000000000000000000</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO&lt;6&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">00000000000000000000000000000000</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO&lt;7&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">00000000000000000000000000000000</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO&lt;9&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">00000000000000000000000000000000</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO&lt;10&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">00000000000000000000000000000000</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO&lt;11&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">00000000000000000000000000000000</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO&lt;12&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">00000000000000000000000000000000</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO&lt;13&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">00000000000000000000000000000000</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO&lt;14&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">00000000000000000000000000000000</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO&lt;15&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">00000000000000000000000000000000</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO&lt;16&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">00000000000000000000000000000000</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO&lt;17&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">00000000000000000000000000000000</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO&lt;18&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">00000000000000000000000000000000</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO&lt;19&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">00000000000000000000000000000000</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO&lt;20&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">00000000000000000000000000000000</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO&lt;21&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">00000000000000000000000000000000</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO&lt;22&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">00000000000000000000000000000000</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO&lt;23&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">00000000000000000000000000000000</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO&lt;24&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">00000000000000000000000000000000</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO&lt;25&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">00000000000000000000000000000000</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO&lt;26&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">00000000000000000000000000000000</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO&lt;27&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">00000000000000000000000000000000</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO&lt;28&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">00000000000000000000000000000000</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO&lt;29&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">00000000000000000000000000000000</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO&lt;30&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">00000000000000000000000000000000</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO&lt;31&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">00000000000000000000000000000000</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">WCYC_P_PhaseValIn</arg>&gt; in unit &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt; has a constant value of <arg fmt="%s" index="3">0000000000000000</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">AmpReg&lt;31&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">PWM_DDS</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">AmpReg&lt;30&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">PWM_DDS</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">AmpReg&lt;13&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">PWM_DDS</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">AmpReg&lt;12&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">PWM_DDS</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">AmpReg&lt;11&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">PWM_DDS</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">AmpReg&lt;10&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">PWM_DDS</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">AmpReg&lt;9&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">PWM_DDS</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">AmpReg&lt;8&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">PWM_DDS</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">AmpReg&lt;7&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">PWM_DDS</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">AmpReg&lt;6&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">PWM_DDS</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">AmpReg&lt;5&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">PWM_DDS</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">AmpReg&lt;4&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">PWM_DDS</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">AmpReg&lt;3&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">PWM_DDS</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">AmpReg&lt;2&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">PWM_DDS</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">AmpReg&lt;1&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">PWM_DDS</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">AmpReg&lt;0&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">PWM_DDS</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">SR_Q&lt;3&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">PhaseBReg&lt;30:0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">PhaseAReg&lt;30:0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">CLK_25MHZ_NEG_STRB</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1305" delta="new" >Output &lt;<arg fmt="%s" index="1">FBIF_TEST_1</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1305" delta="new" >Output &lt;<arg fmt="%s" index="1">FBIF_TEST_2</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">RCYC_S_StatHdx</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">RCYC_S_PhaseValOut</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CLK_4</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">GPI&lt;1:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="1305" delta="new" >Output &lt;<arg fmt="%s" index="1">BTM_GPO&lt;7:2&gt;</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">000000</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">WRITE_SYNC</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">WRITE_LW_VALID</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">WRITE_DATA_TEMP</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">WDOG_PWM_WCYC_PARA_IDX</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">01010</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">WDOG_FREQU_WCYC_PARA_IDX</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">01000</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">WCYC_PARA_REG_W&lt;4&gt;&lt;31:16&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">WCYC_PARA_REG_W&lt;5:7&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">WCYC_PARA_REG_W&lt;8&gt;&lt;31:22&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">WCYC_PARA_REG_W&lt;9&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">WCYC_PARA_REG_W&lt;10&gt;&lt;31:16&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">WCYC_PARA_REG_W&lt;11:31&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">WCYC_PARA_I16</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">1000011000000000000000000000</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">SPI_WR_RD_ADR&lt;11:10&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">SPI_READ_HW</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">SPI_RD_D_W</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">SPI_HDL_WR_SM_SR&lt;16&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">SPI_HDL_RD_SM_SR&lt;12&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">READ_NOT_LATCHED</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">READ_LW_VALID</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">READ_DATA_TEMP</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">READ_DATA_LATCH</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0000000000000000</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">RCYC_STAT_I16</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">1000010000000000000000000000</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">OLD_OL_LATCH&lt;4&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">INITIALIZED</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">FB_SPI_WR_D_W</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">FB_A_INT_WA</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">FB_A_INT_LW_CHECK</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">FB_A_INT_IS_WA</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">FB_A_INT_IS_LWA</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">FB_A_INT_IS_HWA</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">16</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">WCYC_P_PWMVal</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="643" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FBIF_SPIIF.vhd</arg>&quot; line <arg fmt="%d" index="2">1560</arg>: The result of a <arg fmt="%d" index="3">24</arg>x<arg fmt="%d" index="4">24</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">42</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+</msg>
+
+<msg type="warning" file="Xst" num="643" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FBIF_SPIIF.vhd</arg>&quot; line <arg fmt="%d" index="2">1603</arg>: The result of a <arg fmt="%d" index="3">22</arg>x<arg fmt="%d" index="4">22</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">43</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">XLXN_79&lt;15:9&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">XLXN_79&lt;7:0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">s_DSPI_ADC&lt;3:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">XLXI_63_PHA_VAL_VALID_openSignal</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">XLXI_63_FSYNC_VAL_VALID_openSignal</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">XLXI_104_RCYC_S_StatHdx_openSignal</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0000000000000000</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">XLXI_104_RCYC_S_PhaseValOut_openSignal</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0000000000000000</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">XLXI_104_RCYC_STAT_FrequValOut_openSignal</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">000000000000000000000000</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">XLXI_104_ADC_ERROR_openSignal</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">GPO&lt;7:2&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="new" >Hierarchical block &lt;<arg fmt="%s" index="1">XLXI_25</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_63</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">FPGA_CTRL_REG_RW_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">12 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;FPGA_CTRL_REG_RW_2&gt; &lt;FPGA_CTRL_REG_RW_3&gt; &lt;FPGA_CTRL_REG_RW_6&gt; &lt;FPGA_CTRL_REG_RW_7&gt; &lt;FPGA_CTRL_REG_RW_8&gt; &lt;FPGA_CTRL_REG_RW_9&gt; &lt;FPGA_CTRL_REG_RW_10&gt; &lt;FPGA_CTRL_REG_RW_11&gt; &lt;FPGA_CTRL_REG_RW_12&gt; &lt;FPGA_CTRL_REG_RW_13&gt; &lt;FPGA_CTRL_REG_RW_14&gt; &lt;FPGA_CTRL_REG_RW_15&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO_8_22</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">9 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;RCYC_STAT_REG_RO_8_23&gt; &lt;RCYC_STAT_REG_RO_8_24&gt; &lt;RCYC_STAT_REG_RO_8_25&gt; &lt;RCYC_STAT_REG_RO_8_26&gt; &lt;RCYC_STAT_REG_RO_8_27&gt; &lt;RCYC_STAT_REG_RO_8_28&gt; &lt;RCYC_STAT_REG_RO_8_29&gt; &lt;RCYC_STAT_REG_RO_8_30&gt; &lt;RCYC_STAT_REG_RO_8_31&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO_8_22</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">XLXI_22</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">FPGA_CTRL_REG_RW_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">XLXI_22</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_HDL_WR_SM_SR_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_HDL_WR_SM_SR_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_HDL_WR_SM_SR_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_HDL_WR_SM_SR_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_HDL_WR_SM_SR_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_HDL_WR_SM_SR_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_HDL_WR_SM_SR_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_HDL_WR_SM_SR_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_HDL_WR_SM_SR_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_HDL_WR_SM_SR_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_HDL_RD_SM_SR_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_HDL_RD_SM_SR_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_HDL_RD_SM_SR_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_HDL_RD_SM_SR_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_HDL_RD_SM_SR_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_HDL_RD_SM_SR_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_WR_RD_ADR_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_WR_RD_ADR_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">OLD_OL_LATCH_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_42</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_22</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SR_Q_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_137</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SR_Q_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_137</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2404" delta="new" > FFs/Latches &lt;<arg fmt="%s" index="1">FPGA_CTRL_REG_RW</arg>&lt;<arg fmt="%d" index="2">15</arg>:<arg fmt="%d" index="3">6</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2404" delta="new" > FFs/Latches &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO_8</arg>&lt;<arg fmt="%d" index="2">31</arg>:<arg fmt="%d" index="3">22</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SR_Q_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PWM_DDS</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SR_Q_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PWM_DDS</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_HDL_WR_SM_SR_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_HDL_WR_SM_SR_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_HDL_WR_SM_SR_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_HDL_WR_SM_SR_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_HDL_WR_SM_SR_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_HDL_WR_SM_SR_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_HDL_WR_SM_SR_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_HDL_WR_SM_SR_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_HDL_WR_SM_SR_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_HDL_WR_SM_SR_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_HDL_RD_SM_SR_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_HDL_RD_SM_SR_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_HDL_RD_SM_SR_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_HDL_RD_SM_SR_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_HDL_RD_SM_SR_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_HDL_RD_SM_SR_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_WR_RD_ADR_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">SPI_WR_RD_ADR_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">OLD_OL_LATCH_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ADBUG_WCYC_P_FrequValIn_S43_mult0001_42</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FBIF_SPIIF</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">FPGA_CTRL_REG_RW_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">FPGA_CTRL_REG_RW_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">FPGA_CTRL_REG_RW_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LPM_DFF_20</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">5 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;3&gt; &lt;4&gt; &lt;5&gt; &lt;6&gt; &lt;7&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LPM_DFF_20</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO_8_21</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO_8_20</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO_8_19</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO_8_18</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO_8_17</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO_8_16</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO_8_15</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO_8_14</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO_8_13</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO_8_12</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO_8_11</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO_8_10</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO_8_9</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO_8_8</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO_8_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO_8_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO_8_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO_8_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO_8_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO_8_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO_8_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">RCYC_STAT_REG_RO_8_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">BOARD_TEST_MODE_REG_RW_15</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">BOARD_TEST_MODE_REG_RW_14</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">BOARD_TEST_MODE_REG_RW_13</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">BOARD_TEST_MODE_REG_RW_12</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">BOARD_TEST_MODE_REG_RW_11</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">BOARD_TEST_MODE_REG_RW_10</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">BOARD_TEST_MODE_REG_RW_9</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">BOARD_TEST_MODE_REG_RW_8</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">BOARD_TEST_MODE_REG_RW_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">BOARD_TEST_MODE_REG_RW_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">BOARD_TEST_MODE_REG_RW_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">BOARD_TEST_MODE_REG_RW_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FBIF_SPIIF</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">COUNT_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_33/XLXI_46</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">COUNT_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_33/XLXI_46</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">COUNT_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_33/XLXI_46</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">COUNT_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_33/XLXI_46</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">COUNT_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_33/XLXI_46</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">COUNT_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_33/XLXI_46</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">COUNT_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_33/XLXI_46</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">XLXI_47/XLXI_63/XLXI_25/Q1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_DUPS</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">XLXI_47/XLXI_63/XLXI_25/Q0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_DUPS</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W&lt;4&gt;_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_DUPS</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W&lt;4&gt;_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_DUPS</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W&lt;4&gt;_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_DUPS</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W&lt;4&gt;_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_DUPS</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W&lt;4&gt;_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_DUPS</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W&lt;4&gt;_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_DUPS</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W&lt;4&gt;_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_DUPS</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W&lt;4&gt;_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_DUPS</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W&lt;4&gt;_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_DUPS</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W&lt;4&gt;_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_DUPS</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W&lt;4&gt;_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_DUPS</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W&lt;4&gt;_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_DUPS</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W&lt;4&gt;_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_DUPS</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W&lt;4&gt;_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_DUPS</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W&lt;4&gt;_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_DUPS</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W&lt;4&gt;_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGA_DUPS</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">XLXI_33/XLXI_25</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">FPGA_DUPS</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;XLXI_33/XLXI_22&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="new" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+</messages>
+

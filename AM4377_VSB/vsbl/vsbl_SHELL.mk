@@ -1,0 +1,25 @@
+# Automatically generated file: do not edit
+
+##########################
+# SHELL Section
+##########################
+
+
+ifdef _WRS_CONFIG_SHELL
+VSBL_SHELL_SRC = 
+VSBL_SHELL_DEPEND = 
+ifdef _WRS_CONFIG_SHELL_1_1_4_3
+ifdef _WRS_CONFIG_SHELL_VXTEST
+VSBL_SHELL_SRC += SHELL_VXTEST
+endif
+VSBL_SHELL_SRC += SHELL
+VSBL_SHELL_DEPEND += OSTOOLS
+VSBL_SHELL_DEPEND += CORE_KERNEL
+VSBL_SHELL_DEPEND += CORE_KERNEL
+VSBL_SHELL_DEPEND += CORE_KERNEL
+SHELL_FASTBUILD = YES
+VSBL_SHELL_PATH = $(WIND_BASE)/pkgs/os/utils/shell-1.1.4.3
+VSBL_SHELL_VERSION = SHELL_1_1_4_3
+endif
+endif
+

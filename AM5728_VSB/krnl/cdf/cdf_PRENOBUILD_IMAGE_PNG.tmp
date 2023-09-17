@@ -1,0 +1,15 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/ui/image-1.0.0.2/libpng-1.6.27.0/cdf/30gfxPng.cdf>
+
+Layer Layer::IMAGE_PNG {
+	NAME IMAGE_PNG
+}

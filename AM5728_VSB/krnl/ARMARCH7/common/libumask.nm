@@ -1,0 +1,34 @@
+
+libumask.a:
+
+umaskLib.o:
+00000000 d globalUmask
+00000000 T umaskLibInit
+00000018 T umask
+         U taskIdSelf
+         U kernelId
+00000094 T umaskGet
+000000ec T umaskSet
+00000154 T globalUmaskGet
+
+umaskScLib.o:
+00000000 T umaskScLibInit
+00000008 T _umaskSc
+         U umask
+
+libumask.a:
+
+umaskLib.o:
+00000000 d globalUmask
+00000000 T umaskLibInit
+00000018 T umask
+         U taskIdSelf
+         U kernelId
+00000094 T umaskGet
+000000ec T umaskSet
+00000154 T globalUmaskGet
+
+umaskScLib.o:
+00000000 T umaskScLibInit
+00000008 T _umaskSc
+         U umask

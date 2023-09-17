@@ -1,0 +1,36 @@
+# Automatically generated file: do not edit
+
+##########################
+# OPTEE Section
+##########################
+
+
+ifdef _WRS_CONFIG_OPTEE
+VSBL_OPTEE_SRC = 
+VSBL_OPTEE_DEPEND = 
+ifdef _WRS_CONFIG_OPTEE_1_0_0_1
+ifdef _WRS_CONFIG_OPTEE_DEMO
+VSBL_OPTEE_SRC += OPTEE_DEMO
+endif
+ifdef _WRS_CONFIG_OPTEE_LIB
+VSBL_OPTEE_SRC += OPTEE_LIB
+endif
+VSBL_OPTEE_SRC += OPTEE
+ifdef _WRS_CONFIG_ARM_ARMV7A
+VSBL_OPTEE_DEPEND += ARM_ARMV7A
+endif
+ifdef _WRS_CONFIG_ARM_ARMV7A*
+VSBL_OPTEE_DEPEND += ARM_ARMV7A
+endif
+ifdef _WRS_CONFIG_ARM_ARMV7M
+VSBL_OPTEE_DEPEND += ARM_ARMV7M
+endif
+ifdef _WRS_CONFIG_ARM_ARMV7M*
+VSBL_OPTEE_DEPEND += ARM_ARMV7M
+endif
+OPTEE_FASTBUILD = YES
+VSBL_OPTEE_PATH = $(WIND_BASE)/pkgs/security/optee_client_api-1.0.0.1
+VSBL_OPTEE_VERSION = OPTEE_1_0_0_1
+endif
+endif
+

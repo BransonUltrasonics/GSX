@@ -1,0 +1,31 @@
+# common.vxconfig - VSB configuration flags and options for ti_sitara_ctxa9 BSP
+#
+# Copyright (c) 2014 Wind River Systems, Inc.
+#
+# The right to copy, distribute, modify or otherwise make use
+# of this software may be licensed only pursuant to the terms
+# of an applicable Wind River license agreement.
+#
+#
+# modification history
+# --------------------
+# 11nov15,cfm  moved from psl to bsp (US69494)
+# 01jun14,swu  created (US40646)
+#
+# DESCRIPTION
+# 
+# This file defines the VxWorks Source Build configuration options that apply
+# only to the ti_sitara_ctxa9 BSP.
+#
+################################################################################
+
+# Configure the ARM v7 core type when configuring a VSB
+
+config  ARMV7_CORE_CTX_A9_BSP
+        bool
+        default y
+
+config  UNSUPPORTS_HARDWARE_BP
+        bool
+        default n
+

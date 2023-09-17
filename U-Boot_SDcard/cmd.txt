@@ -1,0 +1,806 @@
+    1  vi /etc/fstab
+    2  clear
+    3  echo 'Acquire::http::Proxy "http://ubuntuz01.sasken.com:3142";' > /etc/apt/apt.conf.d/01proxy
+    4  clear
+    5  apt-get update
+    6  apt-get install ssh
+    7  vi /etc/ssh/sshd_config 
+    8  clear
+    9  apt-get install aptitude
+   10  apt-get install build-essential 
+   11  apt-get install pidgin
+   12  apt-get install pidgin-sipe
+   13  apt-get install thunderbird
+   14  apt-get install chromium-browser
+   15  apt-get install dconf-tools 
+   16  clear
+   17  vi /etc/resolv.conf 
+   18  clear
+   19  vi /etc/resolv.conf 
+   20  clear
+   21  vi /usr/share/lightdm/lightdm.conf.d/50-ubuntu.conf 
+   22  clear
+   23  apt-get install gparted 
+   24  clear
+   25  hwclock
+   26  date
+   27  hwclock -show
+   28  hwclock --show
+   29  hwclock --set --date "12/6/2017 01:30:00"
+   30  hwclock --show
+   31  date --set="2017-12-6 01:34 PM"
+   32  hwclock --show
+   33  hwclock --set --date "12/6/2017 01:30:00 PM "
+   34  hwclock --show
+   35  hwclock --set --date "12/6/2017 01:34:00 PM "
+   36  hwclock --show
+   37  vi /etc/hostname 
+   38  apt-get update
+   39  exit
+   40  date --set="12 Jan 2018 12:49:00 PM"
+   41  date
+   42  reboot
+   43  vi /etc/hostname 
+   44  reboot
+   45  passwd root
+   46  exit
+   47  apt-get install meld
+   48  ls
+   49  exit
+   50  make distclean
+   51  make CROSS_COMPILE=../../../Toolchain/bin/arm-linux-gnueabihf- distclean
+   52  make CROSS_COMPILE=../../../Toolchain/bin/arm-linux-gnueabihf- clean
+   53  ls
+   54  make CROSS_COMPILE=../../../Toolchain/bin/arm-linux-gnueabihf- -o=am43xx-evm 
+   55  make CROSS_COMPILE=../../../Toolchain/bin/arm-linux-gnueabihf- -O=am43xx-evm am43xx_evm_qspiboot_defconfig
+   56  make CROSS_COMPILE=../../../Toolchain/bin/arm-linux-gnueabihf- O=am43xx-evm am43xx_evm_qspiboot_defconfig
+   57  make CROSS_COMPILE=../../../Toolchain/bin/arm-linux-gnueabihf- O=am43xx-evm
+   58  make CROSS_COMPILE=./../../../Toolchain/bin/arm-linux-gnueabihf- O=am43xx-evm
+   59  cd ../../../
+   60  cd Toolchain/
+   61  ls
+   62  cd bin/
+   63  ls
+   64  pwd
+   65  export PATH=/home/ee209357/Documents/Toolchain/bin:$PATH
+   66  $PATH
+   67  env
+   68  make CROSS_COMPILE=arm-linux-gnueabihf- distclean
+   69  make CROSS_COMPILE=arm-linux-gnueabihf- clean
+   70  cd ../../
+   71  cd am5728/2017-sdk/u-boot-am4377/
+   72  make CROSS_COMPILE=arm-linux-gnueabihf- distclean
+   73  make CROSS_COMPILE=arm-linux-gnueabihf- O=am43xx_evm am43xx_evm_qspiboot_defconfig
+   74  make CROSS_COMPILE=arm-linux-gnueabihf- O=am43xx_evm
+   75  chmod 0755 ../scripts/check-config.sh
+   76  chmod 0755 scripts/check-config.sh
+   77  make CROSS_COMPILE=arm-linux-gnueabihf- O=am43xx_evm
+   78  vi scripts/check-config.sh 
+   79  echo $SHELL
+   80  vi /etc/shells 
+   81  sudo apt-get install csh
+   82  make CROSS_COMPILE=arm-linux-gnueabihf- O=am43xx_evm
+   83  csh
+   84  chsh -s /bin/csh
+   85  make CROSS_COMPILE=arm-linux-gnueabihf- O=am43xx_evm
+   86  chsh
+   87  make CROSS_COMPILE=arm-linux-gnueabihf- distclean
+   88  make CROSS_COMPILE=arm-linux-gnueabihf- O=am43xx_evm am43xx_evm_qspiboot_defconfig
+   89  vi scripts/kconfig/lxdialog/check-lxdialog.sh
+   90  aptitude search mkimage
+   91  aptitude search mkimage-uboot
+   92  aptitude search uboot
+   93  aptitude search uboot-tools
+   94  aptitude search mkimage
+   95  aptitude search mkimage-uboot
+   96  aptitude search uboot-mkimage
+   97  apt-get install uboot-mkimage
+   98  apt-get install u-boot-tools:i386
+   99  dos2unix
+  100  apt-get install dos2unix
+  101  make CROSS_COMPILE=arm-linux-gnueabihf- O=am43xx_evm am43xx_evm_qspiboot_defconfig
+  102  dos2unix scripts/kconfig/lxdialog/check-lxdialog.sh
+  103  make CROSS_COMPILE=arm-linux-gnueabihf- O=am43xx_evm am43xx_evm_qspiboot_defconfig
+  104  dos2unix scripts/kconfig/check.sh
+  105  make CROSS_COMPILE=arm-linux-gnueabihf- O=am43xx_evm am43xx_evm_qspiboot_defconfig
+  106  make CROSS_COMPILE=arm-linux-gnueabihf- O=am43xx_evm
+  107  dos2unix scripts/gcc-stack-usage.sh
+  108  make CROSS_COMPILE=arm-linux-gnueabihf- O=am43xx_evm
+  109  dos2unix scripts/config_whitelist.txt
+  110  dos2unix scripts/check-config.sh
+  111  make CROSS_COMPILE=arm-linux-gnueabihf- O=am43xx_evm
+  112  ls
+  113  ls arch/arm
+  114  ls
+  115  ls am43xx_evm/
+  116  ls am43xx-evm/
+  117  ls
+  118  rm -rf am43xx-evm
+  119  make CROSS_COMPILE=arm-linux-gnueabihf- distclean
+  120  make CROSS_COMPILE=arm-linux-gnueabihf- O=am43xx_evm am43xx_evm_qspiboot_defconfig
+  121  make CROSS_COMPILE=arm-linux-gnueabihf- O=am43xx_evm
+  122  ls
+  123  ls am43xx_evm/
+  124  ls -al am43xx_evm/
+  125  ls
+  126  cp -rf am43xx_evm /home/ee209357/Desktop/
+  127  make CROSS_COMPILE=arm-linux-gnueabihf- distclean
+  128  export PATH=/home/ee209357/Documents/Toolchain/bin:$PATH
+  129  make CROSS_COMPILE=arm-linux-gnueabihf- distclean
+  130  make CROSS_COMPILE=arm-linux-gnueabihf- O=am43xx_evm am43xx_evm_defconfig
+  131  make CROSS_COMPILE=arm-linux-gnueabihf- O=am43xx_evm
+  132  dos2unix scripts/binutils-version.sh
+  133  dos2unix scripts/gcc-version.sh
+  134  dos2unix scripts/dtc-version.sh
+  135  make CROSS_COMPILE=arm-linux-gnueabihf- O=am43xx_evm
+  136  make CROSS_COMPILE=arm-linux-gnueabihf- O=am43xx_evm
+  137  ls
+  138  cd am43xx_evm/
+  139  ls
+  140  file u-boot
+  141  file u-boot.bin
+  142  objdemp u-boot.bin
+  143  objdump u-boot.bin
+  144  objdump -d u-boot.bin
+  145  arm-linux-gnueabihf-objdump -d u-boot.bin
+  146  ls
+  147  arm-linux-gnueabihf-objdump -d u-boot
+  148  arm-linux-gnueabihf-objdump -d u-boot | less
+  149  ls
+  150  cd ../
+  151  cd configs
+  152  ls
+  153  vi am335x_hs_evm_uart_defconfig
+  154  vi am43xx_evm_defconfig
+  155  grep -irn "CONFIG_DM_SERIAL" ../board/
+  156  vi ../board/ti/am335x/board.c +81
+  157  grep -irn "CONFIG_DM_SERIAL" ../arch/
+  158  cd ../
+  159  ls
+  160  cd am43xx_evm/
+  161  sl
+  162  ls
+  163  cp u-boot.bin /media/ee209357/AC9A-0AF4/
+  164  syncc
+  165  sync
+  166  ls
+  167  vim u-boot.lds 
+  168  apt-get install vim
+  169  ls
+  170  cat u-boot.lds 
+  171  ls
+  172  cp MLO /media/ee209357/AC9A-0AF4/
+  173  sync
+  174  ls spl/
+  175  ls board/
+  176  ls board/ti/
+  177  ls board/ti/am43xx/
+  178  ls board/ti/common/
+  179  ls
+  180  ls scripts/
+  181  ls scripts/basic/
+  182  ls scripts/basic/fixdep 
+  183  ls scripts/basic/
+  184  ls scripts/kconfig/
+  185  ls
+  186  ls test/
+  187  ls test/dm/
+  188  ls tools/
+  189  ls
+  190  cd spl/
+  191  ls
+  192  cd ..
+  193  ls
+  194  make CROSS_COMPILE=arm-linux-gnueabihf- distclean
+  195  make CROSS_COMPILE=arm-linux-gnueabihf- O=am57xx_evm
+  196  ls
+  197  ls include/
+  198  ls include/configs/
+  199  ls
+  200  cd ../../
+  201  ls
+  202  cd -
+  203  ls
+  204  make CROSS_COMPILE=arm-linux-gnueabihf- distclean
+  205  make CROSS_COMPILE=arm-linux-gnueabihf- O=am57xx_evm am57xx_evm_defconfig
+  206  make CROSS_COMPILE=arm-linux-gnueabihf- O=am57xx_evm
+  207  ls
+  208  tar -zcvf am57xx_evm.tar.gz am57xx_evm/
+  209  cp am57xx_evm.tar.gz /media/ee209357/AC9A-0AF4/
+  210  sync
+  211  ls
+  212  cd am43xx_evm/
+  213  ls
+  214  cd arch/arm/mach-omap2/am33xx/
+  215  ls
+  216  cd ../../../
+  217  cd ../
+  218  ls
+  219  cd drivers/
+  220  ls
+  221  cd i2c/
+  222  ls
+  223  cd i2c
+  224  ls
+  225  cd
+  226  cd -
+  227  cd ../input/
+  228  ls
+  229  cd ../../../
+  230  ls
+  231  vim drivers/i2c/davinci_i2c.c
+  232  ls
+  233  cd ../
+  234  ls
+  235  cd u-boot-am4377/
+  236  ls
+  237  lss
+  238  ls
+  239  cd am43xx_evm/spl/
+  240  ls
+  241  cd cmd/
+  242  ls
+  243  cd ..
+  244  ls
+  245  cd arch/arm/cpu/
+  246  ls
+  247  cd armv7/
+  248  ls
+  249  cd ../../..
+  250  cd ..
+  251  ls
+  252  cd drivers/serial/
+  253  lsexitt
+  254  ls
+  255  cd ../core/
+  256  ls
+  257  cd ../..
+  258  ls
+  259  cd lib/
+  260  ls
+  261  cd libfdt/
+  262  ls
+  263  cd ../../
+  264  ls
+  265  cat u-boot-spl.map 
+  266  cd ..
+  267  ls
+  268  cd ..
+  269  ls
+  270  cd am57xx_evm
+  271  ls
+  272  cd examples/
+  273  ls
+  274  cd standalone/
+  275  ls
+  276  cd ../..
+  277  ls
+  278  vim Makefile 
+  279  cd source
+  280  ls
+  281  cd board/
+  282  ls
+  283  cd ..
+  284  ls
+  285  cd drivers/
+  286  ls
+  287  cd serial/
+  288  ls
+  289  cd ..
+  290  ls
+  291  cd ..
+  292  ls
+  293  cd doc/
+  294  ls
+  295  vim README.SPL 
+  296  ls
+  297  vim README.SPL 
+  298  ./install_drivers.sh
+  299  ls
+  300  cd install_scripts/
+  301  ls
+  302  ./install_drivers.sh
+  303  init 0
+  304  ./install_drivers.sh 
+  305  sh install_drivers.sh 
+  306  clear
+  307  ls
+  308  ./ti_permissions_install.sh 
+  309  make clean
+  310  ls
+  311  vim cdev.c 
+  312  vim Makefile 
+  313  make
+  314  ls
+  315  insmod cdev.ko 
+  316  dmesg
+  317  gcc cdevtest.c 
+  318  ./a.out 
+  319  vim cdev.c 
+  320  cd ..
+  321  ls
+  322  cd cdev-dyn/
+  323  ls
+  324  vim cdev_load 
+  325  ./cdev_load
+  326  vim cdev_load 
+  327  sh cdev_load 
+  328  cp cdev_load ../prac/
+  329  cd ../prac/
+  330  ls
+  331  insmod cdev
+  332  rmmod cdev.ko
+  333  sh cdev
+  334  sh cdev_load 
+  335  dmesg
+  336  ./a.out 
+  337  dmesg
+  338  cp ../cdev-dyn/cdev_unload .
+  339  sh cdev_unload 
+  340  ls
+  341  dmesg
+  342  clear
+  343  apt-get install usbboot
+  344  apt-get install usb-boot
+  345  cd 
+  346  exit
+  347  apt-get install dfu-utils
+  348  apt-get install dfu-util
+  349  dfu-util -l
+  350  cd
+  351  exit
+  352  ./ti-processor-sdk-rtos-am57xx-evm-04.02.00.09-Linux-x86-Install.bin
+  353  chmod 777 ti-processor-sdk-rtos-am57xx-evm-04.02.00.09-Linux-x86-Install.bin
+  354  ./ti-processor-sdk-rtos-am57xx-evm-04.02.00.09-Linux-x86-Install.bin
+  355  ssh root@10.3.6.23
+  356  ssh mahesh@10.3.6.23
+  357  exit
+  358  make tools BOARD=idkAM572x SOC=AM572x
+  359  ls
+  360  cd tools/
+  361  ls
+  362  cd flashWriter/
+  363  ls
+  364  cd qspi/
+  365  ls
+  366  cd bin/
+  367  ls
+  368  cd idkAM572x/
+  369  ls
+  370  file qspi_flash_writer.out
+  371  ls
+  372  rm qspi_flash_writer.out 
+  373  cd ../../../../
+  374  ls
+  375  cd ../
+  376  ls
+  377  make tools BOARD=idkAM572x SOC=AM572x
+  378  cd -
+  379  cd flashWriter/qspi/bin/idkAM572x/
+  380  ls
+  381  ls obj/
+  382  cd ../
+  383  cd ../../../../
+  384  make tools BOARD=idkAM572x SOC=AM572x
+  385  export BIN_PATH=$(TI_PDK_INSTALL_DIR)/packages/ti/boot/sbl/binary
+  386  pwd
+  387  export TI_PDK_INSTALL_DIR=/opt/ti/pdk_am57xx_1_0_9/packages
+  388  export BIN_PATH=$(TI_PDK_INSTALL_DIR)/packages/ti/boot/sbl/binary
+  389  export TI_PDK_INSTALL_DIR=/opt/ti/pdk_am57xx_1_0_9/packages:$TI_PDK_INSTALL_DIR
+  390  export BIN_PATH=$(TI_PDK_INSTALL_DIR)/packages/ti/boot/sbl/binary
+  391  cd ../../
+  392  ls
+  393  cd ../
+  394  ls
+  395  pdksetupenv.sh
+  396  ./pdksetupenv.sh
+  397  ls
+  398  source pdksetupenv.sh
+  399  make clean
+  400  ls
+  401  ls ti/boot/
+  402  ls ti/boot/sbl/
+  403  make sbl
+  404  make boot
+  405  make tools
+  406  cd ti/boot/sbl/
+  407  ls
+  408  make
+  409  ls
+  410  cd tools/
+  411  ls
+  412  cd flashWriter/
+  413  ls
+  414  cd qspi/
+  415  ls
+  416  cd ../../
+  417  ls
+  418  cd ../
+  419  make cleam
+  420  make clean
+  421  cd ../
+  422  ls
+  423  cd ../
+  424  ls
+  425  cd board/
+  426  ls
+  427  cd build/
+  428  ls
+  429  make clean
+  430  cd ../../
+  431  cd ../
+  432  ls
+  433  vi Rules.make 
+  434  ls
+  435  vi makefile 
+  436  make sbl
+  437  clean
+  438  clear
+  439  make sbl
+  440  vi makefile 
+  441  make all
+  442  ls
+  443  source pdksetupenv.sh
+  444  ls /root/
+  445  ls
+  446  ls /opt/ti/
+  447  source pdksetupenv.sh
+  448  vi pdksetupenv.sh
+  449  source pdksetupenv.sh
+  450  vi pdksetupenv.sh
+  451  source pdksetupenv.sh
+  452  \env
+  453  exit
+  454  chmod 777 -R * 
+  455  exit
+  456  minicom -D /dev/ttyUSB1
+  457  cd ../
+  458  ls
+  459  cd ../../
+  460  ls
+  461  cd bin/
+  462  ls
+  463  cd idkAM572x
+  464  la
+  465  ls
+  466  cd armv7/
+  467  ls
+  468  file qspi_diagExample_idkAM572x_armv7.out
+  469  ifconfig
+  470  ls
+  471  cd /home/ee209357/Documents/
+  472  ls
+  473  cd am5728/
+  474  ls
+  475  cd 2017-sdk/
+  476  ls
+  477  cd u-boot-am4377/
+  478  ls
+  479  find -name am437x-idk-evm.dtb
+  480  vi ./am43xx_evm_latest/arch/arm/dts/am437x-idk-evm.dtb
+  481  cd /home/ee209357/Documents/
+  482  ls
+  483  cd am5728/2017-sdk/u-boot-am4377/
+  484  ls
+  485  vi include/configs/am57xx_evm.h 
+  486  vi configs/am57xx_evm_
+  487  vi configs/am57xx_evm_defconfig 
+  488  vi Makefile 
+  489  ls
+  490  cd /home/ee209357/Documents/
+  491  ls
+  492  cd am5728/
+  493  cd ../
+  494  cd u-boot
+  495  ls
+  496  vi TISDK-README 
+  497  vi config.mk 
+  498  vi Kbuild 
+  499  vi Kconfig 
+  500  vi u-boot.sym 
+  501  find -name version.c
+  502  vi ./cmd/version.c
+  503  grep -irn "U_BOOT_VERSION_STRING" *
+  504  grep -irn "U_BOOT_DATE" *
+  505  grep -irn "version" *
+  506  grep -irn "2016" *
+  507  grep -irn "u-boot2016" *
+  508  grep -irn "u-boo" *
+  509  vi arch/blackfin/include/asm/u-boot.h
+  510  grep -irn "u-boot" *
+  511  vi include/configs/am57xx_evm.h 
+  512  ls
+  513  vi README 
+  514  ls
+  515  vi MAINTAINERS 
+  516  vi snapshot.commit 
+  517  cd ../
+  518  ls
+  519  cd am5728/
+  520  ls
+  521  cd u-boot
+  522  ls
+  523  vi u-boot.srec
+  524  vi include/configs/am57xx_evm.h 
+  525  cd ../
+  526  ls
+  527  cd 2017-sdk/u-boot-am4377/include/configs/
+  528  vi am57xx_evm.h 
+  529  cp u-boot.img /media/ee209357/
+  530  sync
+  531  cd ../
+  532  ls
+  533  cd ../
+  534  ls
+  535  cd ../
+  536  ls
+  537  l
+  538  ls
+  539  cd 2017-sdk/u-boot-am4377/
+  540  ls
+  541  cd am57xx_evm
+  542  ls
+  543  ls /media/ee209357/
+  544  mv /media/ee209357/6EE2-D395/MLO /media/ee209357/6EE2-D395/MLO_backup
+  545  cp MLO /media/ee209357/6EE2-D395/
+  546  cp /media/ee209357/u-boot.img /media/ee209357/6EE2-D395/
+  547  sync
+  548  ls
+  549  bin2header u-boot.bin
+  550  ls
+  551  vi u-boot.h
+  552  pwd
+  553  vi u-boot.h
+  554  cp u-boot.h /opt/ti/pdk_am57xx_1_0_9/packages/ti/board/diag/qspi/src/
+  555  vi u-boot.h
+  556  ll
+  557  vi u-boot.h
+  558  ls
+  559  cd spl/
+  560  ls
+  561  pwd
+  562  ls
+  563  pwd
+  564  cd ../../
+  565  vi include/configs/am57xx_evm.h 
+  566  grep -irn "bootmode" *
+  567  ifconfig
+  568  apt-get install meld
+  569  ls
+  570  grep -nir "sf_write" .
+  571  vim drivers/mtd/spi/sandbox.c +39
+  572  ls
+  573  cd cmd/
+  574  ls
+  575  cd fastboot
+  576  ls
+  577  cd ..
+  578  ls
+  579  cd ..
+  580  ls
+  581  cd examples/
+  582  ls
+  583  cd ..
+  584  ls
+  585  grep -nir "sf write" .
+  586  vim cmd/sf.c 
+  587  ctags -R
+  588  vim cmd/sf.c 
+  589  cd am57xx_evm
+  590  ls
+  591  ls -l
+  592  vim u-boot.h 
+  593  rm u-boot.h 
+  594  ls
+  595  ls -l
+  596  vim u-boot.h 
+  597  file u-boot
+  598  file u-boot.bin 
+  599  file u-boot.img 
+  600  ls
+  601  cp u-boot.h /opt/ti/pdk_am57xx_1_0_9/packages/ti/board/diag/qspi/src/
+  602  ls
+  603  cd ..
+  604  vim cmd/sf.c 
+  605  find spi_flash.c
+  606  find spi_flash.h
+  607  vim cmd/sf.c 
+  608  ls
+  609  find -name spi_flash.h
+  610  find -name spi_flash.c
+  611  vim drivers/mtd/spi/spi_flash.c
+  612  vim cmd/sf.c
+  613  grep -nir "struct dm_spi_flash_ops" .
+  614  vim drivers/mtd/spi/sf_probe.c
+  615  ls
+  616  cd am57xx_evm/
+  617  ls
+  618  cp MLO.h /home/ee209357/
+  619  ls
+  620  cp u-boot.bin /media/ee209357/6EE2-D395/
+  621  sync
+  622  cd ..
+  623  vim cmd/sf.c 
+  624  ls
+  625  vim include/configs/am57xx_evm.h 
+  626  ls
+  627  cd board/ti/am57xx/
+  628  ls
+  629  vi board.c 
+  630  grep -irn "CONFIG_SYS_SDRAM_BASE" *
+  631  cd ../
+  632  grep -irn "CONFIG_SYS_SDRAM_BASE" *
+  633  ../
+  634  cd ../
+  635  grep -irn "CONFIG_SYS_SDRAM_BASE" *
+  636  ls
+  637  cd ../
+  638  cd include/
+  639  grep -irn "CONFIG_SYS_SDRAM_BASE" *
+  640  vi configs/am57xx_evm.h 
+  641  q
+  642  ls
+  643  cd ../
+  644  grep -irn "CONFIG_SYS_SDRAM_BASE" configs/
+  645  ls
+  646  vi configs/am43xx_evm_qspiboot_defconfig 
+  647  vi include/configs/am43xx_evm.h 
+  648  ls
+  649  cd am57xx_evm
+  650  ls
+  651  cp MLO u-boot.img /media/ee209357/6EE2-D395/
+  652  sync
+  653  sl
+  654  ls
+  655  vim System.map 
+  656  cd 
+  657  cd -
+  658  cd ..
+  659  ls
+  660  grep -nir "Unsupported Boot device !" .
+  661  cd ../
+  662  ls
+  663  cd ..
+  664  ls
+  665  cd ..
+  666  ls
+  667  cd am5728/
+  668  ls
+  669  cd ..
+  670  ls
+  671  cd u-boot-2017-sdk/
+  672  ls
+  673  cd s
+  674  cd spl/
+  675  ls
+  676  cd ..
+  677  ls
+  678  cd examples/
+  679  vim 
+  680  cd ..
+  681  ls
+  682  vim include/configs/am57xx_evm.h 
+  683  cd ..
+  684  ls
+  685  cd am5728/
+  686  ls
+  687  cd 2017-sdk/
+  688  ls
+  689  cd ..
+  690  ls
+  691  cd u-boot
+  692  ls
+  693  vim README 
+  694  cd ..
+  695  ls
+  696  cd u-boot
+  697  ls
+  698  export PATH=/home/ee209357/Documents/Toolchain/bin
+  699  make CROSS_COMPILE=arm-linux-gnueabihf- O=am57xx_evm am57xx_evm_defconfig
+  700  export PATH=/home/ee209357/Documents/Toolchain/bin/:$PATH
+  701  make CROSS_COMPILE=arm-linux-gnueabihf- O=am57xx_evm am57xx_evm_defconfig
+  702  export PATH=$PATH:/home/ee209357/Documents/Toolchain/bin
+  703  make CROSS_COMPILE=arm-linux-gnueabihf- O=am57xx_evm am57xx_evm_defconfig
+  704  export PATH=$PATH:/home/ee209357/Documents/Toolchain/bin/
+  705  make CROSS_COMPILE=arm-linux-gnueabihf
+  706  ls
+  707  minicom -D /dev/ttyUSB1
+  708  cd /home/ee209357/Documents/
+  709  ls
+  710  grep -irn "2016.05" am5728/
+  711  cd am5728/2017-sdk/u-boot-m1/
+  712  ls
+  713  vi include/configs/am57xx_evm.h 
+  714  meld include/configs/am57xx_evm.h ../u-boot-am4377/include/configs/am57xx_evm.h 
+  715  vimdiff include/configs/am57xx_evm.h ../u-boot-am4377/include/configs/am57xx_evm.h 
+  716  diff -Naur include/configs/am57xx_evm.h ../u-boot-am4377/include/configs/am57xx_evm.h 
+  717  diff include/configs/am57xx_evm.h ../u-boot-am4377/include/configs/am57xx_evm.h 
+  718  diff configs/am57xx_evm_defconfig ../u-boot-am4377/configs/am57xx_evm_defconfig 
+  719  diff -Naur configs/am57xx_evm_defconfig ../u-boot-am4377/configs/am57xx_evm_defconfig 
+  720  vimdiff configs/am57xx_evm_defconfig ../u-boot-am4377/configs/am57xx_evm_defconfig 
+  721  vimdiff .config ../u-boot-am4377/am57xx_evm/.config 
+  722  ls
+  723  diff board/ti/am57xx/board.c ../u-boot-am4377/board/ti/am57xx/board.c 
+  724  vi board/ti/am57xx/board.c
+  725  ls
+  726  vi u-boot.bin
+  727  vi u-boot.srec
+  728  vi include/configs/am57xx_evm.h 
+  729  vi ../u-boot-am4377/include/configs/am57xx_evm.h 
+  730  vi ../u-boot-am4377/am57xx_evm/.config 
+  731  cd ../
+  732  grep -irn "Nov 09 2016" am5728/
+  733  grep -irn "Nov 09 2016" ../../am5728/
+  734  cd u-boot-am4377/
+  735  ls
+  736  vi board/ti/am57xx/board.c 
+  737  vi include/configs/am57xx_evm.h 
+  738  vimdiff configs/am57xx_evm_defconfig configs/am57xx_evm_nodt_defconfig 
+  739  vi configs/am43xx_evm_qspiboot_defconfig 
+  740  make CROSS_COMPILE=arm-linux-gnueabihf- O=am57xx_evm distclean
+  741  make CROSS_COMPILE=arm-linux-gnueabihf- O=am57xx_evm1 distclean
+  742  vi include/configs/am57xx_evm.h 
+  743  ls
+  744  make CROSS_COMPILE=arm-linux-gnueabihf- O=am57xx_evm1 am57xx_evm_nodt_defconfig
+  745  make CROSS_COMPILE=arm-linux-gnueabihf- O=am57xx_evm1
+  746  ls
+  747  cd am57xx_evm1/
+  748  ls
+  749* 
+  750  ls
+  751  lks
+  752  ls
+  753* 
+  754  make CROSS_COMPILE=arm-linux-gnueabihf- O=am57xx_evm1 am57xx_evm_nodt_defconfig
+  755* make CROSS_COMPILE=arm-linux-gnueabihf- O=
+  756  export PATH=$PATH:/home/ee209357/Documents/Toolchain/bin/
+  757  make CROSS_COMPILE=arm-linux-gnueabihf- O=am57xx_evm1 distclean
+  758  make CROSS_COMPILE=arm-linux-gnueabihf- O=am57xx_evm1 am57xx_evm_nodt_defconfig
+  759  make CROSS_COMPILE=arm-linux-gnueabihf- O=am57xx_evm1
+  760  ls
+  761  cd am57xx_evm1/
+  762  ls
+  763  ls -l
+  764  chmod 777 MLO u-boot.img 
+  765  ls
+  766  cd ..
+  767  vim include/configs/am43xx_evm.h 
+  768  vim include/configs/am57xx_evm.h 
+  769  grep -irn "uboot.env" include/configs/
+  770  vi include/configs/am43xx_evm.h +82
+  771  vi include/configs/ib62x0.h +69
+  772  grep -irn "FAT_ENV_FILE" include/configs/
+  773  grep -irn "uEnv" include/configs/
+  774  vi include/configs/omap3_beagle.h +115
+  775  vi include/configs/am43xx_evm.h
+  776  vi include/configs/am57xx_evm.h 
+  777  make CROSS_COMPILE=arm-linux-gnueabihf- O=am57xx_evm1 distclean
+  778  make CROSS_COMPILE=arm-linux-gnueabihf- O=am57xx_evm1 am57xx_evm_nodt_defconfig
+  779  make CROSS_COMPILE=arm-linux-gnueabihf- O=am57xx_evm1
+  780  vi ../include/configs/ti_omap5_common.h
+  781  vi include/configs/ti_omap5_common.h
+  782  ls
+  783* 
+  784  pwd
+  785  cp am43xx_evm/u-boot.bin /home/ee209357/Downloads/Bin2Header-0.1.0/bin/
+  786  ls
+  787  vim /include/configs/ti_omap5_common.h +117
+  788  vim include/configs/ti_omap5_common.h +117
+  789  vim include/configs/am57xx_evm.h 
+  790  make CROSS_COMPILE=arm-linux-gnueabihf- O=am57xx_evm1 distclean
+  791  make CROSS_COMPILE=arm-linux-gnueabihf- O=am57xx_evm1 am57xx_evm_nodt_defconfig
+  792  make CROSS_COMPILE=arm-linux-gnueabihf- O=am57xx_evm1
+  793  ls
+  794  cd am57xx_evm1/
+  795  ls
+  796  cp u-boot.img /home/ee209357/Downloads/Bin2Header-0.1.0/bin/
+  797  ls
+  798  vim 
+  799  ls
+  800* make CROSS_COMPILE=arm-linux-gnueabihf- O=am57xx_evm1
+  801  make CROSS_COMPILE=arm-linux-gnueabihf- O=am57xx_evm1 am57xx_evm_nodt_defconfig
+  802  make CROSS_COMPILE=arm-linux-gnueabihf- O=am57xx_evm1
+  803  cd ..
+  804  vim include/configs/am57xx_evm.h 
+  805  grep -nir "CONFIG_BOOTCOMMAND" .
+  806  history > cmd.txt

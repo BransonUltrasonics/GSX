@@ -1,0 +1,19 @@
+# Automatically generated file: do not edit
+
+##########################
+# WEBCLI_COMMON Section
+##########################
+
+
+ifdef _WRS_CONFIG_WEBCLI_COMMON
+VSBL_WEBCLI_COMMON_SRC = 
+VSBL_WEBCLI_COMMON_DEPEND = 
+ifdef _WRS_CONFIG_WEBCLI_1_0_0_3_COMMON_1_0_3_2
+VSBL_WEBCLI_COMMON_SRC += WEBCLI_COMMON
+VSBL_WEBCLI_COMMON_DEPEND += IPNET_COREIP
+WEBCLI_COMMON_FASTBUILD = YES
+VSBL_WEBCLI_COMMON_PATH = $(WIND_BASE)/pkgs/app/webcli-1.0.0.3/common-1.0.3.2
+VSBL_WEBCLI_COMMON_VERSION = WEBCLI_1_0_0_3_COMMON_1_0_3_2
+endif
+endif
+

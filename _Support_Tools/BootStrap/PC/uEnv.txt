@@ -1,0 +1,9 @@
+bootpart=0:1
+loadaddr=0x80100000
+loadbootenv=load mmc 0:1 0x80100000 ${bootenv}
+bootfile=vxWorks.bin
+loadimage=load ${devtype} ${bootpart} ${loadaddr} ${bootfile}
+loadfdt=load ${devtype} ${bootpart} ${fdtaddr} ${fdtfile}
+bootcmd=mmc rescan; load mmc 0:1 0x80100000 vxWorks.bin; go 0x80100000
+uenvcmd=boot
+

@@ -1,0 +1,17 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/ui/audio-1.0.0.2/demo-1.0.1.1/cdf/30audioDemo.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/ui/audio-1.0.0.2/demo-1.0.1.1/cdf/40audioDemoPlayback.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/ui/audio-1.0.0.2/demo-1.0.1.1/cdf/40audioDemoRecord.cdf>
+
+Layer Layer::AUDIO_DEMO {
+	NAME AUDIO_DEMO
+}

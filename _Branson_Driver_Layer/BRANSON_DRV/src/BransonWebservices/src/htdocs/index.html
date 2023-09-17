@@ -1,0 +1,324 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>BRANSON</title>
+<meta name="robots" content="noindex,nofollow">
+<link href="/fs/styles.css" rel="stylesheet" type="text/css">
+</head>
+ <style>
+ .bar {
+  width: 55%;
+  height: 15px;
+  border: 1px solid #2980b9;
+  border-radius: 3px;
+
+ position:absolute;
+  left:20%;
+  right:0;
+  top:86%;
+  bottom:0;
+  
+  background-image: 
+    repeating-linear-gradient(
+      -45deg,
+      #68A4EB,
+      #68A4EB 11px,
+      #eee 10px,
+      #eee 20px /* determines size */
+    );
+  background-size: 28px 28px;
+  animation: move .5s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 28px 0;
+  }
+ }
+  
+  .container {
+	height:650px; 
+	width:1200px;  
+	position:absolute; 
+	margin:auto; 
+	top:0; 
+	right:0; 
+	bottom:0; 
+	left:0; 
+	zoom:100%;
+  }
+  
+ .backgroundBox {
+	height:60%; 
+	width:80%; 
+	position:absolute; 
+	margin:auto; 
+	top:0; 
+	right:0; 
+	bottom:0; 
+	left:0; 
+	border-radius:20px; 
+	border:6px solid gray; 
+	background-color:#f0f2f4;
+  }
+  
+ .uploadBox {
+	float:left; 
+	height:55%; 
+	width:20%;
+	border:6px solid #c5ccd3; 
+	border-radius:10%; 
+	margin-top:0; 
+	margin-bottom:50px;  
+	background-color:transparent; 
+	margin-left:9%;
+  }
+  
+ .uploadButton {
+	height:25%; 
+	width:28%; 
+	border:4px solid #c5ccd3; 
+	font-weight:bold; 
+	font-size:30px; 
+	color:#c5ccd3; 
+	text-align:center; 
+	border-radius:50%;
+	background-color:transparent; 
+	margin-top:40px; 
+	margin-left:35%; 
+	display:inline-block;
+ }
+ 
+ .submitButton {
+	position:absolute; 
+	top:82.5%; 
+	left:80%; 
+	width:10%; 
+	height:40px;
+	background-color:#68A4EB; 
+	color:#FFFFFF; 
+	font-weight:bold;
+ }
+ 
+ .pageFooter {
+	position:absolute; 
+	top:93%;
+	left:45%;
+	bottom:0;
+	font-size:15px; 
+	color:gray;
+	face:verdana;
+	text-align:center;
+  }
+ 
+</style>
+ <script>
+function getSCFirmware()
+{
+	var scFileUpload = document.getElementById("scFileUpload");
+	var scButton = document.getElementById("scBtnFileUpload");
+	scFileUpload.click();
+	scFileUpload.onchange = function() 
+	{
+		var scFileName  = scFileUpload.value.split('\\')[scFileUpload.value.split('\\').length -1];
+		var allowedExtensions = /(\.bin)$/i;	
+		if(scFileName.localeCompare("") != 0 )
+		{
+			if (!allowedExtensions.exec(scFileName))
+			{
+				document.getElementById("scFirmware").innerHTML = "";
+				alert('Invalid file');
+			}
+			else
+			{
+				var scUploadedHeader = scFileName.substring(0,3);
+				var scFirmwareHeader = "SC_";
+				if(scUploadedHeader.localeCompare(scFirmwareHeader) == 0)
+				{
+					document.getElementById("scFirmware").innerHTML = scFileName;
+				}
+				else
+				{
+					document.getElementById("scFirmware").innerHTML = "";
+					alert('Invalid file');
+				}
+				
+			}
+		}
+		else
+		{
+			document.getElementById("scFirmware").innerHTML = "";
+		}
+	};
+}
+function getPCFirmware()
+{
+	var pcFileUpload = document.getElementById("pcFileUpload");
+	var pcFilePath = document.getElementById("pcSpnFilePath");
+	var pcButton = document.getElementById("pcBtnFileUpload");
+	pcFileUpload.click();
+	pcFileUpload.onchange = function() 
+	{
+		var pcFileName  = pcFileUpload.value.split('\\')[pcFileUpload.value.split('\\').length -1];
+		var allowedExtensions = /(\.bin)$/i;
+		if(pcFileName.localeCompare("") != 0 )
+		{
+			if (!allowedExtensions.exec(pcFileName))
+			{
+				document.getElementById("pcFirmware").innerHTML = "";
+				alert('Invalid file');
+			}
+			else
+			{
+			
+				var pcUploadedHeader = pcFileName.substring(0,3);
+				var pcFirmwareHeader = "PC_";
+				if(pcUploadedHeader.localeCompare(pcFirmwareHeader) == 0)
+				{
+					document.getElementById("pcFirmware").innerHTML = pcFileName;
+				}
+				else
+				{
+					document.getElementById("pcFirmware").innerHTML = "";
+					alert('Invalid file');
+				}
+				
+			}
+		}
+		else
+		{
+			document.getElementById("pcFirmware").innerHTML = "";
+		}
+	};
+}
+function getACFirmware()
+{
+	var acFileUpload = document.getElementById("acFileUpload");
+	var acFilePath = document.getElementById("acSpnFilePath");
+	var acButton = document.getElementById("acBtnFileUpload");
+	acFileUpload.click();
+	acFileUpload.onchange = function() 
+	{
+		var acFileName  = acFileUpload.value.split('\\')[acFileUpload.value.split('\\').length -1];
+		var allowedExtensions = /(\.bin)$/i;
+		
+		if(acFileName.localeCompare("") != 0 )
+		{
+			if (!allowedExtensions.exec(acFileName))
+			{
+				document.getElementById("acFirmware").innerHTML = "";
+				alert('Invalid file');
+			}
+			else
+			{
+			
+				var acUploadedHeader = acFileName.substring(0,3);
+				var acFirmwareHeader = "AC_";
+				if(acUploadedHeader.localeCompare(acFirmwareHeader) == 0)
+				{
+					document.getElementById("acFirmware").innerHTML = acFileName;
+				}
+				else
+				{
+					document.getElementById("acFirmware").innerHTML = "";
+					alert('Invalid file');
+				}
+				
+			}
+		}
+		else
+		{
+			document.getElementById("acFirmware").innerHTML = "";
+		}
+	};
+}
+
+function validateForm()
+{
+	var scFirmwareUploaded = document.forms["uploadForm"]["scFirmwareFile"].value;
+	var pcFirmwareUploaded = document.forms["uploadForm"]["pcFirmwareFile"].value;
+	var acFirmwareUploaded = document.forms["uploadForm"]["acFirmwareFile"].value;
+
+	if ((scFirmwareUploaded == "") && (pcFirmwareUploaded == "") && (acFirmwareUploaded == ""))
+	{
+		alert('No Firmware Selected !!');
+		return false;
+	}
+	else
+	{
+		document.getElementById("pLoader").style.display = "block";
+		
+		if (scFirmwareUploaded == "")
+		{
+			document.getElementById("scFileUpload").disabled = true;
+		}
+		if (pcFirmwareUploaded == "")
+		{
+			document.getElementById("pcFileUpload").disabled = true;
+		}
+		if (acFirmwareUploaded == "")
+		{
+			document.getElementById("acFileUpload").disabled = true;
+		}	
+	}
+}
+
+</script>
+
+<div class = "container"> 
+	<body>
+	<h1 style="color:grey; position: relative; text-indent: 40%; top:25px">Upgrade Software</h1>
+
+	<form class="body_t" name = "uploadForm"  action="/upload/uploaded.html" method="post" enctype="multipart/form-data">
+		<div class = "backgroundBox" >
+		
+			<h4 style ="font-size:17px; color:gray; margin-left:9%; text-align:justify; word-wrap:break-word;"> Choose the software for below modules </h4>
+			
+			<div class = "uploadBox" >
+			
+				<input type = "button" class = "uploadButton" id= "scBtnFileUpload" value = "+" onclick = "getSCFirmware()" />
+				<input type = "file" id = "scFileUpload" name = "scFirmwareFile" style = "display:none"/>
+				<h4 style ="font-size:17px; color:gray; text-align:center; word-wrap:break-word;">Supervisory<br>Controller</h4>
+				<h4 style = "font-size:13px; color:gray; text-align:center; word-wrap:break-word;" id= "scFirmware"></h4>
+				
+			</div>
+		
+			<div class = "uploadBox" >
+			
+			<input type = "button" class = "uploadButton" id= "pcBtnFileUpload" value = "+" onclick = "getPCFirmware()" />
+			<input type = "file" id = "pcFileUpload" name = "pcFirmwareFile" style = "display:none"/>
+			<h4 style = "font-size:17px; color:gray; text-align:center; word-wrap:break-word;">Power<br>Controller</h4>
+			<h4 style = "font-size:13px; color:gray; text-align:center; word-wrap:break-word;" id= "pcFirmware"></h4>
+			
+			</div>
+		
+			<div class = "uploadBox" >	
+			
+			<input type = "button" class = "uploadButton" id= "acBtnFileUpload" value = "+" onclick = "getACFirmware()" />
+			<input type = "file" id = "acFileUpload" name = "acFirmwareFile" style = "display:none"/>
+			<h4 style = "font-size:17px; color:gray; text-align:center; word-wrap:break-word;"> Actuation<br>Controller</h4>
+			<h4 style = "font-size:13px; color:gray;text-align:center; word-wrap:break-word;" id= "acFirmware"></h4>
+			
+			</div>
+			<input type="submit" class ="submitButton" name="goto" value="UPLOAD" onclick = "return validateForm()"/>			
+			<div id = "pLoader" class="bar" style= "display:none"></div>		
+			
+		</div>
+		
+	</form>	
+
+	<div style = "position:absolute; top:82%; left:20%; bottom:0; color:gray; font-size:17px;">
+		<p><b>Note : </b><i>UI application should be running. Notification will be sent post successful software upload.</i></p>
+	</div>	
+		
+	</body>
+	
+	<footer>
+		<div class = "pageFooter">
+		<p><i> Use Google Chrome Only </i></p>
+		</div>
+	</footer>
+	
+</div>
+</html>

@@ -1,0 +1,670 @@
+/************************************************************************** 
+
+      Copyright (c) Branson Ultrasonics Corporation, 1996-2018
+ 
+     This program is the property of Branson Ultrasonics Corporation
+     Copying of this software is expressly forbidden, without the prior
+     written consent of Branson Ultrasonics Corporation.
+ 
+***************************************************************************/
+
+#ifndef DATABASEMANAGER_H_
+#define DATABASEMANAGER_H_
+
+#include  "Common.h"
+#include "CommonProperty.h"
+#include "SQLiteDB.h"
+#include "UserInterface.h"
+#include "AlarmManager.h"
+#include "versions.h"
+#include "Recipe.h"
+#include "RecipeZeroValidate.h"
+
+const INT32 DB_VERSION = 8;
+
+#define DB_VER5_RECIPE_ZERO_PARAMS	",100,0,100,0,100"
+#define DB_VER5_SETUP_LIMITS		",'0:0:100','0:0:100'"
+
+#define GETDATA				0
+#define SETDATA				1
+#define MAX_FILE_LIMIT		100
+#define MAX_FILE_LENGTH		50
+#define CALIBRATION_READINGS 2
+
+#define RECIPE_ID_MIN_RANGE				 	1
+#define RECIPE_ID_MAX_RANGE				 	1000
+#define NUM_OF_ACTIVE_RECIPE_DB_DATA		124
+#define NUM_OF_SUS_REJ_RECIPE_DB_DATA		84
+
+#define DB_STORAGE_ALERTLEVEL1 		80 
+#define DB_STORAGE_ALERTLEVEL2		85
+#define DB_STORAGE_ALERTLEVEL3		90
+#define DB_STORAGE_ALERTLEVEL4		95
+
+#define STATUS_LEVEL1				1
+#define STATUS_LEVEL2 				2
+#define STATUS_LEVEL3 				3
+#define STATUS_LEVEL4 				4
+#define STATUS_LEVEL5 				5
+
+#define CHECK_STATUS_BIT0 			0
+#define CHECK_STATUS_BIT1			1
+#define CHECK_STATUS_BIT2			2
+#define CHECK_STATUS_BIT3			3
+
+#define BATCHID_SIZE				50
+#define CONVERSION_CYCLE			1			/* 1 milliseconds into float */
+#define CONVERSION_SECONDS			1000		/* milliseconds to seconds */
+#define CONVERSION_KHZ				10			/* Hz to KHz */
+	
+typedef enum 
+{
+	ESTOP_RELEASE	= 0,
+	ESTOP_PRESS,
+	
+	USER_LOGIN, 
+	USER_LOGOUT,
+	USER_CREATED,
+	USER_MODIFIED,
+	
+	HORN_SCAN_COMPLETED,
+	SEEK_PERFORM,
+	PART_CONTACT_PERFORM,
+	CALIBRATION_COMPLETED,
+		
+	RECIPE_CREATED, 
+	RECIPE_SAVED,
+	RECIPE_COPIED,
+	RECIPE_MODIFIED,
+	RECIPE_VALIDATION,
+	
+	CYCLE_COUNT_RESET,
+	SYSTEM_HW_CHANGED, 
+	SYSTEM_CLEANED,
+	SYSTEM_FACTORY_RESET,
+	SYSTEM_TIME_CHANGED,
+	SYSTEM_CONFIGURATION,
+	SYSTEM_DB_DELETED,
+	SYSTEM_LOG_DELETED,
+	SYSTEM_BATT_LOW,
+	SYSTEM_SW_VER_CHANGE,
+
+	WEB_SERVICES,
+	USER_LOGIN_WEB,
+	USER_LOGOUT_WEB,
+	
+	RECIPE_DELETED
+
+}LOG_EVENT;
+
+
+typedef enum 
+{
+	MODE_TIME = 1,
+	MODE_ENERGY,
+	MODE_POWER,
+	MODE_GROUND_DETECT,
+	MODE_ABSOLUTE,
+	MODE_COLLAPSE,
+	MODE_DYNAMIC
+} WELD_MODES;
+
+typedef enum 
+{
+	STEP_TIME = 1,
+	STEP_ENERGY,
+	STEP_POWER,
+	STEP_ABSOLUTE,
+	STEP_COLLAPSE,
+	STEP_EXTERNAL
+} STEP_TYPE;
+
+typedef enum {
+	
+	NO_LOG_ID,
+	WELD_RESULTS_LOG_ID,
+	WELD_SIGNATURE_LOG_ID,
+	EVENT_LOG_LOG_ID,
+	ALARM_LOG_LOG_ID
+}EVENT_LOGS;
+
+enum LOG_EVENT_DETAIL
+{
+	DETAIL_USER,
+	DETAIL_COMMENT,
+	
+	DETAIL_MAX,
+};
+
+enum PRODUCTION_SETTING
+{
+	UPDATE_PRODUCTION = 0,
+	RESET_PRODUCTION
+};
+
+enum TRANSACTION_TYPE
+{
+	BULK_TRANSACTION 	= 0,
+	SINGLE_TRANSACTION
+};
+
+typedef enum
+{
+	ALARM_LOG_TABLE,
+	EVENT_LOG_TABLE,
+	WELD_RESULT_TABLE,
+	WELD_SIGNATURE_TABLE,
+	HORN_SCAN_TABLE
+}LIMITED_TABLES;
+
+typedef enum
+{
+	SC_RECIPE_NUMBER=1,
+	SC_RECIPE_NAME,
+	SC_RECIPE_REV_NUMBER,
+	SC_WELD_MODE,
+	SC_MODE_VALUE,
+	SC_HOLD_TIME,
+	SC_TRIGGER_FORCE,
+	SC_TRIGGER_DISTANCE,	
+	SC_NUM_AMP_STEPS,
+	SC_AMP_STEP_AT,
+	SC_AMP_STEP_VALUE_0,
+	SC_AMP_STEP_VALUE_1,
+	SC_AMP_STEP_VALUE_2,
+	SC_AMP_STEP_VALUE_3,
+	SC_AMP_STEP_VALUE_4,
+	SC_AMP_STEP_VALUE_5,
+	SC_AMP_STEP_VALUE_6,
+	SC_AMP_STEP_VALUE_7,
+	SC_AMP_STEP_VALUE_8,
+	SC_AMP_STEP_VALUE_9,
+	SC_AMP_STEP_0,
+	SC_AMP_STEP_1,
+	SC_AMP_STEP_2,
+	SC_AMP_STEP_3,
+	SC_AMP_STEP_4,
+	SC_AMP_STEP_5,
+	SC_AMP_STEP_6,
+	SC_AMP_STEP_7,
+	SC_AMP_STEP_8,
+	SC_AMP_STEP_9,
+	AC_WELD_FORCE,
+	AC_FORCE_RAMP_TIME,
+	AC_TOTAL_COLLAPSE_TARGET,
+	AC_HOLD_FORCE,
+	AC_HOLD_FORCE_RAMP_TIME,
+	AC_EXPECTED_PC_POSITION,
+	AC_READY_POSITION,
+	AC_DOWN_ACCELERATION,
+	AC_DOWN_MAX_VELOCITY,
+	AC_DOWN_DECELERATION,
+	AC_RETURN_ACCELERATION,
+	AC_RETURN_MAX_VELOCITY,
+	AC_RETURN_DECELERATION,	
+	SC_NUM_FORCE_STEPS,	
+	SC_FORCE_STEP_AT,
+	SC_FORCE_STEP_AT_VALUE_0,
+	SC_FORCE_STEP_AT_VALUE_1,
+	SC_FORCE_STEP_AT_VALUE_2,
+	SC_FORCE_STEP_AT_VALUE_3,
+	SC_FORCE_STEP_AT_VALUE_4,
+	SC_FORCE_STEP_AT_VALUE_5,
+	SC_FORCE_STEP_AT_VALUE_6,
+	SC_FORCE_STEP_AT_VALUE_7,
+	SC_FORCE_STEP_AT_VALUE_8,
+	SC_FORCE_STEP_AT_VALUE_9,	
+	AC_FORCE_STEP_RAMP_TIME_0,
+	AC_FORCE_STEP_RAMP_TIME_1,
+	AC_FORCE_STEP_RAMP_TIME_2,
+	AC_FORCE_STEP_RAMP_TIME_3,
+	AC_FORCE_STEP_RAMP_TIME_4,
+	AC_FORCE_STEP_RAMP_TIME_5,
+	AC_FORCE_STEP_RAMP_TIME_6,
+	AC_FORCE_STEP_RAMP_TIME_7,
+	AC_FORCE_STEP_RAMP_TIME_8,
+	AC_FORCE_STEP_RAMP_TIME_9,	
+	AC_FORCE_STEP_FORCE_0,
+	AC_FORCE_STEP_FORCE_1,
+	AC_FORCE_STEP_FORCE_2,
+	AC_FORCE_STEP_FORCE_3,
+	AC_FORCE_STEP_FORCE_4,
+	AC_FORCE_STEP_FORCE_5,
+	AC_FORCE_STEP_FORCE_6,
+	AC_FORCE_STEP_FORCE_7,
+	AC_FORCE_STEP_FORCE_8,
+	AC_FORCE_STEP_FORCE_9,
+	PC_WELD_RAMP_TIME,		
+	SC_AFTER_BURST_ENABLED,
+	SC_AFTER_BURST_DELAY,
+	SC_AFTER_BURST_TIME,
+	SC_AFTER_BURST_AMP,	
+	SC_PRETRIGGER_ENABLED,
+	SC_PRETRIGGER_AUTO_ENABLED,
+	SC_PRETRIGGER_DISTANCE_ENABLED,
+	SC_PRETRIGGER_AMP,	
+	SC_PRETRIGGER_DISTANCE,
+	SC_ENERGY_BRAKE_ENABLED,
+	SC_ENERGY_BRAKE_TIME,
+	SC_ENERGY_BRAKE_AMP,
+	SC_COOLING_VALVE,	
+	SC_MAX_WELD_TIMEOUT,
+	SC_TIMED_SEEK_ENABLED,
+	SC_PRE_WELD_SEEK_ENABLED,
+	SC_POST_WELD_SEEK_ENABLED,
+	SC_TIMED_SEEK_PERIOD,
+	AC_PC_WINDOW_MINUS,
+	AC_PC_WINDOW_PLUS,
+	AC_PC_WINDOW_OFFSET,
+	SC_GLOBAL_CONTROL,
+	SC_PEAK_POWER_CUTOFF,
+	SC_PEAK_POWER_CUTOFF_ENABLE,	
+	SC_FREQUENCY_LOW_CUTOFF,
+	SC_FREQUENCY_LOW_CUTOFF_ENABLE,	
+	SC_ABSOLUTE_CUTOFF,
+	SC_ABSOLUTE_CUTOFF_ENABLE,
+	SC_FREQUENCY_HIGH_CUTOFF,
+	SC_FREQUENCY_HIGH_CUTOFF_ENABLE,	
+	SC_COLLAPSE_CUTOFF,
+	SC_COLLAPSE_CUTOFF_ENABLE,	
+	SC_ENERGY_CUTOFF,
+	SC_ENERGY_CUTOFF_ENABLE,
+	SC_TIME_CUTOFF,
+	SC_TIME_CUTOFF_ENABLE,
+	SC_GROUND_DETECT_CUTOFF_ENABLE,
+	SC_IS_ACTIVE,
+	SC_IS_LOCKED,
+	SC_COMPANY_NAME,
+	SC_IS_VALIDATE,
+	AC_READY_POS_TOGGLE,
+	AC_WELD_FORCE_CONTROL,
+	SC_REACTIVITY,
+	SC_FORCE_LEVEL_ENABLE,
+	SC_FORCE_LEVEL,
+	SC_FORCE_LEVEL_TIME,
+	SC_SCRUB_AMPLITUDE,
+	
+	SC_DIGITAL_TUNE,
+	SC_OFFSET_FLAG,
+	SC_FREQUENCY_OFFSET,
+	SC_END_OF_WELD,
+	
+	SC_SUSPECT_GLOBAL_ENABLE,
+	SC_REJECT_GLOBAL_ENABLE,
+	
+	SC_SUSPECT_TIME_ENABLE,
+	SC_SUSPECT_TIME_LOW,
+	SC_SUSPECT_TIME_HIGH,
+	SC_REJECT_TIME_ENABLE,
+	SC_REJECT_TIME_LOW,
+	SC_REJECT_TIME_HIGH,
+	
+	SC_SUSPECT_ENERGY_ENABLE,
+	SC_SUSPECT_ENERGY_LOW,
+	SC_SUSPECT_ENERGY_HIGH,
+	SC_REJECT_ENERGY_ENABLE,
+	SC_REJECT_ENERGY_LOW,
+	SC_REJECT_ENERGY_HIGH,
+
+	SC_SUSPECT_POWER_ENABLE,
+	SC_SUSPECT_POWER_LOW,
+	SC_SUSPECT_POWER_HIGH,
+	SC_REJECT_POWER_ENABLE,
+	SC_REJECT_POWER_LOW,
+	SC_REJECT_POWER_HIGH,
+
+	SC_SUSPECT_ABSOLUTE_ENABLE,
+	SC_SUSPECT_ABSOLUTE_LOW,
+	SC_SUSPECT_ABSOLUTE_HIGH,
+	SC_REJECT_ABSOLUTE_ENABLE,
+	SC_REJECT_ABSOLUTE_LOW,
+	SC_REJECT_ABSOLUTE_HIGH,
+
+	SC_SUSPECT_COLLAPSE_ENABLE,
+	SC_SUSPECT_COLLAPSE_LOW,
+	SC_SUSPECT_COLLAPSE_HIGH,
+	SC_REJECT_COLLAPSE_ENABLE,
+	SC_REJECT_COLLAPSE_LOW,
+	SC_REJECT_COLLAPSE_HIGH,
+
+	SC_SUSPECT_TRIGGER_ENABLE,
+	SC_SUSPECT_TRIGGER_LOW,
+	SC_SUSPECT_TRIGGER_HIGH,
+	SC_REJECT_TRIGGER_ENABLE,
+	SC_REJECT_TRIGGER_LOW,
+	SC_REJECT_TRIGGER_HIGH,
+
+	SC_SUSPECT_END_FORCE_ENABLE,
+	SC_SUSPECT_END_FORCE_LOW,
+	SC_SUSPECT_END_FORCE_HIGH,
+	SC_REJECT_END_FORCE_ENABLE,
+	SC_REJECT_END_FORCE_LOW,
+	SC_REJECT_END_FORCE_HIGH,
+
+	SC_SUSPECT_FREQUENCY_ENABLE,
+	SC_SUSPECT_FREQUENCY_LOW,
+	SC_SUSPECT_FREQUENCY_HIGH,
+	SC_REJECT_FREQUENCY_ENABLE,
+	SC_REJECT_FREQUENCY_LOW,
+	SC_REJECT_FREQUENCY_HIGH,
+	
+	SC_SETUP_GLOBAL_ENABLE,
+	SC_SETUP_MODE_ENABLE,
+	SC_SETUP_AMPLITUDE_ENABLE,
+	SC_SETUP_WELD_FORCE_ENABLE,
+	SC_SETUP_TRIGGER_FORCE_ENABLE,
+	SC_SETUP_HOLD_FORCE_ENABLE,
+	SC_SETUP_HOLD_TIME_ENABLE,
+	SC_SETUP_SCRUB_AMPLITUDE_ENABLE,
+	SC_SETUP_SCRUB_TIME_ENABLE,
+
+	SC_SETUP_MODE_LOW,
+	SC_SETUP_MODE_HIGH,
+	SC_SETUP_AMPLITUDE_LOW,
+	SC_SETUP_AMPLITUDE_HIGH,
+	SC_SETUP_WELD_FORCE_LOW,
+	SC_SETUP_WELD_FORCE_HIGH,
+	SC_SETUP_TRIGGER_FORCE_LOW,
+	SC_SETUP_TRIGGER_FORCE_HIGH,
+	SC_SETUP_HOLD_FORCE_LOW,
+	SC_SETUP_HOLD_FORCE_HIGH,
+	SC_SETUP_HOLD_TIME_LOW,
+	SC_SETUP_HOLD_TIME_HIGH,
+	SC_SCRUB_AMPLITUDE_LOW,
+	SC_SCRUB_AMPLITUDE_HIGH,
+	SC_SCRUB_TIME_LOW,
+	SC_SCRUB_TIME_HIGH,
+	
+	SC_SETUP_REACTIVITY_ENABLE,
+	SC_SETUP_REACTIVITY_LOW,
+	SC_SETUP_REACTIVITY_HIGH,
+	SC_SETUP_FORCE_LEVEL_ENABLE,
+	SC_SETUP_FORCE_LEVEL_LOW,
+	SC_SETUP_FORCE_LEVEL_HIGH,
+	
+	ACTIVE_RECIPE_END
+}ACTIVE_RECIPE;
+
+typedef enum
+{
+	SC_SR_RECIPE_NUMBER,	
+	SC_SR_RECIPE_REV_NUMBER,	
+	SC_SUSPECT_LIMIT_ENABLED,
+	SC_REJECT_LIMIT_ENABLED,
+	
+	SC_SUSPECT_LIMIT_TIME_ENABLED,
+	SC_SUSPECT_LIMIT_TIME_LOW_ENABLED,
+	SC_SUSPECT_LIMIT_TIME_HIGH_ENABLED,
+	SC_SUSPECT_LIMIT_TIME_LOW,
+	SC_SUSPECT_LIMIT_TIME_HIGH,
+	SC_REJECT_LIMIT_TIME_ENABLED,
+	SC_REJECT_LIMIT_TIME_LOW_ENABLED,
+	SC_REJECT_LIMIT_TIME_HIGH_ENABLED,		
+	SC_REJECT_LIMIT_TIME_LOW,
+	SC_REJECT_LIMIT_TIME_HIGH,
+	
+	SC_SUSPECT_LIMIT_ENERGY_ENABLED,
+	SC_SUSPECT_LIMIT_ENERGY_LOW_ENABLED,
+	SC_SUSPECT_LIMIT_ENERGY_HIGH_ENABLED,
+	SC_SUSPECT_LIMIT_ENERGY_LOW,
+	SC_SUSPECT_LIMIT_ENERGY_HIGH,
+	SC_REJECT_LIMIT_ENERGY_ENABLED,
+	SC_REJECT_LIMIT_ENERGY_LOW_ENABLED,
+	SC_REJECT_LIMIT_ENERGY_HIGH_ENABLED,		
+	SC_REJECT_LIMIT_ENERGY_LOW,
+	SC_REJECT_LIMIT_ENERGY_HIGH,
+	
+	SC_SUSPECT_LIMIT_PEAK_POWER_ENABLED,
+	SC_SUSPECT_LIMIT_PEAK_POWER_LOW_ENABLED,
+	SC_SUSPECT_LIMIT_PEAK_POWER_HIGH_ENABLED,
+	SC_SUSPECT_LIMIT_PEAK_POWER_LOW,
+	SC_SUSPECT_LIMIT_PEAK_POWER_HIGH,	
+	SC_REJECT_LIMIT_PEAK_POWER_ENABLED,
+	SC_REJECT_LIMIT_PEAK_POWER_LOW_ENABLED,
+	SC_REJECT_LIMIT_PEAK_POWER_HIGH_ENABLED,			
+	SC_REJECT_LIMIT_PEAK_POWER_LOW,
+	SC_REJECT_LIMIT_PEAK_POWER_HIGH,
+	
+	SC_SUSPECT_LIMIT_ABSOLUTE_DISTANCE_ENABLED,
+	SC_SUSPECT_LIMIT_ABSOLUTE_DISTANCE_LOW_ENABLED,
+	SC_SUSPECT_LIMIT_ABSOLUTE_DISTANCE_HIGH_ENABLED,
+	SC_SUSPECT_LIMIT_ABSOLUTE_DISTANCE_LOW,
+	SC_SUSPECT_LIMIT_ABSOLUTE_DISTANCE_HIGH,
+	SC_REJECT_LIMIT_ABSOLUTE_DISTANCE_ENABLED,
+	SC_REJECT_LIMIT_ABSOLUTE_DISTANCE_LOW_ENABLED,
+	SC_REJECT_LIMIT_ABSOLUTE_DISTANCE_HIGH_ENABLED,		
+	SC_REJECT_LIMIT_ABSOLUTE_DISTANCE_LOW,
+	SC_REJECT_LIMIT_ABSOLUTE_DISTANCE_HIGH,
+
+	SC_SUSPECT_LIMIT_COLLAPSE_DISTANCE_ENABLED,
+	SC_SUSPECT_LIMIT_COLLAPSE_DISTANCE_LOW_ENABLED,
+	SC_SUSPECT_LIMIT_COLLAPSE_DISTANCE_HIGH_ENABLED,	
+	SC_SUSPECT_LIMIT_COLLAPSE_DISTANCE_LOW,
+	SC_SUSPECT_LIMIT_COLLAPSE_DISTANCE_HIGH,
+	SC_REJECT_LIMIT_COLLAPSE_DISTANCE_ENABLED,
+	SC_REJECT_LIMIT_COLLAPSE_DISTANCE_LOW_ENABLED,
+	SC_REJECT_LIMIT_COLLAPSE_DISTANCE_HIGH_ENABLED,		
+	SC_REJECT_LIMIT_COLLAPSE_DISTANCE_LOW,
+	SC_REJECT_LIMIT_COLLAPSE_DISTANCE_HIGH,
+
+	SC_SUSPECT_LIMIT_TRIGGER_DISTANCE_ENABLED,
+	SC_SUSPECT_LIMIT_TRIGGER_DISTANCE_LOW_ENABLED,
+	SC_SUSPECT_LIMIT_TRIGGER_DISTANCE_HIGH_ENABLED,
+	SC_SUSPECT_LIMIT_TRIGGER_DISTANCE_LOW,
+	SC_SUSPECT_LIMIT_TRIGGER_DISTANCE_HIGH,
+	SC_REJECT_LIMIT_TRIGGER_DISTANCE_ENABLED,
+	SC_REJECT_LIMIT_TRIGGER_DISTANCE_LOW_ENABLED,
+	SC_REJECT_LIMIT_TRIGGER_DISTANCE_HIGH_ENABLED,		
+	SC_REJECT_LIMIT_TRIGGER_DISTANCE_LOW,
+	SC_REJECT_LIMIT_TRIGGER_DISTANCE_HIGH,
+	
+	SC_SUSPECT_LIMIT_WELD_FORCE_ENABLED,
+	SC_SUSPECT_LIMIT_WELD_FORCE_LOW_ENABLED,
+	SC_SUSPECT_LIMIT_WELD_FORCE_HIGH_ENABLED,
+	SC_SUSPECT_LIMIT_WELD_FORCE_LOW,
+	SC_SUSPECT_LIMIT_WELD_FORCE_HIGH,
+	SC_REJECT_LIMIT_WELD_FORCE_ENABLED,
+	SC_REJECT_LIMIT_WELD_FORCE_LOW_ENABLED,
+	SC_REJECT_LIMIT_WELD_FORCE_HIGH_ENABLED,		
+	SC_REJECT_LIMIT_WELD_FORCE_LOW,
+	SC_REJECT_LIMIT_WELD_FORCE_HIGH,
+
+	SC_SUSPECT_LIMIT_FREQUENCY_ENABLED,
+	SC_SUSPECT_LIMIT_FREQUENCY_LOW_ENABLED,
+	SC_SUSPECT_LIMIT_FREQUENCY_HIGH_ENABLED,
+	SC_SUSPECT_LIMIT_FREQUENCY_LOW,
+	SC_SUSPECT_LIMIT_FREQUENCY_HIGH,
+	SC_REJECT_LIMIT_FREQUENCY_ENABLED,
+	SC_REJECT_LIMIT_FREQUENCY_LOW_ENABLED,
+	SC_REJECT_LIMIT_FREQUENCY_HIGH_ENABLED,		
+	SC_REJECT_LIMIT_FREQUENCY_LOW,
+	SC_REJECT_LIMIT_FREQUENCY_HIGH,
+	
+	SR_ACTIVE_RECIPE_END
+
+}SR_ACTIVE_RECIPE;
+
+typedef enum
+{
+	INDEX_ZERO,	
+	INDEX_ONE,
+	INDEX_TWO,
+	INDEX_THREE,
+	INDEX_FOUR,
+	INDEX_FIVE,	
+	INDEX_SIX,
+	INDEX_SEVEN,	
+	INDEX_EIGHT,
+	INDEX_NINE	
+}ARRAY_INDEX;
+
+class DataBaseManager
+{
+public:
+	DataBaseManager();
+	~DataBaseManager();		
+
+	STATUS			ConnectDB					();
+	void 			CloseDB						();
+	void			ProcessMessage				(char * Recv_Buffer);
+	bool			bIsTaskRunStatus			();
+	MSG_Q_ID		GetDBMsgQID					() const;
+	void			GetDateAndTime				(std::string &DateTime);	
+	bool			DeCoder						(char *Recv_Buffer, UINT32 MsgLen);		
+	static UINT32   GetCycleCounter				();	
+	
+	void			ReadAlarmConfFromDB			();
+	STATUS			WriteAlarmConfigToDB		(AlarmConfiguration *pAlarmConf);
+	void			ConfigureDefaultSeekRecipe	();
+	
+	/*Defined for checking and updating critical data in Database during power on*/
+	void			CheckCriticalData			();
+	void			GetRecipeTableInformation	(INT32 recipeNumber, INT32  &weldRecipeVerNumber, INT32 &weldMode);
+	void			GetBatchID					(INT32 recipeNumber, string &batchID);
+		
+#ifdef PERFORMANCE_MEASURE
+	void			PerformanceMeasureLog		();
+#endif
+	
+	void			ProcessTableCapacity		(LIMITED_TABLES DbTable);
+		
+	INT32			GetMessageID				() const;	
+	void 			VersionCheck  				();
+	
+	static void 	EventLogRecipeRevision		(string revisionNum);
+	static string 	EventLogUserName			();
+	static STATUS 	EnterEventLog 				(LOG_EVENT eventID, string& details);
+	static ssize_t 	EnterEventLogNVM			(LOG_EVENT eventID, void* data);
+	static ssize_t 	GetEventLogNVM				(LOG_EVENT eventID, void* data);
+	static STATUS	EnterEventLogDeleteLog 		(EVENT_LOGS LogID);
+	static STATUS	EnterEventLogSWVersion 		(FW_INFO_IDX fwIndex, void* info = NULL);
+	static string	OptimizeDB					();
+				
+	void 			GetUserDetails(Message &message);
+	void 			GetlastWeldResult();
+	void 			GetNumberOfAlarms();
+	void 			GetPasswordExpiryInDays();
+	void 			GetIdleLogoutTime();
+	void 			GetNumberOfWeldHistory(Message &message);
+	void 			GetOperatorAuthorityPrivileges();
+	void 			SetActiveRecipe(Message &message);
+	void 			DeleteRecipe(Message &message);
+	void 			SaveRecipeZeroToDB();
+	void 			GetAlarmLog(Message &message);
+	void 			GetWeldHistory(Message &message);
+	void 			GetGraphResult(Message &message);
+
+private:	
+	UINT32			GetScanID					();
+	void			CalibrationData				();
+	bool			EventLog					(LOG_EVENT eventID, string* details = NULL);
+	bool			EventLogComment				(string& userName, string& eventName, string& details);
+	string 			GetEventName				(LOG_EVENT eventID);
+	void			ReadCycleCounter			(INT32 recipeNum);
+	void			StoreAlarmLogs				(UINT8 machineId, char * Recv_Buffer);
+	void			StorePswdOverride 			(bool override);
+	void			DeleteHistory				(std::string tableName);
+	void			UpdateCycleCounter			(UINT32 cycleCounter);
+	void			SendMsgToMsgQ				(Message& msg, MSG_Q_ID& MsgQId);
+
+	void 			WeldGraphJSONFormat				(string &strJSONFormat,string &strDBData,INT32 cycleCounter,INT32 recipeNo);
+	void 			WeldHistoryJSONFormat			(string &strJSONFormat,string &strDBData);
+	void 			AlarmLogsJSONFormat				(string &strJSONFormat,string &strDBData);
+	void 			GetRuntimeDetailsOfWebservices	();
+	void 			GetAllUserDetails				();
+
+	/* Result and signature data writing into DB */
+	UINT8			StoreTestResult				();
+	UINT8			StoreSeekResult				();
+	UINT8			StoreScanResult				();
+	UINT8			StoreWeldResult				(char *pRecv_Buffer);
+	UINT8			StoreTestSignature			();
+	UINT8			StoreSeekSignature			();
+	void			StoreHornScanSignature		();
+	UINT8			StoreWeldSignature			(char *pRecv_Buffer);
+	bool 			GetRowIDFromWeldResultTable(UINT32 &recordNumber);
+	void			ProductionDataAnalysis		(INT32 recipeNumber, UINT8 weldStatus, UINT32 cycleCounter);
+	void			ResetProductionSetting		();
+	void			RetryMechanism				(char *sqlQuery, UINT8 typeOfTrans, UINT8& status, UINT32 cycleCounter = 0);
+	
+	void 			SetActiveRecipe				();
+	UINT8			ReadActiveRecipeFromDB		(INT32 ActiveRecipeID,bool bIsRecipeNum = false);
+	UINT8 			CopyActiveRecipe			(WeldRecipeSC &ScWeldRecipe, WeldRecipeAC &AcWeldRecipe, WeldRecipePC &PcWeldRecipe, string &activeRecipe);
+	UINT8 			CopySRActiveRecipe			(WeldRecipeSC &ScWeldRecipe, string &SRActiveRecipe);
+	void			BatchSetupValidation		(INT32 recipeNumber, bool bIsAlarmWeld, PRODUCTION_SETTING mode = UPDATE_PRODUCTION);
+	UINT8			UpdateDigitalTune			();
+	void			ResetBatchCount				();
+	
+	void 			ProcessAlarm (UINT8 org, UINT16 alarmID = 0);
+	void			ValidateDBStorage(string DbTable, bool *storageExceeded);
+	bool 			IsDbStorageExceed(string &DbTable, bool *storageExceeded, intf_SysConfig_t 	&sysConfig);
+	void 			DeleteOldRecords();
+	UINT32 			GetStorageLimit(intf_SysConfig_t &sysConfig);
+	void 			CheckStorageCapacity();
+	void 			ReadSeekRecipe();
+	void 			ReadScanRecipe();
+	void			ReadTestRecipe();
+	
+	void			SynchronizeWeldData			(string weldData); 
+	INT32 			UpdateDB					(INT32 existingDB);
+	void			SendCapacityWarning			(LIMITED_TABLES DbTable);
+	void			SendCapacityAlarm			(LIMITED_TABLES DbTable);
+	void 			CheckDBStorageStatus		();	 
+	void 			DeleteOldRecords			(LIMITED_TABLES DbTable);
+	void 			CheckCapacitiesForNewConfig	();
+	static bool		CheckValidVersion 			(char * swVersion);
+	INT32			DBUpdateToVer2();
+	INT32           DBUpdateToVer3();
+	INT32           DBUpdateToVer4();
+	INT32			DBUpdateToVer5();
+	INT32			DBUpdateToVer6();
+	INT32			DBUpdateToVer7();
+	INT32			DBUpdateToVer8();
+	string 			GetNewSRRecipeStr(string SRRecipeAtIdx);
+	string			GetNewSetupLimitsStr(string WeldModeLimit);
+	void			GetRecipeZero();
+	void            UpdateRecipeZeroToDBVer3();
+	void			UpdateRecipeZeroToDBVer5();
+	void			UpdateRecipeZeroToDBVer7();
+	void            UpdateRecipeZeroToDBVer8();
+	void			BackUpRecipeZero();
+	void			RevertRecipeZeroChanges();
+	INT32			DBSendCommands(vector<string> &CommandStream);
+	void            UpdateDBVersion();	
+	void			GetUserIOConfig(Message &message);
+
+private:
+	char 					Buffer[MAX_SIZE_OF_MSG_LENGTH];
+	MSG_Q_ID 				DB_MSG_Q_ID,UI_MSG_Q_ID, ALARM_MSG_Q_ID,SDO_MSG_Q_ID, CTRL_MSG_Q_ID, WEBSERVICE_MSG_Q_ID;
+	INT32 					MSG_ID,m_alarmData;
+	Message					ProcessBuffer;
+	static UINT8    		DBStatusFlag;
+	CommonProperty			*CP;
+	SQLiteDB				m_DbConn;
+	bool					m_batchSetupEnable;
+	bool					m_batchAlarmEnable;
+	UINT32					m_batchCountLimit;
+	map<LOG_EVENT,string>	m_EventNameMap, m_EventCommentMap; 	
+	map<EVENT_LOGS,string>	m_EventLogNameMap;	
+	map<ACTIVE_RECIPE,string> m_RecipeParamMap;
+	map<WELD_MODES,string> 	m_RecipeModeMap;
+	map<STEP_TYPE,string> 	m_StepTypeMap;
+	static string 			m_EventUserName;
+	static string 			recipeRevisionNum;
+	char 					m_pBarcodeData[BARCODE_DATA_SIZE];
+	UINT32					m_barcodeRecipeID;			
+	WeldRecipeSC 			ActiveRecipeSC;
+	WeldRecipeAC 			ActiveRecipeAC;
+	WeldRecipePC 			ActiveRecipePC;
+	
+#ifdef PERFORMANCE_MEASURE
+	float 					m_startTime,m_endTime;
+#endif
+
+	INT32 					m_DbMsgID;
+	RecipeZeroValidate   	m_RecipeZerodbconn;
+	
+
+};
+
+#endif /*DATABASEMANAGER_H_ */

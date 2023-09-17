@@ -1,0 +1,111 @@
+; $Header: /usr/cvsroot/target/h/wrn/wm/util/layout/sntp.ldb,v 1.1.1.1 2001/11/05 17:47:20 tneale Exp $
+; Layout information for SNTP
+
+;****************************************************************************
+;
+;  *** Restricted Rights Legend ***
+;
+;  The programs and information contained herein are licensed only
+;  pursuant to a license agreement that contains use, reverse
+;  engineering, disclosure, and other restrictions; accordingly, it
+;  is "Unpublished--all rights reserved under the applicable
+;  copyright laws".
+;
+;  Use duplication, or disclosure by the Government is subject to
+;  restrictions as set forth in subparagraph (c)(1)(ii) of the Rights
+;  in Technical Data and Computer Licensed Programs clause of DFARS
+;  52.227 7013.
+;
+;  Copyright 2000-2001 Wind River Systems, Inc.
+;  Copyright 1995-1997 Epilogue Technology Corporation.
+;  Copyright 1998 Integrated Systems, Inc.
+;  All rights reserved.
+;
+;  *** Government Use ***
+;
+;  The Licensed Programs and their documentation were developed at
+;  private expense and no part of them is in the public domain.
+;
+;  The Licensed Programs are "Restricted Computer Software" as that
+;  term is defined in Clause 52.227-19 of the Federal Acquisition
+;  Regulations (FAR) and are "Commercial Computer Software" as that
+;  term is defined in Subpart 227.401 of the Department of Defense
+;  Federal Acquisition Regulation Supplement (DFARS).
+;
+;  (i) If the licensed Programs are supplied to the Department of
+;      Defense (DoD), the Licensed Programs are classified as
+;      "Commercial Computer Software" and the Government is acquiring
+;      only "restricted rights" in the Licensed Programs and their
+;      documentation as that term is defined in Clause 52.227
+;      7013(c)(1) of the DFARS, and
+;
+;  (ii) If the Licensed Programs are supplied to any unit or agency
+;      of the United States Government other than DoD, the
+;      Government's rights in the Licensed Programs and their
+;      documentation will be as defined in Clause 52.227-19(c)(2) of
+;      the FAR.
+;****************************************************************************
+
+;  $Log: sntp.ldb,v $
+;  Revision 1.1.1.1  2001/11/05 17:47:20  tneale
+;  Tornado shuffle
+;
+;  Revision 1.4  2001/01/19 22:22:34  paul
+;  Update copyright.
+;
+;  Revision 1.3  1998/02/25 15:21:42  sra
+;  Finish moving types.h, bug.h, and bugdef.h to common/h/.
+;
+;  Revision 1.2  1998/02/25 04:54:13  sra
+;  Update copyrights.
+;
+;  Revision 1.1  1998/01/20 22:57:26  mrf
+;  Initial revision
+;
+
+(C-include EPILOGUE_INSTALL_H <install.h>)
+(C-include EPILOGUE_TYPES_H <common/h/types.h>)
+(C-include EPILOGUE_LAYOUT_LDBGLUE_H <layout/ldbglue.h>)
+
+(define-layout SNTP
+  (struct (align 1)
+	  (field LEAP_INDICATOR (enum (type (unsigned 2))
+				      (value NOWARNING         0)
+				      (value 61_IN_LAST_MINUTE 1)
+				      (value 59_IN_LAST_MINUTE 2)
+				      (value ALARM             3)
+				      ))
+	  (field VERSION (unsigned 3))	
+	  (field MODE (enum (type (unsigned 3))
+			    (value RESERVED          0)
+			    (value SYMMETRIC_ACTIVE  1)
+			    (value SYMMETRIC_PASSIVE 2)
+			    (value CLIENT            3)
+			    (value SERVER            4)
+			    (value BROADCAST         5)
+			    (value RESERVED_NTP      6)
+			    (value RESERVED_PRIVATE  7)
+			    ))
+	  (field STRATUM (enum (type (unsigned 8))
+			       (value UNSPECIFIED         0)
+			       (value PRIMARY_REFERENCE   1)
+			       ))
+	  (field POLL_INTERVAL (unsigned 8))
+	  (field PRECISION (unsigned 8))
+	  (field ROOT_DELAY (unsigned 32))
+	  (field ROOT_DISPERSION (unsigned 32))
+	  (field REFERENCE_ID (opaque 32))
+	  (field REFERENCE_TIMESTAMP_SECONDS (unsigned 32))
+	  (field REFERENCE_TIMESTAMP_FRACTIONS (unsigned 32))
+	  (field ORIGINATE_TIMESTAMP_SECONDS (unsigned 32))
+	  (field ORIGINATE_TIMESTAMP_FRACTIONS (unsigned 32))
+	  (field RECEIVE_TIMESTAMP_SECONDS (unsigned 32))
+	  (field RECEIVE_TIMESTAMP_FRACTIONS (unsigned 32))
+	  (field TRANSMIT_TIMESTAMP_SECONDS (unsigned 32))
+	  (field TRANSMIT_TIMESTAMP_FRACTIONS (unsigned 32))
+	  ;Optional Authenticator field follows
+	  ))
+
+; Local Variables:
+; mode: Scheme
+; End:

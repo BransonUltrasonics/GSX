@@ -1,0 +1,2 @@
+# Output products list for <CLKMAN_2>
+CLKMAN_2_flist.txt

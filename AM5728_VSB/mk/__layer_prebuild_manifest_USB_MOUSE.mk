@@ -1,0 +1,1 @@
+__FILES_COPIED_USB_MOUSE = C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/h/public/usb2Mse.h C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/usr/h/public/usb2Mse.h C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/cdf/40usb_host_class_mse.cdf C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/krnl/configlette/usrUsb2MseInit.c

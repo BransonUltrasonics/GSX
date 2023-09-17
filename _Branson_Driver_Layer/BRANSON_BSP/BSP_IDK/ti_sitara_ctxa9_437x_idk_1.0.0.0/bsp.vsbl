@@ -1,0 +1,26 @@
+/* bsp.vsbl - TI Sitara family, AM437X IDK BSP metadata file */
+
+/*
+ * Copyright (c) 2014-2016 Wind River Systems, Inc.
+ *
+ * The right to copy, distribute, modify or otherwise make use
+ * of this software may be licensed only pursuant to the terms
+ * of an applicable Wind River license agreement.
+ */
+
+/*
+modification history
+--------------------
+14Dec16,rr  created
+*/
+
+Layer ti_sitara_ctxa9_idk
+    {
+    SYNOPSIS            TI CortexA9 Sitara Family BSP (AM437x IDK)
+    VERSION             1.0.0.0
+    VENDOR              Wind River
+    LAYER_REQUIRES      FDT TI_SITARA
+    FEATURE_REQUIRES    {VXBUS_DRV  TI_EDMA3}           \
+                        {BOARDLIB   WARM_BOOT}          \
+                        {ARM_KERNEL ADD_CONFIGURABLE_SMC}
+    }

@@ -1,0 +1,45 @@
+/* bsp.vsbl - TI Sitara family BSP metadata file */
+
+/*
+ * Copyright (c) 2014-2016 Wind River Systems, Inc.
+ *
+ * The right to copy, distribute, modify or otherwise make use
+ * of this software may be licensed only pursuant to the terms
+ * of an applicable Wind River license agreement.
+ */
+
+/*
+modification history
+--------------------
+27oct16,wch  updated version to 1.0.5.0
+03aug16,jnl  modified the wrong value of enable-shift of
+             dpll clock divider device in dts file (V7PRO-3198)
+21oct16,yya  version 1.0.4.0, refactored secure mode interface (F6283)
+28apr16,sye  removed dependency for END (V7PRO-2998)
+25apr16,sye  version 1.0.3.0, use def-bus-frequency to set default
+             I2C BUS speed (F6123)
+15mar16,r_w  add INCLUDE_DEBUG_KPUTS for BOARD_DESC_FLAG_DBG. (V7COR-3896)
+05jan16,m_w  version 1.0.2.1, replace DRV_VXBEND_TI_CPSW with
+             DRV_END_FDT_TI_CPSW (V7PRO-2729)
+11nov15,cfm  version 1.0.2.0, updated the PSL layer name (US69494)
+28oct15,yya  version 1.0.1.0, added warm boot support. (US63670)
+28aug15,swu  updated version to 1.0.0.4 to move data-scl-frequency
+             to DTS. (V7PRO-2323)
+27aug15,mze  switch to new __WRVX_BSP_POST_BUILD_RULE 1.0.0.3 (V7COR-3501)
+20apr15,sye  updated version to 1.0.0.2 to remove NAME section. (V7PRO-1818)
+22oct14,swu  added section for bootable SD card. (V7PRO-1398)
+             change version from 1.0.0.0 to 1.0.0.1
+28sep14,m_w  introduced a new layer:TI_AM3XXX_CTXA9.(V7PRO-1273)
+01jul14,swu  created (US40646)
+*/
+
+Layer ti_sitara_ctxa9_branson
+    {
+    SYNOPSIS            TI CortexA9 Sitara Family BSP
+    VERSION             1.0.0.0
+    VENDOR              Wind River
+    LAYER_REQUIRES      FDT TI_SITARA
+    FEATURE_REQUIRES    {VXBUS_DRV  TI_EDMA3}               \
+                        {BOARDLIB   WARM_BOOT}              \
+                        {ARM_ARMV7A TRUSTZONE}
+    }

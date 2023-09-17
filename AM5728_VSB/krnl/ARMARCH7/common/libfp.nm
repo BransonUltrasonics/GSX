@@ -1,0 +1,426 @@
+
+libfp.a:
+
+support.o:
+00000010 d zero
+00000018 d mexp
+00000008 d nunf
+00000000 d novf
+00000000 d FLOAT_TEMP.65
+00000008 d FLOAT_TEMP.66
+0000001a d prep1
+0000001c d gap
+0000001e d msign
+00000000 T scalb
+00000178 T drem
+000003c0 T _Raise_Inexact
+
+fpType.o:
+00000000 d map
+00000000 T fpTypeGet
+00000180 T getInf
+000001a4 T getNan
+
+cabs.o:
+00000020 d one.3
+00000018 d zero.2
+00000030 d ibig.5
+00000028 d small.4
+00000000 d FLOAT_TEMP.42
+00000010 d sqrt2
+00000008 d r2p1lo
+00000000 d r2p1hi
+00000000 T hypot
+         U finite
+         U copysign
+         U logb
+         U _Raise_Inexact
+         U sqrt
+000001f8 T cabs
+00000240 T z_abs
+
+fioBaseLib.o:
+00000004 d blanks
+00000014 d zeroes
+00000000 T fioBaseLibInit
+00000d58 T printErr
+         U _func_printErr
+00000010 T fioFormatV
+         U memchr
+         U strlen
+         U __urem64
+         U __udiv64
+         U _func_fioFltFormatRtn
+00000000 D fieldSzIncludeSign
+00000ce8 T printf
+00001190 T fioBufPrint
+00000d18 T oprintf
+00000d88 T sprintf
+00001104 T fioBufPut
+00000dc4 T printExc
+         U intContext
+         U taskIdSelf
+         U kernelLockOwnedByMe
+00000004 C _func_printExcPrintHook
+         U _func_excJobAdd
+         U vmLibInfo
+         U sysExcMsg
+         U __udiv32
+         U evtAction
+         U vxAtomic32Add
+         U edrBufLock
+         U edrBufUnlock
+         U taskUnsafe
+         U _func_shellExcPrint
+         U _func_kprintf
+         U taskClassId
+         U eventPointSwHandle
+000010b0 T snprintf
+0000113c T fioSnBufPut
+         U bcopy
+         U _func_consoleOut
+         U _func_kwrite
+
+floatLib.o:
+00000874 t floatFormat
+00000948 t floatScan
+00000030 t roundCvt
+00000000 d FLOAT_TEMP.378
+00000008 d FLOAT_TEMP.379
+00000148 t exponentCvt
+00000200 t cvt
+00000098 d msign
+00000010 d FLOAT_TEMP.380
+00000018 d FLOAT_TEMP.381
+00000020 d FLOAT_TEMP.383
+00000028 d FLOAT_TEMP.384
+00000000 d power10.216
+00000048 d posExpPower10.217
+00000000 T fioFltInstall
+         U _func_fioFltFormatRtn
+         U _func_fioFltScanRtn
+00000014 T floatInit
+         U modf
+         U __rem32
+         U __div32
+         U fpTypeGet
+         U strcpy
+
+floatFuncBind.o:
+00000000 D _func_fioFltFormatRtn
+00000004 D _func_fioFltScanRtn
+
+fioFuncBind.o:
+00000004 C _func_printErr
+
+e_fmod.o:
+00000000 d Zero
+00000000 T __ieee754_fmod
+
+e_pow.o:
+00000040 d FLOAT_TEMP.154
+00000048 d FLOAT_TEMP.155
+00000030 d zero
+00000050 d FLOAT_TEMP.156
+00000058 d FLOAT_TEMP.157
+00000060 d FLOAT_TEMP.158
+00000068 d FLOAT_TEMP.159
+00000070 d FLOAT_TEMP.160
+00000078 d FLOAT_TEMP.161
+00000080 d FLOAT_TEMP.162
+00000088 d FLOAT_TEMP.163
+00000000 d bp
+00000020 d dp_l
+00000010 d dp_h
+00000090 d FLOAT_TEMP.164
+00000098 d FLOAT_TEMP.165
+000000a0 d FLOAT_TEMP.166
+000000a8 d FLOAT_TEMP.167
+000000b0 d FLOAT_TEMP.168
+000000b8 d FLOAT_TEMP.169
+000000c0 d FLOAT_TEMP.170
+000000c8 d FLOAT_TEMP.171
+000000d0 d FLOAT_TEMP.172
+000000d8 d FLOAT_TEMP.173
+00000038 d one
+000000e0 d FLOAT_TEMP.174
+000000e8 d FLOAT_TEMP.175
+000000f0 d FLOAT_TEMP.176
+000000f8 d FLOAT_TEMP.177
+00000100 d FLOAT_TEMP.178
+00000108 d FLOAT_TEMP.179
+00000110 d FLOAT_TEMP.180
+00000118 d FLOAT_TEMP.181
+00000120 d FLOAT_TEMP.182
+00000128 d FLOAT_TEMP.183
+00000130 d FLOAT_TEMP.184
+00000000 T __ieee754_pow
+         U __ieee754_sqrt
+         U fabs
+         U getNan
+         U scalbn
+
+e_remainder.o:
+00000000 d FLOAT_TEMP.27
+00000008 d FLOAT_TEMP.28
+00000000 T __ieee754_remainder
+         U __ieee754_fmod
+         U fabs
+
+s_rint.o:
+00000000 d TWO52
+00000000 T rint
+
+s_scalbn.o:
+00000000 d FLOAT_TEMP.26
+00000008 d FLOAT_TEMP.27
+00000010 d FLOAT_TEMP.28
+00000018 d FLOAT_TEMP.29
+00000000 T scalbn
+         U copysign
+
+e_sqrt.o:
+00000000 T __ieee754_sqrt
+         U getNan
+
+fioLib.o:
+00000234 t scanString
+000002cc t scanChar
+000004dc t scanNum
+00000e98 t getbuf
+00000000 T fioLibInit
+         U printErr
+         U _func_printErr
+00000010 T voprintf
+         U fioBufPrint
+         U fioFormatV
+00000050 T fdprintf
+00000080 T vprintf
+0000008c T vfdprintf
+000000a0 T vsprintf
+         U fioBufPut
+000000e0 T vsnprintf
+         U fioSnBufPut
+0000012c T fioRead
+         U read
+00000194 T fioRdString
+         U __ctype
+0000033c T scanCharSet
+         U __mul64
+000006f4 T scanField
+         U _func_fioFltScanRtn
+00000b04 T fioScanV
+00000e60 T sscanf
+
+libfp.a:
+
+support.o:
+00000010 d zero
+00000018 d mexp
+00000008 d nunf
+00000000 d novf
+00000000 d FLOAT_TEMP.65
+00000008 d FLOAT_TEMP.66
+0000001a d prep1
+0000001c d gap
+0000001e d msign
+00000000 T scalb
+00000178 T drem
+000003c0 T _Raise_Inexact
+
+fpType.o:
+00000000 d map
+00000000 T fpTypeGet
+00000180 T getInf
+000001a4 T getNan
+
+cabs.o:
+00000020 d one.3
+00000018 d zero.2
+00000030 d ibig.5
+00000028 d small.4
+00000000 d FLOAT_TEMP.42
+00000010 d sqrt2
+00000008 d r2p1lo
+00000000 d r2p1hi
+00000000 T hypot
+         U finite
+         U copysign
+         U logb
+         U _Raise_Inexact
+         U sqrt
+000001f8 T cabs
+00000240 T z_abs
+
+fioBaseLib.o:
+00000004 d blanks
+00000014 d zeroes
+00000000 T fioBaseLibInit
+00000d58 T printErr
+         U _func_printErr
+00000010 T fioFormatV
+         U memchr
+         U strlen
+         U __urem64
+         U __udiv64
+         U _func_fioFltFormatRtn
+00000000 D fieldSzIncludeSign
+00000ce8 T printf
+00001190 T fioBufPrint
+00000d18 T oprintf
+00000d88 T sprintf
+00001104 T fioBufPut
+00000dc4 T printExc
+         U intContext
+         U taskIdSelf
+         U kernelLockOwnedByMe
+00000004 C _func_printExcPrintHook
+         U _func_excJobAdd
+         U vmLibInfo
+         U sysExcMsg
+         U __udiv32
+         U evtAction
+         U vxAtomic32Add
+         U edrBufLock
+         U edrBufUnlock
+         U taskUnsafe
+         U _func_shellExcPrint
+         U _func_kprintf
+         U taskClassId
+         U eventPointSwHandle
+000010b0 T snprintf
+0000113c T fioSnBufPut
+         U bcopy
+         U _func_consoleOut
+         U _func_kwrite
+
+floatLib.o:
+00000874 t floatFormat
+00000948 t floatScan
+00000030 t roundCvt
+00000000 d FLOAT_TEMP.378
+00000008 d FLOAT_TEMP.379
+00000148 t exponentCvt
+00000200 t cvt
+00000098 d msign
+00000010 d FLOAT_TEMP.380
+00000018 d FLOAT_TEMP.381
+00000020 d FLOAT_TEMP.383
+00000028 d FLOAT_TEMP.384
+00000000 d power10.216
+00000048 d posExpPower10.217
+00000000 T fioFltInstall
+         U _func_fioFltFormatRtn
+         U _func_fioFltScanRtn
+00000014 T floatInit
+         U modf
+         U __rem32
+         U __div32
+         U fpTypeGet
+         U strcpy
+
+floatFuncBind.o:
+00000000 D _func_fioFltFormatRtn
+00000004 D _func_fioFltScanRtn
+
+fioFuncBind.o:
+00000004 C _func_printErr
+
+e_fmod.o:
+00000000 d Zero
+00000000 T __ieee754_fmod
+
+e_pow.o:
+00000040 d FLOAT_TEMP.154
+00000048 d FLOAT_TEMP.155
+00000030 d zero
+00000050 d FLOAT_TEMP.156
+00000058 d FLOAT_TEMP.157
+00000060 d FLOAT_TEMP.158
+00000068 d FLOAT_TEMP.159
+00000070 d FLOAT_TEMP.160
+00000078 d FLOAT_TEMP.161
+00000080 d FLOAT_TEMP.162
+00000088 d FLOAT_TEMP.163
+00000000 d bp
+00000020 d dp_l
+00000010 d dp_h
+00000090 d FLOAT_TEMP.164
+00000098 d FLOAT_TEMP.165
+000000a0 d FLOAT_TEMP.166
+000000a8 d FLOAT_TEMP.167
+000000b0 d FLOAT_TEMP.168
+000000b8 d FLOAT_TEMP.169
+000000c0 d FLOAT_TEMP.170
+000000c8 d FLOAT_TEMP.171
+000000d0 d FLOAT_TEMP.172
+000000d8 d FLOAT_TEMP.173
+00000038 d one
+000000e0 d FLOAT_TEMP.174
+000000e8 d FLOAT_TEMP.175
+000000f0 d FLOAT_TEMP.176
+000000f8 d FLOAT_TEMP.177
+00000100 d FLOAT_TEMP.178
+00000108 d FLOAT_TEMP.179
+00000110 d FLOAT_TEMP.180
+00000118 d FLOAT_TEMP.181
+00000120 d FLOAT_TEMP.182
+00000128 d FLOAT_TEMP.183
+00000130 d FLOAT_TEMP.184
+00000000 T __ieee754_pow
+         U __ieee754_sqrt
+         U fabs
+         U getNan
+         U scalbn
+
+e_remainder.o:
+00000000 d FLOAT_TEMP.27
+00000008 d FLOAT_TEMP.28
+00000000 T __ieee754_remainder
+         U __ieee754_fmod
+         U fabs
+
+s_rint.o:
+00000000 d TWO52
+00000000 T rint
+
+s_scalbn.o:
+00000000 d FLOAT_TEMP.26
+00000008 d FLOAT_TEMP.27
+00000010 d FLOAT_TEMP.28
+00000018 d FLOAT_TEMP.29
+00000000 T scalbn
+         U copysign
+
+e_sqrt.o:
+00000000 T __ieee754_sqrt
+         U getNan
+
+fioLib.o:
+00000234 t scanString
+000002cc t scanChar
+000004dc t scanNum
+00000e98 t getbuf
+00000000 T fioLibInit
+         U printErr
+         U _func_printErr
+00000010 T voprintf
+         U fioBufPrint
+         U fioFormatV
+00000050 T fdprintf
+00000080 T vprintf
+0000008c T vfdprintf
+000000a0 T vsprintf
+         U fioBufPut
+000000e0 T vsnprintf
+         U fioSnBufPut
+0000012c T fioRead
+         U read
+00000194 T fioRdString
+         U __ctype
+0000033c T scanCharSet
+         U __mul64
+000006f4 T scanField
+         U _func_fioFltScanRtn
+00000b04 T fioScanV
+00000e60 T sscanf

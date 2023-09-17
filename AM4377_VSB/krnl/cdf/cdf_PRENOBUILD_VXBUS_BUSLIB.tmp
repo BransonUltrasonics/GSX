@@ -1,0 +1,19 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/buslib-2.1.3.1/cdf/00iadtBus.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/buslib-2.1.3.1/cdf/10buslib.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/buslib-2.1.3.1/cdf/10pciBusLib.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/buslib-2.1.3.1/cdf/10spiBusLib.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/drv/vxbus-1.0.5.0/buslib-2.1.3.1/cdf/40vxbPciGenericBridge.cdf>
+
+Layer Layer::VXBUS_BUSLIB {
+	NAME VXBUS_BUSLIB
+}

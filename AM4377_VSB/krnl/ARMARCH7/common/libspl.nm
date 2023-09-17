@@ -1,0 +1,74 @@
+
+libspl.a:
+
+spinLockUpLib.o:
+00000000 T spinLockIsrInit
+00000010 T spinLockIsrTake
+00000034 T spinLockIsrGive
+00000058 T spinLockTaskInit
+00000060 T spinLockTaskTake
+         U taskIdCurrent
+         U evtAction
+         U eventPointSwHandle
+000000a4 T spinLockTaskGive
+         U taskCpuUnlock
+000000a8 T spinLockRestrict
+
+spinLockIsrNdLib.o:
+00000000 T spinLockIsrNdInit
+0000000c T spinLockIsrNdTake
+00000020 T spinLockIsrNdGive
+00000000 T spinlockIsrNdInit
+0000000c T spinlockIsrNdTake
+00000020 T spinlockIsrNdGive
+
+spinLockNdTimedLib.o:
+00000000 T spinLockNdTimedInit
+00000060 T spinLockNdTimedTake
+         U sysClkRateGet
+         U __udiv32
+         U __urem64
+         U __udiv64
+         U vxAbsTicks
+         U atomic32Get
+         U atomic32Cas
+         U errnoSet
+00000470 T spinLockNdTimedGive
+00000508 T spinLockNdTimedPrevOwnerGet
+
+libspl.a:
+
+spinLockUpLib.o:
+00000000 T spinLockIsrInit
+00000010 T spinLockIsrTake
+00000034 T spinLockIsrGive
+00000058 T spinLockTaskInit
+00000060 T spinLockTaskTake
+         U taskIdCurrent
+         U evtAction
+         U eventPointSwHandle
+000000a4 T spinLockTaskGive
+         U taskCpuUnlock
+000000a8 T spinLockRestrict
+
+spinLockIsrNdLib.o:
+00000000 T spinLockIsrNdInit
+0000000c T spinLockIsrNdTake
+00000020 T spinLockIsrNdGive
+00000000 T spinlockIsrNdInit
+0000000c T spinlockIsrNdTake
+00000020 T spinlockIsrNdGive
+
+spinLockNdTimedLib.o:
+00000000 T spinLockNdTimedInit
+00000060 T spinLockNdTimedTake
+         U sysClkRateGet
+         U __udiv32
+         U __urem64
+         U __udiv64
+         U vxAbsTicks
+         U atomic32Get
+         U atomic32Cas
+         U errnoSet
+00000470 T spinLockNdTimedGive
+00000508 T spinLockNdTimedPrevOwnerGet

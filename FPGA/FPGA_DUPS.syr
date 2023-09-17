@@ -1,0 +1,1880 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.41 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.41 secs
+ 
+--> Reading design: FPGA_DUPS.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "FPGA_DUPS.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "FPGA_DUPS"
+Output Format                      : NGC
+Target Device                      : xc3s1400a-4-ft256
+
+---- Source Options
+Top Module Name                    : FPGA_DUPS
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FBIF_SPIIF.vhd" in Library work.
+Entity <FBIF_SPIIF> compiled.
+Entity <FBIF_SPIIF> (Architecture <Structure>) compiled.
+Compiling vhdl file "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/fd2c.vhd" in Library work.
+Entity <fd2c> compiled.
+Entity <fd2c> (Architecture <BEHAVIORAL>) compiled.
+Compiling vhdl file "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/or2clk.vhd" in Library work.
+Entity <or2clk> compiled.
+Entity <or2clk> (Architecture <BEHAVIORAL>) compiled.
+Compiling vhdl file "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/PWM_DDS.vhd" in Library work.
+Entity <PWM_DDS> compiled.
+Entity <PWM_DDS> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/ipcore_dir/counter3cr.vhd" in Library work.
+Entity <counter3cr> compiled.
+Entity <counter3cr> (Architecture <counter3cr_a>) compiled.
+Compiling vhdl file "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/counter23.vhd" in Library work.
+Entity <counter23> compiled.
+Entity <counter23> (Architecture <BEHAVIORAL>) compiled.
+Compiling vhdl file "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLKMAN_1.vhd" in Library work.
+Entity <CLKMAN_1> compiled.
+Entity <CLKMAN_1> (Architecture <BEHAVIORAL>) compiled.
+Compiling vhdl file "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLKMAN_2.vhd" in Library work.
+Entity <CLKMAN_2> compiled.
+Entity <CLKMAN_2> (Architecture <BEHAVIORAL>) compiled.
+Compiling vhdl file "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLKMAN_3.vhd" in Library work.
+Entity <CLKMAN_3> compiled.
+Entity <CLKMAN_3> (Architecture <BEHAVIORAL>) compiled.
+Compiling vhdl file "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLKMAN_4.vhd" in Library work.
+Entity <CLKMAN_4> compiled.
+Entity <CLKMAN_4> (Architecture <BEHAVIORAL>) compiled.
+Compiling vhdl file "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLOCK_MANAGER.vhd" in Library work.
+Entity <CLOCK_MANAGER> compiled.
+Entity <CLOCK_MANAGER> (Architecture <BEHAVIORAL>) compiled.
+Compiling vhdl file "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/RST_DEB_1.vhd" in Library work.
+Entity <RST_DEB_1> compiled.
+Entity <RST_DEB_1> (Architecture <Structure>) compiled.
+Compiling vhdl file "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/RST_DEB_2.vhd" in Library work.
+Entity <RST_DEB_2> compiled.
+Entity <RST_DEB_2> (Architecture <Structure>) compiled.
+Compiling vhdl file "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" in Library work.
+Entity <CC16CE_HXILINX_FPGA_DUPS> compiled.
+Entity <CC16CE_HXILINX_FPGA_DUPS> (Architecture <Behavioral>) compiled.
+Entity <FTC_HXILINX_FPGA_DUPS> compiled.
+Entity <FTC_HXILINX_FPGA_DUPS> (Architecture <Behavioral>) compiled.
+Entity <COMPM16_HXILINX_FPGA_DUPS> compiled.
+Entity <COMPM16_HXILINX_FPGA_DUPS> (Architecture <COMPM16_HXILINX_FPGA_DUPS_V>) compiled.
+Entity <M2_1_HXILINX_FPGA_DUPS> compiled.
+Entity <M2_1_HXILINX_FPGA_DUPS> (Architecture <M2_1_HXILINX_FPGA_DUPS_V>) compiled.
+Entity <AND7_HXILINX_FPGA_DUPS> compiled.
+Entity <AND7_HXILINX_FPGA_DUPS> (Architecture <AND7_HXILINX_FPGA_DUPS_V>) compiled.
+Entity <uP_SPI_IF_MUSER_FPGA_DUPS> compiled.
+Entity <uP_SPI_IF_MUSER_FPGA_DUPS> (Architecture <BEHAVIORAL>) compiled.
+Entity <ERRSTAT_MUSER_FPGA_DUPS> compiled.
+Entity <ERRSTAT_MUSER_FPGA_DUPS> (Architecture <BEHAVIORAL>) compiled.
+Entity <FPGA_DUPS_Main_MUSER_FPGA_DUPS> compiled.
+Entity <FPGA_DUPS_Main_MUSER_FPGA_DUPS> (Architecture <BEHAVIORAL>) compiled.
+Entity <CLK_GEN_MUSER_FPGA_DUPS> compiled.
+Entity <CLK_GEN_MUSER_FPGA_DUPS> (Architecture <BEHAVIORAL>) compiled.
+Entity <FPGA_DUPS> compiled.
+Entity <FPGA_DUPS> (Architecture <BEHAVIORAL>) compiled.
+Compiling vhdl file "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLK_GEN.vhf" in Library work.
+Entity <CC16CE_HXILINX_CLK_GEN> compiled.
+Entity <CC16CE_HXILINX_CLK_GEN> (Architecture <Behavioral>) compiled.
+Entity <FTC_HXILINX_CLK_GEN> compiled.
+Entity <FTC_HXILINX_CLK_GEN> (Architecture <Behavioral>) compiled.
+Entity <COMPM16_HXILINX_CLK_GEN> compiled.
+Entity <COMPM16_HXILINX_CLK_GEN> (Architecture <COMPM16_HXILINX_CLK_GEN_V>) compiled.
+Entity <AND7_HXILINX_CLK_GEN> compiled.
+Entity <AND7_HXILINX_CLK_GEN> (Architecture <AND7_HXILINX_CLK_GEN_V>) compiled.
+Entity <CLK_GEN> compiled.
+Entity <CLK_GEN> (Architecture <BEHAVIORAL>) compiled.
+Compiling vhdl file "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS_Main.vhf" in Library work.
+Entity <M2_1_HXILINX_FPGA_DUPS_Main> compiled.
+Entity <M2_1_HXILINX_FPGA_DUPS_Main> (Architecture <M2_1_HXILINX_FPGA_DUPS_Main_V>) compiled.
+Entity <uP_SPI_IF_MUSER_FPGA_DUPS_Main> compiled.
+Entity <uP_SPI_IF_MUSER_FPGA_DUPS_Main> (Architecture <BEHAVIORAL>) compiled.
+Entity <ERRSTAT_MUSER_FPGA_DUPS_Main> compiled.
+Entity <ERRSTAT_MUSER_FPGA_DUPS_Main> (Architecture <BEHAVIORAL>) compiled.
+Entity <FPGA_DUPS_Main> compiled.
+Entity <FPGA_DUPS_Main> (Architecture <BEHAVIORAL>) compiled.
+Compiling vhdl file "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/copy_of_and2.vhd" in Library work.
+Entity <copy_of_and2> compiled.
+Entity <copy_of_and2> (Architecture <BEHAVIORAL>) compiled.
+Compiling vhdl file "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/ERRSTAT.vhf" in Library work.
+Entity <ERRSTAT> compiled.
+Entity <ERRSTAT> (Architecture <BEHAVIORAL>) compiled.
+Compiling vhdl file "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/uP_SPI_IF.vhf" in Library work.
+Entity <uP_SPI_IF> compiled.
+Entity <uP_SPI_IF> (Architecture <BEHAVIORAL>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <FPGA_DUPS> in library <work> (architecture <BEHAVIORAL>).
+
+Analyzing hierarchy for entity <RST_DEB_1> in library <work> (architecture <Structure>).
+
+Analyzing hierarchy for entity <RST_DEB_2> in library <work> (architecture <Structure>).
+
+Analyzing hierarchy for entity <CLK_GEN_MUSER_FPGA_DUPS> in library <work> (architecture <BEHAVIORAL>).
+
+Analyzing hierarchy for entity <FPGA_DUPS_Main_MUSER_FPGA_DUPS> in library <work> (architecture <BEHAVIORAL>).
+
+Analyzing hierarchy for entity <CC16CE_HXILINX_FPGA_DUPS> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <COMPM16_HXILINX_FPGA_DUPS> in library <work> (architecture <COMPM16_HXILINX_FPGA_DUPS_V>).
+
+Analyzing hierarchy for entity <FTC_HXILINX_FPGA_DUPS> in library <work> (architecture <Behavioral>) with generics.
+	INIT = '0'
+
+Analyzing hierarchy for entity <counter23> in library <work> (architecture <BEHAVIORAL>).
+
+Analyzing hierarchy for entity <AND7_HXILINX_FPGA_DUPS> in library <work> (architecture <AND7_HXILINX_FPGA_DUPS_V>).
+
+Analyzing hierarchy for entity <CLKMAN_1> in library <work> (architecture <BEHAVIORAL>).
+
+Analyzing hierarchy for entity <CLKMAN_2> in library <work> (architecture <BEHAVIORAL>).
+
+Analyzing hierarchy for entity <CLKMAN_3> in library <work> (architecture <BEHAVIORAL>).
+
+Analyzing hierarchy for entity <CLKMAN_4> in library <work> (architecture <BEHAVIORAL>).
+
+Analyzing hierarchy for entity <CLOCK_MANAGER> in library <work> (architecture <BEHAVIORAL>).
+
+Analyzing hierarchy for entity <ERRSTAT_MUSER_FPGA_DUPS> in library <work> (architecture <BEHAVIORAL>).
+
+Analyzing hierarchy for entity <M2_1_HXILINX_FPGA_DUPS> in library <work> (architecture <M2_1_HXILINX_FPGA_DUPS_V>).
+
+Analyzing hierarchy for entity <or2clk> in library <work> (architecture <BEHAVIORAL>).
+
+Analyzing hierarchy for entity <uP_SPI_IF_MUSER_FPGA_DUPS> in library <work> (architecture <BEHAVIORAL>).
+
+Analyzing hierarchy for entity <PWM_DDS> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <fd2c> in library <work> (architecture <BEHAVIORAL>).
+
+Analyzing hierarchy for entity <FBIF_SPIIF> in library <work> (architecture <Structure>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <FPGA_DUPS> in library <work> (Architecture <BEHAVIORAL>).
+WARNING:Xst:753 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" line 1573: Unconnected output port 'CLK_FADC' of component 'CLK_GEN_MUSER_FPGA_DUPS'.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <XLXI_34> in unit <FPGA_DUPS>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <XLXI_34> in unit <FPGA_DUPS>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <XLXI_34> in unit <FPGA_DUPS>.
+WARNING:Xst:753 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" line 1589: Unconnected output port 'FBIF_TEST_1' of component 'FPGA_DUPS_Main_MUSER_FPGA_DUPS'.
+WARNING:Xst:753 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" line 1589: Unconnected output port 'FBIF_TEST_2' of component 'FPGA_DUPS_Main_MUSER_FPGA_DUPS'.
+Entity <FPGA_DUPS> analyzed. Unit <FPGA_DUPS> generated.
+
+Analyzing Entity <RST_DEB_1> in library <work> (Architecture <Structure>).
+Entity <RST_DEB_1> analyzed. Unit <RST_DEB_1> generated.
+
+Analyzing Entity <RST_DEB_2> in library <work> (Architecture <Structure>).
+Entity <RST_DEB_2> analyzed. Unit <RST_DEB_2> generated.
+
+Analyzing Entity <CLK_GEN_MUSER_FPGA_DUPS> in library <work> (Architecture <BEHAVIORAL>).
+WARNING:Xst:2211 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" line 1137: Instantiating black box module <counter3cr>.
+    Set user-defined property "INIT =  0" for instance <XLXI_9> in unit <CLK_GEN_MUSER_FPGA_DUPS>.
+    Set user-defined property "INIT =  0" for instance <XLXI_16> in unit <CLK_GEN_MUSER_FPGA_DUPS>.
+    Set user-defined property "INIT =  0" for instance <XLXI_20> in unit <CLK_GEN_MUSER_FPGA_DUPS>.
+    Set user-defined property "INIT =  0" for instance <XLXI_22> in unit <CLK_GEN_MUSER_FPGA_DUPS>.
+    Set user-defined property "INIT =  0" for instance <XLXI_25> in unit <CLK_GEN_MUSER_FPGA_DUPS>.
+    Set user-defined property "INIT =  0" for instance <XLXI_26> in unit <CLK_GEN_MUSER_FPGA_DUPS>.
+WARNING:Xst:753 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" line 1195: Unconnected output port 'CEO' of component 'CC16CE_HXILINX_FPGA_DUPS'.
+WARNING:Xst:753 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" line 1195: Unconnected output port 'TC' of component 'CC16CE_HXILINX_FPGA_DUPS'.
+    Set user-defined property "HU_SET =  XLXI_28_16" for instance <XLXI_28> in unit <CLK_GEN_MUSER_FPGA_DUPS>.
+WARNING:Xst:753 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" line 1206: Unconnected output port 'LT' of component 'COMPM16_HXILINX_FPGA_DUPS'.
+    Set user-defined property "HU_SET =  XLXI_31_17" for instance <XLXI_31> in unit <CLK_GEN_MUSER_FPGA_DUPS>.
+    Set user-defined property "HU_SET =  XLXI_37_18" for instance <XLXI_37> in unit <CLK_GEN_MUSER_FPGA_DUPS>.
+WARNING:Xst:753 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" line 1226: Unconnected output port 'CEO' of component 'CC16CE_HXILINX_FPGA_DUPS'.
+WARNING:Xst:753 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" line 1226: Unconnected output port 'TC' of component 'CC16CE_HXILINX_FPGA_DUPS'.
+    Set user-defined property "HU_SET =  XLXI_46_19" for instance <XLXI_46> in unit <CLK_GEN_MUSER_FPGA_DUPS>.
+WARNING:Xst:753 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" line 1237: Unconnected output port 'CEO' of component 'CC16CE_HXILINX_FPGA_DUPS'.
+WARNING:Xst:753 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" line 1237: Unconnected output port 'Q' of component 'CC16CE_HXILINX_FPGA_DUPS'.
+    Set user-defined property "HU_SET =  XLXI_50_20" for instance <XLXI_50> in unit <CLK_GEN_MUSER_FPGA_DUPS>.
+WARNING:Xst:753 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" line 1255: Unconnected output port 'Q' of component 'counter23'.
+WARNING:Xst:753 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" line 1255: Unconnected output port 'CEO' of component 'counter23'.
+    Set user-defined property "HU_SET =  XLXI_57_21" for instance <XLXI_57> in unit <CLK_GEN_MUSER_FPGA_DUPS>.
+WARNING:Xst:753 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" line 1291: Unconnected output port 'CLK90_OUT' of component 'CLKMAN_1'.
+WARNING:Xst:753 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" line 1298: Unconnected output port 'CLK90_OUT' of component 'CLKMAN_2'.
+WARNING:Xst:753 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" line 1305: Unconnected output port 'CLK90_OUT' of component 'CLKMAN_3'.
+WARNING:Xst:753 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" line 1312: Unconnected output port 'CLK90_OUT' of component 'CLKMAN_4'.
+Entity <CLK_GEN_MUSER_FPGA_DUPS> analyzed. Unit <CLK_GEN_MUSER_FPGA_DUPS> generated.
+
+Analyzing Entity <CC16CE_HXILINX_FPGA_DUPS> in library <work> (Architecture <Behavioral>).
+Entity <CC16CE_HXILINX_FPGA_DUPS> analyzed. Unit <CC16CE_HXILINX_FPGA_DUPS> generated.
+
+Analyzing Entity <COMPM16_HXILINX_FPGA_DUPS> in library <work> (Architecture <COMPM16_HXILINX_FPGA_DUPS_V>).
+Entity <COMPM16_HXILINX_FPGA_DUPS> analyzed. Unit <COMPM16_HXILINX_FPGA_DUPS> generated.
+
+Analyzing generic Entity <FTC_HXILINX_FPGA_DUPS> in library <work> (Architecture <Behavioral>).
+	INIT = '0'
+Entity <FTC_HXILINX_FPGA_DUPS> analyzed. Unit <FTC_HXILINX_FPGA_DUPS> generated.
+
+Analyzing Entity <counter23> in library <work> (Architecture <BEHAVIORAL>).
+Entity <counter23> analyzed. Unit <counter23> generated.
+
+Analyzing Entity <AND7_HXILINX_FPGA_DUPS> in library <work> (Architecture <AND7_HXILINX_FPGA_DUPS_V>).
+Entity <AND7_HXILINX_FPGA_DUPS> analyzed. Unit <AND7_HXILINX_FPGA_DUPS> generated.
+
+Analyzing Entity <CLKMAN_1> in library <work> (Architecture <BEHAVIORAL>).
+    Set user-defined property "CLKDV_DIVIDE =  2.0000000000000000" for instance <DCM_SP_INST> in unit <CLKMAN_1>.
+    Set user-defined property "CLKFX_DIVIDE =  1" for instance <DCM_SP_INST> in unit <CLKMAN_1>.
+    Set user-defined property "CLKFX_MULTIPLY =  4" for instance <DCM_SP_INST> in unit <CLKMAN_1>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_SP_INST> in unit <CLKMAN_1>.
+    Set user-defined property "CLKIN_PERIOD =  5.0000000000000000" for instance <DCM_SP_INST> in unit <CLKMAN_1>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_SP_INST> in unit <CLKMAN_1>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_SP_INST> in unit <CLKMAN_1>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_SP_INST> in unit <CLKMAN_1>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <CLKMAN_1>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <CLKMAN_1>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_SP_INST> in unit <CLKMAN_1>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_SP_INST> in unit <CLKMAN_1>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_SP_INST> in unit <CLKMAN_1>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_SP_INST> in unit <CLKMAN_1>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_SP_INST> in unit <CLKMAN_1>.
+Entity <CLKMAN_1> analyzed. Unit <CLKMAN_1> generated.
+
+Analyzing Entity <CLKMAN_2> in library <work> (Architecture <BEHAVIORAL>).
+    Set user-defined property "CLKDV_DIVIDE =  2.0000000000000000" for instance <DCM_SP_INST> in unit <CLKMAN_2>.
+    Set user-defined property "CLKFX_DIVIDE =  1" for instance <DCM_SP_INST> in unit <CLKMAN_2>.
+    Set user-defined property "CLKFX_MULTIPLY =  4" for instance <DCM_SP_INST> in unit <CLKMAN_2>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_SP_INST> in unit <CLKMAN_2>.
+    Set user-defined property "CLKIN_PERIOD =  10.0000000000000000" for instance <DCM_SP_INST> in unit <CLKMAN_2>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_SP_INST> in unit <CLKMAN_2>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_SP_INST> in unit <CLKMAN_2>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_SP_INST> in unit <CLKMAN_2>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <CLKMAN_2>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <CLKMAN_2>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_SP_INST> in unit <CLKMAN_2>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_SP_INST> in unit <CLKMAN_2>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_SP_INST> in unit <CLKMAN_2>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_SP_INST> in unit <CLKMAN_2>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_SP_INST> in unit <CLKMAN_2>.
+Entity <CLKMAN_2> analyzed. Unit <CLKMAN_2> generated.
+
+Analyzing Entity <CLKMAN_3> in library <work> (Architecture <BEHAVIORAL>).
+    Set user-defined property "CLKDV_DIVIDE =  2.0000000000000000" for instance <DCM_SP_INST> in unit <CLKMAN_3>.
+    Set user-defined property "CLKFX_DIVIDE =  1" for instance <DCM_SP_INST> in unit <CLKMAN_3>.
+    Set user-defined property "CLKFX_MULTIPLY =  4" for instance <DCM_SP_INST> in unit <CLKMAN_3>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_SP_INST> in unit <CLKMAN_3>.
+    Set user-defined property "CLKIN_PERIOD =  20.0000000000000000" for instance <DCM_SP_INST> in unit <CLKMAN_3>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_SP_INST> in unit <CLKMAN_3>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_SP_INST> in unit <CLKMAN_3>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_SP_INST> in unit <CLKMAN_3>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <CLKMAN_3>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <CLKMAN_3>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_SP_INST> in unit <CLKMAN_3>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_SP_INST> in unit <CLKMAN_3>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_SP_INST> in unit <CLKMAN_3>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_SP_INST> in unit <CLKMAN_3>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_SP_INST> in unit <CLKMAN_3>.
+Entity <CLKMAN_3> analyzed. Unit <CLKMAN_3> generated.
+
+Analyzing Entity <CLKMAN_4> in library <work> (Architecture <BEHAVIORAL>).
+    Set user-defined property "CLKDV_DIVIDE =  2.0000000000000000" for instance <DCM_SP_INST> in unit <CLKMAN_4>.
+    Set user-defined property "CLKFX_DIVIDE =  1" for instance <DCM_SP_INST> in unit <CLKMAN_4>.
+    Set user-defined property "CLKFX_MULTIPLY =  4" for instance <DCM_SP_INST> in unit <CLKMAN_4>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_SP_INST> in unit <CLKMAN_4>.
+    Set user-defined property "CLKIN_PERIOD =  40.0000000000000000" for instance <DCM_SP_INST> in unit <CLKMAN_4>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_SP_INST> in unit <CLKMAN_4>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_SP_INST> in unit <CLKMAN_4>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_SP_INST> in unit <CLKMAN_4>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <CLKMAN_4>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <CLKMAN_4>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_SP_INST> in unit <CLKMAN_4>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_SP_INST> in unit <CLKMAN_4>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_SP_INST> in unit <CLKMAN_4>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_SP_INST> in unit <CLKMAN_4>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_SP_INST> in unit <CLKMAN_4>.
+Entity <CLKMAN_4> analyzed. Unit <CLKMAN_4> generated.
+
+Analyzing Entity <CLOCK_MANAGER> in library <work> (Architecture <BEHAVIORAL>).
+    Set user-defined property "CLKDV_DIVIDE =  2.0000000000000000" for instance <DCM_SP_INST> in unit <CLOCK_MANAGER>.
+    Set user-defined property "CLKFX_DIVIDE =  1" for instance <DCM_SP_INST> in unit <CLOCK_MANAGER>.
+    Set user-defined property "CLKFX_MULTIPLY =  8" for instance <DCM_SP_INST> in unit <CLOCK_MANAGER>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_SP_INST> in unit <CLOCK_MANAGER>.
+    Set user-defined property "CLKIN_PERIOD =  40.0000000000000000" for instance <DCM_SP_INST> in unit <CLOCK_MANAGER>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_SP_INST> in unit <CLOCK_MANAGER>.
+    Set user-defined property "CLK_FEEDBACK =  NONE" for instance <DCM_SP_INST> in unit <CLOCK_MANAGER>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_SP_INST> in unit <CLOCK_MANAGER>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <CLOCK_MANAGER>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <CLOCK_MANAGER>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_SP_INST> in unit <CLOCK_MANAGER>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_SP_INST> in unit <CLOCK_MANAGER>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_SP_INST> in unit <CLOCK_MANAGER>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_SP_INST> in unit <CLOCK_MANAGER>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_SP_INST> in unit <CLOCK_MANAGER>.
+Entity <CLOCK_MANAGER> analyzed. Unit <CLOCK_MANAGER> generated.
+
+Analyzing Entity <FPGA_DUPS_Main_MUSER_FPGA_DUPS> in library <work> (Architecture <BEHAVIORAL>).
+WARNING:Xst:753 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" line 755: Unconnected output port 'S_StatHdx' of component 'ERRSTAT_MUSER_FPGA_DUPS'.
+    Set user-defined property "HU_SET =  XLXI_65_15" for instance <XLXI_65> in unit <FPGA_DUPS_Main_MUSER_FPGA_DUPS>.
+    Set user-defined property "HU_SET =  XLXI_71_11" for instance <XLXI_71> in unit <FPGA_DUPS_Main_MUSER_FPGA_DUPS>.
+    Set user-defined property "HU_SET =  XLXI_72_12" for instance <XLXI_72> in unit <FPGA_DUPS_Main_MUSER_FPGA_DUPS>.
+    Set user-defined property "HU_SET =  XLXI_80_13" for instance <XLXI_80> in unit <FPGA_DUPS_Main_MUSER_FPGA_DUPS>.
+    Set user-defined property "HU_SET =  XLXI_81_14" for instance <XLXI_81> in unit <FPGA_DUPS_Main_MUSER_FPGA_DUPS>.
+WARNING:Xst:754 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" line 836: Unconnected inout port 'BTM_GPO' of component 'uP_SPI_IF_MUSER_FPGA_DUPS'.
+WARNING:Xst:753 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" line 836: Unconnected output port 'BTM_PWMA' of component 'uP_SPI_IF_MUSER_FPGA_DUPS'.
+WARNING:Xst:753 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" line 836: Unconnected output port 'BTM_PWMB' of component 'uP_SPI_IF_MUSER_FPGA_DUPS'.
+WARNING:Xst:753 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" line 836: Unconnected output port 'Phase_Val_Adc' of component 'uP_SPI_IF_MUSER_FPGA_DUPS'.
+Entity <FPGA_DUPS_Main_MUSER_FPGA_DUPS> analyzed. Unit <FPGA_DUPS_Main_MUSER_FPGA_DUPS> generated.
+
+Analyzing Entity <ERRSTAT_MUSER_FPGA_DUPS> in library <work> (Architecture <BEHAVIORAL>).
+    Set user-defined property "INIT =  0" for instance <XLXI_11> in unit <ERRSTAT_MUSER_FPGA_DUPS>.
+    Set user-defined property "INIT =  0" for instance <XLXI_15> in unit <ERRSTAT_MUSER_FPGA_DUPS>.
+    Set user-defined property "INIT =  0" for instance <XLXI_19> in unit <ERRSTAT_MUSER_FPGA_DUPS>.
+Entity <ERRSTAT_MUSER_FPGA_DUPS> analyzed. Unit <ERRSTAT_MUSER_FPGA_DUPS> generated.
+
+Analyzing Entity <fd2c> in library <work> (Architecture <BEHAVIORAL>).
+Entity <fd2c> analyzed. Unit <fd2c> generated.
+
+Analyzing Entity <M2_1_HXILINX_FPGA_DUPS> in library <work> (Architecture <M2_1_HXILINX_FPGA_DUPS_V>).
+Entity <M2_1_HXILINX_FPGA_DUPS> analyzed. Unit <M2_1_HXILINX_FPGA_DUPS> generated.
+
+Analyzing Entity <or2clk> in library <work> (Architecture <BEHAVIORAL>).
+Entity <or2clk> analyzed. Unit <or2clk> generated.
+
+Analyzing Entity <uP_SPI_IF_MUSER_FPGA_DUPS> in library <work> (Architecture <BEHAVIORAL>).
+WARNING:Xst:753 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" line 249: Unconnected output port 'FPGA_CTRL_TEST' of component 'FBIF_SPIIF'.
+WARNING:Xst:753 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" line 249: Unconnected output port 'FPGA_STAT_TEST' of component 'FBIF_SPIIF'.
+WARNING:Xst:753 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf" line 249: Unconnected output port 'WCYC_P_CtrlHdx' of component 'FBIF_SPIIF'.
+Entity <uP_SPI_IF_MUSER_FPGA_DUPS> analyzed. Unit <uP_SPI_IF_MUSER_FPGA_DUPS> generated.
+
+Analyzing Entity <FBIF_SPIIF> in library <work> (Architecture <Structure>).
+WARNING:Xst:790 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FBIF_SPIIF.vhd" line 1353: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FBIF_SPIIF.vhd" line 1356: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FBIF_SPIIF.vhd" line 1359: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FBIF_SPIIF.vhd" line 1507: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FBIF_SPIIF.vhd" line 1512: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FBIF_SPIIF.vhd" line 1514: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FBIF_SPIIF.vhd" line 1522: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:2679 - Register <FPGA_STAT_REG_RO<15>> in unit <FBIF_SPIIF> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <FPGA_STAT_REG_RO<14>> in unit <FBIF_SPIIF> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <FPGA_STAT_REG_RO<13>> in unit <FBIF_SPIIF> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <FPGA_STAT_REG_RO<12>> in unit <FBIF_SPIIF> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <FPGA_STAT_REG_RO<11>> in unit <FBIF_SPIIF> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <FPGA_STAT_REG_RO<3>> in unit <FBIF_SPIIF> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <FPGA_STAT_REG_RO<2>> in unit <FBIF_SPIIF> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <FPGA_STAT_REG_RO<1>> in unit <FBIF_SPIIF> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <SPI_WR_D_W> in unit <FBIF_SPIIF> has a constant value of 0000000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <SPI_MISO_DOUT<63>> in unit <FBIF_SPIIF> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <SPI_MISO_DOUT<62>> in unit <FBIF_SPIIF> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <SPI_MISO_DOUT<61>> in unit <FBIF_SPIIF> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <SPI_MISO_DOUT<60>> in unit <FBIF_SPIIF> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <SPI_MISO_DOUT<59>> in unit <FBIF_SPIIF> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <SPI_MISO_DOUT<58>> in unit <FBIF_SPIIF> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <SPI_MISO_DOUT<57>> in unit <FBIF_SPIIF> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <SPI_MISO_DOUT<56>> in unit <FBIF_SPIIF> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <SPI_MISO_DOUT<55>> in unit <FBIF_SPIIF> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <SPI_MISO_DOUT<54>> in unit <FBIF_SPIIF> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <SPI_MISO_DOUT<53>> in unit <FBIF_SPIIF> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <SPI_MISO_DOUT<52>> in unit <FBIF_SPIIF> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <SPI_MISO_DOUT<51>> in unit <FBIF_SPIIF> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <SPI_MISO_DOUT<50>> in unit <FBIF_SPIIF> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <SPI_MISO_DOUT<49>> in unit <FBIF_SPIIF> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <SPI_MISO_DOUT<48>> in unit <FBIF_SPIIF> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <SPI_MISO_DOUT<45>> in unit <FBIF_SPIIF> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <SPI_MISO_DOUT<43>> in unit <FBIF_SPIIF> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <SPI_MISO_DOUT<42>> in unit <FBIF_SPIIF> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <FB_A_INT_LW_CHECK_RD> in unit <FBIF_SPIIF> has a constant value of 111111111111 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <READ_NOT_LATCHED> in unit <FBIF_SPIIF> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <SPI_READ_HW> in unit <FBIF_SPIIF> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <FB_A_INT_LW_CHECK_WR> in unit <FBIF_SPIIF> has a constant value of 111111111111 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <RCYC_STAT_REG_RO<4>> in unit <FBIF_SPIIF> has a constant value of 00000000000000000000000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <RCYC_STAT_REG_RO<5>> in unit <FBIF_SPIIF> has a constant value of 00000000000000000000000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <RCYC_STAT_REG_RO<6>> in unit <FBIF_SPIIF> has a constant value of 00000000000000000000000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <RCYC_STAT_REG_RO<7>> in unit <FBIF_SPIIF> has a constant value of 00000000000000000000000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <RCYC_STAT_REG_RO<9>> in unit <FBIF_SPIIF> has a constant value of 00000000000000000000000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <RCYC_STAT_REG_RO<10>> in unit <FBIF_SPIIF> has a constant value of 00000000000000000000000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <RCYC_STAT_REG_RO<11>> in unit <FBIF_SPIIF> has a constant value of 00000000000000000000000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <RCYC_STAT_REG_RO<12>> in unit <FBIF_SPIIF> has a constant value of 00000000000000000000000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <RCYC_STAT_REG_RO<13>> in unit <FBIF_SPIIF> has a constant value of 00000000000000000000000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <RCYC_STAT_REG_RO<14>> in unit <FBIF_SPIIF> has a constant value of 00000000000000000000000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <RCYC_STAT_REG_RO<15>> in unit <FBIF_SPIIF> has a constant value of 00000000000000000000000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <RCYC_STAT_REG_RO<16>> in unit <FBIF_SPIIF> has a constant value of 00000000000000000000000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <RCYC_STAT_REG_RO<17>> in unit <FBIF_SPIIF> has a constant value of 00000000000000000000000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <RCYC_STAT_REG_RO<18>> in unit <FBIF_SPIIF> has a constant value of 00000000000000000000000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <RCYC_STAT_REG_RO<19>> in unit <FBIF_SPIIF> has a constant value of 00000000000000000000000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <RCYC_STAT_REG_RO<20>> in unit <FBIF_SPIIF> has a constant value of 00000000000000000000000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <RCYC_STAT_REG_RO<21>> in unit <FBIF_SPIIF> has a constant value of 00000000000000000000000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <RCYC_STAT_REG_RO<22>> in unit <FBIF_SPIIF> has a constant value of 00000000000000000000000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <RCYC_STAT_REG_RO<23>> in unit <FBIF_SPIIF> has a constant value of 00000000000000000000000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <RCYC_STAT_REG_RO<24>> in unit <FBIF_SPIIF> has a constant value of 00000000000000000000000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <RCYC_STAT_REG_RO<25>> in unit <FBIF_SPIIF> has a constant value of 00000000000000000000000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <RCYC_STAT_REG_RO<26>> in unit <FBIF_SPIIF> has a constant value of 00000000000000000000000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <RCYC_STAT_REG_RO<27>> in unit <FBIF_SPIIF> has a constant value of 00000000000000000000000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <RCYC_STAT_REG_RO<28>> in unit <FBIF_SPIIF> has a constant value of 00000000000000000000000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <RCYC_STAT_REG_RO<29>> in unit <FBIF_SPIIF> has a constant value of 00000000000000000000000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <RCYC_STAT_REG_RO<30>> in unit <FBIF_SPIIF> has a constant value of 00000000000000000000000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <RCYC_STAT_REG_RO<31>> in unit <FBIF_SPIIF> has a constant value of 00000000000000000000000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <WCYC_P_PhaseValIn> in unit <FBIF_SPIIF> has a constant value of 0000000000000000 during circuit operation. The register is replaced by logic.
+Entity <FBIF_SPIIF> analyzed. Unit <FBIF_SPIIF> generated.
+
+Analyzing Entity <PWM_DDS> in library <work> (Architecture <Behavioral>).
+INFO:Xst:2679 - Register <AmpReg<31>> in unit <PWM_DDS> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <AmpReg<30>> in unit <PWM_DDS> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <AmpReg<13>> in unit <PWM_DDS> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <AmpReg<12>> in unit <PWM_DDS> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <AmpReg<11>> in unit <PWM_DDS> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <AmpReg<10>> in unit <PWM_DDS> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <AmpReg<9>> in unit <PWM_DDS> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <AmpReg<8>> in unit <PWM_DDS> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <AmpReg<7>> in unit <PWM_DDS> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <AmpReg<6>> in unit <PWM_DDS> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <AmpReg<5>> in unit <PWM_DDS> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <AmpReg<4>> in unit <PWM_DDS> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <AmpReg<3>> in unit <PWM_DDS> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <AmpReg<2>> in unit <PWM_DDS> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <AmpReg<1>> in unit <PWM_DDS> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <AmpReg<0>> in unit <PWM_DDS> has a constant value of 0 during circuit operation. The register is replaced by logic.
+Entity <PWM_DDS> analyzed. Unit <PWM_DDS> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <RST_DEB_1>.
+    Related source file is "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/RST_DEB_1.vhd".
+    Found 4-bit up counter for signal <i_X_RST_IN_DEB_CNT>.
+    Found 1-bit xor2 for signal <i_X_RST_IN_DEB_CNT$xor0000> created at line 55.
+    Found 1-bit register for signal <X_RST_DEB>.
+    Found 4-bit comparator greatequal for signal <X_RST_DEB$cmp_ge0000> created at line 60.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <RST_DEB_1> synthesized.
+
+
+Synthesizing Unit <RST_DEB_2>.
+    Related source file is "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/RST_DEB_2.vhd".
+    Found 4-bit up counter for signal <i_X_RST_IN_DEB_CNT>.
+    Found 1-bit xor2 for signal <i_X_RST_IN_DEB_CNT$xor0000> created at line 55.
+    Found 1-bit register for signal <X_RST_DEB>.
+    Found 4-bit comparator greatequal for signal <X_RST_DEB$cmp_ge0000> created at line 60.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <RST_DEB_2> synthesized.
+
+
+Synthesizing Unit <CC16CE_HXILINX_FPGA_DUPS>.
+    Related source file is "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf".
+    Found 16-bit up counter for signal <COUNT>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <CC16CE_HXILINX_FPGA_DUPS> synthesized.
+
+
+Synthesizing Unit <COMPM16_HXILINX_FPGA_DUPS>.
+    Related source file is "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf".
+    Found 16-bit comparator greater for signal <GT$cmp_gt0000> created at line 121.
+    Found 16-bit comparator less for signal <LT$cmp_lt0000> created at line 122.
+    Summary:
+	inferred   2 Comparator(s).
+Unit <COMPM16_HXILINX_FPGA_DUPS> synthesized.
+
+
+Synthesizing Unit <FTC_HXILINX_FPGA_DUPS>.
+    Related source file is "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf".
+    Found 1-bit register for signal <q_tmp>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <FTC_HXILINX_FPGA_DUPS> synthesized.
+
+
+Synthesizing Unit <counter23>.
+    Related source file is "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/counter23.vhd".
+    Found 24-bit up counter for signal <COUNT>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <counter23> synthesized.
+
+
+Synthesizing Unit <AND7_HXILINX_FPGA_DUPS>.
+    Related source file is "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf".
+Unit <AND7_HXILINX_FPGA_DUPS> synthesized.
+
+
+Synthesizing Unit <M2_1_HXILINX_FPGA_DUPS>.
+    Related source file is "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf".
+Unit <M2_1_HXILINX_FPGA_DUPS> synthesized.
+
+
+Synthesizing Unit <or2clk>.
+    Related source file is "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/or2clk.vhd".
+    Found 1-bit register for signal <O>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <or2clk> synthesized.
+
+
+Synthesizing Unit <PWM_DDS>.
+    Related source file is "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/PWM_DDS.vhd".
+WARNING:Xst:646 - Signal <SR_Q<3>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <PhaseBReg<30:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <PhaseAReg<30:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <CLK_25MHZ_NEG_STRB> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit xor2 for signal <Quad>.
+    Found 16-bit register for signal <AmpReg<29:14>>.
+    Found 1-bit register for signal <CLK_25MHZ_LAST_1>.
+    Found 1-bit register for signal <CLK_25MHZ_LAST_2>.
+    Found 1-bit register for signal <CLK_25MHZ_LAST_3>.
+    Found 1-bit register for signal <CLK_25MHZ_POS_STRB>.
+    Found 24-bit register for signal <FreqReg>.
+    Found 32-bit up accumulator for signal <PhaseAcc>.
+    Found 32-bit adder for signal <PhaseAReg>.
+    Found 32-bit subtractor for signal <PhaseBReg>.
+    Found 4-bit register for signal <SR_Q>.
+    Found 1-bit register for signal <SR_SLI>.
+    Found 32-bit comparator greater for signal <SR_SLI$cmp_gt0000> created at line 111.
+    Found 32-bit comparator less for signal <SR_SLI$cmp_lt0000> created at line 111.
+    Summary:
+	inferred   1 Accumulator(s).
+	inferred  49 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+Unit <PWM_DDS> synthesized.
+
+
+Synthesizing Unit <fd2c>.
+    Related source file is "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/fd2c.vhd".
+    Found 1-bit register for signal <Q0>.
+    Found 1-bit register for signal <Q1>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <fd2c> synthesized.
+
+
+Synthesizing Unit <FBIF_SPIIF>.
+    Related source file is "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FBIF_SPIIF.vhd".
+WARNING:Xst:1305 - Output <FBIF_TEST_1> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <FBIF_TEST_2> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <RCYC_S_StatHdx> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <RCYC_S_PhaseValOut> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <CLK_4> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <GPI<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <BTM_GPO<7:2>> is never assigned. Tied to value 000000.
+WARNING:Xst:1780 - Signal <WRITE_SYNC> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <WRITE_LW_VALID> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <WRITE_DATA_TEMP> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <WDOG_PWM_WCYC_PARA_IDX> is used but never assigned. This sourceless signal will be automatically connected to value 01010.
+WARNING:Xst:653 - Signal <WDOG_FREQU_WCYC_PARA_IDX> is used but never assigned. This sourceless signal will be automatically connected to value 01000.
+WARNING:Xst:646 - Signal <WCYC_PARA_REG_W<4><31:16>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <WCYC_PARA_REG_W<5:7>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <WCYC_PARA_REG_W<8><31:22>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <WCYC_PARA_REG_W<9>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <WCYC_PARA_REG_W<10><31:16>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <WCYC_PARA_REG_W<11:31>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <WCYC_PARA_I16> is used but never assigned. This sourceless signal will be automatically connected to value 1000011000000000000000000000.
+WARNING:Xst:646 - Signal <SPI_WR_RD_ADR<11:10>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <SPI_READ_HW> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <SPI_RD_D_W> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <SPI_HDL_WR_SM_SR<16>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <SPI_HDL_RD_SM_SR<12>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <READ_NOT_LATCHED> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <READ_LW_VALID> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <READ_DATA_TEMP> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <READ_DATA_LATCH> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000000.
+WARNING:Xst:653 - Signal <RCYC_STAT_I16> is used but never assigned. This sourceless signal will be automatically connected to value 1000010000000000000000000000.
+WARNING:Xst:646 - Signal <OLD_OL_LATCH<4>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <INITIALIZED> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <FB_SPI_WR_D_W> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <FB_A_INT_WA> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <FB_A_INT_LW_CHECK> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <FB_A_INT_IS_WA> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <FB_A_INT_IS_LWA> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <FB_A_INT_IS_HWA> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:737 - Found 16-bit latch for signal <WCYC_P_PWMVal>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:643 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FBIF_SPIIF.vhd" line 1560: The result of a 24x24-bit multiplication is partially used. Only the 42 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FBIF_SPIIF.vhd" line 1603: The result of a 22x22-bit multiplication is partially used. Only the 43 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 24-bit register for signal <WCYC_P_FrequValIn>.
+    Found 1-bit register for signal <SPI_O_MISO>.
+    Found 1-bit 64-to-1 multiplexer for signal <$varindex0001> created at line 859.
+    Found 24x24-bit multiplier for signal <ADBUG_RCYC_S_FrequValOut_S42$mult0001> created at line 1560.
+    Found 22x22-bit multiplier for signal <ADBUG_WCYC_P_FrequValIn_S43$mult0001> created at line 1603.
+    Found 16-bit register for signal <BOARD_TEST_MODE_REG_RW>.
+    Found 1-bit register for signal <CLK_1ms_LAST_1>.
+    Found 1-bit register for signal <CLK_1ms_LAST_2>.
+    Found 1-bit register for signal <CLK_1ms_LAST_3>.
+    Found 1-bit register for signal <CLK_1ms_NEG_STRB>.
+    Found 1-bit register for signal <CLK_1ms_POS_STRB>.
+    Found 32-bit register for signal <FB_SPI_RD_D_DW>.
+    Found 32-bit register for signal <FB_SPI_WR_D_DW>.
+    Found 16-bit register for signal <FPGA_CTRL_REG_RW>.
+    Found 1-bit register for signal <FPGA_RUN_EN>.
+    Found 7-bit register for signal <FPGA_STAT_REG_RO<10:4>>.
+    Found 1-bit register for signal <FPGA_STAT_REG_RO<0>>.
+    Found 19-bit comparator less for signal <FPGA_STAT_REG_RO_5$cmp_lt0000> created at line 651.
+    Found 19-bit up counter for signal <FPGA_STAT_RUN_COUNT>.
+    Found 19-bit comparator greatequal for signal <FPGA_STAT_RUN_COUNT$cmp_ge0000> created at line 646.
+    Found 8-bit register for signal <GPO_REG_W>.
+    Found 1-bit register for signal <HW_VERS_ERROR>.
+    Found 6-bit down counter for signal <i_SPI_BIT_IDX_CNT>.
+    Found 6-bit comparator lessequal for signal <i_SPI_BIT_IDX_CNT$cmp_le0000> created at line 816.
+    Found 2-bit up counter for signal <i_SPI_CLK_DEB_CNT>.
+    Found 4-bit up counter for signal <i_SPI_CLK_F_H_ERR_CNT>.
+    Found 4-bit comparator less for signal <i_SPI_CLK_F_H_ERR_CNT$cmp_lt0000> created at line 748.
+    Found 2-bit up counter for signal <i_SPI_CS_DEB_CNT>.
+    Found 3-bit down counter for signal <i_WDOG_CTR_FREQU>.
+    Found 3-bit comparator lessequal for signal <i_WDOG_CTR_FREQU$cmp_le0000> created at line 1430.
+    Found 1-bit xor2 for signal <i_WDOG_CTR_FREQU$xor0000> created at line 1428.
+    Found 3-bit down counter for signal <i_WDOG_CTR_PWM>.
+    Found 3-bit comparator lessequal for signal <i_WDOG_CTR_PWM$cmp_le0000> created at line 1422.
+    Found 1-bit xor2 for signal <i_WDOG_CTR_PWM$xor0000> created at line 1420.
+    Found 5-bit register for signal <OL_LATCH>.
+    Found 5-bit register for signal <OLD_OL_LATCH>.
+    Found 1-bit register for signal <PWM_VAL_REG_EQ_ZERO>.
+    Found 10-bit comparator greatequal for signal <RCYC_STAT_A$cmp_ge0000> created at line 1279.
+    Found 10-bit comparator less for signal <RCYC_STAT_A$cmp_lt0000> created at line 1279.
+    Found 5-bit adder for signal <RCYC_STAT_A_IDX>.
+    Found 5-bit subtractor for signal <RCYC_STAT_A_IDX$addsub0000> created at line 1286.
+    Found 32-bit register for signal <RCYC_STAT_REG_RO<8>>.
+    Found 1-bit register for signal <READ_ADDR_ERROR>.
+    Found 1-bit register for signal <READ_LATCHED>.
+    Found 1-bit register for signal <READ_SYNC_LAST>.
+    Found 1-bit register for signal <READ_TEMP>.
+    Found 1-bit register for signal <SAMPLE_HW_VERSION>.
+    Found 1-bit register for signal <SPI_CLK_DEB>.
+    Found 2-bit comparator greatequal for signal <SPI_CLK_DEB$cmp_ge0000> created at line 728.
+    Found 1-bit xor2 for signal <SPI_CLK_DEB$xor0000> created at line 728.
+    Found 1-bit register for signal <SPI_CLK_F_H_ERR>.
+    Found 4-bit comparator greater for signal <SPI_CLK_F_H_ERR$cmp_gt0000> created at line 732.
+    Found 2-bit comparator less for signal <SPI_CLK_F_H_ERR$cmp_lt0000> created at line 728.
+    Found 1-bit register for signal <SPI_CLK_F_H_ERR_CNT_RST>.
+    Found 1-bit register for signal <SPI_CS_DEB>.
+    Found 2-bit comparator greatequal for signal <SPI_CS_DEB$cmp_ge0000> created at line 773.
+    Found 1-bit xor2 for signal <SPI_CS_DEB$xor0000> created at line 773.
+    Found 1-bit register for signal <SPI_CS_DEB_LAST1>.
+    Found 1-bit register for signal <SPI_CS_DEB_LAST2>.
+    Found 1-bit register for signal <SPI_CS_DEB_LAST3>.
+    Found 1-bit register for signal <SPI_ERROR_BIT_ORUN>.
+    Found 1-bit register for signal <SPI_ERROR_BIT_ORUN_LAST1>.
+    Found 1-bit register for signal <SPI_ERROR_BIT_ORUN_LAST2>.
+    Found 1-bit register for signal <SPI_ERROR_BOR>.
+    Found 1-bit register for signal <SPI_ERROR_BUR>.
+    Found 1-bit register for signal <SPI_ERROR_CLK_F_H>.
+    Found 1-bit register for signal <SPI_ERROR_CLK_F_H_LAST1>.
+    Found 1-bit register for signal <SPI_ERROR_CLK_F_H_LAST2>.
+    Found 1-bit register for signal <SPI_ERROR_L_RA>.
+    Found 1-bit register for signal <SPI_ERROR_L_WA>.
+    Found 1-bit register for signal <SPI_ERROR_L_WPTY>.
+    Found 1-bit xor8 for signal <SPI_ERROR_L_WPTY$xor0000> created at line 1128.
+    Found 1-bit xor8 for signal <SPI_ERROR_L_WPTY$xor0001> created at line 1128.
+    Found 1-bit xor8 for signal <SPI_ERROR_L_WPTY$xor0002> created at line 1128.
+    Found 1-bit xor8 for signal <SPI_ERROR_L_WPTY$xor0003> created at line 1128.
+    Found 1-bit xor8 for signal <SPI_ERROR_L_WPTY$xor0004> created at line 1128.
+    Found 1-bit xor8 for signal <SPI_ERROR_L_WPTY$xor0005> created at line 1128.
+    Found 1-bit xor8 for signal <SPI_ERROR_L_WPTY$xor0006> created at line 1128.
+    Found 1-bit xor8 for signal <SPI_ERROR_L_WPTY$xor0007> created at line 1128.
+    Found 1-bit register for signal <SPI_HDL_RD>.
+    Found 1-bit register for signal <SPI_HDL_RD_CHK_DMY_ADDR>.
+    Found 13-bit register for signal <SPI_HDL_RD_SM_SR>.
+    Found 1-bit register for signal <SPI_HDL_RD_START>.
+    Found 1-bit register for signal <SPI_HDL_RPTY>.
+    Found 1-bit register for signal <SPI_HDL_WPTY>.
+    Found 1-bit register for signal <SPI_HDL_WR>.
+    Found 1-bit register for signal <SPI_HDL_WR_CHK_DMY_ADDR>.
+    Found 17-bit register for signal <SPI_HDL_WR_SM_SR>.
+    Found 1-bit register for signal <SPI_HDL_WR_START>.
+    Found 2-bit register for signal <SPI_MISO_DOUT<47:46>>.
+    Found 1-bit register for signal <SPI_MISO_DOUT<44>>.
+    Found 42-bit register for signal <SPI_MISO_DOUT<41:0>>.
+    Found 1-bit xor5 for signal <SPI_MISO_DOUT_32$xor0000> created at line 1068.
+    Found 1-bit xor5 for signal <SPI_MISO_DOUT_33$xor0000> created at line 1068.
+    Found 1-bit xor4 for signal <SPI_MISO_DOUT_34$xor0000> created at line 1068.
+    Found 1-bit xor4 for signal <SPI_MISO_DOUT_35$xor0000> created at line 1068.
+    Found 1-bit xor5 for signal <SPI_MISO_DOUT_36$xor0000> created at line 1068.
+    Found 1-bit xor4 for signal <SPI_MISO_DOUT_37$xor0000> created at line 1068.
+    Found 1-bit xor5 for signal <SPI_MISO_DOUT_38$xor0000> created at line 1068.
+    Found 1-bit xor5 for signal <SPI_MISO_DOUT_39$xor0000> created at line 1068.
+    Found 64-bit register for signal <SPI_MOSI_DIN>.
+    Found 1-bit register for signal <SPI_MOSI_RD_START>.
+    Found 1-bit register for signal <SPI_MOSI_RD_START_LAST1>.
+    Found 1-bit register for signal <SPI_MOSI_RD_START_LAST2>.
+    Found 64-bit register for signal <SPI_MOSI_REG>.
+    Found 12-bit register for signal <SPI_MOSI_REG_RD_ADR>.
+    Found 1-bit register for signal <SPI_N_CS_DEB>.
+    Found 1-bit register for signal <SPI_NEW_MOSI_RD_VALID>.
+    Found 1-bit register for signal <SPI_NEW_MOSI_VALID>.
+    Found 1-bit register for signal <SPI_OK>.
+    Found 6-bit comparator greater for signal <SPI_OK$cmp_gt0000> created at line 816.
+    Found 1-bit register for signal <SPI_OK_LAST1>.
+    Found 1-bit register for signal <SPI_OK_LAST2>.
+    Found 1-bit register for signal <SPI_READ_SYNC>.
+    Found 1-bit register for signal <SPI_START>.
+    Found 1-bit register for signal <SPI_START_CLEAR>.
+    Found 1-bit register for signal <SPI_START_LAST1>.
+    Found 1-bit register for signal <SPI_START_LAST2>.
+    Found 12-bit register for signal <SPI_WR_RD_ADR>.
+    Found 1-bit register for signal <SPI_WRITE_SYNC>.
+    Found 32-bit register for signal <TEST_REGISTER_INV_REG_RW>.
+    Found 32-bit register for signal <TEST_REGISTER_REG_RW>.
+    Found 16-bit comparator lessequal for signal <WCYC_P_PWMVal$cmp_le0000> created at line 1578.
+    Found 10-bit comparator greatequal for signal <WCYC_PARA_A$cmp_ge0000> created at line 1264.
+    Found 10-bit comparator less for signal <WCYC_PARA_A$cmp_lt0000> created at line 1264.
+    Found 1-bit register for signal <WDOG_ACK_FREQU>.
+    Found 1-bit register for signal <WDOG_ACK_PWM>.
+    Found 1-bit register for signal <WDOG_ERROR>.
+    Found 1-bit register for signal <WDOG_FREQU>.
+    Found 1-bit register for signal <WDOG_PWM>.
+    Found 1-bit register for signal <WRITE_ADDR_ERROR>.
+    Found 1-bit register for signal <WRITE_LATCHED>.
+    Found 1-bit register for signal <WRITE_SYNC_LAST>.
+    Found 1-bit register for signal <WRITE_TEMP>.
+    Summary:
+	inferred   7 Counter(s).
+	inferred 499 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   2 Multiplier(s).
+	inferred  16 Comparator(s).
+	inferred   1 Multiplexer(s).
+	inferred  16 Xor(s).
+Unit <FBIF_SPIIF> synthesized.
+
+
+Synthesizing Unit <CLKMAN_1>.
+    Related source file is "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLKMAN_1.vhd".
+Unit <CLKMAN_1> synthesized.
+
+
+Synthesizing Unit <CLKMAN_2>.
+    Related source file is "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLKMAN_2.vhd".
+Unit <CLKMAN_2> synthesized.
+
+
+Synthesizing Unit <CLKMAN_3>.
+    Related source file is "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLKMAN_3.vhd".
+Unit <CLKMAN_3> synthesized.
+
+
+Synthesizing Unit <CLKMAN_4>.
+    Related source file is "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLKMAN_4.vhd".
+Unit <CLKMAN_4> synthesized.
+
+
+Synthesizing Unit <CLOCK_MANAGER>.
+    Related source file is "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/CLOCK_MANAGER.vhd".
+Unit <CLOCK_MANAGER> synthesized.
+
+
+Synthesizing Unit <ERRSTAT_MUSER_FPGA_DUPS>.
+    Related source file is "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf".
+Unit <ERRSTAT_MUSER_FPGA_DUPS> synthesized.
+
+
+Synthesizing Unit <uP_SPI_IF_MUSER_FPGA_DUPS>.
+    Related source file is "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf".
+Unit <uP_SPI_IF_MUSER_FPGA_DUPS> synthesized.
+
+
+Synthesizing Unit <CLK_GEN_MUSER_FPGA_DUPS>.
+    Related source file is "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf".
+WARNING:Xst:646 - Signal <XLXN_79<15:9>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <XLXN_79<7:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <CLK_GEN_MUSER_FPGA_DUPS> synthesized.
+
+
+Synthesizing Unit <FPGA_DUPS_Main_MUSER_FPGA_DUPS>.
+    Related source file is "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf".
+WARNING:Xst:647 - Input <s_DSPI_ADC<3:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <XLXI_63_PHA_VAL_VALID_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <XLXI_63_FSYNC_VAL_VALID_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <XLXI_104_RCYC_S_StatHdx_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000000.
+WARNING:Xst:653 - Signal <XLXI_104_RCYC_S_PhaseValOut_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000000.
+WARNING:Xst:653 - Signal <XLXI_104_RCYC_STAT_FrequValOut_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 000000000000000000000000.
+WARNING:Xst:653 - Signal <XLXI_104_ADC_ERROR_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:646 - Signal <GPO<7:2>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <FPGA_DUPS_Main_MUSER_FPGA_DUPS> synthesized.
+
+
+Synthesizing Unit <FPGA_DUPS>.
+    Related source file is "C:/Users/76053/Documents/Branson/Proyectos/Next Generation/FPGA/GSX_FPGA/FPGA_DUPS.vhf".
+Unit <FPGA_DUPS> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 2
+ 22x22-bit multiplier                                  : 1
+ 24x24-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 1
+ 32-bit subtractor                                     : 1
+ 5-bit adder                                           : 1
+ 5-bit subtractor                                      : 1
+# Counters                                             : 13
+ 16-bit up counter                                     : 3
+ 19-bit up counter                                     : 1
+ 2-bit up counter                                      : 2
+ 24-bit up counter                                     : 1
+ 3-bit down counter                                    : 2
+ 4-bit up counter                                      : 3
+ 6-bit down counter                                    : 1
+# Accumulators                                         : 1
+ 32-bit up accumulator                                 : 1
+# Registers                                            : 309
+ 1-bit register                                        : 292
+ 12-bit register                                       : 2
+ 13-bit register                                       : 1
+ 16-bit register                                       : 2
+ 17-bit register                                       : 1
+ 24-bit register                                       : 2
+ 32-bit register                                       : 4
+ 4-bit register                                        : 1
+ 5-bit register                                        : 2
+ 64-bit register                                       : 1
+ 8-bit register                                        : 1
+# Latches                                              : 1
+ 16-bit latch                                          : 1
+# Comparators                                          : 22
+ 10-bit comparator greatequal                          : 2
+ 10-bit comparator less                                : 2
+ 16-bit comparator greater                             : 1
+ 16-bit comparator less                                : 1
+ 16-bit comparator lessequal                           : 1
+ 19-bit comparator greatequal                          : 1
+ 19-bit comparator less                                : 1
+ 2-bit comparator greatequal                           : 2
+ 2-bit comparator less                                 : 1
+ 3-bit comparator lessequal                            : 2
+ 32-bit comparator greater                             : 1
+ 32-bit comparator less                                : 1
+ 4-bit comparator greatequal                           : 2
+ 4-bit comparator greater                              : 1
+ 4-bit comparator less                                 : 1
+ 6-bit comparator greater                              : 1
+ 6-bit comparator lessequal                            : 1
+# Multiplexers                                         : 1
+ 1-bit 64-to-1 multiplexer                             : 1
+# Xors                                                 : 23
+ 1-bit xor2                                            : 7
+ 1-bit xor4                                            : 3
+ 1-bit xor5                                            : 5
+ 1-bit xor8                                            : 8
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/counter3cr.ngc>.
+Reading Secure Unit <blk00000001>.
+Loading core <counter3cr> for timing and area information for instance <XLXI_4>.
+WARNING:Xst:1290 - Hierarchical block <XLXI_25> is unconnected in block <XLXI_63>.
+   It will be removed from the design.
+INFO:Xst:2261 - The FF/Latch <FPGA_CTRL_REG_RW_1> in Unit <XLXI_22> is equivalent to the following 12 FFs/Latches, which will be removed : <FPGA_CTRL_REG_RW_2> <FPGA_CTRL_REG_RW_3> <FPGA_CTRL_REG_RW_6> <FPGA_CTRL_REG_RW_7> <FPGA_CTRL_REG_RW_8> <FPGA_CTRL_REG_RW_9> <FPGA_CTRL_REG_RW_10> <FPGA_CTRL_REG_RW_11> <FPGA_CTRL_REG_RW_12> <FPGA_CTRL_REG_RW_13> <FPGA_CTRL_REG_RW_14> <FPGA_CTRL_REG_RW_15> 
+INFO:Xst:2261 - The FF/Latch <RCYC_STAT_REG_RO_8_22> in Unit <XLXI_22> is equivalent to the following 9 FFs/Latches, which will be removed : <RCYC_STAT_REG_RO_8_23> <RCYC_STAT_REG_RO_8_24> <RCYC_STAT_REG_RO_8_25> <RCYC_STAT_REG_RO_8_26> <RCYC_STAT_REG_RO_8_27> <RCYC_STAT_REG_RO_8_28> <RCYC_STAT_REG_RO_8_29> <RCYC_STAT_REG_RO_8_30> <RCYC_STAT_REG_RO_8_31> 
+WARNING:Xst:1710 - FF/Latch <RCYC_STAT_REG_RO_8_22> (without init value) has a constant value of 0 in block <XLXI_22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <FPGA_CTRL_REG_RW_1> (without init value) has a constant value of 0 in block <XLXI_22>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <SPI_HDL_WR_SM_SR_7> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <SPI_HDL_WR_SM_SR_8> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <SPI_HDL_WR_SM_SR_9> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <SPI_HDL_WR_SM_SR_10> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <SPI_HDL_WR_SM_SR_11> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <SPI_HDL_WR_SM_SR_12> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <SPI_HDL_WR_SM_SR_13> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <SPI_HDL_WR_SM_SR_14> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <SPI_HDL_WR_SM_SR_15> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <SPI_HDL_WR_SM_SR_16> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <SPI_HDL_RD_SM_SR_7> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <SPI_HDL_RD_SM_SR_8> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <SPI_HDL_RD_SM_SR_9> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <SPI_HDL_RD_SM_SR_10> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <SPI_HDL_RD_SM_SR_11> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <SPI_HDL_RD_SM_SR_12> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <SPI_WR_RD_ADR_10> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <SPI_WR_RD_ADR_11> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <OLD_OL_LATCH_4> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_0> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_1> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_2> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_3> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_4> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_5> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_6> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_7> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_8> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_9> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_10> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_11> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_12> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_13> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_14> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_15> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_16> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_17> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_42> of sequential type is unconnected in block <XLXI_22>.
+WARNING:Xst:2677 - Node <SR_Q_2> of sequential type is unconnected in block <XLXI_137>.
+WARNING:Xst:2677 - Node <SR_Q_3> of sequential type is unconnected in block <XLXI_137>.
+WARNING:Xst:2404 -  FFs/Latches <FPGA_CTRL_REG_RW<15:6>> (without init value) have a constant value of 0 in block <FBIF_SPIIF>.
+WARNING:Xst:2404 -  FFs/Latches <RCYC_STAT_REG_RO_8<31:22>> (without init value) have a constant value of 0 in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <SR_Q_2> of sequential type is unconnected in block <PWM_DDS>.
+WARNING:Xst:2677 - Node <SR_Q_3> of sequential type is unconnected in block <PWM_DDS>.
+WARNING:Xst:2677 - Node <SPI_HDL_WR_SM_SR_7> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <SPI_HDL_WR_SM_SR_8> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <SPI_HDL_WR_SM_SR_9> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <SPI_HDL_WR_SM_SR_10> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <SPI_HDL_WR_SM_SR_11> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <SPI_HDL_WR_SM_SR_12> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <SPI_HDL_WR_SM_SR_13> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <SPI_HDL_WR_SM_SR_14> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <SPI_HDL_WR_SM_SR_15> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <SPI_HDL_WR_SM_SR_16> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <SPI_HDL_RD_SM_SR_7> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <SPI_HDL_RD_SM_SR_8> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <SPI_HDL_RD_SM_SR_9> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <SPI_HDL_RD_SM_SR_10> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <SPI_HDL_RD_SM_SR_11> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <SPI_HDL_RD_SM_SR_12> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <SPI_WR_RD_ADR_10> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <SPI_WR_RD_ADR_11> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <OLD_OL_LATCH_4> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_0> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_1> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_2> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_3> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_4> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_5> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_6> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_7> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_8> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_9> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_10> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_11> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_12> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_13> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_14> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_15> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_16> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_17> of sequential type is unconnected in block <FBIF_SPIIF>.
+WARNING:Xst:2677 - Node <ADBUG_WCYC_P_FrequValIn_S43_mult0001_42> of sequential type is unconnected in block <FBIF_SPIIF>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 2
+ 22x22-bit multiplier                                  : 1
+ 24x24-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 1
+ 32-bit subtractor                                     : 1
+ 5-bit adder                                           : 1
+ 5-bit subtractor                                      : 1
+# Counters                                             : 13
+ 16-bit up counter                                     : 3
+ 19-bit up counter                                     : 1
+ 2-bit up counter                                      : 2
+ 24-bit up counter                                     : 1
+ 3-bit down counter                                    : 2
+ 4-bit up counter                                      : 3
+ 6-bit down counter                                    : 1
+# Accumulators                                         : 1
+ 32-bit up accumulator                                 : 1
+# Registers                                            : 607
+ Flip-Flops                                            : 607
+# Latches                                              : 1
+ 16-bit latch                                          : 1
+# Comparators                                          : 22
+ 10-bit comparator greatequal                          : 2
+ 10-bit comparator less                                : 2
+ 16-bit comparator greater                             : 1
+ 16-bit comparator less                                : 1
+ 16-bit comparator lessequal                           : 1
+ 19-bit comparator greatequal                          : 1
+ 19-bit comparator less                                : 1
+ 2-bit comparator greatequal                           : 2
+ 2-bit comparator less                                 : 1
+ 3-bit comparator lessequal                            : 2
+ 32-bit comparator greater                             : 1
+ 32-bit comparator less                                : 1
+ 4-bit comparator greatequal                           : 2
+ 4-bit comparator greater                              : 1
+ 4-bit comparator less                                 : 1
+ 6-bit comparator greater                              : 1
+ 6-bit comparator lessequal                            : 1
+# Multiplexers                                         : 1
+ 1-bit 64-to-1 multiplexer                             : 1
+# Xors                                                 : 23
+ 1-bit xor2                                            : 7
+ 1-bit xor4                                            : 3
+ 1-bit xor5                                            : 5
+ 1-bit xor8                                            : 8
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <FPGA_CTRL_REG_RW_1> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <FPGA_CTRL_REG_RW_2> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <FPGA_CTRL_REG_RW_3> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <2> in Unit <LPM_DFF_20> is equivalent to the following 5 FFs/Latches, which will be removed : <3> <4> <5> <6> <7> 
+WARNING:Xst:1710 - FF/Latch <2> (without init value) has a constant value of 0 in block <LPM_DFF_20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <RCYC_STAT_REG_RO_8_21> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RCYC_STAT_REG_RO_8_20> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RCYC_STAT_REG_RO_8_19> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RCYC_STAT_REG_RO_8_18> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RCYC_STAT_REG_RO_8_17> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RCYC_STAT_REG_RO_8_16> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RCYC_STAT_REG_RO_8_15> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RCYC_STAT_REG_RO_8_14> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RCYC_STAT_REG_RO_8_13> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RCYC_STAT_REG_RO_8_12> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RCYC_STAT_REG_RO_8_11> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RCYC_STAT_REG_RO_8_10> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RCYC_STAT_REG_RO_8_9> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RCYC_STAT_REG_RO_8_8> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RCYC_STAT_REG_RO_8_7> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RCYC_STAT_REG_RO_8_6> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RCYC_STAT_REG_RO_8_5> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RCYC_STAT_REG_RO_8_4> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RCYC_STAT_REG_RO_8_3> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RCYC_STAT_REG_RO_8_2> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RCYC_STAT_REG_RO_8_1> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RCYC_STAT_REG_RO_8_0> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <BOARD_TEST_MODE_REG_RW_15> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BOARD_TEST_MODE_REG_RW_14> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BOARD_TEST_MODE_REG_RW_13> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BOARD_TEST_MODE_REG_RW_12> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BOARD_TEST_MODE_REG_RW_11> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BOARD_TEST_MODE_REG_RW_10> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BOARD_TEST_MODE_REG_RW_9> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BOARD_TEST_MODE_REG_RW_8> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BOARD_TEST_MODE_REG_RW_7> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BOARD_TEST_MODE_REG_RW_6> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BOARD_TEST_MODE_REG_RW_5> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <BOARD_TEST_MODE_REG_RW_4> (without init value) has a constant value of 0 in block <FBIF_SPIIF>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <FPGA_DUPS> ...
+
+Optimizing unit <AND7_HXILINX_FPGA_DUPS> ...
+
+Optimizing unit <M2_1_HXILINX_FPGA_DUPS> ...
+
+Optimizing unit <CC16CE_HXILINX_FPGA_DUPS> ...
+
+Optimizing unit <COMPM16_HXILINX_FPGA_DUPS> ...
+
+Optimizing unit <FTC_HXILINX_FPGA_DUPS> ...
+
+Optimizing unit <PWM_DDS> ...
+
+Optimizing unit <FBIF_SPIIF> ...
+
+Optimizing unit <ERRSTAT_MUSER_FPGA_DUPS> ...
+
+Optimizing unit <CLK_GEN_MUSER_FPGA_DUPS> ...
+
+Optimizing unit <FPGA_DUPS_Main_MUSER_FPGA_DUPS> ...
+WARNING:Xst:2677 - Node <COUNT_9> of sequential type is unconnected in block <XLXI_33/XLXI_46>.
+WARNING:Xst:2677 - Node <COUNT_10> of sequential type is unconnected in block <XLXI_33/XLXI_46>.
+WARNING:Xst:2677 - Node <COUNT_11> of sequential type is unconnected in block <XLXI_33/XLXI_46>.
+WARNING:Xst:2677 - Node <COUNT_12> of sequential type is unconnected in block <XLXI_33/XLXI_46>.
+WARNING:Xst:2677 - Node <COUNT_13> of sequential type is unconnected in block <XLXI_33/XLXI_46>.
+WARNING:Xst:2677 - Node <COUNT_14> of sequential type is unconnected in block <XLXI_33/XLXI_46>.
+WARNING:Xst:2677 - Node <COUNT_15> of sequential type is unconnected in block <XLXI_33/XLXI_46>.
+WARNING:Xst:2677 - Node <XLXI_47/XLXI_63/XLXI_25/Q1> of sequential type is unconnected in block <FPGA_DUPS>.
+WARNING:Xst:2677 - Node <XLXI_47/XLXI_63/XLXI_25/Q0> of sequential type is unconnected in block <FPGA_DUPS>.
+WARNING:Xst:2677 - Node <XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W<4>_0> of sequential type is unconnected in block <FPGA_DUPS>.
+WARNING:Xst:2677 - Node <XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W<4>_1> of sequential type is unconnected in block <FPGA_DUPS>.
+WARNING:Xst:2677 - Node <XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W<4>_2> of sequential type is unconnected in block <FPGA_DUPS>.
+WARNING:Xst:2677 - Node <XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W<4>_3> of sequential type is unconnected in block <FPGA_DUPS>.
+WARNING:Xst:2677 - Node <XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W<4>_4> of sequential type is unconnected in block <FPGA_DUPS>.
+WARNING:Xst:2677 - Node <XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W<4>_5> of sequential type is unconnected in block <FPGA_DUPS>.
+WARNING:Xst:2677 - Node <XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W<4>_6> of sequential type is unconnected in block <FPGA_DUPS>.
+WARNING:Xst:2677 - Node <XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W<4>_7> of sequential type is unconnected in block <FPGA_DUPS>.
+WARNING:Xst:2677 - Node <XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W<4>_8> of sequential type is unconnected in block <FPGA_DUPS>.
+WARNING:Xst:2677 - Node <XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W<4>_9> of sequential type is unconnected in block <FPGA_DUPS>.
+WARNING:Xst:2677 - Node <XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W<4>_11> of sequential type is unconnected in block <FPGA_DUPS>.
+WARNING:Xst:2677 - Node <XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W<4>_10> of sequential type is unconnected in block <FPGA_DUPS>.
+WARNING:Xst:2677 - Node <XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W<4>_12> of sequential type is unconnected in block <FPGA_DUPS>.
+WARNING:Xst:2677 - Node <XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W<4>_13> of sequential type is unconnected in block <FPGA_DUPS>.
+WARNING:Xst:2677 - Node <XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W<4>_14> of sequential type is unconnected in block <FPGA_DUPS>.
+WARNING:Xst:2677 - Node <XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W<4>_15> of sequential type is unconnected in block <FPGA_DUPS>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block FPGA_DUPS, actual ratio is 4.
+INFO:Xst:2260 - The FF/Latch <XLXI_33/XLXI_25> in Unit <FPGA_DUPS> is equivalent to the following FF/Latch : <XLXI_33/XLXI_22> 
+
+Final Macro Processing ...
+
+Processing Unit <FPGA_DUPS> :
+	Found 2-bit shift register for signal <XLXI_47/XLXI_104/XLXI_22/SPI_ERROR_CLK_F_H_LAST2>.
+Unit <FPGA_DUPS> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 688
+ Flip-Flops                                            : 688
+# Shift Registers                                      : 1
+ 2-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : FPGA_DUPS.ngr
+Top Level Output File Name         : FPGA_DUPS
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 38
+
+Cell Usage :
+# BELS                             : 1310
+#      AND2                        : 6
+#      AND2B1                      : 1
+#      AND3                        : 1
+#      AND3B2                      : 3
+#      AND3B3                      : 1
+#      BUF                         : 39
+#      GND                         : 4
+#      INV                         : 54
+#      LUT1                        : 94
+#      LUT2                        : 180
+#      LUT3                        : 107
+#      LUT4                        : 351
+#      MUXCY                       : 247
+#      MUXF5                       : 31
+#      MUXF6                       : 5
+#      MUXF7                       : 2
+#      MUXF8                       : 1
+#      OR2                         : 5
+#      OR2B1                       : 1
+#      VCC                         : 5
+#      XORCY                       : 172
+# FlipFlops/Latches                : 706
+#      FDC                         : 91
+#      FDC_1                       : 1
+#      FDCE                        : 445
+#      FDE                         : 86
+#      FDP                         : 11
+#      FDPE                        : 46
+#      FDR                         : 8
+#      FDS                         : 1
+#      LD                          : 16
+#      LDC                         : 1
+# Shift Registers                  : 1
+#      SRL16E                      : 1
+# Clock Buffers                    : 11
+#      BUFG                        : 11
+# IO Buffers                       : 37
+#      IBUF                        : 23
+#      OBUF                        : 14
+# DCMs                             : 5
+#      DCM_SP                      : 5
+# MULTs                            : 4
+#      MULT18X18SIO                : 4
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1400aft256-4 
+
+ Number of Slices:                      558  out of  11264     4%  
+ Number of Slice Flip Flops:            706  out of  22528     3%  
+ Number of 4 input LUTs:                787  out of  22528     3%  
+    Number used as logic:               786
+    Number used as Shift registers:       1
+ Number of IOs:                          38
+ Number of bonded IOBs:                  37  out of    161    22%  
+ Number of MULT18X18SIOs:                 4  out of     32    12%  
+ Number of GCLKs:                        11  out of     24    45%  
+ Number of DCMs:                          5  out of      8    62%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------+-------+
+Clock Signal                                                                                                        | Clock buffer(FF name)                            | Load  |
+--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------+-------+
+I_CLK_25MHZ                                                                                                         | IBUF+BUFG                                        | 50    |
+XLXI_33/XLXI_31/Mcompar_GT_cmp_gt0000_cy<15>(XLXI_33/XLXI_31/Mcompar_GT_cmp_gt0000_cy<15>:O)                        | NONE(*)(XLXI_33/XLXI_37/q_tmp)                   | 1     |
+XLXI_33/S_CLK_4                                                                                                     | XLXI_33/XLXI_95/DCM_SP_INST:CLK0                 | 16    |
+XLXN_180                                                                                                            | NONE(XLXI_33/XLXI_46/COUNT_0)                    | 9     |
+I_CLK_25MHZ                                                                                                         | XLXI_33/XLXI_103/DCM_SP_INST:CLKFX               | 8     |
+N1                                                                                                                  | NONE(XLXI_33/XLXI_9)                             | 1     |
+XLXI_47/XLXI_63/S_StatHdx_DUMMY<8>(XLXI_47/XLXI_63/XLXI_4:O)                                                        | NONE(*)(XLXI_47/XLXI_63/XLXI_11)                 | 1     |
+XLXI_47/XLXI_63/S_StatHdx_DUMMY<9>(XLXI_47/XLXI_63/XLXI_14:O)                                                       | NONE(*)(XLXI_47/XLXI_63/XLXI_15)                 | 1     |
+XLXI_47/XLXI_63/XLXN_28(XLXI_47/XLXI_63/XLXI_18:O)                                                                  | NONE(*)(XLXI_47/XLXI_63/XLXI_19)                 | 1     |
+XLXI_33/S_CLK_8                                                                                                     | XLXI_33/XLXI_98/DCM_SP_INST:CLK0                 | 440   |
+XLXI_33/S_CLK_M                                                                                                     | XLXI_33/XLXI_81/DCM_SP_INST:CLK0                 | 13    |
+XLXI_47/XLXI_104/XLXI_22/SPI_CLK_DEB1                                                                               | BUFG                                             | 76    |
+XLXI_47/XLXI_104/XLXI_22/WCYC_P_PWMVal_cmp_le0000(XLXI_47/XLXI_104/XLXI_22/Mcompar_WCYC_P_PWMVal_cmp_le0000_cy<5>:O)| NONE(*)(XLXI_47/XLXI_104/XLXI_22/WCYC_P_PWMVal_0)| 16    |
+XLXI_33/S_CLK_DDS                                                                                                   | XLXI_33/XLXI_87/DCM_SP_INST:CLK0                 | 77    |
+--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------+-------+
+(*) These 5 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------+-------+
+Control Signal                                                                                                             | Buffer(FF name)                                                       | Load  |
+---------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------+-------+
+XLXI_47/XLXI_104/XLXI_22/BOARD_TEST_MODE_REG_RW_Acst_inv(XLXI_47/XLXI_104/XLXI_22/BOARD_TEST_MODE_REG_RW_Acst_inv1_INV_0:O)| NONE(XLXI_47/XLXI_104/XLXI_22/ADBUG_WCYC_P_FrequValIn_S43_mult0001_18)| 440   |
+XLXI_47/XLXI_137/X_RST_inv(XLXI_47/XLXI_137/X_RST_inv231_INV_0:O)                                                          | NONE(XLXI_47/XLXI_137/AmpReg_14)                                      | 78    |
+XLXI_33/XLXN_92(XLXI_33/XLXI_55:O)                                                                                         | NONE(XLXI_33/XLXI_54/COUNT_0)                                         | 24    |
+XLXI_33/Reset(XLXI_33/XLXI_7:O)                                                                                            | NONE(XLXI_33/XLXI_16)                                                 | 16    |
+XLXI_33/XLXN_2(XLXI_33/XLXI_3:O)                                                                                           | NONE(XLXI_33/XLXI_50/COUNT_0)                                         | 16    |
+XLXI_33/XLXN_62(XLXI_33/XLXI_35:O)                                                                                         | NONE(XLXI_33/XLXI_28/COUNT_0)                                         | 16    |
+XLXI_47/XLXI_63/XLXN_23(XLXI_47/XLXI_63/XLXI_17:O)                                                                         | NONE(XLXI_47/XLXI_63/XLXI_11)                                         | 3     |
+XLXI_47/XLXI_104/XLXI_22/SPI_O_MISO_or0000(XLXI_47/XLXI_104/XLXI_22/SPI_O_MISO_or00001:O)                                  | NONE(XLXI_47/XLXI_104/XLXI_22/SPI_O_MISO)                             | 1     |
+XLXI_47/XLXI_104/XLXI_22/SPI_START_or0000(XLXI_47/XLXI_104/XLXI_22/SPI_START_or00001:O)                                    | NONE(XLXI_47/XLXI_104/XLXI_22/SPI_START)                              | 1     |
+---------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 28.456ns (Maximum Frequency: 35.142MHz)
+   Minimum input arrival time before clock: 6.958ns
+   Maximum output required time after clock: 16.459ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'I_CLK_25MHZ'
+  Clock period: 28.456ns (frequency: 35.142MHz)
+  Total number of paths / destination ports: 1780 / 106
+-------------------------------------------------------------------------
+Delay:               3.557ns (Levels of Logic = 3)
+  Source:            sec_inst (FF)
+  Destination:       sec_inst (FF)
+  Source Clock:      I_CLK_25MHZ rising 8.0X
+  Destination Clock: I_CLK_25MHZ rising 8.0X
+
+  Data Path: sec_inst to sec_inst
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     SEC:C->out            2   0.591   0.590  sec_inst (sec_net)
+     SEC:in->out           1   0.648   0.000  sec_inst (sec_net)
+     SEC:in->out           0   0.632   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.844   0.000  sec_inst (sec_net)
+     SEC:in                    0.252          sec_inst
+    ----------------------------------------
+    Total                      3.557ns (2.967ns logic, 0.590ns route)
+                                       (83.4% logic, 16.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_33/XLXI_31/Mcompar_GT_cmp_gt0000_cy<15>'
+  Clock period: 2.358ns (frequency: 424.088MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.358ns (Levels of Logic = 1)
+  Source:            XLXI_33/XLXI_37/q_tmp (FF)
+  Destination:       XLXI_33/XLXI_37/q_tmp (FF)
+  Source Clock:      XLXI_33/XLXI_31/Mcompar_GT_cmp_gt0000_cy<15> falling
+  Destination Clock: XLXI_33/XLXI_31/Mcompar_GT_cmp_gt0000_cy<15> falling
+
+  Data Path: XLXI_33/XLXI_37/q_tmp to XLXI_33/XLXI_37/q_tmp
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.591   0.447  q_tmp (q_tmp)
+     INV:I->O              1   0.648   0.420  q_tmp_not00011_INV_0 (q_tmp_not0001)
+     FDCE:D                    0.252          q_tmp
+    ----------------------------------------
+    Total                      2.358ns (1.491ns logic, 0.867ns route)
+                                       (63.2% logic, 36.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_33/S_CLK_4'
+  Clock period: 4.402ns (frequency: 227.169MHz)
+  Total number of paths / destination ports: 136 / 16
+-------------------------------------------------------------------------
+Delay:               4.402ns (Levels of Logic = 16)
+  Source:            XLXI_33/XLXI_28/COUNT_1 (FF)
+  Destination:       XLXI_33/XLXI_28/COUNT_15 (FF)
+  Source Clock:      XLXI_33/S_CLK_4 rising
+  Destination Clock: XLXI_33/S_CLK_4 rising
+
+  Data Path: XLXI_33/XLXI_28/COUNT_1 to XLXI_33/XLXI_28/COUNT_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.591   0.590  COUNT_1 (COUNT_1)
+     LUT1:I0->O            1   0.648   0.000  Mcount_COUNT_cy<1>_rt (Mcount_COUNT_cy<1>_rt)
+     MUXCY:S->O            1   0.632   0.000  Mcount_COUNT_cy<1> (Mcount_COUNT_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_COUNT_cy<2> (Mcount_COUNT_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_COUNT_cy<3> (Mcount_COUNT_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_COUNT_cy<4> (Mcount_COUNT_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_COUNT_cy<5> (Mcount_COUNT_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_COUNT_cy<6> (Mcount_COUNT_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_COUNT_cy<7> (Mcount_COUNT_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_COUNT_cy<8> (Mcount_COUNT_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_COUNT_cy<9> (Mcount_COUNT_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_COUNT_cy<10> (Mcount_COUNT_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_COUNT_cy<11> (Mcount_COUNT_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_COUNT_cy<12> (Mcount_COUNT_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_COUNT_cy<13> (Mcount_COUNT_cy<13>)
+     MUXCY:CI->O           0   0.065   0.000  Mcount_COUNT_cy<14> (Mcount_COUNT_cy<14>)
+     XORCY:CI->O           1   0.844   0.000  Mcount_COUNT_xor<15> (Result<15>)
+     FDCE:D                    0.252          COUNT_15
+    ----------------------------------------
+    Total                      4.402ns (3.812ns logic, 0.590ns route)
+                                       (86.6% logic, 13.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXN_180'
+  Clock period: 3.920ns (frequency: 255.102MHz)
+  Total number of paths / destination ports: 45 / 9
+-------------------------------------------------------------------------
+Delay:               3.920ns (Levels of Logic = 9)
+  Source:            XLXI_33/XLXI_46/COUNT_1 (FF)
+  Destination:       XLXI_33/XLXI_46/COUNT_8 (FF)
+  Source Clock:      XLXN_180 rising
+  Destination Clock: XLXN_180 rising
+
+  Data Path: XLXI_33/XLXI_46/COUNT_1 to XLXI_33/XLXI_46/COUNT_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             1   0.591   0.563  COUNT_1 (COUNT_1)
+     LUT1:I0->O            1   0.648   0.000  Mcount_COUNT_cy<1>_rt (Mcount_COUNT_cy<1>_rt)
+     MUXCY:S->O            1   0.632   0.000  Mcount_COUNT_cy<1> (Mcount_COUNT_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_COUNT_cy<2> (Mcount_COUNT_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_COUNT_cy<3> (Mcount_COUNT_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_COUNT_cy<4> (Mcount_COUNT_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_COUNT_cy<5> (Mcount_COUNT_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_COUNT_cy<6> (Mcount_COUNT_cy<6>)
+     MUXCY:CI->O           0   0.065   0.000  Mcount_COUNT_cy<7> (Mcount_COUNT_cy<7>)
+     XORCY:CI->O           1   0.844   0.000  Mcount_COUNT_xor<8> (Result<8>)
+     FDCE:D                    0.252          COUNT_8
+    ----------------------------------------
+    Total                      3.920ns (3.357ns logic, 0.563ns route)
+                                       (85.6% logic, 14.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_33/S_CLK_8'
+  Clock period: 12.899ns (frequency: 77.525MHz)
+  Total number of paths / destination ports: 141890 / 731
+-------------------------------------------------------------------------
+Delay:               12.899ns (Levels of Logic = 29)
+  Source:            XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W<8>_16 (FF)
+  Destination:       XLXI_47/XLXI_104/XLXI_22/ADBUG_WCYC_P_FrequValIn_S43_mult0001_41 (FF)
+  Source Clock:      XLXI_33/S_CLK_8 rising
+  Destination Clock: XLXI_33/S_CLK_8 rising
+
+  Data Path: XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W<8>_16 to XLXI_47/XLXI_104/XLXI_22/ADBUG_WCYC_P_FrequValIn_S43_mult0001_41
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.591   0.447  XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W<8>_16 (XLXI_47/XLXI_104/XLXI_22/WCYC_PARA_REG_W<8>_16)
+     MULT18X18SIO:A16->P17    1   4.873   0.500  XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_0 (XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_0_P_to_Adder_A_17)
+     LUT2:I1->O            1   0.643   0.000  XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_lut<17> (XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_lut<17>)
+     MUXCY:S->O            1   0.632   0.000  XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<17> (XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<18> (XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<19> (XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<20> (XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<21> (XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<22> (XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<23> (XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<24> (XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<25> (XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<26> (XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<27> (XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<28> (XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<29> (XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<29>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<30> (XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<30>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<31> (XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<31>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<32> (XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<32>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<33> (XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<33>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<34> (XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<34>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<35> (XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<35>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<36> (XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<36>)
+     MUXCY:CI->O           0   0.065   0.000  XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<37> (XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_cy<37>)
+     XORCY:CI->O           1   0.844   0.563  XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_00_Madd_xor<38> (XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_submult_0_38)
+     LUT2:I0->O            1   0.648   0.000  XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_Madd_lut<38> (XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_Madd_lut<38>)
+     MUXCY:S->O            1   0.632   0.000  XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_Madd_cy<38> (XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_Madd_cy<38>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_Madd_cy<39> (XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_Madd_cy<39>)
+     MUXCY:CI->O           0   0.065   0.000  XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_Madd_cy<40> (XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_Madd_cy<40>)
+     XORCY:CI->O           1   0.844   0.000  XLXI_47/XLXI_104/XLXI_22/Mmult_ADBUG_WCYC_P_FrequValIn_S43_mult0001_Madd_xor<41> (XLXI_47/XLXI_104/XLXI_22/ADBUG_WCYC_P_FrequValIn_S43_mult0001<41>)
+     FDC:D                     0.252          XLXI_47/XLXI_104/XLXI_22/ADBUG_WCYC_P_FrequValIn_S43_mult0001_41
+    ----------------------------------------
+    Total                     12.899ns (11.389ns logic, 1.510ns route)
+                                       (88.3% logic, 11.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_33/S_CLK_M'
+  Clock period: 3.858ns (frequency: 259.202MHz)
+  Total number of paths / destination ports: 61 / 19
+-------------------------------------------------------------------------
+Delay:               3.858ns (Levels of Logic = 2)
+  Source:            XLXI_47/XLXI_104/XLXI_22/SPI_CLK_DEB (FF)
+  Destination:       XLXI_47/XLXI_104/XLXI_22/SPI_CLK_F_H_ERR (FF)
+  Source Clock:      XLXI_33/S_CLK_M rising
+  Destination Clock: XLXI_33/S_CLK_M rising
+
+  Data Path: XLXI_47/XLXI_104/XLXI_22/SPI_CLK_DEB to XLXI_47/XLXI_104/XLXI_22/SPI_CLK_F_H_ERR
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q             6   0.591   0.749  XLXI_47/XLXI_104/XLXI_22/SPI_CLK_DEB (XLXI_47/XLXI_104/XLXI_22/SPI_CLK_DEB1)
+     LUT4:I1->O            1   0.643   0.500  XLXI_47/XLXI_104/XLXI_22/SPI_CLK_F_H_ERR_not0001_SW0 (N18)
+     LUT4:I1->O            1   0.643   0.420  XLXI_47/XLXI_104/XLXI_22/SPI_CLK_F_H_ERR_not0001 (XLXI_47/XLXI_104/XLXI_22/SPI_CLK_F_H_ERR_not0001)
+     FDCE:CE                   0.312          XLXI_47/XLXI_104/XLXI_22/SPI_CLK_F_H_ERR
+    ----------------------------------------
+    Total                      3.858ns (2.189ns logic, 1.669ns route)
+                                       (56.7% logic, 43.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_47/XLXI_104/XLXI_22/SPI_CLK_DEB1'
+  Clock period: 11.495ns (frequency: 86.996MHz)
+  Total number of paths / destination ports: 658 / 85
+-------------------------------------------------------------------------
+Delay:               5.747ns (Levels of Logic = 5)
+  Source:            XLXI_47/XLXI_104/XLXI_22/i_SPI_BIT_IDX_CNT_0 (FF)
+  Destination:       XLXI_47/XLXI_104/XLXI_22/SPI_O_MISO (FF)
+  Source Clock:      XLXI_47/XLXI_104/XLXI_22/SPI_CLK_DEB1 rising
+  Destination Clock: XLXI_47/XLXI_104/XLXI_22/SPI_CLK_DEB1 falling
+
+  Data Path: XLXI_47/XLXI_104/XLXI_22/i_SPI_BIT_IDX_CNT_0 to XLXI_47/XLXI_104/XLXI_22/SPI_O_MISO
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             39   0.591   1.407  XLXI_47/XLXI_104/XLXI_22/i_SPI_BIT_IDX_CNT_0 (XLXI_47/XLXI_104/XLXI_22/i_SPI_BIT_IDX_CNT_0)
+     LUT3:I0->O            1   0.648   0.000  XLXI_47/XLXI_104/XLXI_22/Mmux__varindex0001_124 (XLXI_47/XLXI_104/XLXI_22/Mmux__varindex0001_124)
+     MUXF5:I1->O           1   0.276   0.000  XLXI_47/XLXI_104/XLXI_22/Mmux__varindex0001_11_f5_0 (XLXI_47/XLXI_104/XLXI_22/Mmux__varindex0001_11_f51)
+     MUXF6:I1->O           1   0.291   0.563  XLXI_47/XLXI_104/XLXI_22/Mmux__varindex0001_10_f6 (XLXI_47/XLXI_104/XLXI_22/Mmux__varindex0001_10_f6)
+     LUT4:I0->O            1   0.648   0.423  XLXI_47/XLXI_104/XLXI_22/i_SPI_BIT_IDX_CNT<5>59 (XLXI_47/XLXI_104/XLXI_22/i_SPI_BIT_IDX_CNT<5>59)
+     LUT4:I3->O            1   0.648   0.000  XLXI_47/XLXI_104/XLXI_22/i_SPI_BIT_IDX_CNT<5>81 (XLXI_47/XLXI_104/XLXI_22/_varindex0001)
+     FDC_1:D                   0.252          XLXI_47/XLXI_104/XLXI_22/SPI_O_MISO
+    ----------------------------------------
+    Total                      5.747ns (3.354ns logic, 2.393ns route)
+                                       (58.4% logic, 41.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_33/S_CLK_DDS'
+  Clock period: 7.069ns (frequency: 141.463MHz)
+  Total number of paths / destination ports: 3744 / 77
+-------------------------------------------------------------------------
+Delay:               7.069ns (Levels of Logic = 20)
+  Source:            XLXI_47/XLXI_137/PhaseAcc_14 (FF)
+  Destination:       XLXI_47/XLXI_137/AmpReg_14 (FF)
+  Source Clock:      XLXI_33/S_CLK_DDS rising
+  Destination Clock: XLXI_33/S_CLK_DDS rising
+
+  Data Path: XLXI_47/XLXI_137/PhaseAcc_14 to XLXI_47/XLXI_137/AmpReg_14
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              4   0.591   0.730  XLXI_47/XLXI_137/PhaseAcc_14 (XLXI_47/XLXI_137/PhaseAcc_14)
+     LUT2:I0->O            1   0.648   0.000  XLXI_47/XLXI_137/Madd_PhaseAReg_lut<14> (XLXI_47/XLXI_137/Madd_PhaseAReg_lut<14>)
+     MUXCY:S->O            1   0.632   0.000  XLXI_47/XLXI_137/Madd_PhaseAReg_cy<14> (XLXI_47/XLXI_137/Madd_PhaseAReg_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_137/Madd_PhaseAReg_cy<15> (XLXI_47/XLXI_137/Madd_PhaseAReg_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_137/Madd_PhaseAReg_cy<16> (XLXI_47/XLXI_137/Madd_PhaseAReg_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_137/Madd_PhaseAReg_cy<17> (XLXI_47/XLXI_137/Madd_PhaseAReg_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_137/Madd_PhaseAReg_cy<18> (XLXI_47/XLXI_137/Madd_PhaseAReg_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_137/Madd_PhaseAReg_cy<19> (XLXI_47/XLXI_137/Madd_PhaseAReg_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_137/Madd_PhaseAReg_cy<20> (XLXI_47/XLXI_137/Madd_PhaseAReg_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_137/Madd_PhaseAReg_cy<21> (XLXI_47/XLXI_137/Madd_PhaseAReg_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_137/Madd_PhaseAReg_cy<22> (XLXI_47/XLXI_137/Madd_PhaseAReg_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_137/Madd_PhaseAReg_cy<23> (XLXI_47/XLXI_137/Madd_PhaseAReg_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_137/Madd_PhaseAReg_cy<24> (XLXI_47/XLXI_137/Madd_PhaseAReg_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_137/Madd_PhaseAReg_cy<25> (XLXI_47/XLXI_137/Madd_PhaseAReg_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_137/Madd_PhaseAReg_cy<26> (XLXI_47/XLXI_137/Madd_PhaseAReg_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_137/Madd_PhaseAReg_cy<27> (XLXI_47/XLXI_137/Madd_PhaseAReg_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_137/Madd_PhaseAReg_cy<28> (XLXI_47/XLXI_137/Madd_PhaseAReg_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_137/Madd_PhaseAReg_cy<29> (XLXI_47/XLXI_137/Madd_PhaseAReg_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  XLXI_47/XLXI_137/Madd_PhaseAReg_cy<30> (XLXI_47/XLXI_137/Madd_PhaseAReg_cy<30>)
+     XORCY:CI->O           2   0.844   0.590  XLXI_47/XLXI_137/Madd_PhaseAReg_xor<31> (XLXI_47/XLXI_137/PhaseAReg<31>)
+     LUT3:I0->O           16   0.648   1.034  XLXI_47/XLXI_137/AmpReg_14_not00011 (XLXI_47/XLXI_137/AmpReg_14_not0001)
+     FDCE:CE                   0.312          XLXI_47/XLXI_137/AmpReg_14
+    ----------------------------------------
+    Total                      7.069ns (4.715ns logic, 2.354ns route)
+                                       (66.7% logic, 33.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'I_CLK_25MHZ'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              3.475ns (Levels of Logic = 2)
+  Source:            I_N_RESET_UP_OUT (PAD)
+  Destination:       XLXI_4/i_X_RST_IN_DEB_CNT_0 (FF)
+  Destination Clock: I_CLK_25MHZ rising
+
+  Data Path: I_N_RESET_UP_OUT to XLXI_4/i_X_RST_IN_DEB_CNT_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.849   0.527  I_N_RESET_UP_OUT_IBUF (I_N_RESET_UP_OUT_IBUF)
+     LUT2:I1->O            4   0.643   0.587  XLXI_4/i_X_RST_IN_DEB_CNT_not00001 (XLXI_4/i_X_RST_IN_DEB_CNT_not0000)
+     FDR:R                     0.869          XLXI_4/i_X_RST_IN_DEB_CNT_0
+    ----------------------------------------
+    Total                      3.475ns (2.361ns logic, 1.114ns route)
+                                       (67.9% logic, 32.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_33/S_CLK_M'
+  Total number of paths / destination ports: 12 / 12
+-------------------------------------------------------------------------
+Offset:              4.073ns (Levels of Logic = 3)
+  Source:            I_SPI_CLK (PAD)
+  Destination:       XLXI_47/XLXI_104/XLXI_22/SPI_CLK_F_H_ERR (FF)
+  Destination Clock: XLXI_33/S_CLK_M rising
+
+  Data Path: I_SPI_CLK to XLXI_47/XLXI_104/XLXI_22/SPI_CLK_F_H_ERR
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   0.849   0.701  I_SPI_CLK_IBUF (I_SPI_CLK_IBUF)
+     LUT4:I2->O            1   0.648   0.500  XLXI_47/XLXI_104/XLXI_22/SPI_CLK_F_H_ERR_not0001_SW0 (N18)
+     LUT4:I1->O            1   0.643   0.420  XLXI_47/XLXI_104/XLXI_22/SPI_CLK_F_H_ERR_not0001 (XLXI_47/XLXI_104/XLXI_22/SPI_CLK_F_H_ERR_not0001)
+     FDCE:CE                   0.312          XLXI_47/XLXI_104/XLXI_22/SPI_CLK_F_H_ERR
+    ----------------------------------------
+    Total                      4.073ns (2.452ns logic, 1.621ns route)
+                                       (60.2% logic, 39.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_33/S_CLK_8'
+  Total number of paths / destination ports: 43 / 7
+-------------------------------------------------------------------------
+Offset:              6.958ns (Levels of Logic = 6)
+  Source:            GPI_OL_TEMP (PAD)
+  Destination:       XLXI_47/XLXI_104/XLXI_22/OL_LATCH_0 (FF)
+  Destination Clock: XLXI_33/S_CLK_8 rising
+
+  Data Path: GPI_OL_TEMP to XLXI_47/XLXI_104/XLXI_22/OL_LATCH_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.849   0.420  GPI_OL_TEMP_IBUF (GPI_OL_TEMP_IBUF)
+     BUF:I->O              1   0.648   0.420  XLXI_14 (GPIO<0>)
+     BUF:I->O              5   0.648   0.713  XLXI_47/XLXI_29 (XLXI_47/GPI<3>)
+     LUT2:I1->O            2   0.643   0.450  XLXI_47/XLXI_104/XLXI_22/OL_LATCH_and0000_SW0 (N34)
+     LUT4:I3->O            4   0.648   0.619  XLXI_47/XLXI_104/XLXI_22/OL_LATCH_and0000 (XLXI_47/XLXI_104/XLXI_22/OL_LATCH_and0000)
+     LUT3:I2->O            1   0.648   0.000  XLXI_47/XLXI_104/XLXI_22/OL_LATCH_mux0001<4>1 (XLXI_47/XLXI_104/XLXI_22/OL_LATCH_mux0001<4>)
+     FDP:D                     0.252          XLXI_47/XLXI_104/XLXI_22/OL_LATCH_0
+    ----------------------------------------
+    Total                      6.958ns (4.336ns logic, 2.622ns route)
+                                       (62.3% logic, 37.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_47/XLXI_104/XLXI_22/SPI_CLK_DEB1'
+  Total number of paths / destination ports: 64 / 64
+-------------------------------------------------------------------------
+Offset:              2.373ns (Levels of Logic = 1)
+  Source:            I_SPI_MOSI (PAD)
+  Destination:       XLXI_47/XLXI_104/XLXI_22/SPI_MOSI_DIN_0 (FF)
+  Destination Clock: XLXI_47/XLXI_104/XLXI_22/SPI_CLK_DEB1 rising
+
+  Data Path: I_SPI_MOSI to XLXI_47/XLXI_104/XLXI_22/SPI_MOSI_DIN_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.849   1.272  I_SPI_MOSI_IBUF (I_SPI_MOSI_IBUF)
+     FDCE:D                    0.252          XLXI_47/XLXI_104/XLXI_22/SPI_MOSI_DIN_0
+    ----------------------------------------
+    Total                      2.373ns (1.101ns logic, 1.272ns route)
+                                       (46.4% logic, 53.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_33/S_CLK_8'
+  Total number of paths / destination ports: 12 / 8
+-------------------------------------------------------------------------
+Offset:              11.283ns (Levels of Logic = 8)
+  Source:            XLXI_47/XLXI_104/XLXI_22/FPGA_STAT_REG_RO_5 (FF)
+  Destination:       O_N_LED6 (PAD)
+  Source Clock:      XLXI_33/S_CLK_8 rising
+
+  Data Path: XLXI_47/XLXI_104/XLXI_22/FPGA_STAT_REG_RO_5 to O_N_LED6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.591   0.590  XLXI_47/XLXI_104/XLXI_22/FPGA_STAT_REG_RO_5 (XLXI_47/XLXI_104/XLXI_22/FPGA_STAT_REG_RO_5)
+     LUT2:I0->O            1   0.648   0.420  XLXI_47/XLXI_104/XLXI_22/FPGA_RUN1 (XLXI_47/XLXN_168)
+     AND2:I1->O            4   0.648   0.587  XLXI_47/XLXI_90 (XLXI_47/FPGA_RUN)
+     INV:I->O              1   0.648   0.500  XLXI_47/XLXI_82 (XLXI_47/XLXN_242)
+     begin scope: 'XLXI_47/XLXI_71'
+     end scope: 'XLXI_47/XLXI_71'
+     begin scope: 'XLXI_47/XLXI_80'
+     LUT3:I1->O            1   0.643   0.420  O1 (O)
+     end scope: 'XLXI_47/XLXI_80'
+     INV:I->O              1   0.648   0.420  XLXI_12 (O_N_LED6_OBUF)
+     OBUF:I->O                 4.520          O_N_LED6_OBUF (O_N_LED6)
+    ----------------------------------------
+    Total                     11.283ns (8.346ns logic, 2.937ns route)
+                                       (74.0% logic, 26.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_33/S_CLK_DDS'
+  Total number of paths / destination ports: 203 / 6
+-------------------------------------------------------------------------
+Offset:              13.826ns (Levels of Logic = 24)
+  Source:            XLXI_47/XLXI_137/PhaseAcc_14 (FF)
+  Destination:       O_TP_51 (PAD)
+  Source Clock:      XLXI_33/S_CLK_DDS rising
+
+  Data Path: XLXI_47/XLXI_137/PhaseAcc_14 to O_TP_51
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              4   0.591   0.730  XLXI_47/XLXI_137/PhaseAcc_14 (XLXI_47/XLXI_137/PhaseAcc_14)
+     LUT2:I0->O            1   0.648   0.000  XLXI_47/XLXI_137/Msub_PhaseBReg_lut<14> (XLXI_47/XLXI_137/Msub_PhaseBReg_lut<14>)
+     MUXCY:S->O            1   0.632   0.000  XLXI_47/XLXI_137/Msub_PhaseBReg_cy<14> (XLXI_47/XLXI_137/Msub_PhaseBReg_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_137/Msub_PhaseBReg_cy<15> (XLXI_47/XLXI_137/Msub_PhaseBReg_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_137/Msub_PhaseBReg_cy<16> (XLXI_47/XLXI_137/Msub_PhaseBReg_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_137/Msub_PhaseBReg_cy<17> (XLXI_47/XLXI_137/Msub_PhaseBReg_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_137/Msub_PhaseBReg_cy<18> (XLXI_47/XLXI_137/Msub_PhaseBReg_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_137/Msub_PhaseBReg_cy<19> (XLXI_47/XLXI_137/Msub_PhaseBReg_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_137/Msub_PhaseBReg_cy<20> (XLXI_47/XLXI_137/Msub_PhaseBReg_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_137/Msub_PhaseBReg_cy<21> (XLXI_47/XLXI_137/Msub_PhaseBReg_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_137/Msub_PhaseBReg_cy<22> (XLXI_47/XLXI_137/Msub_PhaseBReg_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_137/Msub_PhaseBReg_cy<23> (XLXI_47/XLXI_137/Msub_PhaseBReg_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_137/Msub_PhaseBReg_cy<24> (XLXI_47/XLXI_137/Msub_PhaseBReg_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_137/Msub_PhaseBReg_cy<25> (XLXI_47/XLXI_137/Msub_PhaseBReg_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_137/Msub_PhaseBReg_cy<26> (XLXI_47/XLXI_137/Msub_PhaseBReg_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_137/Msub_PhaseBReg_cy<27> (XLXI_47/XLXI_137/Msub_PhaseBReg_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_137/Msub_PhaseBReg_cy<28> (XLXI_47/XLXI_137/Msub_PhaseBReg_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_47/XLXI_137/Msub_PhaseBReg_cy<29> (XLXI_47/XLXI_137/Msub_PhaseBReg_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  XLXI_47/XLXI_137/Msub_PhaseBReg_cy<30> (XLXI_47/XLXI_137/Msub_PhaseBReg_cy<30>)
+     XORCY:CI->O           2   0.844   0.527  XLXI_47/XLXI_137/Msub_PhaseBReg_xor<31> (XLXI_47/XLXI_137/PhaseBReg<31>)
+     LUT2:I1->O            1   0.643   0.420  XLXI_47/XLXI_137/PhaseB1 (XLXI_47/XLXN_281)
+     INV:I->O              2   0.648   0.447  XLXI_47/XLXI_4 (PWMB_OBUF)
+     INV:I->O              1   0.648   0.420  XLXI_58 (XLXN_206)
+     BUF:I->O              1   0.648   0.420  XLXI_53 (O_TP_53_OBUF)
+     OBUF:I->O                 4.520          O_TP_53_OBUF (O_TP_53)
+    ----------------------------------------
+    Total                     13.826ns (10.862ns logic, 2.964ns route)
+                                       (78.6% logic, 21.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_47/XLXI_104/XLXI_22/SPI_CLK_DEB1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              5.531ns (Levels of Logic = 1)
+  Source:            XLXI_47/XLXI_104/XLXI_22/SPI_O_MISO (FF)
+  Destination:       O_SPI_MISO (PAD)
+  Source Clock:      XLXI_47/XLXI_104/XLXI_22/SPI_CLK_DEB1 falling
+
+  Data Path: XLXI_47/XLXI_104/XLXI_22/SPI_O_MISO to O_SPI_MISO
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q            1   0.591   0.420  XLXI_47/XLXI_104/XLXI_22/SPI_O_MISO (XLXI_47/XLXI_104/XLXI_22/SPI_O_MISO)
+     OBUF:I->O                 4.520          O_SPI_MISO_OBUF (O_SPI_MISO)
+    ----------------------------------------
+    Total                      5.531ns (5.111ns logic, 0.420ns route)
+                                       (92.4% logic, 7.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'I_CLK_25MHZ'
+  Total number of paths / destination ports: 120 / 3
+-------------------------------------------------------------------------
+Offset:              16.459ns (Levels of Logic = 18)
+  Source:            XLXI_33/XLXI_54/COUNT_8 (FF)
+  Destination:       O_N_LED6 (PAD)
+  Source Clock:      I_CLK_25MHZ rising
+
+  Data Path: XLXI_33/XLXI_54/COUNT_8 to O_N_LED6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.591   0.590  XLXI_33/XLXI_54/COUNT_8 (XLXI_33/XLXI_54/COUNT_8)
+     LUT4:I0->O            1   0.648   0.000  XLXI_33/XLXI_54/TC_cmp_eq0000_wg_lut<0> (XLXI_33/XLXI_54/TC_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  XLXI_33/XLXI_54/TC_cmp_eq0000_wg_cy<0> (XLXI_33/XLXI_54/TC_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_33/XLXI_54/TC_cmp_eq0000_wg_cy<1> (XLXI_33/XLXI_54/TC_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_33/XLXI_54/TC_cmp_eq0000_wg_cy<2> (XLXI_33/XLXI_54/TC_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_33/XLXI_54/TC_cmp_eq0000_wg_cy<3> (XLXI_33/XLXI_54/TC_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  XLXI_33/XLXI_54/TC_cmp_eq0000_wg_cy<4> (XLXI_33/XLXI_54/TC_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           2   0.269   0.590  XLXI_33/XLXI_54/TC_cmp_eq0000_wg_cy<5> (XLXI_33/XLXI_54/TC_cmp_eq0000_wg_cy<5>)
+     begin scope: 'XLXI_33/XLXI_57'
+     LUT4:I0->O            1   0.648   0.420  O (O)
+     end scope: 'XLXI_33/XLXI_57'
+     AND2:I0->O            2   0.648   0.447  XLXI_33/XLXI_107 (XLXI_33/XLXN_172)
+     BUF:I->O             16   0.648   1.034  XLXI_33/XLXI_105 (XLXN_107)
+     AND2:I0->O            4   0.648   0.587  XLXI_47/XLXI_90 (XLXI_47/FPGA_RUN)
+     INV:I->O              1   0.648   0.500  XLXI_47/XLXI_82 (XLXI_47/XLXN_242)
+     begin scope: 'XLXI_47/XLXI_71'
+     end scope: 'XLXI_47/XLXI_71'
+     begin scope: 'XLXI_47/XLXI_80'
+     LUT3:I1->O            1   0.643   0.420  O1 (O)
+     end scope: 'XLXI_47/XLXI_80'
+     INV:I->O              1   0.648   0.420  XLXI_12 (O_N_LED6_OBUF)
+     OBUF:I->O                 4.520          O_N_LED6_OBUF (O_N_LED6)
+    ----------------------------------------
+    Total                     16.459ns (11.451ns logic, 5.008ns route)
+                                       (69.6% logic, 30.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXN_180'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              10.029ns (Levels of Logic = 7)
+  Source:            XLXI_33/XLXI_46/COUNT_8 (FF)
+  Destination:       O_N_LED6 (PAD)
+  Source Clock:      XLXN_180 rising
+
+  Data Path: XLXI_33/XLXI_46/COUNT_8 to O_N_LED6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             1   0.591   0.420  COUNT_8 (COUNT_8)
+     end scope: 'XLXI_33/XLXI_46'
+     AND2:I1->O            2   0.648   0.447  XLXI_33/XLXI_106 (XLXN_116)
+     INV:I->O              4   0.648   0.619  XLXI_47/XLXI_79 (XLXI_47/XLXN_236)
+     begin scope: 'XLXI_47/XLXI_81'
+     LUT3:I2->O            1   0.648   0.420  O1 (O)
+     end scope: 'XLXI_47/XLXI_81'
+     INV:I->O              1   0.648   0.420  XLXI_13 (O_N_LED7_OBUF)
+     OBUF:I->O                 4.520          O_N_LED7_OBUF (O_N_LED7)
+    ----------------------------------------
+    Total                     10.029ns (7.703ns logic, 2.326ns route)
+                                       (76.8% logic, 23.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 67.00 secs
+Total CPU time to Xst completion: 67.04 secs
+ 
+--> 
+
+Total memory usage is 4589060 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  234 (   0 filtered)
+Number of infos    :   81 (   0 filtered)
+

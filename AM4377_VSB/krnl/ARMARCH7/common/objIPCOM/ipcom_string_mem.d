@@ -1,0 +1,35 @@
+C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/ARMARCH7/common/objIPCOM/ipcom_string_mem.o: \
+  ipcom_string_mem.c \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/ipcom_config.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/ipcom_pconfig.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/vsbConfig.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/h/config/vsbConfig.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/h/config/autoconf.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/ipcom_pautoconf.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/ipcom_clibmap.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/ipcom_autoconf.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/string.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/types/vxANSI.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/stdint.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/types/vxCpu.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/types/vxArch.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/arch/arm/archArm.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/arch/arm/arm.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/arch/arm/archArmCommon.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/types/vxParams.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/types/vxTypesBase.h \
+  C:/WindRiverSR500/compilers/diab-5.9.6.1/include/diab/stddef.h \
+  C:/WindRiverSR500/compilers/diab-5.9.6.1/include/diab/xmacros.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/base/b_swab.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/base/b_rsize_t.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/base/b_errno_t.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/ipcom_clib.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/ipcom_type.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/ipcom_port.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/ipcom_vx32.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/ipcom_cstyle.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/ipcom_file.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/ipcom_errno.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/ipcom_perrno.h \
+  C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/krnl/h/public/ipcom_pfile.h
+

@@ -1,0 +1,22 @@
+# Automatically generated file: do not edit
+
+##########################
+# TPM2_TSS Section
+##########################
+
+
+ifdef _WRS_CONFIG_TPM2_TSS
+VSBL_TPM2_TSS_SRC = 
+VSBL_TPM2_TSS_DEPEND = 
+ifdef _WRS_CONFIG_TPM2_TSS_1_0_1_0
+VSBL_TPM2_TSS_SRC += TPM2_TSS
+VSBL_TPM2_TSS_DEPEND += SEC_CRYPTO
+VSBL_TPM2_TSS_DEPEND += TPM
+VSBL_TPM2_TSS_DEPEND += TPM
+VSBL_TPM2_TSS_DEPEND += SEC_CRYPTO
+TPM2_TSS_FASTBUILD = YES
+VSBL_TPM2_TSS_PATH = $(WIND_BASE)/pkgs/security/tpm2Tss-1.0.1.0
+VSBL_TPM2_TSS_VERSION = TPM2_TSS_1_0_1_0
+endif
+endif
+

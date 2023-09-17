@@ -1,0 +1,24 @@
+
+ifndef __HEADER_ACCESS_FONT_INCLUDED
+__HEADER_ACCESS_FONT_INCLUDED = TRUE
+
+
+
+
+
+__SUBSCRIBE_ACCESS_FONT = 
+
+
+
+ifneq ($(wildcard $(VSB_KERNEL_PROTECTED_INCLUDE_DIR)/FONT),)
+
+ifneq ($(VSBL_NAME),)
+ifeq ($(VSBL_NAME),$(filter $(VSBL_NAME), FONT))
+VSBL_LKH += $(OPTION_INCLUDE_DIR)$(VSB_KERNEL_PROTECTED_INCLUDE_DIR)/FONT
+endif
+endif
+
+endif
+
+endif
+

@@ -1,0 +1,30 @@
+# Automatically generated file: do not edit
+
+##########################
+# HDC Section
+##########################
+
+
+ifdef _WRS_CONFIG_HDC
+VSBL_HDC_SRC = 
+VSBL_HDC_DEPEND = 
+ifdef _WRS_CONFIG_HDC_2_2_0_1
+ifdef _WRS_CONFIG_HDC_AGENT
+VSBL_HDC_SRC += HDC_AGENT
+endif
+ifdef _WRS_CONFIG_HDC_CCG_BROKER
+VSBL_HDC_SRC += HDC_CCG_BROKER
+endif
+ifdef _WRS_CONFIG_HDC_DEVICE_MANAGER
+VSBL_HDC_SRC += HDC_DEVICE_MANAGER
+endif
+VSBL_HDC_SRC += HDC
+VSBL_HDC_DEPEND += JSON
+VSBL_HDC_DEPEND += MOSQUITTO
+VSBL_HDC_DEPEND += OPENSSL
+HDC_FASTBUILD = YES
+VSBL_HDC_PATH = $(WIND_BASE)/pkgs/app/hdc-2.2.0.1
+VSBL_HDC_VERSION = HDC_2_2_0_1
+endif
+endif
+

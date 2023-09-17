@@ -1,0 +1,16 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM4377_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/rttools/cafe-1.1.3.6/src/osconfig/vxworks/cdf/common/01bundle_runtime_analysis.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/rttools/cafe-1.1.3.6/src/osconfig/vxworks/cdf/common/01comp_runtime_analysis.cdf>
+
+Layer Layer::RUNTIME_ANALYSIS {
+	NAME RUNTIME_ANALYSIS
+}

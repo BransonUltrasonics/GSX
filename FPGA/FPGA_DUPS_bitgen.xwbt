@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\76053\Documents\Branson\Proyectos\Next Generation\FPGA\GSX_FPGA\FPGA_DUPS.ncd
+OUTFILE=C:\Users\76053\Documents\Branson\Proyectos\Next Generation\FPGA\GSX_FPGA\FPGA_DUPS.bit
+FAMILY=Spartan3A and Spartan3AN
+PART=xc3s1400a-4ft256
+WORKINGDIR=C:\Users\76053\Documents\Branson\Proyectos\Next Generation\FPGA\GSX_FPGA
+LICENSE=WebPack
+USER_INFO=211372754_0_0_731

@@ -1,0 +1,29 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/core/kernel-1.2.3.0/cdf/00vxWorks.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/core/kernel-1.2.3.0/cdf/01bundle_edr.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/core/kernel-1.2.3.0/cdf/01bundle_posix.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/core/kernel-1.2.3.0/cdf/01compact_cache_dma.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/core/kernel-1.2.3.0/cdf/01obj.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/core/kernel-1.2.3.0/cdf/01profile_cert.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/core/kernel-1.2.3.0/cdf/01profile_development.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/core/kernel-1.2.3.0/cdf/01profile_minimal.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/core/kernel-1.2.3.0/cdf/01profile_small_footprint.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/core/kernel-1.2.3.0/cdf/01sysctl.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/core/kernel-1.2.3.0/cdf/02cache.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/core/kernel-1.2.3.0/cdf/02comp_appl_util_vx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/core/kernel-1.2.3.0/cdf/02mem_edr.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/core/kernel-1.2.3.0/cdf/02mm.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/os/core/kernel-1.2.3.0/cdf/10smp.cdf>
+
+Layer Layer::CORE_KERNEL {
+	NAME CORE_KERNEL
+}

@@ -1,0 +1,142 @@
+
+libusbhid.a:
+
+usb2Hid.o:
+00000000 T usb2HidDescriptorGet
+         U usb2FindInterface
+00000098 T usb2HidReportDescriptorGet
+         U usb2VendorClassSpecific
+000000d8 T usb2HidIdleTimeSet
+00000118 T usb2HidIdleTimeGet
+00000158 T usb2HidProtoSet
+00000198 T usb2HidProtoGet
+000001d8 T usb2HidReportSet
+00000218 T usb2HidReportGet
+00000258 T usb2HidCalculateIdleTimeFromMs
+000002a0 T usb2HIDReportDescDump
+         U hid_init
+         U hid_use_report_desc
+         U hid_dump_descriptor
+         U hid_dispose_report_desc
+
+usage.o:
+00000004 b npages
+00000000 b pages
+00000008 b b.16
+00000012 b b.28
+00000000 T dump_hid_table
+         U printf
+000000ac T hid_init
+000000b4 T hid_usage_page
+         U snprintf
+0000012c T hid_usage_in_page
+00000208 T hid_parse_usage_page
+         U strcmp
+00000288 T hid_parse_usage_in_page
+         U strchr
+         U strncmp
+0000037c T hid_dump_item
+         U __stdout
+         U fprintf
+00000500 T hid_dump_descriptor
+         U hid_start_parse
+         U hid_get_item
+         U hid_end_parse
+
+usb_hid.o:
+00000000 t hid_clear_local
+00000038 t hid_switch_rid
+00000170 t hid_get_byte
+000009f0 t hid_get_data_sub
+00000100 T hid_start_parse
+         U malloc
+         U memset
+00000150 T hid_end_parse
+         U free
+000001b8 T hid_get_item
+         U printf
+00000804 T hid_report_size
+000008ec T hid_locate
+00000aa0 T hid_get_data
+00000aa8 T hid_get_data_unsigned
+00000ab0 T hid_put_data_unsigned
+         U __lsl64
+         U __lsr64
+00000ba0 T hid_is_collection
+00000c08 T hid_is_mouse
+00000d00 T hid_is_keyboard
+00000d24 T hid_use_report_desc
+         U __errno
+         U memcpy
+00000d74 T hid_dispose_report_desc
+
+libusbhid.a:
+
+usb2Hid.o:
+00000000 T usb2HidDescriptorGet
+         U usb2FindInterface
+00000098 T usb2HidReportDescriptorGet
+         U usb2VendorClassSpecific
+000000d8 T usb2HidIdleTimeSet
+00000118 T usb2HidIdleTimeGet
+00000158 T usb2HidProtoSet
+00000198 T usb2HidProtoGet
+000001d8 T usb2HidReportSet
+00000218 T usb2HidReportGet
+00000258 T usb2HidCalculateIdleTimeFromMs
+000002a0 T usb2HIDReportDescDump
+         U hid_init
+         U hid_use_report_desc
+         U hid_dump_descriptor
+         U hid_dispose_report_desc
+
+usage.o:
+00000004 b npages
+00000000 b pages
+00000008 b b.16
+00000012 b b.28
+00000000 T dump_hid_table
+         U printf
+000000ac T hid_init
+000000b4 T hid_usage_page
+         U snprintf
+0000012c T hid_usage_in_page
+00000208 T hid_parse_usage_page
+         U strcmp
+00000288 T hid_parse_usage_in_page
+         U strchr
+         U strncmp
+0000037c T hid_dump_item
+         U __stdout
+         U fprintf
+00000500 T hid_dump_descriptor
+         U hid_start_parse
+         U hid_get_item
+         U hid_end_parse
+
+usb_hid.o:
+00000000 t hid_clear_local
+00000038 t hid_switch_rid
+00000170 t hid_get_byte
+000009f0 t hid_get_data_sub
+00000100 T hid_start_parse
+         U malloc
+         U memset
+00000150 T hid_end_parse
+         U free
+000001b8 T hid_get_item
+         U printf
+00000804 T hid_report_size
+000008ec T hid_locate
+00000aa0 T hid_get_data
+00000aa8 T hid_get_data_unsigned
+00000ab0 T hid_put_data_unsigned
+         U __lsl64
+         U __lsr64
+00000ba0 T hid_is_collection
+00000c08 T hid_is_mouse
+00000d00 T hid_is_keyboard
+00000d24 T hid_use_report_desc
+         U __errno
+         U memcpy
+00000d74 T hid_dispose_report_desc

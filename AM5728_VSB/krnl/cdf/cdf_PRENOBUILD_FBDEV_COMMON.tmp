@@ -1,0 +1,18 @@
+
+/* this file is generated */
+
+/* VSB is C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB */
+/* defvars included : TRUE */
+
+
+#include <C:/ScriptGSX2-3/GSX2-3Stream/AM5728_VSB/h/config/vsbConfig.h>
+
+
+#include <C:/WindRiverSR500/vxworks-7/pkgs/ui/fbdev-1.0.0.2/common-1.0.4.1/cdf/20gfx.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/ui/fbdev-1.0.0.2/common-1.0.4.1/cdf/30gfxFb.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/ui/fbdev-1.0.0.2/common-1.0.4.1/cdf/40gfxFbConsole.cdf> 
+#include <C:/WindRiverSR500/vxworks-7/pkgs/ui/fbdev-1.0.0.2/common-1.0.4.1/cdf/40gfxFbSplash.cdf>
+
+Layer Layer::FBDEV_COMMON {
+	NAME FBDEV_COMMON
+}
